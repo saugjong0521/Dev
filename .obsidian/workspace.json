@@ -85,7 +85,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Obsidian test 마지막 테스트 5분 기다리기.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +101,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Obsidian test 마지막 테스트 5분 기다리기.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Obsidian test 마지막 테스트 5분 기다리기.md"
+                "file": "Untitled.md"
               }
             }
           }
@@ -150,6 +148,7 @@
   "lastOpenFiles": [
     "Untitled",
     "Obsidian test 마지막 테스트 5분 기다리기.md",
+    "Untitled.md",
     "test.md"
   ]
 }
