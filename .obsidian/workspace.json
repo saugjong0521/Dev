@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2번째 파일 생성이 잘 되는지 테스트.md",
+                "file": "3번째까지 잘 되면 합격 입니다.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2번째 파일 생성이 잘 되는지 테스트.md",
+                "file": "3번째까지 잘 되면 합격 입니다.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2번째 파일 생성이 잘 되는지 테스트.md",
+                "file": "3번째까지 잘 되면 합격 입니다.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2번째 파일 생성이 잘 되는지 테스트.md"
+                "file": "3번째까지 잘 되면 합격 입니다.md"
               }
             }
           }
@@ -148,8 +148,8 @@
   },
   "active": "7efc7c4c5b1ef37e",
   "lastOpenFiles": [
-    "3번째까지 잘 되면 합격 입니다.md",
     "2번째 파일 생성이 잘 되는지 테스트.md",
+    "3번째까지 잘 되면 합격 입니다.md",
     "3번째까지 잘 되면 합격 입니다",
     "Obsidian test 마지막 테스트 5분 기다리기.md",
     "test.md"
