@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "a81ddf2aa1ba5fc8",
+        "id": "7000ad0d34c7b575",
         "type": "tabs",
         "children": [
           {
-            "id": "7efc7c4c5b1ef37e",
+            "id": "573d82315520eede",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -146,12 +146,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7efc7c4c5b1ef37e",
+  "active": "573d82315520eede",
   "lastOpenFiles": [
-    "2번째 파일 생성이 잘 되는지 테스트.md",
-    "3번째까지 잘 되면 합격 입니다.md",
-    "3번째까지 잘 되면 합격 입니다",
     "Obsidian test 마지막 테스트 5분 기다리기.md",
+    "3번째까지 잘 되면 합격 입니다.md",
+    "2번째 파일 생성이 잘 되는지 테스트.md",
+    "3번째까지 잘 되면 합격 입니다",
     "test.md"
   ]
 }
