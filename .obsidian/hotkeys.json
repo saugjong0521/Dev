@@ -17,6 +17,18 @@
       "key": "S"
     }
   ],
+<<<<<<< HEAD
+=======
+  "obsidian-git:fetch": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "F"
+    }
+  ],
+>>>>>>> origin/main
   "global-search:open": [
     {
       "modifiers": [
@@ -25,6 +37,7 @@
       "key": "F"
     }
   ],
+<<<<<<< HEAD
   "editor:open-search": [],
   "obsidian-git:pull": [
     {
@@ -35,4 +48,7 @@
       "key": "F"
     }
   ]
+=======
+  "editor:open-search": []
+>>>>>>> origin/main
 }
