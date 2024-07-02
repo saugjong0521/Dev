@@ -23,9 +23,11 @@
             "id": "c22713589ba98b51",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.6.5"
+                "file": "Obsidian test 마지막 테스트 5분 기다리기.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
