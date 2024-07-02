@@ -1,13 +1,4 @@
 {
-  "obsidian-git:push2": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "I"
-    }
-  ],
   "obsidian-git:commit": [
     {
       "modifiers": [
@@ -17,38 +8,13 @@
       "key": "S"
     }
   ],
-<<<<<<< HEAD
-=======
-  "obsidian-git:fetch": [
+  "obsidian-git:push2": [
     {
       "modifiers": [
         "Mod",
         "Shift"
       ],
-      "key": "F"
-    }
-  ],
->>>>>>> origin/main
-  "global-search:open": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "F"
-    }
-  ],
-<<<<<<< HEAD
-  "editor:open-search": [],
-  "obsidian-git:pull": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "F"
+      "key": "I"
     }
   ]
-=======
-  "editor:open-search": []
->>>>>>> origin/main
 }
