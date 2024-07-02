@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "fce90ccd573bdba4",
+        "id": "406a11611213a8bb",
         "type": "tabs",
         "children": [
           {
-            "id": "c51cf0bfe7b79c08",
+            "id": "e702a580dff63a14",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Obsidian test 마지막 테스트 5분 기다리기.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -142,7 +146,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d5d31f538f436ad8",
+  "active": "e702a580dff63a14",
   "lastOpenFiles": [
     "Obsidian test 마지막 테스트 5분 기다리기.md",
     "Untitled",
