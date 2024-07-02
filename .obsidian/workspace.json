@@ -30,9 +30,33 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "ce915c012bda285c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "test for 2nd.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "db3e664857390cc9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -98,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "test for 2nd.md",
+                "file": "conflict-files-obsidian-git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "test for 2nd.md",
+                "file": "conflict-files-obsidian-git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "test for 2nd.md"
+                "file": "conflict-files-obsidian-git.md"
               }
             }
           }
@@ -159,10 +183,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6de2b9697543a2dc",
+  "active": "db3e664857390cc9",
   "lastOpenFiles": [
-    "Obsidian test 마지막 테스트 5분 기다리기.md",
     "test for 2nd.md",
+    "conflict-files-obsidian-git.md",
+    "Obsidian test 마지막 테스트 5분 기다리기.md",
     "Untitled",
     "test.md"
   ]
