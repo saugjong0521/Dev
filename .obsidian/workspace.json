@@ -18,45 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "6de2b9697543a2dc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2번째 파일 생성이 잘 되는지 테스트.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ce915c012bda285c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2번째 파일 생성이 잘 되는지 테스트.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "db3e664857390cc9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2번째 파일 생성이 잘 되는지 테스트.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -122,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2번째 파일 생성이 잘 되는지 테스트.md",
+                "file": "Obsidian test 마지막 테스트 5분 기다리기.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2번째 파일 생성이 잘 되는지 테스트.md",
+                "file": "Obsidian test 마지막 테스트 5분 기다리기.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2번째 파일 생성이 잘 되는지 테스트.md"
+                "file": "Obsidian test 마지막 테스트 5분 기다리기.md"
               }
             }
           }
@@ -183,10 +146,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "db3e664857390cc9",
+  "active": "e702a580dff63a14",
   "lastOpenFiles": [
-    "Obsidian test 마지막 테스트 5분 기다리기.md",
     "2번째 파일 생성이 잘 되는지 테스트.md",
+    "Obsidian test 마지막 테스트 5분 기다리기.md",
     "conflict-files-obsidian-git.md",
     "Untitled",
     "test.md"
