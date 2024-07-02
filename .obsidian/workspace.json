@@ -65,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -146,7 +147,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d5d31f538f436ad8",
+  "active": "ba023fb855cb1d6c",
   "lastOpenFiles": [
     "Untitled",
     "Untitled.md",
