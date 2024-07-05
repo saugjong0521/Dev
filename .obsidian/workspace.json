@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "ee6a55b0084b88a3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2번째 파일 생성이 잘 되는지 테스트.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3번째까지 잘 되면 합격 입니다.md",
+                "file": "2번째 파일 생성이 잘 되는지 테스트.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "3번째까지 잘 되면 합격 입니다.md",
+                "file": "2번째 파일 생성이 잘 되는지 테스트.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3번째까지 잘 되면 합격 입니다.md"
+                "file": "2번째 파일 생성이 잘 되는지 테스트.md"
               }
             }
           }
@@ -146,11 +159,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7ed401033317a9d9",
+  "active": "d5d31f538f436ad8",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
     "3번째까지 잘 되면 합격 입니다.md",
     "2번째 파일 생성이 잘 되는지 테스트.md",
+    "conflict-files-obsidian-git.md",
     "Obsidian test 마지막 테스트 5분 기다리기.md",
     "3번째까지 잘 되면 합격 입니다",
     "test.md"
