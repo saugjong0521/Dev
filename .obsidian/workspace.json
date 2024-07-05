@@ -8,31 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7ed401033317a9d9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3번째까지 잘 되면 합격 입니다.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "ee6a55b0084b88a3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2번째 파일 생성이 잘 되는지 테스트.md",
+                "file": "frontEnd/1 week.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2번째 파일 생성이 잘 되는지 테스트.md",
+                "file": "frontEnd/1 week.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2번째 파일 생성이 잘 되는지 테스트.md",
+                "file": "frontEnd/1 week.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2번째 파일 생성이 잘 되는지 테스트.md"
+                "file": "frontEnd/1 week.md"
               }
             }
           }
@@ -159,8 +146,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d5d31f538f436ad8",
+  "active": "ee6a55b0084b88a3",
   "lastOpenFiles": [
+    "frontEnd/1 week.md",
+    "frontEnd",
     "3번째까지 잘 되면 합격 입니다.md",
     "2번째 파일 생성이 잘 되는지 테스트.md",
     "conflict-files-obsidian-git.md",
