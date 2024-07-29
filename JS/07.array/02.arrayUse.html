@@ -83,23 +83,7 @@
         x-y가 0이면 순서를 변경하지 않는다.
             -> 버블 정렬의 느낌 // 성능이 좋지는 않을 것 같다 -> 퀵정렬 등 다른 정렬을 이용하는것이 성능이 더 빠를 것 같음, string시 대소문자 구별이 안됨
         */
-        let descending_order = function (x, y) {
-            if (typeof x === "string") x = x.toUpperCase();
-            if (typeof y === "string") y = y.toUpperCase();
 
-            return x < y ? 1 : -1;
-        }   // 확인해보기
-
-
-        let char = ['nuM', 'Num', 'nUm','Abc','abc']
-
-        char.sort(function (x, y) {
-            return x - y
-        })
-        console.log(char)
-
-        descending_order(char);
-        console.log(char)
 
 
 
