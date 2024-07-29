@@ -26,8 +26,10 @@
             let box03 = document.querySelector('.box03')
 
             //요소를 생성
-            let box04 = document.createElement('div');
+            let box04 = document.createElement('div');  // 요소를 생성만 한 것이지, 위치 등의 정보가 없기에 body에 추가되지 않은 상태
             console.log(box04)
+            document.body.appendChild(box04)
+            //appendChild(추가할 요소) = 선택자 내부에서 제일 마지막 요소로 추가 (= push)
 
         }
 
