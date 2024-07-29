@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title>
+
+    <script>
+        /*
+        배열
+        여러개의 값을 나열해서 하나의 변수에 담아서 호출하는 객체
+        배열에 들어간 객체들은 자동으로 순번을 배정받게 되며, 순번은 항상 0번부터 출력한다.
+        
+        */
+
+        let rvMember01 = '웬디';
+        let rvMember02 = '조이';
+        let rvMember03 = '슬기';
+        let rvMember04 = '아이린';
+        let rvMember05 = '예린';
+
+        // 배열로 선언
+        let rv = ['웬디', '조이', '슬기', '아이린', '예린'] //  콤마(,)로 구분
+        let rv01 = '웬디,조이, 슬기, 아이린, 예린'; // 배열이 아님
+        console.log(rv)
+        console.log(rv01)
+
+        console.log(rv[2]) // 배열에서 특정한 순번의 값 호출
+        console.log(rv.length) // length = 배열의 갯수
+
+
+        for(let i = 0; i < rv.length; i++){
+            document.write(rv[i] + '<br>')
+        }
+
+    </script>
+    
+</head>
+
+<body>
+
+</body>
+
+</html>

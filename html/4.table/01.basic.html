@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블(표) 요소</title>
+
+    <style>
+        table{
+            border-spacing: 0px; /*셀과 셀 사이의 간격을 없앰*/
+            border-collapse: collapse; /*셀과 셀 사이의 선을 중복시킴*/
+        }
+        th,td{
+            border: solid 1px black;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <!-- 
+        테이블 태그
+        사이트에서 보여주는 정보들을 일관성 있게 열과 행으로 이루어진 표를 구성해서 정보를 제공하는 태그(c.f. 엑셀)
+    -->
+
+    <table summary="테이블의 목적과 상세한 설명"> 
+        <caption>테이블의 제목</caption>
+        <!-- 
+            하나의 주제로 이루어진 테이블을 구성하는 container 역할
+            table의 자식요소로는 정해진 태그만 사용할 수 있다.
+
+            summary: html5이전에 사용하던 속성으로 테이블 태그에 직접 작성하는 속성으로 테이블의 목적과 상세할 설명 등의 용도 였으나,
+                        caption과 비슷하게 사용하는 등 의미가 변질되어, 현재는 사용 X -> 설명이 필요한 경우 다른 방법으로 대체
+
+            caption: 제목 태그였으나, html5에서는 summary가 사라져서 설명을 넣는 경우도 있음
+
+            tr: 테이블 행
+                테이블의 한 행을 구성, tr태그는 table내에서만 사용하며, 자식요소로는 th와 td만 올 수 있따.
+            th: 테이블 헤더
+                테이블의 제목이나 카테고리를 구성하며, 제목이기 때문에 굵은 글씨에 가운데 정렬을 기준으로 함
+            td: 테이블의 내용 (데이터)
+
+            th는 구성에 따라 없는 경우도 있음
+
+            각 셀들의 길이는 width를 지정할 수도 있지만, 컨텐츠의 길이만큼 조절되면 열 중에서 가장 긴 컨텐츠의 길이를 따라감 (열 내에서 width는 통일되며, 따로 지정할 수 없다.)
+        -->
+
+        <tr><!-- table row, 테이블의 행 -->
+            <th>행의 제목</th><!-- table head -->
+            <td>행의 내용1</td><!-- table data -->
+            <td>행의 내용2</td>
+            <td>행의 내용2</td>
+            <td>행의 내용2</td>
+            <td>행의 내용2</td>
+            <td>행의 내용2</td>
+            <td>행의 내용2</td>
+        </tr>
+        <tr>
+            <th>행의 제목</th>
+            <td>행의 내용3</td>
+            <td>행의 내용4</td>
+        </tr>
+        <tr>
+            <th>행의 제목</th>
+            <td>행의 내용3</td>
+            <td>행의 내용4</td>
+        </tr>
+        <tr>
+            <th>행의 제목</th>
+            <td>행의 내용3</td>
+            <td>행의 내용4</td>
+        </tr>
+
+    </table>
+
+    <table>
+        <caption>셀 병합하기</caption>
+
+        <!-- colspan= '병합할 셀 갯수' = 가로셀 병합 -->
+        <tr>
+            <th colspan="2">제목</th>
+            <th colspan="4">제목</th>
+        </tr>
+        <tr>
+            <td rowspan="3">행의 내용</td>
+            <td>행의 내용</td>
+            <td>행의 내용</td>
+            <td>행의 내용</td>
+            <td>행의 내용</td>
+            <td>행의 내용</td>
+        </tr>
+        <tr>
+            <td>행의 내용</td>
+            <td>행의 내용</td>
+            <td>행의 내용</td>
+            <td>행의 내용</td>
+            <td>행의 내용</td>
+            <td>행의 내용</td>
+        </tr>
+        <tr>
+            <td>행의 내용</td>
+            <td>행의 내용</td>
+            <td>행의 내용</td>
+            <td>행의 내용</td>
+            <td>행의 내용</td>
+            <td>행의 내용</td>
+        </tr>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .clearfix:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .parent{
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px;
+            margin: 0px auto;
+            background: lightgray;
+        }
+        .parent > div{
+            width: 100%;
+            height: 200px;
+            margin-bottom: 20px;
+            background: pink;
+            float: left;
+        }
+        .parent > .child03{
+            margin-bottom: 0px;
+            margin-right: 0px;
+        }
+
+        @media screen and (min-width: 768px){
+            .parent > div {
+                width: 45%;
+                margin-right: 10%;
+            }
+            .parent > .child02{
+                margin-right: 0px;
+            }
+            .parent > .child03{
+                width: 100%;
+            }
+        }
+        
+        @media screen and (min-width: 1200px){
+            .parent{
+                width: 1200px;
+            }
+            .parent > div{
+                width: 30%;
+                margin-right: 5%;
+                margin-bottom: 0px;
+            }
+            .parent > .child02{
+                margin-right: 5%;
+            }
+            .parent > .child03{
+                width: 30%;
+            }
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+    <div class="parent clearfix">
+        <div class="child01">child01</div>
+        <div class="child02">child02</div>
+        <div class="child03">child03</div>
+    </div>
+</body>
+
+</html>

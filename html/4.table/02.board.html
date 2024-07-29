@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블로 게시판 만들기</title>
+
+    <style>
+        /*reset*/
+        body, html, table, div, tr, th, td, caption, p, span{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        table{
+            border-spacing: 0px;
+            border-collapse: collapse;
+        }
+
+
+        .board {
+            width: 1200px;
+            margin: 0px auto; /* 컨테느 가운데 정렬 속성 */
+        }
+
+        th {
+            border-top: solid #333333 1px;
+            border-bottom: solid #333333 1px;
+            height: 50px;
+        }
+
+        td {
+            border-bottom: solid 1px #bbbbbb;
+            height: 30px;
+            text-align: center; /* 텍스트 정렬 속성 */
+        }
+
+        .number{
+            width: 150px;
+        }
+        .title{
+            width: 700px;
+        }
+        .name{
+            width: 100px;
+        }
+        .date{
+            width: 150px;
+        }
+        .like{
+            width: 100px;
+        }
+        td.title{
+            text-align: left;
+         }
+        caption{
+            text-align: left;
+            font-size: 30px;
+            font-weight: bold;
+            margin: 20px 0px 30px;
+        } 
+
+    </style>
+
+</head>
+<body>
+    <table class="board">
+        <caption>자유게시판</caption>
+        <tr>
+            <th class="number">No</th>
+            <th class="title">제목</th>
+            <th class="name">글쓴이</th>
+            <th class="date">작성시간</th>
+            <th class="like">좋아요</th>
+        </tr>
+
+        <tr>
+            <td class="number">01</th>
+            <td class="title">글의 제목입니다.</th>
+            <td class="name">홍길동</th>
+            <td class="date">2024-07-03</th>
+            <td class="like">11</th>
+        </tr>
+    </table>
+</body>
+</html>

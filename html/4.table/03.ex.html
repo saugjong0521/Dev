@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판 실습</title>
+    
+    <style>
+
+        /*reset*/
+        body, html, table, form, input, select, tr, th, td, caption, p, span, div {
+            margin: 0px;
+            padding: 0px;
+        }
+        table {
+            border-spacing: 0px;
+            border-collapse: collapse;
+            font-size: 0px;
+        }
+
+        .container {
+            width: 1170px;
+            margin: 100px auto;
+        }
+
+        .title-box {
+            border-bottom: solid 2px #333333;
+            padding-bottom: 12px;
+            margin-bottom: 48px;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            font-family: 'serif';
+            margin-bottom: 12px;
+            /* font는 그룹 속성으로도 많이 사용 
+            e.g. 
+            font: 사이즈(size) 글꼴 (family);
+            font: 굵기(weight) 사이즈(size) 글꼴(family);
+            font: 굵기(weight) 사이즈(size) '/' 행간(line-height) 글꼴(family);
+
+            단, 필요한 값을 넣을 때에 한개의 값만 사용은 불가능하다
+            e.g. 
+            font: 24px; -> 에러
+            굵기와 사이즈만 주는 경우도 에러
+            */
+        }
+        .text {
+            font-size: 14px;
+            font-family: 'serif';
+        }
+
+        tr {
+            border-bottom: solid 1px #bbb;
+            height: 100px;
+        }
+        th {
+            width: 160px;
+            text-align: left;
+            font-size: 14px;
+            font-weight: normal;
+        }
+        label {
+            width: 100%;
+            display: block;
+            /*label은 inline 속성이다.*/
+        }
+        .star {
+            color: blue;
+            font-weight: bold;
+        }
+
+        .text-w360 {
+            width: 360px;
+            height: 56px;
+            box-sizing: border-box;
+            padding: 0px 24px;
+        }
+        .th-p130{
+            padding-left: 130px; /* table에서는 margin 불가, inline 속성이기 때문에 */
+        }
+
+        .text-w360 {
+            display: inline-block;
+        }
+
+        input[type=button] {
+            width: 117px;
+            height: 58px;
+            border: none;
+            margin-left: 10px;
+            cursor: pointer; /*버튼에 마우스가 갈 시 손가락 모양으로 변경*/
+        }
+        .submit-btn{
+            background-color: navy;
+            margin-right: 36px;
+            color: white;
+        }
+        .auth-btn{
+            color: #ddd;
+            background: gray;
+        }
+
+        .text-w300 {
+            width: 300px;
+            height: 58px;
+            box-sizing: border-box;
+            padding: 0px 24px;
+        }
+        .sigungu {
+            margin: 0px 50px;
+        }
+
+        .radio-label {
+            font-size: 14px;
+            display: inline-block;
+            width: auto;
+            margin: 2px 50px 0px 7px;
+        }
+        input[type=radio] {
+            width: 24px;
+            height: 24px;
+            vertical-align: top;
+            /* vertical-align: 수직 정렬 요소
+                인라인과 테이블 요소에서만 적용
+                정해진 값들을 베이스 라인 기준으로 정렬
+            */
+        }
+
+
+    </style>
+    
+
+</head>
+<body>
+    <div class="container">
+        <div class="title-box">
+            <p class="title">개인정보입력</p>
+            <p class="text">일부 전시장에서는 만26세 이상만 운전자 시승이 가능하며, 만26세 이하 고객께서는 동승석 탑승으로 시승이 제한될 수 있습니다.</p>
+        </div>
+
+        <form action="" method="post"> <!-- table 안에는 테이블 관련 요소만 올 수 있기에 form-table 형태로 조합을 해야한다. -->
+            <table>
+                <tr>
+                    <th>
+                        <label for="user-name">
+                            신청자 성명
+                            <span class="star">*</span>
+                        </label>
+                    </th>
+                    <td>
+                        <input type="text" id="user-name" name="user-name" placeholder="이름을 입력하세요." required class="text-w360">
+                    </td>
+                </tr> <!-- 첫번째 행 -->
+
+                <tr>
+                    <th>
+                        <label for="user-car">
+                            현재보유 차량모델
+                        </label>
+                    </th>
+                    <td>
+                        <input type="text" id="user-car" name="user-car" placeholder="보유 차량을 입력하주세요." class="text-w360">
+                    </td>
+                    <th class="th-p130">
+                        출생년도
+                        <span class="star">*</span>
+                        <td>
+                            <select name="userbirth" class="text-w360">
+                                <option value="1980">1980</option>
+                                <option value="1981">1981</option>
+                                <option value="1982">1982</option>
+                                <option value="1983">1983</option>
+                                <option value="1984">1984</option>
+                                <option value="1985">1985</option> <!-- 커스텀 시에는 li요소로 적용 -->
+                            </select>
+                        </td>
+                    </th>
+                </tr> <!-- 두번째 행 -->
+
+                <tr>
+                    <th>
+                        <label for="user-call-number">
+                            연락처
+                            <span class="star">*</span>
+                        </label>
+                    </th>
+                    <td colspan="3">
+                        <input type="text" id="user-call-number" name="user-call-number" placeholder="'-'없이 입력해주세요" class="text-w360" required>
+                        <input type="button" class="submit-btn" value="인증번호 받기">
+                        <input type="text" name="user-auth" placeholder="인증번호 입력" class="text-w360" required>
+                        <input type="button" class="auth-bth" value="확인">
+                    </td>
+                </tr> <!-- 세번째 행 -->
+
+                <tr>
+                    <th>
+                        전시장 선택
+                        <span class="star">*</span>
+                        <td colspan="3">
+                            <input type="text" placeholder="지역" class="text-w300" name="user-local01" required>
+                            <input type="text" placeholder="시/군/구" class="text-w300 sigungu" name="user-local02" required>
+                            <input type="text" placeholder="전시장" class="text-w300" name="user-local03" required>
+                        </td>
+                    </th>
+
+                </tr> <!-- 네번째 행 -->
+
+                <tr>
+                    <th>
+                        <label for="3month">
+                            구매 시기
+                            <span class="star">*</span>
+                        </label>
+                        <td colspan="3">
+                            <input type="radio" name="buy" id="3month" value="3m" checked>
+                            <label for="3month" class="radio-label">3개월 이내</label>
+
+                            <input type="radio" name="buy" id="6month" value="6m">
+                            <label for="6month" class="radio-label">6개월 이내</label>
+
+                            <input type="radio" name="buy" id="1years" value="1y">
+                            <label for="1years" class="radio-label">1년 이내</label>
+
+                            <input type="radio" name="buy" id="2years" value="2y">
+                            <label for="2years" class="radio-label">2년 이내</label>
+
+                            <input type="radio" name="buy" id="no-buy" value="no">
+                            <label for="no-buy" class="radio-label">계획 없음</label>
+                        </td>
+                        
+                    </th>
+                </tr> <!-- 다섯번째 행 -->
+
+                <tr>
+                    <th>
+                        <label for="user-date">
+                           시승/상담 희망일
+                            <span class="star">*</span>
+                      </label>
+                    </th>
+                    <td colspan="3">
+                        <input type="date" id="user-date" name="user-date" class="text-w360">
+                    </td>
+                </tr> <!-- 여섯번째 행 -->
+
+            </table>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어 쿼리</title>
+</head>
+    
+    <style>
+        /*
+        미디어 쿼리(분기점, 브레이크포인트)
+        반응형에서 필수적으로 사용하는 속성으로 반응형에서 레이아웃이 변경되는 지점을 잡아주는 속성
+        분기점은 시안에 따라서 잡는것이 보통
+
+        자주 사용하는 디바이스 크기
+
+        모바일
+        소: 320px(아이폰5), 360px(안드로이드)
+        중: 375px(아이폰x,11 pro), 414px(아이폰 11, 12, 13, 14)
+        대: 414px 이상 (아이폰 max계열, 갤럭시 노트)
+
+        태블릿
+        소: 768px(아이패드 미니, 갤탭구버전)
+        중: 1024px(아이패드)
+        대: 1280px(아이패드 프로)
+
+        데스크탑
+        소: 1024px
+        중: 1280px, 1360px
+        대: 1440px 이상
+
+        분기점 기준 크기
+        모바일: 480px
+        태블릿: 768px
+        pc: 1024px, 1280px, 1440px ~ 
+
+
+        */
+
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .clearfix:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .parent{
+            width: 1200px;
+            background: lightgray;
+            margin: 0px auto;
+        }
+
+
+        .parent > div {
+            width: 30%;
+            height: 300px;
+            float: left;
+            margin-right: 5%;
+        }
+        .parent .child01{
+            background: pink;
+        }
+        .parent .child02{
+            background: coral;
+        }
+        .parent .child03{
+            margin-right: 0px;
+            background: lightpink;
+        }
+
+
+        @media screen and (max-width: 1200px){
+            .parent{
+                width: 100%;
+            }
+        }
+        @media screen and (max-width: 768px){
+            .parent > div {
+                width: 100%;
+                margin-right: 0px;
+                margin-bottom: 20px;
+            }
+        }
+
+
+        /*
+
+        미디어 쿼리에서 작성하지 않은 값이 디폴트값이 되며, 디폴트값은 기준이 되는 디바이스의 크기값을 기준으로 한다.
+        보통 미디어 쿼리의 시작점은 설정한 디바이스의 크기보다 크지 않다.
+        미디어 쿼리 내부에는 모든 값을 넣는것이 아닌 변경되는 값만 넣어주면 된다. (덮어씌어지는 방식이므로 선택자 주의)
+        쿼리에 있는 선택자의 우선순위가 같거나 더 높아야 한다.
+
+        */
+
+
+    </style>
+
+<body>
+    <div class="parent clearfix">
+        <div class="child01">child01</div>
+        <div class="child02">child02</div>
+        <div class="child03">child03</div>
+    </div>
+</body>
+
+</html>

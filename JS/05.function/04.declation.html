@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>작성법 declation</title>
+
+    <script>
+        /*
+        함수 선언 방식
+        1. 함수선언식 function name(매개변수){코드블록} // 가장 기본적인 선언 방식
+        2. 함수표현식 const name = function(매개변수){코드블록} // 변수를 선언할 때에는 let보다 const로 한다.
+        3. 생성자함수 const name = new function(매개변수){코드블록}
+        4. 화살표함수 function name = (매개변수) => {코드블록} // es6에서 새로 추가된 문법
+        5. 즉시실행 함수 (function(매개변수){코드블록}) // 함수를 작성과 동시에 호출
+        */
+
+        //case01 함수선언식 -> 호이스팅 가능
+        console.log(sum(1,2))
+        function sum(a,b){
+            return a + b;
+        }
+        
+
+        //case02 함수표현식
+        const sum02 = function(a,b){
+            return a * b;
+        }
+        console.log(sum02(2, 5))
+
+
+
+        const sum03 = function calc(a, b){
+            return a * b;
+        }
+        // 함수(function) 표현식은 변수명으로만 호출해야 한다. 함수에 이름을 넣어도 되지만, 아무런 기능을 안한다.
+        // 위의 식에서 함수에 있는 이름(calc)를 호출할시 에러가 난다. (e.g. console.log(calc(10,2))시 에러가 남)
+    
+
+        //case03 생성자함수
+        const User = new function(name, job){
+            // 생성자 함수는 일반 함수와 구분하기 위해 대문자로 시작하는 것이 관례
+            this.name = '김성종';
+            this.job = '학생';
+            //this는 생성자를 의미한다.
+            //생성자 함수는 내용을 객체로 분류한다.
+        }
+        console.log(User);
+
+
+        //case04 즉시실행 함수
+        (function(){
+            let a = 10;
+            let b = 10;
+            return console.log(a + b);
+        })(); // 익명 즉시실행 함수
+
+        (function sum04(){
+            let a = 5;
+            let b = 5;
+            return console.log(a * b)
+        })(); // 기명 즉시실행 함수
+        // sum04() ReferenceError: sum04 is not defined
+        // 즉시실행 함수에도 함수명을 넣을수는 있지만, 호출은 불가능하다.(기능하지 않는다.)
+
+
+
+
+
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 요소</title>
+</head>
+
+    <style>
+
+        /*
+        가상 요소
+        태그(body)상에서는 존재하지 않지만, 화면상에서는 존재하고 있는 것처럼 보이는 어떠한 가상의 컨텐츠를 생성하는 inline 속성의 기법
+
+        format(css에서 작성)
+        선택자:before = 선택자의 '내용(컨텐츠)' 바로 앞에 요소를 생성
+        선택자:after = 선택자의 '내용(컨텐츠)' 바로 뒤에 요소를 생성
+
+        가상요소는 반드시 내용이 있어야 하며,
+        내용은 content 속성을 사용해서 작성한다.
+        내용을 넣지 않아도 content속성은 반드시 존재해야 하며 ("")와 같이 빈칸처리 한다.
+        
+
+        가상요소로 생성된 컨텐츠의 내용은 리더기가 읽지 못하는 경우가 있다.(리더기 종류마다 다름)
+        중요한 내용을 넣는 것보다는 꾸며주는 요소의 의미로 생성하는 경우에 많이 쓰인다.
+
+        보통 의미없는 아이콘이나 블릿기호를 작성할때 많이 사용하며, 내용을 넣을때에는 접근성을 고려해서 작성해야 한다.
+
+        싱글콜론(:)과 더블콜론(::)의 차이점
+        css3 이전에는 싱글콜론으로 가상요소와 가상선택자 모두 통일했으나, css3 이후는 구분을 해주기 위해서 가상요소에는 더블콜론으로 변경.
+        
+        css3을 지원하지 않는 하위버전 브라우저에서는 더블콜론 사용시 적용하지 않는다.(ie9버전 이하)
+
+        */
+        *{
+            margin: 0px;
+            left: 0px;
+            list-style: none;
+        }
+
+        .content{
+            background: coral;
+            height: 50px;
+            width: 100%;
+            padding: 12px;
+        }
+        .content:before{
+            content: "";
+            width: 20px;
+            height: 20px;
+            background: gray;
+            display: inline-block;
+        }
+        .content:after{
+            content: "안녕히가세요!";
+        }
+        
+
+        .list{
+            padding: 12px;
+            background: gray;
+            /* overflow: hidden; */
+        }
+        .list li{
+            width: 100px;
+            height: 20px;
+            background: pink;
+            float: left;
+        }
+        .list:after{
+            content: "";
+            display: block;
+            clear: both; /*float를 해제하는 속성 both = left + right */
+        }
+
+        .clearfix:after{
+            clear: "";
+            display: block;
+            clear: both;
+        }
+
+    </style>
+
+<body>
+
+    <div class="content">content</div>
+
+    <ul class="list">
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+    </ul>
+
+
+
+</body>
+
+</html>

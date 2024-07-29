@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>style 입력 방법의 종류</title>
+
+    <style>
+        div{
+            background-color: coral !important;
+        }
+        div{
+            background-color: cyan;
+        }
+    </style>
+    <link rel="stylesheet" href="./style.css"> <!-- rel="stylesheet"는 암기, "./"는 현재 폴더 경로를 의미 -->
+
+    <!--
+        스타일의 적용 조건은
+        선택자를 얼마나 정확하게 선택했는지, 선택자에 적용된 마지막 값 (위의 content에서 coral -> cyan -> css파일 이기에 최종적으로 css 파일이 적용됨)
+
+        스타일의 적용 방법
+        - 내부 스타일 기법: html문서 안에 style영역을 지정해서 작성하는 방법 (e.g. 위의 colar, cyan)
+        - "외부 스타일 기법": 외부에서 스타일 파일을 따로 관리하면서 링크로 연결해서 작성하는 방법 (e.g. css파일)
+        - 직접 스타일 기법: 태그에 직접적으로 스타일을 주는 방법 (body부분에 직접 적용)
+
+        스타일 적용 순서
+        스타일이 적용되는 순서는 같은 레벨의 선택자라면 가장 마지막에 작성된 스타일이 적용된다.
+        스타일의 우선순의를 정하는 기준은 얼마나 선택자를 직접적으로 선택하고 있냐이며,
+        같은 선택자 레벨일 경우, 마지막에 선언한 값이 사용됨.
+
+        보통 내부와 외부는 섞어서 사용하지 않으며, 실무에서는 외부만 사용함 (충돌, 관리 용이성)
+
+        !important = 모든 구조관계를 무시하고 해당 스타일을 최우선으로 적용
+        자주 사용하는 속성은 아니며 주로 템플릿이나 다른 파일을 수정할 때 오류를 찾을 수 없는 경우
+
+    -->
+</head>
+<body>
+    <div style="background-color: blue;">div는 block속성 태그입니다.</div>
+    <div>div는 block속성 태그입니다.</div>
+    <div>div는 block속성 태그입니다.</div>
+</body>
+</html>

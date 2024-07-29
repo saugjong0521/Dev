@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        /*
+        flex
+        아이템 조절 방식에 대한 그룹 속성
+        basis, grow, shrink의 그룹속성
+        flex에서 기본값은 grow 0, shrink 1, basis auto
+
+        단위를 공유하기 때문에 순서에 의해 작성
+        순서는 grow shrink basis순서대로 작성
+        grow를 제외한 나머지 값은 생략 가능하다.
+        
+        단, 그룹속성에서 값을 생략할 경우 shrink는 값은 1로 되지만, basis는 auto가 아닌 0이 된다.
+                *basis 0과 auto의 차이 (컨텐츠 영역을 잡고 들어가냐 아니냐)
+                0일 경우: item의 기본크기를 0으로 설정해서 남은 공간이 flex-grow에 따라 분배
+                auto일 경우: item의 기본 크기를 content의 길이로 설정
+
+        flex를 사용할때와 사용하지 않을때 기본값이 바뀌는 이유는
+        사용자의 행동을 고려해서 가장 적합한 값을 간편하게 설정하기 위함 -> 기본적으로 작업시에, 컨텐츠 영역을 따로 주고가지 않는게 상수
+
+        */
+
+        .container{
+            display: flex;
+        }
+        .item{
+            flex: 1 auto; /*grow 1, shrink 1, basis auto*/
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Lorem.</div>
+        <div class="item">Lorem, ipsum.</div>
+        <div class="item">Lorem, ipsum dolor.</div>
+    </div>
+    
+</body>
+</html>

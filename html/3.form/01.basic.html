@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력 태그</title>
+
+    <style>
+        textarea{
+            resize: none;
+            width: 500px;
+            height: 300px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <form action="사이트의 주소 / 파일의 경로를 설정" method="post/get"> <!-- 데이터가 전송될 서버를 지정하기에 데이터의 이동이 있다면 반드시 작성 -->
+
+    <!--
+
+        입력 태그
+        사용자가 입력을 위해 다양한 방식의 입력 폼을 제공하는 태그들
+        지정된 서버에 입력된 값을 보내거나 받는 역할도 수행
+        데이터를 전송하거나 받아와야 하는 요소들이기에 설정하는 값들이 많다.
+
+        1. form태그에 들어가는 속성
+         - action: 실행시킬 주소를 지정
+            입력 값을 서버 혹은 프로그램 주소로 지정
+            이곳으로 데이터를 전송하려면 브라우저가 전송위치를 알아야 하기에 필수적인 속성
+
+         - method: 서버로 전송되는 데이터의 전송 방식
+            get: 사용하기 간편하다는 장점이 있지만 전송 가능한 데이터 길이가 제한적, 보안에 취약 (url에 데이터의 정보를 같이 보내는 방식)
+                보안이 필요없을때 사용 (e.g. 검색, 조회 등)
+            post: 사용하기가 비교적 까다롭다는 단점이 있지만 데이터의 길이가 더 길고, 보안이 더 강화됨
+                데이터가 요청 본문에 포함되므로 url에 정보가 표시되지 않아서 보안이 더 강력
+                민감한 정보를 다루는 곳에서 사용 (e.g. 로그인, 회원정보 등)
+
+        2. form태그 안에 들어가는 입력 태그의 종류
+         - input: 다양한 입력 방법을 제공하는 대표적인 태그
+            type속성으로 입력도구의 종류를 변경하여 사용할 수 있다.
+
+        3. input에 들어가는 type의 종류
+
+        4. 입력 도구에 들어가는 속성
+         - type: input에 들어가는 입력방법을 변경하는 속성
+         - value: 서버에 전송되는 값
+            type에 따라서 용도가 달라짐
+                text: 초깃값
+                button: 내부 텍스트
+                checkbox: 서버에 넘겨주는 값
+         - name: 입력태그의 id/class와 비슷한 개념, 다만 css를 name으로 주지는 못하나, 스크립트/서버에서 값을 식별하기 위해서 사용
+            서버로 폼 데이터가 전송될 때 각 입력요소의 name속성값이 key가 됨
+         - placeholder: 영역에 대한 힌트
+            값을 입력하면 자동으로 지워지며 서버에 전송되는 값은 아님
+         - required: 필수 입력 유효성 검사
+
+         - disabled: 사용자가 값을 입력하지 못하도록 영역을 잠금(서버에 값을 전송하지 않음)
+            조건부 비활성, 사용자 권한에 따라 입력 제한, 데이터 전송 방지
+         - readonly: 사용자가 값을 입력하지 못하도록 영역을 잠금(서버에 값은 전송됨)
+            기존 데이터에서 수정이 불가능 처리
+
+         - size: input창에서 길이 조절 속성
+            px이나 %처럼 단위의 개념이 아니라 글자수 개념으로 생성
+            width처럼 값을 정확하게 파악하기 어려우며, font-size에 따라서도 결과값이 달리질 수 있음
+            보통 사용하지 않으며, width와 섞어서도 사용 X
+         - maxlength: 최대 글자 수 유효성 검사
+         - minlength: 최소 글자 수 유효성 검사
+
+         - checked: 체크박스 기본값
+         - selected: 설렉트 형태에서 기본값
+
+    -->
+
+
+        <!-- 입력 -->
+        <input type="text" value="초기값" size="10"> <!-- type을 지정하지 않으면, 기본값으로 type="text"가 된다. (다만 추후 관리를 위해 생략 X) -->
+        <input type="text" placeholder="텍스트를 입력하세요." required readonly>
+        <input type="password"> <!-- 텍스트를 암호화해서 출력해줌--> <!--비밀번호 보기 창은 password <-> text 로 바꿔주는 버튼임, 2개를 미리 구현 후 하나를 hidden처리 -->
+        <input type="number"> <!-- 숫자만 입력 가능하나, 스피너 때문에 잘 사용 X -->
+        <input type="email"> <!--이메일 양식 유효성 검사를 해주는 input타입 (@가 없을시 입력 불가) -->
+        
+        <!-- 지정 생성 -->
+        <input type="color"> <!-- color를 선택할 수 있는 colorPicker창을 생성, ie는 미지원 -->
+        <input type="date"> <!-- 날짜를 지정할 수 있는 캘린더창이 생성, ie는 미지원 -->
+
+        <!-- 동작 형식 -->
+        <input type="file"> <!-- 파일 업로드 버튼 생성 -->
+        <input type="button" value="내부 텍스트"> <!-- 누를 수 있는 버튼 생성 -->
+        <button type="button">버튼</button> <!-- 
+        form 태그 밖에서도 사용 가능한 button, 여기서는 form 태그의 경로로 이동 // 기본값은 submit이기에, 다른기능으로 사용할 경우 type="button"을 통해 초기화 필요 
+        -->
+        <input type="submit"> <!-- 데이터를 서버로 보내는 역할을 하는 버튼 -->
+        <input type="reset"> <!-- 내용 삭제 버튼 -->
+
+        <!--숨김 처리-->
+        <input type="hidden"> 
+        <!-- 
+        사용자에게 보이지 않게 데이터를 전송하거나 받아올때 사용하는 역할
+        1. 폼의 추가적으로 데이터를 전송: 사용자가 볼 필요는 없지만 서버로 전송할 데이터를 포함해야 하는 경우
+        e.g. 로그인 되어 있는 아이디 전송/ 세션값 전송/ 위치 전송 등
+
+        2. 페이지 상태 유지: 여러 단계로 이루어진 폼에서 이전 단계에서 입력한 값을 다음 단계에서도 사용해야 할 때
+
+        3. 동적인 데이터 전송: 자바스크립트를 이용해서 동적으로 값을 설정 후 데이터가 전송될 때 포함해서 전송
+        -->
+
+        <!--체크 박스-->
+        <input type="checkbox">체크박스 <!-- 중복 선택이 가능한 박스 -->
+        <input type="radio">라디오 박스 <!-- 중복 선택이 불가능한 체크박스 -->
+
+        <div>
+            <span>성별</span>
+            <input type="radio" value="male" name="gender" checked> 남
+            <input type="radio" value="female" name="gender"> 여
+        </div>
+
+        <!--셀렉트-->
+        <select name="season" multiple> <!-- 이 상태에서 js를 사용하면, 내부 내용은 다 보이면서 한가지만 선택할 수 있도록 강제 가능 -->
+            <option value="spring">봄</option>
+            <option value="summer" selected>여름</option>
+            <option value="fall">가을</option>
+            <option value="winter">겨울</option>
+        </select>
+
+
+        <input type="text" style="height: 100px">
+        <!-- input은 기본적으로 inline요소이기 때문에 한 줄로만 제공되는 입력 도구 -->
+        <textarea></textarea>
+        <!-- 여러줄을 사용할 때에는 textarea태그를 사용
+         단, 사용자가 textarea창을 조절할 수 있기에 레이아웃이 붕괴될 수 있음. -> css로 제거해야 함 -->
+
+    </form>
+</body>
+</html>

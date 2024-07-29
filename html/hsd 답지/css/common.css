@@ -1,0 +1,863 @@
+/*공통 요소*/
+
+.inner{
+    width: 1170px;
+    height: 100%;
+    margin: 0px auto;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+.blind{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    z-index: -1;
+    overflow: hidden;
+    clip : rect(1px 1px 1px 1px);
+    /*대체 텍스트 사용 방법*/
+}
+
+
+/*header*/
+.h-container{
+    width: 100%;
+    height: 120px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: transparent;/*transparent : 투명*/
+    z-index: 999;
+}
+.h-top{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: end;
+    padding: 0px 20px;
+    box-sizing: border-box;
+}
+.h-top-menu{
+    display: flex;
+    height: 100%;
+}
+.h-top-menu a{
+    display: flex;
+    align-items: center;
+    color: #333;
+    font-weight: bold;
+    padding-left: 12px;
+    font-size: 12px;
+}
+.login:after, 
+.member:after{
+    content: "";
+    width: 1px;
+    height: 10px;
+    background: rgba(0,0,0,1);
+    margin-left: 12px;
+}
+.icon-insta:after{
+    content: "";
+    width: 14px;
+    height: 14px;
+    display: flex;
+    background-image: url(../images/icon_sns_01.png);
+    background-repeat: no-repeat;
+    background-size: 56px 14px;
+}
+.icon-facebook:after{
+    content: "";
+    width: 14px;
+    height: 14px;
+    display: flex;
+    background-image: url(../images/icon_sns_01.png);
+    background-repeat: no-repeat;
+    background-size: 56px 14px;
+    background-position: -14px 0px;
+}
+
+/*h-bottom*/
+.h-bottom{
+    width: 100%;
+    height: 90px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px;
+    box-sizing: border-box;
+}
+.logo{
+    width: 109px;
+    height: 47px;
+}
+.logo a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(../images/h1_logo.png) no-repeat center center / 100%;
+}
+.gnb{
+    height: 100%;
+}
+.gnb ul{
+    display: flex;
+    height: 100%;
+}
+.gnb ul li{
+    padding: 0px 30px;
+    height: 100%;
+}
+.gnb ul li a{
+    display: block;
+    line-height: 90px;
+    height: 100%;
+    font-weight: bold;
+    color: #333;
+}
+.gnb ul li a:after{
+    content: "";
+    width: 0px;
+    height: 6px;
+    display: block;
+    background: #F6CA00;
+    margin: -6px auto 0px;
+    transition: 300ms;
+}
+.gnb ul li:hover a{
+    color: #F6CA00;
+}
+.gnb ul li:hover a:after{
+    width: 100%;
+}
+
+
+/*mobile-btn*/
+.mobile-btn{
+    width: 22px;
+    height: 22px;
+    display: none;
+}
+.mobile-btn a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    transition: 300ms 400ms;
+}
+.mobile-btn a span{
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: #333;
+    position: absolute;
+    left: 0px;
+    transition-duration: 300ms;
+}
+.line01{
+    top: 0px;
+    transition-delay: 200ms;
+}
+.line02{
+    top: 9px;
+}
+.line03{
+    top: 18px;
+    transition-delay: 200ms;
+}
+
+.mobile-btn a:hover .line02{
+    transform: scaleX(0);
+}
+.mobile-btn a:hover .line03{
+    transform: rotate(90deg);
+    top: 9px;
+}
+.mobile-btn a:hover .line01{
+    top: 9px;
+}
+.mobile-btn a:hover {
+    transform: rotate(45deg);
+}
+/*------------------------------------------*/
+
+/*visual*/
+
+.visual-container{
+    width: 100%;
+    height: 650px;
+    background: url(../images/mainvisual.jpg) no-repeat center center / cover;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+}
+
+
+/*content01*/
+.content01{
+    width: 100%;
+    padding: 60px 0px;
+}
+/*brand*/
+.brand-wrapper{
+    margin-bottom: 60px;
+    display: flex;
+    gap: 30px;
+}
+.item{
+    flex-grow: 1;
+    width: 50%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    border-bottom: solid 6px #333;
+}
+.item:after{
+    content: "";
+    width: 100%;
+    height: 6px;
+    background: #F6CA00;
+    position: absolute;
+    left: 0px;
+    bottom: -6px;
+    transition: 500ms;
+    transform: scaleX(0);
+}
+
+.item a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #ddd;/*0720추가*/
+}
+.item a figcaption{
+    padding: 24px;
+    background: #ddd;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.item a figcaption .item-text{
+    height: 90px;
+}
+.item a figcaption .item-text span{
+    font-size: 20px;
+    color: #333;
+    display: block;
+    line-height: 1.5;
+    letter-spacing: -1px;
+}
+.item a figcaption .item-icon{
+    display: flex;
+    gap: 6px;
+    font-size: 12px;
+    color: #333;
+    align-items: center;
+    position: absolute;/*0720추가*/
+    bottom: 20px;/*0720추가*/
+}
+.item a figcaption .item-icon:before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: url(../images/btn_link.png) no-repeat left top / 40px;
+    transition: 300ms;
+    display: block;
+}
+/*hover event*/
+.item:hover:after{
+    transform: scaleX(1);
+}
+.item a:hover figcaption .item-icon:before{
+    background-position: -20px 0px;
+}
+
+/*franchise*/
+.franchise-wrapper{
+    display: flex;
+    gap: 30px;
+}
+.title-box{
+    background: #F6CA00;
+    padding: 50px 30px;
+    flex-grow: 1;
+
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+.title-box .content-title{
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.title-box .content-title:after{
+    content: "";
+    width: 40px;
+    height: 4px;
+    background: #333;
+    display: block;
+    margin-top: 40px;
+}
+.title-box .content-text{
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+    font-weight: bold;
+}
+.franchise-list{
+    display: flex;
+    gap: 30px;
+}
+
+/*hansot*/
+.hansot-wrapper{
+    width: 100%;
+    height: 600px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+}
+.hansot-wrapper .bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: url(../images/main_visual_02.jpg) no-repeat center center / cover;
+    transition: 3000ms;
+    z-index: 1;
+}
+.hansot-wrapper .bg:hover{
+    transform: scale(1.05);
+}
+.hansot-wrapper .title-box{
+    width: 370px;
+    height: 100%;
+    background: rgba(66,66,66,0.8);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    padding-top: 80px;
+    box-sizing: border-box;
+}
+.hansot-wrapper .title-box .content-title{
+    color: #fff;
+}
+.hansot-wrapper .title-box .content-title:after{
+    background: #fff;
+}
+.hansot-wrapper .title-box .content-text{
+    color: #ddd;
+    font-size: 13px;
+    letter-spacing: -1px;
+    line-height: 2;
+}
+.link-btn{
+    display: inline-block;
+    padding: 20px 50px;
+    border: solid 2px #fff;
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    left: 25px;
+    bottom: 60px;
+    transition: 500ms;
+}
+.link-btn:hover{
+    color: #333;
+    background: #fff;
+}
+
+/*content02*/
+/*food*/
+.content02{
+    width: 100%;
+    padding: 60px 0px 100px;
+}
+.food-wrapper{
+    width: 100%;
+    height: 450px;
+
+}
+.food-wrapper .food-item{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.food-wrapper .food-item .food-img{
+    width: 68.37%;
+    overflow: hidden;
+}
+.food-wrapper .food-item .food-img img{
+    width: auto;
+}
+.food-wrapper .food-item .title-box{
+    width: 370px;
+    background: #eee;
+    padding: 50px 30px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    border-bottom: solid 6px #333;
+    box-sizing: border-box;
+}
+.food-wrapper .food-item .title-box:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 6px;
+    background: #F6CA00;
+    position: absolute;
+    left: 0px;
+    bottom: -6px;
+    transform: scaleX(0);
+    transition: 500ms;
+}
+.food-wrapper .food-item .title-box .content-text span{
+    display: block;
+    font-size: 14px;
+    letter-spacing: -1px;
+}
+.food-wrapper .food-item .item-icon{
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    font-size: 13px;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+.food-wrapper .food-item .item-icon:before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    background: url(../images/btn_link.png) no-repeat left top / 40px;
+    transition: 300ms;
+}
+
+.food-wrapper:hover .food-item .title-box:after{
+    transform: scaleX(1);
+}
+.food-wrapper:hover .food-item .item-icon:before{
+    background-position: -20px 0px;
+}
+
+/*story*/
+.story-wrapper{
+    margin-top: 100px;
+}
+.story-wrapper .story-title{
+    width: 100%;
+    height: 24px;
+    margin-bottom: 60px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+.story-wrapper .story-title:after{
+    content: "";
+    width: 100%;
+    height: 16px;
+    background: #333;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0px;
+}
+.story-wrapper .story-title span{
+    font-size: 24px;
+    line-height: 24px;
+    color: #333;
+    font-weight: bold;
+    background-color: #fff;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    padding-right: 24px;
+}
+
+.story-list{
+    display: flex;
+    gap: 30px;
+}
+.story-list li{
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+.story-list li .story-text{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background: #333;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px 0px 30px;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+.story-list li .story-text:after{
+    content: "";
+    display: block;
+    width: 6px;
+    height: 10px;
+    background: url(../images/icon_cont_more.png) no-repeat left top / 12px;
+}
+.story-list li .story-text span{
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+}
+.story-list li:hover .story-text span{
+    color: #F6CA00;
+}
+.story-list li:hover .story-text:after{
+    background-position: -6px 0px;
+}
+
+/*footer*/
+/*footer*/
+.f-container{
+    background: #F5C900;
+    padding: 15px 0px 0px 0px;
+    display: flex;
+    flex-direction: column; 
+}
+.f-top-wrapper{
+    border-bottom: solid 1px rgba(66,66,66,0.1);
+    display: flex;
+    align-items: center;
+}
+.f-top-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 75px;
+    gap: 12px;
+}
+.f-top-menu li{
+    border-right: solid 2px #333333;
+    padding-right: 12px;
+}
+.f-top-menu li:last-of-type{
+    border-right: none;
+}
+.f-top-menu li a{
+    color: #333333;
+    font-weight: 500;
+}
+
+
+.award{
+    width: 174px;
+    height: 60px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.f-bottom-wrapper{
+    padding: 26px 0px 30px;
+    text-align: center;
+    
+}
+.f-bottom-wrapper .footer-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.f-bottom-wrapper .footer-info span{
+    color: #373737;
+    font-size: 15px;
+    line-height: 21px;
+    display: flex;
+}
+.f-bottom-wrapper .footer-info span:after{
+    content: "";
+    width: 1px;
+    height: 9px;
+    display: inline-block;
+    background: rgba(0,0,0,0.3);
+    vertical-align: top;
+    margin: 6px 8px 0px;
+}
+.f-bottom-wrapper .footer-info span:nth-of-type(5):after,
+.f-bottom-wrapper .footer-info span:last-of-type:after{
+    display: none;
+}
+
+.footer-copy{
+    padding: 30px;
+    font-size: 15px;
+    color: #373737;
+    font-weight: bold;
+}
+
+
+.footer-sns{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+.footer-sns li{
+    width: 40px;
+    height: 40px;
+}
+
+.footer-sns li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(../images/icon_sns_02.png) no-repeat left top / 80px;
+}
+.footer-sns li:last-of-type a{
+    background-position: -40px 0px;
+}
+
+.f-mobile-info{
+    border-top: solid 1px rgba(0,0,0,0.5);
+    border-bottom: solid 1px rgba(0,0,0,0.5);
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    
+}
+.f-mobile-info button{
+    background:transparent;
+    padding: 0px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.f-mobile-info button:after{
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 9px;
+    background: url(../images/icon_select_down.png) no-repeat center center / 12px;
+    vertical-align: top;
+    margin: 5px 0px 0px 5px;
+
+}
+
+
+/*반응형*/
+@media screen and (max-width:1170px){
+    .inner{
+        width: 100%;
+    }
+}
+
+/*1024*/
+@media screen and (max-width :1024px){
+    .h-container,
+    .h-bottom{
+        height: 60px;
+    }
+    .h-top,
+    .gnb{
+        display: none;
+    }
+    .h-bottom{
+        padding: 0px 15px;
+    }
+    .logo{
+        width: 25px;
+        height: 26px;
+    }
+    .logo a{
+        background-image: url(../images/m_h1_logo.png);
+    }
+    .mobile-btn{
+        display: block;
+    }
+
+    /*visual*/
+    .visual-container{
+        height: 380px;
+    }
+
+    /*content01*/
+    .content01{
+        padding: 30px 10px 60px;
+        box-sizing: border-box;
+    }
+    .brand-wrapper,
+    .franchise-wrapper,
+    .franchise-list{
+        gap: 20px;
+    }
+    .item a figcaption .item-text span{
+        display: inline;
+        font-size: 16px;
+    }
+    /*franchise*/
+    .franchise-wrapper .title-box{
+        padding: 60px 10px;
+    }
+
+    /*food*/
+    .food-wrapper .food-item .title-box{
+        width: 410px;
+    }
+    .food-wrapper .food-item .title-box .content-text span{
+        display: inline;
+    }
+    /*story*/
+    .story-wrapper{
+        display: none;
+    }
+
+    /*footer*/
+    .f-top-wrapper{
+        flex-direction: column;
+        border-bottom: none;
+    }
+
+    .f-top-menu li.item-none{
+        display: none;
+    }
+    .f-top-menu li{
+        border-right: none;
+        padding: 0px;
+    }
+
+    .award{
+        position: static;/*포지션의 초기값 (포지션이 적용되지 않은 값)*/
+        padding-top: 80px;
+        margin-bottom: 30px;
+    }
+    .f-bottom-wrapper{
+        padding-bottom: 0px;
+    }
+    .f-bottom-wrapper .footer-info{
+        display: none;
+    }
+
+    .footer-sns{
+        position: absolute;
+        top: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .f-mobile-info{
+        display: flex;
+    }
+}
+
+/*768*/
+@media screen and (max-width : 768px){
+    .visual-container{
+        background-image: url(../images/mainvisual-m.jpg);
+    }
+    /*franchise*/
+    .franchise-wrapper{
+        max-width: 640px;/*가로 최대크기*/
+        margin: 0px auto;
+        flex-direction: column;
+        padding: 0px;
+        gap: 12px;
+    }
+
+    .brand-wrapper,
+    .franchise-list{
+        gap: 16px;
+    }
+
+    /*hansot*/
+    .hansot-wrapper{
+        height: 550px;
+        box-sizing: border-box;
+        padding: 36px 24px;
+    }
+    .hansot-wrapper .title-box{
+        width: 100%;
+        padding: 50px 20px;
+    }
+    .hansot-wrapper .title-box .content-title{
+        font-size: 24px;
+        line-height: 1.5;
+    }
+    /*food*/
+    .food-wrapper{
+        height: auto;
+        max-width: 640px;
+        margin: 0px auto;
+    }
+    .food-wrapper .food-item{
+        flex-direction: column;
+    }
+    .food-wrapper .food-item .food-img,
+    .food-wrapper .food-item .food-img img,
+    .food-wrapper .food-item .title-box{
+        width: 100%;
+    }
+    .food-wrapper .food-item .title-box{
+        height: 350px;
+    }
+    .food-wrapper .food-item .title-box .content-title{
+        font-size: 26px;
+        line-height: 1.5;
+    }
+    .food-wrapper .food-item .title-box .content-title:after{
+        margin-top: 30px;
+    }
+
+    
+
+}
+/*414*/
+@media screen and (max-width : 414px){
+    .content01{
+        padding: 30px 0px 60px;
+    }
+    .brand-wrapper{
+        flex-direction: column;
+        padding: 0px 15px;
+    }
+    .item{
+        width: 100%;
+    }
+    .item a figcaption{
+        gap: 0px;
+    }
+    /*franchise*/
+    .franchise-wrapper{
+        gap: 0px; 
+    }
+    .franchise-wrapper .title-box{
+        padding-bottom: 200px;
+    }
+    .franchise-list{
+        flex-direction: column;
+        padding: 0px 15px;
+        margin-top: -120px;
+    }
+
+    /*food*/
+    .food-wrapper{
+        box-sizing: border-box;
+        padding: 0px 15px;
+    }
+    .food-wrapper .food-item .title-box{
+        padding: 30px 20px;
+        height: 360px;
+    }
+}

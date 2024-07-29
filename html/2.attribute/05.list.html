@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>목록 태그</title>
+    <!-- <link rel="stylesheet" href="./reset.css"> -->
+    <!-- 
+        목록 태그
+        하나의 주제에 여러개의 리스트가 존재하는 경우
+
+        순서가 필요한 목록 (order list) = ol
+        순서가 필요하지는 않는 목록 (unorder list) = ul
+
+        ol과 ul에는 자식요소로 반드시 li(list item)만 사용할 수 있다.
+
+
+        용어에 대한 설명 (description list) = dl
+
+        모든 태그들은 기본적으로 여백(margin, padding)과 더불어서 목적에 맞는 기본 스타일을 가지고 생성된다.
+        기본 속성들은 레이아웃을 디자인할 떄에, 방해요소가 되기 때문에 모든 속성들을 초기화하고 시작해야 되며, 따로 css파일로 관리한다. (reset.css파일로 관리)
+
+        dl = 설명할 용어를 감싸는 태그 ul,il과 같음
+            dt = description term : 설명할 용어
+            dd = description description : dt를 설명하는 태그
+        
+        하나의 dt에는 여러개의 dd가 와도 상관 없다.
+
+        div도 사용할 수는 있지만, dt와 dd의 형제요소로는 사용할 수 없다.
+        div는 dt와 dd를 감싸는 용도로만 사용해야 한다.
+         -> 필수적으로 사용되는 요소는 아님
+        
+
+    -->
+
+        <style>
+            ol, ul{
+                list-style: none; /*사용은 가능하지만, 보통은 none으로 처리하고 작업 -> reset.css 파일을 이용 */
+            }
+        </style>
+
+</head>
+<body>
+    <ol>
+        <li>list01</li>
+        <li>list02</li>
+        <li>list03</li>
+        <li>list04</li>
+        <li>list05</li>
+    </ol>
+    
+    <ul>
+        <li>list01</li>
+        <li>list02</li>
+        <li>list03</li>
+        <li>list04</li>
+        <li>list05</li>
+    </ul>
+
+    <dl>
+        <dt>감사</dt>
+        <dd>1. 명사 고마움을 나타내는 인사</dd>
+        <dd>2. 명사 고맙게 여김. 또는 그런 마음</dd>
+    </dl>
+
+
+    <dl>
+        <div>
+            <dt>감사</dt>
+            <dd>1. 명사 고마움을 나타내는 인사</dd>
+            <dd>2. 명사 고맙게 여김. 또는 그런 마음</dd>
+        </div>
+        <div>
+            <dt>감사</dt>
+            <dd>1. 단체의 서무를 맡아보는 직책. 또는 그 직책에 있는 사람.</dd>
+            <dd>2. 법인의 재산이나 업무를 감사하는 상설 기관. 또는 그런 사람.</dd>
+        </div>    
+    </dl>
+</body>
+</html>

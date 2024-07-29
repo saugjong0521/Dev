@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>id와 class</title>
+
+    <!--
+    태그 네이밍
+    태그의 식별을 위해서 id와 class로 구분해서 작성하여, 개발자가 임의대로 네이밍 but 몇가지 규칙이 있다. (관례적, 회사마다 규칙이 있음)
+
+    1. 한글금지
+    2. 첫글자는 소문자 (Abe = x, aBc= o)
+    3. 모든 이름은 대소문자 구별 (apple 과 aPple는 서로 다름)
+    4. 이름 중간이나 끝에 숫자를 넣을 순 있지만, 시작은 불가 (123abc = x, abc123 = o)
+    5. 특수문자 금지 (_,- 정도만 가능)
+    6. 하나의 태그에 id와 class 모두 사용할 수 있다.
+    7. 하나의 태그에 여러개의 class를 줄 수 있다. (id는 고유하기에 불가)
+
+
+    id
+     - 페이지에서 한번만 사용할 수 있는 독보적인 식별자
+     - 스타일을 넣기 위해서 작성하지는 않으며, 영역의 설명적인 이름이 들어가는 것이 좋다
+     - 두개의 단어를 연결할 때에는 (-)로 연결 (e.g. header-wrapper)
+     - 숫자는 가급적 제외
+
+    class
+     - 중복적으로 사용할 수 있으며, 여러 태그들을 그룹화해서 스타일을 적용할때 사용
+     - 기능적인 설명이 들어간 이름이 좋다. (e.g. header-bg-color)
+     - 두개의 단어를 연결할 때에는 (-)로 연결
+     - 숫자 사용에 제약 X
+
+    카멜기법
+     - 두개 이상의 단어를 연결할때 (-)대신 대문자로 작성 (e.g. apple-color = appleColor)
+     - 보통 카멜기법은 스크립트에서 식별자로 자주 사용
+
+
+    (-), 카멜기법 두가지 선택에 제약은 없으나, 일관성 및 가독성을 유지
+
+
+    -->
+
+    <style>
+        div{
+            background-color: gray;
+        }
+
+        #colorCoral{
+            background-color: coral;
+        }
+
+        #test2{
+            background-color: aliceblue;
+        }
+
+        #test1{
+            background-color: antiquewhite;
+        }
+
+        .colorAqua{
+            background-color: aqua;
+        }
+
+        .w400{
+            width: 400px;
+        }
+    </style>
+    <!-- 
+        id는 #식별자를 사용합니다, 
+        class는 .식별자를 사용합니다 
+    -->
+
+</head>
+
+<body>
+
+    <div id="colorCoral" class="w400">colorCoral id와 w400 class가 적용된 block 요소입니다.</div> <!--id와 class는 같이 사용이 가능하나, id는 고유값이기에 우선순위를 가짐-->
+    <br>
+    <div class="colorAqua"> colorAqua class가 적용된 block 요소입니다.</div>
+    <br>
+    <div class="w400"> w400 class가 적용된 block 요소입니다.</div>
+    <br>
+    <div class="colorAqua w400"> colorAqua, w400 class가 같이 적용된 block 요소입니다. 스페이스바(공백)으로 구분합니다.</div>
+    <br>
+    <div id="colorCoral"> colorCoral id가 적용된 block 요소입니다. 아이디가 2번 사용됐기에 구조적으로 권장되지 않습니다.</div> <!--출력에 이상은 없지만, 구조적으로는 id가 두번 사용됬기에 개발자로서는 옳지 않음 // https://validator.w3.org/-->
+    <br>
+    <div id="test1 test2"> test1, test2 id가 같이 적용된 block 요소입니다. 오류이기에 기본색상이 나옵니다.</div> <!--whitespace error로 아에 적용이 되지 않음(id는 중복적용 불가능하기에 공백 불가)-->
+
+</body>
+
+</html>
+
+
+
+
+
+

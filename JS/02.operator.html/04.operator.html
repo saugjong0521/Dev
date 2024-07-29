@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비교 연산자</title>
+
+    <script>
+        /*
+        
+        a > b
+        a < b
+        a >= b
+        a <= b
+        
+        =, ==, ===
+        a = b -> b를 a에 할당했다 (대입연산자)
+        a == b -> a와 b는 같다 (약 연산)
+        a === b -> a와 b는 같다 (강 연산)
+
+        부정연산자
+        !, !!, !=, !==
+            ! -> not
+            != 부등 연산자 -> 다를때 true를 반환 (약 연산)
+            !== 불일치 연산자 -> 다를때 true를 반환 (약연산) -> 자료형까지 모두 같은 경우에만 false를 반환
+
+
+
+
+        비교문은 로직을 만드는데 중요한 역할
+
+        */
+
+        let a = 3;
+        let b = '3';
+
+        console.log(a == b); //true 값만 비교
+        console.log(a === b); //false 강연산 비교 (데이터 타입도 비교)
+
+        console.log(a != b);
+        console.log(a !== b); 
+
+        let c = 3;
+        let d = 4;
+        console.log(c != d) // 다르기에 true
+        console.log(c !== d) // 다르기에 true
+
+
+        console.log(3 !== 3)
+        console.log(false !== 0)
+
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

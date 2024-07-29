@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        /*
+        점수 계산하기
+        점수 계산하는 함수를 작성(function)
+        3개의 점수를 매개변수로 받아와서, 3개의 점수를 평균내서 학점으로 출력
+        평균이
+        90점보다 크거나 같으면 a
+        80점보다 크거나 같으면 b
+        70점보다 크거나 같으면 c
+        60점보다 크거나 같으면 d
+        그 이하는 f
+        */
+
+        
+        let MathScore
+        let KorScore 
+        let EngScore
+
+        function typeScore(MathScore, KorScore, EngScore){
+            if(MathScore != parseInt || KorScore != parseInt || EngScore != parseInt){
+                console.log('숫자를 입력하세요')
+            } else {
+                return;
+            }
+        }
+
+
+        function score(Math, Kor, Eng) {
+            
+            Math = MathScore;
+            Kor = KorScore;
+            Eng = EngScore;
+
+
+            let Total = (Math + Kor + Eng) / 3;
+            if (Total >= 90) {
+                return 'A';
+            }
+            else if (Total >= 80) {
+                return 'B';
+            }
+            else if (Total >= 70) {
+                return 'C';
+            }
+            else if (Total >= 60) {
+                return 'D';
+            }
+            else {
+                return 'F';
+            }
+        }
+
+
+
+
+        document.write('당신의 학점은 ' + score() + '입니다.')
+
+
+        // prompt로 만들기 (가능할듯?)
+
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

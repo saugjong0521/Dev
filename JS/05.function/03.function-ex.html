@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // 구구단을 함수로 출력 (사용자가 원하는 단수를 받아서 출력)
+
+        function gugudan(count){
+            let result = '<ul>';
+
+            
+            for (let i = 1; i <= 9; i++){
+                result += '<li>' + count + '*' + i + '*' + (count * i) + '</li>'
+            }
+            result += '</ul>';
+            return result;
+        }
+        document.write(gugudan(parseInt(prompt('단수를 입력하세요'))))
+
+
+        // if (gugudan = parseInt) {} 만들어보기 -> while안에 for 로 가는게 괜찮을 것 같음
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

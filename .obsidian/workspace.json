@@ -44,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "path:\"frontEnd/\" ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -61,7 +61,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -138,15 +139,53 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "cd74224c5538f113",
+  "active": "ba023fb855cb1d6c",
   "lastOpenFiles": [
-    "frontEnd/1 week.md",
-    "frontEnd",
-    "3번째까지 잘 되면 합격 입니다.md",
-    "2번째 파일 생성이 잘 되는지 테스트.md",
-    "conflict-files-obsidian-git.md",
-    "Obsidian test 마지막 테스트 5분 기다리기.md",
-    "3번째까지 잘 되면 합격 입니다",
-    "test.md"
+    "Output/KUSD_S3/node_modules/send/node_modules/ms/package.json",
+    "Output/KUSD_S3/node_modules/send/node_modules/ms/readme.md",
+    "Output/KUSD_S3/node_modules/send/node_modules/ms/license.md",
+    "Output/KUSD_S3/node_modules/send/node_modules/ms/index.js",
+    "Output/KUSD_S3/node_modules/object-inspect/test/browser/dom.js",
+    "Output/KUSD_S3/node_modules/body-parser/lib/types/urlencoded.js",
+    "Output/KUSD_S3/node_modules/body-parser/lib/types/text.js",
+    "Output/KUSD_S3/node_modules/body-parser/lib/types/raw.js",
+    "Output/KUSD_S3/node_modules/iconv-lite/encodings/tables/shiftjis.json",
+    "Output/KUSD_S3/node_modules/body-parser/lib/types/json.js",
+    "Output/KUSD_S3/node_modules/iconv-lite/encodings/tables/gbk-added.json",
+    "Output/KUSD_S3/node_modules/iconv-lite/encodings/tables/gb18030-ranges.json",
+    "Output/KUSD_S3/node_modules/iconv-lite/encodings/tables/eucjp.json",
+    "Output/KUSD_S3/node_modules/vary/README.md",
+    "Output/KUSD_S3/node_modules/vary/HISTORY.md",
+    "Output/KUSD_S3/node_modules/utils-merge/README.md",
+    "Output/KUSD_S3/node_modules/unpipe/README.md",
+    "Output/KUSD_S3/node_modules/unpipe/HISTORY.md",
+    "Output/KUSD_S3/node_modules/type-is/README.md",
+    "Output/KUSD_S3/node_modules/toidentifier/README.md",
+    "Output/KUSD_S3/node_modules/type-is/HISTORY.md",
+    "Output/KUSD_S3/node_modules/toidentifier/HISTORY.md",
+    "Output/KUSD_S3/node_modules/statuses/README.md",
+    "Output/KUSD_S3/node_modules/statuses/HISTORY.md",
+    "Output/KUSD_S3/node_modules/side-channel/README.md",
+    "Output/KUSD_S3/node_modules/side-channel/CHANGELOG.md",
+    "Output/KUSD_S3/node_modules/setprototypeof/README.md",
+    "Output/KUSD_S3/node_modules/set-function-length/README.md",
+    "Output/KUSD_S3/node_modules/set-function-length/CHANGELOG.md",
+    "Output/KUSD_S3/node_modules/serve-static/README.md",
+    "Output/KUSD_S3/node_modules/serve-static/HISTORY.md",
+    "Output/KUSD_S3/node_modules/send/README.md",
+    "Output/KUSD_S3/node_modules/send/SECURITY.md",
+    "Output/KUSD_S3/node_modules/send/HISTORY.md",
+    "Output/KUSD_S3/node_modules/safer-buffer/Readme.md",
+    "Output/KUSD_S3/node_modules/safer-buffer/Porting-Buffer.md",
+    "Output/KUSD_S3/public/copy_symbol2.png",
+    "html/6.html5/video/source/poster.jpg",
+    "html/hsd 답지/images/whyhansot.jpg",
+    "html/hsd 답지/images/vegetable.jpg",
+    "html/hsd 답지/images/screencapture-hsd-co-kr-2023-05-10-11_42_42.png",
+    "html/hsd 답지/images/screencapture-hsd-co-kr-2023-05-10-11_42_15.png",
+    "html/hsd 답지/images/screencapture-hsd-co-kr-2023-05-10-11_41_47.png",
+    "html/hsd 답지/images/review.jpg",
+    "html/hsd 답지/images/screencapture-hsd-co-kr-2023-05-10-11_41_00.png",
+    "html/hsd 답지/images/promise.jpg"
   ]
 }

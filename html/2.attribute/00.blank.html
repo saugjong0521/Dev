@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여백</title>
+    <!-- 
+        여백속성
+        컨텐츠를 기준으로 '안쪽'과 '바깥쪽' 여백으로 구분해서 작성
+
+        바깥쪽 여백 (margin)
+         - 주로 컨텐츠와 컨텐츠 사이의 여백을 생성할때 사용, "기본적으로 영역에 포함되는 값"은 아님
+
+
+        안쪽 여백 (padding, border) -> 컨텐츠 영역 자체가 커짐
+         - 주로 컨텐츠 내부에서 여백이 필요할때 사용, "영역에 값이 추가되는 방식"
+
+        안쪽여백을 적용했을때 영역이 커지는 현상 해결법
+        1. 영역값을 계산할때 미리 제외하는 방법 -> 계산을해야 하기 때문에 번거롭고 휴먼에러가 발생할 수 있음
+        
+        2. css를 이용하는 방법 (추천)
+            - box-sizing
+                content-box : 내부에 들어갈 컨텐츠(내용)만큼만 영역으로 지정 - 기본값
+                border-box : 여백을 컨텐츠에 포함해서 지정 (margin 제외)
+
+        3. border 속성 (외곽 선 속성)
+         - border 속성에는 3가지 값이 있음 -> 색, 굵기, 스타일
+
+    -->
+
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: coral;
+        }
+
+        .margin{
+            margin-bottom: 100px;  /**margin은 그룹속성 -top등이 붙는것은 세부 속성**/
+        }
+
+        .padding{
+            padding-bottom: 100px;
+            border-width: 2px; /**선의 굵기**/
+            border-color: black;
+            border-style: solid; /** border의 경우에는 컨텐츠가 영역이 크기가 커지기 때문에 주로 border-sizing 같이 적용하여 핸들링 (border-box를 사용하지 않을 경우 204 px가 됨)**/
+        }
+    </style>
+
+</head>
+<body>
+    <div class="margin">box1</div>
+    <div class="padding">box2</div>
+</body>
+</html>

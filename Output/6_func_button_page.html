@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+*{
+    box-sizing: border-box;
+    padding: 0;
+    font-size: 0px
+}
+
+
+.container{
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    background: lightgray;
+    max-width: 900px;
+
+    align-items: center;
+    justify-content:center;
+    
+    
+}
+
+.item{
+    font-size: 20px;
+    background: rgb(243, 152, 119);
+    flex-basis: 300px;
+    border: 3px solid black;
+    height: 200px;
+
+    margin-right: -3px;
+    margin-top: -3px;
+
+    align-content: center;
+    text-align: center;
+    
+}
+.item:nth-of-type(n+4){
+    margin-top: -3px;
+}
+.item:active{
+    background: coral;
+}
+
+@media screen and (max-width:906px){
+    .item:nth-of-type(n+3) {
+        margin-top: -3px;
+    }
+}
+@media screen and (max-width:609px){
+    .item:nth-of-type(n+2) {
+        margin-top: -3px;
+    }
+}
+@media screen and (max-width:250px){
+    .item{
+        height: 150px
+    }
+}
+
+</style>
+
+
+<body>
+    <div class="container">
+        <button type="button" class="item" onclick="alert('This is 1th button')">button1</button>
+        <button type="button" class="item" onclick="alert('This is 2th button')">button2</button>
+        <button type="button" class="item" onclick="alert('This is 3th button')">button3</button>
+        <button type="button" class="item" onclick="alert('This is 4th button')">button4</button>
+        <button type="button" class="item" onclick="alert('This is 5th button')">button5</button>
+        <a href="http://www.naver.com" class="item">button6</a>  
+    </div>
+</body>
+</html>
+
+
+

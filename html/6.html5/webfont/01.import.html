@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>import방식 연결</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
+
+        p {
+            font-family: "Sofia", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        /* font 파일을 연결할때에는 두가지 방식으로 연결할 수 있다. 
+        
+            link방식 import방식
+
+            import방식 (적은 수의 파일을 연결하는 경우 이점이 생길 수 있음)
+            - 장점: css내부에서 선언하기 때문에 문서 가독성이 높아진다.
+            - 단점: 로딩시간이 길어짐 (브라우저가 css파일을 다운로드 후에 import를 인식하고 다운하는 방식)
+                import는 직렬방식의 로드방법을 사용함 -> 이전단계의 로드에서 오류 시 문제 발생
+
+            link방식 (권장)         ==> link 방식에 주석을 걸어서 구별하는 것이 좋음 (특정 경우 제외, e.g. react scss)
+            - 장점: 병렬방식의 로드방식을 사용하기 때문에 한번에 많은 파일을 로드할 수 있다.
+            - 단점: head에 link를 여러개 걸어줘야 하기 때문에 가독성에 문제가 생길수는 있다.
+
+        */
+
+
+    </style>
+
+
+
+</head>
+
+<body>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit, optio.</p>
+</body>
+
+</html>

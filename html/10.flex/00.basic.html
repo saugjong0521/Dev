@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        /*
+        flex
+        table -> inline-block -> float -> grid -> flex
+        레이아웃이나 컨텐츠를 배치할때 만들어진 css기법이기 때문에
+        float나 inline-block보다 훨씬 간편하고 강력한 기능들을 제공한다.
+
+        *ie에서는 100% 호환이 되지 않기 때문에 적절한 css로 우회해야 하지만
+        현재는 ie가 고려대상이 되지 않기 때문에 사용성과 양이 대폭 증가
+
+        flex가 적용되는 범위
+        flex가 적용되는 공간을 생성하는 요소 -> container/wrapper
+        flex가 실제로 적용되고 정렬되는 객체 -> item
+
+
+        */
+
+        .container01{
+            display: flex;
+            
+        }
+
+        .container02{
+            display: inline-flex;
+        }
+
+
+        /*
+        inline-flex는 container의 영역이 inline-block처럼 컨텐츠의 영역만큼만 설정
+        기본적으로 item은 flex가적용되면 컨텐츠의 길이만큼만 영역을 가진다.
+        (inline-block과 같으며, width값을 따로 조정할 수 있다.)
+        */
+
+        
+    </style>
+</head>
+<body>
+
+    <div class="container01">
+        <div class="item">Lorem.</div>
+        <div class="item">Lorem, ipsum.</div>
+        <div class="item">Lorem, ipsum dolor.</div>
+    </div>
+
+    <div class="container01 container02">
+        <div class="item">Lorem.</div>
+        <div class="item">Lorem, ipsum.</div>
+        <div class="item">Lorem, ipsum dolor.</div>
+    </div>    
+    
+    <div class="container01 container02">
+        <div class="item">Lorem.</div>
+        <div class="item">Lorem, ipsum.</div>
+        <div class="item">Lorem, ipsum dolor.</div>
+    </div>    
+
+</body>
+</html>

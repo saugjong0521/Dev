@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while반복문</title>
+
+    <script>
+        /*
+        for(초기값; 조건문; 증감식){실핼 코드 블록}
+        
+
+        let 초기값
+        while(조건식){
+            실행코드
+            증감식
+        }
+
+
+        for문과 while문의 차이점
+
+        반복횟수가 명확할때 = for문
+        반복횟수를 명확하게 지정할 수 없을 때 = while
+
+        특정한 조건을 만족할때까지 무한으로 반복(로그인)
+        while문에서는 무한루프는 for문보다 더 자주 일어나는 편임
+        블럭단위로 코드가 작성되지 않기 때문에 구분이 필요한 경우도 있다.
+
+        */
+
+        let i = 0; // 초기값은 while문 밖에서 작성
+        while(i <= 10){
+            document.write(i + '<br>');
+            i++;
+        }
+        console.log(i)
+
+        let j = 0; 
+        while(j <= 10){
+            j++;
+            document.write(j + '<br>');
+        }
+        console.log(j)
+
+        /*
+        while문은 증감식의 선언 위치에 따라 결과값이 다르게 나온다.
+        보통적으로 증감식을 코드 제일 아래에 작성하는 편이 일반적
+        *코드가 실행되는 순서에 유의
+
+        */
+
+
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문</title>
+
+    <script>
+
+        /*
+        반복문
+        초기값을 먼저 설정 후에 조건을 만족하는 동안 특정 코드블럭을 반복해서 실행해주는 메소드
+        작성방법
+        for(초기값; 조건식; 증감식){
+            조건을 만족할 동안 수행할 코드블럭
+        }
+
+        for문 작동 방식
+        1. 초기식 실행
+        2. 조건식 평가
+        3. 코드블럭 실행
+        4. 증감식 실행
+
+        반복문에서 가장 중요한 것은 종료되는 시점을 설정해야 함
+        종료되는 시점이 없거나 연산이 불가능한 조건일 경우 무한루프에 빠지게 되므로 주의
+
+
+        */
+
+        for(let i = 0; i <= 5; i++ ){   //지역변수 설정
+            console.log(i) //결과값중 가장 먼저 나오는 값은 초기값
+        }
+
+        //증감식에 특정 숫자 대입도 가능하다.
+        for (let i = 0; i <= 10; i += 2){
+            console.log(i)
+        }
+
+        console.clear()
+
+        for (let i = 0; i <= 5; i++){
+            for(let j = 0; j <= 5; j++){
+                console.log('i:' + i, 'j:' + j )
+            }
+        }
+        // 중첩 for문 작성시 변수명에 주의해야 한다. (초기값 변수명 중복 주의)
+        // 변수명은 i -> j -> k 순으로 작성하는 것이 좋다
+        // (정해진것은 아니지만 중첩임을 알려주기 위해서 i의 다음 알파벳을 사용) = 개발자끼리의 규칙
+
+
+    </script>
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

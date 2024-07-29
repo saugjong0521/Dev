@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        /*
+        flex-grow: item의 사이즈 증가 비율 설정
+        기본값은 0, 0이 아닌 숫자가 들어오게 되면 비어있는 여백을 채워서 늘어나게 된다.
+        
+        숫자는 기본 컨텐츠크기에 대한 배율을 의미하며
+        */
+        
+        .container{
+            display: flex;
+        }
+        .item{
+            flex-grow: 1;
+        }
+        .item:nth-of-type(2){
+            flex-grow: 3;
+        }
+        .item:nth-of-type(3){
+            flex-grow: 5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Lorem.</div>
+        <div class="item">Lorem, ipsum.</div>
+        <div class="item">Lorem, ipsum dolor.</div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문으로 태그 출력하기</title>
+
+    <script>
+
+        let dateList = '<ul>'; // 태그도 일반 string으로 인식해서 작성
+        let num = 30;
+
+        for(let i = 1; i <= num; i++){
+            dateList += '<li>' + i + '일' + '</li>';
+                //<ul><li>01</li><li>02</li>
+        }
+        dateList += '</ul>'
+        document.write(dateList);
+
+        /*
+        document.write(dateList)가 반복문 안에서 실행하게 되면,
+        작성 구문도 횟수로 반복되기 때문에 데이터가 누적되고 반복되면서
+        중첩에 중첩이 되는 난해한 현상이 발생
+        보통 결과값은 for문 밖에서 출력하는 것이 가장 일반적
+        */
+
+
+    </script>
+
+
+
+</head>
+
+<body>
+    <ul>
+        <li>01</li>
+    </ul>
+
+</body>
+
+</html>

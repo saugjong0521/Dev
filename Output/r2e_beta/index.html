@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referrer Reward Check</title>
+    <!-- Papa Parse library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        h {
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+            color: #3f3f3f;
+            text-align: left;
+            margin: 0 auto;
+            width: 90%;
+            max-width: 600px;
+            margin-bottom: 10px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            margin: 20px 0;
+            width: 80%;
+            max-width: 400px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .output-container {
+            margin-top: 40px;
+        }
+        #output {
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            border-radius: 5px;
+            display: inline-block;
+            text-align: left;
+            max-width: 600px;
+            width: 90%;
+            white-space: pre-wrap;
+            margin-top: 5px;
+        }
+        .copy-button {
+            margin-left: 10px;
+            padding: 5px 10px;
+            font-size: 14px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .copy-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h1>K STADIUM Referrer Reward Check</h1>
+    <p>- Rewards are updated every Wednesday.</p>
+    <p>- You can claim monthly reward by sending the amount of inKSTA to the inKSTA wallet below.</p>
+    <p>- Monthly rewards are airdropped on the last Wednesday of every month.</p>
+    <p>
+        <span>- inKSTA Wallet Address: </span>
+        <span id="walletAddress" style="word-wrap: break-word;">0xb36051834636Da66Ba01FE0d569B04431C1e056B</span>
+        <button class="copy-button" onclick="copyAddress()">Copy</button>
+    </p>
+    <input type="text" id="keyInput" placeholder="Your Wallet Address">
+    <button onclick="displayValue()">Check Reward</button>
+    <div class="output-container">
+        <div id="output"></div>
+    </div>
+    <script src="r2e.js?v=1.0.1"></script>
+    <script>
+        function copyAddress() {
+            const walletAddress = document.getElementById('walletAddress').textContent;
+            const textarea = document.createElement('textarea');
+            textarea.value = walletAddress;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            alert('Copied: ' + walletAddress);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비디오 태그</title>
+
+    <style>
+        /*
+            초기에는 브라우저마다 호환하는 동영상 확장자가 달랐기 때문에, 브라우저마다 확장자를 새로 인코딩해서 관리
+            현재는 mp4를 통용
+
+            (avi나 wmv같은 동영상 확장자는 압축률이나 용량 때문에 웹에 사용하지 않는다.)
+            mp4: 모든 브라우저
+            ogv, webm: 익스, 사파리 제외 호환
+
+            *웹에서는 기본적으로 muted가 되지않은 동영상에 대해서 자동재생을 허용하지 않는다. (웹 접근성 정책)
+
+            video 속성 정리
+             - controls: 사용자가 재생이나 음량, 플레이타임 등을 확인할 수 있는 컨트롤창 생성
+             (컨트롤창은 브라우저마다 다름 -> 기본 ui가 다름)
+
+             - muted: 시작시 음소거
+
+             - autoplay: 자동재생 기능
+
+             - loop: 무한 반복
+
+             자동 무한반복: autoplay, muted, loop를 같이 작성 (e.g. 웹페이지 오픈시 배경 영상-> controls를 빼는 경우 등)
+
+             - preload: 웹 페이지 로딩시에 동영상에 대한 정보를 어떻게 읽어올건지 정하는 속성
+                    none: 동영상에 대한 정보를 다운받지 않음, 동영상이 재생되면 정보를 다운받기 시작
+                    metadata: 정보의 일부분만 다운, 나머지는 재생시에 다운
+                    auto(기본값): 로딩시에 모든 정보를 같이 다움
+                    * 자동재생을 설정하면 preload를 none이나 metadata를 설정한 경우 auto로 강제 변환
+
+             - poster: 동영상 시작전에 보여지는 썸네일 이미지
+                poster는 재생이 시작된 이후면 일시정지나 동영상이 끝나도 다시 나타나지 않는다.
+                css로 생성된 이미지가 아니기 때문에 이미지의 크기를 정할 수 없다.
+                크기를 조절하거나 기타 효과를 넣을 경우, img태그/백그라운드 속성으로 사용/그래픽 툴에서 이미지 원본을 변경
+        */
+
+        video{
+            width: 400px;
+            height: 300px;
+        }
+
+        .container{
+            width: 600px;
+            height: 400px;
+        }
+
+        .img{
+            width: 600px;
+            height: 400px;
+        }
+        
+        .img:hover{
+            display: none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <video src="./source/video.mp4" controls muted autoplay loop preload="auto"></video> <!--현재는 통일했기에, 해당 방식을 사용-->
+
+
+    <div class="container">
+        <div class="img">
+            <img src="./source/poster.jpg">
+            <video src="./source/video.mp4" controls loop preload="auto"></video>       
+        </div>
+    </div>  <!--해보기-->
+
+    <video controls poster="./source/poster.jpg">
+        <source src="./source/video.mp4">
+        <source src="./source/video.ogv">
+        <source src="./source/video.webm">
+    </video> <!--옛날 방식-->
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Q8RFiK2YV1A?si=OL_lvfn25bsgpeH-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!-- 영상 공유하기에서 가능 -->
+
+
+</body>
+
+</html>

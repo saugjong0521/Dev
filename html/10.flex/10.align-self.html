@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        /*
+        align-self (justify-self는 grid 속성임) -> 보통, 컨텐츠를 지그재그 식으로 작성할때 사용
+        align-items의 item버전으로, container가 아닌 item에 직접적으로 넣는 정렬 속성
+        self보통 개별속성으로 할때 적용
+        기본값은 auto (container의 적용값을 상속받음)
+        item에 self와 중복되는 경우 items보다 더 우선순위를 가진다.(선택자)
+        */
+
+        .contaniter{
+            display: flex;
+            height:500px;
+            align-items: center;
+        }
+
+        .item:nth-of-type(2){
+            align-self: flex-end;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">Lorem.</div>
+        <div class="item">Lorem, ipsum.</div>
+        <div class="item">Lorem, ipsum dolor.</div>
+    </div>
+
+</body>
+
+</html>

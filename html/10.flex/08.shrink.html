@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        
+    /*
+    grow는 item이 유연하게 늘어나도록 하는 속성
+    shrink는 item들이 유연하게 줄어들도록 하는 속성
+    기본값은 1이며, 값이 0일경우 축소하지 않음
+    1외에 다른 값이 들어올 경우 비율대로 배분한다.
+    값이 클경우 줄어드는 비중을 더 크게 가져간다.
+    */
+
+
+    .container{
+        display: flex;
+    }
+    .item {
+        /* flex-grow: 1; */
+        flex-basis: 500px;
+    }
+
+    .container .item:nth-of-type(1){
+            flex-shrink: 3;
+        }
+
+    .container .item:nth-of-type(2){
+            flex-shrink: 2;
+        }
+
+    .container .item:nth-of-type(3){
+            flex-shrink: 1;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Lorem.</div>
+        <div class="item">Lorem, ipsum.</div>
+        <div class="item">Lorem, ipsum dolor.</div>
+    </div>
+    
+</body>
+</html>

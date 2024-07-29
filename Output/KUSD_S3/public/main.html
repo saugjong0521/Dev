@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Content</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+    <div id="header">Deposit</div>
+    <div class="innertext">Deposit your USDT assets to the address below</div>
+    <div class="innertext">When the operating team confirms your deposit, it is converted into KUSD that can be used in K STADIUM and transferred to your wallet.</div>
+
+    <hr>
+
+    <label for="address-select">Choose an Network:</label>
+    <select id="address-select" onchange="updateAddress()">
+      <option value="0x8eb34cF322C71aB5d5AdF3D025d55967375326a1">Ethereum(ERC-20)</option>
+      <option value="TTmM6g3PTs3PnFqGAbzvU7MkSVFpB5EwuZ">Tron(TRC-20)</option>
+    </select>
+    <div id="network">Address</div>
+    <div id="wallet-address">
+        <span id="address-text">0x8eb34cF322C71aB5d5AdF3D025d55967375326a1</span>
+        <img src="copy_symbol2.png" alt="Copy" onclick="copyAddress()" class="copy-icon">
+    </div>
+    <hr>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        let id = 'megait';
+        let pw = '1234';
+        let isLogin = false;
+
+
+        //case if & for
+        
+        /*
+        for(let i = 0; i < 5; i++){
+            let tId = prompt('아이디');
+            let tPw = prompt('비밀번호');
+            
+            if(tId === id && tPw === pw){
+                document.write('로그인성공');
+                break;
+            }else{
+                document.write('아이디나 비밀번호가 틀립니다.')
+            }
+
+        }
+            */
+        
+        while(isLogin != true) {
+            let tId = prompt('아이디');
+            let tPw = prompt('비밀번호');
+
+            if(tId === id && tPw === pw){
+                isLogin = true;
+                document.write('로그인성공');
+            }else{
+                document.write('아이디나 비밀번호가 틀립니다.')
+            }
+        }
+
+        
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

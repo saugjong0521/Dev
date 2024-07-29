@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+    /*
+    학점 점수 계산
+
+    조건1. 국어점수와 영어점수 '둘 다 90점 이상' = a학점
+    조건2. 국어점수와 영어줌수의 합이 170점보다 크거나 같으면 b학점
+    조건3. 국어점수와 영어점수 둘 중 하나라도 90점 이상이거나 같으면 c 학점
+    나머지 f학점
+    */
+
+    let kor =  prompt('국어점수') ; 
+    let eng =  prompt('영어점수') ;
+
+    // console.log(kor)
+    // prompt는 값을 모두 string타입으로 변환하기 때문에 연산이 안되므로, 숫자타입으로 변환하는 작업이 필요 -> parseInt
+
+    kor = parseInt(kor)
+    eng = parseInt(eng)
+    console.log(kor)
+    console.log(eng)
+
+        // 고의로 입력을 개발자가 안하게 하는경우 -> null
+        // 입력할수 있으나 입력을 하지 않는경우 -> NaN
+        // 에러인경우 -> undefined
+
+    if (kor >= 90 && eng >= 90){
+        console.log('a학점 입니다.')
+    }else if(kor + eng >= 170){
+        console.log('b학점 입니다.')
+    }else if(kor >= 90 || eng >= 90){
+        console.log('c학점 입니다.')
+    }else{
+        console.log("f학점 입니다.")
+    }
+
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

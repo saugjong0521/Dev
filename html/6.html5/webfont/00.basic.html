@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹폰트</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
+
+    <style>
+        /*
+        html5 / css3
+        - 편의성이 상승
+        - 멀티미디어 요소 추가 (animation, 동영상, 웹폰트)
+        - 시맨틱 요소에 맞춘 태그가 추가
+        
+        웹폰트
+        - 기존에 사이트는 폰트를 지정해서 사용할 수 없었다(브라우저 기본 폰트만 사용)
+            기본폰트와 다른 폰트를 사용하려면 이미지화 해서 사용하는 방법밖에 없기 때문에 사이트가 복잡해지고 해상도 호환의 문제들이 많았음
+
+        웹폰트의 추가
+        직접 폰트를 서버에 업로드하거나 웹폰트를 제공하는 사이트 에서 소스를 빌려(CDN방식 -> Content Delivery Network) 적용
+
+        1. 폰트를 가지고 있지 않아서 cdn방식으로 연동하는 경우
+        - 구글폰트
+            * 구글폰트를 사용하지 못하는 경우
+            - 인터넷 문제
+            - 지역문제 (e.g. 중국)
+            - 브라우저 호환 (하위버전에서는 웹폰트가 적용되지 않는다.)
+            - 웹폰트 차단 (회사, 단체에서 보안으로 인해 외부요소를 차단하는 경우)
+        
+        */
+
+        p {
+            font-family: "Sofia", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia, illum.</P>
+    <p>웹폰트는 영문과 한글로 나뉩니다.</p>
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function person(name, kor, eng, math){
+            this.name = name,
+            this.kor = kor
+            this.eng = eng
+            this.math = math
+
+
+            let calc = (kor + eng + math) / 3;
+            document.write(name + ' 학생의 평균점수는 ' + calc + ' 입니다.')
+        }
+
+
+
+        let person01 = new person('홍길동', 80, 70, 60)
+
+
+
+    </script>
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

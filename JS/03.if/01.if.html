@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문</title>
+</head>
+
+<script>
+
+    /*
+    if문
+    어떤 조건에 맞는 코드블럭을 실행하거나 실행하지 않게 제어하는 조건문
+    즉, 특정 조건이 참인지 거짓인지에 따라 실행할 코드를 결정하는 역할을 한다.
+    코드의 흐름을 제어하는 목적으로 많이 사용
+    
+    2가지 조건일경우
+    if(조건){
+        조건에 참일때 실행되는 코드블럭
+    }else{
+        조건에 거짓일때 실행되는 코드블럭
+    }
+
+    2가지 조건 이상인 경우
+    if(조건1){
+        조건1에 참일때 실행되는 코드블럭
+    }else if(조건2){
+        조건2에 참일때 실행되는 코드블럭
+                .
+                .
+                .
+    }else{
+        모든 조건에 거짓일경우 실행되는 코드블럭
+    }
+
+
+
+
+
+    */
+
+    let age = 20;
+    if(age >= 18){
+        console.log('adult')
+    }else{
+        console.log('child')
+    }
+
+
+    let score = 75;
+    if(score >= 60){
+        console.log('c학점')
+    }else if(score >= 70){
+        console.log('b학점')
+    }else if(score >= 80){
+        console.log('a학점')
+    }else{
+        console.log('d학점')
+    } // 구간이 나누어져 있으나, if절에서 참이기에 조건이 통과되어 c학점으로 출력됨
+
+
+
+    if(score >= 90){
+        console.log('A학점')
+    }else if(score >= 80){
+        console.log('B학점')
+    }else if(score >= 70){
+        console.log('C학점')
+    }else{
+        console.log('D학점')
+    }
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

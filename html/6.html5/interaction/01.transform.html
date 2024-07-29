@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform 속성</title>
+    <style>
+
+        /*
+        transfrom 변현 속성
+        생성되어있는 객체를 회전하거나 크기를 조절, 위치값을 변형시키는 변형 css
+        기본값으로 활용할 수 있으며, '이벤트적인 요소'에서도 활용할 수 있다.
+        
+        1. rotate 회전 속성
+        객체를 '중심'으로 작성된 수치(deg)만큼 회전
+        rotate() = x축 y축 그룹속성
+        rotate3d() = x축 y축 z축 그룹속성 (c.f. rotate(x,y,z,deg) 축에는 0~1사이의 값을 지정해서 축의 방향과 강도를 설정)
+
+        2. scale 객체크기 속성
+        객체를 '중심'으로 작성된 수치(실수)만큼 비율을 늘리거나 축소
+        기본값은 1(100%), 1보다 크면 확대, 1보다 작으면 축소(소숫점)
+
+        크기는 객체의 기본 크기를 기준으로 하며, 위치값은 변하지 않는다.(다른 영역에 침범)
+        스케일을 사용하는 경우 컨텐츠의 내용에도 영향을 준다.
+        
+        scale은 값이 하나일 경우 x축 y축/ 모두 적용 따로 작성할때에는 ,로 구분한다.
+        z축은 특정한 설정이 있어야 한다.
+
+        3. skew 객체 비틀기 속성
+        z축은 존재하지 않으며 해당 방향으로 각도만큼 비튼다.
+        그룹속성에서도 값이 하나일 경우 공통적용이 아니고 x축만 적용되므로
+        둘 다 적용할 때에는 두 값을 전부 넣아햐 한다.
+
+        4. translate 객체 이동 속성
+        %나 px단위로 이동시키는 속성
+        양수는 오른쪽으로, 음수는 왼쪽으로 이동
+        z축은 %를 사용할 수 없다.
+            position과 같이 좌표값을 이동시키는 속성이지만,
+            %로 이동할 경우 translate는 자신의 크기를 기준으로 이동
+            position은 부모요소의 영역값을 기준으로 이동한다.
+                (c.f. 자주 사용되는 웹페이지 중앙 정렬의 경우 position 50%, translateX(-50%)을 주면 된다.)
+
+        벤더프리픽스
+         - html5, css3에 추가되는 css들은 대부분 실험적인 요소들이 많다.
+         대부분의 요소들이 표준화 작업중에 있거나 실험적인 css html태그등을 호환성을 유지할때 사용하는 접두사
+         접두사를 넣음으로써 최신기능을 브라우저간에 호환성을 해결할 수 있게 해준다.
+
+         표준화 작업들이 완료된 것들은 벤더프리픽스를 생략해도 된다.
+            -webkit- 크롬, 사파리, 엣지
+            -moz- 파이어폭스
+            -o- 오페라
+            -ms- 익스플로러
+            기본형은 마지막에 넣어준다.
+                    마지막에 넣는 이유,
+                    - 우선순위, 유지보수, 호환성 (여러 브라우저가 css속성을 다르게 해석할 수 있기에 표준을 맨 아래에 넣어 오류 최소화) 
+
+            대부분은 표준화가 완료되었지만, 꼭 사용해야 하는 부분이 있다.
+            - gradient, flex, grid 구버전을 호환해야 하는 경우 꼭 넣어서 사용해야 하는 css
+
+            다 넣을 필요는 없으며, 사용하지 않는 브라우저에 대한 벤더프리픽스는 제외해도 된다.
+
+        transform-origin: 객체의 기준점을 바꾸는 css
+         rotate나 sclate의 경우 객체를 중심으로 하기 때문에 기준점을 바꾸는 경우가 있다.
+         기본값은 50% 50%
+         특정 좌표값(top, left, right, bottom, center)로 하거나 px, %로도 가능
+         항상 첫번째 값은 left, 두번째는 top
+         값을 생략하는 경우 기본값
+
+
+        */
+
+        div {
+            width: 100px;
+            height: 100px;
+            background: pink;
+            margin-bottom: 20px;
+        }
+        .rotateX{
+            transform: rotateX(45deg);
+        }
+        .rotateY{
+            transform: rotateY(45deg);
+        }
+        .rotate{
+            /*벤더프리픽스 사용 예시*/
+            -webkit-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+
+        .scale{
+            transform: scale(-1.5);
+            margin-top: 50px;
+            transform-origin: 150px bottom;
+        }
+
+        .skew{
+            transform: skew(45deg, 30deg);
+        }
+
+        .translate{
+            /* transform: translate(100px); */
+            transform: translateX(50%);
+        }
+        .position{
+            position: relative;
+            left: 50%;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="rotateX">객체를 회전시키는 속성</div>
+    <div class="rotateY">객체를 회전시키는 속성</div>
+    <div class="rotate">객체를 회전시키는 속성</div>
+
+    <div class="scale">객체의 크기를 비율로 정하는 속성</div>
+
+    <div class="skew">객체를 비틀어주는 속성</div>
+
+    <div class="translate">객체를 이동하는 속성</div>
+    <div class="position">포지션 속성</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자의 종류</title>
+
+    <!--
+    선택자의 종류
+
+    * = 페이지 내의 모든 태그들을 지칭
+    페이지에 있는 모든 태그들을 순차적으로 스캔하기 때문에 과부하의 위험을 가지고 있다.
+    예전에는 reset의 용도로 사용했는데, 지금은 잘 사용하지는 않는다
+
+    태그선택자 = 태그명만 넣어서 선택하는 기본 선택자 방법
+    클래스 선택자 = 클래스명만 넣어서 선택하는 방법
+    아이디 선택자 = 아이디명만 넣어서 선택하는 방법
+
+
+    자손 선택자
+     - 하위 선택자 (자식, 자손 모두 포함) = 선택자 선택자 (e.g. p span -> p안의 span을 찾는다)
+     - 자식 선택자 (자식만 포함) = 선택자 > 선택자 (e.g. p > span)
+
+    형제 선택자
+     - 형재 인접 선택자 = 선택자 + 선택자 (e.g. div p + span -> div 안의 p 바로 옆 span)
+     - 일반 형제 선택자 = 선택자 ~ 선택자 (e.g. div p ~ span -> div안의 p안의 span)
+
+    선택자는 점수의 합산으로 선택자의 우선순위가 정해진다.
+    id [100점] > class [10점] > 태그 [1점] > * [0점]
+
+
+    -->
+
+    <style>
+        *{
+            background-color: gray;
+        }
+
+        /* 자손 선택자 */
+        p{
+            background-color: coral
+        }
+        p span{
+            font-size: 30px;
+        }
+        p > span {
+            font-size: 45px;
+            background-color: aquamarine;
+        }
+
+        /* 형제 선택자 */
+        div p ~ span{
+            background-color: blanchedalmond;
+        }
+        div p + span {
+            background-color: brown;
+        }
+
+    </style>
+
+</head>
+<body>
+    <p>
+        p태그는 
+        <span>
+            문단
+            <span>
+                태그입니다.
+            </span>
+        </span>
+    </p>
+
+    <div>
+        <p>p태그입니다.</p>
+        <span>span태그입니다.</span>
+        <span>span태그입니다.</span>
+        <div>div태그입니다.</div>
+        <span>span태그입니다.</span>
+        <div>div태그입니다.</div>
+    </div>
+</body>
+</html>

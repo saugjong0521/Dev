@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        /*
+        gap 여백을 주는 그룹속성
+        grid에서만 사용할 수 있던 속성을 flex에서도 추가되었따.
+        마주보고 있는 아이템 사이에만 적용
+
+        row-gap column-gap순으로 적용되며,
+        값이 하나라면 모두 적용
+        값이 두개라면 row-gap, column-gap 순으로 적용 => gap에서의 row와 column은 content기준이 아닌 여백 기준의 row와 column이기에 반전느낌일 수 있다.
+
+        단위는 거의 다 사용 가능
+
+        */
+
+        .container{
+            padding: 0;
+            display: flex;
+            gap: 20px 100px;
+            flex-wrap: wrap;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Lorem.</div>
+        <div class="item">Lorem, ipsum.</div>
+        <div class="item">Lorem, ipsum dolor.</div>
+        <div class="item">Lorem.</div>
+        <div class="item">Lorem, ipsum.</div>
+        <div class="item">Lorem, ipsum dolor.</div>
+        <div class="item">Lorem.</div>
+        <div class="item">Lorem, ipsum.</div>
+        <div class="item">Lorem, ipsum dolor.</div>
+        <div class="item">Lorem.</div>
+        <div class="item">Lorem, ipsum.</div>
+        <div class="item">Lorem, ipsum dolor.</div>
+        <div class="item">Lorem.</div>
+        <div class="item">Lorem, ipsum.</div>
+        <div class="item">Lorem, ipsum dolor.</div>
+        <div class="item">Lorem.</div>
+        <div class="item">Lorem, ipsum.</div>
+        <div class="item">Lorem, ipsum dolor.</div>
+    </div>
+    
+</body>
+</html>

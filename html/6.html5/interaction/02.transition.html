@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+
+    <style>
+
+        /*
+        transition
+        특정행동(이벤트)을 취했을때 변화되는 요소가 전환되는 시간적인 효과를 보여주는 속성
+
+         -property 전환되는 대상이 되는 속성 (background, width,....)
+         property를 생략하게되면 기본값인 all이 적용 (즉, 생략이 가능)
+         
+         -duration 전환되는 시간 (생략할 수 없는 값)
+         단위는 s, ms
+         1s = 1초
+         1000ms = 1초
+
+         -delay 이벤트 시작의 지연시간
+         단위 s, ms / 기본값은 0 (생략가능)
+
+         -timing-function 이벤트 강도 시간함수
+         전환되는 시간동안 시간적인 효과를 주기위한 속성
+            linear: 처음부터 끝까지 일정한 속도
+            ease: 느리게 시작 -> 빠르게 진행 -> 느리게 종료(기본값)
+            ease-in: 느리게 시작 -> 가속하면서 종료
+            ease-out: 빠르게 시작 -> 감속하면서 종료
+            ease-in-out: ease-in과 같지만 변환속도가 빠름 (좀더 극적)
+         
+
+         그룹속성
+         transision: property(선택) duration(필수) delay(선택) timing(선택)
+            duration을 제외한 나머지 속성은 생략해도 된다.
+            다른 속성은 순서가 바껴도 되지만, duration과 delay는 순서를 지켜야 함 (단위가 같음)
+
+        */
+        .box{
+            width: 100px;
+            height: 50px;
+            background: pink;
+            transition-property: background;
+            transition-duration: 1500ms;
+            transition-delay: 1000ms;
+            transition-timing-function: ease;
+        }
+        
+        .box:hover{
+            height: 100px;
+            background: coral;
+            transition: height 1500ms 0ms; /* hover됐을때는 정상이지만 out될때에는 적용되지 않기에, 오류// 원본 클래스에 작성해야 한다. */
+
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box">box</div>
+</body>
+</html>

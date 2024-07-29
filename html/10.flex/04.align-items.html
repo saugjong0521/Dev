@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        
+        /*
+        상대축에 대한 정렬
+        strecth: 부모요소에 높이값을 받아서 길이가 늘어남 (기본값)
+        다른 값이 들어오게 되면 item 자체의 높이값으로 변환된다.
+
+        */
+
+        .container{
+            display:flex;
+            /*align-items: center;*/
+            justify-content: center;
+            height: 200px;
+
+        }
+
+        .btn{
+            width:500px;
+            height: 100px;
+            border: solid 1px black;
+            /*
+            text-align: center;
+            line-height: 100px;
+            */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Lorem.</div>
+        <div class="item">Lorem, ipsum.</div>
+        <div class="item">Lorem, ipsum dolor.</div>
+    </div>
+    
+    <div class="btn">버튼</div>
+</body>
+</html>
