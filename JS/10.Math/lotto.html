@@ -24,7 +24,9 @@
             console.log(num)
             lottoNum.push(num)
 
-            if (lottoNum.indexOf(num) === -1)
+            if (lottoNum.indexOf(num) === -1) {
+                lottoNum.push(num);
+            }
         }
         console.log(lottoNum)
 
