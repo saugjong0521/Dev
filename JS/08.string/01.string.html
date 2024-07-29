@@ -24,9 +24,9 @@
 
         
         let birthDay = prompt('생년월일 8글자를 적어주세요'); //19960521
-        let year = birthDay.substring(0,4); //1996
-        let month = birthDay.substring(4,2); //05
-        let day = birthDay.substring(6,2); //21
+        let year = birthDay.substr(0,4); //1996
+        let month = birthDay.substr(4,2); //05
+        let day = birthDay.substr(6,2); //21
 
         document.write(year + '년도 ' + month + '월 ' + day + '일 생입니다.')
 
