@@ -19,14 +19,25 @@
 
         let a = document.getElementById('text')
 
-        console.log(a)
+        console.log(a)  // null값 출력, body전에 입력되었기에
 
         window.onload = function () {
             a = document.getElementById('text')
             let b = document.getElementsByClassName('text')[0]
+            let c = document.getElementsByTagName('p')[3]
+
+
+            let d = document.querySelector('.text')
+
+
 
             console.log(a)
             console.log(b)
+            console.log(c)
+            console.log(d)
+
+
+
         }
 
         /*
