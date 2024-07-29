@@ -14,7 +14,7 @@
         let num03 = new Number(100);    //생성자 함수로 숫자를 선언
         let num04 = Number(num02);  //기존에 있는 어떤 값을 숫자열로 변환, 문자열 포함시 NaN
 
-        let num = '3.14dr423'
+        let num = '3.14dwr423';
         let num05 = parseInt(num02);   
         let num06 = parseFloat(num02);
 
@@ -35,15 +35,14 @@
         그러나, let num04 = Number(num02)와 같이 어떠한 값을 받아와 숫자로 변환하는 작업에서는 parse 또는 Number을 자주 사용한다.
         */
 
-        console.clear()
         let a = 55;
         let b = 100;
         let c = 66;
         let result = (a+b+c) / 3;
         console.log(result)
         console.log(result.toFixed(0))
-        // toFixed(n)은 소숫점 출력 메서드, 해당 숫자만큼 소숫점 자리를 반환
-        // 0은 소숫점을 반환하지 않으나, 반올림 함
+        // toFixed(n)은 소숫점 출력 메서드, 해당 숫자만큼 소숫점 자리를 반환 (반올림 처리)
+        // 0은 소숫점을 반환하지 않으나
 
 
 
