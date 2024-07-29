@@ -19,7 +19,7 @@
 
         let a = document.getElementById('text')
 
-        console.log(a)  // null값 출력, body전에 입력되었기에
+        console.log(a)  // body전에 입력되었기에 null값 출력
 
         window.onload = function () {
             a = document.getElementById('text')
@@ -33,8 +33,7 @@
             // document.querySelector()의 경우, 중복 선택자이면 첫번째 요소만 반환
             let f = document.querySelectorAll('.text')
 
-
-
+            
             console.log(a)
             console.log(b)
             console.log(c)
@@ -42,6 +41,9 @@
             console.log(e)
             console.log(f)
 
+
+            //스타일 입력 방법
+            a.style.color = 'green'
 
 
 
@@ -56,6 +58,10 @@
 
 
         //HTMLCollection과 Nodelist의 차이점
+        HTMLCollection 라이브컬렉션 dom이 변경되면 업데이트를 같이 병행
+
+        modeList는 정적인 요소로서 업데이트를 병행하지는 않는다.
+
         
 
         
