@@ -142,6 +142,8 @@
   },
   "active": "d5d31f538f436ad8",
   "lastOpenFiles": [
+    "JS/10.Math/01.Math.html",
+    "JS/10.Math",
     "JS/09.number/01.number.html",
     "JS/09.number",
     "JS/08.string/01.string.html",
@@ -153,8 +155,6 @@
     "Output/KUSD_S3/node_modules/send/node_modules/ms/package.json",
     "Output/KUSD_S3/node_modules/send/node_modules/ms/readme.md",
     "Output/KUSD_S3/node_modules/send/node_modules/ms/license.md",
-    "Output/KUSD_S3/node_modules/send/node_modules/ms/index.js",
-    "Output/KUSD_S3/node_modules/object-inspect/test/browser/dom.js",
     "Output/KUSD_S3/node_modules/vary/README.md",
     "Output/KUSD_S3/node_modules/vary/HISTORY.md",
     "Output/KUSD_S3/node_modules/utils-merge/README.md",
