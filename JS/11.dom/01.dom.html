@@ -23,6 +23,7 @@
 
         window.onload = function () {
             a = document.getElementById('text')
+            let b = document.getElementsByClassName('text')
 
             console.log(a)
         }
@@ -31,6 +32,8 @@
         dom 요소에 스크립트가 접근할 때, 순서나 선언에 유의한다.
         
         1. dom요소보다 스크립트가 먼저 로드되면 안됨
+            해결법 ) 1. body아래 script를 실행
+                    2. window 이벤트를 넣어서 지연시키도록 해야한다.
         
         */
 
