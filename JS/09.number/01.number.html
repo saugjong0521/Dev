@@ -13,13 +13,37 @@
         let num02 = '3.14'  //분자열 형태의 숫자 값
         let num03 = new Number(100);    //생성자 함수로 숫자를 선언
         let num04 = Number(num02);  //기존에 있는 어떤 값을 숫자열로 변환, 문자열 포함시 NaN
-        let num05 = parseInt(num02);
+
+        let num = '3.14dr423'
+        let num05 = parseInt(num02);   
         let num06 = parseFloat(num02);
 
-        console.log(num02);
+        console.log(num02)
         console.log(num04)
-        console.log(num05)
-        console.log(num06)
+        console.log(num)
+        console.log(num)
+
+        // parseInt는 숫자가 아닌 문자를 공백처리 하면서 공백 뒤에 있는 문자를 모두 자르는 방식의 로직이기 때문에,
+        // 정수만 출력할 수 있다.
+        // 첫 글자가 숫자가 아니라면 NaN이 표시
+
+        /*
+        어떠한 값을 받아오게 되면 대부분 숫자열이 아닌 문자열 형태의 숫자로 넘어오게 된다.
+        항상 연산을 위해서는 숫자로 변환해주는 작업이 필수적으로 필요하다.
+
+        new Number(100) 와 같은 방식으로 생성자함수로 선언하는 방식은 잘 사용하지는 않는다.
+        그러나, let num04 = Number(num02)와 같이 어떠한 값을 받아와 숫자로 변환하는 작업에서는 parse 또는 Number을 자주 사용한다.
+        */
+
+        console.clear()
+        let a = 55;
+        let b = 100;
+        let c = 66;
+        let result = (a+b+c) / 3;
+        console.log(result)
+        console.log(result.toFixed(0))
+        // toFixed(n)은 소숫점 출력 메서드, 해당 숫자만큼 소숫점 자리를 반환
+        // 0은 소숫점을 반환하지 않으나, 반올림 함
 
 
 
