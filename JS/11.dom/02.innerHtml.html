@@ -36,6 +36,26 @@
             box02.innerText = '<a href="#">링크 텍스트                 입니다.</a>';
             box03.textContent = '<a href="#">링크 텍스트     입니다.</a>';
 
+            console.log(document.querySelector('p').innerText)
+            console.log(document.querySelector('p').textContent)
+
+            /*
+            
+            innerHTML = 선택된 객체 안에 내용을 추가해주며, 자동으로 html코드를 인식해서 변환
+            
+            innerText = 선택된 객체 안에 내용을 추가해주며, 자동으로 html코드를 인식하지 않음
+                문자열 그대로 출력, HTML 특성은 있음
+                    - 공백은 무조건 한칸으로 처리
+                    - 숨겨진 텍스트는 읽지 못함
+            
+            textContent = 선택된 객체안에 내용을 추가해주며, 자동으로 html문서를 인식하지 않음
+                문자열 그대로 출력, HTML 특성 무시
+                    - 공백을 모두 인식해서 그대로 출력
+                    - 보이지 않는 텍스트도 인식해서 모두 반환
+            
+            */
+
+
         }
 
     </script>
@@ -44,7 +64,7 @@
     <div class="box01"></div>
     <div class="box02"></div>
     <div class="box03"></div>
-    <p>Lorem ipsum dolor                                    sit amet.<span style='display: none'>;</p>
+    <p>Lorem ipsum dolor                                    sit amet.<span style='display: none'>숨겨진 텍스트</p>
 </body>
 
 </html>
