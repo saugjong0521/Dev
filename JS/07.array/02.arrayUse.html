@@ -88,7 +88,16 @@
             if (typeof y === "string") y = y.toUpperCase();
 
             return x < y ? 1 : -1;
-        }
+        }   // 확인해보기
+
+
+        let char = ['nuM', 'Num', 'nUm']
+
+        char.sort(function (x, y) {
+            return x - y
+        })
+        console.log(char)
+
 
 
     </script>
