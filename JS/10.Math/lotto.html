@@ -22,11 +22,13 @@
         for (let i = 0; i < maxNum; i++) {
             let num = Math.floor(Math.random()*45)+1; // 최솟값을 더하고 최댓값을 곱함
             console.log(num)
-            lottoNum.push(num)
 
             if (lottoNum.indexOf(num) === -1) {
                 lottoNum.push(num);
-            } 
+            }
+            else{
+                i--;
+            }
         }
         console.log(lottoNum)
 
