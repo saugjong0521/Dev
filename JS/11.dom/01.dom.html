@@ -25,11 +25,13 @@
             a = document.getElementById('text')
             let b = document.getElementsByClassName('text')[0]
             let c = document.getElementsByTagName('p')[3]
+            let d = document.getElementsByTagName('p')
 
 
-            let d = document.querySelector('.text')
+
+            let e = document.querySelector('.text')
             // document.querySelector()의 경우, 중복 선택자이면 첫번째 요소만 반환
-            let e = document.querySelectorAll('.text')
+            let f = document.querySelectorAll('.text')
 
 
 
@@ -38,6 +40,8 @@
             console.log(c)
             console.log(d)
             console.log(e)
+            console.log(f)
+
 
 
 
@@ -49,6 +53,11 @@
         1. dom요소보다 스크립트가 먼저 로드되면 안됨
             해결법 ) 1. body아래 script를 실행
                     2. window 이벤트를 넣어서 지연시키도록 해야한다.
+
+
+        //HTMLCollection과 Nodelist의 차이점
+        
+
         
         */
 
