@@ -142,6 +142,8 @@
   },
   "active": "d5d31f538f436ad8",
   "lastOpenFiles": [
+    "JS/09.number/01.number.html",
+    "JS/09.number",
     "JS/08.string/01.string.html",
     "JS/08.string",
     "JS/07.array/ex.html",
@@ -153,8 +155,6 @@
     "Output/KUSD_S3/node_modules/send/node_modules/ms/license.md",
     "Output/KUSD_S3/node_modules/send/node_modules/ms/index.js",
     "Output/KUSD_S3/node_modules/object-inspect/test/browser/dom.js",
-    "Output/KUSD_S3/node_modules/body-parser/lib/types/urlencoded.js",
-    "Output/KUSD_S3/node_modules/body-parser/lib/types/text.js",
     "Output/KUSD_S3/node_modules/vary/README.md",
     "Output/KUSD_S3/node_modules/vary/HISTORY.md",
     "Output/KUSD_S3/node_modules/utils-merge/README.md",
