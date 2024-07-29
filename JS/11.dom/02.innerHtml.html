@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소의 생성</title>
+</head>
+
+    <script>
+
+        /*
+        요소의 생성
+        
+        정적인 생성방법: body에 직접 작성하는 방법
+        동적인 생성방법:
+            - 스크립트 내에서 문서 객체를 이용해서 생성하는 것 (이벤트)
+            - 문서내에서 유동적으로 생성과 삭제를 반복해야 할 때
+
+        */
+
+        window.onload = function() {
+            // 생성된 요소 찾기
+            let box01 = document.querySelector('.box01')
+            let box02 = document.querySelector('.box02')
+            let box03 = document.querySelector('.box03')
+
+            //요소를 생성
+            let box04 = document.createElement('div');
+            console.log(box04)
+
+        }
+
+    </script>
+
+<body>
+    <div class="box01"></div>
+    <div class="box02"></div>
+    <div class="box03"></div>
+</body>
+
+</html>
