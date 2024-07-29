@@ -141,6 +141,8 @@
   },
   "active": "ba023fb855cb1d6c",
   "lastOpenFiles": [
+    "HW/JS_HW01.html",
+    "HW/ex.html",
     "Output/KUSD_S3/node_modules/send/node_modules/ms/package.json",
     "Output/KUSD_S3/node_modules/send/node_modules/ms/readme.md",
     "Output/KUSD_S3/node_modules/send/node_modules/ms/license.md",
@@ -152,8 +154,6 @@
     "Output/KUSD_S3/node_modules/iconv-lite/encodings/tables/shiftjis.json",
     "Output/KUSD_S3/node_modules/body-parser/lib/types/json.js",
     "Output/KUSD_S3/node_modules/iconv-lite/encodings/tables/gbk-added.json",
-    "Output/KUSD_S3/node_modules/iconv-lite/encodings/tables/gb18030-ranges.json",
-    "Output/KUSD_S3/node_modules/iconv-lite/encodings/tables/eucjp.json",
     "Output/KUSD_S3/node_modules/vary/README.md",
     "Output/KUSD_S3/node_modules/vary/HISTORY.md",
     "Output/KUSD_S3/node_modules/utils-merge/README.md",
