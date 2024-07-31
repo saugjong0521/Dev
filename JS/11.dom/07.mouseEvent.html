@@ -40,16 +40,15 @@
 
                 let x1 = e.clientX;
                 let y1 = e.clientY;
-                text01.innerHTML = 'clientX: ' + x1 + ' clientY: ' + y1;
+                text01.innerHTML = 'clientX: ' + x1 + ', clientY: ' + y1;
 
                 let x2 = e.pageX;
                 let y2 = e.pageY;
-                text02.innerHTML = 'pageX: ' + x2 + ' pageY: ' + y2;
-
+                text02.innerHTML = 'pageX: ' + x2 + ', pageY: ' + y2;
 
                 let x3 = e.screenX;
                 let y3 = e.screenY;
-                text03.innerHTML = 'screenX: ' + x3 + ' screenY: ' + y3;
+                text03.innerHTML = 'screenX: ' + x3 + ', screenY: ' + y3;
             })
         }
 
@@ -80,6 +79,15 @@
         
         .text04{
             top: 70px;
+        }
+
+        .box{
+            width: 200px;
+            height: 200px;
+            background: pink;
+            position: absolute;
+            top: 400px;
+            left: 500px;
         }
 
     </style>
