@@ -50,9 +50,8 @@
                 let x3 = e.screenX;
                 let y3 = e.screenY;
                 text03.innerHTML = 'screenX: ' + x3 + ', screenY: ' + y3;
-
-
-                document.addEventListener('mousemove', function (e){
+            })
+            document.addEventListener('mousemove', function (e){
                     box.addEventListener('click',function(e){
                         let x4 = e.offsetX;
                         let y4 = e.offsetY;
@@ -61,8 +60,6 @@
                     })
 
                 })
-
-            })
         }
 
 
