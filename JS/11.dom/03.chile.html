@@ -53,8 +53,17 @@
             let a = parent.childNodes;
             let b = parent.childElementCount
 
+            /*
+
+            node = 문서객체 모델의 기본 요소
+            childNodes는 텍스트와 노드를 모두 포함해서 출력
+            (노드 사이에 있는 공백, 택스트도 포함)
+
+            */
+
             console.log(a)
             console.log(b)
+
 
 
         }
@@ -67,8 +76,7 @@
     <div class="parent">
         <div class="child">1</div>
         <div class="child">2</div>
-        <div class="child">3</div>
-        <div class="child">4</div>
+        <div class="child">3</div><div class="child">4</div>
     </div>
 
 </body>
