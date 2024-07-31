@@ -50,16 +50,16 @@
                 let x3 = e.screenX;
                 let y3 = e.screenY;
                 text03.innerHTML = 'screenX: ' + x3 + ', screenY: ' + y3;
+            })
+
+            document.addEventListener('mousemove', function (e) {
                 box.addEventListener('click', function (e) {
-                let x4 = e.offsetX;
-                let y4 = e.offsetY;
+                    let x4 = e.offsetX;
+                    let y4 = e.offsetY;
 
-                text04.innerHtml = 'offsetX: ' + x4 + ', offsetY: ' + y4;
+                    text04.innerHtml = 'offsetX: ' + x4 + ', offsetY: ' + y4;
+
             })
-
-            })
-
-
         }
 
 
@@ -102,7 +102,6 @@
             top: 400px;
             left: 500px;
         }
-
     </style>
 
 </head>
