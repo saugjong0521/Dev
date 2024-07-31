@@ -31,7 +31,20 @@
         setInterval(text, 3000)
 
         window.onload = function(){
-            let item = document.querySelector('input');
+            let item = document.querySelector('input'); //값을 받아서 계산할 인풋
+            let btn = document.querySelector('btn');
+            let result = document.querySelector('result');
+
+            let won = 0; //input에 들어올 연봉을 받아올 변수
+            let secWon = 0; //won을 나눠서 1초에 버는 돈을 대입할 변수
+            let timer; //setInterval에 실행될 함수를 담아줄 변수
+
+            function calc(){
+                let time = 0; //카운트 될 시간
+                won = parseInt(item.value) * 10000
+                    //item.value는 input의 value값을 받아오는 메소드
+                console.log(won);
+            }
         }
 
     </script>
