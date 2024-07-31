@@ -29,11 +29,41 @@
         }
         setTimeout(text, 2000)
         setInterval(text, 3000)
+
+        window.onload = function(){
+            let item = document.querySelector('input');
+        }
+
     </script>
+
+    <style>
+        body,html{
+            height: 100vh;
+            background: #ddd;
+        }
+        .container{
+            width: 500px;
+            background: #fff;
+            padding: 24px;
+            border: solid 1px #000;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+    </style>
 
 </head>
 
 <body>
+    <div class="container">
+        <h1>연봉을 입력하세요(만원)</h1>
+        <input type="text" value="3500">
+        <button class="btn">계산하기!</button>
+        <p class="result">당신은 1초에 얼마를 벌까요?</p>
+    </div>
 
 </body>
 
