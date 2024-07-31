@@ -62,13 +62,21 @@
             window.onload = function(){
                 let text = document.querySelector('.text')
 
-                text.onclick = function (){
-                    document.write('11')
+                text.onmouseover = function (){
+                    console.log('11')
                 }
 
-                text.onclick = function (){
-                    document.write('22')
+                text.onmouseover = function (){
+                    console.log('22')
                 }
+
+                text.addEventListener('click', function(){
+                    document.write('11')
+                })
+                text.addEventListener('click', function(){
+                    document.write('22')
+                })
+
 
             }
 
