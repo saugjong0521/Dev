@@ -53,6 +53,12 @@
                     result.innerHTML = '유효한 연봉을 입력해주세요.'
                     return
                 }
+
+                timer = setInterval(function(){
+
+                    time++;
+                    result.innerHTML = '당신은 ' + time + '초 동안 ' + parseInt(time * secWon) +  '만큼 벌었습니다.'
+                }, 1000)
             
             }
 
