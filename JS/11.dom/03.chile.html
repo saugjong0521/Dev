@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하위 요소 참조하기</title>
+
+    <script>
+
+        /*
+        부모요소 안에 하위 요소로 객체를 찾거나 삭제, 수정하는 선택자 메소드
+
+        appendChild(): 자손요소를 추가
+        removeChild(): 자손요소를 삭제
+        replaceChild(): 자손요소를 수정
+
+        */
+
+        window.onload = function () {
+            let parent = document.querySelector('.parent')
+
+            let childItem = document.createElement('div') //클래스나 아이디명을 넣을 수 없고 태그명을 넣어야 한다.
+            childItem.className = 'child';
+            childItem.inner = '5'
+            
+            parent.appendChild(childItem)
+            //appendChild() = 자식요소 제일 마지막에 요소를 추가
+
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+    </div>
+
+</body>
+
+</html>
