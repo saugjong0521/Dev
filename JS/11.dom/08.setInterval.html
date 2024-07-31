@@ -50,7 +50,7 @@
                 //console.log(won);
                 //item.value는 input의 value값을 받아오는 메소드
 
-                secWon = won / 365 / 24 / 60 / 60;
+                secWon = won / 365 / 24 / 60 / 60 ;
                 //console.log(secWon)
 
 
@@ -61,7 +61,7 @@
 
                 timer = setInterval(function () {
                     time++;
-                    result.innerHTML = '당신은 ' + time + '초 동안 ' + parseInt(time * secWon) + '만큼 벌었습니다.'
+                    result.innerHTML = '당신은 ' + time + '초에 ' + parseInt(time * secWon) + '원 만큼 벌었습니다.'
                 }, 1000)
             }
 
