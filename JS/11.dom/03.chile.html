@@ -20,12 +20,18 @@
         window.onload = function () {
             let parent = document.querySelector('.parent')
 
-            let childItem = document.createElement('div') //클래스나 아이디명을 넣을 수 없고 태그명을 넣어야 한다.
-            childItem.className = 'child';
-            childItem.innerHTML = '5'
+            //자식요소 추가 방법 1
+            let childItem01 = document.createElement('div') //클래스나 아이디명을 넣을 수 없고 태그명을 넣어야 한다.
+            childItem01.className = 'child';
+            childItem01.innerHTML = '5'
             
-            parent.appendChild(childItem)
+            parent.appendChild(childItem01)
             //appendChild() = 자식요소 제일 마지막에 요소를 추가
+
+
+            //자식요소 추가 방법 2
+            let childItem02 = '<div class="child">6</div>'
+            parent.innerHTML += childItem02
 
         }
     </script>
