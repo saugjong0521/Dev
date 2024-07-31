@@ -29,14 +29,14 @@
         */
 
 
-        window.onload = function() {
+        window.onload = function () {
             let text01 = document.querySelector('.text01')
             let text02 = document.querySelector('.text02')
             let text03 = document.querySelector('.text03')
             let text04 = document.querySelector('.text04')
             let box = document.querySelector('.box')
 
-            document.addEventListener('mousemove', function(e){
+            document.addEventListener('mousemove', function (e) {
                 // console.log(e.clientX)
 
                 let x1 = e.clientX;
@@ -50,49 +50,51 @@
                 let x3 = e.screenX;
                 let y3 = e.screenY;
                 text03.innerHTML = 'screenX: ' + x3 + ', screenY: ' + y3;
+                box.addEventListener('click', function (e) {
+                let x4 = e.offsetX;
+                let y4 = e.offsetY;
+
+                text04.innerHtml = 'offsetX: ' + x4 + ', offsetY: ' + y4;
             })
 
-            document.addEventListener('mousemove', function(e){
-                    box.addEventListener('click',function(e){
-                        let x4 = e.offsetX;
-                        let y4 = e.offsetY;
+            })
 
-                        text04.innerHtml = 'offsetX: ' + x4 + ', offsetY: ' + y4;
-                    })
 
-                })
         }
 
 
     </script>
 
     <style>
-        body{
+        body {
             height: 300vh;
         }
 
-        .text01, .text02, .text03, .text04 {
+        .text01,
+        .text02,
+        .text03,
+        .text04 {
             position: fixed;
             left: 30px;
         }
 
-        .text01{
+        .text01 {
             top: 10px;
         }
 
-        .text02{
+        .text02 {
             top: 30px;
         }
-        
-        .text03{
+
+        .text03 {
             top: 50px;
         }
-        
-        .text04{
+
+        .text04 {
             top: 70px;
         }
 
-        .box{
+        .box {
             width: 200px;
             height: 200px;
             background: pink;
