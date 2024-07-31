@@ -20,8 +20,7 @@
         window.onload = function () {
             let parent = document.querySelector('.parent')
 
-            //remove child
-            // document.body.removeChild(parent); // parent 내의 내용 삭제
+
 
 
             //자식요소 추가 방법 1
@@ -37,8 +36,26 @@
             let childItem02 = '<div class="child">6</div>'
             parent.innerHTML += childItem02 //parent.innerHTML = childItem02 시 replace
 
-            
-            parent.removeChild(parent.childNodes[3]) // 
+
+            //removeChild
+            // document.body.removeChild(parent); // parent 내의 내용 삭제
+            parent.removeChild(parent.childNodes[3]) // 특정한 순번에 있는 자식요소를 삭제
+
+
+            //replaceChild
+            let newChild = document.createElement('div')
+            newChild.className = 'child'
+            newChild.innerHTML = 'replaced';
+
+            parent.replaceChild(newChild, parent.childNodes[1]);
+            //parent.replaceChild(수정할 객체, 수정될 객체) = 특정 자식요소를 다른 요소로 교체
+
+            let a = parent.childNodes;
+            let b = parent.childElementCount
+
+            console.log(a)
+            console.log(b)
+
 
         }
     </script>
