@@ -9,7 +9,49 @@
     <script>
         /*
         마우스 객체 이벤트
+
+        clientX, clientY
+        마우스 이벤트가 발생했을 때, '현재 창(브라우저)'을 기준으로 x축과 y축의 좌표를 반환
+        문서가 아닌 화면의 기준이기 때문에 문서의 길이에 영향을 받지 않는다.
+
+        pageX, pageY
+        마우스 이벤트가 발생했을 때, '문서'를 기준으로 x축과 y축의 좌표를 반환
+        문서가 기준이기 때문에 길이에 영향을 받는다.
+
+        screenX, screenY
+        마우스 이벤트가 발생했을 때, '화면'을 기준으로 x축과 y축의 좌표를 반환
+            *디바이스의 크기가 기준이기 때문에, 디바이스 종류가 다양해진 현재는 자주 사용하지 못함
+
+        offsetX, offsetY
+        이벤트 대상의 기준이 되며, 이벤트 대상 안에서 클릭한 위치를 반환
+        client,page는 회면 왼쪽 상단 끝이 left0, top0
+        offset은 클릭한 객체의 왼쪽 상단 끝이 left0 top0
         */
+
+
+        window.onload = function() {
+            let text01 = document.querySelector('.text01')
+            let text02 = document.querySelector('.text02')
+            let text03 = document.querySelector('.text03')
+            let text04 = document.querySelector('.text04')
+
+            document.addEventListener('mousemove', function(e){
+                // console.log(e.clientX)
+
+                let x1 = e.clientX;
+                let y1 = e.clientY;
+                text01.innerHTML = 'clientX: ' + x1 + ' clientY: ' + y1;
+
+                let x2 = e.pageX;
+                let y2 = e.pageY;
+                text02.innerHTML = 'pageX: ' + x2 + ' pageY: ' + y2;
+
+
+                let x3 = e.screenX;
+                let y3 = e.screenY;
+                text03.innerHTML = 'screenX: ' + x3 + ' screenY: ' + y3;
+            })
+        }
 
 
     </script>
