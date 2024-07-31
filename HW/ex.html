@@ -33,6 +33,7 @@
             "park": 92,
             "lee": 78,
             "seo": 65,
+            "han": 95,
             "pyo": 58
         };
 
@@ -47,16 +48,15 @@
             "F": []
         };
 
-        // 학생 성적을 배열로 변환
-        let person = Object.keys(students);
-        let score = Object.values(students);
-        console.log(person.length)
-        console.log(score.length)
-
 
         // 학생 성적을 grades에다 저장하는 함수
-        function checkGrades(person, score) {
+        function checkGrades(students) {
+            
+            // students 내의 key와 value를 각각 person, score에다 저장
+            let person = Object.keys(students);
+            let score = Object.values(students);
 
+            // score의 조건에 따라 person값을 grades의 각 배열에 push
             for (i = 0; i < person.length; i++) {
 
                 if (score[i] >= 90) {
@@ -78,11 +78,15 @@
         }
 
         //함수 실행
-        checkGrades(person, score);
+        checkGrades(students);
 
+        //콘솔에 로그 출력
         console.log(grades);
-
-
+        
+        //화면 출력
+        for (let i in grades) {
+            document.write(i + ': ' + grades[i].join(" ") + "<br>"); // arr.join([separator]) -> 배열 요소들을 쉼표나 지정된 구분 문자열로 구분하여 연결한 새 문자열을 만들어 반환
+        }
 
 
 

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        학생들의 이름과 점수를 입력받아, 각 학생의 성적을 "A", "B", "C", "D", "F"로 분류하고, 
+        각 등급에 속하는 학생들의 명단을 출력하는 함수를 만드세요
+
+        객체와 반복문 조건문, 배열관리 명령어, 을 사용합니다.
+
+        1.학생들의 이름과 점수를 객체 형태로 관리
+        
+        2. 
+        -90점 이상: "A"
+        -80점 이상 90점 미만: "B"
+        -70점 이상 80점 미만: "C"
+        -60점 이상 70점 미만: "D"
+        -나머지 "F"
+
+        3.각 성적 등급별로 학생 이름을 출력
+
+
+        
+        */
+
+        // 학생 성적 
+        var students = {
+            "kim": 85,
+            "park": 92,
+            "lee": 78,
+            "seo": 65,
+            "pyo": 58
+        };
+
+        console.log(students)
+
+        // 각 성적 등급별로 학생을 저장할 객체
+        var grades = {
+            "A": [],
+            "B": [],
+            "C": [],
+            "D": [],
+            "F": []
+        };
+
+        // 학생 성적을 배열로 변환
+        let person = Object.keys(students);
+        let score = Object.values(students);
+        console.log(person.length)
+        console.log(score.length)
+
+
+        // 학생 성적을 grades에다 저장하는 함수
+        function checkGrades(person, score) {
+
+            for (i = 0; i < person.length; i++) {
+
+                if (score[i] >= 90) {
+                    grades["A"].push(person[i]);
+                }
+                else if (score[i] >= 80) {
+                    grades["B"].push(person[i]);
+                }
+                else if (score[i] >= 70) {
+                    grades["C"].push(person[i]);
+                }
+                else if (score[i] >= 60) {
+                    grades["D"].push(person[i]);
+                }
+                else {
+                    grades["F"].push(person[i]);
+                }
+            }
+        }
+
+        //함수 실행
+        checkGrades(person, score);
+
+        console.log(grades);
+
+/*
+정리가 잘 된 부분이 많은데 object.values와 keys를 검색해서 사용하신건 정말 잘하셨어요 
+다만 그렇게 되면 코드를 좀 바꾸는게 좋을거 같아요
+물론 지금 방법도 문제는 없지만 person과 score를 밖에서 만들 필요는 없는거 같아요
+
+
+
+*/
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
