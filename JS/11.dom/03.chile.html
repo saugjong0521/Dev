@@ -31,7 +31,10 @@
 
             //자식요소 추가 방법 2
             let childItem02 = '<div class="child">6</div>'
-            parent.innerHTML += childItem02
+            parent.innerHTML += childItem02 //parent.innerHTML = childItem02 시 replace
+
+
+            document.body.removeChild(parent);
 
         }
     </script>
