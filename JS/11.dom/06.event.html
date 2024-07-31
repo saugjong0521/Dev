@@ -56,11 +56,22 @@
             3. 그 외 이벤트
             - onload: 로딩관련 이벤트
             - resize: 반응형 관련 이벤트(윈도우 사이즈를 변경할 때 사용)
+            
+            */
 
+            window.onload = function(){
+                let text = document.querySelector('.text')
 
+                text.onclick = function (){
+                    document.write('11')
+                }
 
+                text.onclick = function (){
+                    document.write('22')
+                }
 
-        */
+            }
+
 
     </script>
 
@@ -68,6 +79,7 @@
 
 <body>
     <p onmouseover="this.style.color = 'red' ">text</p>
+    <p class="text">Lorem ipsum dolor sit amet.</p>
 </body>
 
 </html>
