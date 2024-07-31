@@ -142,6 +142,7 @@
   },
   "active": "d5d31f538f436ad8",
   "lastOpenFiles": [
+    "JS/11.dom/08.setInterval.html",
     "JS/11.dom/07.mouseEvent.html",
     "JS/11.dom/06.event.html",
     "JS/11.dom/05.sibling.html",
@@ -152,7 +153,6 @@
     "HW/JS_HW.html",
     "ex.html",
     "JS/11.dom/02.innerHtml.html",
-    "JS/11.dom/01.dom.html",
     "Output/KUSD_S3/node_modules/send/node_modules/ms/readme.md",
     "Output/KUSD_S3/node_modules/send/node_modules/ms/license.md",
     "Output/KUSD_S3/node_modules/vary/README.md",
