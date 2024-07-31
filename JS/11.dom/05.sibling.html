@@ -17,13 +17,13 @@
         window.onload = function(){
             let me = document.querySelector('.child03');
 
-            let prev = me.previousElementSibling;
-            let prev02 = me.previousSibling;
+            let prev = me.previousElementSibling;   //node를 제외하고 탐색
+            let prev02 = me.previousSibling;    //node를 포함하여 탐색
 
             let next = me.nextElementSibling;
 
             console.log(prev)
-            console.log(prev02)
+            console.log(prev02) //여기서 출력되는 #text의 경우 03과 02 사이의 공백을 의미
             console.log(next)
 
         }
