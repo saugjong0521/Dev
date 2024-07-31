@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부모요소 참조 메소드</title>
+
+    <script>
+
+        window.onload = function(){
+            let child = document.querySelector('.child');
+            let parent = child.parentNode;
+            let parent02 = child.parentElement;
+            // let parents = child.parentElement.parentElement; === let parents = parent02.parentElement
+
+            
+            console.log(parent)
+            console.log(parent02)
+            
+            
+            /*
+            
+            parentNode가 childNode와 다르게 공백을 반환하지 않는 이유는 설계와 구조에 대한 차이
+
+            childNode는 부모요소 기준 내부에 있는 모든값을 참조하지만
+            parentNode는 구조상 공백을 부모요소로 참조할 수 없기 때문에 바로 객체를 참조함
+            즉, Node는 같은 level에 있는 공백요소를 추가함
+            
+            
+            */
+
+
+        }
+
+    </script>
+
+</head>
+
+<body> 
+    <div class="parents">
+        <div class="parent">
+            <div class="child">child</div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
