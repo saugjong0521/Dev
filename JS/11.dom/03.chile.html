@@ -38,7 +38,7 @@
 
 
             //removeChild
-            // document.body.removeChild(parent); // parent 내의 내용 삭제
+            document.body.removeChild(parent.child); // parent 내의 내용 삭제
             parent.removeChild(parent.childNodes[3]) // 특정한 순번에 있는 자식요소를 삭제
 
 
@@ -58,6 +58,10 @@
             node = 문서객체 모델의 기본 요소
             childNodes는 텍스트와 노드를 모두 포함해서 출력
             (노드 사이에 있는 공백, 택스트도 포함하기에 갯수가 달라질 수 있다.)
+
+            parent.childElementCount
+            공백이나 텍스트와 같은 비노드를 제외한 순수 부모의 직계 자식 요소 수만 반환
+            가장 정확한 값을 의미하기도 한다.
 
             */
 
