@@ -12,13 +12,13 @@
             this.first = first;
             this.last = last;
 
-            this.result = function(){
+            this.result01 = function(){
                 return `제 이름은 ${this.first} ${this.last}입니다.`;
             }
         }
 
         let person01 = new Name('홍','길동');
-        console.log(person01,result())
+        console.log(person01,result01())
 
 
         function Local(first, last, local){
@@ -30,7 +30,7 @@
 
 
             this.local = local;
-            let localResult = this.result();
+            let localResult = this.result01();
             this.result02 = function(){
                 return `${localResult}, 사는 곳은 ${this.local}입니다.`;
             }
