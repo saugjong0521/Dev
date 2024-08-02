@@ -21,7 +21,6 @@
         console.log(person01.result01())
 
 
-
         
         function Local(first, last, local){
             Name.call(this, first, last) // call(): 함수를 호출하는 메소드
@@ -41,6 +40,26 @@
 
         let person02 = new Local('홍','길동','왕십리');
         console.log(person02.result02())
+
+
+
+
+
+        // class 생성자 함수로 상속 문법
+        class Name02{
+
+            constructor(first, last){
+                this.first = first;
+                this.last = last;
+            }
+            result(){
+                return `제 이름은 ${this.first} ${this.last}입니다.`;
+            }
+        }
+
+        let person03 = new Name02('홍', '길동')
+        console.log(person03.result())
+
 
 
     </script>
