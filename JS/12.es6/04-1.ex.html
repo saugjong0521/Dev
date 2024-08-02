@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        /*
+        클래스마다 다른 폰트 사이즈와 컬러를 적용하는 class 생성자 함수 만들기
+        
+        
+        */
+       window.onload = function(){
+        
+        //클래스 작성
+        class FontStyle {
+            constructor(el, size, color){
+                this.el = el;   // 선택자
+                this.size = size;   // 폰트사이즈
+                this.color = color; // 폰트컬러
+
+                document.querySelector(el).style.fontSize = this.size;
+                document.querySelector(el).style.color = this.color;
+
+            }
+        }
+
+
+
+        //적용
+        let font01 = new FontStyle('.text01', '60px', 'pink')
+        let font02 = new FontStyle('.text02', '20px', 'red')
+
+
+       }
+        
+    </script>
+
+</head>
+
+<body>
+    <p class="text01">Lorem ipsum dolor sit amet.</p>
+    <p class="text02">Lorem ipsum dolor sit amet.</p>
+    <p class="text03">Lorem ipsum dolor sit amet.</p>
+</body>
+
+</html>
