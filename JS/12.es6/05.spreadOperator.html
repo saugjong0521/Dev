@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>펼침 연산자</title>
+
+    <script>
+        /*
+        spreadOperator (= 스프레드 연산자, 전개구문, 펼침연산자)
+        배열, 함수, 객체등을 다룰때 사용하는 연산자
+        배열이나 객체를 복사하거나 병합하고, 함수의 인수로 개별 요소를 전달할때 사용하는 문법
+        
+        */
+
+        //case01: 배열에서 사용
+        let arr01 = [1, 2, 3];
+        let arr02 = [...arr01,4,5]; //배열의 확장
+        console.log(arr02)
+
+        //case02
+        let arr03 = [...arr01]; //기존 배열의 복제, 값도 공유함
+        console.log(arr03);
+
+        //case03
+        let arr04 = [...arr01, ...arr02]; //배열의 병합
+        console.log(arr04)
+
+
+        function sum01(a, b, c){
+            return a + b + c;
+        }
+
+        console.log(sum01(1, 2, 3))
+        console.log(sum01(...arr01))
+        //함수에서 배열의 값을 개별 인수로 전달할 때, 스프레드 연산자로 활용할 수 있다.
+
+        console.clear();
+
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
