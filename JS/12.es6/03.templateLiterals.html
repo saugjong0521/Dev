@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>template literals</title>
+
+    <script>
+        /*
+        es6에 새로 추가된 문법
+
+        문자열 작성을 쉽고, 가독성을 늘린 작성방법
+        기존: +연산자와 ''/""을 번갈아 쓰는 복잡한 방식이기에, 길어질 경우 복잡해짐
+
+        새로워진 문법에서는
+        ''/"" 대신 ``(백틱)으로 대체
+        연산자 대신 ${}으로 대체
+
+        
+
+        */
+
+        const name = 'kim';
+        const lastName = 'seongjong';
+        const a = 10;
+        const b = 3;
+        const person = '홍길동';
+
+        //기존 방식
+        console.log('제 성은 ' + name + '이름은 ' + lastName + ' 입니다.')
+
+        //es6
+        console.log(`제 성은 ${name} 이름은 ${lastName} 입니다.`)
+
+    </script>
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

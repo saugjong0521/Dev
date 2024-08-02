@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        /*
+        일반함수에서는 this는 함수로 호출하는 객체
+        화살표 함수에서는 정의한 객체를  this로 본다.
+
+        */
+
+        let a = this;
+        console.log(a)
+        //전역상태의 this는 항상 window를 가르킨다.
+        //document가 아닌 이유는 문서상에서 호출하지 않기 때문
+
+        function test01(){
+            console.log(this)
+        }
+        test01() // window;
+
+        test02 = () => {
+            console.log(this)
+        }
+        test02() // window
+
+        window.onload = function (){
+            let btn01 = document.querySelector('.btn01')
+            let btn02 = document.querySelector('.btn02')
+
+            
+
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+    <button class="btn01"></button>
+    <button class="btn02"></button>
+
+</body>
+
+</html>

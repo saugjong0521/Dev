@@ -24,20 +24,40 @@
 
 
         //변수 선억식
-        // test02() -> Cannot access 'test02' before initialization
-        // 에러 발생, 호이스팅 불가 (let으로 시작되기에)
+        // test02() -> Cannot access 'test02' before initialization  // 호이스팅 불가 (let으로 시작되기에)
         let test02 = function(){
             console.log('test02')
         }
         test02() // 변수명으로 호출
 
         //새로 추가된 화살표 함수
-        test03()
+        // test03() -> test03 is not defined  // 호이스팅 불가
         test02 = () => {
             console.log('test03')
         }
         test03()
 
+
+        let test04 = () => console.log('test04')
+        test04()
+        // 출력할 코드가 하나라면 코드블럭 생략이 가능해 훨씬 간편함
+
+
+        let test05 = (a) => console.log(a * a);
+        test05(5) // 25
+
+
+        let test06 = a => console.log(a * a);
+        test06(6)
+        // 매개변수가 하나라면, ()가 생략되도 된다.
+        // 화살표 함수로는 생성자 함수를 만들 수 없다.
+        // 이유는 this와 바인딩 protype의 특성과 관련이 있기 때문
+
+        function person(name){
+            this.name = name;
+        }
+
+        let Person01 = (name) => Person01()
 
     </script>
     
