@@ -59,6 +59,22 @@
 
         let person03 = new Name02('홍', '길동')
         console.log(person03.result())
+        
+            //상속 문법
+        class Local02 extends Name02{
+            constructor(first, last, local){
+                super(first, last); // 상속받을 class를 참조
+                //result는 매개변수가 아닌 메소드이기 때문에 super에서 호출할 수 없다.
+                this.local = local;
+            }
+            result02(){
+                return `${super.result()}, 그리고 사는곳은 ${this.local} 입니다.`;
+                //메서드는 매개변수가 아닌 직접호출 방식을 사용
+            }
+        }
+
+        let person04 = new Local02('홍', '길동', '강남');
+        console.log(person04.result02())
 
 
 
