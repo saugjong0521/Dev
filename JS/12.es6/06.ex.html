@@ -50,9 +50,11 @@
 
         console.log(students)
 
-        students = new ScoreCalc2(Object.values(students));
-        console.log(`${students.result01()}
-        ${students.result02()}`)
+        
+        let score = Object.values(students)
+        score = new ScoreCalc2();
+        console.log(`${score.result01()}
+        ${score.result02()}`)
 
 
 
