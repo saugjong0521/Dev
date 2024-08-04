@@ -16,6 +16,8 @@
         4. 1번과 3번의 값을 출력
         */
 
+
+        // 국어점수와 영어점수 관련 클래스
         class ScoreCalc {
 
             constructor(Kor, Eng) {
@@ -30,7 +32,7 @@
         }
 
 
-
+        // 수학점수 관련 클래스 (ScoreCalc를 상속)
         class ScoreCalc2 extends ScoreCalc {
 
             constructor(Kor, Eng, Math) {
@@ -42,15 +44,17 @@
             }
         }
 
-
-            let Kor = parseInt(prompt(`국어점수`))
-            let Eng = parseInt(prompt(`영어점수`))
-            let Math = parseInt(prompt(`수학점수`))
+        // 점수를 입력
+            let Kor = parseInt(prompt(`국어점수(0~100)`))
+            let Eng = parseInt(prompt(`영어점수(0~100)`))
+            let Math = parseInt(prompt(`수학점수(0~100)`))
 
             let students = { Kor, Eng, Math };
 
+            //확인
             console.log(students);
         
+            //유효한 점수 확인 및 출력
             if (Kor <= 100 && Kor >= 0 && Eng <= 100 && Eng >= 0 && Math <= 100 && Math >= 0) {
                 let score = new ScoreCalc2(students.Kor, students.Eng, students.Math);
                 console.log(`${score.result01()}
