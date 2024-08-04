@@ -43,15 +43,16 @@
         }
 
 
-            let Kor = parseInt(prompt(`국어점수`))
-            let Eng = parseInt(prompt(`영어점수`))
-            let Math = parseInt(prompt(`수학점수`))
+        let Kor = parseInt(prompt(`국어점수`))
+        let Eng = parseInt(prompt(`영어점수`))
+        let Math = parseInt(prompt(`수학점수`))
 
-            let students = { Kor, Eng, Math };
+        let students = { Kor, Eng, Math };
 
-            console.log(students);
+        console.log(students);
 
-            if (Kor <= 100 &&  Eng <= 100 && Math <= 100) {
+        function resultCalc(){
+            if (Kor <= 100 && Eng <= 100 && Math <= 100) {
                 let score = new ScoreCalc2(students.Kor, students.Eng, students.Math);
                 console.log(`${score.result01()}
             ${score.result02()}`)
@@ -60,6 +61,7 @@
                 result.innerHTML = `유효한 점수를 입력해 주세요`
             }
 
+        }
 
 
 
