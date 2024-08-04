@@ -16,49 +16,50 @@
         4. 1번과 3번의 값을 출력
         */
 
-        class ScoreCalc{
+        class ScoreCalc {
 
-            constructor(Kor, Eng){
+            constructor(Kor, Eng) {
                 this.Kor = Kor;
                 this.Eng = Eng;
             }
 
-            result01(){
-                
+            result01() {
+
                 return `국어점수와 영어점수의 합은 ${this.Kor + this.Eng}점 입니다.`
             }
         }
 
 
 
-        class ScoreCalc2 extends ScoreCalc{
+        class ScoreCalc2 extends ScoreCalc {
 
-            constructor(Kor, Eng, Math){
+            constructor(Kor, Eng, Math) {
                 super(Kor, Eng);
                 this.Math = Math;
             }
-            result02(){
+            result02() {
                 return `세 과목의 합의 평균은 ${(this.Kor + this.Eng + this.Math) / 3}점 입니다.`
             }
         }
 
-        let Kor = parseInt(prompt(`국어점수`))
-        let Eng = parseInt(prompt(`영어점수`))
-        let Math = parseInt(prompt(`수학점수`))
-        
-        let students = {Kor, Eng, Math};
+        function valueInput(){
+            let Kor = parseInt(prompt(`국어점수`))
+            let Eng = parseInt(prompt(`영어점수`))
+            let Math = parseInt(prompt(`수학점수`))
 
-        console.log(students);
+            let students = { Kor, Eng, Math };
 
-        if (0 <= Kor <= 100 && 0 <= Eng <= 100 && 0 <= Math <= 100 ){
-            let score = new ScoreCalc2(students.Kor, students.Eng, students.Math);
-            console.log(`${score.result01()}
+            console.log(students);
+
+            if (0 <= Kor <= 100 && 0 <= Eng <= 100 && 0 <= Math <= 100) {
+                let score = new ScoreCalc2(students.Kor, students.Eng, students.Math);
+                console.log(`${score.result01()}
             ${score.result02()}`)
+            }
+            else {
+                result.innerHTML = `유효한 점수를 입력해 주세요`
+            }
         }
-        else{
-            result.innerHTML = `유효한 점수를 입력해 주세요`
-        }
-
 
 
 
