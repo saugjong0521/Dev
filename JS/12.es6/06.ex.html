@@ -42,7 +42,13 @@
             }
         }
 
-        let students = new ScoreCalc2(30,60,81);
+        let Kor = parseInt(prompt())
+        let Eng = prompt()
+        let Math = prompt()
+        
+        let students = {Kor, Eng, Math}
+
+        students = new ScoreCalc2(30,60,81);
         console.log(`${students.result01()}
         ${students.result02()}`)
 
