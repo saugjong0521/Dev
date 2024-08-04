@@ -42,25 +42,21 @@
             }
         }
 
-        let Kor = parseInt(prompt())
-        let Eng = parseInt(prompt())
-        let Math = parseInt(prompt())
+        let Kor = parseInt(prompt(`국어점수`))
+        let Eng = parseInt(prompt(`영어점수`))
+        let Math = parseInt(prompt(`수학점수`))
         
-        let students = {Kor, Eng, Math}
+        let students = {Kor, Eng, Math};
 
-        console.log(students)
+        console.log(students);
 
         
-        let score = Object.values(students)
-
-        console.log(score)
-
-        let result = new ScoreCalc2(score);
+        let score = new ScoreCalc2(students.Kor, students.Eng, students.Math);
 
 
 
-        console.log(`${result.result01()}
-        ${result.result02()}`)
+        console.log(`${score.result01()}
+        ${score.result02()}`)
 
 
 
