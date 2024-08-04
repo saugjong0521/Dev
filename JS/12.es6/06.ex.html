@@ -50,7 +50,7 @@
 
         console.log(students);
 
-        if (0 <= students.Kor <= 100 && 0 <= students.Eng <= 100 && 0 <= students.Math <= 100 ){
+        if (0 <= Kor <= 100 && 0 <= Eng <= 100 && 0 <= Math <= 100 ){
             let score = new ScoreCalc2(students.Kor, students.Eng, students.Math);
             console.log(`${score.result01()}
             ${score.result02()}`)
