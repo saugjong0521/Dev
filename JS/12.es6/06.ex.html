@@ -15,8 +15,37 @@
         3. 수학점수가 추가되는 학생은, 총 합의 평균까지 구하기
         4. 1번과 3번의 값을 출력
         
-        
         */
+
+        class ScoreCalc{
+
+            constructor(Kor, Eng){
+                this.Kor = Kor;
+                this.Eng = Eng;
+            }
+
+            result01(){
+                
+                console.log(`국어점수와 영어점수의 합은 ${Kor + Eng}점 입니다.`)
+            }
+        }
+
+
+
+        class ScoreCalc2{
+
+            constructor(Kor, Eng, Math){
+                super(Kor, Eng)
+                this.Math = Math;
+            }
+            result02(){
+                console.log(`세 과목의 평균은 ${(Kor + Eng + Math) / 3}점 입니다.`)
+            }
+        }
+        
+        
+
+
 
     </script>
 
