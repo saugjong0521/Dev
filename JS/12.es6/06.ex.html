@@ -51,13 +51,13 @@
 
             console.log(students);
         
-            if (Kor <= 100 &&  Eng <= 100 && Math <= 100) {
+            if (0 <= Kor <= 100 &&  Eng <= 100 && Math <= 100) {
                 let score = new ScoreCalc2(students.Kor, students.Eng, students.Math);
                 console.log(`${score.result01()}
             ${score.result02()}`)
             }
             else {
-                result.innerHTML = `유효한 점수를 입력해 주세요`
+                console.log(`유효한 점수를 입력해 주세요`)
             }
 
 
