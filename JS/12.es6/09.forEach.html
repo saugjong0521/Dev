@@ -17,7 +17,7 @@
             
         */
 
-        let num = [1,2,3,4];
+        let num = [1, 2, 3, 4];
 
         //map
         let result = num.map(el => {
@@ -34,16 +34,30 @@
 
 
         //forEach를 이용해서 새 배열에 담는 방법
-        let num02 = [1,2,3,4,5];
-        let resultArr = new Array(3) // forEach는 map과 같이 배열로 만드는 능력이 없기 때문에, 요소를 담을 빈 배열이 필요하다.
+        let num02 = [1, 2, 3, 4, 5];
+        let resultArr = [] // forEach는 map과 같이 배열로 만드는 능력이 없기 때문에, 요소를 담을 빈 배열이 필요하다.
 
         num02.forEach(el => {
             let result = el * el
-            resultArr[el].push(result)
+            resultArr.push(result)
         })
+
         console.log(resultArr)
-        
-    
+
+
+
+        let resultArr02 = new Array(3) // forEach는 map과 같이 배열로 만드는 능력이 없기 때문에, 요소를 담을 빈 배열이 필요하다.
+
+        num02.forEach((el,idx) => {
+            if(idx < 3){
+                resultArr02[idx] = el * el
+            }
+        })
+
+        console.log(resultArr02)
+
+
+
 
     </script>
 
