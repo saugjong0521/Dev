@@ -47,11 +47,20 @@
 
         //날짜를 받아와서 필요한 값만 출력하기
         let today = new Date(); // 현재 날짜를 출력
-        console.log(today)
+        console.log(today) // Mon Aug 05 2024 19:24:04 GMT+0900 (Korean Standard Time)
 
 
         let useDate = today.toISOString();
-        console.log(useDate)
+        console.log(useDate) // 2024-08-05T10:24:04.649Z
+        // toISOString(); iso 형식으로 문자열을 변환해서 반환 날짜의 포멧을 바꿔서 출력 (UTC 기준시로 변경)
+
+        let useDateArr = useDate.substring(0,10)
+        console.log(useDateArr)
+        // substring(시작 index, 출력할 글자 수) = 특정 순번의 문자열을 추출하는 메서드
+        // 시작 인덱스부터 출력할 글자수까지만 출력하고 나머지는 버린다.
+
+        let [y,m,d] = useDateArr.split('-');
+        console.log(y,m,d)
 
     </script>
 
