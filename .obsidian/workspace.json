@@ -4,15 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "19b02d4e0c5a43f1",
+        "id": "6b7240ed26dc8251",
         "type": "tabs",
         "children": [
           {
-            "id": "7ed401033317a9d9",
+            "id": "cd74224c5538f113",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.6.7"
+              }
             }
           }
         ]
@@ -44,7 +46,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "path:\"frontEnd/\" ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -118,9 +120,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "3번째까지 잘 되면 합격 입니다.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -143,50 +143,50 @@
   "active": "d5d31f538f436ad8",
   "lastOpenFiles": [
     "JS/12.es6/06.HW_JS.html",
-    "html/hsd 답지/index.html",
+    "JS/12.es6/06.ex.html",
+    "JS/12.es6/05.spreadOperator.html",
+    "JS/12.es6/04-2.extends.html",
+    "JS/12.es6/04-1.ex.html",
+    "JS/12.es6/04.class.html",
+    "JS/12.es6/03.templateLiterals.html",
+    "JS/12.es6/03.templet",
+    "JS/12.es6/02.this.html",
+    "JS/12.es6/00.basic.html",
+    "JS/12.es6/01.function.html",
+    "Output/KUSD_S3/node_modules/send/node_modules/ms/readme.md",
+    "Output/KUSD_S3/node_modules/send/node_modules/ms/license.md",
+    "Output/KUSD_S3/node_modules/vary/README.md",
+    "Output/KUSD_S3/node_modules/vary/HISTORY.md",
+    "Output/KUSD_S3/node_modules/utils-merge/README.md",
+    "Output/KUSD_S3/node_modules/unpipe/README.md",
+    "Output/KUSD_S3/node_modules/unpipe/HISTORY.md",
+    "Output/KUSD_S3/node_modules/type-is/README.md",
+    "Output/KUSD_S3/node_modules/toidentifier/README.md",
+    "Output/KUSD_S3/node_modules/type-is/HISTORY.md",
+    "Output/KUSD_S3/node_modules/toidentifier/HISTORY.md",
+    "Output/KUSD_S3/node_modules/statuses/README.md",
+    "Output/KUSD_S3/node_modules/statuses/HISTORY.md",
+    "Output/KUSD_S3/node_modules/side-channel/README.md",
+    "Output/KUSD_S3/node_modules/side-channel/CHANGELOG.md",
+    "Output/KUSD_S3/node_modules/setprototypeof/README.md",
+    "Output/KUSD_S3/node_modules/set-function-length/README.md",
+    "Output/KUSD_S3/node_modules/set-function-length/CHANGELOG.md",
+    "Output/KUSD_S3/node_modules/serve-static/README.md",
+    "Output/KUSD_S3/node_modules/serve-static/HISTORY.md",
+    "Output/KUSD_S3/node_modules/send/README.md",
+    "Output/KUSD_S3/node_modules/send/SECURITY.md",
+    "Output/KUSD_S3/node_modules/send/HISTORY.md",
+    "Output/KUSD_S3/node_modules/safer-buffer/Readme.md",
+    "Output/KUSD_S3/node_modules/safer-buffer/Porting-Buffer.md",
+    "Output/KUSD_S3/public/copy_symbol2.png",
+    "html/6.html5/video/source/poster.jpg",
     "html/hsd 답지/images/whyhansot.jpg",
     "html/hsd 답지/images/vegetable.jpg",
     "html/hsd 답지/images/screencapture-hsd-co-kr-2023-05-10-11_42_42.png",
     "html/hsd 답지/images/screencapture-hsd-co-kr-2023-05-10-11_42_15.png",
     "html/hsd 답지/images/screencapture-hsd-co-kr-2023-05-10-11_41_47.png",
-    "html/6.html5/webfont/font/Ownglyph_UNZ-Rg.woff",
-    "html/6.html5/webfont/font/Ownglyph_UNZ-Rg.eot",
-    "html/6.html5/video/source/video.webm",
-    "html/6.html5/video/source/video.ogv",
-    "html/6.html5/video/source/video.mp4",
-    "html/6.html5/video/source/poster.jpg",
-    "html/hsd 답지/images/screencapture-hsd-co-kr-2023-05-10-11_41_00.png",
-    "html/hsd 답지/images/promise.jpg",
     "html/hsd 답지/images/review.jpg",
-    "html/hsd 답지/images/news.jpg",
-    "html/hsd 답지/css/reset.css",
-    "html/hsd 답지/css/common.css",
-    "html/6.html5/webfont/font",
-    "html/6.html5/webfont/02.font-face.html",
-    "Output/KUSD_S3/node_modules/send/node_modules/ms/readme.md",
-    "Output/KUSD_S3/node_modules/send/node_modules/ms/license.md",
-    "Output/KUSD_S3/node_modules/utils-merge/README.md",
-    "Output/KUSD_S3/node_modules/vary/README.md",
-    "Output/KUSD_S3/node_modules/vary/HISTORY.md",
-    "Output/KUSD_S3/node_modules/unpipe/README.md",
-    "Output/KUSD_S3/node_modules/unpipe/HISTORY.md",
-    "Output/KUSD_S3/node_modules/type-is/README.md",
-    "Output/KUSD_S3/node_modules/type-is/HISTORY.md",
-    "Output/KUSD_S3/node_modules/statuses/README.md",
-    "Output/KUSD_S3/node_modules/statuses/HISTORY.md",
-    "Output/KUSD_S3/node_modules/side-channel/README.md",
-    "Output/KUSD_S3/node_modules/side-channel/CHANGELOG.md",
-    "Output/KUSD_S3/node_modules/toidentifier/README.md",
-    "Output/KUSD_S3/node_modules/toidentifier/HISTORY.md",
-    "Output/KUSD_S3/node_modules/set-function-length/README.md",
-    "Output/KUSD_S3/node_modules/send/SECURITY.md",
-    "Output/KUSD_S3/node_modules/set-function-length/CHANGELOG.md",
-    "Output/KUSD_S3/node_modules/send/README.md",
-    "Output/KUSD_S3/node_modules/send/HISTORY.md",
-    "Output/KUSD_S3/node_modules/setprototypeof/README.md",
-    "Output/KUSD_S3/node_modules/serve-static/README.md",
-    "Output/KUSD_S3/node_modules/serve-static/HISTORY.md",
-    "Output/KUSD_S3/node_modules/safer-buffer/Readme.md",
-    "Output/KUSD_S3/node_modules/safer-buffer/Porting-Buffer.md"
+    "html/hsd 답지/images/screencapture-hsd-co-kr-2023-05-10-11_41_00.png",
+    "html/hsd 답지/images/promise.jpg"
   ]
 }
