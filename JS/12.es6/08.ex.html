@@ -25,12 +25,13 @@
 
 
         //풀이
-        let newStudent = el => {
+        let getStudent = el => {
             return [el.classId, el.name, el.score].join()
 
         }
-        console.log(newStudent)
 
+        let newStudent = student.map(getStudent)
+        console.log(newStudent)
 
     </script>
 
