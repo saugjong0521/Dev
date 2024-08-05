@@ -71,6 +71,26 @@
         // 모든 조건에 대한 반환값을 명시적으로 지정해줘야 한다.
 
 
+        // 객체 안에서 값을 출력후에 배열로 반환
+        let lolPosition = [
+            {position: '탑', name: '문도'},
+            {position: '정글', name: '리신'},
+            {position: '미드', name: '야스오'},
+            {position: '원딜', name: '케이틀린'},
+            {position: '서포터', name: '소나'}
+        ]
+
+        let getHero = el => {
+            return [el.position, el.name].join()
+            // join() = 배열을 문자열로 반환하는 메소드
+        }
+        let newHero = lolPosition.map(getHero);
+        console.log(newHero)
+
+
+
+
+
     </script>
 
 </head>
