@@ -46,10 +46,10 @@
 
 
 
-        let resultArr02 = new Array(3) // forEach는 map과 같이 배열로 만드는 능력이 없기 때문에, 요소를 담을 빈 배열이 필요하다.
+        let resultArr02 = new Array(3) // 생성자 함수를 이용하여 특정 수량만 넣는다고 하면 해당 방식이 가능하다.
 
         num02.forEach((el,idx) => {
-            if(idx < 3){
+            if(idx < resultArr02.length){
                 resultArr02[idx] = el * el
             }
         })
