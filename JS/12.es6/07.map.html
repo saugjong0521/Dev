@@ -61,9 +61,9 @@
         let num05 = [1,2,3,4,5]
         let double = num05.map(el => {
             if(el % 2 === 0){
-                return el * 2;
+                return el * 2; // 결과값이 아닌 계산값이므로 결과라고 볼 수 없다. (아래 주석처리를 해제해야 정상 출력)
             }
-            return el
+            // return el 
         })
         console.log(double)
 
