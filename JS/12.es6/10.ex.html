@@ -26,8 +26,8 @@
 
         let newStudent = []
         student.forEach((el, index) => {
-            student.score(el) > 60;
-            newStudent.push(student);
+            if(student.score > 60){
+            newStudent.push(student)}
         })
 
 
