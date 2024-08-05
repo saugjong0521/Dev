@@ -26,12 +26,11 @@
 
         //풀이
         let getStudent = el => {
-            return [el.classId, el.name, el.score]
-
+            return `${el.name} (ID: ${el.classId}) - score: ${el.score}`
         }
 
         let newStudent = student.map(getStudent)
-        console.log(Object.values(getStudent))
+        console.log(newStudent)
 
     </script>
 
