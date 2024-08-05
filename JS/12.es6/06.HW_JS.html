@@ -45,7 +45,7 @@
         }
 
 
-        function dataInput(){
+        function dataInput(score){
 
             //학생 데이터를 입력
             let name = prompt('이름');
@@ -56,7 +56,7 @@
             //입력 객체들을 리스트화
             let person = {name, Kor, Eng, Math}
 
-            let score = new ScoreCalc2(Kor, Eng, Math);
+            score = new ScoreCalc2(Kor, Eng, Math);
 
             //유효성 검사 및 배열에 저장
             if (Kor <= 100 && Kor >= 0 && Eng <= 100 && Eng >= 0 && Math <= 100 && Math >= 0) {
@@ -65,7 +65,7 @@
                 ${score.result02()}`
             }
             else {
-                return `유효한 점수를 입력해 주세요`;
+                alert `유효한 점수를 입력해 주세요`;
             }
         }
 
