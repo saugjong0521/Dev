@@ -4,17 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "19b02d4e0c5a43f1",
+        "id": "e2f2979ef5fbe534",
         "type": "tabs",
         "children": [
           {
-            "id": "7ed401033317a9d9",
+            "id": "df9a721d26ed834e",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.6.7"
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -140,7 +138,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7ed401033317a9d9",
+  "active": "d5d31f538f436ad8",
   "lastOpenFiles": [
     "JS/12.es6/06.HW_JS.html",
     "html/hsd 답지/index.html",
