@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "e2f2979ef5fbe534",
+        "id": "3c6f31b679472d8c",
         "type": "tabs",
         "children": [
           {
-            "id": "df9a721d26ed834e",
+            "id": "1ff1d77afc927328",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -138,7 +138,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d5d31f538f436ad8",
+  "active": "1ff1d77afc927328",
   "lastOpenFiles": [
     "JS/12.es6/06.HW_JS.html",
     "html/hsd 답지/index.html",
