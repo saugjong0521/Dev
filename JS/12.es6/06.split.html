@@ -31,10 +31,18 @@
 
         let test01 = [{a:1},{b:2},{c:3}]; //배열 안에 객체가 들어있는 형태
         let [q,w,e] = test01;
+        // 배열에서 분해된 값이 원시타입이 아닌 객체형태라면 값을 공유한다. (두 가지가 모두 객체를 참조하는 경우 값이 공유됨)
+        // test01[0] 과 q 모두 a의 값의 주소를 참조하기에 공유가 됨
 
         console.log(q,w,e)
         test01[0].a = 100;
         console.log(q)
+
+
+        //객체에서 분리하기
+        let person = {name : 'park', age: 40}
+        let {name, age} = person;
+        console.log(name, age)
 
 
     </script>
