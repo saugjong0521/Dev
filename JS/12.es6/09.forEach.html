@@ -61,11 +61,26 @@
         // forEach, map은 3개의 매개변수로 받아올 수 있다. (element, index, array)
         let alphabet = ['a','b','c']
         alphabet.forEach((el,idx,arr) => {
-            console.log(el)
-            console.log(idx)
-            console.log(arr)
+            console.log(el) // 요소(객체) element, el
+            console.log(idx) // 순번 index, idx
+            console.log(arr) // 참조중인 배열(자신) arr, array
         })
 
+
+
+        window.onload = () => {
+            let carBrandList = ['현대', '기아', '볼보', '아우디', '벤츠', '포르쉐', '마세라티']
+            let list = document.querySelector('.list');
+            let listItem = ''
+
+            let result = (el, idx) => {
+                listItem += `<li>${idx + 1}번 브랜드 ${el} 입니다.`
+            }
+            
+            
+            list.innerHTML = listItem;
+
+        }
 
 
     </script>
@@ -73,6 +88,10 @@
 </head>
 
 <body>
+    <h1>자동차 브랜드</h1>
+    <ul class="">
+
+    </ul>
 
 </body>
 
