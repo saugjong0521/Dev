@@ -28,12 +28,16 @@
         }
         test02() // window
 
-        window.onload = function (){
-            let btn01 = document.querySelector('.btn01')
-            let btn02 = document.querySelector('.btn02')
+        window.onload = function(){
+            let btn01 = document.querySelector('.btn01');
+            let btn02 = document.querySelector('.btn02');
 
-            
-
+            btn01.addEventListener('click', function(){
+                console.log(this)
+            })
+            btn02.addEventListener('click',()=>{
+                console.log(this)
+            })
         }
 
 

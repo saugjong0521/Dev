@@ -11,8 +11,10 @@
             "id": "7ed401033317a9d9",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.6.7"
+              }
             }
           }
         ]
@@ -118,9 +120,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "3번째까지 잘 되면 합격 입니다.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -140,7 +140,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d5d31f538f436ad8",
+  "active": "7ed401033317a9d9",
   "lastOpenFiles": [
     "JS/12.es6/06.HW_JS.html",
     "html/hsd 답지/index.html",
