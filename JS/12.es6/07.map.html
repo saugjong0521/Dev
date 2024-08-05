@@ -61,11 +61,14 @@
         let num05 = [1,2,3,4,5]
         let double = num05.map(el => {
             if(el % 2 === 0){
-                return el * 2; // 결과값이 아닌 계산값이므로 결과라고 볼 수 없다. (아래 주석처리를 해제해야 정상 출력)
+                return el * 2; // 계산된 짝수만 출력, 아래 주석이 없다면 홀수값은 undefined가 출력됨
             }
             // return el 
         })
         console.log(double)
+        // map 메소드의 콜백함수는 각 요소에 대해 값을 반환해야 한다.
+        // 반환값이 없다면 undefined가 반환되어 새로운 배열에 저장됨
+        // 모든 조건에 대한 반환값을 명시적으로 지정해줘야 한다.
 
 
     </script>
