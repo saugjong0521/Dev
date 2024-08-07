@@ -50,6 +50,7 @@
                 const dis = countDate - nowTime;
 
                 let disD = Math.floor(dis / day);
+                let disH = Math.floor((dis % day) / hour)
                 let disM = Math.floor((dis % hour) / min)
                 let disS = Math.floor((dis % min) / second)
 
@@ -63,7 +64,6 @@
                 
                 console.log(new Date(dday).getHours())
                 console.log(new Date().getHours())
-                let disH = new Date().getHours(dday) - new Date().getHours()
 
                 document.querySelector('.day').textContent = `${disD}일`;
                 document.querySelector('.hour').textContent = `${disH}시`;
