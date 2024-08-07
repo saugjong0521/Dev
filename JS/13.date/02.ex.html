@@ -54,12 +54,14 @@
                 let disM = Math.floor((dis % hour) / min)
                 let disS = Math.floor((dis % min) / second)
 
+                if(disD < 0){
+                    clearInterval();
+                }
+
                 document.querySelector('.day').textContent = disD;
                 document.querySelector('.hour').textContent = disH;
                 document.querySelector('.min').textContent = disM;
                 document.querySelector('.sec').textContent = disS;
-
-
             }, 1000);
         }
 
