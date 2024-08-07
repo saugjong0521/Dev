@@ -35,7 +35,9 @@
 
         let time = date01.getHours(); //시간을 반환, 24시간을 기준
         let min = date01.getMinutes(); //분 반환
-        let sec = date01.getSeconds();
+        let sec = date01.getSeconds(); //초를 반환
+        let mSec = date01.getMilliseconds(); //밀리초를 출력, 0~999ms
+        let times = date01.getTime(); //1970년도 1월 1일부터 현재시간을 밀리세컨으로 변환해서 출력
 
         console.log(year01)
         console.log(year02)
@@ -45,6 +47,8 @@
         console.log(time)
         console.log(min)
         console.log(sec)
+        console.log(mSec)
+        console.log(times)
 
     </script>
 
