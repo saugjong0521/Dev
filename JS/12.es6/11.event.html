@@ -38,8 +38,8 @@
             const link = document.querySelector('.link-btn')
             const top = document.querySelector('.top-btn')
 
-            link.addEventListener('click', function(){
-                e.preventDefault()
+            link.addEventListener('click', function(e){
+                e.preventDefault
 
                 document.write('hi')
             })
@@ -54,7 +54,8 @@
             document.querySelector('.parent').addEventListener('click',function(){
                 console.log('부모요소')
             })
-            document.querySelector('.btn').addEventListener('click',function(){
+
+            document.querySelector('.btn').addEventListener('click',function(e){
                 e.stopPropagation()
                 console.log('자식요소')
             })
