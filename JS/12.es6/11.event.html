@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        /*
+        이벤트 처리 방법
+        사용자가 스크립트로 이벤트를 작성할때 주의할 것
+        - 기본 이벤트를 가지고 있는 태그들 (a, reset, submit)에게 이벤트를 작성하게 되면
+        기본 이벤트도 같이 실행되기 때문에 다른 결과가 나올 수 있다.
+        */
+
+        window.onload = () => {
+            const link = document.querySelector('.link-btn')
+            const top = document.querySelector('.top-btn')
+
+            link.addEventListener('click', function(){
+                document.write('hi')
+            })
+
+            top.addEventListener('click',function(){
+
+                console.log(e)
+                console.log('11')
+            })
+        }
+
+    </script>
+
+    <style>
+        body, html{
+            height: 300vh;
+        }
+        .link-btn{
+            position: fixed;
+            top: 10px;
+            left: 20px;
+        }
+        .top-btn{
+            position: fixed;
+            top: 0px;
+            left: 500px;
+            background: black;
+            color: #fff;
+            padding: 50px 24px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <a href="https://www.naver.com" class="link-btn">링크 클릭</a>
+    <a href="#" class="top-btn">top</a>
+</body>
+
+</html>
