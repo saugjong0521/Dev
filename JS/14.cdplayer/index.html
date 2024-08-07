@@ -43,6 +43,16 @@
                 }
             })
 
+            prevBtn.addEventListener('click',function(){
+                if(itemCount > 0){
+                    itemCount--;
+                    console.log(itemCount)
+                } else {
+                    itemCount = itemLength -1 ;
+                    console.log(itemCount)
+                }
+            })
+
 
         }
 
