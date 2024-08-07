@@ -10,7 +10,7 @@
 
         window.onload = () => {
             setDate();
-            countDown("2024/08/07/ 20:39:59");
+            countDown("2024/08/07/ 21:39:59");
         }
 
         function setDate() {
@@ -26,14 +26,14 @@
 
                 const result = `현재 시간은: 
                 ${currentYear}년도
-                ${String(currentMonth).padStart(2,'0')}월
-                ${String(currentDay).padStart(2,'0')}일
-                ${String(currentH).padStart(2,'0')}시
-                ${String(currentM).padStart(2,'0')}분
-                ${String(currentS).padStart(2,'0')}초 입니다.`
+                ${String(currentMonth).padStart(2, '0')}월
+                ${String(currentDay).padStart(2, '0')}일
+                ${String(currentH).padStart(2, '0')}시
+                ${String(currentM).padStart(2, '0')}분
+                ${String(currentS).padStart(2, '0')}초 입니다.`
 
                 document.querySelector('.date').textContent = result
-            },1000)
+            }, 1000)
         }
 
         function countDown(dday) {
@@ -46,21 +46,22 @@
             const day = hour * 24;
 
             const timer = setInterval(() => {
-                const nowTime = new Date().getTime(); // getTime을 붙일 이유가 있을까?
+                const nowTime = new Date().getTime();
                 const dis = countDate - nowTime;
 
                 let disD = Math.floor(dis / day);
-                let disH = Math.floor((dis % day) / hour)
                 let disM = Math.floor((dis % hour) / min)
                 let disS = Math.floor((dis % min) / second)
 
-                if(disD < 0){
+                if (disD < 0) {
                     disD = 0;
                     disH = 0;
                     disM = 0;
                     disS = 0;
                     clearInterval(timer);
                 }
+
+                let disH = new Date(dday).getHours - new Date().getHours
 
                 document.querySelector('.day').textContent = `${disD}일`;
                 document.querySelector('.hour').textContent = `${disH}시`;
@@ -73,6 +74,23 @@
         //padStrart(설정할 글자 수, 출력할 글자)
         //문자열의 시작 부분을 다른 문자열로 채워줘서 길이를 만족하게 해주는 메소드
         //문자열을 만족하는 메소드이기 때문에 숫자열은 문자열로 변환해주는 작업이 필요(String 사용)
+
+
+        /*
+        getTime을 붙일 이유가 있을까?
+
+        정확성: Date 객체를 직접 뺄셈하면 JavaScript가 내부적으로 밀리초 단위로 변환하여 계산합니다.
+        이 때문에 두 번째 방법은 getTime()을 사용한 것과 거의 동일한 정확성을 가집니다.
+
+        가독성: getTime()을 사용하는 방법이 명시적이고 직관적일 수 있습니다.
+        하지만 두 번째 방법이 더 간단하고 가독성이 좋을 수도 있습니다.
+
+        즉, 차이는 없다고 보면 되며, 작성자의 스타일에 따라 가면 된다.
+        */
+
+
+
+
 
     </script>
 
