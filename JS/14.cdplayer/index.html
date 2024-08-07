@@ -55,6 +55,15 @@
                 slideCount()
             })
 
+            for (let i = 0; i < itemLength; i++){
+                dot[i].addEventListener('click',function(){
+                    itemCount = i;
+                    slideCount()
+                })
+            }
+
+
+            
             function slideCount() {
                 for (let i = 0; i < itemLength; i++){
                     //console.log(i)
@@ -69,12 +78,6 @@
                 }
             }
 
-            for (let i = 0; i < itemLength; i++){
-                dot[i].addEventListener('click',function(){
-                    itemCount = i;
-                    slideCount()
-                })
-            }
 
         }
 
