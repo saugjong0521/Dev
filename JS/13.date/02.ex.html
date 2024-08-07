@@ -62,8 +62,12 @@
                     clearInterval(timer);
                 }
                 
+                /*
                 console.log(new Date(dday).getHours())
                 console.log(new Date().getHours())
+                이렇게 두 시간을 빼서 구해도 되지 않을까?
+                */
+
 
                 document.querySelector('.day').textContent = `${disD}일`;
                 document.querySelector('.hour').textContent = `${disH}시`;
