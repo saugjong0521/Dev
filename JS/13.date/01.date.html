@@ -33,11 +33,11 @@
         let day = date01.getDay()
         // 설정한 시간의 요일을 숫자로 출력하며 0부터 시작, 일요일부터 계산
 
-        let time = date02.getHours(); // 설정한 시간의 시간을 반환, 24시간을 기준
-        let min = date01.getMinutes(); //분 반환
-        let sec = date01.getSeconds(); //초를 반환
-        let mSec = date01.getMilliseconds(); //밀리초를 출력, 0~999ms
-        let times = date01.getTime(); //1970년도 1월 1일부터 현재시간을 밀리세컨으로 변환해서 출력
+        let time = date01.getHours(); // 설정한 시간의 '시간'을 반환, 24시간을 기준
+        let min = date01.getMinutes(); // 설정한 시간의 '분'을 반환
+        let sec = date01.getSeconds(); // 설정한 시간의 '초'를 반환
+        let mSec = date01.getMilliseconds(); // 설정한 시간의 밀리초를 출력, 0~999ms
+        let times = date01.getTime(); //1970년도 1월 1일부터 설정한 시간까지의 시간을 밀리세컨으로 변환해서 출력
 
         console.log(year)
         console.log(year01)
