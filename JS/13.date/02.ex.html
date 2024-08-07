@@ -46,7 +46,7 @@
             const day = hour * 24;
 
             const timer = setInterval(() => {
-                const nowTime = new Date().getTime();
+                const nowTime = new Date().getTime(); // getTime을 붙일 이유가 있을까?
                 const dis = countDate - nowTime;
 
                 let disD = Math.floor(dis / day);
