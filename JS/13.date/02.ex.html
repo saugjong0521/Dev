@@ -24,14 +24,19 @@
                 const currentS = currentDate.getSeconds() //초
 
                 const result = `현재 시간은: 
-            ${currentYear}년도
-            ${currentMonth}월 ${currentDay}일
-            ${currentH}시 ${currentM}분 ${currentS}초 입니다.`
+                ${currentYear}년도
+                ${String(currentMonth).padStart(2,'0')}월
+                ${String(currentDay).padStart(2,'0')}일
+                ${String(currentH).padStart(2,'0')}시
+                ${String(currentM).padStart(2,'0')}분
+                ${String(currentS).padStart(2,'0')}초 입니다.`
 
                 document.querySelector('.date').textContent = result
             },1000)
 
         }
+        //padStrart(설정할 글자 수, 출력할 글자)
+        //문자열의 시작 부분을 다른 문자열로 채워줘서 길이를 만족하게 해주는 메소드
 
     </script>
 
