@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cd플레이어</title>
     <link rel="stylesheet" href="common.css">
-   
+
 
 
     <script>
@@ -20,7 +20,7 @@
         */
 
 
-        window.onload = function(){
+        window.onload = function () {
             let item = document.querySelectorAll('.item');
             //하나가 아닌 여러개의 객체를 관리할 때에는 all을 선택
 
@@ -32,25 +32,31 @@
             let itemLength = item.length;
 
 
-            nextBtn.addEventListener('click',function(){
-                if(itemCount < itemLength -1){
+            nextBtn.addEventListener('click', function () {
+                if (itemCount < itemLength - 1) {
                     itemCount++;
                     console.log(itemCount)
                 } else {
                     itemCount = 0;
                     console.log(itemCount)
                 }
+                slideCount()
             })
 
-            prevBtn.addEventListener('click',function(){
-                if(itemCount > 0){
+            prevBtn.addEventListener('click', function () {
+                if (itemCount > 0) {
                     itemCount--;
                     console.log(itemCount)
                 } else {
-                    itemCount = itemLength -1 ;
+                    itemCount = itemLength - 1;
                     console.log(itemCount)
                 }
+                slideCount()
             })
+
+            function slideCount() {
+
+            }
 
 
         }
