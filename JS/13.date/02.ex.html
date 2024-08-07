@@ -37,7 +37,30 @@
         }
 
         function countDown(dday) {
-            const countDate = new Date(dday).getTime()
+            const countDate = new Date(dday).getTime();
+            //console.log(countDate)
+
+            const second = 1000;
+            const min = second * 60;
+            const hour = min * 60;
+            const day = hour * 24;
+
+            const timer = setInterval(() => {
+                const nowTime = new Date().getTime();
+                const dis = countDate - nowTime;
+
+                let disD = Math.floor(dis / day);
+                let disH = Math.floor((dis % day) / hour)
+                let disM = Math.floor((dis % hour) / min)
+                let disS = Math.floor((dis % min) / second)
+
+                document.querySelector('.day').textContent = disD;
+                document.querySelector('.hour').textContent = disH;
+                document.querySelector('.min').textContent = disM;
+                document.querySelector('.sec').textContent = disS;
+
+
+            }, 1000);
         }
 
 
