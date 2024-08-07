@@ -12,9 +12,25 @@
             setDate();
         }
 
-        function setDate(){
-            const currentDate = new Date();
-            const currentYear = currentDate.getFullYear
+        function setDate() {
+
+            setInterval(() => {
+                const currentDate = new Date();
+                const currentYear = currentDate.getFullYear();  //현재 연도
+                const currentMonth = currentDate.getMonth() + 1; //월
+                const currentDay = currentDate.getDate() //일
+                const currentH = currentDate.getHours() //시
+                const currentM = currentDate.getMinutes() //분
+                const currentS = currentDate.getSeconds() //초
+
+                const result = `현재 시간은: 
+            ${currentYear}년도
+            ${currentMonth}월 ${currentDay}일
+            ${currentH}시 ${currentM}분 ${currentS}초 입니다.`
+
+                document.querySelector('.date').textContent = result
+            })
+
         }
 
     </script>
