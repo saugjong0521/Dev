@@ -55,7 +55,11 @@
                 let disS = Math.floor((dis % min) / second)
 
                 if(disD < 0){
-                    clearInterval();
+                    disD = 0;
+                    disH = 0;
+                    disM = 0;
+                    disS = 0;
+                    clearInterval(timer);
                 }
 
                 document.querySelector('.day').textContent = disD;
