@@ -61,7 +61,7 @@
                     clearInterval(timer);
                 }
 
-                let disH = new Date(dday).getHours - new Date().getHours
+                let disH = ((new Date(dday).getHours) - (new Date().getHours))
 
                 document.querySelector('.day').textContent = `${disD}일`;
                 document.querySelector('.hour').textContent = `${disH}시`;
