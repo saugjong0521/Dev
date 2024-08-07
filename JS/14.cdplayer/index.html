@@ -35,10 +35,10 @@
             nextBtn.addEventListener('click', function () {
                 if (itemCount < itemLength - 1) {
                     itemCount++;
-                    console.log(itemCount)
+                    //console.log(itemCount)
                 } else {
                     itemCount = 0;
-                    console.log(itemCount)
+                    //console.log(itemCount)
                 }
                 slideCount()
             })
@@ -46,17 +46,21 @@
             prevBtn.addEventListener('click', function () {
                 if (itemCount > 0) {
                     itemCount--;
-                    console.log(itemCount)
+                    //console.log(itemCount)
                 } else {
                     itemCount = itemLength - 1;
-                    console.log(itemCount)
+                    //console.log(itemCount)
                 }
                 slideCount()
             })
 
             function slideCount() {
                 for (let i = 0; i < itemLength; i++){
-                    console.log(i)
+                    //console.log(i)
+                    //console.log(itemCount)
+                    if(itemCount === i){
+                        item[i].classList.add('.active')
+                    }
                 }
             }
 
