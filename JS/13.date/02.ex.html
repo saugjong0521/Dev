@@ -10,7 +10,7 @@
 
         window.onload = () => {
             setDate();
-            countDown("2024/08/07/ 21:39:59");
+            countDown("2024/11/07/ 22:39:59");
         }
 
         function setDate() {
@@ -50,6 +50,7 @@
                 const dis = countDate - nowTime;
 
                 let disD = Math.floor(dis / day);
+                let disH = Math.floor((dis % day) / hour)
                 let disM = Math.floor((dis % hour) / min)
                 let disS = Math.floor((dis % min) / second)
 
@@ -60,8 +61,9 @@
                     disS = 0;
                     clearInterval(timer);
                 }
-
-                let disH = ((new Date(dday).getHours) - (new Date().getHours))
+                
+                console.log(new Date(dday).getHours)
+                console.log(new Date().getHours)
 
                 document.querySelector('.day').textContent = `${disD}일`;
                 document.querySelector('.hour').textContent = `${disH}시`;
