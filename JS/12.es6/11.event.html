@@ -34,6 +34,10 @@
                 e.preventDefault()
                 console.log('11')
             })
+
+            document.querySelector('.parent').addEventListener('click',function(){
+                console.log('부모요소')
+            })
         }
 
     </script>
@@ -54,6 +58,9 @@
             background: black;
             color: #fff;
             padding: 50px 24px;
+        }
+        .parent{
+            margin-top: 200px;
         }
     </style>
 
