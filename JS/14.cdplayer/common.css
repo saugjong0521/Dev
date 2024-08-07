@@ -19,8 +19,8 @@
     width: 600px;
     height: 400px;
     transition: 500ms;
-    /* visibility: hidden; */
-    /* opacity: 0; */
+    visibility: hidden;
+    opacity: 0;
 }
 .container .item .disk{
     position: absolute;
