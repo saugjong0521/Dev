@@ -34,8 +34,13 @@
 
                 document.querySelector('.date').textContent = result
             },1000)
-
         }
+
+        function countDown(dday) {
+            const countDate = new Date(dday).getTime()
+        }
+
+
         //padStrart(설정할 글자 수, 출력할 글자)
         //문자열의 시작 부분을 다른 문자열로 채워줘서 길이를 만족하게 해주는 메소드
         //문자열을 만족하는 메소드이기 때문에 숫자열은 문자열로 변환해주는 작업이 필요(String 사용)
