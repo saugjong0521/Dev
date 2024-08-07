@@ -61,13 +61,15 @@
                     //console.log(itemCount)
                     if(itemCount === i){
                         item[i].classList.add('active') //클래스의 추가
+                        dot[i].classList.add('active')
                     } else {
                         item[i].classList.remove('active') //나머지 요소들 클래스의 제거
+                        dot[i].classList.remove('active')
                     }
                 }
             }
 
-            for (let i = 0; i < itemCount; i++){
+            for (let i = 0; i < itemLength; i++){
                 dot[i].addEventListener('click',function(){
                     itemCount = i;
                     slideCount()
