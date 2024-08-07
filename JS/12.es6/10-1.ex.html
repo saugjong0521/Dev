@@ -28,26 +28,25 @@
             { name: 'bob', score: 39 },
         ]
 
-        let newStudent = student.map((el) => {
-            if (el.score > 90) {
-                return 
+        let scoreDivider = (el) => {
+            if (el.score >= 90) {
+                return `${el.name}, ${el.score}점, A등급`
             }
-            else if (el.score > 80) {
-                return 
+            else if (el.score >= 80) {
+                return `${el.name}, ${el.score}점, B등급`
             } 
-            else if (el.score > 70) {
-                return 
+            else if (el.score >= 70) {
+                return `${el.name}, ${el.score}점, C등급`
             } 
-            else if (el.score > 60) {
-                return 
+            else if (el.score >= 60) {
+                return `${el.name}, ${el.score}점, D등급`
             } 
             else {
-                return 
+                return `${el.name}, ${el.score}점, F등급`
             }
-
-
-
-        })
+        }
+        let newStudent = student.map(scoreDivider)
+        console.log(newStudent)
 
 
     </script>
