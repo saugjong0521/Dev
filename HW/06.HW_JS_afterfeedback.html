@@ -44,7 +44,7 @@
             }
         }
 
-
+        // 데이터 입력 및 출력
         function dataInput(person) {
             let name = prompt('이름')
             let Kor = verify('국어')
@@ -52,6 +52,7 @@
             let Math = verify('수학')
 
             person = { name, Kor, Eng, Math }
+            // studentsData에 저장
             studentsData.push(person)
 
             let output = new ScoreCalc2(person.Kor, person.Eng, person.Math)
@@ -61,6 +62,7 @@
             ${output.result02()}`)
         }
 
+        // 유효성 검사
         function verify(subject) {
             let score = parseInt(prompt(`${subject}`))
             while (score < 0 || score > 100 || isNaN(score)) {
@@ -70,8 +72,10 @@
             return score
         }
 
-
+        // 점수를 저장하기 위한 studentsData 생성 (후에 스토리지 저장 등 관리하기 위함)
         let studentsData = [];
+        
+        // 호출
         dataInput()
 
         console.log(studentsData)
