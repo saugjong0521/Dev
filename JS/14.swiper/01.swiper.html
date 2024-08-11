@@ -27,7 +27,7 @@
         */
 
         window.onload = () => {
-            const slider = new Swiper('.slide',{
+            const slider = new Swiper('.slide', {
                 autoplay: {
                     // 자동 슬라이드
                     delay: 3000, // 다음 슬라이드로 넘어가는 시간 (ms)
@@ -35,7 +35,7 @@
                 },
                 speed: 2000, // 슬라이드가 전환되는 애니메이션 시간
                 loop: true,
-                // loopAdditionalSlides: 1,
+                loopAdditionalSlides: 1,
                 // loop상태일때 미리 로드해야 하는 추가 슬라이드 수를 정의
                 // 루프 중 오류로 슬라이드가 넘어가지 못하는 현상 발생 시 도움을 준다.
                 // slidesPerView: 1, // 화면에 보여질 슬라이드의 갯수
@@ -53,20 +53,15 @@
                     prevEl: '.prev-btn',
                     nextEl: '.next-btn',
                 },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true, // 도트 클릭시 슬라이드 이동, 기본값 false
-                    type: 'fraction',
-                    // 버튼 모양 설정, 기본값 bullet, 종류는 bullet / fraction
-                },
+
                 scrollbar: {
                     el: '.swiper-scrollbar'
                 },
-                
+
                 // direction: 'vertical'
                 // 슬라이드 방향 설정, 기본값: horizontal
 
-                effect: 'fade',
+                effect: 'slide',
                 // 슬라이드 전환 효과 (기본값: slide) fade, cube, flip, coverflow, creative
 
                 // 반응형
@@ -74,6 +69,15 @@
                     768: {
                         // 768 이상
                         slidesPerView: 2,
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true, // 도트 클릭시 슬라이드 이동, 기본값 false
+                            type: 'fraction',
+                            // 버튼 모양 설정, 기본값 bullet, 종류는 bullet / fraction
+                        },
+                    },
+                    1024: {
+                        slidesPerView: 3,
                     }
                 }
 
@@ -84,39 +88,42 @@
     </script>
 
     <style>
-        *{
+        * {
             margin: 0px;
             padding: 0px;
         }
 
-        .slide{
+        .slide {
             width: 100%;
             height: 100vh;
         }
 
-        .swiper-slide{
+        .swiper-slide {
             display: flex;
             justify-content: center;
             align-items: center;
             font-size: 100px;
         }
 
-        .slide .swiper-slide:nth-of-type(1){
+        .slide .swiper-slide:nth-of-type(1) {
             background: lightcoral;
         }
-        .slide .swiper-slide:nth-of-type(2){
+
+        .slide .swiper-slide:nth-of-type(2) {
             background: lightblue;
         }
-        .slide .swiper-slide:nth-of-type(3){
+
+        .slide .swiper-slide:nth-of-type(3) {
             background: lightgreen;
         }
-        .slide .swiper-slide:nth-of-type(4){
+
+        .slide .swiper-slide:nth-of-type(4) {
             background: lightcyan;
         }
-        .slide .swiper-slide:nth-of-type(5){
+
+        .slide .swiper-slide:nth-of-type(5) {
             background: lightpink;
         }
-
     </style>
 
 </head>
@@ -131,7 +138,7 @@
             <div class="swiper-slide">slide05</div>
         </div>
 
-        <div class="prev-btn swiper-button-prev"></div>        
+        <div class="prev-btn swiper-button-prev"></div>
         <div class="next-btn swiper-button-next"></div>
 
         <div class="swiper-pagination"></div>
