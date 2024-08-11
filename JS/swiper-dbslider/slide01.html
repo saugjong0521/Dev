@@ -129,20 +129,20 @@
         }
 
         .swiper-slide-active .wall {
-            @keyframes wall_ani {
+            animation: wall_ani 500ms;
+
+        }
+
+        @keyframes wall_ani {
                 0%{
                     width: 100%;
                     background: #333
                 }
-
                 100%{
                     width: 1px;
                     background:#fff
                 }
-                
             }
-
-        }
 
 
     </style>
