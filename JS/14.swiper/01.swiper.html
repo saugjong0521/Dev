@@ -27,7 +27,12 @@
         */
 
         window.onload = () => {
-            const slider = new Swiper('.slide')
+            const slider = new Swiper('.slide',{
+                autoplay: {
+                    // 자동 슬라이드
+                    delay: 2000, // 다음 슬라이드로 넘어가는 시간 (ms)
+                }
+            })
         }
 
 
