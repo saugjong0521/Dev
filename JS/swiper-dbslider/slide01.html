@@ -153,7 +153,7 @@
                 speed: 3000,
                 loop: true,
                 autoplay: {
-                    delay: 2000,
+                    delay: 5000,
                 },
                 navigation: {
                     prevEl: '.swiper-button-prev',
@@ -165,9 +165,24 @@
 
                 },
                 effect: 'creative',
-                creativeEffect{
+                creativeEffect: {
+                    prev: {
+                        opacity: 0,
+                    },
+                    next: {
+                        opacity: 1,
+                    },
+                    
+                },
+                /*
+                페이드와 크리에이티브의 차이점
+                페이드: 요소의 단순한 페이드 인 / 아웃으로 슬라이드 전환되는 방식
 
-                }
+                크리에이티드: 사용자 정의대로 슬라이드가 전환되는 방식
+                
+                */
+         
+         
             })
         }
 
