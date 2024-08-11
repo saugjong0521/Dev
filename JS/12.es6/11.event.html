@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        /*
+        이벤트 처리 방법
+        사용자가 스크립트로 이벤트를 작성할때 주의할 것
+        - 기본 이벤트를 가지고 있는 태그들 (a, reset, submit)에게 이벤트를 작성하게 되면
+        기본 이벤트도 같이 실행되기 때문에 다른 결과가 나올 수 있다.
+
+        1. 기본 이벤트를 중지하는 방법
+        e.preventDefault(): 태그가 가지고 있는 기본 이벤트를 중지하고, 내가 만들어 놓은 로직만 실행하게 하는 메소드
+        함수가 실행될때 가장 처음에 실행시켜야 한다.
+
+        자바스크립트, 리액트에서 이벤트를 설정할때 필수적으로 사용하는 속성
+
+
+        2. 버블링 - 자식요소의 이벤트가 부모요소에도 전달되어서 실행되는 경우
+        e.stopPropagation();
+        -실제 상황에서 많이 겪지는 않는 현상이지만, 구조적으로 전파되는 현상이 종종 발생
+
+        3. return false
+        -제이쿼리 전용구문
+        - 보통 제이쿼리에서 기본이벤트를 방지하기 위해 e.preventDefault()나 e.stopPropagation() 대신에
+        return false를 많이 사용한다.
+        return false는 e.preventDefault()나 e.stopPropagation()를 담고 있다.
+
+        다만, 자바스크립트에서는 return false는 다르게 해석되기 때문에 사용하지 않는다.(기본동작만 막아주고 버블링은 실행)
+
+        */
+
+        window.onload = () => {
+            const link = document.querySelector('.link-btn')
+            const top = document.querySelector('.top-btn')
+
+            link.addEventListener('click', function(){
+                document.write('hi')
+            })
+
+            top.addEventListener('click',function(e){
+
+                console.log(e)
+                e.preventDefault()
+                console.log('11')
+            })
+
+            document.querySelector('.parent').addEventListener('click',function(){
+                console.log('부모요소')
+            })
+
+            document.querySelector('.btn').addEventListener('click',function(e){
+                e.stopPropagation()
+                console.log('자식요소')
+            })
+        }
+
+    </script>
+
+    <style>
+        body, html{
+            height: 300vh;
+        }
+        .link-btn{
+            position: fixed;
+            top: 10px;
+            left: 20px;
+        }
+        .top-btn{
+            position: fixed;
+            top: 0px;
+            left: 500px;
+            background: black;
+            color: #fff;
+            padding: 50px 24px;
+        }
+        .parent{
+            margin-top: 200px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <a href="https://www.naver.com" class="link-btn">링크 클릭</a>
+    <a href="#" class="top-btn">top</a>
+
+    <div class="parent">
+        <button class="btn">버튼</button>
+    </div>
+
+    
+</body>
+
+</html>

@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "48e38e97598d1d32",
+        "id": "15fb419de3ac6619",
         "type": "tabs",
         "children": [
           {
-            "id": "ddfefb2328947681",
+            "id": "0b933743ab6328b5",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -146,29 +146,29 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ddfefb2328947681",
+  "active": "0b933743ab6328b5",
   "lastOpenFiles": [
     "conflict-files-obsidian-git.md",
-    "JS/12.es6/10.ex.html",
-    "JS/12.es6/10-1.ex.html",
-    "JS/12.es6/09.forEach.html",
-    "JS/12.es6/08.ex.html",
-    "JS/12.es6/07.map.html",
-    "JS/12.es6/06.split.html",
-    "HW/06.HW_JS.html",
-    "JS/12.es6/06.HW_JS.html",
-    "html/hsd 답지/index.html",
+    "JS/14.cdplayer/index.html",
+    "JS/14.cdplayer/image/링크.txt",
+    "JS/14.cdplayer/image/iu_5.jpg",
+    "JS/14.cdplayer/image/iu_4.jpg",
+    "JS/14.cdplayer/image/iu_3.jpg",
+    "JS/14.cdplayer/image/iu_2.jpg",
+    "JS/14.cdplayer/image/iu_1.jpg",
+    "JS/14.cdplayer/image/iu_0.jpg",
+    "JS/14.cdplayer/image",
+    "JS/14.cdplayer/common.css",
+    "JS/14.cdplayer",
+    "JS/13.date/02.ex.html",
+    "JS/13.date/01.date.html",
+    "JS/13.date",
+    "JS/12.es6/11.event.html",
+    "HW/06.HW_JS_afterfeedback.html",
     "html/hsd 답지/images/whyhansot.jpg",
     "html/hsd 답지/images/vegetable.jpg",
     "html/hsd 답지/images/screencapture-hsd-co-kr-2023-05-10-11_42_42.png",
     "html/hsd 답지/images/screencapture-hsd-co-kr-2023-05-10-11_42_15.png",
-    "html/hsd 답지/images/screencapture-hsd-co-kr-2023-05-10-11_41_47.png",
-    "html/6.html5/webfont/font/Ownglyph_UNZ-Rg.woff",
-    "html/6.html5/video/source/poster.jpg",
-    "html/hsd 답지/images/screencapture-hsd-co-kr-2023-05-10-11_41_00.png",
-    "html/hsd 답지/images/promise.jpg",
-    "html/hsd 답지/images/review.jpg",
-    "html/hsd 답지/images/news.jpg",
     "Output/KUSD_S3/node_modules/send/node_modules/ms/readme.md",
     "Output/KUSD_S3/node_modules/send/node_modules/ms/license.md",
     "Output/KUSD_S3/node_modules/utils-merge/README.md",
@@ -192,7 +192,6 @@
     "Output/KUSD_S3/node_modules/setprototypeof/README.md",
     "Output/KUSD_S3/node_modules/serve-static/README.md",
     "Output/KUSD_S3/node_modules/serve-static/HISTORY.md",
-    "Output/KUSD_S3/node_modules/safer-buffer/Readme.md",
-    "Output/KUSD_S3/node_modules/safer-buffer/Porting-Buffer.md"
+    "Output/KUSD_S3/node_modules/safer-buffer/Readme.md"
   ]
 }
