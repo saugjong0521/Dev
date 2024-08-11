@@ -164,7 +164,7 @@
             animation: img_ani 5000ms;
         }
 
-        .swiper-slide-active:after{
+        .swiper-slide-active:after {
             content: "";
             width: 100%;
             height: 6px;
@@ -198,10 +198,11 @@
         }
 
         @keyframes progress_ani {
-            0%{
+            0% {
                 width: 0;
             }
-            100%{
+
+            100% {
                 width: 100%;
             }
         }
@@ -232,13 +233,13 @@
                     next: {
                         opacity: 1,
                     },
-                    
+
                 },
 
                 allowTouchMove: false,
                 waitForTransition: false,
 
-                
+
 
 
                 /*
@@ -251,8 +252,16 @@
 
 
             })
-            
-        }
+            document.querySelector('.swiper-button-prev').addEventListener('click', () => {
+                slide.slidePrev(0, true); // 0ms로 즉시 전환
+            });
+
+            // 다음 버튼 클릭 시 즉시 슬라이드 전환
+            document.querySelector('.swiper-button-next').addEventListener('click', () => {
+                slide.slideNext(0, true); // 0ms로 즉시 전환
+
+            }
+
 
     </script>
 
