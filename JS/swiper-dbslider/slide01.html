@@ -251,6 +251,11 @@
 
 
             })
+            swiper.on('slideChangeTransitionStart', () => {
+    swiper.navigation.nextEl.classList.remove('swiper-button-disabled');
+    swiper.navigation.prevEl.classList.remove('swiper-button-disabled');
+});
+
         }
 
     </script>
