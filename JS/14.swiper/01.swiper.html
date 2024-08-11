@@ -35,7 +35,7 @@
                 },
                 speed: 1000, // 슬라이드가 전환되는 애니메이션 시간
                 loop: true,
-                loopAdditionalSlides: 5,
+                loopAdditionalSlides: 0,
                 // loop상태일때 미리 로드해야 하는 추가 슬라이드 수를 정의
                 // 루프 중 오류로 슬라이드가 넘어가지 못하는 현상 발생 시 도움을 준다.
                 slidesPerView: 2, // 화면에 보여질 슬라이드의 갯수
@@ -58,6 +58,10 @@
                     type: 'fraction',
                     // 버튼 모양 설정, 기본값 bullet, 종류는 bullet / fraction
                 },
+                scrollbar: {
+                    el: '.swiper-scrollbar'
+                    direction: 
+                }
 
             })
         }
@@ -117,6 +121,7 @@
         <div class="next-btn swiper-button-next"></div>
 
         <div class="swiper-pagination"></div>
+        <div class="swiper-scrollbar"></div>
     </div>
 </body>
 
