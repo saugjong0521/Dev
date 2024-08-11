@@ -9,11 +9,12 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <style>
-        *{
+        * {
             margin: 0px;
             padding: 0px;
         }
-        .slider{
+
+        .slider {
             width: 100%;
             position: relative;
             top: 0px;
@@ -29,7 +30,7 @@
 
 
         /*버튼*/
-        .btns{
+        .btns {
             width: 120px;
             height: 60px;
             color: #fff;
@@ -37,7 +38,8 @@
             font-size: 20px;
             transition: 400ms;
         }
-        .btns:before{
+
+        .btns:before {
             content: "";
             width: 50px;
             height: 2px;
@@ -46,7 +48,8 @@
             position: absolute;
             transform: translateY(-50%)
         }
-        .btns:after{
+
+        .btns:after {
             content: "";
             width: 0px;
             height: 100%;
@@ -56,28 +59,34 @@
             transition: 400ms;
             z-index: -1;
         }
-        .btns:hover{
+
+        .btns:hover {
             color: #000;
         }
-        .btns:hover:before{
+
+        .btns:hover:before {
             background: cyan;
         }
-        .btns:hover:after{
+
+        .btns:hover:after {
             width: 120%;
         }
 
 
-        .swiper-button-prev{
+        .swiper-button-prev {
             justify-content: end;
         }
-        .swiper-button-next{
+
+        .swiper-button-next {
             justify-content: start;
         }
+
         .swiper-button-prev,
         .swiper-button-prev:before,
         .swiper-button-prev:after {
             left: 0;
         }
+
         .swiper-button-next,
         .swiper-button-next:before,
         .swiper-button-next:after {
@@ -86,14 +95,15 @@
 
         /*dot*/
         .swiper-pagination {
-            bottom: 150px!important;
+            bottom: 150px !important;
             height: 40px;
             display: flex;
             justify-content: center;
             gap: 10px;
             align-items: center;
         }
-        .swiper-pagination-bullet{
+
+        .swiper-pagination-bullet {
             background: #fff;
             width: 3px;
             height: 20px;
@@ -101,30 +111,35 @@
             border-radius: 0;
             opacity: 1;
         }
-        .swiper-pagination-bullet-active{
+
+        .swiper-pagination-bullet-active {
             background: cyan;
             height: 40px;
         }
-        
+
 
         /*wall*/
-        .wall{
+        .wall {
             position: absolute;
             top: 0;
             width: 1px;
             height: 100%;
             background: #fff;
         }
-        .wall.one{
+
+        .wall.one {
             left: 0px;
         }
-        .wall.two{
+
+        .wall.two {
             left: 25%;
         }
-        .wall.three{
+
+        .wall.three {
             left: 50%;
         }
-        .wall.four{
+
+        .wall.four {
             left: 75%;
         }
 
@@ -132,33 +147,49 @@
             animation: wall_ani 500ms;
 
         }
-        .swiper-slide-active .wall.two{
+
+        .swiper-slide-active .wall.two {
             animation-duration: 600ms
         }
-        .swiper-slide-active .wall.three{
+
+        .swiper-slide-active .wall.three {
             animation-duration: 700ms
         }
-        .swiper-slide-active .wall.four{
+
+        .swiper-slide-active .wall.four {
             animation-duration: 800ms
         }
 
+        .swiper-slide-active img {
+            animation: img_ani 4000ms;
+        }
+
         @keyframes wall_ani {
-                0%{
-                    width: 100%;
-                    background: #333
-                }
-                100%{
-                    width: 1px;
-                    background:#fff
-                }
+            0% {
+                width: 100%;
+                background: #333;
             }
 
+            100% {
+                width: 1px;
+                background: #fff;
+            }
+        }
 
+        @keyframes img_ani {
+            0% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
     </style>
 
     <script>
         window.onload = () => {
-            const slide = new Swiper('.slider',{
+            const slide = new Swiper('.slider', {
                 speed: 5000,
                 loop: true,
                 autoplay: {
@@ -181,7 +212,7 @@
                     next: {
                         opacity: 1,
                     },
-                    
+
                 },
                 /*
                 페이드와 크리에이티브의 차이점
@@ -190,13 +221,13 @@
                 크리에이티드: 사용자 정의대로 슬라이드가 전환되는 방식
                 
                 */
-         
-         
+
+
             })
         }
 
     </script>
-    
+
 </head>
 
 <body>
