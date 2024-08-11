@@ -47,7 +47,12 @@
                 //a11y: false,
                 // 접근성 도구: 키보드제어, 리더기 사용, 접근성 향상 네비게이션 기능 사용
                 // 보통 true를 유지하며 false를 잘 사용하지는 않는다.
-
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true, // 도트 클릭시 슬라이드 이동, 기본값 false
+                    type: 'fraction',
+                    // 버튼 모양 설정, 기본값 bullet, 종류는 bullet / fraction
+                },
                 navigation: {
                     // 슬라이드 좌우 버튼 설정, 기본 class명을 가지고 있지만, 사용자가 커스텀한 class를 연결 가능
                     prevEl: '.prev-btn',
@@ -69,12 +74,7 @@
                     768: {
                         // 768 이상
                         slidesPerView: 2,
-                        pagination: {
-                            el: '.swiper-pagination',
-                            clickable: true, // 도트 클릭시 슬라이드 이동, 기본값 false
-                            type: 'fraction',
-                            // 버튼 모양 설정, 기본값 bullet, 종류는 bullet / fraction
-                        },
+
                     },
                     1024: {
                         slidesPerView: 3,
