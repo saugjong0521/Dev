@@ -211,33 +211,31 @@
     <script>
         window.onload = () => {
             const slide = new Swiper('.slider', {
-                speed: 5000,
-                loop: true,
-                autoplay: {
-                    delay: 0,
-                },
-                navigation: {
-                    prevEl: '.swiper-button-prev',
-                    nextEl: '.swiper-button-next',
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-
-                },
-                effect: 'creative',
-                creativeEffect: {
-                    prev: {
-                        opacity: 0,
-                    },
-                    next: {
-                        opacity: 1,
-                    },
-
-                },
-
-                allowTouchMove: false,
-                waitForTransition: false,
+    speed: 1000,
+    loop: true,
+    autoplay: {
+        delay: 3000,
+    },
+    navigation: {
+        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    effect: 'creative',
+    creativeEffect: {
+        prev: {
+            opacity: 0,
+        },
+        next: {
+            opacity: 1,
+        },
+    },
+    allowTouchMove: false,
+    waitForTransition: false,
+});
 
 
 
@@ -251,14 +249,6 @@
                 */
 
 
-
-            });
-            document.querySelector('.swiper-button-prev').addEventListener('click', () => {
-                slide.slidePrev(0, true); // 0ms로 즉시 전환
-            });
-            document.querySelector('.swiper-button-next').addEventListener('click', () => {
-                slide.slideNext(0, true); // 0ms로 즉시 전환
-            });
 
         }
 
