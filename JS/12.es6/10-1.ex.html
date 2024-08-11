@@ -9,11 +9,11 @@
     <script>
         /*
         각 학생들의 점수에 따라 성적을 입력해서 새로운 객체를 생성해서 출력
-    90점 이상 = A
-    80점 이상 = B
-    70점 이상 = C
-    60점 이상 = D
-    나머지 = F
+        90점 이상 = A
+        80점 이상 = B
+        70점 이상 = C
+        60점 이상 = D
+        나머지 = F
 
 
         */
@@ -28,26 +28,27 @@
             { name: 'bob', score: 39 },
         ]
 
-        let newStudent = student.map((el) => {
-            if (el.score > 90) {
-                return 
+        let newStudent = el => {
+            if (el.score >= 90) {
+                return `A 등급: ${el.name}, (${el.score} 점)`
             }
-            else if (el.score > 80) {
-                return 
-            } 
-            else if (el.score > 70) {
-                return 
-            } 
-            else if (el.score > 60) {
-                return 
-            } 
+            else if (el.score >= 80) {
+                return `B 등급: ${el.name}, (${el.score} 점)`
+            }
+            else if (el.score >= 70) {
+                return `C 등급: ${el.name}, (${el.score} 점)`
+            }
+            else if (el.score >= 60) {
+                return `D 등급: ${el.name}, (${el.score} 점)`
+            }
             else {
-                return 
+                return `F 등급: ${el.name}, (${el.score} 점)`
             }
+        }
 
+        let getStudent = student.map(newStudent)
 
-
-        })
+        console.log(getStudent)
 
 
     </script>
