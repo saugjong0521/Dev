@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        /*
+        학생들의 정보가 담긴 객체들의 값을 재정리하여 새로운 배열로(let에다가) 출력
+        e.g. kim (ID: 1) - score: 80
+        */
+
+        //문제
+        let student = [
+            {classId: 1, name: 'kim', score: 80},
+            {classId: 2, name: 'park', score: 72},
+            {classId: 3, name: 'lee', score: 93},
+            {classId: 4, name: 'pyo', score: 100},
+            {classId: 5, name: 'kang', score: 48},
+            {classId: 6, name: 'kim', score: 56},
+        ]
+
+
+
+        //풀이
+        let getStudent = el => {
+            return `${el.name} (ID: ${el.classId}) - score: ${el.score}`
+        }
+
+        let newStudent = student.map(getStudent)
+        console.log(newStudent)
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

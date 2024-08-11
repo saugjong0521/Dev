@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        /*
+        특정 조건에 만족하는 요소만 찾아서 새로운 배열로 출력
+
+        학생들 중 60점보다 높은 학생들만 따로 뽑아서 새로운 배열에 담아서 출력
+        
+        */
+
+        let student = [
+            { name: 'kim', score: 72 },
+            { name: 'pyo', score: 81 },
+            { name: 'park', score: 53 },
+            { name: 'json', score: 49 },
+            { name: 'sarah', score: 61 },
+            { name: 'lee', score: 90 },
+            { name: 'bob', score: 39 },
+        ]
+
+        let newStudent = [];
+
+        student.forEach((el) => {
+            if (el.score >= 60) {
+                newStudent.push(el)
+            }
+        })
+
+        console.log(newStudent)
+
+
+        let newStudent02 = [];
+
+        student.forEach((el) => {
+            if (el.score >= 50 && el.score < 80) {
+                newStudent02.push(el)
+            }
+        })
+        console.log(newStudent02)
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

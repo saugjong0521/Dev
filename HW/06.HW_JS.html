@@ -44,27 +44,41 @@
             }
         }
 
-        // 점수를 입력
-            let Kor = parseInt(prompt(`국어점수(0~100)`))
-            let Eng = parseInt(prompt(`영어점수(0~100)`))
-            let Math = parseInt(prompt(`수학점수(0~100)`))
 
-            let students = { Kor, Eng, Math };
+        function dataInput(score){
 
-            //확인
-            console.log(students);
-        
-            //유효한 점수 확인 및 출력
+            //학생 데이터를 입력
+            let name = prompt('이름');
+            let Kor = parseInt(prompt('국어'));
+            let Eng = parseInt(prompt('영어'));
+            let Math = parseInt(prompt('수학'));
+            
+            //입력 객체들을 리스트화
+            let person = {name, Kor, Eng, Math}
+
+            score = new ScoreCalc2(Kor, Eng, Math);
+
+            //유효성 검사 및 배열에 저장
             if (Kor <= 100 && Kor >= 0 && Eng <= 100 && Eng >= 0 && Math <= 100 && Math >= 0) {
-                let score = new ScoreCalc2(students.Kor, students.Eng, students.Math);
-                console.log(`${score.result01()}
-            ${score.result02()}`)
+                students.push(person);
+                return `${name} 학생의 ${score.result01()}
+                ${score.result02()}`
             }
             else {
-                console.log(`유효한 점수를 입력해 주세요`)
+                alert `유효한 점수를 입력해 주세요`;
             }
+        }
+
+        //후관리를 위하여 학생 데이터를 students에 저장
+        let students = [];
+
+        
+        console.log(dataInput())
+        console.log(students);
+            
 
 
+        //후에 prompt를 UI화, 스토리지로 students 배열을 저장하는 구문 작성시, 학생들의 데이터를 저장할 수 있는 툴이 됨
 
 
 

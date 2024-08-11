@@ -34,9 +34,17 @@
         /*
         substring / substr 차이
         substring : substring(시작 index, 종료 index 전)
+            시작 index가 음수일: 경우 자동으로 0으로 바뀜 // substring(-1,5) = substring(0,5)
+            시작 index가 끝나는 index보다 클 경우: 순서를 바꿈 // substing(5,0) = substring(0,5)
+            값이 하나일 경우: 시작index로 처리, 끝까지 출력 // substring(7) = substring(7, 마지막index + 1)
+        
         substr : substr(시작 index, 반환 길이)
-        
-        
+            시작 index가 음수일 경우: 끝으로 감 // substr(-2,5) => 마지막부터 2번째부터 5번 뒤 까지 출력
+            시작 index가 끝나는 index보다 클 경우: 말이 됨
+            값이 하나일 경우: 시작index로 처리, 끝까지 출력 // substr(7) = substr(7, 마지막index 까지의 거리)
+
+
+        ECMAscript에서 표준화된 메소드는 substring이다. (보다 안정적)
         */
 
     </script>

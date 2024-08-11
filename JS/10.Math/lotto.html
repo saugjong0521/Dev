@@ -20,6 +20,14 @@
 
         for (let i = 0; i < maxNum; i++) {
             let num = Math.floor(Math.random()*45)+1; // **최솟값을 더하고 최댓값을 곱함**
+            /*
+            random 함수 관련 공식
+            최솟값 a, 최댓값 b내의 범위 내에서 임의 출력
+            random() * (b - a) + a
+            최댓값도 포함된 정수 범위 내에서 출력
+            floor(random() * (b - a + 1) + a)
+            */       
+            
             console.log(num)
 
             if (lottoNum.indexOf(num) === -1) {

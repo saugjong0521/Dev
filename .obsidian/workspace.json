@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "3c6f31b679472d8c",
+        "id": "48e38e97598d1d32",
         "type": "tabs",
         "children": [
           {
-            "id": "1ff1d77afc927328",
+            "id": "ddfefb2328947681",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "conflict-files-obsidian-git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "conflict-files-obsidian-git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "conflict-files-obsidian-git.md"
+              }
             }
           }
         ]
@@ -138,8 +146,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1ff1d77afc927328",
+  "active": "ddfefb2328947681",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
+    "JS/12.es6/10.ex.html",
+    "JS/12.es6/10-1.ex.html",
+    "JS/12.es6/09.forEach.html",
+    "JS/12.es6/08.ex.html",
+    "JS/12.es6/07.map.html",
+    "JS/12.es6/06.split.html",
+    "HW/06.HW_JS.html",
     "JS/12.es6/06.HW_JS.html",
     "html/hsd 답지/index.html",
     "html/hsd 답지/images/whyhansot.jpg",
@@ -148,19 +164,11 @@
     "html/hsd 답지/images/screencapture-hsd-co-kr-2023-05-10-11_42_15.png",
     "html/hsd 답지/images/screencapture-hsd-co-kr-2023-05-10-11_41_47.png",
     "html/6.html5/webfont/font/Ownglyph_UNZ-Rg.woff",
-    "html/6.html5/webfont/font/Ownglyph_UNZ-Rg.eot",
-    "html/6.html5/video/source/video.webm",
-    "html/6.html5/video/source/video.ogv",
-    "html/6.html5/video/source/video.mp4",
     "html/6.html5/video/source/poster.jpg",
     "html/hsd 답지/images/screencapture-hsd-co-kr-2023-05-10-11_41_00.png",
     "html/hsd 답지/images/promise.jpg",
     "html/hsd 답지/images/review.jpg",
     "html/hsd 답지/images/news.jpg",
-    "html/hsd 답지/css/reset.css",
-    "html/hsd 답지/css/common.css",
-    "html/6.html5/webfont/font",
-    "html/6.html5/webfont/02.font-face.html",
     "Output/KUSD_S3/node_modules/send/node_modules/ms/readme.md",
     "Output/KUSD_S3/node_modules/send/node_modules/ms/license.md",
     "Output/KUSD_S3/node_modules/utils-merge/README.md",
