@@ -214,8 +214,6 @@
                 loop: true,
                 autoplay: {
                     delay: 0,
-                    disableOnInteraction: false, // 사용자가 버튼을 눌러도 자동 슬라이드가 중지되지 않도록 설정
-
                 },
                 navigation: {
                     prevEl: '.swiper-button-prev',
@@ -240,6 +238,7 @@
                 allowTouchMove: false,
                 waitForTransition: false,
 
+                
 
 
                 /*
@@ -252,17 +251,6 @@
 
 
             })
-            document.querySelector('.swiper-button-prev').addEventListener('click', () => {
-        slide.autoplay.stop();
-        slide.slidePrev();
-        slide.autoplay.start();
-    });
-
-    document.querySelector('.swiper-button-next').addEventListener('click', () => {
-        slide.autoplay.stop();
-        slide.slideNext();
-        slide.autoplay.start();
-    });
         }
 
     </script>
