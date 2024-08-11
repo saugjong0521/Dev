@@ -39,6 +39,7 @@
                 // loop상태일때 미리 로드해야 하는 추가 슬라이드 수를 정의
                 // 루프 중 오류로 슬라이드가 넘어가지 못하는 현상 발생 시 도움을 준다.
                 slidesPerView: 2, // 화면에 보여질 슬라이드의 갯수
+                slidesPerGroup: 2,
                 spaceBetween: 20, // 슬라이드와 슬라이드 사이의 여백
                 // centerSlides: true, // 슬라이드를 가운데 배치
                 // 슬라이드가 여러개일때 보여지는 경우 active가 들어간 slide를 기준으로 함
@@ -60,8 +61,9 @@
                 },
                 scrollbar: {
                     el: '.swiper-scrollbar'
-                    direction: 
-                }
+                },
+
+                direction: 
 
             })
         }
