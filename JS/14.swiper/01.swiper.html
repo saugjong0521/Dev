@@ -38,7 +38,7 @@
                 loopAdditionalSlides: 1,
                 // loop상태일때 미리 로드해야 하는 추가 슬라이드 수를 정의
                 // 루프 중 오류로 슬라이드가 넘어가지 못하는 현상 발생 시 도움을 준다.
-                // slidesPerView: 2, // 화면에 보여질 슬라이드의 갯수
+                // slidesPerView: 1, // 화면에 보여질 슬라이드의 갯수
                 // slidesPerGroup: 2, // 슬라이드시 움직일 슬라이드의 갯수
                 spaceBetween: 20, // 슬라이드와 슬라이드 사이의 여백
                 // centerSlides: true, // 슬라이드를 가운데 배치
@@ -69,6 +69,13 @@
                 effect: 'slide',
                 // 슬라이드 전환 효과 (기본값: slide) fade, cube, flip, coverflow, creative
 
+                // 반응형
+                breakpoints: {
+                    768: {
+                        // 768 이상
+                        slidesPerView: 2,
+                    }
+                }
 
             })
         }
