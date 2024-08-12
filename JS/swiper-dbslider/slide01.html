@@ -211,10 +211,11 @@
     <script>
         window.onload = () => {
             const slide = new Swiper('.slider', {
-                speed: 1,
+                speed: 5000,
                 loop: true,
                 autoplay: {
-                    delay: 4999,
+                    delay: 0,
+                    disableOnInteraction: true,
                 },
                 navigation: {
                     prevEl: '.swiper-button-prev',
