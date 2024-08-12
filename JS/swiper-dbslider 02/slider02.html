@@ -46,7 +46,7 @@
             const slider = new Swiper ('.slider',{
                 slidesPerView: 2,
                 spaceBetween: 40,
-                autoHeight: true,
+                autoHeight: true, // item들의 높이값들이 서로 다를때, 부모의 높이가 아닌 아이템마다 가진 객체들의 높이값으로 대체 (넘어갈 경우에는 부모의 높이로 대체)
                 loop: true,
                 speed: 1500,
                 pagination:{
