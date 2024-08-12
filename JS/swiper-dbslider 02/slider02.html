@@ -149,12 +149,28 @@
             left: 0;
             background: rgba(0,0,0,0.5);
             transition: 500ms;
-            z-index: 98;
+            z-index: 97;
             opacity: 0;
         }
         .slider .item div:hover:before{
             opacity: 1;
         }
+
+
+        .slider .item div:after{
+            content: "";
+            width: 46px;
+            height: 46px;
+            background: url(./images2/icon_sell_more.png) no-repeat center center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%) scale(0);
+            transition: 500ms;
+            opacity: 0;
+            z-index: 98;
+        }
+
 
     </style>
 
