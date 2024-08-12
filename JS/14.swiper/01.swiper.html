@@ -30,10 +30,10 @@
             const slider = new Swiper('.slide', {
                 autoplay: {
                     // 자동 슬라이드
-                    delay: 3000, // 다음 슬라이드로 넘어가는 시간 (ms)
+                    delay: 500, // 다음 슬라이드로 넘어가는 시간 (ms)
                     disableOnInteraction: true, // 사용자가 동작시 자동재생을 멈춤
                 },
-                speed: 2000, // 슬라이드가 전환되는 애니메이션 시간
+                speed: 500, // 슬라이드가 전환되는 애니메이션 시간
                 loop: true,
                 loopAdditionalSlides: 1,
                 // loop상태일때 미리 로드해야 하는 추가 슬라이드 수를 정의
@@ -93,35 +93,32 @@
             padding: 0px;
         }
 
-        .slide {
+        .content01, .content02, .content03, .content04, .content05 {
             width: 100%;
             height: 100vh;
-        }
-
-        .swiper-slide {
             display: flex;
             justify-content: center;
             align-items: center;
             font-size: 100px;
         }
 
-        .slide .swiper-slide:nth-of-type(1) {
+        .slide .content01{
             background: lightcoral;
         }
 
-        .slide .swiper-slide:nth-of-type(2) {
+        .slide .content02 {
             background: lightblue;
         }
 
-        .slide .swiper-slide:nth-of-type(3) {
+        .slide .content03 {
             background: lightgreen;
         }
 
-        .slide .swiper-slide:nth-of-type(4) {
+        .slide .content04 {
             background: lightcyan;
         }
 
-        .slide .swiper-slide:nth-of-type(5) {
+        .slide .content05 {
             background: lightpink;
         }
     </style>
@@ -131,11 +128,21 @@
 <body>
     <div class="swiper-container slide">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">slide01</div>
-            <div class="swiper-slide">slide02</div>
-            <div class="swiper-slide">slide03</div>
-            <div class="swiper-slide">slide04</div>
-            <div class="swiper-slide">slide05</div>
+            <div class="swiper-slide item">
+                <div class="content01">slide01</div>
+            </div> 
+            <div class="swiper-slide item">
+                <div class="content02">slide02</div>
+            </div>
+            <div class="swiper-slide item">
+                <div class="content03">slide03</div>
+            </div>
+            <div class="swiper-slide item">
+                <div class="content04">slide04</div>
+            </div>
+            <div class="swiper-slide item">
+                <div class="content05">slide05</div>
+            </div>
         </div>
 
         <div class="prev-btn swiper-button-prev"></div>
@@ -147,3 +154,6 @@
 </body>
 
 </html>
+
+<!--div 안에 요소가 있으면 정상 적용이 될까?-->
+<!--된다. -->
