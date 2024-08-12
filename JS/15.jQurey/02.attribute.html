@@ -23,7 +23,25 @@
             $('h1').html('<a href="#">클릭!</a>')
             console.log($('h1').text())
             console.log($('h1').html())
+        
+        /*
+        문서 객체의 속성을 가져오는 메소드
+        .attr() : html 속성을 가져오거나 설정, 문자열 값을 반환
+        .prop() : dom 속성을 가져오거나 설정, boolean 값을 반환
+
+        attr()은 html 속성 값 그대로를 반환하지만, prop()는 해당 속성이 boolean인 경우 true/false를 반환
+            대부분의 경우 prop()는 폼 요소의 상태(e.g. check, disabled)를 가져오는데 자주 사용
+
+        */
+        
+        console.log($('input').attr('checked'))
+        console.log($('input').prop('checked'))
+
+        console.log($('img').attr('src'))
+        console.log($('img').prop('src'))
+        
         })
+
 
     </script>
 
@@ -31,6 +49,8 @@
 
 <body>
     <h1>Lorem ipsum dolor sit amet.</h1>
+    <input type="checkbox" checked>
+    <img src="./img/img01.jpg" alt="이미지 설명입니다.">
 </body>
 
 </html>
