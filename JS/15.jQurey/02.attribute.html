@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+
+    <script>
+        /*
+        문서 객체의 내용 관련 메소드
+        내용을 추출 / 변경 / 이동
+
+        .text() 텍스트 내용을 반환/설명하며, html태그는 인식하지 않는다.
+        .html() html 내용을 반환/설명하며, html태그는 인식한다. (=innerHTML)
+
+        두 메소드들은 인수(값)을 제공하지 않으면 내용을 반환하고, 인수를 제공하면 내용을 변경
+
+        */
+
+        $(document).ready(function(){
+            $('h1').html('<a href="#">클릭!</a>')
+            console.log($('h1').text)
+        })
+
+    </script>
+
+</head>
+
+<body>
+    <h1>Lorem ipsum dolor sit amet.</h1>
+</body>
+
+</html>
