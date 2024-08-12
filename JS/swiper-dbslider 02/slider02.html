@@ -121,7 +121,7 @@
 
         .slider .item:before {
             left: 0px;
-            top: 0px;
+            bottom: 0px;
         }
 
         .slider .item:after {
@@ -129,9 +129,14 @@
             top: 0px;
         }
 
-        .slider .item a:hover:before,
-        .slider .item a:hover:after{
-            width: 100%
+        .slider .item:hover a:before,
+        .slider .item:hover a:after{
+            width: 100%;
+        }
+
+        .slider .item:hover:before,
+        .slider .item:hover:after{
+            height: 100%;
         }
 
     </style>
