@@ -52,7 +52,7 @@
                     el: '.swiper-pagination',
                     clickable: true,
                     renderBullet: function(idx, el){
-                        return el[idx]
+                        return `<div class="${el}"><span class="indexNum">0${idx+1}</span><span>${bullet[idx]}</span></div}`
                     }
                 }
 
