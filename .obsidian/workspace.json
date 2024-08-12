@@ -11,9 +11,9 @@
             "id": "cd74224c5538f113",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "release-notes",
               "state": {
-                "file": "JS/14.swiper/swiper 구조.pdf"
+                "currentVersion": "1.6.7"
               }
             }
           },
@@ -21,9 +21,11 @@
             "id": "7b446679d3ce6c91",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "JS/14.swiper/swiper 구조.pdf"
+                "file": "JS/14.swiper/Untitled.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -94,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JS/14.swiper/swiper 구조.pdf",
+                "file": "JS/14.swiper/Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JS/14.swiper/swiper 구조.pdf",
+                "file": "JS/14.swiper/Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JS/14.swiper/swiper 구조.pdf"
+                "file": "JS/14.swiper/Untitled.md"
               }
             }
           }
@@ -157,9 +159,9 @@
   },
   "active": "7b446679d3ce6c91",
   "lastOpenFiles": [
+    "JS/14.swiper/swiper 구조.pdf",
     "JS/14.swiper/Untitled.md",
     "swiper 구조.pdf",
-    "JS/14.swiper/swiper 구조.pdf",
     "JS/15.jQurey/00.basic.html",
     "JS/15.jQurey",
     "JS/swiper-dbslider 02/images2/image04.jpg",
