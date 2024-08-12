@@ -166,10 +166,16 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%,-50%) scale(0);
+            border: solid 1px #fff;
             transition: 500ms;
             opacity: 0;
             z-index: 98;
         }
+        .slider .item:hover div:after{
+            transform: translate(-50%,-50%) scale(1);
+            opacity: 1;
+        }
+
 
 
     </style>
