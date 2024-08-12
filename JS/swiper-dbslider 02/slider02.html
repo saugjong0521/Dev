@@ -51,6 +51,9 @@
                 pagination:{
                     el: '.swiper-pagination',
                     clickable: true,
+                    renderBullet: function(idx, el){
+                        return el[idx]
+                    }
                 }
 
             })
