@@ -22,7 +22,32 @@
         $는 jQuery의 객체의 별칭으로 jQurey를 $로 대체해서 호출할 수 있게 해준다.
         */
 
+        //준비구문 작성법1
+        $(document).ready(function(){
+            //선택자 잡는법
+            let item = $('.list'); // jQuery는 css 선택자를 채택
+            console.log(item)
 
+            let li = $('.list li')
+            console.log(li)
+
+        }) //jQurey()
+        
+
+        //준비구문 작성법2
+        $(function(){}) // $(document).ready(function(){})의 축약형
+
+        //준비구문 작성법3
+        $(window).load(function(){}) //전체 페이지(이미지 css등 모든 리소스 포함)가 로드된 후 실행
+
+        /*
+        ready와 load의 차이점
+        ready는 dom이 완전히 로드되면 실행되지만, 리소스(이미지, css)는 로드되지 않았을 수도 있다.
+        load는 모든 페이지의 리소스(이미지, css)가 완전히 로드된 후 실행한다.
+
+        load는 페이지 로드 완료 후 사이즈를 인식(반응형), 실시간으로 불러와야 하는 작업에 사용
+
+        */
 
     </script>
 
