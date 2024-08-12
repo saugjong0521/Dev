@@ -1,4 +1,4 @@
-![[swiper 구조_page-0001.jpg]]
+![[swiper 구조.jpg]]
 
 
 slide (div)요소 안에 content가 있어야 함
