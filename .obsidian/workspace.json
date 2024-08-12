@@ -4,15 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "f9f91dcd8b1e64b0",
+        "id": "6b7240ed26dc8251",
         "type": "tabs",
         "children": [
           {
-            "id": "9dcf941a76279a12",
+            "id": "cd74224c5538f113",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.6.7"
+              }
             }
           }
         ]
@@ -44,7 +46,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "path:\"frontEnd/\" ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -138,9 +140,8 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9dcf941a76279a12",
+  "active": "cd74224c5538f113",
   "lastOpenFiles": [
-    "JS/swiper-dbslider.zip",
     "JS/swiper-dbslider/slide01.html",
     "JS/swiper-dbslider/images/visual3.png",
     "JS/swiper-dbslider/images/visual2.png",
@@ -149,42 +150,43 @@
     "JS/swiper-dbslider/images/icon_visual_symbol_lg.png",
     "JS/swiper-dbslider/images",
     "JS/swiper-dbslider",
-    "JS/swiper-dbslider.egg",
-    "JS/14.swiper/01.swiper.html",
-    "JS/14.swiper",
-    "JS/cdplayer/image/iu_1.jpg",
+    "JS/cdplayer/index.html",
     "JS/cdplayer/image/링크.txt",
     "JS/cdplayer/image/iu_5.jpg",
     "JS/cdplayer/image/iu_4.jpg",
     "JS/cdplayer/image/iu_3.jpg",
     "JS/cdplayer/image/iu_2.jpg",
-    "JS/cdplayer/index.html",
+    "JS/cdplayer/image/iu_1.jpg",
     "JS/cdplayer/image",
     "JS/cdplayer/common.css",
-    "conflict-files-obsidian-git.md",
+    "JS/cdplayer",
+    "JS/14.swiper/01.swiper.html",
+    "JS/14.swiper/swiper 구조.pdf",
+    "JS/14.swiper",
     "Output/KUSD_S3/node_modules/send/node_modules/ms/readme.md",
     "Output/KUSD_S3/node_modules/send/node_modules/ms/license.md",
-    "Output/KUSD_S3/node_modules/utils-merge/README.md",
     "Output/KUSD_S3/node_modules/vary/README.md",
     "Output/KUSD_S3/node_modules/vary/HISTORY.md",
+    "Output/KUSD_S3/node_modules/utils-merge/README.md",
     "Output/KUSD_S3/node_modules/unpipe/README.md",
     "Output/KUSD_S3/node_modules/unpipe/HISTORY.md",
     "Output/KUSD_S3/node_modules/type-is/README.md",
+    "Output/KUSD_S3/node_modules/toidentifier/README.md",
     "Output/KUSD_S3/node_modules/type-is/HISTORY.md",
+    "Output/KUSD_S3/node_modules/toidentifier/HISTORY.md",
     "Output/KUSD_S3/node_modules/statuses/README.md",
     "Output/KUSD_S3/node_modules/statuses/HISTORY.md",
     "Output/KUSD_S3/node_modules/side-channel/README.md",
     "Output/KUSD_S3/node_modules/side-channel/CHANGELOG.md",
-    "Output/KUSD_S3/node_modules/toidentifier/README.md",
-    "Output/KUSD_S3/node_modules/toidentifier/HISTORY.md",
-    "Output/KUSD_S3/node_modules/set-function-length/README.md",
-    "Output/KUSD_S3/node_modules/send/SECURITY.md",
-    "Output/KUSD_S3/node_modules/set-function-length/CHANGELOG.md",
-    "Output/KUSD_S3/node_modules/send/README.md",
-    "Output/KUSD_S3/node_modules/send/HISTORY.md",
     "Output/KUSD_S3/node_modules/setprototypeof/README.md",
+    "Output/KUSD_S3/node_modules/set-function-length/README.md",
+    "Output/KUSD_S3/node_modules/set-function-length/CHANGELOG.md",
     "Output/KUSD_S3/node_modules/serve-static/README.md",
     "Output/KUSD_S3/node_modules/serve-static/HISTORY.md",
-    "Output/KUSD_S3/node_modules/safer-buffer/Readme.md"
+    "Output/KUSD_S3/node_modules/send/README.md",
+    "Output/KUSD_S3/node_modules/send/SECURITY.md",
+    "Output/KUSD_S3/node_modules/send/HISTORY.md",
+    "Output/KUSD_S3/node_modules/safer-buffer/Readme.md",
+    "Output/KUSD_S3/node_modules/safer-buffer/Porting-Buffer.md"
   ]
 }
