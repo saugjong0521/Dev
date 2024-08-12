@@ -56,7 +56,8 @@
                         console.log(el) // bullet으로 만듬 -> 없을 시 일반 텍스트가 됨
                         return `<div class="${el}"><span class="indexNum">0${idx+1}</span><span>${bullet[idx]}</span></div>`
                     }
-                }
+                },
+                allowTouchMove: true,
 
             })
         }
