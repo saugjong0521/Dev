@@ -20,6 +20,9 @@
                 'background-color': 'pink'
             })
 
+            let item4 = $('.parents').children('.child');
+            console.log(item4)
+
             /*
             메소드 문법
             매개변수를 사용하지 않는 유형 = $('선택자').메소드명();
@@ -46,7 +49,7 @@
             $('선택자').next() //선택자 기준 다음 요소
 
             하위 요소 선택자
-            
+            .children() // 선택자 기준 자식요소 '까지' 선택
 
             */
 
@@ -71,6 +74,12 @@
         <li>item</li>
         <li>item</li>
     </ul>
+
+    <div class="parents">
+        <div class="parent">
+            <div class="child">child</div>
+        </div>
+    </div>
 
 </body>
 
