@@ -11,13 +11,24 @@
             "id": "cd74224c5538f113",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "pdf",
               "state": {
-                "currentVersion": "1.6.7"
+                "file": "JS/14.swiper/swiper 구조.pdf"
+              }
+            }
+          },
+          {
+            "id": "7b446679d3ce6c91",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "JS/14.swiper/swiper 구조.pdf"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -83,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "JS/14.swiper/swiper 구조.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,6 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "JS/14.swiper/swiper 구조.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -120,7 +133,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "JS/14.swiper/swiper 구조.pdf"
+              }
             }
           }
         ]
@@ -140,8 +155,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "cd74224c5538f113",
+  "active": "7b446679d3ce6c91",
   "lastOpenFiles": [
+    "JS/14.swiper/Untitled.md",
+    "swiper 구조.pdf",
+    "JS/14.swiper/swiper 구조.pdf",
     "JS/15.jQurey/00.basic.html",
     "JS/15.jQurey",
     "JS/swiper-dbslider 02/images2/image04.jpg",
@@ -160,9 +178,6 @@
     "JS/swiper-dbslider/images/icon_visual_symbol_lg_02.png",
     "JS/swiper-dbslider/images",
     "JS/swiper-dbslider",
-    "JS/cdplayer/index.html",
-    "JS/cdplayer/image/링크.txt",
-    "JS/cdplayer/image",
     "Output/KUSD_S3/node_modules/send/node_modules/ms/readme.md",
     "Output/KUSD_S3/node_modules/send/node_modules/ms/license.md",
     "Output/KUSD_S3/node_modules/vary/README.md",
@@ -186,7 +201,6 @@
     "Output/KUSD_S3/node_modules/send/README.md",
     "Output/KUSD_S3/node_modules/send/SECURITY.md",
     "Output/KUSD_S3/node_modules/send/HISTORY.md",
-    "Output/KUSD_S3/node_modules/safer-buffer/Readme.md",
-    "Output/KUSD_S3/node_modules/safer-buffer/Porting-Buffer.md"
+    "Output/KUSD_S3/node_modules/safer-buffer/Readme.md"
   ]
 }
