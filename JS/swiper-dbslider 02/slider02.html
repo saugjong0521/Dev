@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,16 +9,17 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
 
-        body,html{
+        body,
+        html {
             overflow: hidden;
         }
 
-        .slider{
+        .slider {
             width: 1600px;
             height: 600px;
             margin: 100px auto;
@@ -25,29 +27,32 @@
             left: 30%;
             overflow: hidden;
         }
-        .item{
+
+        .item {
             background: gray;
             overflow: hidden;
         }
-        .item img{
+
+        .item img {
             display: block;
             object-fit: cover;
             width: 100%;
         }
-        .item01 img{
-            width: 100%;
-            height: 800px!important;
+
+        .item01 img {
+            object-fit:fill!important;
         }
 
-        .swiper-pagination{
-            left: 400px!important;
-            top: 250px!important;
-            width: 300px!important;
+        .swiper-pagination {
+            left: 400px !important;
+            top: 250px !important;
+            width: 300px !important;
             display: flex;
             flex-direction: column;
             gap: 20px;
         }
-        .swiper-pagination-bullet{
+
+        .swiper-pagination-bullet {
             width: 100%;
             height: 70px;
             background: transparent;
@@ -61,8 +66,8 @@
             text-align: left;
         }
 
-        .swiper-pagination-bullet:after{
-            content:"";
+        .swiper-pagination-bullet:after {
+            content: "";
             width: 500px;
             height: 5px;
             background: cyan;
@@ -72,12 +77,13 @@
             position: absolute;
             opacity: 0;
         }
-        .swiper-pagination-bullet-active:after{
+
+        .swiper-pagination-bullet-active:after {
             opacity: 1;
             left: 0px;
         }
 
-        .indexNum{
+        .indexNum {
             font-size: 30px;
             font-weight: bold;
             margin-right: 12px;
@@ -86,7 +92,7 @@
 
         /* box event */
         .slider .item a:after,
-        .slider .item a:before{
+        .slider .item a:before {
             content: "";
             width: 100%;
             height: 5px;
@@ -95,16 +101,19 @@
             transition: 500ms;
             z-index: 99;
         }
-        .slider .item a:after{
+
+        .slider .item a:after {
             top: 0px;
             left: 0px;
         }
-        .slider .item a:before{
+
+        .slider .item a:before {
             left: 0px;
             bottom: 0px;
         }
+
         .slider .item:after,
-        .slider .item:before{
+        .slider .item:before {
             content: "";
             width: 5px;
             height: 100%;
@@ -113,45 +122,46 @@
             transition: 500ms;
             z-index: 99;
         }
-        .slider .item:before{
+
+        .slider .item:before {
             left: 0px;
             top: 0px;
         }
-        .slider .item:after{
+
+        .slider .item:after {
             right: 0px;
             top: 0px;
         }
-
-
     </style>
 
     <script>
-        let bullet = ['충남내포신도시2차 대방 엘리움 더 센트럴(RH5-1BL)', '부산에코델타시티1차(31BL)','화성동탄5차 문화복합(18BL)', '동탄2신도시 동탄역 대방 엘리움 더 시그니처(C18BL)'];
+        let bullet = ['충남내포신도시2차 대방 엘리움 더 센트럴(RH5-1BL)', '부산에코델타시티1차(31BL)', '화성동탄5차 문화복합(18BL)', '동탄2신도시 동탄역 대방 엘리움 더 시그니처(C18BL)'];
 
 
         window.onload = () => {
-            const slider = new Swiper ('.slider',{
+            const slider = new Swiper('.slider', {
                 slidesPerView: 2,
                 spaceBetween: 40,
                 autoHeight: true, // item들의 높이값들이 서로 다를때, 부모의 높이가 아닌 아이템마다 가진 객체들의 높이값으로 대체 (넘어갈 경우에는 부모의 높이로 대체)
                 loop: true,
                 speed: 1500,
-                pagination:{
+                pagination: {
                     el: '.swiper-pagination',
                     clickable: true,
-                    renderBullet: function(idx, el){
+                    renderBullet: function (idx, el) {
                         console.log(el) // bullet으로 만듬 -> 없을 시 일반 텍스트가 됨
-                        return `<div class="${el}"><span class="indexNum">0${idx+1}</span><span>${bullet[idx]}</span></div>`
+                        return `<div class="${el}"><span class="indexNum">0${idx + 1}</span><span>${bullet[idx]}</span></div>`
                     }
                 },
                 allowTouchMove: true,
 
             })
         }
-        
+
     </script>
-    
+
 </head>
+
 <body>
     <div class="swiper-container slider">
         <div class="swiper-wrapper">
@@ -187,8 +197,9 @@
                 </a>
             </div><!--slide-->
         </div><!--wrapper-->
-        
+
     </div><!--container-->
     <div class="swiper-pagination"></div>
 </body>
+
 </html>
