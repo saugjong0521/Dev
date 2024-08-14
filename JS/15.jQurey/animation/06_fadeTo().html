@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,26 +8,30 @@
   <title>fadeTo()</title>
 
   <style>
-  
-  #wrap{
-    width:220px; height:220px; position:absolute; left:50%; margin-left:-110px; top:200px;
-  }
-  
-  #imgWrap{
-			border:1px #000000 solid;
-			width:220px;
-			height:220px;		
-			text-align:center;
-      margin-bottom:20px;
-      box-sizing:border-box; overflow:hidden;       
-					
-	}
-  #navi{
-    width:100%; text-align:center; 
-  }
-  
-  
-  
+    #wrap {
+      width: 220px;
+      height: 220px;
+      position: absolute;
+      left: 50%;
+      margin-left: -110px;
+      top: 200px;
+    }
+
+    #imgWrap {
+      border: 1px #000000 solid;
+      width: 220px;
+      height: 220px;
+      text-align: center;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+      overflow: hidden;
+
+    }
+
+    #navi {
+      width: 100%;
+      text-align: center;
+    }
   </style>
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
@@ -34,23 +39,42 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
   <!--jQuery-ui 소스삽입 (aniamtion 기능, 다양한 ui component)  cdnjs 플러그인 사용 -->
 
-  
+  <script>
+    /*
+    fadeTo: 투명도만 조절해주는 이벤트
+    fadeTo(시간, alpha(투명도), 콜백함수)
+    알파값은 0 ~ 1 사이의 값
+    fade와 차이점은 display:none의 적용 유무
+    */
+    $(document).ready(function () {
+
+      $('#hide_btn').on('click', function () {
+        $('#imgWrap').fadeTo(1000,0)
+      })
+
+
+
+    })
+
+  </script>
 
 
 </head>
+
 <body>
 
   <div id="wrap">
     <div id="imgWrap">
       <img id="img1" src="images/img1.jpg">
     </div>
-    
+
     <div id="navi">
       <button id="show_btn">show</button>
-      <button id="hide_btn">hide</button>    
+      <button id="hide_btn">hide</button>
     </div>
 
   </div>
-  
+
 </body>
+
 </html>
