@@ -55,7 +55,8 @@
                 list.after(four)
                 list.before(four) // 복제된 객체도 dom에서는 한번만 사용 가능하다.
 
-                list.empty()
+                list.empty() // list객체 내의 모든 하위 요소 삭제 (ul요소는 유지)
+                list.remove() // ul요소도 삭제
 
         })
 
