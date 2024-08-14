@@ -72,7 +72,7 @@
       function imgMoving(){
         $('#img_wrap').animate({'left': endX, 'opacity': 0},500, function(){
 
-          $('#img_wrap').css({'left':0, 'opacity':1})
+          $('#img_wrap').animate({'left':0, 'opacity':1},0)
         })
       }
       
