@@ -32,7 +32,6 @@
             상황에 따라 편리한 방법을 선택해서 사용하면 된다.
 
 
-
             .clone() : 선택된 객체를 복제
             .remove() : 선택된 객체를 삭제
             .empty() : 선택된 객체의 하위요소를 삭제
@@ -44,8 +43,9 @@
                 let list = $('.list')
 
                 list.append(item)
-                list.prepend(item)
+                list.prepend(item)  // 변수로 생성된 요소는 dom에 한번만 추가되며, 마지막으로 사용된 내용이 반영된다.(재사용이 불가능) -> id의 중복 방지장치
 
+                list.before(item)
 
         })
 
