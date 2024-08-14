@@ -29,7 +29,6 @@
       $('#header_wrap').on('mouseleave', outMenu);
 
       function onMenu() {
-        bg.stop();
 
         bg.slideDown(500, function () {
           subMenu.slideDown(0)
@@ -37,7 +36,6 @@
       }
 
       function outMenu(){
-        bg.stop();
 
         bg.slideUp(500)
         subMenu.hide()
