@@ -43,17 +43,19 @@
                 let two = $('<li class="item">hi</li>')
                 let list = $('.list')
 
-                let three = list.children().eq(1); // = list.children().first().next()
-                let four = list.children().eq(1).clone()
-                list.after(four)
-
-                console.log(three)
-
                 list.append(one)
                 list.prepend(one)  // 변수로 생성된 요소는 dom에 한번만 추가되며, 마지막으로 사용된 내용이 반영된다.(재사용이 불가능) -> id의 중복 방지장치
 
                 list.before(two)
                 list.after(two)
+
+                let three = list.children().eq(1); // = list.children().first().next()
+                console.log(three)
+                let four = list.children().eq(1).clone()
+                list.after(four)
+                list.before(four) // 복제된 객체도 dom에서는 한번만 사용 가능하다.
+
+                list.empty()
 
         })
 
