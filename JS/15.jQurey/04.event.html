@@ -22,8 +22,9 @@
             width: 200px;
             height: 200px;
             position: absolute;
-            top: 0%;
-            left: 0%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             background: pink;
         }
 
@@ -51,13 +52,12 @@
             mouseleave
             */
 
-            $('.parent').on(mouseenter, function () {
+            $('.parent').on('mouseenter', function () {
                 $(this).addClass('on')
                 // $(this) : 이벤트를 발생시킨 요소를 참조
                 // addClasee(클래스명) : 해당 클래스명을 요소에 추가 (javascript의 classList.add()와 동일)
             })
-
-            $('.parent').on(mouseleave, function () {
+            $('.parent').on('mouseleave', function () {
                 $(this).addClass('child')
             })
 
