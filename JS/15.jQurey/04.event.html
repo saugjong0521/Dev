@@ -51,14 +51,14 @@
             mouseleave
             */
 
-            $('.parent').mouseenter(function () {
+            $('.parent').on(mouseenter, function () {
                 $(this).addClass('on')
                 // $(this) : 이벤트를 발생시킨 요소를 참조
                 // addClasee(클래스명) : 해당 클래스명을 요소에 추가 (javascript의 classList.add()와 동일)
             })
 
-            $('.parent').mouseleave(function () {
-                $(this).removeClass('on')
+            $('.parent').on(mouseleave, function () {
+                $(this).addClass('child')
             })
 
         })
