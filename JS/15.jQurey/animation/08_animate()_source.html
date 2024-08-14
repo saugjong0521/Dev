@@ -67,10 +67,10 @@
     $(document).ready(function(){
       $('#start_btn').on('click', imgMoving);
 
-      let endX = $('#paned').innerWidth()
+      let endX = $('#panel').innerWidth() - $('#img_wrap').innerWidth()
 
       function imgMoving(){
-        $('#img_wrap').animate({endX},500)
+        $('#img_wrap').animate({'left': endX},500)
       }
     })
 
