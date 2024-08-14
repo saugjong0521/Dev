@@ -26,15 +26,34 @@
       bg.hide()
 
       mainMenu.on('mouseenter', onMenu);
-      mainMenu.on('mouseleave', outMenu);
+      $('#header_wrap').on('mouseleave', outMenu);
 
       function onMenu() {
+        bg.stop();
+
         bg.slideDown(500, function () {
           subMenu.slideDown(0)
         })
       }
 
-      function outMenu
+      function outMenu(){
+        bg.stop();
+
+        bg.slideUp(500)
+        subMenu.hide()
+      }
+      /*
+      시간이 들어가는 이벤트의 경우, 이벤트가 실행되는 동안 다른 이벤트가 개입하게 되면 예약을 하게되는 경우가
+      생기기 때문에, 행동이 끝나도 이벤트는 계속 실행하게 된다.
+      이벤트가 실행될때 다른 이벤트가 들어올때 행동을 조절해야 한다.
+
+      선택자.stop().애니메이션 모션
+      이벤트가 실행될때 다른 이벤트가 들어오게 되면 기존의 이벤트를 즉시 취소하고 다른 이벤트를 바로 실행한다.
+
+      :not(:animated) 이벤트가 실행되지 않는 대상에게만 이벤트를 적용하는 구문
+      이벤트가 실행되는 동안
+      
+      */
 
     })
   </script>
