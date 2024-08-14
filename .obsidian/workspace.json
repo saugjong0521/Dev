@@ -21,11 +21,9 @@
             "id": "7b446679d3ce6c91",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "JS/14.swiper/Swiper 구조.md",
-                "mode": "source",
-                "source": false
+                "file": "JS/14.swiper/swiper 구조.jpg"
               }
             }
           }
@@ -96,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JS/14.swiper/Swiper 구조.md",
+                "file": "JS/14.swiper/swiper 구조.jpg",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JS/14.swiper/Swiper 구조.md",
+                "file": "JS/14.swiper/swiper 구조.jpg",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JS/14.swiper/Swiper 구조.md"
+                "file": "JS/14.swiper/swiper 구조.jpg"
               }
             }
           }
@@ -159,13 +157,13 @@
   },
   "active": "7b446679d3ce6c91",
   "lastOpenFiles": [
+    "JS/14.swiper/Swiper 구조.md",
     "JS/14.swiper/swiper 구조.jpg",
     "swiper 구조.jpg",
     "JS/15.jQurey/02.attribute.html",
     "JS/15.jQurey/01.selector.html",
     "swiper 구조_page-0001.jpg",
     "JS/14.swiper/swiper 구조.pdf",
-    "JS/14.swiper/Swiper 구조.md",
     "swiper 구조.pdf",
     "JS/15.jQurey/00.basic.html",
     "JS/15.jQurey",
@@ -180,7 +178,6 @@
     "JS/swiper-dbslider 02",
     "JS/swiper-dbslider/slide01.html",
     "JS/swiper-dbslider/images/visual3.png",
-    "JS/swiper-dbslider/images/visual2.png",
     "Output/KUSD_S3/node_modules/send/node_modules/ms/readme.md",
     "Output/KUSD_S3/node_modules/send/node_modules/ms/license.md",
     "Output/KUSD_S3/node_modules/vary/README.md",
