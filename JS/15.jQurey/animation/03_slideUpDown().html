@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>slideUp()_slideDown()</title>
+
+  <style>
+  
+  #wrap{
+    width:220px; height:220px; position:absolute; left:50%; margin-left:-110px; top:200px;
+  }
+  
+  #img_wrap{
+			border:1px #000000 solid;
+			width:220px;
+			height:220px;		
+			text-align:center;
+      margin-bottom:20px;
+      box-sizing:border-box; overflow:hidden;       
+					
+	}
+  #navi{
+    width:100%; text-align:center; 
+  }
+  
+  
+  
+  </style>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
+  <!--jQuery 소스삽입  cdnjs 플러그인 사용 -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+  <!--jQuery-ui 소스삽입 (aniamtion 기능, 다양한 ui component)  cdnjs 플러그인 사용 -->
+
+  <script>  
+  
+  	
+  $(document).ready(function(){
+    
+    var $imgWrap=$("#img_wrap");						
+    
+    $("#show_btn").on("click", onImgSlideDown);
+    $("#hide_btn").on("click", onImgSlideUp);
+    $("#toggle_btn").on("click", onImgSlideToggle);
+
+    
+    function onImgSlideDown(){
+            
+      $imgWrap.slideDown(3000,"easeOutCubic",function(){  // 에니메이션시간, "ease효과", 에니메이션 끝나면 실행할 함수 (콜백함수) - 없으면 생략가능 ) 
+          alert("slideDown 완료");
+      });		
+    }
+    
+    function onImgSlideUp(){
+            
+      $imgWrap.slideUp(3000,"easeOutCubic",function(){
+          alert("slideUp 완료");
+      });
+      
+    }
+    
+    function onImgSlideToggle(){
+            
+      $imgWrap.slideToggle(3000,"easeOutCubic",function(){
+          alert("slideToggle 완료");
+      });
+      
+    }	    
+   
+    
+  });  
+  
+  
+  </script>
+
+
+</head>
+<body>
+
+  <div id="wrap">
+    <div id="img_wrap">
+      <img id="img1" src="images/img1.jpg">
+    </div>
+    
+    <div id="navi">
+      <button id="show_btn">show</button>
+      <button id="hide_btn">hide</button>
+      <button id="toggle_btn">toggle</button>
+    </div>
+
+  </div>
+  
+</body>
+</html>

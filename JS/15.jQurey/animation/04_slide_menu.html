@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>slide_menu</title>
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">  
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
+  <!--jQuery 소스삽입  cdnjs 플러그인 사용 -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+  <!--jQuery-ui 소스삽입 (aniamtion 기능, 다양한 ui component)  cdnjs 플러그인 사용 -->
+
+  <script>      
+    
+    $(document).ready(function() {
+      
+      var $mainMenu=$("#mainmenu_list").children(); //  메인메뉴설정
+      var $subMenu=$(".submenu_list"); // 모든서브메뉴 설정 
+      var $subBg=$("#sub_bg"); // 서브배경설정 
+      
+      $subMenu.hide(); // 모든 서브메뉴 안보이게 
+      $subBg.hide()// 서브배경 안보이게 
+
+
+      $mainMenu.on("mouseenter", onMenuOver);
+      $("#header_wrap").on("mouseleave", onMenuOut); 
+      
+
+      function onMenuOver(){        
+        
+        $("#sub_bg:not(:animated)").slideDown(500,"easeOutCubic",function(){
+          //마우스를 빨리움직이면 에니메이션 충돌해결 >:not(:animated) 추가 	
+          $subMenu.show()
+        })        
+
+      }
+      function onMenuOut(){
+        $subMenu.hide(); // 모든 서브메뉴를 안보이게 설정 
+        $("#sub_bg:not(:animated)").slideUp(500,"easeOutCubic")
+        //마우스를 빨리움직이면 에니메이션 충돌해결 >:not(:animated) 추가 	
+		
+      }
+
+      
+    });
+    
+  </script>
+
+
+</head>
+<body>
+
+    <div id="header_wrap">
+        <div id="header_inner">
+          <h1 id="logo">
+            <a href="index.php"><img src="images/logo.gif" alt="글렘쉘"></a>
+          </h1>
+          
+          <h2 class="hidden">메인메뉴</h2>
+          <ul id="mainmenu_list">
+            <li><a href="brand.php"><img src="images/mainmenu_01.gif" alt="브랜드소개"></a>
+              <ul class="submenu_list">
+                <li><a href="#">BRAND</a></li>
+                <li><a href="#">DESIGN</a></li>
+                <li><a href="#">BI</a></li>
+              </ul>
+            
+            </li>
+            <li><a href="#"><img src="images/mainmenu_02.gif" alt="컬렉션"></a>
+              <ul class="submenu_list">
+                <li><a href="#">CRYSTAL</a></li>
+                <li><a href="#">NANO</a></li>
+                <li><a href="#">MAGIC</a></li>
+                <li><a href="#">PUZZLE</a></li>
+              </ul>        
+            </li>
+            <li><a href="#"><img src="images/mainmenu_03.gif" alt="매장안내"></a>
+              <ul class="submenu_list">
+                <li><a href="#">ON-LINE</a></li>
+                <li><a href="#">OFF-LINE</a></li>
+                <li><a href="#">B2B</a></li>            
+              </ul>   
+            
+            </li>
+            <li><a href="#"><img src="images/mainmenu_04.gif" alt="리뷰"></a>
+              <ul class="submenu_list">
+                <li><a href="#">EVENT</a></li>
+                <li><a href="#">NOTICE</a></li>
+                <li><a href="#">NEWS</a></li>
+                <li><a href="#">INTERVIEW</a></li>             
+              </ul>       
+            </li>
+            <li><a href="#"><img src="images/mainmenu_05.gif" alt="고객센터"></a>
+              <ul class="submenu_list">
+                <li><a href="#">INSTALL</a></li>
+                <li><a href="#">POWER REVIEW</a></li>
+                <li><a href="#">Q&A</a></li>
+                <li><a href="#">FAQ</a></li>             
+              </ul>       
+            </li>
+          </ul>
+          <h2 id="bestmenu"><a href="#"><img src="images/best_btn.gif" alt="주간베스트상품"></a></h2>
+        </div> 
+    
+       <div id="sub_bg"></div> <!--서브메뉴배경-->
+    
+      </div>
+  
+</body>
+</html>

@@ -1,0 +1,182 @@
+/*기본설정시작*/
+.hidden{
+  width:1px; height:1px; font-size:0px; line-height:0px; position:absolute;
+}
+
+ul.skipmenu_list li a:focus{
+  width:100%; height:30px; font-size:12px; line-height:30px; background:black;
+  color:white; text-align:center; text-decoration:none;
+  z-index:999999999999999999;  
+}
+
+/*기본설정끝*/
+
+/*상단영역시작*/
+
+div{
+  box-sizing:border-box;
+}
+
+div#header_wrap{
+  width:100%; height:114px; float:left; 
+  background:url("../images/header_bg.gif") repeat-x; position:relative; left:0px; top:0px; z-index:10;
+}
+div#header_inner{
+  width:980px; height:114px; margin:0px auto; 
+  position:relative; left:0px; top:0px; z-index:9; 
+}
+h1#logo{
+  width:127px; height:50px; position:absolute; left:0px; top:45px;
+}
+ul#topmenu_list{
+  width:220px; height:10px; position:absolute; right:0px; top:10px;
+  
+}
+ul#topmenu_list li{
+  float:left; margin-right:10px; background:url("../images/topmenu_bar.gif") no-repeat ;
+  padding-left:10px;  
+}
+ul#topmenu_list li:first-child{
+  background:none; padding-left:0px; 
+}
+ul#topmenu_list li:last-child{
+  margin-right:0px; 
+}
+ul#topmenu_list li img{
+  display:block;
+}
+ul#mainmenu_list{
+  width:600px; height:12px; position:absolute; left:235px; top:70px; 
+  
+}
+ul#mainmenu_list>li{
+  width:120px; float:left; height:35px; position:relative; left:0px; top:0px;  box-sizing:border-box; 
+}
+ul#mainmenu_list>li:nth-child(2){
+  text-indent:0px; 
+}
+ul#mainmenu_list>li:nth-child(3){
+  text-indent:8px; 
+}
+ul.submenu_list{
+  width:100px; height:100px; position:absolute; left:0px; top:30px; padding-top:20px;
+}
+
+ul.submenu_list li{
+  width:100%; height:25px; line-height:25px; 
+}
+
+ul.submenu_list li a{
+  font:normal 12px "verdana"; color:gray; text-decoration:none;
+}
+
+h2#bestmenu{
+  width:129px; height:24px; position:absolute; right:0px; top:65px; 
+}
+
+div#sub_bg{
+  width:100%; height:160px; position:absolute; left:0px; top:114px; background:black; opacity:0.9;
+}
+
+
+/*상단영역끝*/
+/*비쥬얼영역시작*/
+div#visual_wrap{
+  width:100%; height:469px; float:left; position:relative; left:0px; top:0px;
+  overflow:hidden; 
+}
+ul#visual_list{
+  width:2940px; height:469px; position:absolute; left:50%; margin-left:-1470px;  
+}
+ul#visual_list li{
+  width:980px; height:469px; float:left; 
+}
+ul#visual_list li img{
+  display:block;
+}
+div#visual_inner{
+  width:980px; height:469px; position:absolute; left:50%; margin-left:-490px; 
+    
+}
+a#prev_btn{
+  position:absolute; left:0px; top:195px; 
+}
+a#next_btn{
+  position:absolute; right:0px; top:195px; 
+}
+
+
+
+a#play_btn{
+  position:absolute; right:250px; bottom:15px; 
+}
+a#stop_btn{
+  position:absolute; right:220px; bottom:15px; 
+}
+
+a#play_btn img, a#stop_btn img{
+  width:22px; 
+}
+
+
+/*비쥬얼영역끝*/
+/*컨텐츠영역시작*/
+div#contents_wrap{
+  width:100%; min-height:500px; float:left; background:#ececec; 
+}
+div#contents_inner{
+  width:980px; min-height:500px; margin:0px auto; padding-top:70px;   
+}
+ul#contents_list{
+  width:980px; height:150px; float:left;  
+}
+ul#contents_list li{
+  width:233px; height:150px; float:left;
+  margin-right:16px; position:relative; left:0px; top:0px; 
+}
+ul#contents_list li:last-child{
+  margin-right:0px; 
+}
+ul#contents_list li p{
+  text-align:center; margin-bottom:10px; position:relative; left:0px; top:0px; 
+}
+
+div.contents_bg{
+  width:233px; height:100px; position:absolute; left:0px; top:20px; background:rgba(0,0,0,0.8);
+  text-align:center; color:#eeeeee; line-height:100px; 
+}
+
+
+/*컨텐츠영역끝*/
+/*하단영역시작*/
+div#footer_wrap{
+  width:100%; height:50px; float:left; background:#2c2c2c;
+  clear:both; 
+}
+div#footer_inner{
+  width:980px; height:50px; margin:0px auto; 
+  position:relative; left:0px; top:0px; 
+}
+p#footer_copyright{
+  width:250px; height:10px; position:absolute; left:0px; top:20px; 
+}
+ul#footermenu_list{
+  width:225px; height:10px; position:absolute; right:0px; top:20px;  
+}
+ul#footermenu_list li{
+  float:left; margin-right:10px; background:url("../images/footer_menu_bar.gif") no-repeat;
+  padding-left:10px;  
+}
+ul#footermenu_list li img{
+  display:block; 
+}
+ul#footermenu_list li:first-child{
+  background:none; padding-left:0px; 
+}
+ul#footermenu_list li:last-child{
+  margin-right:0px; 
+}
+/*하단영역끝*/
+
+
+

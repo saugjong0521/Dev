@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>imgMoving</title>
+
+  <style>
+  
+    body{
+			background:url(images/index_back.gif);
+		}
+		
+		div#wrap{
+			width:400px;
+      height:333px;
+      position:absolute; left:50%; margin-left:-200px; top:200px; 
+			overflow:hidden;			
+			
+		}
+		
+		p#img_wrap{
+			width:800px;
+			height:333px;
+			position:absolute; left:0px; top:0px; 
+		}
+  
+  
+  
+  </style>
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
+  <!--jQuery 소스삽입  cdnjs 플러그인 사용 -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+  <!--jQuery-ui 소스삽입 (aniamtion 기능, 다양한 ui component)  cdnjs 플러그인 사용 -->
+
+  <script>    
+
+   /* 
+        animate({ CSS속성1:값1, CSS속성2:값2....  }, 시간, 효과 )  여러가지 CSS 속성을 한꺼번에 에니메이션을 줄수있는 장점 			
+      
+        주의) 에니메이션 중간에 또 에니메이션 명령이 적용되면 충돌됨    
+        
+          :not(:animated) 에니메이션끝나면 실행 (반응느림)
+          stop() 실행중인 에니메니션을 멈추고 바로실행 (반응빠름)       
+          
+        주의) position 좌표를 이용해서 에니메이션을 할때는 초기 CSS속성값에서 position 값이 설정되어야한다.
+          
+    */
+	
+		
+    $(document).ready(function() {
+        
+        var $imgWrap=$("#img_wrap")
+        $("#img1").on("click", onImgMovingLeft);
+        $("#img2").on("click", onImgMovingRight);		
+
+      // $imgWrap 은 overflow:hidden 적용하고 그안에 p테그를 움직여줌 
+       function onImgMovingLeft(){ 
+         $imgWrap.animate({"left":-$imgWrap.innerWidth()/2},500,"easeOutCubic");
+         // 이미지 하나의 크기만큼 왼쪽(-)으로 움직여줌 					
+       }
+       
+       function onImgMovingRight(){
+         $imgWrap.animate({"left":0},500,"easeOutCubic");
+         // 다시 처음위치 0으로 움직여줌 				
+       }
+
+         
+    })
+    
+    
+  </script>
+
+
+</head>
+<body>
+
+    <div id="wrap">
+      <p id="img_wrap">
+        <img id="img1" src="images/shoes1.jpg" alt="" /><img id="img2" src="images/shoes2.jpg" alt=""  />
+      </p>
+    </div>
+  
+</body>
+</html>

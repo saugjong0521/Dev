@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>animate()</title>
+
+  <style>
+  
+    #wrap{
+      width:880px;
+      height:300px;
+      position:absolute; left:50%; margin-left:-440px; top:200px;      
+    }
+    
+    #panel{
+      width:100%; height:220px; 
+      border:1px #000000 solid; 		
+      margin-bottom:10px; 
+      position:absolute; left:0px; top:0px; 
+      
+    }
+		
+		#img_wrap{			
+			width:220px;
+			height:220px;						
+			position:absolute; left:0px; top:0px; 		
+    }	
+    
+    #start_btn{
+      position:absolute; bottom:20px; left:50%; margin-left:-20px; 
+    }
+  
+  
+  
+  </style>
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
+  <!--jQuery 소스삽입  cdnjs 플러그인 사용 -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+  <!--jQuery-ui 소스삽입 (aniamtion 기능, 다양한 ui component)  cdnjs 플러그인 사용 -->
+
+  <script>    
+
+   /* 
+        animate({ CSS속성1:값1, CSS속성2:값2....  }, 시간, 효과 )  여러가지 CSS 속성을 한꺼번에 에니메이션을 줄수있는 장점 			
+      
+        주의) 에니메이션 중간에 또 에니메이션 명령이 적용되면 충돌됨    
+        
+          :not(:animated) 에니메이션끝나면 실행 (반응느림)
+          stop() 실행중인 에니메니션을 멈추고 바로실행 (반응빠름)       
+          
+        주의) position 좌표를 이용해서 에니메이션을 할때는 초기 CSS속성값에서 position 값이 설정되어야한다.
+          
+    */
+	
+		$(document).ready(function() {
+           
+		  var $imgWrap=$("#img_wrap");      
+      var endX=$("#panel").innerWidth()-$imgWrap.outerWidth() 
+      // 이미지움직임이 끝나는 좌표 ( 전체 panel 가로크기 - imgWrap 크기  )      
+			
+      $("#start_btn").on("click", onImgMoving)	
+
+      function onImgMoving(){       
+              
+        $imgWrap.stop(); // 진행중인 에니메이션을 바로 멈춤 
+        $imgWrap.css({"left":0, "opacity":1}); // 에니메이션이 끝나기전에 버튼을 누르면  이미지를 초기값으로 돌린다음 에니메이션을 진행 
+        $imgWrap.animate({"left":endX, "opacity":0}, 1000, "easeOutCubic", function(){ // 이미지를 endX 까지 에니메이션 진행 
+          $imgWrap.css({"left":0, "opacity":1}); // 에니메이션이 끝나면 다시 초기좌표로 돌림 				
+        });        
+      
+      }	
+
+			
+    });
+    
+  </script>
+
+
+</head>
+<body>
+
+  <div id="wrap">
+
+    <div id="panel">
+
+      <div id="img_wrap"> 
+        <img id="img_1" src="images/img1.jpg">
+      </div>    
+
+    </div>
+
+    <button id="start_btn">시작</button>
+     
+  </div>
+  
+</body>
+</html>
