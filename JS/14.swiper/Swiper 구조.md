@@ -1,5 +1,5 @@
 ![[swiper 구조.jpg]]
-<img src="https://github.com/saugjong0521/Dev/blob/7377d9b5dfcd79f1c5c67c543c1f6753aded3b8d/swiper%20%EA%B5%AC%EC%A1%B0.jpg">
+<img src="https://github.com/saugjong0521/Dev/blob/eddc2cb73e9f46bccdbd6159747aaf2a8fbb5261/JS/14.swiper/swiper%20%EA%B5%AC%EC%A1%B0.jpg">
 
 slide (div)요소 안에 content가 있어야 함
 
