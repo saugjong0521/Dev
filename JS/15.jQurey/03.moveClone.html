@@ -43,7 +43,10 @@
                 let two = $('<li class="item">hi</li>')
                 let list = $('.list')
 
-                let three = list.children().eq(1);
+                let three = list.children().eq(1); // = list.children().first().next()
+                let four = list.children().eq(1).clone()
+                list.after(four)
+
                 console.log(three)
 
                 list.append(one)
