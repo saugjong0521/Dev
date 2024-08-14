@@ -15,7 +15,20 @@
   <!--jQuery-ui 소스삽입 (aniamtion 기능, 다양한 ui component)  cdnjs 플러그인 사용 -->
 
   <script>
-    $(document).ready(function)
+    $(document).ready(function(){
+      let mainMenu = $('#mainmenu_list li').children();
+
+      let bg = ('#sub_bg');
+      let subMenu = $('.submenu_list')
+      
+      mainMenu.on('mouseenter', onMenu);
+      
+      function onMenu(){
+        bg.slideDown(500)
+        subMenu.slideDown(500)
+      }
+
+    })
   </script>
 
 
