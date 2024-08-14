@@ -40,12 +40,14 @@
             $(document).ready(function(){
 
                 let item = $('<li class="item">hi</li>') //객체의 생성
+                let item2 = $('<li class="item">hi</li>')
                 let list = $('.list')
 
                 list.append(item)
                 list.prepend(item)  // 변수로 생성된 요소는 dom에 한번만 추가되며, 마지막으로 사용된 내용이 반영된다.(재사용이 불가능) -> id의 중복 방지장치
 
-                list.before(item)
+                list.before(item2)
+                list.after(item2)
 
         })
 
