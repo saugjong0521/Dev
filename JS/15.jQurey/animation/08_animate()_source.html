@@ -70,6 +70,7 @@
       let endX = $('#panel').innerWidth() - $('#img_wrap').innerWidth()
 
       function imgMoving(){
+        $('#img_wrap').css({'left':0, 'opacity':1}) // 애니메이션이 시작될 처음 위치 리셋(초기화)
         $('#img_wrap').stop();
         $('#img_wrap').animate({'left': endX, 'opacity': 0},500, function(){
 
