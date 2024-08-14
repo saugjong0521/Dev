@@ -34,6 +34,17 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
   <!--jQuery-ui 소스삽입 (aniamtion 기능, 다양한 ui component)  cdnjs 플러그인 사용 -->
 
+  <script>
+    $(document).ready(function(){
+      $('#hide_btn').on('click', function(){
+        $('img_wrap').slideUp()
+        // 상단을 기준으로 요소를 나타나거나 사라지게 하는 요소
+        // showHide와는 다르게 duration을 넣지 않아도 300ms의 기본속도를 가지고 있다.
+      })
+    })
+
+  </script>
+
   
 
 
