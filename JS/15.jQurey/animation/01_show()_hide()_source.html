@@ -51,6 +51,7 @@
     $(document).ready(function () {
       $('#hide_btn').on('click', onHide);
       $('#show_btn').on('click', onShow);
+      $('#toggle_btn').on('click', onToggle)
 
       function onHide() {
         $('#img_wrap').hide(1500, function () {
@@ -60,6 +61,11 @@
       function onShow() {
         $('#img_wrap').show(1500, function () {
           alert('show 완료')
+        })
+      }
+      function onToggle() {
+        $('#img_wrap').toggle(1500, function () {
+          alert('toggle 완료')
         })
       }
 
