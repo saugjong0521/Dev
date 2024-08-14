@@ -48,14 +48,14 @@
     시간은 메소드마다 적용되는 기준이 다르다.
     */
 
-    $(document).ready(function(){
-      $('#hide_btn').on('click',onHide);
+    $(document).ready(function () {
+      $('#hide_btn').on('click', onHide);
 
-      function onHide(){
-        $('#img_wrap').hide(1500)
-        alert('hide 완료')
+      function onHide() {
+        $('#img_wrap').hide(1500, function () {
+          alert('hide 완료')
+        })
       }
-
     })
 
   </script>
