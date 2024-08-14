@@ -18,10 +18,11 @@
     $(document).ready(function(){
       let mainMenu = $('#mainmenu_list li').children();
 
-      let bg = ('#sub_bg');
+      let bg = $('#sub_bg');
       let subMenu = $('.submenu_list')
       
       subMenu.slideUp(0)
+      bg.hide()
 
       mainMenu.on('mouseenter', onMenu);
       
