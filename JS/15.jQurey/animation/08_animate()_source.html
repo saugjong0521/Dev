@@ -70,8 +70,9 @@
       let endX = $('#panel').innerWidth() - $('#img_wrap').innerWidth()
 
       function imgMoving(){
+        $('#img_wrap').stop();
         $('#img_wrap').animate({'left': endX, 'opacity': 0},500, function(){
-
+          $('#img_wrap').stop();
           $('#img_wrap').css({'left':0, 'opacity':1})
         })
       }
