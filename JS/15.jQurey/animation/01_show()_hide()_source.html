@@ -50,12 +50,19 @@
 
     $(document).ready(function () {
       $('#hide_btn').on('click', onHide);
+      $('#show_btn').on('click', onShow);
 
       function onHide() {
         $('#img_wrap').hide(1500, function () {
           alert('hide 완료')
         })
       }
+      function onShow() {
+        $('#img_wrap').show(1500, function () {
+          alert('show 완료')
+        })
+      }
+
     })
 
   </script>
