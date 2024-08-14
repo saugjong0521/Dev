@@ -46,12 +46,18 @@
     선택자.애니메이션 메서드명(시간(ms), easing값, 콜백함수)
     콜백함수는 시간
     시간은 메소드마다 적용되는 기준이 다르다.
+
+
+    onHide: 시간동안 줄어들고 사라지게됨(display: none)
+    onShow: 시간동안 늘어나서 생김
+    onToggle: 보일 시, (display: none)으로 변경/ (display: none)일시 보임
+
     */
 
     $(document).ready(function () {
       $('#hide_btn').on('click', onHide);
       $('#show_btn').on('click', onShow);
-      $('#toggle_btn').on('click', onToggle)
+      $('#toggle_btn').on('click', onToggle);
 
       function onHide() {
         $('#img_wrap').hide(1500, function () {
