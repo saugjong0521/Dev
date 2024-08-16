@@ -20,8 +20,10 @@
             dot.on('click', itemActive);
 
 
-            function itemActive(){
-                itemNum = $(this).index()
+            function itemActive(i){
+                //itemNum = $(this).index()
+                let dot = this.dot
+                itemNum[i] = dot[i]
                 console.log(itemNum)
             }
 
