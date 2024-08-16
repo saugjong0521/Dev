@@ -98,20 +98,17 @@
 
 				currentStep += step;
 				console.log(currentStep)
-				ball.css({'left':currentStep})
-				if(currentStep >= endStep){
+				ball.css({ 'left': currentStep })
+				if (currentStep >= endStep) {
 					step = -5;
-				} else if (currentStep <= startStep){
+				} else if (currentStep <= startStep) {
 					step = 5;
 				}
 
-				function onStop(){
-					clearInterval(timer)
-				}
-
 			}
-
-
+			function onStop() {
+				clearInterval(timer);
+			}
 
 		})
 
