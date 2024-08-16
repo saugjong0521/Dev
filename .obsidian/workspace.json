@@ -4,31 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "6b7240ed26dc8251",
+        "id": "09e36e112afd050d",
         "type": "tabs",
         "children": [
           {
-            "id": "cd74224c5538f113",
+            "id": "8363ba2358212596",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.6.7"
-              }
-            }
-          },
-          {
-            "id": "7b446679d3ce6c91",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "JS/14.swiper/swiper 구조.jpg"
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -94,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JS/14.swiper/swiper 구조.jpg",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JS/14.swiper/swiper 구조.jpg",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "JS/14.swiper/swiper 구조.jpg"
-              }
+              "state": {}
             }
           }
         ]
@@ -155,8 +138,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7b446679d3ce6c91",
+  "active": "8363ba2358212596",
   "lastOpenFiles": [
+    "JS/14.swiper/swiper 구조.jpg",
     "JS/15.jQurey/cdplayer/image/링크.txt",
     "JS/15.jQurey/cdplayer/image/iu_5.jpg",
     "JS/15.jQurey/cdplayer/image/iu_4.jpg",
@@ -177,7 +161,6 @@
     "JS/cdplayer - 복사본/index.html",
     "JS/cdplayer - 복사본/common.css",
     "JS/cdplayer - 복사본",
-    "JS/15.jQurey/ballMoving/images",
     "JS/14.swiper/Swiper 구조.md",
     "Output/KUSD_S3/node_modules/send/node_modules/ms/readme.md",
     "Output/KUSD_S3/node_modules/send/node_modules/ms/license.md",
