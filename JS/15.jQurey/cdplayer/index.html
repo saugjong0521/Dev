@@ -62,6 +62,12 @@
             $('.prev').on('click',onPrev)
             function onPrev(){
                 
+                if(itemNum > 0){
+                    itemNum --;
+                } else {
+                    itemNum = itemSize -1;
+                }
+
                 /*
                 if (itemNum < itemSize -1){
                     itemNum--;
