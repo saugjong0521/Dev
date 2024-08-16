@@ -85,9 +85,12 @@
 			}
 
 			function ballMoving() {
-				while(startStep < 500){
+
 				startStep += step;
-			}
+				if(startStep = 500){
+					startStep -= step;
+				}
+
 				console.log(startStep)
 			}
 
