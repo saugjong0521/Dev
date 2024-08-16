@@ -30,7 +30,8 @@
 
 
             function itemActive(){
-                item.removeClass('active')
+                item.removeClass('active') // 모든 요소들을 리셋하기 때문에 index가 필요없다.
+                item.eq(itemNum).addClass('active')
             }
 
 
