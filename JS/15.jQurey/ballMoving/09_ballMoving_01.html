@@ -82,8 +82,10 @@
 		}
 
 		function ballMoving(){
-			startStep += step;
-			console.log(startStep)
+			
+			if(startStep < bar){
+				startStep += step;
+			}
 		}
 		
 
