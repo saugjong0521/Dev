@@ -15,9 +15,15 @@
 
             let item = $('.container').children('.item')
             let dot = $('dot-list').children('li')
-            let itemNu = 0;
+            let itemNum = 0;
 
-            
+            dot.on('click', itemActive);
+
+
+            function itemActive(){
+                itemNum = $(this).index()
+                console.log(itemNum)
+            }
 
 
         })
