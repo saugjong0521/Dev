@@ -36,7 +36,24 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
   <!--jQuery-ui 소스삽입 (aniamtion 기능, 다양한 ui component)  cdnjs 플러그인 사용 -->
 
-  
+
+  <script>
+    /*
+    img1과 img2에 각각 이벤트를 전달
+    img1을 클릭하게 되면, img_wrap의 위치값을 변경해서 img2가 보이도록 한다.
+    img2를 클릭하게 되면 img_wrap의 위치값을 변경해서 img1가 보이도록 한다.
+    */
+
+
+    $(document).ready(function(){
+
+      $('#img_wrap').animate({'left':'-400px'},500)
+
+    })
+
+
+  </script>
+
 
 </head>
 <body>
