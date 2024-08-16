@@ -87,11 +87,10 @@
 			function ballMoving() {
 
 				startStep += step;
-				if(startStep = 500){
-					startStep -= step;
-				}
+				
 
 				console.log(startStep)
+				ball.css({'left':startStep})
 			}
 
 
