@@ -1,107 +1,121 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>ballMoving1</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>ballMoving1</title>
 
-  <style>
-  
-  body{
-			font-size:9pt;		
+	<style>
+		body {
+			font-size: 9pt;
 		}
 
-    #wrap{
-      width:600px; height:400px; position:absolute; left:50%; margin-left:-300px; top:200px; 
-    }		
-		
-		#panel{
-			width:600px;
-			height:300px;
-			border:1px solid #999;
-			position:relative;
-      margin-bottom:30px; 
-		}
-		
-		#bar{
-			position:absolute;
-			left:50px;
-			top:190px;
-			width:500px;
-			height:20px;
-			z-index:10;
-			
-			border-top:dotted 1px #999;
-		}
-		
-		#ball{
-			position:absolute;
-			left:50px;
-			top:105px;
-			width:80px;
-			height:80px;
-			
-		}
-		
-		#nav{
-			text-align:center;
-			width:600px;
-		}
-  
-  
-  </style>
-
-
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js'></script>
-  <!--jQuery 소스삽입  cdnjs 플러그인 사용 -->
-
-
-  <script>
-	/*
-	1. 시작 btn 동작 시, ball이 bar위에서 이동(무한 왕복)
-	2. 멈춤 btn 동작 시, ball이 현재위치에서 멈춤
-	3. 다시 시작 btn 동작 시, 현재 위치에서 다시 1번의 이동 시작
-	4. setInterval로 표현
-	*/
-
-	$(document).ready(function(){
-		let ball = $('#ball') //움직일 객체
-		let bar = $('#bar').position().width	//움직일 영역의 크기를 가져올 객체
-
-		let startStep = ball.position().left;	// 공이 처음에 출발할 위치
-		console.log(startStep)
-		let step = 5;
-		
-		let timer;
-
-		$('#start_btn').on('click',onStart);
-
-		function onStart(){
-			timer = setInterval(ballMoving,50)
+		#wrap {
+			width: 600px;
+			height: 400px;
+			position: absolute;
+			left: 50%;
+			margin-left: -300px;
+			top: 200px;
 		}
 
-		function ballMoving(){
-			console.log(bar)
+		#panel {
+			width: 600px;
+			height: 300px;
+			border: 1px solid #999;
+			position: relative;
+			margin-bottom: 30px;
+		}
 
+		#bar {
+			position: absolute;
+			left: 50px;
+			top: 190px;
+			width: 500px;
+			height: 20px;
+			z-index: 10;
+
+			border-top: dotted 1px #999;
+		}
+
+		#ball {
+			position: absolute;
+			left: 50px;
+			top: 105px;
+			width: 80px;
+			height: 80px;
+
+		}
+
+		#nav {
+			text-align: center;
+			width: 600px;
+		}
+	</style>
+
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js'></script>
+	<!--jQuery 소스삽입  cdnjs 플러그인 사용 -->
+
+
+	<script>
+		/*
+		1. 시작 btn 동작 시, ball이 bar위에서 이동(무한 왕복)
+		2. 멈춤 btn 동작 시, ball이 현재위치에서 멈춤
+		3. 다시 시작 btn 동작 시, 현재 위치에서 다시 1번의 이동 시작
+		4. setInterval로 표현
+		*/
+
+		$(document).ready(function () {
+			let ball = $('#ball') //움직일 객체
+			let bar = $('#bar')	//움직일 영역의 크기를 가져올 객체
+
+			let startStep = ball.position().left;	// 공이 처음에 출발할 위치
 			console.log(startStep)
-		}
-		
+			let step = 5;
+
+			let timer;
+
+			$('#start_btn').on('click', onStart);
+
+			function onStart() {
+				timer = setInterval(ballMoving, 50)
+			}
+
+			function ballMoving() {
+
+				while (startStep < 500) {
+					startStep += step;
+				}
+
+				while (startStep = 500) {
+					startStep += step;
+				}
+				while (startStep = 0) {
+					startStep -= step;
+				}
+
+				console.log(startStep)
+			}
 
 
-	})
+
+		})
 
 
 
-  </script>
+	</script>
 
- 
+
 
 
 </head>
+
 <body>
-  
-  <div id="wrap"> 	
+
+	<div id="wrap">
 		<div id="panel">
 			<div id="bar"> </div>
 			<div id="ball">
@@ -118,4 +132,5 @@
 
 
 </body>
+
 </html>
