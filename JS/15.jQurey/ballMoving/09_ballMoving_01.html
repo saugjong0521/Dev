@@ -84,7 +84,7 @@
 			let timer;
 
 			$('#start_btn').on('click', onStart);
-			$('#stop_btn').on('click', onStart);
+			$('#stop_btn').on('click', onStop);
 
 
 			function onStart() {
@@ -102,6 +102,10 @@
 					step = -5;
 				} else if (currentStep <= startStep){
 					step = 5;
+				}
+
+				function onStop(){
+					clearInterval(timer)
 				}
 
 			}
