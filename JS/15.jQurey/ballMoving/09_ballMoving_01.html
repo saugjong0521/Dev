@@ -77,6 +77,8 @@
 			let endStep = bar.innerWidth() + startStep - ball.innerWidth()
 			/* end값을 구할때 ball.innerWidth()/2 가 아닌 (startStep - ball.innerWidth())인 이유
 			bar.innerWidth()는 bar의 전체 길이를 의미하며, 공의 왼쪽 끝이 바의 오른쪽 끝에 도달하기 위해서는 보통적으로 공의 innerWidth
+			을 빼면 되지만 현재는 bar와 ball 모두 left 50이라는 위치값이 설정되어 있는 상태
+			.위치 계산은 현재 left의 위치를 기준으로 계산하기 때문에 startStep = ball.innerWidth()를 적용
 			*/
 			console.log(startStep)
 			let step = 5;
