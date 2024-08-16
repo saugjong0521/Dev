@@ -44,6 +44,16 @@
             }
 
 
+
+            $('next').on('click', onNext)
+            function onNext(){
+                itemNum ++;
+                if(itemNum = 3){
+                    itemNum = 0
+                }
+            }
+            
+
         })
 
 
