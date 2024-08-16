@@ -7,89 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cd플레이어</title>
     <link rel="stylesheet" href="common.css">
-
-
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
     <script>
-        /*
-        스크립트 작성법
-        1. 선택자 잡기
-        2. 어떤 이벤트를 줄지
-        3. 이벤트 객체와 실행되는 객체를 어떻게 연결할 것인가?
-        4. 실행되는 객체에게 class를 어떻게 전달하게 할 것인가?
-        */
-
-
-        window.onload = function () {
-            let item = document.querySelectorAll('.item');
-            //하나가 아닌 여러개의 객체를 관리할 때에는 all을 선택
-
-            let nextBtn = document.querySelector('.next');
-            let prevBtn = document.querySelector('.prev');
-            let dot = document.querySelectorAll('.dot-list li');
-            //console.log(dot)
-
-            let itemCount = 0; //시작할 인덱스의 번호
-            let itemLength = item.length;
-
-
-
-            slideCount()
-
-
-            nextBtn.addEventListener('click', function () {
-                if (itemCount < itemLength - 1) {
-                    itemCount++;
-                    //console.log(itemCount)
-                } else {
-                    itemCount = 0;
-                    //console.log(itemCount)
-                }
-                slideCount()
-            })
-
-            prevBtn.addEventListener('click', function () {
-                if (itemCount > 0) {
-                    itemCount--;
-                    //console.log(itemCount)
-                } else {
-                    itemCount = itemLength - 1;
-                    //console.log(itemCount)
-                }
-                slideCount()
-            })
-
-            for (let i = 0; i < itemLength; i++){
-                dot[i].addEventListener('click',function(){
-                    itemCount = i;
-                    slideCount()
-                })
-            }
-
-            
-            function slideCount() {
-                for (let i = 0; i < itemLength; i++){
-                    //console.log(i)
-                    //console.log(itemCount)
-                    if(itemCount === i){
-                        item[i].classList.add('active') //클래스의 추가
-                        dot[i].classList.add('active')
-                    } else {
-                        item[i].classList.remove('active') //나머지 요소들 클래스의 제거
-                        dot[i].classList.remove('active')
-                    }
-                }
-            }
-
-
-
-
-        }
-
-
 
     </script>
-
 
 
 
