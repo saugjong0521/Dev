@@ -73,6 +73,9 @@
 			let bar = $('#bar')	//움직일 영역의 크기를 가져올 객체
 
 			let startStep = ball.position().left;	// 공이 처음에 출발할 위치
+			let currentStep = startStep;
+			let endStep = bar.innerWidth() - ;
+			
 			console.log(startStep)
 			let step = 5;
 
@@ -86,11 +89,12 @@
 
 			function ballMoving() {
 
-				startStep += step;
-				
+				if(start)
 
-				console.log(startStep)
-				ball.css({'left':startStep})
+
+				currentStep += step;
+				console.log(currentStep)
+				ball.css({'left':currentStep})
 			}
 
 
