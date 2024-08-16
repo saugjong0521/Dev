@@ -16,6 +16,7 @@
             let item = $('.container').children('.item')
             let dot = $('.dot-list').children('li')
             let itemNum = 0;
+            let itemSize = item.size()
 
             dot.on('click', onDot);
 
@@ -47,11 +48,7 @@
 
             $('.next').on('click', onNext)
             function onNext(){
-                itemNum ++;
-                if(itemNum = 3){
-                    itemNum = 0
-                }
-                console.log(itemNum)
+g(itemNum)
 
                 itemActive()
                 dotActive()
