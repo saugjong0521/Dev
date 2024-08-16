@@ -100,7 +100,7 @@
 
 				currentStep += step;
 				console.log(currentStep)
-				ball.css({ 'left': currentStep,'transform':'rotate('+ currentStep +'deg)' })
+				ball.css({ 'left': currentStep,`transform` : `rotate(${currentStep}deg)` })
 				if (currentStep >= endStep) {
 					step = -5;
 				} else if (currentStep <= startStep) {
