@@ -71,7 +71,21 @@
 
 		let startStep = ball.position().left;	// 공이 처음에 출발할 위치
 		console.log(startStep)
+		let step = 5;
+		
+		let timer;
 
+		$('#start_btn').on('click',onStart);
+
+		function onStart(){
+			timer = setInterval(ballMoving,50)
+		}
+
+		function ballMoving(){
+			startStep += step;
+			console.log(startStep)
+		}
+		
 
 
 	})
