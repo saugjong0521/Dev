@@ -61,12 +61,15 @@
 
             $('.prev').on('click',onPrev)
             function onPrev(){
-                if (itemNum = 0){
-                    itemNum = itemSize-1;
-                }
-                else{
+                
+                /*
+                if (itemNum < itemSize -1){
                     itemNum--;
+                } else if(itemNum = 0){ 
+                    itemNum = itemSize -1
                 }
+                    */
+
                 itemActive()
                 dotActive()
                 console.log(itemSize)
