@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ballMoving1</title>
+
+  <style>
+  
+  body{
+			font-size:9pt;		
+		}
+
+    #wrap{
+      width:600px; height:400px; position:absolute; left:50%; margin-left:-300px; top:200px; 
+    }		
+		
+		#panel{
+			width:600px;
+			height:300px;
+			border:1px solid #999;
+			position:relative;
+      margin-bottom:30px; 
+		}
+		
+		#bar{
+			position:absolute;
+			left:50px;
+			top:190px;
+			width:500px;
+			height:20px;
+			z-index:10;
+			
+			border-top:dotted 1px #999;
+		}
+		
+		#ball{
+			position:absolute;
+			left:50px;
+			top:105px;
+			width:80px;
+			height:80px;
+			
+		}
+		
+		#nav{
+			text-align:center;
+			width:600px;
+		}
+  
+  
+  </style>
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js'></script>
+  <!--jQuery 소스삽입  cdnjs 플러그인 사용 -->
+
+
+ 
+
+
+</head>
+<body>
+  
+  <div id="wrap"> 	
+		<div id="panel">
+			<div id="bar"> </div>
+			<div id="ball">
+				<img src="images/ball.png">
+			</div>
+		</div>
+		<div id="nav">
+			<button id="start_btn">시작</button>
+			<button id="stop_btn">멈춤</button>
+		</div>
+	</div>
+
+
+
+
+</body>
+</html>

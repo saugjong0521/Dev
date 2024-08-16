@@ -49,7 +49,7 @@
 
     $(document).ready(function () {
 
-      let imgSize = $('wrap').width();
+      let imgSize = $('#wrap').width();
 
       $('#img1').on('click', onRight);
       $('#img2').on('click', onLeft);
@@ -59,7 +59,7 @@
       }
 
       function onLeft() {
-        $('#img_wrap').animate({ 'letf': 0 }, 500)
+        $('#img_wrap').animate({ 'left': 0 }, 500)
       }
 
     })
