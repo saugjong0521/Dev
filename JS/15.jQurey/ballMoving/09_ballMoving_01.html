@@ -67,7 +67,7 @@
 
 	$(document).ready(function(){
 		let ball = $('#ball') //움직일 객체
-		let bar = $('#bar')	//움직일 영역의 크기를 가져올 객체
+		let bar = $('#bar').position().width	//움직일 영역의 크기를 가져올 객체
 
 		let startStep = ball.position().left;	// 공이 처음에 출발할 위치
 		console.log(startStep)
@@ -82,12 +82,8 @@
 		}
 
 		function ballMoving(){
+			console.log(bar)
 
-			if(startStep < bar){
-				startStep += step;
-			} elseif {
-				startStep -= step;
-			}
 			console.log(startStep)
 		}
 		
