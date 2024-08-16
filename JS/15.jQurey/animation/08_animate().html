@@ -69,7 +69,7 @@
         $imgWrap.stop(); // 진행중인 에니메이션을 바로 멈춤 
         $imgWrap.css({"left":0, "opacity":1}); // 에니메이션이 끝나기전에 버튼을 누르면  이미지를 초기값으로 돌린다음 에니메이션을 진행 
         $imgWrap.animate({"left":endX, "opacity":0}, 1000, "easeOutCubic", function(){ // 이미지를 endX 까지 에니메이션 진행 
-          $imgWrap.css({"left":0, "opacity":1}); // 에니메이션이 정상적으로 종료되면 끝나면 다시 초기좌표로 돌림 				
+          $imgWrap.css({"left":0, "opacity":1}); // 에니메이션이 정상적으로 종료되면(콜백함수에 있기에) 다시 초기좌표로 돌림 				
         });        
       
       }	

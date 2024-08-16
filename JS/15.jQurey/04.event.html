@@ -28,6 +28,29 @@
             background: pink;
         }
 
+
+        .parent2 {
+            left: 500px;
+            width: 500px;
+            height: 500px;
+            background: coral;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+
+        .child2 {
+            left:500px;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: pink;
+        }
+
+
         .on {
             background: gray;
         }
@@ -62,6 +85,8 @@
                 console.log('마우스 아웃')
                 $(this).removeClass('on')
             })
+
+
 
         })
     </script>
