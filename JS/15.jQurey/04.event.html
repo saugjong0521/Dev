@@ -9,7 +9,7 @@
         integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
 
     <style>
-        .parent {
+        .parent1 {
             width: 500px;
             height: 500px;
             background: coral;
@@ -18,7 +18,7 @@
             left: 0;
         }
 
-        .child {
+        .child1 {
             width: 200px;
             height: 200px;
             position: absolute;
@@ -52,12 +52,14 @@
             mouseleave
             */
 
-            $('.parent').on('mouseenter', function () {
+            $('.parent1').on('mouseover', function () {
+                console.log('마우스 오버')
                 $(this).addClass('on')
                 // $(this) : 이벤트를 발생시킨 요소를 참조
                 // addClasee(클래스명) : 해당 클래스명을 요소에 추가 (javascript의 classList.add()와 동일)
             })
-            $('.parent').on('mouseleave', function () {
+            $('.parent1').on('mouseㅔㅑㅅ', function () {
+                console.log('마우스 아웃')
                 $(this).removeClass('on')
             })
 
@@ -67,8 +69,11 @@
 </head>
 
 <body>
-    <div class="parent">
-        <div class="child">child</div>
+    <div class="parent1">
+        <div class="child1">child</div>
+    </div>
+    <div class="parent2">
+        <div class="child2">child</div>
     </div>
 </body>
 
