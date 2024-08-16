@@ -17,10 +17,10 @@
             let dot = $('.dot-list').children('li')
             let itemNum = 0;
 
-            dot.on('click', itemActive);
+            dot.on('click', onDot);
 
 
-            function itemActive(){
+            function onDot(){
                 itemNum = $(this).index()
                 console.log(itemNum)
 
