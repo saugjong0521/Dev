@@ -23,6 +23,14 @@
             function itemActive(){
                 itemNum = $(this).index()
                 console.log(itemNum)
+
+                itemActive();
+                dotActive();
+            }
+
+
+            function itemActive(){
+                item.removeClass('active')
             }
 
 
