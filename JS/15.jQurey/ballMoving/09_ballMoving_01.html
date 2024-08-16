@@ -74,7 +74,7 @@
 
 			let startStep = ball.position().left;	// 공이 처음에 출발할 위치
 			let currentStep = startStep;
-			let endStep = bar.innerWidth() - ball.innerWidth()
+			let endStep = bar.innerWidth() + startStep - ball.innerWidth()
 			/* end값을 구할때 ball.innerWidth()/2 가 아닌 (startStep - ball.innerWidth())인 이유
 			bar.innerWidth()는 bar의 전체 길이를 의미하며, 공의 왼쪽 끝이 바의 오른쪽 끝에 도달하기 위해서는 보통적으로 공의 innerWidth
 			*/
@@ -98,6 +98,8 @@
 				ball.css({'left':currentStep})
 				if(currentStep >= endStep){
 					step = -5;
+				} else if (currentStep <= startStep){
+					step = 5;
 				}
 
 			}
