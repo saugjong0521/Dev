@@ -74,7 +74,8 @@
 
 			let startStep = ball.position().left;	// 공이 처음에 출발할 위치
 			let currentStep = startStep;
-			let endStep = bar.innerWidth() + (startStep - ball.innerWidth())
+			let endStep = bar.innerWidth() + startStep - ball.innerWidth()
+			// end값을 구할때 ball.innerWidth()
 			
 			console.log(startStep)
 			let step = 5;
@@ -89,7 +90,6 @@
 
 			function ballMoving() {
 
-				if(start)
 
 
 				currentStep += step;
