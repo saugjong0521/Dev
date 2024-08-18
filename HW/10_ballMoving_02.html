@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ballMoving2</title>
+
+  <style>
+    
+    body{
+			font-size:9pt;	
+		}
+
+    #wrap{
+      width:600px; height:500px; position:absolute; left:50%; margin-left:-300px; top:200px;
+    }
+			
+		#panel{
+			width:600px;
+			height:400px;
+			border:5px solid #999;
+			position:relative;
+      margin-bottom:30px; 
+		}
+		
+		#ball{
+      position:absolute;
+      left:252px;
+      top:150px;
+      width:80px;
+      height:80px;
+		}
+		
+		#nav{
+			text-align:center;
+			width:600px;
+		}
+ 
+  
+  </style>
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js'></script>
+  <!--jQuery 소스삽입  cdnjs 플러그인 사용 -->
+
+
+  <script>
+      
+      
+      /*
+      공은 x축과 y축으로 동시에 움직입니다. 벽(border)에 닿을 경우 반대로 튕겨져 나가야 합니다.
+      기존의 방식에서 y축의 추가와 시작위치의 기준이 달라집니다.
+      
+      */
+      
+      
+ 
+  </script>
+
+
+</head>
+<body>
+  
+    <div id="wrap"> 
+		
+        <div id="panel"> 	
+          <div id="ball">
+            <img src="images/ball.png">
+          </div>
+        </div>
+        <div id="nav">
+          <button id="start_btn">시작</button>
+          <button id="stop_btn">멈춤</button>
+        </div>
+      
+      </div>
+
+
+
+
+</body>
+</html>
