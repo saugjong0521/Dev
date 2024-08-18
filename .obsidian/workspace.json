@@ -4,31 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "6b7240ed26dc8251",
+        "id": "f9f91dcd8b1e64b0",
         "type": "tabs",
         "children": [
           {
-            "id": "cd74224c5538f113",
+            "id": "9dcf941a76279a12",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.6.7"
-              }
-            }
-          },
-          {
-            "id": "7b446679d3ce6c91",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "JS/14.swiper/swiper 구조.jpg"
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -57,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "path:\"frontEnd/\" ",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -94,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JS/14.swiper/swiper 구조.jpg",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JS/14.swiper/swiper 구조.jpg",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "JS/14.swiper/swiper 구조.jpg"
-              }
+              "state": {}
             }
           }
         ]
@@ -155,53 +138,53 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7b446679d3ce6c91",
+  "active": "9dcf941a76279a12",
   "lastOpenFiles": [
+    "JS/swiper-dbslider 02/slider02.html",
+    "JS/swiper-dbslider 02/images2/images05.jpg",
+    "JS/swiper-dbslider 02/images2/image04.jpg",
+    "JS/swiper-dbslider 02/images2/image03.jpg",
+    "JS/swiper-dbslider 02/images2/image02.jpg",
+    "JS/swiper-dbslider 02/images2/image01.jpg",
+    "JS/swiper-dbslider 02/images2/icon_sell_more.png",
+    "JS/swiper-dbslider 02/images2",
+    "JS/swiper-dbslider 02",
+    "JS/15.jQurey/cdplayer/index.html",
     "JS/15.jQurey/cdplayer/image/링크.txt",
     "JS/15.jQurey/cdplayer/image/iu_5.jpg",
     "JS/15.jQurey/cdplayer/image/iu_4.jpg",
     "JS/15.jQurey/cdplayer/image/iu_3.jpg",
     "JS/15.jQurey/cdplayer/image/iu_2.jpg",
-    "JS/15.jQurey/cdplayer/image/iu_1.jpg",
-    "JS/15.jQurey/cdplayer/image/iu_0.jpg",
-    "JS/15.jQurey/cdplayer/image",
-    "JS/15.jQurey/cdplayer/index.html",
-    "JS/15.jQurey/cdplayer/common.css",
-    "JS/15.jQurey/cdplayer",
-    "JS/cdplayer - 복사본/image/링크.txt",
-    "JS/cdplayer - 복사본/image/iu_5.jpg",
-    "JS/cdplayer - 복사본/image/iu_4.jpg",
-    "JS/cdplayer - 복사본/image/iu_3.jpg",
-    "JS/cdplayer - 복사본/image/iu_2.jpg",
-    "JS/cdplayer - 복사본/image",
-    "JS/cdplayer - 복사본/index.html",
-    "JS/cdplayer - 복사본/common.css",
-    "JS/cdplayer - 복사본",
+    "JS/15.jQurey/animation/css/reset.css",
+    "JS/15.jQurey/animation/css/style.css",
     "JS/15.jQurey/ballMoving/images",
+    "JS/15.jQurey/ballMoving/09_ballMoving_01.html",
+    "JS/15.jQurey/cdplayer/image",
+    "JS/15.jQurey/cdplayer/common.css",
     "JS/14.swiper/Swiper 구조.md",
+    "conflict-files-obsidian-git.md",
     "Output/KUSD_S3/node_modules/send/node_modules/ms/readme.md",
     "Output/KUSD_S3/node_modules/send/node_modules/ms/license.md",
+    "Output/KUSD_S3/node_modules/utils-merge/README.md",
     "Output/KUSD_S3/node_modules/vary/README.md",
     "Output/KUSD_S3/node_modules/vary/HISTORY.md",
-    "Output/KUSD_S3/node_modules/utils-merge/README.md",
     "Output/KUSD_S3/node_modules/unpipe/README.md",
     "Output/KUSD_S3/node_modules/unpipe/HISTORY.md",
     "Output/KUSD_S3/node_modules/type-is/README.md",
-    "Output/KUSD_S3/node_modules/toidentifier/README.md",
     "Output/KUSD_S3/node_modules/type-is/HISTORY.md",
-    "Output/KUSD_S3/node_modules/toidentifier/HISTORY.md",
     "Output/KUSD_S3/node_modules/statuses/README.md",
     "Output/KUSD_S3/node_modules/statuses/HISTORY.md",
     "Output/KUSD_S3/node_modules/side-channel/README.md",
     "Output/KUSD_S3/node_modules/side-channel/CHANGELOG.md",
-    "Output/KUSD_S3/node_modules/setprototypeof/README.md",
+    "Output/KUSD_S3/node_modules/toidentifier/README.md",
+    "Output/KUSD_S3/node_modules/toidentifier/HISTORY.md",
     "Output/KUSD_S3/node_modules/set-function-length/README.md",
-    "Output/KUSD_S3/node_modules/set-function-length/CHANGELOG.md",
-    "Output/KUSD_S3/node_modules/serve-static/README.md",
-    "Output/KUSD_S3/node_modules/serve-static/HISTORY.md",
-    "Output/KUSD_S3/node_modules/send/README.md",
     "Output/KUSD_S3/node_modules/send/SECURITY.md",
+    "Output/KUSD_S3/node_modules/set-function-length/CHANGELOG.md",
+    "Output/KUSD_S3/node_modules/send/README.md",
     "Output/KUSD_S3/node_modules/send/HISTORY.md",
-    "Output/KUSD_S3/node_modules/safer-buffer/Readme.md"
+    "Output/KUSD_S3/node_modules/setprototypeof/README.md",
+    "Output/KUSD_S3/node_modules/serve-static/README.md",
+    "Output/KUSD_S3/node_modules/serve-static/HISTORY.md"
   ]
 }
