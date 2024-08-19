@@ -41,7 +41,7 @@ window.onload = () => {
         console.log(itemLiW)
 
         itemUl.style.transition = `margin-left ${speed}ms`;
-        itemLiW.style.marginLeft = `${itemLiW}px`
+        itemLiW.style.marginLeft = `-${itemLiW}px`
     }
 
 }
