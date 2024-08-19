@@ -11,6 +11,7 @@ function menu (){
 
     const header = document.querySelector('.header')
     const mainMenu = document.querySelectorAll('.main-menu > li')
+    const mainMenuItem = document.querySelectorAll('.main-menu > li > a')
     const headerH = header.offsetHeight;
     const subMenu = document.querySelectorAll('.sub-menu')
     console.log(headerH)
@@ -18,6 +19,7 @@ function menu (){
 
 
     mainMenu.forEach((el)=>{
+
         const mainMenuLink = el.querySelector('a');
         //각각의 mainmenu에 있는 a태그를 선택
         mainMenuLink.addEventListener('mouseover', onMenu)
@@ -52,7 +54,7 @@ function menu (){
         subMenu.forEach((el)=>{
             el.classList.remove('on')
         })
-        mainMenu.forEach((el)=>{
+        mainMenuItem.forEach((el)=>{
             el.classList.remove('on')
         })
 
