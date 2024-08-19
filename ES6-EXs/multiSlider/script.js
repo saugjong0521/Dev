@@ -9,7 +9,7 @@ window.onload = () => {
     */
 
     const bgSlider = document.querySelector('#slider')
-    const slider = document.querySelector('#slider2')
+    const slider = document.querySelectorAll('#slider2')
 
     const next = document.querySelector('.next')
     const prev = document.querySelector('.prev')
