@@ -25,6 +25,8 @@ function main() {
         console.log(itemSize)
     }
 
+    // ul 설정
     itemUl.style.width = `${100 * itemSize}%`;
+    itemUl.style.height = `100%`;
 
 }
