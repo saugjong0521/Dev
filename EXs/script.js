@@ -60,7 +60,6 @@ function menu (){
             el.classList.remove('on')
         })
         header.style.height = `${headerH}px`
-
     }
 
 
