@@ -39,6 +39,9 @@ function menu (){
         const subMenuLi = subMenuItem.querySelectorAll('li')
         const subMenuLiSize  = subMenuLi.length;
         console.log(subMenuLiSize)
+        if (subMenuLiSize > 0) {
+            const subMenuH = subMenuLi[0]
+        }
     }
 
 
