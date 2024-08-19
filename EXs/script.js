@@ -21,9 +21,9 @@ function menu (){
     mainMenu.forEach((el)=>{
         const mainMenuLink = el.querySelector('a');
         //각각의 mainmenu에 있는 a태그를 선택
-        mainMenuLink.addEventListener('mouseover', onMenu)
+        mainMenuLink.addEventListener('mouseenter', onMenu)
 
-        el.addEventListener('mouseout',offMenu)
+        el.addEventListener('mouseleave',offMenu)
     })
 
     function onMenu(){
