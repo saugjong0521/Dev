@@ -1,8 +1,5 @@
 window.onload = () => {
-    main()
-}
 
-function main() {
 
     /*
     1. 동작을 생각한다
@@ -28,6 +25,7 @@ function main() {
         // ul 설정
         itemUl.style.width = `${100 * itemSize}%`;
         itemUl.style.height = `100%`;
+        itemUl.style.marginLeft = `-100%`
 
         // li 설정
         itemLi.forEach((el) => {
@@ -35,7 +33,7 @@ function main() {
             el.style.height = `100%`
             el.style.float = 'left'
         })
-        itemUl.insertBefore(itemLi[itemSize-1], itemUl.firstChild)
+        itemUl.insertBefore(itemLi[itemSize - 1], itemUl.firstChild)
     }
 
 
