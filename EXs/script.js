@@ -30,7 +30,6 @@ function menu (){
             subMenuItem.classList.add('on')
             headerHeight(subMenuItem);
         }
-
     }
 
     function headerHeight(subMenuItem){
