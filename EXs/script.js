@@ -44,6 +44,7 @@ function menu (){
         offMenu()
         this.classList.add('on') //mainMenu
         header.classList.add('on')
+        subMenuItem.classList.add('on')
         const subMenuItem = this.nextElementSibling;
         console.log(subMenuItem)
         if(subMenuItem){
