@@ -40,7 +40,7 @@ window.onload = () => {
         const itemLiW = itemUl.querySelector('li').offsetWidth
         console.log(itemLiW)
 
-        itemUl.style.transform = `margin-left ${speed}ms`;
+        itemUl.style.transition = `margin-left ${speed}ms`;
         itemLiW.style.marginLeft = `${itemLiW}px`
     }
 
