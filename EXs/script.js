@@ -24,7 +24,7 @@ function menu (){
     })
 
     function onMenu(){
-        this.classList.add('on')
+        this.classList.add('on') //mainMenu
         const subMenuItem = this.nextElementSibling;
         console.log(subMenuItem)
         if(subMenuItem){
@@ -48,10 +48,10 @@ function menu (){
         }
     }
 
-    function offMenu(subMenuItem){
-        if(!subMenuItem){
-            subMenuItem.classList.remove('on')
-        }
+    function offMenu(){
+        subMenu.forEach((el)=>{
+            el.classList.remove('.on')
+        })
     }
 
 
