@@ -12,6 +12,7 @@ function menu (){
     const header = document.querySelector('.header')
     const mainMenu = document.querySelectorAll('.main-menu > li')
     const headerH = header.offsetHeight;
+    console.log(headerH)
     
 
 
@@ -24,7 +25,7 @@ function menu (){
     function onMenu(){
         this.classList.add('on')
         const subMenuItem = this.nextElementSibling;
-        console.log(subMenuItem)
+        // console.log(subMenuItem)
         subMenuItem.classList.add('on')
         if(subMenuItem){
             subMenuItem.classList.add('on')
