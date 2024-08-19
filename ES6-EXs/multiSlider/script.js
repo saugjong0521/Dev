@@ -32,6 +32,7 @@ function main() {
     // li 설정
     itemLi.forEach((el)=>{
         el.style.width = `${100 / itemSize}`
-        
+        el.style.height = `100%`
+        el.style.float = 'left'
     })
 }
