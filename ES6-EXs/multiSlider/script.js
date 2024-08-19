@@ -24,9 +24,9 @@ window.onload = () => {
 
         // li 설정
         itemLi.forEach((el) => {
-            el.style.width = `${100 / itemSize}%`
-            el.style.height = `100%`
-            el.style.float = 'left'
+            el.style.width = `${100 / itemSize}%`;
+            el.style.height = `100%`;
+            el.style.float = 'left';
         })
         itemUl.insertBefore(itemLi[itemSize - 1], itemUl.firstChild)
     }
@@ -41,13 +41,13 @@ window.onload = () => {
         console.log(itemLiW)
 
         itemUl.style.transition = `margin-left ${speed}ms`;
-        itemLiW.style.marginLeft = `-${itemLiW * 2}px`
+        itemUl.style.marginLeft = `-${itemLiW * 2}px`
 
-        setTimeout(()=>{
+        setTimeout(() => {
             itemUl.appendChild(itemUl.querySelector(`li:first-of-child`))
             itemUl.style.marginLeft = `-${itemLiW}px`
-            itemUl.transition = '';
-        },speed)
+            itemUl.style.transition = '';
+        }, speed)
     }
 
 }
