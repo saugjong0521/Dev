@@ -8,7 +8,7 @@ function menu (){
     2. 서브메뉴의 길이에 따라서 header의 height가 달라짐
 
     */
-{}
+
     const mainMenu = document.querySelectorAll('main-menu li')
 
     mainMenu.forEach((el)=>{
