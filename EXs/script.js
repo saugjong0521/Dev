@@ -18,7 +18,7 @@ function menu (){
     })
 
     function onMenu(){
-        this.classList.add('.on')
+        this.classList.add('on')
     }
 
     // const mainMenuItem = document.querySelectorAll('.main-menu li a')
