@@ -28,7 +28,7 @@ function menu (){
         mainMenuLink.addEventListener('focus', onMenu)  //접근성을 위한 장치(마우스를 못쓰는 경우), 이를 위하여 a 태그를 이용하여 만듦
         
         el.addEventListener('mouseleave',offMenu)
-        
+
         el.addEventListener('focusout',function(e){
             if(!el.contains(e.relatedTarget)){
                 offMenu()
@@ -60,6 +60,7 @@ function menu (){
         if (subMenuLiSize > 0) {
             const subMenuH = subMenuLi[0].offsetHeight;
             console.log(subMenuH)
+            
             const gnbH = subMenuH * subMenuLiSize;
             console.log(gnbH)
             header.style.height = `${gnbH + headerH}px`
