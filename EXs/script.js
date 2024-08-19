@@ -19,7 +19,7 @@ function menu (){
 
     function onMenu(){
         this.classList.add('on')
-        const subMenuItem = 
+        const subMenuItem = this.next()
     }
 
     // const mainMenuItem = document.querySelectorAll('.main-menu li a')
