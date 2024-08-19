@@ -14,6 +14,9 @@ function menu (){
     const mainMenuItem = document.querySelectorAll('.main-menu > li > a')
     const headerH = header.offsetHeight;
     const subMenu = document.querySelectorAll('.sub-menu')
+
+    const subMenuItem = document.querySelectorAll('.sub-menu > li > a')
+
     console.log(headerH)
     
 
