@@ -50,10 +50,10 @@ function menu (){
 
     function offMenu(){
         subMenu.forEach((el)=>{
-            el.classList.remove('.on')
+            el.classList.remove('on')
         })
         mainMenu.forEach((el)=>{
-            el.classList.remove('.on')
+            el.classList.remove('on')
         })
 
     }
