@@ -29,6 +29,14 @@ window.onload = () => {
         itemUl.insertBefore(itemLi[itemSize - 1], itemUl.firstChild)
     }
 
-    
+    next.addEventListener('click', function () {
+        nextSlider();
+    })
+
+    function nextSlider() {
+        const itemUl = slider.querySelector('ul')
+        const itemLiW = itemUl.querySelectorAll('li').offsetWidth
+        console.log(itemLiW)
+    }
 
 }
