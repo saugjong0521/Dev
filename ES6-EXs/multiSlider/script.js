@@ -20,7 +20,7 @@ window.onload = () => {
         // ul 설정
         itemUl.style.width = `${100 * itemSize}%`;
         itemUl.style.height = `100%`;
-        itemUl.style.marginLeft = `-100%`
+        itemUl.style.marginLeft = `-100%`;
 
         // li 설정
         itemLi.forEach((el) => {
