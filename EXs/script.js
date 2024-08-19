@@ -9,7 +9,7 @@ function menu (){
 
     */
 
-    const mainMenu = document.querySelectorAll('main-menu li')
+    const mainMenu = document.querySelectorAll('.main-menu li')
 
     mainMenu.forEach((el)=>{
         const mainMenuLink = el.querySelector('a');
@@ -22,6 +22,10 @@ function menu (){
         const subMenuItem = this.nextElementSibling;
         console.log(subMenuItem)
         subMenuItem.classList.add('on')
+        if(subMenuItem){
+            subMenuItem.classList.add('on')
+        }
+
     }
 
     // const mainMenuItem = document.querySelectorAll('.main-menu li a')
