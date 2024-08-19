@@ -24,13 +24,13 @@ function menu (){
     })
 
     function onMenu(){
+        offMenu()
         this.classList.add('on') //mainMenu
         const subMenuItem = this.nextElementSibling;
         console.log(subMenuItem)
         if(subMenuItem){
             subMenuItem.classList.add('on')
             headerHeight(subMenuItem);
-            offMenu(subMenuItem)
         }
     }
 
@@ -52,6 +52,10 @@ function menu (){
         subMenu.forEach((el)=>{
             el.classList.remove('.on')
         })
+        mainMenu.forEach((el)=>{
+            el.classList.remove('.on')
+        })
+
     }
 
 
