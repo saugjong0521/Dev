@@ -34,7 +34,6 @@ function menu (){
     }
 
     function headerHeight(subMenuItem){
-        subMenuItem.classList.delete('on')
         // 현재 over된 메인메뉴의 서브메뉴의 li를 찾아서, li의 높이값 * 갯수만큼 header의 높이값에 대입
         const subMenuLi = subMenuItem.querySelectorAll('li')
         const subMenuLiSize  = subMenuLi.length;
