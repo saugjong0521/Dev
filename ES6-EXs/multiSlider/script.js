@@ -7,6 +7,8 @@ window.onload = () => {
     const next = document.querySelector('.next')
     const prev = document.querySelector('.prev')
 
+    const speed = 1000;
+
     phoneSlider();
     function phoneSlider() {
         const itemUl = slider.querySelector('ul')
@@ -37,6 +39,9 @@ window.onload = () => {
         const itemUl = slider.querySelector('ul')
         const itemLiW = itemUl.querySelector('li').offsetWidth
         console.log(itemLiW)
+
+        itemUl.style.transform = `margin-left ${speed}ms`;
+        itemLiW.style.marginLeft = `${itemLiW}px`
     }
 
 }
