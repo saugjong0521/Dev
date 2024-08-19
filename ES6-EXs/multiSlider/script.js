@@ -11,7 +11,11 @@ function main(){
 5. 구현한다
 */
 
+const bgSlider = document.querySelector('#slider')
+const mSlider = document.querySelector('#slider2')
 
+const next = document.querySelector('.next')
+const prev = document.querySelector('.prev')
 
 
 }
