@@ -35,6 +35,7 @@ function main() {
             el.style.height = `100%`
             el.style.float = 'left'
         })
+        itemUl.insertBefore(itemLi[itemSize-1], itemUl.firstChild)
     }
 
 
