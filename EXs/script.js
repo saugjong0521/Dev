@@ -40,6 +40,12 @@ function menu (){
     })
     // mouseover, mouseout 으로 지정시에 하위 li로 간다면 focus가 풀림
 
+    subMenuItem.forEach((el)=>{
+        subMenuItem.classList.add('on')
+
+    })
+
+
     function onMenu(){
         offMenu()
         this.classList.add('on') //mainMenu
