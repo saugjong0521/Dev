@@ -40,7 +40,8 @@ function menu (){
         const subMenuLiSize  = subMenuLi.length;
         console.log(subMenuLiSize)
         if (subMenuLiSize > 0) {
-            const subMenuH = subMenuLi[0]
+            const subMenuH = subMenuLi[0].offsetHeight;
+            console.log(subMenuH)
         }
     }
 
