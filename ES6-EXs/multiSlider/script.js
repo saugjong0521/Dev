@@ -12,17 +12,16 @@ function main() {
     */
 
     const bgSlider = document.querySelector('#slider')
-    const mSlider = document.querySelector('#slider2')
+    const slider = document.querySelector('#slider2')
 
     const next = document.querySelector('.next')
     const prev = document.querySelector('.prev')
 
     phoneSlider();
     function phoneSlider() {
-        const itemUl = mSlider.querySelector('ul')
+        const itemUl = slider.querySelector('ul')
         const itemLi = itemUl.querySelector('li')
         const itemSize = itemLi.length;
-        console.log(itemSize)
     }
 
     // ul 설정
