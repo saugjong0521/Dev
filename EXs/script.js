@@ -59,6 +59,7 @@ function menu (){
         mainMenuItem.forEach((el)=>{
             el.classList.remove('on')
         })
+        header.style.height = `${headerH}px`
 
     }
 
