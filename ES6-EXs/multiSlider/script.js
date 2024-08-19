@@ -22,16 +22,20 @@ function main() {
         const itemUl = slider.querySelector('ul')
         const itemLi = itemUl.querySelector('li')
         const itemSize = itemLi.length;
+        console.log(itemSize)
+
+
+        // ul 설정
+        itemUl.style.width = `${100 * itemSize}%`;
+        itemUl.style.height = `100%`;
+
+        // li 설정
+        itemLi.forEach((el) => {
+            el.style.width = `${100 / itemSize}`
+            el.style.height = `100%`
+            el.style.float = 'left'
+        })
     }
 
-    // ul 설정
-    itemUl.style.width = `${100 * itemSize}%`;
-    itemUl.style.height = `100%`;
 
-    // li 설정
-    itemLi.forEach((el)=>{
-        el.style.width = `${100 / itemSize}`
-        el.style.height = `100%`
-        el.style.float = 'left'
-    })
 }
