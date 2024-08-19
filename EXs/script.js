@@ -25,6 +25,12 @@ function menu (){
         mainMenuLink.addEventListener('focus', onMenu)  //접근성을 위한 장치(마우스를 못쓰는 경우), 이를 위하여 a 태그를 이용하여 만듦
         
         el.addEventListener('mouseleave',offMenu)
+        
+        el.addEventListener('focusout',function(e){
+            if(!el.contains(e.relatedTarget)){
+                offMenu()
+            }              
+        })
     })
     // mouseover, mouseout 으로 지정시에 하위 li로 간다면 focus가 풀림
 
