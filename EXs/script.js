@@ -9,7 +9,10 @@ function menu (){
 
     */
 
-    const mainMenu = document.querySelectorAll('.main-menu li')
+    const header = document.querySelector('.header')
+    const mainMenu = document.querySelectorAll('.main-menu > li')
+    const headerH 
+
 
     mainMenu.forEach((el)=>{
         const mainMenuLink = el.querySelector('a');
