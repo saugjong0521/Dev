@@ -22,6 +22,7 @@ function menu (){
         const mainMenuLink = el.querySelector('a');
         //각각의 mainmenu에 있는 a태그를 선택
         mainMenuLink.addEventListener('mouseenter', onMenu)
+        mainMenuLink.addEventListener('focus', onMenu)
 
         el.addEventListener('mouseleave',offMenu)
     })
