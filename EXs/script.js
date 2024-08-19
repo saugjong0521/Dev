@@ -25,6 +25,7 @@ function menu (){
 
         el.addEventListener('mouseleave',offMenu)
     })
+    // mouseover, mouseout 으로 지정시에 하위 li로 간다면 focus가 풀림
 
     function onMenu(){
         offMenu()
