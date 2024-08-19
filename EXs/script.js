@@ -21,6 +21,7 @@ function menu (){
         this.classList.add('on')
         const subMenuItem = this.nextElementSibling;
         console.log(subMenuItem)
+        subMenuItem.classList.on()
     }
 
     // const mainMenuItem = document.querySelectorAll('.main-menu li a')
