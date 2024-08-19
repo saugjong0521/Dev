@@ -25,5 +25,6 @@ function main() {
         console.log(itemSize)
     }
 
+    itemUl.style.width = `${100 * itemSize}%`;
 
 }
