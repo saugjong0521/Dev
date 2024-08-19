@@ -17,9 +17,8 @@ function menu (){
     console.log(headerH)
     
 
-
+    
     mainMenu.forEach((el)=>{
-
         const mainMenuLink = el.querySelector('a');
         //각각의 mainmenu에 있는 a태그를 선택
         mainMenuLink.addEventListener('mouseover', onMenu)
