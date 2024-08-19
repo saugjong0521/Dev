@@ -26,7 +26,6 @@ function menu (){
         this.classList.add('on')
         const subMenuItem = this.nextElementSibling;
         // console.log(subMenuItem)
-        subMenuItem.classList.add('on')
         if(subMenuItem){
             subMenuItem.classList.add('on')
             headerHeight(subMenuItem);
