@@ -11,7 +11,8 @@ function menu (){
 
     const header = document.querySelector('.header')
     const mainMenu = document.querySelectorAll('.main-menu > li')
-    const headerH 
+    const headerH = header.offsetHeight;
+    
 
 
     mainMenu.forEach((el)=>{
