@@ -29,6 +29,7 @@ function menu (){
         if(subMenuItem){
             subMenuItem.classList.add('on')
             headerHeight(subMenuItem);
+            offMenu(subMenuItem)
         }
     }
 
@@ -43,6 +44,12 @@ function menu (){
             const gnbH = subMenuH * subMenuLiSize;
             console.log(gnbH)
             header.style.height = `${gnbH + headerH}px`
+        }
+    }
+
+    function offMenu(subMenuItem){
+        if(!subMenuItem){
+            subMenuItem.classList.remove('on')
         }
     }
 
