@@ -19,7 +19,9 @@ function main() {
 
     phoneSlider();
     function phoneSlider() {
-        itemSize = mSlider.querySelectorAll('li').length;
+        const itemUl = mSlider.querySelector('ul')
+        const itemLi = itemUl.querySelector('li')
+        const itemSize = itemLi.length;
         console.log(itemSize)
     }
 
