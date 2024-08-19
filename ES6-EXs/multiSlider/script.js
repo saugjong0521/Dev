@@ -44,7 +44,7 @@ window.onload = () => {
         itemUl.style.marginLeft = `-${itemLiW * 2}px`
 
         setTimeout(() => {
-            itemUl.appendChild(itemUl.querySelector(`li:first-of-child`))
+            itemUl.appendChild(itemUl.querySelector(`li:first-of-type`))
             itemUl.style.marginLeft = `-${itemLiW}px`
             itemUl.style.transition = '';
         }, speed)
