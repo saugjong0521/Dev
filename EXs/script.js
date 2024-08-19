@@ -29,7 +29,10 @@ function menu (){
         el.addEventListener('focusout',function(e){
             if(!el.contains(e.relatedTarget)){
                 offMenu()
-            }              
+            }
+            // !el.contains = 특정 요소가 다른 요소를 포함하는지 여부를 확인하는 메소드
+            // 현재 로직에서는 포커스가 mainMenu(el)의 자식인지 확인하는 용도로 쓰임
+            // relatedTarget = 이벤트가 발생할때 포커스가 새로운 대상을 참조
         })
     })
     // mouseover, mouseout 으로 지정시에 하위 li로 간다면 focus가 풀림
