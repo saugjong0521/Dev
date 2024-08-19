@@ -37,7 +37,7 @@ window.onload = () => {
 
     function nextSlider() {
         const itemUl = slider.querySelector('ul')
-        const itemLiW = itemUl.querySelector('li').offsetWidth
+        const itemLiW = itemUl.querySelector('li').offsetWidth;
         console.log(itemLiW)
 
         itemUl.style.transition = `margin-left ${speed}ms`;
