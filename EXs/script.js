@@ -44,6 +44,7 @@ function menu (){
             console.log(subMenuH)
             const gnbH = subMenuH * subMenuLiSize;
             console.log(gnbH)
+            header.style.height = `${gnbH + headerH}px`
         }
     }
 
