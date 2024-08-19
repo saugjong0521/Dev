@@ -40,7 +40,7 @@ function menu (){
     })
     // mouseover, mouseout 으로 지정시에 하위 li로 간다면 focus가 풀림
 
-    
+
     // 해당 구문은 위의 mainMenu내에서 같이 돌면 안된다 -> mainMenu에 focus되는것이 아닌 li요소들에 focus되는 것이기 때문에
     subMenuItem.forEach((el)=>{
         el.addEventListener('focus',function(){
@@ -53,7 +53,7 @@ function menu (){
 
 
     function onMenu(){
-        offMenu()
+        offMenu() //초기화
         this.classList.add('on') //mainMenu
         header.classList.add('on')
         const subMenuItem = this.nextElementSibling;
