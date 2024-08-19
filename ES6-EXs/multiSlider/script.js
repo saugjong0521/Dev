@@ -17,7 +17,7 @@ window.onload = () => {
     phoneSlider();
     function phoneSlider() {
         const itemUl = slider.querySelector('ul')
-        const itemLi = itemUl.querySelector('li')
+        const itemLi = itemUl.querySelectorAll('li')
         const itemSize = itemLi.length;
         console.log(itemSize)
 
