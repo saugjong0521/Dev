@@ -26,44 +26,48 @@ window.onload = () => {
         })
     }
 
-    next.addEventListener('click',function(){
+    next.addEventListener('click', function () {
         nextSlide()
     })
 
-    function nextSlide(){
-        const itemUl = slider2.querySelector('#slider2 ul')
+    function nextSlide() {
+        const itemUl = document.querySelector('#slider2 ul')
         const itemLiW = document.querySelector('#slider2 ul li').offsetWidth;
         console.log(itemLiW)
 
         console.log(itemUl)
 
-        itemUl.style.marginLeft = `-${itemLiW * 2}`
+        itemUl.style.marginLeft = `-${itemLiW * 2}px`
         itemUl.style.transition = `margin-left ${speed}ms`;
 
-        setTimeout(()=>{
+        setTimeout(() => {
             itemUl.appendChild(itemUl.querySelector(`li:first-of-type`))
             itemUl.style.marginLeft = `-${itemLiW}px`
             itemUl.transition = '';
-        },speed)
-        
+        }, speed)
+
     }
 
-    prev.addEventListener('click',function(){
-        const itemUl = slider2.querySelector('#slider2 ul')
+    prev.addEventListener('click', function () {
+        prevSlide()
+    })
+
+    function prevSlide() {
+        const itemUl = document.querySelector('#slider2 ul')
         const itemLiW = document.querySelector('#slider2 ul li').offsetWidth;
         console.log(itemLiW)
 
         console.log(itemUl)
 
-        itemUl.style.marginLeft = `${itemLiW * 2}`
+        itemUl.style.marginLeft = `${itemLiW/2}px`
         itemUl.style.transition = `margin-left ${speed}ms`;
 
-        setTimeout(()=>{
+        setTimeout(() => {
             itemUl.appendChild(itemUl.querySelector(`li:first-of-type`))
             itemUl.style.marginLeft = `-${itemLiW}px`
             itemUl.transition = '';
-        },speed)
-    })
+        }, speed)
+    }
 
 
 
