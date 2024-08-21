@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,37 +8,39 @@
   <title>ballMoving2</title>
 
   <style>
-    
-    body{
-			font-size:9pt;	
-		}
-
-    #wrap{
-      width:600px; height:500px; position:absolute; left:50%; margin-left:-300px; top:200px;
+    body {
+      font-size: 9pt;
     }
-			
-		#panel{
-			width:600px;
-			height:400px;
-			border:5px solid #999;
-			position:relative;
-      margin-bottom:30px; 
-		}
-		
-		#ball{
-      position:absolute;
-      left:252px;
-      top:150px;
-      width:80px;
-      height:80px;
-		}
-		
-		#nav{
-			text-align:center;
-			width:600px;
-		}
- 
-  
+
+    #wrap {
+      width: 600px;
+      height: 500px;
+      position: absolute;
+      left: 50%;
+      margin-left: -300px;
+      top: 200px;
+    }
+
+    #panel {
+      width: 600px;
+      height: 400px;
+      border: 5px solid #999;
+      position: relative;
+      margin-bottom: 30px;
+    }
+
+    #ball {
+      position: absolute;
+      left: 252px;
+      top: 150px;
+      width: 80px;
+      height: 80px;
+    }
+
+    #nav {
+      text-align: center;
+      width: 600px;
+    }
   </style>
 
 
@@ -46,38 +49,116 @@
 
 
   <script>
-      
-      
+
+
+    $(document).ready(function () {
+
       /*
-      공은 x축과 y축으로 동시에 움직입니다. 벽(border)에 닿을 경우 반대로 튕겨져 나가야 합니다.
-      기존의 방식에서 y축의 추가와 시작위치의 기준이 달라집니다.
-      
+      x와 y축방향이 있어야 하기에 stepX, stepY로 구분 필요
+      단조로운 움직임이 아닌 random함수를 통하여 변칙적인 움직임 주기
       */
-      
-      
- 
+      let ball = $('#ball')
+      let area = $('#panel')
+
+      let startStepX = ball.position().left;
+      let startStepY = ball.position().top;
+
+      let currentStepX = startStepX;
+      let currentStepY = startStepY;
+
+      // 이전과 달리 bar이 아닌 panel내에서 움직이기에 (area너비 - ball너비)로 계산
+      let endStepX = area.innerWidth() - ball.innerWidth()
+      let endStepY = area.innerHeight() - ball.innerHeight()
+
+      let timerX;
+      let timerY;
+
+
+      $('#start_btn').on('click', onStart);
+      $('#stop_btn').on('click', onStop);
+
+
+      // interval을 지정하여 움직임 표현 (공의 속도와 관련)
+      function onStart() {
+        onStop()
+        timerX = setInterval(ballMovingX, 20)
+        timerY = setInterval(ballMovingY, 20)
+      }
+
+      // X 좌표 움직임 난수 생성 및 이동 함수
+      let stepX = Math.random() * 10
+
+      function ballMovingX() {
+
+        ball.css({ 'left': currentStepX })
+        currentStepX += stepX;
+        console.log(stepX)
+
+        if (currentStepX > endStepX) {
+          stepX = - Math.random() * 10
+        } else if (currentStepX <= 0) {
+          stepX = Math.random() * 10
+
+        }
+      }
+
+      // Y 좌표 움직임 난수 생성 및 이동 함수
+      let stepY = Math.random() * 10
+
+      function ballMovingY() {
+
+        currentStepY += stepY;
+        ball.css({ 'top': currentStepY })
+        console.log(stepY)
+
+        if (currentStepY > endStepY) {
+          stepY = - Math.random() * 10
+        } else if (currentStepY <= 0) {
+          stepY = Math.random() * 10
+        }
+      }
+
+      // clearInterval로 정지
+      function onStop() {
+        clearInterval(timerX)
+        clearInterval(timerY)
+      }
+
+
+
+    })
+    
+    /*
+    공은 x축과 y축으로 동시에 움직입니다. 벽(border)에 닿을 경우 반대로 튕겨져 나가야 합니다.
+    기존의 방식에서 y축의 추가와 시작위치의 기준이 달라집니다.
+    */
+
+
+
   </script>
 
 
 </head>
+
 <body>
-  
-    <div id="wrap"> 
-		
-        <div id="panel"> 	
-          <div id="ball">
-            <img src="images/ball.png">
-          </div>
-        </div>
-        <div id="nav">
-          <button id="start_btn">시작</button>
-          <button id="stop_btn">멈춤</button>
-        </div>
-      
+
+  <div id="wrap">
+
+    <div id="panel">
+      <div id="ball">
+        <img src="images/ball.png">
       </div>
+    </div>
+    <div id="nav">
+      <button id="start_btn">시작</button>
+      <button id="stop_btn">멈춤</button>
+    </div>
+
+  </div>
 
 
 
 
 </body>
+
 </html>
