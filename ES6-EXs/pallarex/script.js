@@ -68,10 +68,14 @@ window.onload = () => {
     function moveScroll(index) {
         const targetP = posArr[index];
         // onWheel 이벤트에서 받아온 index에 해당하는 posarr에 들어잇는 offsettop 값 반환
+        // 사용자가 이동하려는 섹션의 페이지 상단으로부터의 거리
+
         const currentP = document.documentElement.scrollTp;
         // 현재 스크롤의 위치값을 받아옴
+
         const distP = targetP - currentP
-        // 현재 스크롤된 값에 이동할 위치값을 빼서 이동
+        // 현재 스크롤된 위치에서 목표 위치까지의 거리 계산
+
         const duration = 500
         let isPlay //이동하고 있는지 값을 매개변수로 처리
 
