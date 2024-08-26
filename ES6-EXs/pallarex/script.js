@@ -78,7 +78,7 @@ window.onload = () => {
         // 현재 스크롤된 위치에서 목표 위치까지의 거리 계산(목표위치에서 현재 위치를 뺀 값)
 
         const duration = 500
-        let isPlay 
+        let isPlay
         // 애니메이션이 시작된 시간을 저장하는 변수, 이 변수는 step함수에서 처음 time값이 주어질때 설정
 
         function step(time) {
@@ -106,11 +106,11 @@ window.onload = () => {
     }
 
 
-    function onScroll(){
+    function onScroll() {
         const scrollTop = document.documentElement.scrollTop;
         // console.log(scrollTop)
         [...dotList].forEach((el, idx) => {
-            if(scrollTop >= posArr[idx] + base){
+            if (scrollTop >= posArr[idx] + base) {
                 dotList.forEach((el) => {
                     el.children[0].classList.remove('on');
                 })
@@ -119,7 +119,8 @@ window.onload = () => {
                 [...content].forEach((el) => {
                     el.classList.remove('on')
                 })
-            }   content[idx].classList.add('on')
+            } 
+            content[idx].classList.add('on')
         })
 
 
