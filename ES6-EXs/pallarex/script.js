@@ -21,7 +21,7 @@ window.onload = () => {
     // 사이즈 조절시 resize 실행
     window.addEventListener('resize', onResize);
 
-    // window.addEventListener('wheel', onWheel)
+    window.addEventListener('scroll', onScroll);
 
     [...content].forEach(el => {
         el.addEventListener('wheel', onWheel)
