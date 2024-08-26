@@ -98,8 +98,8 @@ window.onload = () => {
             if (progress < duration) {
                 window.requestAnimationFrame(step)
             }
-
-
+            // progress가 duration보다 작다면 애니메이션이 진행되는 뜻이므로,
+            // window.requestAnimationFrame(step)를 호출해서 진행
         }
         window.requestAnimationFrame(step)
     }
