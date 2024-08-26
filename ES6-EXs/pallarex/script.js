@@ -9,6 +9,7 @@
 window.onload = () => {
     const content = document.querySelectorAll('section');
     const dotList = document.querySelectorAll('#navi > li');
+    let base = -500;
 
     let posArr = [];
     // secction이 가지고 있는 위치값을 배열로 반환
@@ -109,7 +110,7 @@ window.onload = () => {
         const scrollTop = document.documentElement.scrollTop;
         // console.log(scrollTop)
         [...dotList].forEach((el, idx) => {
-            if(scrollTop >= posArr[idx]){
+            if(scrollTop >= posArr[idx] + base){
                 dotList.forEach((el) => {
                     el.children[0].classList.remove('on')
                 })
