@@ -41,16 +41,6 @@ window.onload = () => {
         const itemLiW = document.querySelector('#slider2 ul li').offsetWidth;
         console.log(itemLiW)
 
-<<<<<<< HEAD
-        itemUl.style.transition = `margin-left ${speed}ms`;
-        itemUl.style.marginLeft = `-${itemLiW * 2}px`
-
-        setTimeout(() => {
-            itemUl.appendChild(itemUl.querySelector(`li:first-of-type`))
-            itemUl.style.marginLeft = `-${itemLiW}px`
-            itemUl.style.transition = '';
-        }, speed)
-=======
         console.log(itemUl)
 
         itemUl.style.marginLeft = `-${itemLiW * 2}px`
@@ -62,7 +52,6 @@ window.onload = () => {
             itemUl.transition = '';
         }, speed)
 
->>>>>>> origin/main
     }
 
     prev.addEventListener('click', function () {
