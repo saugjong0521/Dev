@@ -84,7 +84,7 @@ window.onload = () => {
             // step은 requestAnimationFrame이 실행될때 실행되는 콜백함수로 작성
             // 각 프레임에서 애니메이션을 진행하는 역할
 
-            console.log(time)   // requestAnimationFrame에 의해 자동으로 전달되는 현재 진행된 시간
+            //console.log(time)   // requestAnimationFrame에 의해 자동으로 전달되는 현재 진행된 시간
             if (!isPlay) {
                 isPlay = time   //애니메이션이 시작전인지 판단
                 // isPlay가 아직 시작되지 않았다면(undefined), 현재 time의 값을 isPlay에 저장해서
@@ -104,5 +104,10 @@ window.onload = () => {
         window.requestAnimationFrame(step)
     }
 
+
+    function onScroll(){
+        const scrollTop = document.documentElement.scrollTop;
+        
+    }
 
 }
