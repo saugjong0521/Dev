@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "765db543cbbcd0b7",
+        "id": "6a46d7c7e321d6cf",
         "type": "tabs",
         "children": [
           {
-            "id": "0dbab3a47054ba50",
+            "id": "7f0c6d5f4448ff35",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "conflict-files-obsidian-git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "conflict-files-obsidian-git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "conflict-files-obsidian-git.md"
+              }
             }
           }
         ]
@@ -138,29 +146,29 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0dbab3a47054ba50",
+  "active": "7f0c6d5f4448ff35",
   "lastOpenFiles": [
     "conflict-files-obsidian-git.md",
-    "ES6-EXs/clickEvent/script.js",
-    "ES6-EXs/clickEvent/css/reset.css",
-    "ES6-EXs/clickEvent/css/common.css",
-    "ES6-EXs/clickEvent/css",
-    "ES6-EXs/clickEvent/index.html",
+    "ES6-EXs/sm-menu/script.js",
+    "ES6-EXs/sm-menu/common.css",
+    "ES6-EXs/sm-menu/index.html",
+    "ES6-EXs/sm-menu",
+    "ES6-EXs/multiSlider/img/btnPrev.png",
+    "ES6-EXs/multiSlider/img/script.js",
+    "ES6-EXs/multiSlider/img/btnNext.png",
+    "ES6-EXs/multiSlider/img/bgPhone.png",
+    "ES6-EXs/multiSlider/img",
+    "ES6-EXs/multiSlider/style.css",
+    "ES6-EXs/multiSlider/script.js",
+    "ES6-EXs/multiSlider/index.html",
+    "ES6-EXs/multiSlider",
+    "ES6-EXs/fullscreen-gallery/img/landscape4.jpg",
+    "ES6-EXs/fullscreen-gallery/img/landscape3.jpg",
+    "ES6-EXs/fullscreen-gallery/img/landscape2.jpg",
+    "ES6-EXs/fullscreen-gallery/img/landscape1.jpg",
     "ES6-EXs/clickEvent/images/layer-sushi.png",
     "ES6-EXs/clickEvent/images/layer-rainbow.png",
     "ES6-EXs/clickEvent/images/layer-meat.png",
-    "ES6-EXs/clickEvent/images/layer-grass.png",
-    "ES6-EXs/clickEvent/images/layer-fish.png",
-    "ES6-EXs/clickEvent/images",
-    "ES6-EXs/clickEvent",
-    "ES6-EXs/새 폴더",
-    "ES6-EXs/multiSlider/img/script.js",
-    "ES6-EXs/multiSlider/img/btnPrev.png",
-    "ES6-EXs/multiSlider/img/btnNext.png",
-    "ES6-EXs/multiSlider/img/bgPhone.png",
-    "ES6-EXs/sm-menu/index.html",
-    "HW/images/ball.png",
-    "JS/swiper-dbslider 02/images2/images05.jpg",
     "JS/14.swiper/Swiper 구조.md",
     "Output/KUSD_S3/node_modules/send/node_modules/ms/readme.md",
     "Output/KUSD_S3/node_modules/send/node_modules/ms/license.md",
