@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "f9f91dcd8b1e64b0",
+        "id": "36d8cabe51169bfc",
         "type": "tabs",
         "children": [
           {
-            "id": "9dcf941a76279a12",
+            "id": "a1490641a0cac571",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "conflict-files-obsidian-git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "conflict-files-obsidian-git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "conflict-files-obsidian-git.md"
+              }
             }
           }
         ]
@@ -138,31 +146,30 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9dcf941a76279a12",
+  "active": "a1490641a0cac571",
   "lastOpenFiles": [
-    "HW/10_ballMoving_02.html",
-    "HW/images/ball.png",
-    "HW/images",
-    "JS/swiper-dbslider 02/slider02.html",
-    "JS/swiper-dbslider 02/images2/images05.jpg",
-    "JS/swiper-dbslider 02/images2/image04.jpg",
-    "JS/swiper-dbslider 02/images2/image03.jpg",
-    "JS/swiper-dbslider 02/images2/image02.jpg",
-    "JS/swiper-dbslider 02/images2/image01.jpg",
-    "JS/swiper-dbslider 02/images2/icon_sell_more.png",
-    "JS/swiper-dbslider 02/images2",
-    "JS/swiper-dbslider 02",
-    "JS/15.jQurey/cdplayer/index.html",
-    "JS/15.jQurey/cdplayer/image/링크.txt",
-    "JS/15.jQurey/cdplayer/image/iu_5.jpg",
-    "JS/15.jQurey/cdplayer/image/iu_4.jpg",
-    "JS/15.jQurey/cdplayer/image/iu_3.jpg",
-    "JS/15.jQurey/animation/css/reset.css",
-    "JS/15.jQurey/animation/css/style.css",
-    "JS/15.jQurey/ballMoving/images",
-    "JS/15.jQurey/ballMoving/09_ballMoving_01.html",
-    "JS/14.swiper/Swiper 구조.md",
     "conflict-files-obsidian-git.md",
+    "ES6-EXs/clickEvent/script.js",
+    "ES6-EXs/clickEvent/css/reset.css",
+    "ES6-EXs/clickEvent/css/common.css",
+    "ES6-EXs/clickEvent/css",
+    "ES6-EXs/clickEvent/index.html",
+    "ES6-EXs/clickEvent/images/layer-sushi.png",
+    "ES6-EXs/clickEvent/images/layer-rainbow.png",
+    "ES6-EXs/clickEvent/images/layer-meat.png",
+    "ES6-EXs/clickEvent/images/layer-grass.png",
+    "ES6-EXs/clickEvent/images/layer-fish.png",
+    "ES6-EXs/clickEvent/images",
+    "ES6-EXs/clickEvent",
+    "ES6-EXs/새 폴더",
+    "ES6-EXs/multiSlider/img/script.js",
+    "ES6-EXs/multiSlider/img/btnPrev.png",
+    "ES6-EXs/multiSlider/img/btnNext.png",
+    "ES6-EXs/multiSlider/img/bgPhone.png",
+    "ES6-EXs/sm-menu/index.html",
+    "HW/images/ball.png",
+    "JS/swiper-dbslider 02/images2/images05.jpg",
+    "JS/14.swiper/Swiper 구조.md",
     "Output/KUSD_S3/node_modules/send/node_modules/ms/readme.md",
     "Output/KUSD_S3/node_modules/send/node_modules/ms/license.md",
     "Output/KUSD_S3/node_modules/utils-merge/README.md",
