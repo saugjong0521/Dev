@@ -43,9 +43,9 @@ window.onload = () => {
         최신에는 wheel로 대체됨
         */
 
-        console.log(e)
+        //console.log(e)
         const deltaY = e.deltaY || -e.whelDelta || e.datail;
-        console.log(deltaY)
+        //console.log(deltaY)
 
         if (deltaY < 0) {
             if ([...content].indexOf(this) !== 0) {
