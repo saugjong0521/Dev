@@ -56,11 +56,11 @@ window.onload = () => {
 
         console.log(itemUl)
 
-        itemUl.style.marginLeft = `${itemLiW/2}px`
+        itemUl.style.marginLeft = `${itemLiW / 2}px`
         itemUl.style.transition = `margin-left ${speed}ms`;
 
         setTimeout(() => {
-            itemUl.appendChild(itemUl.querySelector(`li:first-of-type`))
+            itemUl.appendChild(itemUl.querySelector(`li:last-of-type`))
             itemUl.style.marginLeft = `-${itemLiW}px`
             itemUl.transition = '';
         }, speed)
