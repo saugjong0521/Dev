@@ -19,12 +19,12 @@ window.onload = () => {
     // 페이지 오픈시 실행
     onResize()
     // 사이즈 조절시 resize 실행
-    window.addEventListener('resize', onResize)
+    window.addEventListener('resize', onResize);
 
     // window.addEventListener('wheel', onWheel)
 
     [...content].forEach(el => {
-        window.addEventListener('wheel', onWheel)
+        el.addEventListener('wheel', onWheel)
     })
 
     function onResize() {
@@ -99,7 +99,7 @@ window.onload = () => {
                 window.requestAnimationFrame(step)
             }
             // progress가 duration보다 작다면 애니메이션이 진행되는 뜻이므로,
-            // window.requestAnimationFrame(step)를 호출해서 진행
+            // window.requestAnimationFrame(step)를 호출해서 요청
         }
         window.requestAnimationFrame(step)
     }
