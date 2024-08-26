@@ -40,19 +40,14 @@ window.onload = () => {
         const itemLiW = document.querySelector('#slider2 ul li').offsetWidth;
         console.log(itemLiW)
 
-
-
-        console.log(itemUl)
-
-        itemUl.style.marginLeft = `-${itemLiW * 2}px`
         itemUl.style.transition = `margin-left ${speed}ms`;
+        itemUl.style.marginLeft = `-${itemLiW * 2}px`
 
         setTimeout(() => {
             itemUl.appendChild(itemUl.querySelector(`li:first-of-type`))
             itemUl.style.marginLeft = `-${itemLiW}px`
-            itemUl.transition = '';
+            itemUl.style.transition = '';
         }, speed)
-
     }
 
     prev.addEventListener('click', function () {
