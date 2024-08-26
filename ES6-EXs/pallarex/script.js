@@ -26,8 +26,13 @@ window.onload = () => {
 
     [...content].forEach(el => {
         el.addEventListener('wheel', onWheel)
+    });
+
+    [...dotList].forEach(el => {
+        el.addEventListener('click',onClick)
     })
 
+    
     function onResize() {
         posArr = [...content].map((el) => el.offsetTop)
     }
