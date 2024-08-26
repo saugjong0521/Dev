@@ -81,9 +81,12 @@ window.onload = () => {
         // 애니메이션이 시작된 시간을 저장하는 변수, 이 변수는 step함수에서 처음 time값이 주어질때 설정
 
         function step(time) {
-            console.log(time)
+            // step은 requestAnimationFrame이 실행될때 실행되는 콜백함수로 작성
+            // 각 프레임에서 애니메이션을 진행하는 역할
+
+            console.log(time)   // requestAnimationFrame에 의해 자동으로 전달되는 현재 진행된 시간
             if (isPlay) {
-                isPlay = time //애니메이션이 시작전인지 판단
+                isPlay = time   //애니메이션이 시작전인지 판단
             }
             const progress = time - isPlay  //현재 애니메이션이 시작되고 지난 시간
             const percent = Math.min(progress / duration, 1)    // 애니메이션의 진행도 1은 최소한의 비율
