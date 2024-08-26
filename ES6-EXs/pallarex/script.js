@@ -85,12 +85,15 @@ window.onload = () => {
             // 각 프레임에서 애니메이션을 진행하는 역할
 
             console.log(time)   // requestAnimationFrame에 의해 자동으로 전달되는 현재 진행된 시간
-            if (isPlay) {
+            if (!isPlay) {
                 isPlay = time   //애니메이션이 시작전인지 판단
+                // isPlay가 아직 시작되지 않았다면(undefined), 현재 time의 값을 isPlay에 저장해서
+                // 애니메이션의 시작 시간을 저장
             }
-            const progress = time - isPlay  //현재 애니메이션이 시작되고 지난 시간
+            const progress = time - isPlay  //현재 애니메이션이 시작되고 경과된 시간
             const percent = Math.min(progress / duration, 1)    // 애니메이션의 진행도 1은 최소한의 비율
             window.scrollTo(0, currentP + distP + percent);
+            // 스크롤 위치를 현재 위치에서 목표 위치까지 percent 비율만큼 이동
 
             if (progress < duration) {
                 window.requestAnimationFrame(step)
