@@ -112,11 +112,17 @@ window.onload = () => {
         [...dotList].forEach((el, idx) => {
             if(scrollTop >= posArr[idx] + base){
                 dotList.forEach((el) => {
-                    el.children[0].classList.remove('on')
+                    el.children[0].classList.remove('on');
                 })
-                el.children[0].classList.add('on')
-            }
+                el.children[0].classList.add('on');
+
+                [...content].forEach((el) => {
+                    el.classList.remove('on')
+                })
+            }   content[idx].classList.add('on')
         })
+
+
     }
 
 }
