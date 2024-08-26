@@ -74,10 +74,11 @@ window.onload = () => {
         // 현재 스크롤의 위치값을 받아옴
 
         const distP = targetP - currentP
-        // 현재 스크롤된 위치에서 목표 위치까지의 거리 계산
+        // 현재 스크롤된 위치에서 목표 위치까지의 거리 계산(목표위치에서 현재 위치를 뺀 값)
 
         const duration = 500
-        let isPlay //이동하고 있는지 값을 매개변수로 처리
+        let isPlay 
+        // 애니메이션이 시작된 시간을 저장하는 변수, 이 변수는 step함수에서 처음 time값이 주어질때 설정
 
         function step(time) {
             console.log(time)
