@@ -18,16 +18,11 @@ window.onload = () => {
         itemUl.style.marginLeft = `-100%`;
         console.log(itemUl.style.height)
 
-        // ul 설정
-        itemUl.style.width = `${100 * itemSize}%`;
-        itemUl.style.height = `100%`;
-        itemUl.style.marginLeft = `-100%`;
-
-        // li 설정
         itemLi.forEach((el) => {
-            el.style.width = `${100 / itemSize}%`;
+            el.style.width = `${100 / itemCount}%`;
             el.style.height = `100%`;
-            el.style.float = 'left';
+            el.style.float = 'left'
+            itemUl.insertBefore(itemLi[itemCount - 1], itemUl.firstChild)
         })
     }
 
