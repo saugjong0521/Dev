@@ -31,7 +31,6 @@ window.onload = () => {
     [...dotList].forEach(el => {
         el.addEventListener('click',onClick)
     })
-
     
     function onResize() {
         posArr = [...content].map((el) => el.offsetTop)
@@ -127,8 +126,12 @@ window.onload = () => {
                 content[idx].classList.add('on')
             } 
         })
-
-
     }
+
+    function onClick(){
+        const idx = Array.from(dotList);
+        console.log(idx)
+    }
+
 
 }
