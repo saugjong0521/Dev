@@ -70,7 +70,7 @@ window.onload = () => {
         // onWheel 이벤트에서 받아온 index에 해당하는 posarr에 들어잇는 offsettop 값 반환
         // 사용자가 이동하려는 섹션의 페이지 상단으로부터의 거리
 
-        const currentP = document.documentElement.scrollTp;
+        const currentP = document.documentElement.scrollTop;
         // 현재 스크롤의 위치값을 받아옴
 
         const distP = targetP - currentP
@@ -109,11 +109,11 @@ window.onload = () => {
         const scrollTop = document.documentElement.scrollTop;
         // console.log(scrollTop)
         [...dotList].forEach((el, idx) => {
-            if(scrollTop >= posArr[idx]){
+            if(scrollTop >= posArr[idx] - 300){
                 dotList.forEach((el) => {
                     el.children[0].classList.remove('on')
                 })
-                el.children[0].classList.add('.on')
+                el.children[0].classList.add('on')
             }
         })
     }
