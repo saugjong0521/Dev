@@ -109,7 +109,7 @@ window.onload = () => {
         const scrollTop = document.documentElement.scrollTop;
         // console.log(scrollTop)
         [...dotList].forEach((el, idx) => {
-            if(scrollTop >= posArr[idx] - 300){
+            if(scrollTop >= posArr[idx]){
                 dotList.forEach((el) => {
                     el.children[0].classList.remove('on')
                 })
