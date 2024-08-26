@@ -21,7 +21,11 @@ window.onload = () => {
     // 사이즈 조절시 resize 실행
     window.addEventListener('resize', onResize)
 
-    window.addEventListener('wheel', onWheel)
+    // window.addEventListener('wheel', onWheel)
+
+    [...content].forEach(el => {
+        window.addEventListener('wheel', onWheel)
+    })
 
     function onResize() {
         posArr = [...content].map((el) => el.offsetTop)
