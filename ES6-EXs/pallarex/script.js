@@ -129,7 +129,7 @@ window.onload = () => {
     }
 
     function onClick(){
-        const idx = Array.from(dotList);
+        const idx = Array.from(dotList).indexOf(this);
         console.log(idx)
     }
 
