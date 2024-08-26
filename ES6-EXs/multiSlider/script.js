@@ -56,7 +56,7 @@ window.onload = () => {
 
         console.log(itemUl)
 
-        itemUl.style.marginLeft = `${itemLiW / 2}px`
+        itemUl.style.marginLeft = `0`
         itemUl.style.transition = `margin-left ${speed}ms`;
 
         setTimeout(() => {
