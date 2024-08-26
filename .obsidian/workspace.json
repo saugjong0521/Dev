@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "09e36e112afd050d",
+        "id": "813cd8b67f3739ae",
         "type": "tabs",
         "children": [
           {
-            "id": "8363ba2358212596",
+            "id": "795e7f0f93f2e7c1",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "conflict-files-obsidian-git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "conflict-files-obsidian-git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "conflict-files-obsidian-git.md"
+              }
             }
           }
         ]
@@ -138,29 +146,29 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8363ba2358212596",
+  "active": "795e7f0f93f2e7c1",
   "lastOpenFiles": [
-    "ES6-EXs/multiSlider/script2.js",
-    "ES6-EXs/multiSlider/img/script2.js",
-    "ES6-EXs/multiSlider/img/script.js",
-    "ES6-EXs/multiSlider/script.js",
-    "ES6-EXs/multiSlider/index.html",
-    "ES6-EXs/multiSlider/style.css",
-    "ES6-EXs/multiSlider/img/btnPrev.png",
-    "ES6-EXs/multiSlider/img/btnNext.png",
-    "ES6-EXs/multiSlider/img/bgPhone.png",
-    "ES6-EXs/multiSlider/img",
-    "ES6-EXs/multiSlider",
+    "conflict-files-obsidian-git.md",
+    "ES6-EXs/pallarex/script.js",
+    "ES6-EXs/pallarex/index.html",
+    "ES6-EXs/pallarex",
     "ES6-EXs/새 폴더",
-    "ES6-EXs/sm-menu/script.js",
-    "ES6-EXs/sm-menu/index.html",
-    "HW/images/ball.png",
-    "JS/14.swiper/swiper 구조.jpg",
-    "JS/15.jQurey/cdplayer/image/iu_5.jpg",
-    "JS/15.jQurey/cdplayer/image/iu_4.jpg",
-    "JS/15.jQurey/cdplayer/image/iu_3.jpg",
-    "JS/15.jQurey/cdplayer/image/iu_2.jpg",
-    "JS/15.jQurey/cdplayer/image/iu_1.jpg",
+    "ES6-EXs/perspectivePage/script/script.js",
+    "ES6-EXs/perspectivePage/script",
+    "ES6-EXs/perspectivePage/새 폴더",
+    "ES6-EXs/perspectivePage/index.html",
+    "ES6-EXs/perspectivePage/image/land_6.png",
+    "ES6-EXs/perspectivePage/image/land_5.png",
+    "ES6-EXs/perspectivePage/image/land_4.png",
+    "ES6-EXs/perspectivePage/image/land_3.png",
+    "ES6-EXs/perspectivePage/image/land_1.png",
+    "ES6-EXs/perspectivePage/image/land_2.png",
+    "ES6-EXs/perspectivePage/image/land_0.png",
+    "ES6-EXs/perspectivePage/image",
+    "ES6-EXs/perspectivePage/css/reset.css",
+    "HW/fullscreen-gallery_feedback/img/landscape4.jpg",
+    "HW/fullscreen-gallery_feedback/img/landscape3.jpg",
+    "HW/fullscreen-gallery_feedback/img/landscape2.jpg",
     "JS/14.swiper/Swiper 구조.md",
     "Output/KUSD_S3/node_modules/send/node_modules/ms/readme.md",
     "Output/KUSD_S3/node_modules/send/node_modules/ms/license.md",
@@ -184,7 +192,6 @@
     "Output/KUSD_S3/node_modules/serve-static/HISTORY.md",
     "Output/KUSD_S3/node_modules/send/README.md",
     "Output/KUSD_S3/node_modules/send/SECURITY.md",
-    "Output/KUSD_S3/node_modules/send/HISTORY.md",
-    "Output/KUSD_S3/node_modules/safer-buffer/Readme.md"
+    "Output/KUSD_S3/node_modules/send/HISTORY.md"
   ]
 }

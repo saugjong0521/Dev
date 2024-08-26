@@ -1,20 +1,22 @@
 window.onload = () => {
-
-
     const bgSlider = document.querySelector('#slider')
-    const slider = document.querySelector('#slider2')
-
+    const mSlider = document.querySelector('#slider2')
     const next = document.querySelector('.next')
     const prev = document.querySelector('.prev')
 
     const speed = 1000;
 
-    phoneSlider();
-    function phoneSlider() {
-        const itemUl = slider.querySelector('ul')
-        const itemLi = itemUl.querySelectorAll('li')
-        const itemSize = itemLi.length;
-        console.log(itemSize)
+    mobileSlider()
+    function mobileSlider() {
+        const itemUl = document.querySelector('#slider2 ul')
+        const itemLi = document.querySelectorAll('#slider2 ul li')
+        const itemCount = itemLi.length;
+        console.log(itemCount)
+
+        itemUl.style.width = `${100 * itemCount}%`;
+        itemUl.style.height = '100%';
+        itemUl.style.marginLeft = `-100%`;
+        console.log(itemUl.style.height)
 
 
         // ul 설정
@@ -27,19 +29,19 @@ window.onload = () => {
             el.style.width = `${100 / itemSize}%`;
             el.style.height = `100%`;
             el.style.float = 'left';
-        })
-        itemUl.insertBefore(itemLi[itemSize - 1], itemUl.firstChild)
+
     }
 
     next.addEventListener('click', function () {
-        nextSlider();
+        nextSlide()
     })
 
-    function nextSlider() {
-        const itemUl = slider.querySelector('ul')
-        const itemLiW = itemUl.querySelector('li').offsetWidth;
+    function nextSlide() {
+        const itemUl = document.querySelector('#slider2 ul')
+        const itemLiW = document.querySelector('#slider2 ul li').offsetWidth;
         console.log(itemLiW)
 
+<<<<<<< HEAD
         itemUl.style.transition = `margin-left ${speed}ms`;
         itemUl.style.marginLeft = `-${itemLiW * 2}px`
 
@@ -48,6 +50,42 @@ window.onload = () => {
             itemUl.style.marginLeft = `-${itemLiW}px`
             itemUl.style.transition = '';
         }, speed)
+=======
+        console.log(itemUl)
+
+        itemUl.style.marginLeft = `-${itemLiW * 2}px`
+        itemUl.style.transition = `margin-left ${speed}ms`;
+
+        setTimeout(() => {
+            itemUl.appendChild(itemUl.querySelector(`li:first-of-type`))
+            itemUl.style.marginLeft = `-${itemLiW}px`
+            itemUl.transition = '';
+        }, speed)
+
+>>>>>>> origin/main
     }
+
+    prev.addEventListener('click', function () {
+        prevSlide()
+    })
+
+    function prevSlide() {
+        const itemUl = document.querySelector('#slider2 ul')
+        const itemLiW = document.querySelector('#slider2 ul li').offsetWidth;
+        console.log(itemLiW)
+
+        console.log(itemUl)
+
+        itemUl.style.marginLeft = `${itemLiW/2}px`
+        itemUl.style.transition = `margin-left ${speed}ms`;
+
+        setTimeout(() => {
+            itemUl.appendChild(itemUl.querySelector(`li:first-of-type`))
+            itemUl.style.marginLeft = `-${itemLiW}px`
+            itemUl.transition = '';
+        }, speed)
+    }
+
+
 
 }
