@@ -119,8 +119,8 @@ window.onload = () => {
                 [...content].forEach((el) => {
                     el.classList.remove('on')
                 })
+                content[idx].classList.add('on')
             } 
-            content[idx].classList.add('on')
         })
 
 
