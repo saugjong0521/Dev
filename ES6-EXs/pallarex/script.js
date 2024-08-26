@@ -97,7 +97,7 @@ window.onload = () => {
             }
             const progress = time - isPlay  //현재 애니메이션이 시작되고 경과된 시간
             const percent = Math.min(progress / duration, 1)    // 애니메이션의 진행도 1은 최소한의 비율
-            window.scrollTo(0, currentP + distP + percent);
+            window.scrollTo(0, currentP + distP * percent);
             // 스크롤 위치를 현재 위치에서 목표 위치까지 percent 비율만큼 이동
 
             if (progress < duration) {
