@@ -53,7 +53,7 @@ window.onload = () => {
                 moveScroll(idx - 1)
             }
         } else {
-            if ([...content].indexOf(this) !== content.length - 1) { 
+            if ([...content].indexOf(this) !== content.length - 1) {
                 const idx = [...content].indexOf(this);
                 moveScroll(idx + 1)
             }
@@ -61,7 +61,7 @@ window.onload = () => {
 
     } // wheel
 
-    function moveScroll(index){
+    function moveScroll(index) {
         const targetP = posArr[index];
         // onWheel 이벤트에서 받아온 index에 해당하는 posarr에 들어잇는 offsettop 값 반환
         const currentP = document.documentElement.scrollTp;
@@ -71,20 +71,20 @@ window.onload = () => {
         const duration = 500
         let isPlay //이동하고 있는지 값을 매개변수로 처리
 
-        function step(time){
+        function step(time) {
             console.log(time)
-            if(isPlay){
+            if (isPlay) {
                 isPlay = time //애니메이션이 시작전인지 판단
             }
             const progress = time - isPlay  //현재 애니메이션이 시작되고 지난 시간
             const percent = Math.min(progress / duration, 1)    // 애니메이션의 진행도 1은 최소한의 비율
-            window.scrollTo(0 + currentP + distP + percent);
+            window.scrollTo(0, currentP + distP + percent);
 
-            if(progress < duration){
+            if (progress < duration) {
                 window.requestAnimationFrame(step)
             }
 
-            
+
         }
         window.requestAnimationFrame(step)
     }
