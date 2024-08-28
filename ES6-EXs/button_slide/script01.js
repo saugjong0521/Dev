@@ -114,6 +114,7 @@ function slider() {
                 timer = requestAnimationFrame(slide)
             } else {
                 cancelAnimationFrame(timer)
+                enableClick = true;
             }
 
             let result = currentVal + (opt.val - currentVal) * currentTime;
