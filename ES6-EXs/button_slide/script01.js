@@ -17,8 +17,9 @@ function slider(){
     function onClick (){
         const idx = Array.from(btnItem).indexOf(this)
         //console.log(idx)
-        const panelWidth = parseInt(getComputedStyle(slider).width)
-        console.log(panelWidth)
+        const panelWidth = parseInt(getComputedStyle(slider).width);
+        // getComputedStyle(선택자): 선택자에 있는 모든 css속성값을 반환
+        // console.log(panelWidth)
 
         moveItem(idx)
 
