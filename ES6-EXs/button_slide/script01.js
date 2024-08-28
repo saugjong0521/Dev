@@ -74,7 +74,7 @@ function slider() {
 
         function slide(time) {
             let lastTime = time - startActive;
-            let currentTime = lastTime / opt.duration;
+            let currentTime = lastTime / opt.duration + speed;
 
             if(currentTime < 1){
                 timer = requestAnimationFrame(slide)
