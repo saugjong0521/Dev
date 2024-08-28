@@ -50,6 +50,9 @@ function slider() {
             enableClick = false;
         }
 
+        circle.className = '';
+        circle.classList.add(`rot${div + 1}`)
+
 
         activeSlide(idx, btnItem);
         activeSlide(idx, panelItem);
