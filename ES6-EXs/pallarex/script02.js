@@ -42,7 +42,7 @@ function parallaxPage() {
 
     function moveSection(idx) {
         const targetOffset = sectionOffset[idx];
-        const currentScrollP = decument.documentElement.scrollTop;
+        const currentScrollP = document.documentElement.scrollTop;
         const scrollDisP = targetOffset - currentScrollP;
         const speed = 500;
         let isPlay;
