@@ -87,6 +87,7 @@ function parallaxPage() {
     }
     
     function onClick (){
-
+        const currentIdx = Array.from(section).indexOf(this);
+        navItem = currentIdx
     }
 }
