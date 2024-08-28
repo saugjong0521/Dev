@@ -27,6 +27,7 @@ function parallaxPage() {
     function bindingEvent() {
         window.addEventListener('resize', calcSectionOffset)
         window.addEventListener('scroll', onScroll)
+        window.addEventListener('click',onClick)
         section.forEach(el => el.addEventListener('wheel', onwheel))
     }
 
@@ -85,4 +86,7 @@ function parallaxPage() {
         navItem[activeIdx].children[0].classList.add('on')
     }
     
+    function onClick (){
+
+    }
 }
