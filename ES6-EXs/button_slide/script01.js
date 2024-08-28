@@ -38,7 +38,7 @@ function slider() {
         panelItem[idx].classList.add('on')
         */
 
-        if(enableClick){
+        if (enableClick = true) {
             activeSlide(idx, btnItem);
             activeSlide(idx, panelItem);
             moveSlide(panel, {
