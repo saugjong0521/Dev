@@ -76,6 +76,20 @@ function slider() {
             let lastTime = time - startActive;
             let currentTime = lastTime / opt.duration;
 
+            /*
+            currentTime은 애니메이션이 얼마나 진행되었는지 받아오는 변수
+            보통 0~1 사이의 값을 가지고 있다.
+            0 = 시작 전, 1 = 완료
+            */
+            if(currentTime < 0){
+                currentTime = 0
+            }
+            // currentTime이 0보다 작으면 currentTime을 0으로 설정
+            // 0보다 아래인 음수로 처리되는 경우를 방지하기 위해서 최소값을 0으로 제한
+            if(currentTime > 1){
+                currentTime = 1
+            }
+
             if(currentTime < 1){
                 timer = requestAnimationFrame(slide)
             } else {
