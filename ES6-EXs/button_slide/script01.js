@@ -79,10 +79,10 @@ function slider() {
         let currentVal; // 현재 애니메이션이 적용되는 객체의 속성을 전달해줄 변수
 
         if (opt.prop == 'opactiy') {
-            currentVal = parseFloat(getComputedStyle(el)[opt.prop])
+            currentVal = parseInt(getComputedStyle(el)[opt.prop])
             console.log(currentVal)
         } else {
-            currentVal = parseFloat(getComputedStyle(el)[opt.prop])
+            currentVal = parseInt(getComputedStyle(el)[opt.prop])
             console.log(currentVal)
         }
         // getComputedStyle로 left나 opacity의 속성값을 가져옴
