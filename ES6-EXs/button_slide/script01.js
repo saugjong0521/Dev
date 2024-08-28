@@ -134,3 +134,14 @@ function slider() {
 
 
 }
+
+
+/*
+
+requestAnimationFrame과 setInterval의 차이점
+
+requestAnimationFrame
+- 브라우저가 페이지를 랜더링할때 콜백함수로 등록해서 사용
+- 브라우저가 표현할수 있는 최적의 프레임(60fps, 약 16ms마다 한번씩 프레임 변경)
+
+*/
