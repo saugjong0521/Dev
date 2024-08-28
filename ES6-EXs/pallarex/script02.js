@@ -27,7 +27,7 @@ function parallaxPage() {
     function bindingEvent() {
         window.addEventListener('resize', calcSectionOffset)
         window.addEventListener('scroll', onScroll)
-        window.addEventListener('click',onClick)
+        navItem.addEventListener('click',onClick)
         section.forEach(el => el.addEventListener('wheel', onwheel))
     }
 
