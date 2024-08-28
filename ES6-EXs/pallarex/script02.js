@@ -19,7 +19,7 @@ function parallaxPage() {
 
     function calcSectionOffset() {
         sectionOffset = Array.from(section).map(el => el.offsetTop)
-        
+        console.log(sectionOffset)
     }
 
 }
