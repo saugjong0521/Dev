@@ -18,8 +18,6 @@ function slider() {
     
     btnItem.forEach(el => {
         el.addEventListener('click', onClick)
-        enableClick = false;
-
     })
 
     function onClick() {
