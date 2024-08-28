@@ -11,7 +11,7 @@ function slider() {
 
     let speed = 500;
     let timer;
-    let enableClick = true; // 애니메이션 중, 중복 클릭이되어 이상해지는 것을 방지
+    let enableClick = false; // 애니메이션 중, 중복 클릭이되어 이상해지는 것을 방지
 
     const circle = document.querySelector('#clrcle');
 
@@ -48,6 +48,8 @@ function slider() {
                 duration: speed
             })
         }
+        enableClick = false;
+
 
         activeSlide(idx, btnItem);
         activeSlide(idx, panelItem);
