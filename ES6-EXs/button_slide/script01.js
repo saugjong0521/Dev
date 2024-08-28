@@ -21,7 +21,7 @@ function slider(){
         // getComputedStyle(선택자): 선택자에 있는 모든 css속성값을 반환
         // console.log(panelWidth)
 
-        moveItem(idx)
+        activeSlide(idx)
 
     }
 }
