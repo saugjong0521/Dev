@@ -111,7 +111,6 @@ function slider() {
                 el.style[opt.prop] = result + 'px';
             }
         }
-
     }
 
 
