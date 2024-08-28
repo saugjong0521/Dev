@@ -86,6 +86,7 @@ function slider() {
             console.log(currentVal)
         }
         // getComputedStyle로 left나 opacity의 속성값을 가져옴
+        // opacity는 소숫점을 사용하기에 parseFloat, left는 정수이므로 parseInt
 
         if (currentVal !== opt.val) {
             requestAnimationFrame(slide)
