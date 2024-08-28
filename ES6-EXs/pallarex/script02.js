@@ -86,8 +86,8 @@ function parallaxPage() {
         navItem[activeIdx].children[0].classList.add('on')
     }
     
-    function onClick (){
+    function onClick (e){
         const currentIdx = Array.from(section).indexOf(this);
-        navItem = currentIdx
+        navItem[e] = `${currentIdx}`
     }
 }
