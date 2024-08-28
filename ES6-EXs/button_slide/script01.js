@@ -9,6 +9,8 @@ function slider(){
     const panelItem = document.querySelectorAll('.panel > li');
     const btnItem = document.querySelectorAll('.navi > li');
 
+    let speed = 500;
+
     const circle = document.querySelector('#clrcle');
 
     btnItem.forEach(el => {
@@ -36,7 +38,11 @@ function slider(){
 
         activeSlide(idx, btnItem);
         activeSlide(idx, panelItem);
-        moveSlide(idx, )
+        moveSlide(panel, {
+            prop: 'left',
+            val: panelWidth * idx,
+            duration: speed
+        })
 
         function activeSlide (idx, item){
             item.forEach(el => {
