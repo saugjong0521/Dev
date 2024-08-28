@@ -38,6 +38,7 @@ function parallaxPage() {
         const deltaY = e.deltaY || -e.wheelDelta || e.detail;
         console.log(e.deltaY)
         console.log(-e.wheelDelta)
+        // wheelDelta는 아래가 음수이기에 -값을 줌
 
         const currentIdx = Array.from(section).indexOf(this);
 
