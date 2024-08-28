@@ -70,6 +70,7 @@ function slider() {
         item[idx].classList.add('on')
     }
 
+    // opt는 옵션, {prop: 'left', val: -panelWidth * idx, duration: speed}); 전체를 받아옴 (opt는 option의 약자)
     function moveSlide(el, opt) {
         // console.log(opt)
         let startActive = performance.now();
