@@ -18,7 +18,7 @@ function parallaxPage() {
         bindingEvent()
     }
 
-    
+
     function calcSectionOffset() {
         sectionOffset = Array.from(section).map(el => el.offsetTop)
         console.log(sectionOffset)
@@ -84,4 +84,5 @@ function parallaxPage() {
         section[activeIdx].classList.add('on')
         navItem[activeIdx].children[0].classList.add('on')
     }
+    
 }
