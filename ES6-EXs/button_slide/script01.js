@@ -21,6 +21,7 @@ function slider(){
         // getComputedStyle(선택자): 선택자에 있는 모든 css속성값을 반환
         // console.log(panelWidth)
 
+        /*
         btnItem.forEach(el => {
             el.classList.remove('on')
         })
@@ -30,5 +31,18 @@ function slider(){
             el.classList.remove('on')
         })
         panelItem[idx].classList.add('on')
+        */
+
+        activeSlide(idx, btnItem);
+        activeSlide(idx, panelItem);
+
+        function activeSlide (idx, item){
+            item.forEach(el => {
+                el.classList.remove('on')
+            })
+            item[idx].classList.add('on')
+        }
+
+
     }
 }
