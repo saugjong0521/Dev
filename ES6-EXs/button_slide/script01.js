@@ -41,7 +41,7 @@ function slider() {
         activeSlide(idx, panelItem);
         moveSlide(panel, {
             prop: 'left',
-            val: panelWidth * idx,
+            val: -panelWidth * idx,
             duration: speed
         })
     }
@@ -79,7 +79,14 @@ function slider() {
             if(currentTime < 1){
                 timer = requestAnimationFrame(slide)
             } else {
-                cancelAnimationFrame(slide)
+                cancelAnimationFrame(timer)
+            }
+
+            let result = currentVal + (opt.val - currentVal) ;
+            if(opt.prop === 'opacity'){
+                el.style[opt.prop] = result;
+            } else {
+                el.style[opt.prop] = result + 'px';
             }
         }
 
