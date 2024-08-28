@@ -1,3 +1,6 @@
+// 리팩토링
+
+
 window.onload = () => {
     parallaxPage()
 }
@@ -38,7 +41,7 @@ function parallaxPage() {
         if (deltaY < 0 && currentIdx > 0) {
             // console.log(currentIdx - 1)
             moveSection(currentIdx - 1)
-        } else if (deltaY > 0 && currentIdx < 0 && section.length - 1) {
+        } else if (deltaY > 0 && currentIdx < section.length - 1) {
             // console.log(currentIdx + 1)
             moveSection(currentIdx + 1)
         }
