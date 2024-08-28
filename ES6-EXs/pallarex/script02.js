@@ -27,8 +27,8 @@ function parallaxPage() {
     function bindingEvent() {
         window.addEventListener('resize', calcSectionOffset)
         window.addEventListener('scroll', onScroll)
-        navItem.addEventListener('click',onClick)
         section.forEach(el => el.addEventListener('wheel', onwheel))
+        navItem.forEach(el => el.addEventListener('click', onClick))
     }
 
     function onwheel(e) {
@@ -71,22 +71,22 @@ function parallaxPage() {
 
         //현재 활성화 되고 있는 인덱스 찾기
         for (let i = 0; i < sectionOffset.length; i++) {
-            if(scrollTop >= sectionOffset[i] + base){
+            if (scrollTop >= sectionOffset[i] + base) {
                 activeIdx = i;
             }
         }
-        section.forEach((el)=>{
+        section.forEach((el) => {
             el.classList.remove('on')
         })
-        navItem.forEach((el)=>{
+        navItem.forEach((el) => {
             el.children[0].classList.remove('on')
         })
 
         section[activeIdx].classList.add('on')
         navItem[activeIdx].children[0].classList.add('on')
     }
-    
-    function onClick (){
+
+    function onClick() {
         const idx = Array.from(navItem).indexOf(this);
         console.log(idx)
         moveSection(idx)
