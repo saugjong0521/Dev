@@ -15,7 +15,7 @@ function slider() {
 
     const circle = document.querySelector('#clrcle');
 
-    
+
     btnItem.forEach(el => {
         el.addEventListener('click', onClick)
     })
@@ -50,10 +50,6 @@ function slider() {
             enableClick = false;
         }
 
-        circle.className = '';
-        circle.classList.add(`rot${idx + 1}`)
-
-
         activeSlide(idx, btnItem);
         activeSlide(idx, panelItem);
         moveSlide(panel, {
@@ -61,6 +57,10 @@ function slider() {
             val: -panelWidth * idx,
             duration: speed
         })
+
+        circle.className = '';
+        circle.classList.add(`rot${idx + 1}`)
+
     }
 
     function activeSlide(idx, item) {
