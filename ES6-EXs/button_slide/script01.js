@@ -46,9 +46,9 @@ function slider() {
                 prop: 'left',
                 val: -panelWidth * idx,
                 duration: speed
-            })
+            });
+            enableClick = false;
         }
-        enableClick = false;
 
 
         activeSlide(idx, btnItem);
