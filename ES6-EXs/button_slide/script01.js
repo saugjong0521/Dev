@@ -82,7 +82,7 @@ function slider() {
                 cancelAnimationFrame(timer)
             }
 
-            let result = currentVal + (opt.val - currentVal) ;
+            let result = currentVal + (opt.val - currentVal) * currentTime;
             if(opt.prop === 'opacity'){
                 el.style[opt.prop] = result;
             } else {
