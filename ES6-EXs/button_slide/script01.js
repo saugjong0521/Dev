@@ -15,8 +15,11 @@ function slider() {
 
     const circle = document.querySelector('#clrcle');
 
+    
     btnItem.forEach(el => {
         el.addEventListener('click', onClick)
+        enableClick = false;
+
     })
 
     function onClick() {
@@ -46,8 +49,6 @@ function slider() {
                 val: -panelWidth * idx,
                 duration: speed
             })
-            enableClick = false;
-
         }
 
         activeSlide(idx, btnItem);
