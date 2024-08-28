@@ -53,7 +53,16 @@ function slider() {
     }
 
     function moveSlide(el, opt) {
-        console.log(opt)
+        // console.log(opt)
+        let startActive = performance.now();
+        //performance.now(): 애니메이션이 실행되는데 걸리는 시간을 모니터링
+        console.log(startActive)
+        let currentVal; // 현재 애니메이션이 적용되는 객체의 속성을 전달해줄 변수
+
+        if(opt.prop == 'opactiy'){
+            currentVal = parseFloat(getComputedStyle(el)[opt.prop])
+        }
+
     }
 
 
