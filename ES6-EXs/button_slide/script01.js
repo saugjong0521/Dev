@@ -5,6 +5,7 @@ window.onload = () => {
 function slider(){
 
     const slider = document.querySelector('#slider');
+    const panel = document.querySelector('.panel')
     const panelItem = document.querySelectorAll('.panel > li');
     const btnItem = document.querySelectorAll('.navi > li');
 
@@ -35,6 +36,7 @@ function slider(){
 
         activeSlide(idx, btnItem);
         activeSlide(idx, panelItem);
+        moveSlide(idx, )
 
         function activeSlide (idx, item){
             item.forEach(el => {
