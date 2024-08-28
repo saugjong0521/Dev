@@ -61,6 +61,10 @@ function slider() {
 
         if(opt.prop == 'opactiy'){
             currentVal = parseFloat(getComputedStyle(el)[opt.prop])
+            console.log(currentVal)
+        } else{
+            currentVal = parseInt(getComputedStyle(el)[opt.prop])
+            console.log(currentVal)
         }
 
     }
