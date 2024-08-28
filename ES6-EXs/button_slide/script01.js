@@ -51,7 +51,7 @@ function slider() {
         }
 
         circle.className = '';
-        circle.classList.add(`rot${div + 1}`)
+        circle.classList.add(`rot${idx + 1}`)
 
 
         activeSlide(idx, btnItem);
