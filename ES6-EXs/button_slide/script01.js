@@ -16,6 +16,11 @@ function slider(){
 
     function onClick (){
         const idx = Array.from(btnItem).indexOf(this)
-        console.log(idx)
+        //console.log(idx)
+        const panelWidth = parseInt(getComputedStyle(slider).width)
+        console.log(panelWidth)
+
+        moveItem(idx)
+
     }
 }
