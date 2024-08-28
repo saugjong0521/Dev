@@ -46,8 +46,9 @@ function slider() {
                 val: -panelWidth * idx,
                 duration: speed
             })
+            enableClick = false;
+
         }
-        enableClick = false;
 
         activeSlide(idx, btnItem);
         activeSlide(idx, panelItem);
