@@ -63,7 +63,7 @@ function slider() {
             currentVal = parseFloat(getComputedStyle(el)[opt.prop])
             console.log(currentVal)
         } else{
-            currentVal = parseInt(getComputedStyle(el)[opt.prop])
+            currentVal = parseFloat(getComputedStyle(el)[opt.prop])
             console.log(currentVal)
         }
 
