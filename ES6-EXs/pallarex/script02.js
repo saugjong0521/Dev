@@ -15,6 +15,7 @@ function parallaxPage() {
         section = document.querySelectorAll('section');
         navItem = document.querySelectorAll('#navi > li');
         calcSectionOffset()
+        bindingEvent()
     }
 
     function calcSectionOffset() {
@@ -27,7 +28,7 @@ function parallaxPage() {
         section.forEach(el => el.addEventListener('wheel', onwheel))
     }
 
-    function onWheel(e) {
+    function onwheel(e) {
         const deltaY = e.deltaY || -e.wheelDelta || e.detail;
         const currentIdx = Array.from(section).indexOf(this);
 
