@@ -70,7 +70,7 @@ function slider() {
         item[idx].classList.add('on')
     }
 
-    // opt는 옵션, {prop: 'left', val: -panelWidth * idx, duration: speed}); 전체를 받아옴 (opt는 option의 약자)
+    // opt는 {prop: 'left', val: -panelWidth * idx, duration: speed}); 전체를 받아옴
     function moveSlide(el, opt) {
         // console.log(opt)
         let startActive = performance.now();
@@ -85,6 +85,7 @@ function slider() {
             currentVal = parseFloat(getComputedStyle(el)[opt.prop])
             console.log(currentVal)
         }
+        // getComputedStyle로 left나 opacity의 속성값을 가져옴
 
         if (currentVal !== opt.val) {
             requestAnimationFrame(slide)
