@@ -93,8 +93,11 @@ function slider() {
         }
 
         function slide(time) {
+            // slide는 requestAnimationFrame의 프레임을 처리
             let lastTime = time - startActive;
+            // 애니메이션이 시작된 이후 경과된 시간을 계산
             let currentTime = lastTime / opt.duration;
+            // 전체 애니메이션에 대한 경과시간을 비율(1이면 완료되야 함)
 
             /*
             currentTime은 애니메이션이 얼마나 진행되었는지 받아오는 변수
