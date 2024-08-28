@@ -69,12 +69,12 @@ function parallaxPage() {
 
         //현재 활성화 되고 있는 인덱스 찾기
         for (let i = 0; i < sectionOffset.length; i++) {
-            if(scrollTop >= sectionOffset[i] + base){
+            if(scrollTop >= sectionOffset[i] - base){
                 activeIdx = i;
             }
         }
 
-        section[activeIdx].children[0].classList.add('on')
-        navItem[activeIdx].classList.add('on')
+        section[activeIdx].classList.add('on')
+        navItem[activeIdx].children[0].classList.add('on')
     }
 }
