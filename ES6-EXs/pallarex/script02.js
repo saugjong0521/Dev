@@ -25,6 +25,7 @@ function parallaxPage() {
 
     function bindingEvent() {
         window.addEventListener('resize', calcSectionOffset)
+        window.addEventListener('scroll', onScroll)
         section.forEach(el => el.addEventListener('wheel', onwheel))
     }
 
@@ -49,17 +50,26 @@ function parallaxPage() {
         let isPlay;
 
         function scrollMotion(step) {
-            if (!isPlay) { 
+            if (!isPlay) {
                 isPlay = step;
             }
             const progress = step - isPlay;
             const percent = Math.min(progress / speed, 1)
             window.scrollTo(0, currentScrollP + scrollDisP * percent);
-            if(progress < speed){
+            if (progress < speed) {
                 window.requestAnimationFrame(scrollMotion);
             }
         }
         window.requestAnimationFrame(scrollMotion);
     }
 
+    function onScroll() {
+        const scrollTop = document.documentElement.scrollTop;
+        let activeIdx = 0;
+
+        //현재 활성화 되고 있는 인덱스 찾기
+        for (let i = 0; i < sectionOffset.length; i++) {
+
+        }
+    }
 }
