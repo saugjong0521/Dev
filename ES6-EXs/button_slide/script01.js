@@ -67,6 +67,10 @@ function slider() {
             console.log(currentVal)
         }
 
+        if(currentVal !== opt.val){
+            requestAnimationFrame(slide)
+        }
+
     }
 
 
