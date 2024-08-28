@@ -88,6 +88,7 @@ function parallaxPage() {
     
     function onClick (){
         const idx = Array.from(navItem).indexOf(this);
+        console.log(idx)
         moveSection(idx)
     }
 }
