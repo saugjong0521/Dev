@@ -2,7 +2,7 @@ window.onload = () => {
     slider();
 }
 
-function slider(){
+function slider() {
 
     const slider = document.querySelector('#slider');
     const panel = document.querySelector('.panel')
@@ -17,7 +17,7 @@ function slider(){
         el.addEventListener('click', onClick)
     })
 
-    function onClick (){
+    function onClick() {
         const idx = Array.from(btnItem).indexOf(this)
         //console.log(idx)
         const panelWidth = parseInt(getComputedStyle(slider).width);
@@ -43,14 +43,19 @@ function slider(){
             val: panelWidth * idx,
             duration: speed
         })
-
-        function activeSlide (idx, item){
-            item.forEach(el => {
-                el.classList.remove('on')
-            })
-            item[idx].classList.add('on')
-        }
-
-
     }
+
+    function activeSlide(idx, item) {
+        item.forEach(el => {
+            el.classList.remove('on')
+        })
+        item[idx].classList.add('on')
+    }
+
+    function moveSlide(el, opt) {
+        console.log(opt)
+    }
+
+
+
 }
