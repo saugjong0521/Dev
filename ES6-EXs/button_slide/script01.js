@@ -81,23 +81,29 @@ function slider() {
             보통 0~1 사이의 값을 가지고 있다.
             0 = 시작 전, 1 = 완료
             */
-            if(currentTime < 0){
-                currentTime = 0
-            }
+
+            console.log(currentTime)
+
             // currentTime이 0보다 작으면 currentTime을 0으로 설정
             // 0보다 아래인 음수로 처리되는 경우를 방지하기 위해서 최소값을 0으로 제한
-            if(currentTime > 1){
+            if (currentTime < 0) {
+                currentTime = 0
+            }
+            // currentTime이 1보다 클 경우 최대값을 1으로 설정
+            // duration값보다 애니메이션이 더 진행되는 경우를 방지
+            if (currentTime > 1) {
                 currentTime = 1
             }
 
-            if(currentTime < 1){
+
+            if (currentTime < 1) {
                 timer = requestAnimationFrame(slide)
             } else {
                 cancelAnimationFrame(timer)
             }
 
             let result = currentVal + (opt.val - currentVal) * currentTime;
-            if(opt.prop === 'opacity'){
+            if (opt.prop === 'opacity') {
                 el.style[opt.prop] = result;
             } else {
                 el.style[opt.prop] = result + 'px';
