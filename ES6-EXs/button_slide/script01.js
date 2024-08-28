@@ -25,5 +25,10 @@ function slider(){
             el.classList.remove('on')
         })
         btnItem[idx].classList.add('on')
+
+        panelItem.forEach(el => {
+            el.classList.remove('on')
+        })
+        panelItem[idx].classList.add('on')
     }
 }
