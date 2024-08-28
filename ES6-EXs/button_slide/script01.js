@@ -13,7 +13,7 @@ function slider() {
     let timer;
     let enableClick = false; // 애니메이션 중, 중복 클릭이되어 이상해지는 것을 방지
 
-    const circle = document.querySelector('#clrcle');
+    const circle = document.querySelector('#circle');
 
 
     btnItem.forEach(el => {
