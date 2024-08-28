@@ -36,6 +36,9 @@ function parallaxPage() {
 
     function onwheel(e) {
         const deltaY = e.deltaY || -e.wheelDelta || e.detail;
+        console.log(e.deltaY)
+        console.log(-e.wheelDelta)
+
         const currentIdx = Array.from(section).indexOf(this);
 
         if (deltaY < 0 && currentIdx > 0) {
