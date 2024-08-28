@@ -11,6 +11,7 @@ function slider() {
 
     let speed = 500;
     let timer;
+    let enableClick = true; // 애니메이션 중, 중복 클릭이되어 이상해지는 것을 방지
 
     const circle = document.querySelector('#clrcle');
 
@@ -36,6 +37,16 @@ function slider() {
         })
         panelItem[idx].classList.add('on')
         */
+
+        if(enableClick){
+            activeSlide(idx, btnItem);
+            activeSlide(idx, panelItem);
+            moveSlide(panel, {
+                prop: 'left',
+                val: -panelWidth * idx,
+                duration: speed
+            })
+        }
 
         activeSlide(idx, btnItem);
         activeSlide(idx, panelItem);
