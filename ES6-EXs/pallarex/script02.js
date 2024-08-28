@@ -73,6 +73,12 @@ function parallaxPage() {
                 activeIdx = i;
             }
         }
+        section.forEach((el)=>{
+            el.classList.remove('on')
+        })
+        navItem.forEach((el)=>{
+            el.children[0].classList.remove('on')
+        })
 
         section[activeIdx].classList.add('on')
         navItem[activeIdx].children[0].classList.add('on')
