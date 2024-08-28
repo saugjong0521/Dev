@@ -47,6 +47,7 @@ function slider() {
                 duration: speed
             })
         }
+        enableClick = false;
 
         activeSlide(idx, btnItem);
         activeSlide(idx, panelItem);
