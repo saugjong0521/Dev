@@ -85,7 +85,7 @@ function slider() {
             currentVal = parseInt(getComputedStyle(el)[opt.prop])
             console.log(currentVal)
         }
-        // getComputedStyle로 left나 opacity의 속성값을 가져옴
+        // getComputedStyle로 left나 opacity의 속성값을 가져옴 (getComputedStyle(선택자)[스타일])
         // opacity는 소숫점을 사용하기에 parseFloat, left는 정수이므로 parseInt
 
         if (currentVal !== opt.val) {
