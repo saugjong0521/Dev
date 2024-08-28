@@ -82,7 +82,7 @@ function slider() {
             0 = 시작 전, 1 = 완료
             */
 
-            console.log(currentTime)
+            console.log(currentTime)    // 1 초과
 
             // currentTime이 0보다 작으면 currentTime을 0으로 설정
             // 0보다 아래인 음수로 처리되는 경우를 방지하기 위해서 최소값을 0으로 제한
@@ -94,6 +94,8 @@ function slider() {
             if (currentTime > 1) {
                 currentTime = 1
             }
+            console.log(currentTime)    // 1으로 고정
+
 
 
             if (currentTime < 1) {
