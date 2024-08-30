@@ -37,7 +37,7 @@
     display: flex;
     align-items: center;
     transition: transform 500ms linear;
-    transform-origin: center center 40px;
+    transform-origin: center bottom
 }
 .container .word-item .word-box.in{
     opacity: 1;
