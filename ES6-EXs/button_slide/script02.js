@@ -80,20 +80,33 @@ class Slider {
                 }
             })
         })
-    }
 
-    /*
-    구버전식 함수 -> 화살표 함수에 비해 구조가 매우 복잡해진다
-    bindingEvent() {
-        const self = this
-        this.btnsItem.forEach(function (el) {
-            el.addEventListener('click', function () {
-                let activeIndex = self.btnsArr.indexOf(el)
-                console.log(activeIndex)
-                console.log(this)
+
+        /*
+        구버전식 함수 -> 화살표 함수에 비해 구조가 매우 복잡해진다 (this의 의미가 다르기에)
+        bindingEvent() {
+            const self = this
+            this.btnsItem.forEach(function (el) {
+                el.addEventListener('click', function () {
+                    let activeIndex = self.btnsArr.indexOf(el)
+                    console.log(activeIndex)
+                    console.log(this)
+                })
             })
-        })
-    }
+        }
+            */
+    } // event
+
+    animate(item, option) {
+        let startActive = performance.now()
+        let currentVal;
+        let self = this;
+        /*
+        this를 사용할때 변수에 담아서 사용하는 것과 this자체로 사용하는 것의 차이
+        함수와 콜백함수를 처리할때 특정 컨텍스트 내에서 사용할때 차이가 발생
+        let self = this 는 특정 컨텍스트 내부에서 this의 값을 캡쳐해서 저장한 값이 담겨져
+        의미를 변하지 않도록 한다.
         */
+    }
 
 }
