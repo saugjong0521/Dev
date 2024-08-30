@@ -141,9 +141,6 @@ class Slider {
                 self.timer = requestAnimationFrame(active)
             } else {
                 cancelAnimationFrame(self.timer);
-                if(option.callback){
-                    option.callback
-                }
                 self.enableClick = true;
             }
 
