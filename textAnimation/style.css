@@ -37,6 +37,8 @@
 }
 
 .container .word-item .word-box.in span{
-    transformX: rotate(45deg);
+    transform: rotateX(0deg);
 }
-
+.container .word-item .word-box.out span{
+    transform: rotateX(90deg);
+}
