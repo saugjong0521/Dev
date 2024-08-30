@@ -18,10 +18,24 @@
     opacity: 0;/*초기값 상태*/
 }
 
-.container .word-item .word-box{
+.container .word-item .box01 span{
+    color: orange;
+}
+.container .word-item .box02 span{
+    color: cyan;
+}
+.container .word-item .box03 span{
+    color: lime;
+}
+
+.container .word-item .word-box span{
     font-size: 100px;
     font-weight: 900;
     font-family: "Noto Sans";
     display: flex;
     align-items: center;
 }
+
+
+
+
