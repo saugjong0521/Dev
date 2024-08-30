@@ -140,12 +140,12 @@ class Slider {
                 self.timer = requestAnimationFrame(active)
             } else {
                 cancelAnimationFrame(self.timer);
-
                 self.enableClick = true;
             }
             if(option.callback){
                 option.callback();
             }
+            
             let result = currentVal + (option.val - currentVal) * currentTime;
 
             if (option.prop === 'opacity') {
