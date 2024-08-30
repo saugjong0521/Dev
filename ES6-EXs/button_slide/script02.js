@@ -67,6 +67,17 @@ class Slider {
                  - this는 인스턴스 자체를 의미하기 때문에 현재 이벤트에서 찾으려는 객체와 거리가 멀다.
                  (일반 함수에서 this와 class에서의 this의 차이)
                 */
+               
+                 if(isOn){
+                    return;
+                 } // isOn이 true이면 슬라이드를 실행하지 않고 즉시 종료
+                 if(this.enableClick){
+                    this.animate(this.panel,{
+                        prop: 'left',
+                        val: -panelWidth * activeIndex,
+                        duration: this.slideSpeed
+                    })
+                 }
             })
         })
     }
