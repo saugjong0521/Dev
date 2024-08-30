@@ -14,8 +14,10 @@ function textAnimation() {
 
         currentIndex = (currentIndex + 1) % item.length;
         item[currentIndex].classList.remove('out');
+        item[currentIndex].classList.add('reset');
         item[currentIndex].style.opacity = 0;
 
+        item[currentIndex].classList.remove('reset');
         item[currentIndex].classList.add('in');
         item[currentIndex].style.opacity = 1;
     }
