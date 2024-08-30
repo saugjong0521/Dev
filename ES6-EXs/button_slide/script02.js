@@ -69,10 +69,11 @@ class Slider {
     }
 
     bindingEvent(){
+        const self = this
         this.btnsItem.forEach(function(el){
             el.addEventListener('click', function(){
-                let activeIndex = this.btnsArr.indexOf(el)
-                console.log(activeIndex)
+                let activeIndex = self.btnsArr.indexOf(el)
+            /console.log(activeIndex)
                 console.log(this)
             })
         })
