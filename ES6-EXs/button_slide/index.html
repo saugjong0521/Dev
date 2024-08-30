@@ -12,7 +12,12 @@
             new Slider('#slider',{
                 panel : '.panel',
                 btns : '.navi',
-                slideSpeed : 1000
+                slideSpeed : 1000,
+                callback : (idx) => {
+                    let circle = document.querySelector('#circle');
+                    circle.className = '';
+                    circle.classList.add(`rot${idx}`)
+                }
             })
         }
     </script>
