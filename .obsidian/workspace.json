@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "3446716b47e5fa8c",
+        "id": "e4ed4fd02d018594",
         "type": "tabs",
         "children": [
           {
-            "id": "610d2141a5bd2d25",
+            "id": "1ef3909417067646",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "conflict-files-obsidian-git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "conflict-files-obsidian-git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "conflict-files-obsidian-git.md"
+              }
             }
           }
         ]
@@ -138,30 +146,29 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "610d2141a5bd2d25",
+  "active": "1ef3909417067646",
   "lastOpenFiles": [
-    "ES6-EXs/multiSlider/script2.js",
     "conflict-files-obsidian-git.md",
+    "ES6-EXs/pallarex/script02.js",
+    "ES6-EXs/pallarex/script01.js",
+    "ES6-EXs/button_slide/img/pic5.jpg",
+    "ES6-EXs/button_slide/img/pic4.jpg",
+    "ES6-EXs/button_slide/img/pic3.jpg",
+    "ES6-EXs/button_slide/img/pic2.jpg",
+    "ES6-EXs/button_slide/img/logo.png",
+    "ES6-EXs/button_slide/img/pic1.jpg",
+    "ES6-EXs/button_slide/img/circle1.png",
+    "ES6-EXs/button_slide/css/style.css",
+    "ES6-EXs/button_slide/script01.js",
+    "ES6-EXs/button_slide/index.html",
+    "ES6-EXs/button_slide/img",
+    "ES6-EXs/button_slide/css",
+    "ES6-EXs/button_slide",
+    "ES6-EXs/multiSlider/script2.js",
     "ES6-EXs/sm-menu/script.js",
-    "ES6-EXs/sm-menu/common.css",
-    "ES6-EXs/sm-menu/index.html",
-    "ES6-EXs/sm-menu",
     "ES6-EXs/multiSlider/img/btnPrev.png",
-    "ES6-EXs/multiSlider/img/script.js",
     "ES6-EXs/multiSlider/img/btnNext.png",
     "ES6-EXs/multiSlider/img/bgPhone.png",
-    "ES6-EXs/multiSlider/img",
-    "ES6-EXs/multiSlider/style.css",
-    "ES6-EXs/multiSlider/script.js",
-    "ES6-EXs/multiSlider/index.html",
-    "ES6-EXs/multiSlider",
-    "ES6-EXs/fullscreen-gallery/img/landscape4.jpg",
-    "ES6-EXs/fullscreen-gallery/img/landscape3.jpg",
-    "ES6-EXs/fullscreen-gallery/img/landscape2.jpg",
-    "ES6-EXs/fullscreen-gallery/img/landscape1.jpg",
-    "ES6-EXs/clickEvent/images/layer-sushi.png",
-    "ES6-EXs/clickEvent/images/layer-rainbow.png",
-    "ES6-EXs/clickEvent/images/layer-meat.png",
     "JS/14.swiper/Swiper 구조.md",
     "Output/KUSD_S3/node_modules/send/node_modules/ms/readme.md",
     "Output/KUSD_S3/node_modules/send/node_modules/ms/license.md",
