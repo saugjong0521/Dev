@@ -138,8 +138,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d5d31f538f436ad8",
+  "active": "1ef3909417067646",
   "lastOpenFiles": [
+    "ES6-EXs/button_slide/script02.js",
     "Untitled.md",
     "conflict-files-obsidian-git.md",
     "ES6-EXs/pallarex/script02.js",
@@ -184,7 +185,6 @@
     "Output/KUSD_S3/node_modules/send/README.md",
     "Output/KUSD_S3/node_modules/send/HISTORY.md",
     "Output/KUSD_S3/node_modules/setprototypeof/README.md",
-    "Output/KUSD_S3/node_modules/serve-static/README.md",
-    "Output/KUSD_S3/node_modules/serve-static/HISTORY.md"
+    "Output/KUSD_S3/node_modules/serve-static/README.md"
   ]
 }
