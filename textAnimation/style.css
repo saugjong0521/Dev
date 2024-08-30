@@ -55,14 +55,14 @@
     transition: none;
 }
 
-.container .word-item .word-box.reset span:nth-of-type(1){
-    transition-delay: 200;
+.container .word-item .word-box span:nth-of-type(1){
+    transition-delay: 200ms;
 }
 
-.container .word-item .word-box.reset span:nth-of-type(2){
-    transition-delay: 400;
+.container .word-item .word-box span:nth-of-type(2){
+    transition-delay: 400ms;
 }
 
-.container .word-item .word-box.reset span:nth-of-type(1){
-    transition-delay: 600;
+.container .word-item .word-box span:nth-of-type(1){
+    transition-delay: 600ms;
 }
