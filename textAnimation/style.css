@@ -49,3 +49,7 @@
 .container .word-item .word-box.out span{
     transform: rotateX(90deg);
 }
+
+.container .word-item .word-box.reset span{
+    trnasform: rotateX(-90deg)
+    transition: none;
