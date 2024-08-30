@@ -17,11 +17,11 @@ function textAnimation() {
         item[currentIndex].classList.add('reset');
         item[currentIndex].style.opacity = 0;
 
-        setTimeout(()=>{
+        setTimeout(() => {
             item[currentIndex].classList.remove('reset');
             item[currentIndex].classList.add('in');
             item[currentIndex].style.opacity = 1;
-        },200)
+        }, 200)
 
 
     }
