@@ -81,7 +81,7 @@ class Slider {
                                 this.opt.callback(activeIndex + 1)
                             }
                         }
-                        // callback으로 들어가는 
+                        // callback으로 들어가는 객체의 순번을 처리해주는 도구
                     })
                     this.activeSlide(activeIndex, this.btnsItem);
                     this.activeSlide(activeIndex, this.panelItem);
@@ -131,6 +131,7 @@ class Slider {
             let currentTime = lastTime / option.duration;
 
             if (currentTime < 0) {
+                if(callback)
                 currentTime = 0;
             }
             if (currentTime > 1) {
@@ -140,6 +141,9 @@ class Slider {
                 self.timer = requestAnimationFrame(active)
             } else {
                 cancelAnimationFrame(self.timer);
+                if(option.callback){
+                    option.callback
+                }
                 self.enableClick = true;
             }
 
