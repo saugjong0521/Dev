@@ -55,7 +55,7 @@ class Slider {
 
     bindingEvent() {
         this.btnsItem.forEach((el) => {
-            el.addEventListener('click',()=>{
+            el.addEventListener('click', () => {
                 let activeIndex = this.btnsArr.indexOf(el) // this를 넣을시 오류(-1이 뜸) -> index를 못찾음 (화살표 함수)
                 console.log(el)
                 console.log(activeIndex)
@@ -68,12 +68,12 @@ class Slider {
         })
     }
 
-    bindingEvent(){
+    bindingEvent() {
         const self = this
-        this.btnsItem.forEach(function(el){
-            el.addEventListener('click', function(){
+        this.btnsItem.forEach(function (el) {
+            el.addEventListener('click', function () {
                 let activeIndex = self.btnsArr.indexOf(el)
-            /console.log(activeIndex)
+                console.log(activeIndex)
                 console.log(this)
             })
         })
