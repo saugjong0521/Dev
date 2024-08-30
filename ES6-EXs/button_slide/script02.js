@@ -58,6 +58,7 @@ class Slider {
             el.addEventListener('click',()=>{
                 let activeIndex = this.btnsArr.indexOf(el)
                 console.log(el)
+                console.log(activeIndex)
             })
         })
     }
