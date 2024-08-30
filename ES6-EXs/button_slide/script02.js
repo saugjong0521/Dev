@@ -68,6 +68,8 @@ class Slider {
         })
     }
 
+    /*
+    구버전식 함수 -> 화살표 함수에 비해 구조가 매우 복잡해진다
     bindingEvent() {
         const self = this
         this.btnsItem.forEach(function (el) {
@@ -78,5 +80,6 @@ class Slider {
             })
         })
     }
+        */
 
 }
