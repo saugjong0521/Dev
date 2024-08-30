@@ -15,7 +15,9 @@
 .container .word-item .word-box{
     display: flex;
     position: absolute;
-    opacity: 0;/*초기값 상태*/
+    opacity: 0;
+    /*초기값 상태*/
+    transition: 500ms linear;
 }
 
 .container .word-item .box01 span{
