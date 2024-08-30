@@ -15,4 +15,5 @@
 .container .word-item .word-box{
     display: flex;
     position: absolute;
+    opacity: 0;/*초기값 상태*/
 }
