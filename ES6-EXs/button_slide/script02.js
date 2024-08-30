@@ -77,6 +77,7 @@ class Slider {
                         val: -panelWidth * activeIndex,
                         duration: this.slideSpeed
                     })
+                    this.enableClick = false; // 초기화
                 }
             })
         })
@@ -111,6 +112,27 @@ class Slider {
             currentVal = parseFloat(getComputedStyle(item)[option.prop])
         } else {
             currentVal = parseInt(getComputedStyle(item)[option.prop])
+        }
+
+        if (currentVal !== option.val) {
+            requestAnimationFrame(active);
+        }
+
+        function active(time) {
+            let lastTime = time - startActive;
+            let currentTime = lastTime / option.duration;
+
+            if (currentTime < 0) {
+                currentTime = 0;
+            }
+            if (currentTime > 1) {
+                currentTime = 1;
+            }
+            if (currentTime < 1) {
+                self.timer = removeEventListener(active)
+            } else { 
+
+            }
         }
     }
 
