@@ -129,9 +129,9 @@ class Slider {
                 currentTime = 1;
             }
             if (currentTime < 1) {
-                self.timer = removeEventListener(active)
+                self.timer = requestAnimationFrame(active)
             } else { 
-
+                this.enableClick = true;
             }
         }
     }
