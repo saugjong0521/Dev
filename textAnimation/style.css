@@ -51,6 +51,6 @@
 }
 
 .container .word-item .word-box.reset span{
-    trnasform: rotateX(-90deg);
+    transform: rotateX(-90deg);
     transition: none;
 }
