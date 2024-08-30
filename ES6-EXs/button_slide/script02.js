@@ -56,9 +56,24 @@ class Slider {
     bindingEvent() {
         this.btnsItem.forEach((el) => {
             el.addEventListener('click',()=>{
-                let activeIndex = this.btnsArr.indexOf(el)
+                let activeIndex = this.btnsArr.indexOf(el) // this를 넣을시 오류(-1이 뜸) -> index를 못찾음 (화살표 함수)
                 console.log(el)
                 console.log(activeIndex)
+                /*
+                this를 사용하지 않는 이유
+                 - this는 인스턴스 자체를 의미하기 때문에 현재 이벤트에서 찾으려는 객체와 거리가 멀다.
+                 (일반 함수에서 this와 class에서의 this의 차이)
+                */
+            })
+        })
+    }
+
+    bindingEvent(){
+        this.btnsItem.forEach(function(el){
+            el.addEventListener('click', function(){
+                let activeIndex = this.btnsArr.indexOf(el)
+                console.log(activeIndex)
+                console.log(this)
             })
         })
     }
