@@ -8,6 +8,10 @@ function textAnimation() {
     let currentIndex = 0;
 
     function toggleAnimation() {
+
+        item[currentIndex].classList.remove('in');
+        item[currentIndex].classList.add('out');
+
         currentIndex = (currentIndex + 1) % item.length;
         item[currentIndex].classList.remove('out');
         item[currentIndex].style.opacity = 0;
