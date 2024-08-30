@@ -17,3 +17,11 @@
     position: absolute;
     opacity: 0;/*초기값 상태*/
 }
+
+.container .word-item .word-box{
+    font-size: 100px;
+    font-weight: 900;
+    font-family: "Noto Sans";
+    display: flex;
+    align-items: center;
+}
