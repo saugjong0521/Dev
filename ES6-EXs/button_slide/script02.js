@@ -131,7 +131,6 @@ class Slider {
             let currentTime = lastTime / option.duration;
 
             if (currentTime < 0) {
-                if(callback)
                 currentTime = 0;
             }
             if (currentTime > 1) {
@@ -141,9 +140,12 @@ class Slider {
                 self.timer = requestAnimationFrame(active)
             } else {
                 cancelAnimationFrame(self.timer);
+
                 self.enableClick = true;
             }
-
+            if(option.callback){
+                option.callback();
+            }
             let result = currentVal + (option.val - currentVal) * currentTime;
 
             if (option.prop === 'opacity') {
