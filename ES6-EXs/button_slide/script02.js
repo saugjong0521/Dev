@@ -107,6 +107,11 @@ class Slider {
         let self = this 는 특정 컨텍스트 내부에서 this의 값을 캡쳐해서 저장한 값이 담겨져
         의미를 변하지 않도록 한다.
         */
+        if (option.prop === 'opacity') {
+            currentVal = parseFloat(getComputedStyle(item)[option.prop])
+        } else {
+            currentVal = parseInt(getComputedStyle(item)[option.prop])
+        }
     }
 
 }
