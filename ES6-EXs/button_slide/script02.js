@@ -75,7 +75,13 @@ class Slider {
                     this.animate(this.panel, {
                         prop: 'left',
                         val: -panelWidth * activeIndex,
-                        duration: this.slideSpeed
+                        duration: this.slideSpeed,
+                        callback: () => {
+                            if (this.opt.callback) {
+                                this.opt.callback(activeIndex + 1)
+                            }
+                        }
+                        // callback으로 들어가는 
                     })
                     this.activeSlide(activeIndex, this.btnsItem);
                     this.activeSlide(activeIndex, this.panelItem);
