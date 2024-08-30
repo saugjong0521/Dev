@@ -11,3 +11,8 @@
 .container .word-item{
     display: inline-flex;
 }
+
+.container .word-item .word-box{
+    display: flex;
+    position: absolute;
+}
