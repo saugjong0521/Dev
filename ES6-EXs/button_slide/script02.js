@@ -147,4 +147,11 @@ class Slider {
         }
     }
 
+    activeSlide(idx, item) {
+        for (let el of item) {
+            el.className = '';
+        }
+        item[idx].classList.add('on')
+    }
+
 }
