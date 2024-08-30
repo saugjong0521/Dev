@@ -12,7 +12,7 @@ class Slider {
         this.bindingEvent();
     }
 
-    init() { //class 내에서 function은 생략
+    init(el, opt) { //class 내에서 function은 생략
         let elOpt = {
             // 기본 선택자를 지정
             panel: this.panel,
