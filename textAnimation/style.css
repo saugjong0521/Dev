@@ -36,6 +36,7 @@
     align-items: center;
 }
 
-
-
+.container .word-item .word-box.in span{
+    transformX: rotate(45deg);
+}
 
