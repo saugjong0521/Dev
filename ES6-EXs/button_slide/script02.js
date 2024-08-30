@@ -130,16 +130,16 @@ class Slider {
             }
             if (currentTime < 1) {
                 self.timer = requestAnimationFrame(active)
-            } else { 
+            } else {
                 cancelAnimationFrame(self.timer);
-                this.enableClick = true;
+                self.enableClick = true;
             }
 
             let result = currentVal + (option.val - currentVal) * currentTime;
 
-            if(option.prop === 'opacity'){
-                el.style[option.prop] = resuule
-            }else{
+            if (option.prop === 'opacity') {
+                el.style[option.prop] = result
+            } else {
                 item.style[option.prop] = result + 'px';
             }
         }
