@@ -55,6 +55,11 @@
     transition: none;
 }
 
+.container .word-item .word-box.reset{
+    transform: rotateX(-90deg);
+    transition: none;
+}
+
 .container .word-item .word-box span:nth-of-type(1){
     transition-delay: 200ms;
 }
