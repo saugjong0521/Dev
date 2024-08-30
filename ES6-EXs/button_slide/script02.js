@@ -23,6 +23,14 @@ class Slider {
 
         this.opt = Object.assign({}, elOpt, opt)
         // 선택자 객체에서 나열이 가능한 속성으로 복사해서 객체로 변환
+        /*
+        Object.assign() 하나 이상의 소스 객체에서 대상 객체로 속성을 복사해서 병합해주는 메소드
+        첫번째로 받은 객체를 반환
+
+        {}: 빈 객체를 생성 elOpt와 opt의 속성이 병합되서 들어감
+            elOpt: 빈 객체에 복사될 객체
+            opt: 객체의 속성이 elOpt에서 복사된 속성에 덮어쓰기 됨
+        */
         this.frame = document.querySelector(el);
         this.panel = this.frame.querySelector(this.opt.panel);
         this.panelItem = this.panel.querySelectorAll('li');
@@ -43,6 +51,14 @@ class Slider {
         console.log(this.btns)
         console.log(this.btnsItem)
         console.log(this.btnsArr)
+    } // init
+
+    bindingEvent() {
+        this.btnsItem.forEach((el) => {
+            el.addEventListener('click',()=>{
+                let activeIndex = this.btnsArr.indexOf(el)
+            })
+        })
     }
 
 }
