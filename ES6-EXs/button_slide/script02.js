@@ -77,6 +77,8 @@ class Slider {
                         val: -panelWidth * activeIndex,
                         duration: this.slideSpeed
                     })
+                    this.activeSlide(activeIndex, this.btnsItem);
+                    this.activeSlide(activeIndex, this.panelItem);
                     this.enableClick = false; // 초기화
                 }
             })
