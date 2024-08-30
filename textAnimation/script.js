@@ -20,5 +20,7 @@ function textAnimation() {
         item[currentIndex].style.opacity = 1;
     }
 
+    item[currentIndex].classList.add('in');
+    item[currentIndex].style.opacity = 1;
     setInterval(toggleAnimation, 1500)
 }
