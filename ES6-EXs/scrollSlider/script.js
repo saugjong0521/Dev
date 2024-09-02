@@ -67,6 +67,7 @@ window.onload = () => {
         // console.log(contentWrapper)
 
         const contentWrapperScrollW = contentWrapper.scrollWidth;
+        // contentWrapper안에 있는 전체 컨텐츠의 가로 길이 (보이지 않는 컨텐츠 길이 포함)
         console.log(contentWrapperScrollW)
     }
 
