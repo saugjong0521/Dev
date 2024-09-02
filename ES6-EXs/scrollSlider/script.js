@@ -96,6 +96,7 @@ window.onload = () => {
 
         const transformP = scrollCenter * el.contentWrapperScrollW;
         // 세로 스크롤 위치에 따라 가로로 얼마나 이동해야하는지 계산해주는 값
+        console.log(transformP)
     }
 
 
