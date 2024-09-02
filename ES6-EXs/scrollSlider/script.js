@@ -48,7 +48,9 @@ window.onload = () => {
         } else {
             el.querySelectorAll(`${itemClass}`).forEach((itemClassEl) => {
                 if (contentY.top <= 0) {
-                    itemClassEl.classList.
+                    itemClassEl.classList.add(itemActive);
+                } else if {
+                    itemClassEl.classList.add(itemEnd)
                 }
             })
         }
