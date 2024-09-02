@@ -64,7 +64,8 @@ function submenu() {
 
     /*
     focus에서 각 submenu 내의 각 li요소부분에 줄 수 있으나, 큰 차이는 없을 것으로 예상됨
-    현재 상황에서 생각 가능한 3가지는
+    현재 코드에서 추가로 생각 가능한 3가지는,
+
     1. mousein 상황에서 focusin 시 2가지 서브메뉴가 나타남
     2. focusin 으로 submenu 에서 css가 일어나지 않음
     3. focusin으로 li요소에 갔다가 다시 shift+tab으로 submenu로 갔을 시, li요소가 사라지지 않음
