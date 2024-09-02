@@ -29,11 +29,8 @@ function submenu() {
 
     function onOver(idx) {
         let menuList = menu[idx].querySelector('.gnb .submenu')
-        let a = document.querySelector('.gnb .submenu')
 
-        a.forEach(el => {
-            el.classList.remove('on')
-        })
+        menuList.classList.remove('on')
         menuList.classList.add('on')
 
     }
