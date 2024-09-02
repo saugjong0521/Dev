@@ -68,7 +68,14 @@ window.onload = () => {
 
         const contentWrapperScrollW = contentWrapper.scrollWidth;
         // contentWrapper안에 있는 전체 컨텐츠의 가로 길이 (보이지 않는 컨텐츠 길이 포함)
-        console.log(contentWrapperScrollW)
+        // console.log(contentWrapperScrollW)
+
+        el.contentWrapper = contentWrapper;
+        el.contentWrapperScrollW = contentWrapperScrollW;
+
+        el.rightMax = (contentWrapperScrollW - winW)
+        console.log(el.rightMax)
+        //컨텐츠를 완전하게 스크롤하기 위해서 필요한 최대 왼쪽값을 반환
     }
 
 }
