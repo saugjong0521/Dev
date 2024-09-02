@@ -27,12 +27,7 @@ function submenu() {
 
     function onOver() {
         let menuList = document.querySelector('.gnb .submenu')
-
-        menuList.forEach((el, idx) => {
-            el[idx].classList.add('on')
-        })
-
-        /let idx = Array.from(menuList).indexOf(this)
+        let idx = Array.from(menuList).indexOf(this)
 
         menuList.classList.add('on')
 
