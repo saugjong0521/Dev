@@ -17,12 +17,12 @@ window.onload = () => {
 }
 
 function submenu() {
-    const menu = document.querySelectorAll('.submenu')
+    const menu = document.querySelectorAll('.gnb .submenu')
 
     console.log(menu)
 
     menu.forEach(el => {
-        el.addEventListener('click', onOver)
+        el.addEventListener('mouseover', onOver)
     })
 
     function onOver () {
