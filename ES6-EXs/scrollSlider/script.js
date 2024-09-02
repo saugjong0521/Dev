@@ -60,6 +60,7 @@ window.onload = () => {
         const sectionClass = el.classList[0]
         console.log(sectionClass)
         const contentWrapper = el.querySelector(`.${sectionClass}-item`)
+        console.log(contentWrapper)
     }
 
 }
