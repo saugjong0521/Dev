@@ -39,13 +39,11 @@ function submenu() {
     })
 
     function onOut(idx) {
-
+        let menuList = menu[idx].querySelector('.gnb .submenu')
+        menuList.classList.remove('on')
     }
 
 
-    function active(el, idx) {
-        el[idx].classList.add('on')
-    }
 }
 
 // window.onload = () => {
