@@ -11,4 +11,25 @@ window.onload = () => {
     console.log(wScrollTop)
     console.log(winH)
     
+    const itemClass = 'slider';
+    const itemActive = `${itemClass}-active`
+    const itemEnd = `${itemClass}-end`
+
+    const sliderSection = document.querySelectorAll('.horizental-scroll');
+
+    sliderSection.forEach(el => {
+        // 현재 sliderSection이 가지고 있는 위치값
+        // sliderSection이 가지고 있는 가로 컨텐츠의 길이를 받아와야 함
+        setActive(el);
+        // setScroll();
+    })
+
+    function setActive(el){
+        const contentY = el.getboundingClientRect()
+    }
+
+    function setScroll () {
+
+    }
+
 }
