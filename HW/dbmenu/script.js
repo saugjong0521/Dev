@@ -22,7 +22,7 @@ function submenu() {
     console.log(menu)
 
     menu.forEach(el => {
-        el.addEventListener('mouseover', onOver)
+        el.addEventListener('click', onOver)
     })
 
     function onOver () {
