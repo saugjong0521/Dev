@@ -6,7 +6,9 @@ window.onload = () => {
     */
 
     const wScrollTop = window.pageYOffset;  // 현재 나의 스크롤 위치
-    //const 
+    const winH = window.innerHeight;    //브라우저 창의 높이
+    const winW = window.innerWidth; //브라우저 창의 넓이
     console.log(wScrollTop)
+    console.log(winH)
     
 }
