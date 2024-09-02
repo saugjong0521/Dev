@@ -16,11 +16,14 @@ window.onload = () => {
     submenu()
 }
 
+
 function submenu() {
     const menu = document.querySelectorAll('.gnb > li')
 
     console.log(menu)
 
+
+    // over, focusin
     menu.forEach((el, idx) => {
         el.addEventListener('mouseover', function () {
             onOver(idx)
@@ -33,13 +36,14 @@ function submenu() {
         })
     })
 
+    // on class 추가
     function onOver(idx) {
         let menuList = menu[idx].querySelector('.gnb .submenu')
         menuList.classList.add('on')
     }
 
 
-    
+    // out, focusout
     menu.forEach((el, idx) => {
         el.addEventListener('mouseout', function () {
             onOut(idx)
@@ -52,6 +56,7 @@ function submenu() {
         })
     })
 
+    // on class 제거
     function onOut(idx) {
         let menuList = menu[idx].querySelector('.gnb .submenu')
         menuList.classList.remove('on')
