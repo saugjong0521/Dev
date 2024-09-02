@@ -23,11 +23,12 @@ window.onload = () => {
         setActive(el);
         // setScroll();
     })
+    console.log(contentY)
+
 
     function setActive(el){
         const contentY = el.getBoundingClientRect()
         // 각 요소의 크기와 위치를 받아옴 (현재 화면에 보이는지 체크하기 위함)
-        console.log(contentY)
         el.querySelectorAll(`.${itemClass}`).forEach((itemClassEl) => {
             // 특정 요소에 있는 클래스를 제거
             itemClassEl.classList.remove(itemActive)
