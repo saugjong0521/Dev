@@ -23,7 +23,7 @@ window.onload = () => {
         let mouseX = e.pageX;   // 현재 마우스 위치
         let winX = window.innerWidth;   // 윈도우에서의 마우스 위치
 
-        let percent = parseInt((mouseX / winX) * imgCount + 1)  //Math.floor도 가능
+        let percent = parseInt((mouseX / winX) * imgCount) + 1  //Math.floor도 가능
         console.log(percent)
 
         if(percent > imgCount){
