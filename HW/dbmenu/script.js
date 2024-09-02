@@ -18,6 +18,7 @@ window.onload = () => {
 
 function submenu() {
     const menu = document.querySelectorAll('.gnb > li')
+    let idx = Array.from(menu).indexOf(this)
 
     console.log(menu)
 
@@ -25,12 +26,11 @@ function submenu() {
         el.addEventListener('mouseover', onOver)
     })
 
-    function onOver() {
+    function onOver(el, idx) {
         let menuList = document.querySelector('.gnb .submenu')
-        let idx = Array.from(menu).indexOf(this)
 
         console.log(menu[idx])
-        menu[idx].classList.add('on')
+        menuList.classList.add('on')
  
         //menuList.classList.add('on')
 
