@@ -92,11 +92,16 @@ window.onload = () => {
 
         const scrollCenter = scrollP / (el.innerHeight - (winH - winW))
         // 해당 컨텐츠가 세로로 스크롤된 비율을 반환하는 값
-        console.log(scrollCenter)
+        // console.log(scrollCenter)
 
         const transformP = scrollCenter * el.contentWrapperScrollW;
         // 세로 스크롤 위치에 따라 가로로 얼마나 이동해야하는지 계산해주는 값
-        console.log(transformP)
+        // console.log(transformP)
+
+        let toTransform = -(transformP)
+
+        toTransform.Math.min(0, toTransform);
+        toTransform.Math.max(toTransform, el.rightMax)
     }
 
 
