@@ -29,16 +29,13 @@ function submenu() {
 
     function onOver(idx) {
         let menuList = menu[idx].querySelector('.gnb .submenu')
-
-        menuList.classList.remove('on')
-
-        menu.forEach((menuList) => {
-            menuList.classList.remove('on')
-        })
-
         menuList.classList.add('on')
-
     }
+
+    menu.forEach((el,idx)=>el.addEventListener('mouseout',function(){
+        onOut(idx)
+    }))
+
 
     function active(el, idx) {
         el[idx].classList.add('on')
