@@ -42,8 +42,8 @@ window.onload = () => {
         // console.log(contentY)
         el.querySelectorAll(`.${itemClass}`).forEach((itemClassEl) => {
             // 특정 요소에 있는 클래스를 제거
-            itemClassEl.classList.remove(itemActive)
-            itemClassEl.classList.remove(itemEnd)
+            itemClassEl.classList.remove(itemActive);
+            itemClassEl.classList.remove(itemEnd);
         })
 
         if (contentY.bottom < 0) {
