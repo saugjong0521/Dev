@@ -77,7 +77,7 @@ window.onload = () => {
         console.log(el.rightMax)
         el.style.height = `${el.contentWrapperScrollW}px`
         el.innerHeight = el.offsetHeight;
-        // 요소의 높이에
+        // 요소의 높이에 offsetHeight 값을 대입해서 컨텐츠 전체 높이를 저장
 
     
         //컨텐츠를 완전하게 스크롤하기 위해서 필요한 최대 왼쪽값을 반환
