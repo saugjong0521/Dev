@@ -30,10 +30,10 @@ function submenu() {
     function onOver(idx) {
         let menuList = menu[idx].querySelector('.gnb .submenu')
 
-        menu[idx].querySelector('submenu').classList.add('on')
+        menu.forEach(el => {
+            el.classList.remove('on')
+        })
         menuList.classList.add('on')
- 
-        //menuList.classList.add('on')
 
     }
 
