@@ -21,23 +21,27 @@ function submenu() {
 
     console.log(menu)
 
+
     menu.forEach((el,idx) => {
         el.addEventListener('mouseover', function(){
             onOver(idx)
         })
     })
 
+
+
     function onOver(idx) {
         let menuList = menu[idx].querySelector('.gnb .submenu')
 
-        
         menuList.classList.add('on')
 
     }
 
-    function active(el, idx) {
-        el[idx].classList.add('on')
-    }
+    function activeSlide(idx, item) {
+        item.forEach(el => {
+            el.classList.remove('on')
+        })
+        item[idx].classList.add('on')
 }
 
 // window.onload = () => {
