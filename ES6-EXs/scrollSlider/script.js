@@ -75,6 +75,10 @@ window.onload = () => {
 
         el.rightMax = (contentWrapperScrollW - winW)
         console.log(el.rightMax)
+        el.style.height = `${el.contentWrapperScrollW}px`
+        el.innerHeight = el.offsetHeight;
+
+    
         //컨텐츠를 완전하게 스크롤하기 위해서 필요한 최대 왼쪽값을 반환
     }
 
