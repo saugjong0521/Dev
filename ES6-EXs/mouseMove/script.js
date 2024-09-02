@@ -25,6 +25,11 @@ window.onload = () => {
 
         let percent = parseInt((mouseX / winX) * imgCount + 1)
         console.log(percent)
+
+        if(percent > imgCount){
+            percent = imgCount
+        }
+
     })
 
 
