@@ -17,7 +17,7 @@ window.onload = () => {
 }
 
 function submenu() {
-    const menu = document.querySelectorAll('.gnb .submenu')
+    const menu = document.querySelectorAll('.gnb > li')
 
     console.log(menu)
 
