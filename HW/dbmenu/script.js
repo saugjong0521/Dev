@@ -16,10 +16,18 @@ window.onload = () => {
     submenu()
 }
 
-function submenu () {
+function submenu() {
     const menu = document.querySelectorAll('.submenu')
-    const menuList = document.querySelectorAll('submenu li')
-    console.log(menu)
-    console.log(menuList)
 
+    console.log(menu)
+
+    menu.forEach(el => {
+        el.addEventListener('click', {
+            const menuList = document.querySelectorAll('submenu li')
+            console.log(menuList)
+
+        })
+
+
+    })
 }
