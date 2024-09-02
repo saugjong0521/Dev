@@ -29,9 +29,8 @@ function submenu() {
         let menuList = document.querySelector('.gnb .submenu')
         let idx = Array.from(menu).indexOf(this)
 
-
  
-        menuList[idx].classList.add('on')
+        menuList.classList.add('on')
 
     }
 
