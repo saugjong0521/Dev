@@ -43,6 +43,14 @@ function submenu() {
         menuList.classList.remove('on')
     }
 
+    menu.forEach((el, idx) => {
+        el.addEventListener('focus', function () {
+            onOver(idx)
+        })
+    })
+
+
+
 
 }
 
