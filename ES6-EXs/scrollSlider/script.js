@@ -107,7 +107,7 @@ window.onload = () => {
         // 0보다 작거나 el.rightMax보다 크면, 영역을 벗어나지 못하도록 제어
 
         el.transformX = toTransform;
-        el.contentWrapper = 
+        el.contentWrapper.style.transform = `translateX(${el.transformX}px)`
 
 
     }
