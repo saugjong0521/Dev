@@ -26,18 +26,18 @@ function submenu() {
     // over, focusin
     menu.forEach((el, idx) => {
         el.addEventListener('mouseover', function () {
-            onOver(idx)
+            onClass(idx)
         })
     })
 
     menu.forEach((el, idx) => {
         el.addEventListener('focusin', function () {
-            onOver(idx)
+            onClass(idx)
         })
     })
 
     // on class 추가
-    function onOver(idx) {
+    function onClass(idx) {
         let menuList = menu[idx].querySelector('.gnb .submenu')
         menuList.classList.add('on')
     }
@@ -46,18 +46,18 @@ function submenu() {
     // out, focusout
     menu.forEach((el, idx) => {
         el.addEventListener('mouseout', function () {
-            onOut(idx)
+            outClass(idx)
         })
     })
 
     menu.forEach((el, idx) => {
         el.addEventListener('focusout', function () {
-            onOut(idx)
+            outClass(idx)
         })
     })
 
     // on class 제거
-    function onOut(idx) {
+    function outClass(idx) {
         let menuList = menu[idx].querySelector('.gnb .submenu')
         menuList.classList.remove('on')
     }
@@ -67,30 +67,3 @@ function submenu() {
 
 
 }
-
-// window.onload = () => {
-//     submenu()
-// }
-
-// function submenu() {
-//     const menu = document.querySelectorAll('.gnb > li')
-
-//     menu.forEach((el, index) => {
-//         el.addEventListener('mouseover', function() {
-//             onOver(index)
-//         })
-//     })
-
-//     function onOver(idx) {
-//         const allSubmenus = document.querySelectorAll('.gnb .submenu')
-
-//         // 모든 서브메뉴를 비활성화
-//         allSubmenus.forEach(submenu => submenu.classList.remove('on'))
-
-//         // 현재 인덱스에 해당하는 서브메뉴 활성화
-//         const activeSubmenu = menu[idx].querySelector('.submenu')
-//         if (activeSubmenu) {
-//             activeSubmenu.classList.add('on')
-//         }
-//     }
-// }
