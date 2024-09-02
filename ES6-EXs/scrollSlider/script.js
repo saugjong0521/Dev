@@ -24,7 +24,7 @@ window.onload = () => {
         // setScroll();
     })
 
-    window.addEventListener('scroll',()=>{
+    window.addEventListener('scroll', () => {
         wScrollTop = window.pageYOffset; // 스크롤 이벤트가 실행되면 Y값을 새로 받아옴
         sliderSection.forEach((el) => {
             setActive(el);
@@ -49,7 +49,7 @@ window.onload = () => {
             el.querySelectorAll(`${itemClass}`).forEach((itemClassEl) => {
                 if (contentY.top <= 0) {
                     itemClassEl.classList.add(itemActive);
-                } else if (contentY.top > 0){
+                } else if (contentY.bottom <= winH) {
                     itemClassEl.classList.add(itemEnd)
                 }
             })
