@@ -80,6 +80,10 @@ window.onload = () => {
         el.innerHeight = el.offsetHeight;
         // 요소의 높이에 offsetHeight 값을 대입해서 컨텐츠 전체 높이를 저장
 
+        el.init = true; // 초기화 여부 boolean값으로 반환
+        el.transformX = '0'; // 초기 위치값 설정
+        el.classList.add(`${sectionClass}-init`)
+
 
     }
 
