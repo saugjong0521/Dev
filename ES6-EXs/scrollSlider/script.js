@@ -46,15 +46,12 @@ window.onload = () => {
         })
 
         if (contentY.bottom < 0) {
-            console.log('11')
             el.querySelectorAll(`${itemClass}`).forEach((itemClassEl) => {
                 itemClassEl.classList.add(itemEnd)
             })
         } else {
-            console.log('22')
             el.querySelectorAll(`${itemClass}`).forEach((itemClassEl) => {
                 if (contentY.top <= 0) {
-                    console.log('33')
                     itemClassEl.classList.add(itemActive);
                 } else if (contentY.bottom <= winH) {
                     itemClassEl.classList.add(itemEnd)
@@ -65,9 +62,12 @@ window.onload = () => {
 
     function setScroll(el) {
         const sectionClass = el.classList[0]
-        console.log(sectionClass)
+        // console.log(sectionClass)
         const contentWrapper = el.querySelector(`.${sectionClass}-item`)
-        console.log(contentWrapper)
+        // console.log(contentWrapper)
+
+        const contentWrapperScrollW = contentWrapper.scrollWidth;
+        console.log(contentWrapperScrollW)
     }
 
 }
