@@ -32,9 +32,11 @@ function submenu() {
         menuList.classList.add('on')
     }
 
-    menu.forEach((el,idx)=>el.addEventListener('mouseout',function(){
-        onOut(idx)
-    }))
+    menu.forEach((el, idx) => {
+        el.addEventListener('mouseout', function () {
+            onOut(idx)
+        })
+    })
 
 
     function active(el, idx) {
