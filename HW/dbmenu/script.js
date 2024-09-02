@@ -27,13 +27,27 @@ function submenu() {
         })
     })
 
+    menu.forEach((el, idx) => {
+        el.addEventListener('focusin', function () {
+            onOver(idx)
+        })
+    })
+
     function onOver(idx) {
         let menuList = menu[idx].querySelector('.gnb .submenu')
         menuList.classList.add('on')
     }
 
+
+    
     menu.forEach((el, idx) => {
         el.addEventListener('mouseout', function () {
+            onOut(idx)
+        })
+    })
+
+    menu.forEach((el, idx) => {
+        el.addEventListener('focusout', function () {
             onOut(idx)
         })
     })
@@ -43,17 +57,8 @@ function submenu() {
         menuList.classList.remove('on')
     }
 
-    menu.forEach((el, idx) => {
-        el.addEventListener('focusin', function () {
-            onOver(idx)
-        })
-    })
 
-    menu.forEach((el, idx) => {
-        el.addEventListener('focusout', function () {
-            onOut(idx)
-        })
-    })
+
 
 
 }
