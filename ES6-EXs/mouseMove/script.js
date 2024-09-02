@@ -28,6 +28,7 @@ window.onload = () => {
 
         if(percent > imgCount){
             percent = imgCount
+            // 예외처리 (계산된 인덱스가 imgCount 초과시 마지막 이미지 인덱스로 설정)
         }
 
     })
