@@ -15,7 +15,9 @@ window.onload = () => {
     console.log(canvas.children)
     canvas.innerHTML = item;
     console.log(canvas.children)
+    // 지금은 canvas 안에 div를 생성하기 때문에, 생성을 먼저 한 후 다른 값을 넣어야 한다.
 
-    
+    let div = document.querySelector('.canvas > div')
+
 
 }
