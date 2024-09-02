@@ -25,7 +25,8 @@ window.onload = () => {
     })
 
     function setActive(el){
-        const contentY = el.getboundingClientRect()
+        const contentY = el.getBoundingClientRect()
+        console.log(contentY)
     }
 
     function setScroll () {
