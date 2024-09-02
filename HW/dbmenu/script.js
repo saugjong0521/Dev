@@ -18,12 +18,11 @@ window.onload = () => {
 
 function submenu() {
     const menu = document.querySelectorAll('.gnb > li')
-    let idx = Array.from(menu).indexOf(this)
 
     console.log(menu)
 
-    menu.forEach(el => {
-        el.addEventListener('mouseover', onOver)
+    menu.forEach((el,idx) => {
+        el.addEventListener('mouseover', onOver[idx])
     })
 
     function onOver() {
@@ -40,29 +39,29 @@ function submenu() {
     }
 }
 
-window.onload = () => {
-    submenu()
-}
+// window.onload = () => {
+//     submenu()
+// }
 
-function submenu() {
-    const menu = document.querySelectorAll('.gnb > li')
+// function submenu() {
+//     const menu = document.querySelectorAll('.gnb > li')
 
-    menu.forEach((el, index) => {
-        el.addEventListener('mouseover', function() {
-            onOver(index)
-        })
-    })
+//     menu.forEach((el, index) => {
+//         el.addEventListener('mouseover', function() {
+//             onOver(index)
+//         })
+//     })
 
-    function onOver(idx) {
-        const allSubmenus = document.querySelectorAll('.gnb .submenu')
+//     function onOver(idx) {
+//         const allSubmenus = document.querySelectorAll('.gnb .submenu')
 
-        // 모든 서브메뉴를 비활성화
-        allSubmenus.forEach(submenu => submenu.classList.remove('on'))
+//         // 모든 서브메뉴를 비활성화
+//         allSubmenus.forEach(submenu => submenu.classList.remove('on'))
 
-        // 현재 인덱스에 해당하는 서브메뉴 활성화
-        const activeSubmenu = menu[idx].querySelector('.submenu')
-        if (activeSubmenu) {
-            activeSubmenu.classList.add('on')
-        }
-    }
-}
+//         // 현재 인덱스에 해당하는 서브메뉴 활성화
+//         const activeSubmenu = menu[idx].querySelector('.submenu')
+//         if (activeSubmenu) {
+//             activeSubmenu.classList.add('on')
+//         }
+//     }
+// }
