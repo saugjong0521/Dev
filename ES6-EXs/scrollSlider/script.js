@@ -3,6 +3,10 @@ window.onload = () => {
     /*
     가로 스크롤의 값을 세로 스크롤 값에 추가해서 전체 스크롤의 길이를 늘리는 구조
 
+    1. 가로 스크롤에 진입했을때에 itemActive 를 받아와야 함
+    2. 가로 스크롤이 종료시에 itemEnd 를 받아와야 함
+    3. 
+
     */
 
     let wScrollTop = window.pageYOffset;  // 현재 나의 스크롤 위치
