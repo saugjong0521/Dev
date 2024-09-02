@@ -100,8 +100,16 @@ window.onload = () => {
 
         let toTransform = -(transformP)
 
-        toTransform.Math.min(0, toTransform);
-        toTransform.Math.max(toTransform, el.rightMax)
+        toTransform = Math.min(0, toTransform);
+        toTransform = Math.max(toTransform, el.rightMax)
+        // toTransform의 값이 0보다 작은지
+        // toTransform의 값이 현재 움직이는 transform의 el.rightMax보다 큰지 판단
+        // 0보다 작거나 el.rightMax보다 크면, 영역을 벗어나지 못하도록 제어
+
+        el.transformX = toTransform;
+        el.contentWrapper = 
+
+
     }
 
 
