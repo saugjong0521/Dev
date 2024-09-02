@@ -26,9 +26,10 @@ function submenu() {
     })
 
     function onOver () {
-
         let menuList = document.querySelector('.gnb .submenu')
-        menu.classList.add('on')
+        let idx = Array.from(menuList).indexOf(this)
+
+        menuList.classList.add('on')
         
         
     }
