@@ -22,12 +22,12 @@ function submenu() {
     console.log(menu)
 
     menu.forEach(el => {
-        el.addEventListener('mouseover', function() {
-            const menuList = document.querySelectorAll('submenu li')
+        el.addEventListener('mouseover', onOver)
+    })
+
+    function onOver () {
+        const menuList = document.querySelectorAll('submenu li')
             console.log(menuList)
 
-        })
-
-
-    })
+    }
 }
