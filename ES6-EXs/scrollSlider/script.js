@@ -32,7 +32,7 @@ window.onload = () => {
         wScrollTop = window.pageYOffset; // 스크롤 이벤트가 실행되면 Y값을 새로 받아옴
         sliderSection.forEach((el) => {
             setActive(el);
-            activeScroll()
+            activeScroll(el);
         })
     })
 
@@ -85,5 +85,17 @@ window.onload = () => {
         el.transformX = '0'; // 초기 위치값 설정
         el.classList.add(`${sectionClass}-init`)
     }
+
+    function activeScroll(el) { 
+        const scrollP = wScrollTop - el.offsetTop;
+        // scrollP는 scroll이벤트가 발생하면 새로 받아오는 wScrollTop 값에 el이 가지고 있는 offsetTop 만큼 빼서 스크롤 위치를 계산
+
+        const scrollCenter = scollP / (el.innerHeight - (widH - winW))
+        // 해당 컨텐츠가 세로로 스크롤된 비율을 반환하는 값
+
+        const transformP = scrollCenter * el.contentWrapperScrollW;
+        // 세로 스크롤 위치에 따라 가로로 얼마나 이동해야하는지 계산해주는 값
+    }
+
 
 }
