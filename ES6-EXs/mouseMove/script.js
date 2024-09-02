@@ -11,7 +11,11 @@ window.onload = () => {
     
     let imgCount = 100;
     let item = '<div></div>';   //이미지가 들어갈 단일 div 생성
-    canvas.innerHTML = item;
 
+    console.log(canvas.children)
+    canvas.innerHTML = item;
+    console.log(canvas.children)
+
+    
 
 }
