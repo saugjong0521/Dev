@@ -24,10 +24,16 @@ function submenu() {
 
     menu.forEach((el,idx) => {
         el.addEventListener('mouseover', function(){
-            onOver(idx)
+            activeSlide(idx, item)
         })
     })
 
+
+    function activeSlide(idx, item) {
+        item.forEach(el => {
+            el.classList.remove('on')
+        })
+        item[idx].classList.add('on')
 
 
     function onOver(idx) {
@@ -37,36 +43,7 @@ function submenu() {
 
     }
 
-    function activeSlide(idx, item) {
-        item.forEach(el => {
-            el.classList.remove('on')
-        })
-        item[idx].classList.add('on')
+
 }
 
-// window.onload = () => {
-//     submenu()
-// }
-
-// function submenu() {
-//     const menu = document.querySelectorAll('.gnb > li')
-
-//     menu.forEach((el, index) => {
-//         el.addEventListener('mouseover', function() {
-//             onOver(index)
-//         })
-//     })
-
-//     function onOver(idx) {
-//         const allSubmenus = document.querySelectorAll('.gnb .submenu')
-
-//         // 모든 서브메뉴를 비활성화
-//         allSubmenus.forEach(submenu => submenu.classList.remove('on'))
-
-//         // 현재 인덱스에 해당하는 서브메뉴 활성화
-//         const activeSubmenu = menu[idx].querySelector('.submenu')
-//         if (activeSubmenu) {
-//             activeSubmenu.classList.add('on')
-//         }
-//     }
-// }
+}
