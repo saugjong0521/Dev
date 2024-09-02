@@ -62,7 +62,9 @@ function submenu() {
         menuList.classList.remove('on')
     }
 
-    // focus에서 각 submenu 내의 각 li요소부분에 
+    // focus에서 각 submenu 내의 각 li요소부분에 줄 수 있으나, 큰 차이는 없을 것으로 예상됨
+    // 현재 상황에서 생각 가능한 2가지는
+    // 1. mousein 상황에서 focusin 시 2가지 서브메뉴가 나타남
 
 
 }
