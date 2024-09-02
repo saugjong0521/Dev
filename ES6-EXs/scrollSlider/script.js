@@ -72,9 +72,9 @@ window.onload = () => {
         // console.log(contentWrapperScrollW)
 
         el.contentWrapper = contentWrapper;
-        el.contentWrapperScrollW = contentWrapperScrollW;
+        el.contentWrapperScrollW = contentWrapperScrollW
 
-        el.rightMax = (contentWrapperScrollW - winW)
+        el.rightMax = -(contentWrapperScrollW - winW)
         //컨텐츠를 완전하게 스크롤하기 위해서 필요한 최대 왼쪽값을 반환
         // console.log(el.rightMax)
         el.style.height = `${el.contentWrapperScrollW}px`
