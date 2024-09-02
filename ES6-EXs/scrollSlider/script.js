@@ -38,7 +38,7 @@ window.onload = () => {
     function setActive(el) {
         const contentY = el.getBoundingClientRect()
         // getBoundingClientRect: 각 요소의 크기와 위치를 받아옴 (현재 화면에 보이는지 체크하기 위함)
-        console.log(contentY)
+        // console.log(contentY)
         el.querySelectorAll(`.${itemClass}`).forEach((itemClassEl) => {
             // 특정 요소에 있는 클래스를 제거
             itemClassEl.classList.remove(itemActive)
@@ -46,12 +46,15 @@ window.onload = () => {
         })
 
         if (contentY.bottom < 0) {
+            console.log('11')
             el.querySelectorAll(`${itemClass}`).forEach((itemClassEl) => {
                 itemClassEl.classList.add(itemEnd)
             })
         } else {
+            console.log('22')
             el.querySelectorAll(`${itemClass}`).forEach((itemClassEl) => {
                 if (contentY.top <= 0) {
+                    console.log('33')
                     itemClassEl.classList.add(itemActive);
                 } else if (contentY.bottom <= winH) {
                     itemClassEl.classList.add(itemEnd)
