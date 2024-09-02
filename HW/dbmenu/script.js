@@ -26,11 +26,8 @@ function submenu() {
     })
 
     function onOver () {
-        const idx = Array.from(menu).indexOf(this)
-        menu[idx].classList.add('on')
+        menu.classList.add('on')
         
-        const menuList = document.querySelectorAll('submenu li')
-            console.log(menuList)
-
+        
     }
 }
