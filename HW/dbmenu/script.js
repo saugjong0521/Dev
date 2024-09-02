@@ -38,6 +38,10 @@ function submenu() {
         })
     })
 
+    function onOut(idx) {
+
+    }
+
 
     function active(el, idx) {
         el[idx].classList.add('on')
