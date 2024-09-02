@@ -21,23 +21,23 @@ function submenu() {
 
     console.log(menu)
 
-
-    menu.forEach((el, idx) => {
-        el.addEventListener('mouseover', function () {
+    menu.forEach((el,idx) => {
+        el.addEventListener('mouseover', function(){
             onOver(idx)
         })
     })
 
-        item[idx].classList.add('on')
+    function onOver(idx) {
+        let menuList = menu[idx].querySelector('.gnb .submenu')
 
-        function onOver(idx) {
-            let menuList = menu[idx].querySelector('.gnb .submenu')
+        menuList.classList.remove('on')
+        menuList.classList.add('on')
 
-            menuList.classList.add('on')
-
-        }
     }
 
+    function active(el, idx) {
+        el[idx].classList.add('on')
+    }
 }
 
 // window.onload = () => {
