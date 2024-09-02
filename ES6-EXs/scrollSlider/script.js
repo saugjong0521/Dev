@@ -15,7 +15,7 @@ window.onload = () => {
     const itemActive = `${itemClass}-active`
     const itemEnd = `${itemClass}-end`
 
-    const sliderSection = document.querySelectorAll('.horizental-scroll');
+    const sliderSection = document.querySelectorAll('.horizontal-scroll');
 
     sliderSection.forEach(el => {
         // 현재 sliderSection이 가지고 있는 위치값
