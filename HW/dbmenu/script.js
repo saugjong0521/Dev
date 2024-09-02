@@ -32,8 +32,8 @@ function submenu() {
 
         menuList.classList.remove('on')
 
-        menu.forEach((el, idx) => {
-            el[idx].classList.remove('on')
+        menu.forEach((menuList) => {
+            menuList.classList.remove('on')
         })
 
         menuList.classList.add('on')
