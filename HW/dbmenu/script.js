@@ -44,12 +44,16 @@ function submenu() {
     }
 
     menu.forEach((el, idx) => {
-        el.addEventListener('focus', function () {
+        el.addEventListener('focusin', function () {
             onOver(idx)
         })
     })
 
-
+    menu.forEach((el, idx) => {
+        el.addEventListener('focusout', function () {
+            onOut(idx)
+        })
+    })
 
 
 }
