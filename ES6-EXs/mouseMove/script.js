@@ -7,6 +7,10 @@ window.onload = () => {
 
     */
 
+    const canvas = document.querySelector('.canvas')
+    
+    let imgCount = 100;
+
 
 
 }
