@@ -21,8 +21,8 @@ function submenu() {
 
     console.log(menu)
 
-    menu.forEach((el,idx) => {
-        el.addEventListener('mouseover', function(){
+    menu.forEach((el, idx) => {
+        el.addEventListener('mouseover', function () {
             onOver(idx)
         })
     })
@@ -31,6 +31,11 @@ function submenu() {
         let menuList = menu[idx].querySelector('.gnb .submenu')
 
         menuList.classList.remove('on')
+
+        menu.forEach((el, idx) => {
+            el[idx].classList.remove('on')
+        })
+
         menuList.classList.add('on')
 
     }
