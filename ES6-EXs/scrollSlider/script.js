@@ -90,8 +90,9 @@ window.onload = () => {
         const scrollP = wScrollTop - el.offsetTop;
         // scrollP는 scroll이벤트가 발생하면 새로 받아오는 wScrollTop 값에 el이 가지고 있는 offsetTop 만큼 빼서 스크롤 위치를 계산
 
-        const scrollCenter = scollP / (el.innerHeight - (widH - winW))
+        const scrollCenter = scrollP / (el.innerHeight - (winH - winW))
         // 해당 컨텐츠가 세로로 스크롤된 비율을 반환하는 값
+        console.log(scrollCenter)
 
         const transformP = scrollCenter * el.contentWrapperScrollW;
         // 세로 스크롤 위치에 따라 가로로 얼마나 이동해야하는지 계산해주는 값
