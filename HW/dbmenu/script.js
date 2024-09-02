@@ -62,8 +62,7 @@ function submenu() {
         menuList.classList.remove('on')
     }
 
-
-
+    // focus에서 각 submenu 내의 각 li요소부분에 
 
 
 }
