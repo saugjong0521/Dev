@@ -9,7 +9,7 @@ window.onload = () => {
 
     const canvas = document.querySelector('.canvas')
     
-    let imgCount = 100;
+    let imgCount = 200;
     let item = '<div></div>';   //이미지가 들어갈 단일 div 생성
 
     console.log(canvas.children)
@@ -23,7 +23,8 @@ window.onload = () => {
         let mouseX = e.pageX;   // 현재 마우스 위치
         let winX = window.innerWidth;   // 윈도우에서의 마우스 위치
 
-        let percent = parseInt((mouseX / winX) * imgCount)
+        let percent = parseInt((mouseX / winX) * imgCount + 1)
+        console.log(percent)
     })
 
 
