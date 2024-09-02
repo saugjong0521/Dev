@@ -69,9 +69,9 @@ function submenu() {
     1. mousein 상황에서 focusin 시 2가지 서브메뉴가 나타남
     2. focusin 으로 submenu 에서 css가 일어나지 않음
     3. focusin으로 li요소에 갔다가 다시 shift+tab으로 submenu로 갔을 시, li요소가 사라지지 않음
-        -> li 요소의 index에 in out으로 해결 가능, 다만 코드를 썻을 시, 코드가 더러워지며 가독성이 안좋아 질 것으로 예상
+        -> li 요소의 index에 in out으로 해결 가능, 다만 해당 방식으로 작성시 코드가 더러워지며, 가독성이 안좋아 질 것으로 예상
 
-    위 3가지 상황이 보이나, 사소한 것으로 생각됨
+    위 3가지 상황이 생각되나, 사소한 것으로 생각됨
     */
 
 }
