@@ -11,3 +11,15 @@ https://www.db-dvp.co.kr/ 참고 (해당 사이트에 포커스는 구현되어 
 서브메뉴는 사라집니다.
 6. 위의 행동은 css에서 힌트를 얻을수 있습니다.
 */
+
+window.onload = () => {
+    submenu()
+}
+
+function submenu () {
+    const menu = document.querySelectorAll('.submenu')
+    const menuList = document.querySelectorAll('submenu li')
+    console.log(menu)
+    console.log(menuList)
+
+}
