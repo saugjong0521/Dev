@@ -5,12 +5,12 @@ window.onload = () => {
 
     */
 
-    const wScrollTop = window.pageYOffset;  // 현재 나의 스크롤 위치
+    let wScrollTop = window.pageYOffset;  // 현재 나의 스크롤 위치
     const winH = window.innerHeight;    //브라우저 창의 높이
     const winW = window.innerWidth; //브라우저 창의 넓이
     console.log(wScrollTop)
     console.log(winH)
-    
+
     const itemClass = 'slider';
     const itemActive = `${itemClass}-active`
     const itemEnd = `${itemClass}-end`
@@ -24,7 +24,11 @@ window.onload = () => {
         // setScroll();
     })
 
-    function setActive(el){
+    window.addEventListener('scroll',()=>{
+        wScrollTop = window.pageYOffset; // 스크롤 이벤트가 실행되면 Y값을 새로 받아옴
+    })
+
+    function setActive(el) {
         const contentY = el.getBoundingClientRect()
         // 각 요소의 크기와 위치를 받아옴 (현재 화면에 보이는지 체크하기 위함)
         console.log(contentY)
@@ -34,14 +38,20 @@ window.onload = () => {
             itemClassEl.classList.remove(itemEnd)
         })
 
-        if(contentY.bottom < 0){
-            el.querySelectorAll(`${itemClass}`).forEach((itemClass) => {
+        if (contentY.bottom < 0) {
+            el.querySelectorAll(`${itemClass}`).forEach((itemClassEl) => {
                 itemClassEl.classList.add(itemEnd)
+            })
+        } else {
+            el.querySelectorAll(`${itemClass}`).forEach((itemClassEl) => {
+                if (contentY.top <= 0) {
+                    itemClassEl.classList.
+                }
             })
         }
     }
 
-    function setScroll () {
+    function setScroll() {
 
     }
 
