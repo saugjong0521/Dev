@@ -32,9 +32,9 @@ function submenu() {
             el[idx].classList.add('on')
         })
 
-        // let idx = Array.from(menuList).indexOf(this)
+        /let idx = Array.from(menuList).indexOf(this)
 
-        // menuList[idx].classList.add('on')
+        menuList.classList.add('on')
 
     }
 
