@@ -32,6 +32,7 @@ window.onload = () => {
         wScrollTop = window.pageYOffset; // 스크롤 이벤트가 실행되면 Y값을 새로 받아옴
         sliderSection.forEach((el) => {
             setActive(el);
+            activeScroll()
         })
     })
 
@@ -83,8 +84,6 @@ window.onload = () => {
         el.init = true; // 초기화 여부 boolean값으로 반환
         el.transformX = '0'; // 초기 위치값 설정
         el.classList.add(`${sectionClass}-init`)
-
-
     }
 
 }
