@@ -17,7 +17,7 @@ window.onload = () => {
 
     const sliderSection = document.querySelectorAll('.horizental-scroll');
 
-    sliderSection.forEach((el) => {
+    sliderSection.forEach(el => {
         // 현재 sliderSection이 가지고 있는 위치값
         // sliderSection이 가지고 있는 가로 컨텐츠의 길이를 받아와야 함
         setActive(el);
@@ -34,7 +34,12 @@ window.onload = () => {
             itemClassEl.classList.remove(itemEnd)
         })
 
-
+        if(contentY.bottom < 0){
+            el.querySelectorAll(`${itemClass}`).forEach((itemClass) => {
+                itemClassEl.classList.add(itemEnd)
+            })
+        }
+    }
 
     function setScroll () {
 
