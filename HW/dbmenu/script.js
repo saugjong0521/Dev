@@ -22,7 +22,7 @@ function submenu() {
     console.log(menu)
 
     menu.forEach(el => {
-        el.addEventListener('mousehover', function() {
+        el.addEventListener('mouseover', function() {
             const menuList = document.querySelectorAll('submenu li')
             console.log(menuList)
 
