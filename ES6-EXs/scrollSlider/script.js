@@ -101,6 +101,8 @@ window.onload = () => {
         let toTransform = -(transformP)
 
         toTransform = Math.min(0, toTransform);
+        // 0보다 크면 0이 반환, 0이하면 toTransfrom값이 반환
+        // 처음 위치보다 더 왼쪽으로 가지 못하도록 제한
         toTransform = Math.max(toTransform, el.rightMax)
         // toTransform의 값이 0보다 작은지
         // toTransform의 값이 현재 움직이는 transform의 el.rightMax보다 큰지 판단
