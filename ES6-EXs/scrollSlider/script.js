@@ -49,7 +49,7 @@ window.onload = () => {
             el.querySelectorAll(`${itemClass}`).forEach((itemClassEl) => {
                 if (contentY.top <= 0) {
                     itemClassEl.classList.add(itemActive);
-                } else if {
+                } else if (contentY.top > 0){
                     itemClassEl.classList.add(itemEnd)
                 }
             })
