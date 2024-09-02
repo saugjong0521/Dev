@@ -70,7 +70,7 @@ function submenu() {
     2. focusin 으로 submenu 에서 css가 일어나지 않음
     3. focusin으로 li요소에 갔다가 다시 shift+tab으로 submenu로 갔을 시, li요소가 사라지지 않음
     
-    위 3가지 상황이 예상되나, 동작에는 문제가 발생하지 않음
+    위 3가지 상황이 예상되나, 사소한 이슈로 여겨짐
     */
 
 }
