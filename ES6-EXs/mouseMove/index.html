@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            background: #dddddd;
+            display: flex;
+            align-items: center;
+        }
+        .canvas{
+            width: 100%;
+            height: 50vh;
+            background: pink;
+            position: relative;
+            overflow: hidden;
+        }
+        .canvas > div{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+    </style>
+  
+
+   
+</head>
+<body>
+    <section class="container">
+        <article class="canvas">
+
+        </article>
+    </section>
+</body>
+</html>
