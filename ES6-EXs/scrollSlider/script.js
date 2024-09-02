@@ -86,32 +86,27 @@ window.onload = () => {
         el.classList.add(`${sectionClass}-init`)
     }
 
-    function activeScroll(el) { 
+    function activeScorll(el) {
         const scrollP = wScrollTop - el.offsetTop;
-        // scrollP는 scroll이벤트가 발생하면 새로 받아오는 wScrollTop 값에 el이 가지고 있는 offsetTop 만큼 빼서 스크롤 위치를 계산
-
+        //scrollP는 scroll이벤트가 발생하면 새로 받아오는 wScrollTopr값에 el가 가지고 있는 offsetTop만큼
+        //빼서 스크롤위치를 계산
         const scrollCenter = scrollP / (el.innerHeight - (winH - winW))
-        // 해당 컨텐츠가 세로로 스크롤된 비율을 반환하는 값
-        // console.log(scrollCenter)
-
+        //해당 컨텐츠가 세로로 스크롤된 비율을 반환하는 값
         const transformP = scrollCenter * el.contentWrapperScrollW;
-        // 세로 스크롤 위치에 따라 가로로 얼마나 이동해야하는지 계산해주는 값
         // console.log(transformP)
-
+        //세로 스크롤 위치에 따라 콘텐츠가 가로로 얼마나 이동해야 하는지 계산해주는 값
         let toTransform = -(transformP)
 
         toTransform = Math.min(0, toTransform);
-        // 0보다 크면 0이 반환, 0이하면 toTransfrom값이 반환
-        // 처음 위치보다 더 왼쪽으로 가지 못하도록 제한
+        //0보다 크면 0이 반환 0이하면 toTransform값이 반환
+        //처음 위치보다 더 왼쪽으로 가지 못하도록 제한
         toTransform = Math.max(toTransform, el.rightMax)
-        // toTransform의 값이 0보다 작은지
-        // toTransform의 값이 현재 움직이는 transform의 el.rightMax보다 큰지 판단
-        // 0보다 작거나 el.rightMax보다 크면, 영역을 벗어나지 못하도록 제어
+        //totransform의 값이 0보다 작은지
+        //totransform의 값이 현재 움직이는 totransform이 el.righrMax보다 큰지를 판단
+        //0보다 작거나 el.righrMax보다 크면 영역을 벗어나지 못하도록 제어
 
         el.transformX = toTransform;
         el.contentWrapper.style.transform = `translateX(${el.transformX}px)`
-
-
     }
 
 
