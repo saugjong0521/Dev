@@ -6,7 +6,14 @@ window.onload = () => {
     */
     const wrapper = document.querySelector('.canvas_wrapper')
     const canvas = document.createElement('canvas') // canvas 태그 생성
-    console.log(canvas)
+    // console.log(canvas)
+    // canvas 태그는 그래픽을 그리는 도화지의 기능을 하는 태그
+
     const ctx = canvas.getContext('2d')
-    // getContext()
+    // getContext(): canvas태그에서 사용하는 메소드 중, 그림을 그리는 기능을 제공하는 메소드
+
+    const imgSrc = './image/seq';
+    const imgFormat = '.jpg';
+    const imgLength = 116;  // 들어갈 이미지의 갯수
+
 }
