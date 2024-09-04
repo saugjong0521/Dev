@@ -4,6 +4,7 @@ window.onload = () => {
 
     특정 스크롤 위치에서 텍스트 나오게 하기
     */
+    const scrollBody = document.querySelector('.fix_motion')
     const wrapper = document.querySelector('.canvas_wrapper')
     const canvas = document.createElement('canvas') // canvas 태그 생성
     // console.log(canvas)
@@ -18,6 +19,13 @@ window.onload = () => {
 
     const imgArr = [];
     const imgCurrent = 0;
+    // 이미지가 들어갈 배열
+
+    init();
+
+    function init(){
+        wrapper.appendChild(canvas)
+    }
 
 
 }
