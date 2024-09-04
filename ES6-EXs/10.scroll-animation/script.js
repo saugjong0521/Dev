@@ -63,7 +63,7 @@ window.onload = () => {
         scrollPercent = sectionTop / scrollH * 100;
 
 
-        if(sectionRealH <= 0){   //  최솟값 설정
+        if(sectionOffsetTop >= 0){   //  최솟값 설정
             scrollPercent = 0
         }
         console.log(scrollPercent)
