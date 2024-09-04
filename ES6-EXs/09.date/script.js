@@ -38,6 +38,7 @@ function formData(){
         const list = document.createElement('ul');
         list.className = 'select-options';
         wrapper.appendChild(list);
+        // console.log(list)
 
 
         for (let i = 0; i < selectItem; i++){
@@ -46,6 +47,9 @@ function formData(){
             listItem.setAttribute('rel', el.children[i].value)
             list.appendChild(listItem)
         }
+
+
+
 
     })
 }
