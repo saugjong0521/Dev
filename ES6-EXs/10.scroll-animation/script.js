@@ -60,7 +60,7 @@ window.onload = () => {
 
         sectionRealH = scrollH - window.innerHeight;
         sectionTop = scrollW - sectionOffsetTop;
-        scrollPercent = sectionTop / scrollH * 100;
+        scrollPercent = sectionTop / sectionRealH * 100;
 
         console.log(sectionRealH)
 
