@@ -78,8 +78,9 @@ function formData() {
             })
         })
 
-        window.addEventListener('click', ()=>{
+        document.addEventListener('click', ()=>{
 
+            styledSelect.classList.remove('active')
             list.style.display = 'none';
         
         })
