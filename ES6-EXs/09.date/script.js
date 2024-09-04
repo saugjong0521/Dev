@@ -71,6 +71,7 @@ function formData() {
                 // console.log(e.target.textContent)
 
                 styledSelect.classList.remove('active')
+                el.value = e.target.getAttribute('rel')
                 list.style.display = 'none';
             })
         })
