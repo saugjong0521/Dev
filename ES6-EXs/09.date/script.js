@@ -28,14 +28,17 @@ function formData(){
         el.parentNode.insertBefore(wrapper, el)
         wrapper.appendChild(el);
 
+        // 제목
         const styledSelect = document.createElement('div')
         styledSelect.className = 'select-styled'
         styledSelect.textContent = el.children[0].textContent;
         wrapper.appendChild(styledSelect)
+        // console.log(styledSelect)
 
         const list = document.createElement('ul');
         list.className = 'select-options';
         wrapper.appendChild(list);
+
 
         for (let i = 0; i < selectItem; i++){
             const listItem = document.createElement('li');
