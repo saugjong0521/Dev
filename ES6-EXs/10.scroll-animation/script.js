@@ -16,4 +16,8 @@ window.onload = () => {
     const imgFormat = '.jpg';
     const imgLength = 116;  // 들어갈 이미지의 갯수
 
+    const imgArr = [];
+    const imgCurrent = 0;
+
+
 }
