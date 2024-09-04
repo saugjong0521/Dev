@@ -66,12 +66,12 @@ window.onload = () => {
 
         sectionRealH = scrollH - window.innerHeight;
         sectionTop = scrollW - sectionOffsetTop;
-        scrollPercent = sectionTop / sectionRealH * 100;
+        scrollPercent = sectionTop / sectionRealH;
 
         // console.log(sectionRealH)
 
 
-        if (scrollPercent < 0) {   //  최솟값 설정
+        if (sectionRealH < 0) {   //  최솟값 설정
             scrollPercent = 0
         }
         console.log(scrollPercent)
@@ -86,12 +86,12 @@ window.onload = () => {
     }
 
     function scrollFunc() {
-        const sequence = Math.floor(scrollPercent)
+        const sequence = Math.min(imgLength - 1, Math.max(0, Math.floor(imgLength * scrollPercent)))
         if (imgArr[sequence]) {
             canvasRender(sequence)
         }
 
-        // console.log(sequence)
+        console.log(sequence)
     }
 
     function canvasRender(sequence) {
