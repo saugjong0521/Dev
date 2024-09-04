@@ -76,21 +76,27 @@ window.onload = () => {
         }
         console.log(scrollPercent)
 
+        imgWidth = window.innerWidth;
+        imgHeight = window.innerHeight;
+
+        canvas.width = imgWidth;
+        canvas.height = imgHeight;
+
         
     }
 
     function scrollFunc(){
         const sequence = Math.min(imgLength - 1, Math.max(0, Math.floor(imgLength * scrollPercent)))
-        if(imgArr[sequence]){
-            canvasRender(sequnce)
-        }
+        // if(imgArr[sequence]){
+        //     canvasRender(sequnce)
+        // }
 
         console.log(sequence)
     }
 
-    function canvasRender(sequence){
+    // function canvasRender(sequence){
 
-    }
+    // }
 
 
 
