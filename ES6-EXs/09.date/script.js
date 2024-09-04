@@ -80,8 +80,7 @@ function formData() {
 
         window.addEventListener('click', ()=>{
 
-            if(list = 'none'){
-            list.style.display = 'none';}
+            list.style.display = 'none';
         })
         
 
