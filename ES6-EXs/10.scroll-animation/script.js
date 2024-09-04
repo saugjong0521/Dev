@@ -66,7 +66,7 @@ window.onload = () => {
 
         sectionRealH = scrollH - window.innerHeight;
         sectionTop = scrollW - sectionOffsetTop;
-        scrollPercent = sectionTop / sectionRealH;
+        scrollPercent = sectionTop / sectionRealH * 100;
 
         // console.log(sectionRealH)
 
@@ -86,7 +86,7 @@ window.onload = () => {
     }
 
     function scrollFunc() {
-        const sequence = Math.min(imgLength - 1, Math.max(0, Math.floor(imgLength * scrollPercent)))
+        const sequence = Math.floor(scrollPercent)
         if (imgArr[sequence]) {
             canvasRender(sequence)
         }
