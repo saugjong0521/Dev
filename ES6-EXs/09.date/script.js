@@ -29,7 +29,9 @@ function formData(){
         wrapper.appendChild(el);
 
         const styledSelect = document.createElement('div')
-        st
+        styledSelect.className = 'select'
+        styledSelect.textContent = el.children[0].textContent;
+        
 
 
     })
