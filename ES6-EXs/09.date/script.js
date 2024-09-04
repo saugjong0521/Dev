@@ -71,6 +71,7 @@ function formData() {
                 // console.log(e.target.textContent)
 
                 styledSelect.classList.remove('active')
+                list.style.display = 'none';
             })
         })
 
