@@ -18,7 +18,7 @@ window.onload = () => {
     const imgLength = 116;  // 들어갈 이미지의 갯수
 
     const imgArr = [];
-    const imgCurrent = 0;
+    let imgCurrent = 0;
     // 이미지가 들어갈 배열
 
     let scrollH;
@@ -41,7 +41,7 @@ window.onload = () => {
 
             img.src = imgPath;
 
-            imgArr.onload = () => {
+            img.onload = () => {
                 imgCurrent += 1;
                 if (imgCurrent === imgLength) {
                     setProperty();
