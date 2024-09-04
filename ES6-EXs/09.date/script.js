@@ -61,8 +61,8 @@ function formData() {
                     active.classList.remove('active')
                 }
             })
-            styledSelect.classList.toggle('active')
-
+            styledSelect.classList.toggle('active');
+            list.style.display = list.style.display === 'block' ? 'none' : 'block';
         })
 
     })
