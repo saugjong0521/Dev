@@ -62,6 +62,8 @@ window.onload = () => {
         sectionTop = scrollW - sectionOffsetTop;
         scrollPecent = sectionTop / scrollH;
 
+        console.log(scrollPercent)
+
         
     }
 
