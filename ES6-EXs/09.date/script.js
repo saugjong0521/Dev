@@ -56,7 +56,7 @@ function formData() {
         // 스크립트로 추가한 요소를 찾는 경우, 추가된 코드 다음에 찾아야 한다.
 
         styledSelect.addEventListener('click', (e) => {
-            e.stopPropagation();
+            // e.stopPropagation();
 
             document.querySelectorAll('.select-styled.active').forEach(active => {
                 if (active !== styledSelect){
@@ -82,9 +82,14 @@ function formData() {
 
         document.addEventListener('click', ()=>{
 
+            // styledSelect.classList.remove('active')
+            // list.style.display = 'none';
+        
+        if(!styledSelect.contains(e.target) && !list.contains(e.target)){
             styledSelect.classList.remove('active')
             list.style.display = 'none';
-        
+        }
+
         })
         
 
