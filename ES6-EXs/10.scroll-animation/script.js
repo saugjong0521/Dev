@@ -46,8 +46,11 @@ window.onload = () => {
                 imgCurrent += 1;
                 if (imgCurrent === imgLength) {
                     setProperty();
+                    scrollFunc();
                 }
             }
+            imgArr.push(img)
+
         }
 
     }
