@@ -6,6 +6,7 @@ window.onload = () => {
     */
     const wrapper = document.querySelector('.canvas_wrapper')
     const canvas = document.createElement('canvas') // canvas 태그 생성
-
+    console.log(canvas)
     const ctx = canvas.getContext('2d')
+    // getContext()
 }
