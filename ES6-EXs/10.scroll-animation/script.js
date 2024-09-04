@@ -24,6 +24,7 @@ window.onload = () => {
     let scrollH;
     let sectionOffsetTop;
     let sectionTop;
+    let sectionRealH;
     let scrollW;
     let scrollPercent;
     let percent;
@@ -52,10 +53,12 @@ window.onload = () => {
     }
 
     function setProperty(){
-        scrollH = scrollBody.offsetHeight;
-        scrollW = window.pageYOffset;
-        sectionOffsetTop = scrollBody.getBoundingClientRect().top;
-        console.log(sectionOffsetTop)
+        scrollH = scrollBody.offsetHeight;  // scrollBody의 높이
+        scrollW = window.pageYOffset;   //현재 스크롤의 위치
+        sectionOffsetTop = scrollBody.getBoundingClientRect().top;  // 페이지 상단에서 scrollBody의 위치
+        // console.log(sectionOffsetTop)
+
+        
     }
 
 
