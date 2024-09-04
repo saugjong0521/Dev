@@ -21,6 +21,14 @@ window.onload = () => {
     const imgCurrent = 0;
     // 이미지가 들어갈 배열
 
+    let scrollH;
+    let sectionOffsetTop;
+    let sectionTop;
+    let scrollW;
+    let scrollPercent;
+    let percent;
+    // canvas를 넣기 위한 위치 요소
+
     init();
 
     function init() {
@@ -43,9 +51,11 @@ window.onload = () => {
 
     }
 
-    function setProperty() {
-
+    function setProperty(){
+        scrollH = scrollBody.offsetHeight;
     }
+
+
 
 
 }
