@@ -5,7 +5,7 @@ window.onload = () => {
     특정 스크롤 위치에서 텍스트 나오게 하기
     */
     const scrollBody = document.querySelector('.fix_motion')
-    const wrapper = document.querySelector('.canvas_wrapper')
+    const wrapper = document.querySelector('.canvas_wrap')
     const canvas = document.createElement('canvas') // canvas 태그 생성
     // console.log(canvas)
     // canvas 태그는 그래픽을 그리는 도화지의 기능을 하는 태그
