@@ -41,7 +41,7 @@ window.onload = () => {
 
             img.src = imgPath;
 
-            img.onload = () => {
+            imgArr.onload = () => {
                 imgCurrent += 1;
                 if (imgCurrent === imgLength) {
                     setProperty();
