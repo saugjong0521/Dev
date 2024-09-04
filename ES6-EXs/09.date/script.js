@@ -65,5 +65,11 @@ function formData() {
             list.style.display = list.style.display === 'block' ? 'none' : 'block';
         })
 
+        listItems.forEach(item => {
+            item.addEventListener('click', (e)=>{
+                styledSelect.textCont = e.target.textContent;
+            })
+        })
+
     })
 }
