@@ -64,7 +64,7 @@ window.onload = () => {
         sectionOffsetTop = scrollBody.getBoundingClientRect().top + scrollW;  // 페이지 상단에서 scrollBody의 위치
         console.log(sectionOffsetTop)
 
-        sectionRealH = scrollH - window.innerHeight;
+        sectionRealH = scrollW - window.innerHeight;
         sectionTop = scrollW - sectionOffsetTop;
         scrollPercent = sectionTop / sectionRealH;
 
@@ -74,7 +74,7 @@ window.onload = () => {
         if (sectionRealH < 0) {   //  최솟값 설정
             scrollPercent = 0
         }
-        console.log(scrollPercent)
+        // console.log(scrollPercent)
 
         imgWidth = window.innerWidth;
         imgHeight = window.innerHeight;
@@ -91,7 +91,7 @@ window.onload = () => {
             canvasRender(sequence)
         }
 
-        console.log(sequence)
+        // console.log(sequence)
     }
 
     function canvasRender(sequence) {
