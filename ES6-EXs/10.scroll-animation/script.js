@@ -23,15 +23,22 @@ window.onload = () => {
 
     init();
 
-    function init(){
+    function init() {
         wrapper.appendChild(canvas)
 
-        for(let i = 0; i < imgLength; i++){
+        for (let i = 0; i < imgLength; i++) {
             const img = new Image();
             const imgPath = `${imgSrc}${i}${imgFormat}`
             // console.log(imgPath) // 이미지 들어간 것 확인
 
             img.src = imgPath;
+
+            img.onload = () => {
+                imgCurrent += 1;
+                if (imgCurrent === imgLength) {
+
+                }
+            }
         }
 
     }
