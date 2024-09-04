@@ -55,7 +55,9 @@ function formData() {
         // 추가되기 전에 미리 찾아놓게 되면 찾을 수 없는 에러가 나오게 된다.
         // 스크립트로 추가한 요소를 찾는 경우, 추가된 코드 다음에 찾아야 한다.
 
-        styledSelect.addEventListener('click', () => {
+        styledSelect.addEventListener('click', (e) => {
+            e.stopPropagation();
+
             document.querySelectorAll('.select-styled.active').forEach(active => {
                 if (active !== styledSelect){
                     active.classList.remove('active')
