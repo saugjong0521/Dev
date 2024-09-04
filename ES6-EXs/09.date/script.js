@@ -10,14 +10,14 @@ window.onload = () => {
     3. 1,2 에 있는 새로 생성되는 태그에 이식
 */
 
-function formData(){
+function formData() {
     const selects = document.querySelectorAll('select')
     // console.log(selects)
 
     selects.forEach(el => {
         const selectItem = el.children.length;
         // console.log(selectItem)
-        
+
         el.classList.add('select-hidden');
         // 기존의 li에 hidden을 줘서 display:none 처리
 
@@ -41,7 +41,7 @@ function formData(){
         // console.log(list)
 
 
-        for (let i = 0; i < selectItem; i++){
+        for (let i = 0; i < selectItem; i++) {
             const listItem = document.createElement('li');
             listItem.textContent = el.children[i].textContent;
             listItem.setAttribute('rel', el.children[i].value)
@@ -51,7 +51,19 @@ function formData(){
 
         const listItems = list.querySelectorAll('li')
         console.log(listItems)
+        // list는 미리 만들어진 요소가 아닌 중간에 스크립트로 추가된 요소이기 때문에
+        // 추가되기 전에 미리 찾아놓게 되면 찾을 수 없는 에러가 나오게 된다.
+        // 스크립트로 추가한 요소를 찾는 경우, 추가된 코드 다음에 찾아야 한다.
 
+        styledSelect.addEventListener('click', () => {
+            document.querySelectorAll('.select-styled.active').forEach(active => {
+                if (active !== styledSelect){
+                    active.classList.remove('active')
+                }
+            })
+
+            
+        })
 
     })
 }
