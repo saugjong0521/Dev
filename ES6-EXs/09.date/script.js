@@ -72,9 +72,16 @@ function formData() {
 
                 styledSelect.classList.remove('active')
                 el.value = e.target.getAttribute('rel')
+                // el.value에 li의 rel을 넣음 (서버에 전송을 위한 요소)
+
                 list.style.display = 'none';
             })
         })
+
+        window.addEventListener('click', ()=>{
+            list.style.display = 'none';
+        })
+        
 
     })
 }
