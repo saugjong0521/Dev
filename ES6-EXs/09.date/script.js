@@ -12,11 +12,14 @@ window.onload = () => {
 
 function formData(){
     const selects = document.querySelectorAll('select')
-    console.log(selects)
+    // console.log(selects)
 
     selects.forEach(el => {
         const selectItem = el.children.length;
-        console.log(selectItem)
+        // console.log(selectItem)
+        
+        el.classList.add('select-hidden');
+        // 기존의 li에 hidden을 줘서 display:none 처리
 
     })
 }
