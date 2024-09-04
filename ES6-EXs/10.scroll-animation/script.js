@@ -53,6 +53,9 @@ window.onload = () => {
 
     function setProperty(){
         scrollH = scrollBody.offsetHeight;
+        scrollW = window.pageYOffset;
+        sectionOffsetTop = scrollBody.getBoundingClientRect().top;
+        console.log(sectionOffsetTop)
     }
 
 
