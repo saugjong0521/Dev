@@ -29,13 +29,13 @@ function formData(){
         wrapper.appendChild(el);
 
         const styledSelect = document.createElement('div')
-        styledSelect.className = 'select'
+        styledSelect.className = 'select-styled'
         styledSelect.textContent = el.children[0].textContent;
         wrapper.appendChild(styledSelect)
 
         const list = document.createElement('ul');
         list.className = 'select-options';
-        wrapper.appendChild(list)
+        wrapper.appendChild(list);
 
 
     })
