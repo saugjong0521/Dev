@@ -80,7 +80,9 @@ function formData() {
 
         window.addEventListener('click', ()=>{
 
+            if(styledSelect == 'active'){
             list.style.display = 'none';
+        }
         })
         
 
