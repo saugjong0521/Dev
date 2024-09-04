@@ -64,6 +64,9 @@ window.onload = () => {
 
         console.log(scrollPercent)
 
+        if(sectionRealH <= 0){   //  최솟값 설정
+            scrollPercent = 0
+        }
         
     }
 
