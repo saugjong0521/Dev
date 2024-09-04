@@ -29,7 +29,8 @@ window.onload = () => {
         for(let i = 0; i < imgLength; i++){
             const img = new Image();
             const imgPath = `${imgSrc}${i}${imgFormat}`
-            
+            // console.log(imgPath) // 이미지 들어간 것 확인
+
             img.src = imgPath;
         }
 
