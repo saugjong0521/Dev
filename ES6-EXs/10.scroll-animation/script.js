@@ -13,7 +13,7 @@ window.onload = () => {
     const ctx = canvas.getContext('2d')
     // getContext(): canvas태그에서 사용하는 메소드 중, 그림을 그리는 기능을 제공하는 메소드
 
-    const imgSrc = './image/seq/';
+    const imgSrc = './images/seq/';
     const imgFormat = '.jpg';
     const imgLength = 116;  // 들어갈 이미지의 갯수
 
