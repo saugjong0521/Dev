@@ -36,10 +36,14 @@ window.onload = () => {
             img.onload = () => {
                 imgCurrent += 1;
                 if (imgCurrent === imgLength) {
-
+                    setProperty();
                 }
             }
         }
+
+    }
+
+    function setProperty() {
 
     }
 
