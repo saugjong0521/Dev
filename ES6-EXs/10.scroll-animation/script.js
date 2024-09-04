@@ -71,9 +71,9 @@ window.onload = () => {
         // console.log(sectionRealH)
 
 
-        if (sectionRealH < 0) {   //  최솟값 설정
-            scrollPercent = 0
-        }
+        // if (sectionRealH < 0) {   //  최솟값 설정
+        //     scrollPercent = 0
+        // }
         // console.log(scrollPercent)
 
         imgWidth = window.innerWidth;
