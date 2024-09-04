@@ -55,8 +55,10 @@ window.onload = () => {
     function setProperty(){
         scrollH = scrollBody.offsetHeight;  // scrollBody의 높이
         scrollW = window.pageYOffset;   //현재 스크롤의 위치
-        sectionOffsetTop = scrollBody.getBoundingClientRect().top;  // 페이지 상단에서 scrollBody의 위치
-        // console.log(sectionOffsetTop)
+        sectionOffsetTop = scrollBody.getBoundingClientRect().top + scrollW;  // 페이지 상단에서 scrollBody의 위치
+        console.log(sectionOffsetTop)
+
+        sectionRealH = scrollH - window.innerHeight;
 
         
     }
