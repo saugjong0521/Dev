@@ -71,7 +71,7 @@ window.onload = () => {
         // console.log(sectionRealH)
 
 
-        if (sectionRealH < 0) {   //  최솟값 설정
+        if (scrollPercent < 0) {   //  최솟값 설정
             scrollPercent = 0
         }
         console.log(scrollPercent)
@@ -91,7 +91,7 @@ window.onload = () => {
             canvasRender(sequence)
         }
 
-        console.log(sequence)
+        // console.log(sequence)
     }
 
     function canvasRender(sequence) {
