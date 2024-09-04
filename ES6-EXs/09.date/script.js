@@ -22,8 +22,15 @@ function formData(){
         // 기존의 li에 hidden을 줘서 display:none 처리
 
         const wrapper = document.createElement('div');
-        wrapper.className = 'select'
-        console.log(wrapper)
+        wrapper.className = 'select';   // 새로 생성된 
+        // console.log(wrapper)
+
+        el.parentNode.insertBefore(wrapper, el)
+        wrapper.appendChild(el);
+
+        const styledSelect = document.createElement('div')
+        st
+
 
     })
 }
