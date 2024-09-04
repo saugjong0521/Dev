@@ -4,5 +4,8 @@ window.onload = () => {
 
     특정 스크롤 위치에서 텍스트 나오게 하기
     */
-    const wrapper = document.
+    const wrapper = document.querySelector('.canvas_wrapper')
+    const canvas = document.createElement('canvas') // canvas 태그 생성
+
+    const ctx = canvas.getContext('2d')
 }
