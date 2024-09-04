@@ -77,7 +77,7 @@ window.onload = () => {
     }
 
     function scrollFunc(){
-        const sequence = Math.floor(imgLength * scrollPercent)
+        const sequence = Math.min(imgLength - 1, Math.max(0, Math.floor(imgLength * scrollPercent)))
         // if(imgArr[sequence]){
         //     canvasRender(sequnce)
         // }
