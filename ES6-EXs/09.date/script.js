@@ -80,9 +80,8 @@ function formData() {
 
         window.addEventListener('click', ()=>{
 
-            if(list != 'active'){
             list.style.display = 'none';
-        }
+        
         })
         
 
