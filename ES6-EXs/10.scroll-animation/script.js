@@ -30,6 +30,9 @@ window.onload = () => {
     let percent;
     // canvas를 넣기 위한 위치 요소
 
+    let imgWidth;
+    let imgHeight;
+
     init();
 
     function init() {
@@ -78,11 +81,14 @@ window.onload = () => {
 
     function scrollFunc(){
         const sequence = Math.min(imgLength - 1, Math.max(0, Math.floor(imgLength * scrollPercent)))
-        // if(imgArr[sequence]){
-        //     canvasRender(sequnce)
-        // }
+        if(imgArr[sequence]){
+            canvasRender(sequnce)
+        }
 
         console.log(sequence)
+    }
+
+    function canvasRender(sequence){
 
     }
 
