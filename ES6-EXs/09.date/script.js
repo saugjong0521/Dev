@@ -21,5 +21,9 @@ function formData(){
         el.classList.add('select-hidden');
         // 기존의 li에 hidden을 줘서 display:none 처리
 
+        const wrapper = document.createElement('div');
+        wrapper.className = 'select'
+        console.log(wrapper)
+
     })
 }
