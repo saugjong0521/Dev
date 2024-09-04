@@ -49,6 +49,8 @@ function formData(){
         }
 
 
+        const listItems = list.querySelectorAll('li')
+        console.log(listItems)
 
 
     })
