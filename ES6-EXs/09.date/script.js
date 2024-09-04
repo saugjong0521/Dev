@@ -67,7 +67,8 @@ function formData() {
 
         listItems.forEach(item => {
             item.addEventListener('click', (e)=>{
-                styledSelect.textCont = e.target.textContent;
+                styledSelect.textContent = e.target.textContent;
+                console.log(e.target.textContent)
             })
         })
 
