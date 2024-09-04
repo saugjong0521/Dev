@@ -57,6 +57,7 @@ function formData() {
 
         styledSelect.addEventListener('click', (e) => {
             e.stopPropagation();
+            // 이벤트가 일어날때 상위 요소의 이벤트를 제거
 
             document.querySelectorAll('.select-styled.active').forEach(active => {
                 if (active !== styledSelect){
