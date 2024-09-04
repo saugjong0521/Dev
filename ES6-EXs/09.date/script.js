@@ -40,6 +40,7 @@ function formData(){
         for (let i = 0; i < selectItem; i++){
             const listItem = document.createElement('li');
             listItem.textContent = el.children[i].textContent;
+            listItem.setAttribute('rel', el.children[i].value)
             list.appendChild(listItem)
         }
 
