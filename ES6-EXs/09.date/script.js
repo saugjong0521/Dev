@@ -37,6 +37,11 @@ function formData(){
         list.className = 'select-options';
         wrapper.appendChild(list);
 
+        for (let i = 0; i < selectItem; i++){
+            const listItem = document.createElement('li');
+            listItem.textContent = el.children[i].textContent;
+            list.appendChild(listItem)
+        }
 
     })
 }
