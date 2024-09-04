@@ -79,7 +79,9 @@ function formData() {
         })
 
         window.addEventListener('click', ()=>{
-            list.style.display = 'none';
+
+            if(list = 'none'){
+            list.style.display = 'none';}
         })
         
 
