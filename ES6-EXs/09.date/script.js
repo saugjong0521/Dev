@@ -80,7 +80,7 @@ function formData() {
             })
         })
 
-        document.addEventListener('click', ()=>{
+        document.addEventListener('click', (e)=>{
 
             // styledSelect.classList.remove('active')
             // list.style.display = 'none';
