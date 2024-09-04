@@ -15,6 +15,8 @@ function formData(){
     console.log(selects)
 
     selects.forEach(el => {
+        const selectItem = el.children.length;
+        console.log(selectItem)
 
     })
 }
