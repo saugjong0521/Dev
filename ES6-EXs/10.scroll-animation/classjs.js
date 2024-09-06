@@ -13,8 +13,13 @@ class ScrollAnimation {
 
         //Object.assign은 객체를 복사해서 하나의 새로운 객체를 생성해주는 함수
         //주로, 여러개의 속성을 하나의 객체로 병합할때 쓰임
-
+    
+        //constructor에서 받아온 값
         this.el = document.querySelector(this.opt.canvasWrap)
-            /
+        this.canvas = document.createElement('canvas');
+        this.ctx = this.canvas.getContext('2d')
+        this.imgSrc = this.opt.imgSrc;
+        this.imgFormat = this.opt.imgFormat;
+        this.imgLength = this.opt.imgLength;
     }
 }
