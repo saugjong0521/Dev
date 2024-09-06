@@ -45,7 +45,7 @@ class ScrollAnimation {
         for (let i = 0; i < this.imgLength; i++) {
             const img = new Image();    // 반복문을 돌면서 계속 새로운 이미지 객체를 생성
             const imgPath = `${this.imgSrc}${i}${this.imgFormat}`;  // 이미지 경로 생성
-            img.src = imgPath;
+            img.src = imgPath;  // 적용
 
             img.onload = () => {
                 this.currentImg += 1;
