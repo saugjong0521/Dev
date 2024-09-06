@@ -36,6 +36,13 @@ class ScrollAnimation {
         this.scrollPercent = 0;
         this.percent = 0;
 
+        this.init()
+    }
 
+    init() {
+        this.el.appendChild(this.canvas);
+        for (let i = 0; i < this.imgLength; i++) {
+
+        }
     }
 }
