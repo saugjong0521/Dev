@@ -1,5 +1,13 @@
 window.onload = () => {
 
+    const btns = document.querySelectorAll('.list > li')
+
+    btns.forEach((el, idx) => {
+        el.addEventListener('click', () => {
+            activation();
+        })
+    })
+
 
     window.addEventListener('mousemove', (e) => {
         const img = document.querySelector('.pic > li.on img');
@@ -27,6 +35,10 @@ window.onload = () => {
 
         el.style.left = x / speed + 'px';
         el.style.top = y / speed + 'px';
+    }
+
+    function button() {
+
     }
 
 }
