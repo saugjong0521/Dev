@@ -2,13 +2,15 @@ window.onload = () => {
 
 
     window.addEventListener('mousemove', (e) => {
-        const img = document.querySelector('.pic li.on img');
+        const img = document.querySelector('.pic > li.on img');
         const deco2 = document.querySelector('.deco2 img');
         const deco3 = document.querySelector('.deco3 img');
+
 
         moveImg(img, e, 30, true);  //괄호 안의 내용은 넘겨줄 애들
         moveImg(deco2, e, 100, false)
         moveImg(deco3, e, 100, false)
+        // static이 기본 속성이기에 css에서 position:relative를 넣지 않으면 움직이지 않는다.
 
     })
 
