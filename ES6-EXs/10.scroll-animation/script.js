@@ -116,7 +116,7 @@ window.onload = () => {
             document.querySelector('.pos3').classList.add('active')
         }
 
-        if (percent > 65 || percent < 39) {
+        if (percent > 65 || percent < 35) {
             document.querySelector('.pos1').classList.remove('active')
             document.querySelector('.pos2').classList.remove('active')
             document.querySelector('.pos3').classList.remove('active')
