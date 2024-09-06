@@ -104,19 +104,22 @@ window.onload = () => {
     }
 
     function contentIn () {
-        const sequence = Math.min(imgLength - 1 ,Math.floor(scrollPercent * imgLength))
-
-        if(sequence >= 40 && sequence < 45){
+        if(scrollPercent >= 0.4 && scrollPercent < 0.45){
             document.querySelector('.pos1').classList.add('active')
         }
-        if(sequence >= 45 && sequence < 50){
+        if(scrollPercent >= 0.45 && scrollPercent < 0.50){
             document.querySelector('.pos2').classList.add('active')
         }
-        if(sequence>= 50){
+        if(scrollPercent>= 0.50){
             document.querySelector('.pos3').classList.add('active')
         }
 
-        if(percent > 70)
+        if(scrollPercent > 0.70 || percent < 0.39){
+            document.querySelector('.pos1').classList.add('active')
+            document.querySelector('.pos2').classList.add('active')
+            document.querySelector('.pos3').classList.add('active')
+        }
+        console.log(scrollPercent)
     }
 
     window.addEventListener('scroll',()=> {
