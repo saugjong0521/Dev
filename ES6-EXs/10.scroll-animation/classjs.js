@@ -37,9 +37,7 @@ class ScrollAnimation {
         this.percent = 0;
 
         this.init()
-        window.addEventListener('scro;;',() => {
-            onscroll();
-        })
+        window.addEventListener('scroll', () => this.onscroll());
 
     }
 
@@ -61,6 +59,8 @@ class ScrollAnimation {
             this.imgArr.push(img)
         }
     }
+
+    // position을 받아오는 함수
     setProperty() {
         this.scrollHeight = this.scrollBody.offsetHeight;
         this.winScrollTop = window.pageYOffset;
@@ -79,6 +79,7 @@ class ScrollAnimation {
         this.canvas.height = this.imgHeight
     }
 
+    //
     scrollFunc() {
         const sequence = Math.min(this.imgLength - 1, Math.max(0, Math.floor(this.imgLength * this.scrollPercent)))
         if (this.imgArr[sequence]) {
@@ -90,7 +91,7 @@ class ScrollAnimation {
         this.ctx.drawImage(this.imgArr[sequence], 0, 0, this.imgWidth, this.imgHeight);
     }
 
-    onScroll(){
+    onScroll() {
         this.setProperty();
         this.scrollFunc();
     }
