@@ -104,15 +104,19 @@ window.onload = () => {
     }
 
     function contentIn () {
-        if(scrollPercent >= 40 && scrollPercent < 45){
+        const sequence = Math.min(imgLength - 1 ,Math.floor(scrollPercent * imgLength))
+
+        if(sequence >= 40 && sequence < 45){
             document.querySelector('.pos1').classList.add('active')
         }
-        if(scrollPercent >= 45 && scrollPercent < 50){
+        if(sequence >= 45 && sequence < 50){
             document.querySelector('.pos2').classList.add('active')
         }
-        if(scrollPercent>= 50){
+        if(sequence>= 50){
             document.querySelector('.pos3').classList.add('active')
         }
+
+        if(percent > 70)
     }
 
     window.addEventListener('scroll',()=> {
