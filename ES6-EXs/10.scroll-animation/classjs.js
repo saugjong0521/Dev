@@ -43,8 +43,8 @@ class ScrollAnimation {
         // 아래의 경우, 이미지가 한장만 로드되는 것이 아닌, 여러장을 묶어서 로드해야 하기 때문에, 초기값으로 이미지를 넣고, 이후 init에서 함수를 통해 분리해서 지연시간을 가지게 한다.
         this.el.appendChild(this.canvas);
         for (let i = 0; i < this.imgLength; i++) {
-            const img = new Image();
-            const imgPath = `${this.imgSrc}${i}${this.imgFormat}`;
+            const img = new Image();    // 새로운 이미지 객체를 생성
+            const imgPath = `${this.imgSrc}${i}${this.imgFormat}`;  // 이미지 경로 생성
             img.src = imgPath;
 
             img.onload = () => {
