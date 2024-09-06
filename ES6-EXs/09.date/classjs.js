@@ -59,7 +59,7 @@ class FormData {
                 }
             })
             styledSelect.classList.toggle('activce');
-            list.style.disply = list.style.display === 'block' ? 'none' : 'block'
+            list.style.display = list.style.display === 'block' ? 'none' : 'block'
         })
 
         //선택시 rel값을 넘겨주고 리스트를 닫음
