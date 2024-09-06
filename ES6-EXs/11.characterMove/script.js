@@ -43,6 +43,7 @@ window.onload = () => {
             activation(btns, idx);
             activation(title, idx);
             activation(titlePic, idx);
+            // css에 on속성을 키고 끄는 function을 만든 후 forEach문을 통해 각각의 선택자를 넣어서 구현
         })
     })
 
