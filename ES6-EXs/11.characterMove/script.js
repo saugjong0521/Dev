@@ -41,6 +41,8 @@ window.onload = () => {
     btns.forEach((el, idx) => {
         el.addEventListener('click', () => {
             activation(btns, idx);
+            activation(title, idx);
+            activation(titlePic, idx);
         })
     })
 
