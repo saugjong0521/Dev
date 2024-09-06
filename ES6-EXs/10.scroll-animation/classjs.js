@@ -85,6 +85,9 @@ class ScrollAnimation {
         if (this.imgArr[sequence]) {
             this.renderCanvas(sequence);
         }
+
+        this.contentIn()
+
     }
     renderCanvas(sequence) {
         this.ctx.clearRect(0, 0, this.imgWidth, this.imgHeight);
@@ -94,6 +97,24 @@ class ScrollAnimation {
     onScroll() {
         this.setProperty();
         this.scrollFunc();
+    }
+
+    contentIn(){
+        if(this.percent >= 40 && this.percent <45){
+            document.querySelector('.pos1').classList.add('active')
+        }
+        if (this.percent >= 45 && this.percent < 50) {
+            document.querySelector('.pos2').classList.add('active')
+        }
+        if (this.percent >= 50) {
+            document.querySelector('.pos3').classList.add('active')
+        }
+
+        if (this.percent > 65 || this.percent < 35) {
+            document.querySelector('.pos1').classList.remove('active')
+            document.querySelector('.pos2').classList.remove('active')
+            document.querySelector('.pos3').classList.remove('active')
+        }
     }
 
 }
