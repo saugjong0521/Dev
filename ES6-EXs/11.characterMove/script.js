@@ -7,6 +7,7 @@ window.onload = () => {
         const deco3 = document.querySelector('deco3 img');
 
         moveImg(img, e, 30, true);  //넘겨줄 애들
+        moveImg(deco2, e, 100, false)
     })
 
     function moveImg(el, e, speed, reverse) {
