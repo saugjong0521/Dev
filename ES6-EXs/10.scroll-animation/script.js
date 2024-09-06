@@ -27,6 +27,7 @@ window.onload = () => {
     let sectionRealH;
     let scrollW;
     let scrollPercent;
+    let percent;
     // canvas를 넣기 위한 위치 요소
 
     let imgWidth;
@@ -90,13 +91,25 @@ window.onload = () => {
         if (imgArr[sequence]) {
             canvasRender(sequence)
         }
+        // console.log(sequence)
 
-        console.log(sequence)
+        contentIn();
     }
+
+
 
     function canvasRender(sequence) {
         ctx.clearRect(0, 0, imgWidth, imgHeight)
         ctx.drawImage(imgArr[sequence], 0, 0, imgWidth, imgHeight)
+    }
+
+    function contentIn () {
+        if(percent >= 40 && percent < 45){
+            document.querySelector('.pos1').classList.add('active')
+        }
+        if(percent >= 45 && percent < 50){
+            document.querySelector('.pos2').classList.add('active')
+        }
     }
 
     window.addEventListener('scroll',()=> {
