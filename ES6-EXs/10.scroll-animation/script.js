@@ -104,11 +104,14 @@ window.onload = () => {
     }
 
     function contentIn () {
-        if(percent >= 40 && percent < 45){
+        if(scrollPercent >= 40 && scrollPercent < 45){
             document.querySelector('.pos1').classList.add('active')
         }
-        if(percent >= 45 && percent < 50){
+        if(scrollPercent >= 45 && scrollPercent < 50){
             document.querySelector('.pos2').classList.add('active')
+        }
+        if(scrollPercent>= 50){
+            document.querySelector('.pos3').classList.add('active')
         }
     }
 
