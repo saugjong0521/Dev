@@ -1,4 +1,4 @@
-window.onload = () => {
+    window.onload = () => {
     /*
     스크롤이 되는 값을 받아와서, 특정 위치에서 이미지를 교체해서 애니메이션처럼 보이게 하기
 
@@ -66,6 +66,7 @@ window.onload = () => {
         sectionRealH = scrollH - window.innerHeight;
         sectionTop = scrollW - sectionOffsetTop;
         scrollPercent = sectionTop / sectionRealH;
+        percent = scrollPercent * 100;
         
         // console.log(sectionTop)
 
@@ -104,22 +105,22 @@ window.onload = () => {
     }
 
     function contentIn () {
-        if(scrollPercent >= 0.4 && scrollPercent < 0.45){
+        if(percent >= 40 && percent < 45){
             document.querySelector('.pos1').classList.add('active')
         }
-        if(scrollPercent >= 0.45 && scrollPercent < 0.50){
+        if(percent >= 45 && percent < 50){
             document.querySelector('.pos2').classList.add('active')
         }
-        if(scrollPercent>= 0.50){
+        if(percent>= 50){
             document.querySelector('.pos3').classList.add('active')
         }
 
-        if(scrollPercent > 0.65 || scrollPercent < 0.39){
+        if(percent > 65 || percent < 39){
             document.querySelector('.pos1').classList.remove('active')
             document.querySelector('.pos2').classList.remove('active')
             document.querySelector('.pos3').classList.remove('active')
         }
-        console.log(scrollPercent)
+        console.log(percent)
     }
 
     window.addEventListener('scroll',()=> {
