@@ -49,7 +49,7 @@ class FormData {
         const listItems = list.querySelectorAll('li')
         // console.log(listItems)
 
-        //리스트 선택부분
+        //리스트가 펼쳐지는 부분
         styledSelect.addEventListener('click', (e) => {
             e.stopPropagation();
             document.querySelectorAll('.select-styled.active').forEach(active => {
@@ -71,6 +71,12 @@ class FormData {
                 el.value = e.target.getAttribute('rel');
                 list.style.display = 'none';
             })
+        })
+
+        //다른곳 클릭시 리스트가 닫기게 함
+        document.addEventListener('click',()=>{
+            styledSelect.classList.remove('active');
+            list.style.display = 'none';
         })
     }
 }
