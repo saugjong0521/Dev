@@ -57,6 +57,18 @@ class FormData {
                     active.nextElemetSibling.style.display = 'none';
                 }
             })
+            styledSelect.classList.toggle('activce');
+            list.style.disply = list.style.display === 'block' ? 'none' : 'block'
+        })
+
+        listItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.stopPropagation();
+                styledSelect.textContent = e.target.textContent;
+                styledSelect.classList.remove('remove');
+                el.value = e.target.getAttribute('rel');
+                list.style.display = 'none';
+            })
         })
     }
 }
