@@ -55,7 +55,7 @@ class FormData {
             document.querySelectorAll('.select-styled.active').forEach(active => {
                 if (active !== styledSelect) {
                     active.classList.remove('active');
-                    active.nextElemetSibling.style.display = 'none';
+                    active.nextElementSibling.style.display = 'none';
                 }
             })
             styledSelect.classList.toggle('activce');
@@ -74,7 +74,7 @@ class FormData {
         })
 
         //다른곳 클릭시 리스트가 닫기게 함
-        document.addEventListener('click',()=>{
+        document.addEventListener('click', () => {
             styledSelect.classList.remove('active');
             list.style.display = 'none';
         })
