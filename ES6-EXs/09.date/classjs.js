@@ -8,4 +8,8 @@ class FormData {
     constructor(){
         this.selects = document.querySelectorAll('select')
     }
+
+    init(){
+        
+    }
 }
