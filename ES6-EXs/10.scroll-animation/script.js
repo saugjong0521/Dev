@@ -27,7 +27,6 @@ window.onload = () => {
     let sectionRealH;
     let scrollW;
     let scrollPercent;
-    let percent;
     // canvas를 넣기 위한 위치 요소
 
     let imgWidth;
@@ -62,16 +61,17 @@ window.onload = () => {
         scrollH = scrollBody.offsetHeight;  // scrollBody의 높이
         scrollW = window.pageYOffset;   //현재 스크롤의 위치
         sectionOffsetTop = scrollBody.getBoundingClientRect().top + scrollW;  // 페이지 상단에서 scrollBody의 위치
-        console.log(sectionOffsetTop)
 
         sectionRealH = scrollH - window.innerHeight;
         sectionTop = scrollW - sectionOffsetTop;
         scrollPercent = sectionTop / sectionRealH;
+        
+        // console.log(sectionTop)
 
         // console.log(sectionRealH)
 
 
-        if (sectionRealH < 0) {   //  최솟값 설정
+        if (sectionTop <= 0) {   //  최솟값 설정
             scrollPercent = 0
         }
         // console.log(scrollPercent)
@@ -86,7 +86,7 @@ window.onload = () => {
     }
 
     function scrollFunc() {
-        const sequence = Math.min(imgLength - 1, Math.max(0, Math.floor(imgLength * scrollPercent)))
+        const sequence = Math.min(imgLength - 1 ,Math.floor(scrollPercent * imgLength))
         if (imgArr[sequence]) {
             canvasRender(sequence)
         }
