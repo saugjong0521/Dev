@@ -114,7 +114,7 @@ window.onload = () => {
             document.querySelector('.pos3').classList.add('active')
         }
 
-        if(scrollPercent > 0.65 || percent < 0.39){
+        if(scrollPercent > 0.65 || scrollPercent < 0.39){
             document.querySelector('.pos1').classList.remove('active')
             document.querySelector('.pos2').classList.remove('active')
             document.querySelector('.pos3').classList.remove('active')
