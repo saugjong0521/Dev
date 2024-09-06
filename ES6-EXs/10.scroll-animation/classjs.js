@@ -37,6 +37,10 @@ class ScrollAnimation {
         this.percent = 0;
 
         this.init()
+        window.addEventListener('scro;;',() => {
+            onscroll();
+        })
+
     }
 
     init() {
@@ -85,4 +89,10 @@ class ScrollAnimation {
         this.ctx.clearRect(0, 0, this.imgWidth, this.imgHeight);
         this.ctx.drawImage(this.imgArr[sequence], 0, 0, this.imgWidth, this.imgHeight);
     }
+
+    onScroll(){
+        this.setProperty();
+        this.scrollFunc();
+    }
+
 }
