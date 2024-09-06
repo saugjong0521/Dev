@@ -49,6 +49,7 @@ class FormData {
         const listItems = list.querySelectorAll('li')
         // console.log(listItems)
 
+        //리스트 선택부분
         styledSelect.addEventListener('click', (e) => {
             e.stopPropagation();
             document.querySelectorAll('.select-styled.active').forEach(active => {
@@ -61,6 +62,7 @@ class FormData {
             list.style.disply = list.style.display === 'block' ? 'none' : 'block'
         })
 
+        //선택시 rel값을 넘겨주고 리스트를 닫음
         listItems.forEach(item => {
             item.addEventListener('click', (e) => {
                 e.stopPropagation();
