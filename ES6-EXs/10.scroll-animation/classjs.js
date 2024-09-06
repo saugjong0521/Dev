@@ -13,7 +13,7 @@ class ScrollAnimation {
 
         //Object.assign은 객체를 복사해서 하나의 새로운 객체를 생성해주는 함수
         //주로, 여러개의 속성을 하나의 객체로 병합할때 쓰임
-    
+
         //constructor에서 받아온 값
         this.el = document.querySelector(this.opt.canvasWrap)
         this.scrollBody = document.querySelector(this.opt.scrollBody)
@@ -28,6 +28,14 @@ class ScrollAnimation {
         this.imgHeight = window.innerHeight;
         this.imgArr = [];
         this.currentImg = 0;
+        this.scrollHeight = 0;
+        this.sectionOffsetTop = 0;
+        this.sectionScrollTop = 0;
+        this.scrollRealHeight = 0;
+        this.winScrollTop = 0;
+        this.scrollPercent = 0;
+        this.percent = 0;
+
 
     }
 }
