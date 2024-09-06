@@ -1,5 +1,6 @@
 class ScrollAnimation {
     constructor(option = {}) {
+        // 위의 option은 생성자에 전달되는 매개변수
         this.opt = object.assign({
             canvasWrap: this.canvasWrap,
             scrollBody: this.scrollBody,
@@ -8,5 +9,6 @@ class ScrollAnimation {
             imgLength: this.imgLength
             // 객체를 만들어 두고 이후 window.onload를 통하여 어떤 값인지를 넣어줌
         }, option)
+        // 여기의 option은 다른 함수에 전달될 매개변수
     }
 }
