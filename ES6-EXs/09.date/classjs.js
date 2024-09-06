@@ -46,7 +46,7 @@ class FormData {
         })
     }
 
-
+    // 초기값을 통하여 이루어지는 모든 이벤트들을 작성
     bindingEvent(styledSelect, list, el) {
         const listItems = list.querySelectorAll('li')
         // console.log(listItems)
