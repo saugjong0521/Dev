@@ -11,7 +11,7 @@ class FormData {
 
     init() {
         /*
-        init은 
+        init은 초기값을 의미하는 용어로, 시작값
         */
         this.selects = document.querySelectorAll('select')
         this.selects.forEach(el => {
@@ -32,7 +32,7 @@ class FormData {
             list.className = 'select-options';
             wrapper.appendChild(list);
 
-            for(let i = 0; i < selectItem; i++){
+            for (let i = 0; i < selectItem; i++) {
                 const listItem = document.createElement('li');
                 listItem.textContent = el.children[i].textContent;
                 listItem.setAttribute('rel', el.children[i].value)
@@ -45,8 +45,16 @@ class FormData {
     }
 
 
-    bindingEvent (styledSelect, list, el){
+    bindingEvent(styledSelect, list, el) {
         const listItems = list.querySelectorAll('li')
-        console.log(listItems)
+        // console.log(listItems)
+
+        styledSelect.addEventListener('click', (e) => {
+            e.stopPropagation
+            if (active !== styledSelect) {
+                active.classList.remove('active');
+                active.nextElemetSibling.style.display = 'none';
+            }
+        })
     }
 }
