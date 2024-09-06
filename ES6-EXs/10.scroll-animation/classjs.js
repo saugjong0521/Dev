@@ -37,7 +37,7 @@ class ScrollAnimation {
         this.percent = 0;
 
         this.init()
-        window.addEventListener('scroll', () => this.onscroll());
+        window.addEventListener('scroll', () => this.onScroll());
 
     }
 
@@ -99,8 +99,8 @@ class ScrollAnimation {
         this.scrollFunc();
     }
 
-    contentIn(){
-        if(this.percent >= 40 && this.percent <45){
+    contentIn() {
+        if (this.percent >= 40 && this.percent < 45) {
             document.querySelector('.pos1').classList.add('active')
         }
         if (this.percent >= 45 && this.percent < 50) {
