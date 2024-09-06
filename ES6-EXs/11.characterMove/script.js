@@ -1,12 +1,6 @@
 window.onload = () => {
 
-    const btns = document.querySelectorAll('.list > li')
 
-    btns.forEach((el, idx) => {
-        el.addEventListener('click', () => {
-            activation(btns, idx);
-        })
-    })
 
 
     window.addEventListener('mousemove', (e) => {
@@ -37,7 +31,22 @@ window.onload = () => {
         el.style.top = y / speed + 'px';
     }
 
-    function button() {
+
+
+
+    const btns = document.querySelectorAll('.list > li')
+
+    btns.forEach((el, idx) => {
+        el.addEventListener('click', () => {
+            activation(btns, idx);
+        })
+    })
+
+    function activation(item, idx) {
+        for (let el of item) {
+            el.classList.remove('on')
+        }
+        item[idx].classList.add('on')
 
     }
 
