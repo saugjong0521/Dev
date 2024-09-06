@@ -10,5 +10,11 @@ class ScrollAnimation {
             // 객체를 만들어 두고 이후 window.onload를 통하여 어떤 값인지를 넣어줌
         }, option)
         // 여기의 option은 다른 함수에 전달될 매개변수
+
+        //Object.assign은 객체를 복사해서 하나의 새로운 객체를 생성해주는 함수
+        //주로, 여러개의 속성을 하나의 객체로 병합할때 쓰임
+
+        this.el = document.querySelector(this.opt.canvasWrap)
+            /
     }
 }
