@@ -42,7 +42,7 @@ class FormData {
             }
 
             this.bindingEvent(styledSelect, list, el);
-            // 괄호 안의 값은 전달해줄 객체들
+            // 괄호 안의 값은 전달해줄 객체들 -> constructor에 들어가도 되나, 현재의 경우 값을 전달해주기 때문에 init안에다 작성
         })
     }
 
