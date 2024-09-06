@@ -105,6 +105,7 @@
     }
 
     function contentIn () {
+        
         if(percent >= 40 && percent < 45){
             document.querySelector('.pos1').classList.add('active')
         }
