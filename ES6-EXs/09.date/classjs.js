@@ -38,4 +38,9 @@ class FormData {
             }
         })
     }
+
+
+    bindingEvent (){
+        const listItems = list.querySelectorAll('li')
+    }
 }
