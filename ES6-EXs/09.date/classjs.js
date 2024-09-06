@@ -1,5 +1,5 @@
 
 
-window.onload() => {
-    const formData = new FormData()
+window.onload = () => {
+    const formData = new FormData();
 }
