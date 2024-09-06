@@ -79,7 +79,7 @@ class ScrollAnimation {
         this.canvas.height = this.imgHeight
     }
 
-    //
+    //이미지를 변경
     scrollFunc() {
         const sequence = Math.min(this.imgLength - 1, Math.max(0, Math.floor(this.imgLength * this.scrollPercent)))
         if (this.imgArr[sequence]) {
