@@ -35,6 +35,8 @@ window.onload = () => {
 
 
     const btns = document.querySelectorAll('.list > li')
+    const title = document.querySelectorAll('.title > li')
+    const titlePic = document.querySelectorAll('.pic > li')
 
     btns.forEach((el, idx) => {
         el.addEventListener('click', () => {
