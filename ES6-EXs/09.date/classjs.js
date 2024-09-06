@@ -7,10 +7,12 @@ window.onload = () => {
 class FormData {
     constructor() {
         this.init();
-        this.bindingEvent();
     }
 
     init() {
+        /*
+        init은 
+        */
         this.selects = document.querySelectorAll('select')
         this.selects.forEach(el => {
             const selectItem = el.children.length;
@@ -36,11 +38,15 @@ class FormData {
                 listItem.setAttribute('rel', el.childre[i].value)
                 list.appendChild(listItem)
             }
+
+            this.bindingEvent(styledSelect, list, el);
+            // 괄호 안의 값은 전달해줄 객체들
         })
     }
 
 
-    bindingEvent (){
+    bindingEvent (styledSelect, list, el){
         const listItems = list.querySelectorAll('li')
+        console.log(listItems)
     }
 }
