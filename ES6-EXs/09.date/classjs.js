@@ -11,7 +11,9 @@ class FormData {
 
     init() {
         /*
-        init은 초기값을 의미하는 용어로, 시작값
+        init은 초기값 설정을 의미하는 용어로, 시작값을 작성;
+
+        다만 init안에서 변수를 선언시, 지역변수가 되서 다른 함수에서 사용을 못하므로 construnctor에서 선언 후 init에서 값을 지정해줌
         */
         this.selects = document.querySelectorAll('select')
         this.selects.forEach(el => {
