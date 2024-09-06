@@ -6,18 +6,12 @@ window.onload = () => {
 
 class FormData {
     constructor() {
-        
         this.init();
         this.bindingEvent();
     }
 
     init() {
-        /*
-        init는 초기값을 의미하는 말로, 선택자; 시작값; 등을 작성
-
-        다만 안에서 선언 시, 지역변수가 되기에
-        밖에서 선언 이후 값을 init에다가 값을 작성
-        */
+        this.selects = document.querySelectorAll('select')
         this.selects.forEach(el => {
             const selectItem = el.children.length;
 
@@ -40,7 +34,7 @@ class FormData {
                 const listItem = document.createElement('li');
                 listItem.textContent = el.children[i].textContent;
                 listItem.setAttribute('rel', el.childre[i].value)
-                list.appendChild()
+                list.appendChild(listItem)
             }
         })
     }
