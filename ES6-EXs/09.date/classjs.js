@@ -50,11 +50,13 @@ class FormData {
         // console.log(listItems)
 
         styledSelect.addEventListener('click', (e) => {
-            e.stopPropagation
-            if (active !== styledSelect) {
-                active.classList.remove('active');
-                active.nextElemetSibling.style.display = 'none';
-            }
+            e.stopPropagation();
+            document.querySelectorAll('.select-styled.active').forEach(active => {
+                if (active !== styledSelect) {
+                    active.classList.remove('active');
+                    active.nextElemetSibling.style.display = 'none';
+                }
+            })
         })
     }
 }
