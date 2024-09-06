@@ -4,7 +4,7 @@ window.onload = () => {
 
     btns.forEach((el, idx) => {
         el.addEventListener('click', () => {
-            activation();
+            activation(btns, idx);
         })
     })
 
