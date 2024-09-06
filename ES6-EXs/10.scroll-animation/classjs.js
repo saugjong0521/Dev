@@ -16,10 +16,18 @@ class ScrollAnimation {
     
         //constructor에서 받아온 값
         this.el = document.querySelector(this.opt.canvasWrap)
+        this.scrollBody = document.querySelector(this.opt.scrollBody)
         this.canvas = document.createElement('canvas');
         this.ctx = this.canvas.getContext('2d')
         this.imgSrc = this.opt.imgSrc;
         this.imgFormat = this.opt.imgFormat;
         this.imgLength = this.opt.imgLength;
+
+        //따로 설정되는 값
+        this.imgWidth = window.innerWidth;
+        this.imgHeight = window.innerHeight;
+        this.imgArr = [];
+        this.currentImg = 0;
+
     }
 }
