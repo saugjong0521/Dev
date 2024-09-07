@@ -33,6 +33,12 @@ class ScrollAction {
     }
 
     bindingEvent() {
+
+        this.horizonSection.forEach(el => {
+            setScroll();
+            setActive();
+        })
+
         window.addEventListener('scroll', () => {
             this.horizonSection.forEach(el, () => {
                 activeScroll(el)
