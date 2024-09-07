@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "00fd7ad17fe9e1a9",
+        "id": "e4ed4fd02d018594",
         "type": "tabs",
         "children": [
           {
-            "id": "5d1dd24bd1c4ff20",
+            "id": "1ef3909417067646",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -44,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "path:\"frontEnd/\" ",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -138,9 +138,8 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5d1dd24bd1c4ff20",
+  "active": "1ef3909417067646",
   "lastOpenFiles": [
-    "ES6-EXs/08.scrollSlider/classScript.js",
     "ES6-EXs/11.characterMove/script.js",
     "ES6-EXs/11.characterMove/index.html",
     "ES6-EXs/11.characterMove/img/txt2.png",
@@ -155,36 +154,37 @@
     "ES6-EXs/11.characterMove/img/ch8.png",
     "ES6-EXs/11.characterMove/img/ch7.png",
     "ES6-EXs/11.characterMove/img/ch6.png",
-    "ES6-EXs/11.characterMove/img",
     "ES6-EXs/11.characterMove/css/style.css",
+    "ES6-EXs/11.characterMove/img",
     "ES6-EXs/11.characterMove/css",
     "ES6-EXs/11.characterMove",
-    "ES6-EXs/새 폴더",
     "ES6-EXs/10.scroll-animation/classjs.js",
+    "ES6-EXs/09.date/classjs.js",
+    "ES6-EXs/08.scrollSlider/classScript.js",
+    "Untitled.md",
     "conflict-files-obsidian-git.md",
     "JS/14.swiper/Swiper 구조.md",
     "Output/KUSD_S3/node_modules/send/node_modules/ms/readme.md",
     "Output/KUSD_S3/node_modules/send/node_modules/ms/license.md",
+    "Output/KUSD_S3/node_modules/utils-merge/README.md",
     "Output/KUSD_S3/node_modules/vary/README.md",
     "Output/KUSD_S3/node_modules/vary/HISTORY.md",
-    "Output/KUSD_S3/node_modules/utils-merge/README.md",
     "Output/KUSD_S3/node_modules/unpipe/README.md",
     "Output/KUSD_S3/node_modules/unpipe/HISTORY.md",
     "Output/KUSD_S3/node_modules/type-is/README.md",
-    "Output/KUSD_S3/node_modules/toidentifier/README.md",
     "Output/KUSD_S3/node_modules/type-is/HISTORY.md",
-    "Output/KUSD_S3/node_modules/toidentifier/HISTORY.md",
     "Output/KUSD_S3/node_modules/statuses/README.md",
     "Output/KUSD_S3/node_modules/statuses/HISTORY.md",
     "Output/KUSD_S3/node_modules/side-channel/README.md",
     "Output/KUSD_S3/node_modules/side-channel/CHANGELOG.md",
-    "Output/KUSD_S3/node_modules/setprototypeof/README.md",
+    "Output/KUSD_S3/node_modules/toidentifier/README.md",
+    "Output/KUSD_S3/node_modules/toidentifier/HISTORY.md",
     "Output/KUSD_S3/node_modules/set-function-length/README.md",
-    "Output/KUSD_S3/node_modules/set-function-length/CHANGELOG.md",
-    "Output/KUSD_S3/node_modules/serve-static/README.md",
-    "Output/KUSD_S3/node_modules/serve-static/HISTORY.md",
-    "Output/KUSD_S3/node_modules/send/README.md",
     "Output/KUSD_S3/node_modules/send/SECURITY.md",
-    "Output/KUSD_S3/node_modules/send/HISTORY.md"
+    "Output/KUSD_S3/node_modules/set-function-length/CHANGELOG.md",
+    "Output/KUSD_S3/node_modules/send/README.md",
+    "Output/KUSD_S3/node_modules/send/HISTORY.md",
+    "Output/KUSD_S3/node_modules/setprototypeof/README.md",
+    "Output/KUSD_S3/node_modules/serve-static/README.md"
   ]
 }
