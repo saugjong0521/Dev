@@ -2,6 +2,7 @@ window.onload = () => {
 
     const scrollAction = new ScrollAction();
 }
+
 class ScrollAction {
     constructor() {
 
