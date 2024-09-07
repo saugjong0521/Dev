@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "bf7d30312e50e182",
+        "id": "00fd7ad17fe9e1a9",
         "type": "tabs",
         "children": [
           {
-            "id": "6425032ce5bd6393",
+            "id": "5d1dd24bd1c4ff20",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -138,7 +138,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6425032ce5bd6393",
+  "active": "5d1dd24bd1c4ff20",
   "lastOpenFiles": [
     "ES6-EXs/08.scrollSlider/classScript.js",
     "ES6-EXs/11.characterMove/script.js",
