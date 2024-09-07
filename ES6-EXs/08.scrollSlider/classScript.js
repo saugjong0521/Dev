@@ -11,9 +11,9 @@ class ScrollAction {
         this.winW = window.innerWidth;
 
         // Object.assign으로 가능
-        this.itemClass.className = `slider`;
-        this.itemActive.className = `slider-active`;
-        this.itemEnd.className = `slider-end`;
+        this.itemClass = `slider`;
+        this.itemActive = `slider-active`;
+        this.itemEnd = `slider-end`;
         this.horizonSection = document.querySelectorAll('.horizontal-scroll')
 
         console.log(itemClass)
