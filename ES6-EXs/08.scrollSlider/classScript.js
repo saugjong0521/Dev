@@ -16,7 +16,7 @@ class ScrollAction {
         this.itemEnd = `slider-end`;
         this.horizonSection = document.querySelectorAll('.horizontal-scroll')
 
-        bindingEvent();
+        this.bindingEvent();
 
 
 
