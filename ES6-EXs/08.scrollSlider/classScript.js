@@ -16,8 +16,6 @@ class ScrollAction {
         this.itemEnd = `slider-end`;
         this.horizonSection = document.querySelectorAll('.horizontal-scroll')
 
-        console.log(itemClass)
-
         bindingEvent();
 
 
@@ -38,7 +36,7 @@ class ScrollAction {
         window.addEventListener('scroll', () => {
             this.horizonSection.forEach(el, () => {
                 activeScroll(el)
-
+                
             })
         })
     }
