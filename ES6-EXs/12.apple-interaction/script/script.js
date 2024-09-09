@@ -49,7 +49,7 @@
     }
 
 
-    //5.
+    //5. 각 섹션의 높이 설정 함수
     function setLayout() {
         for(let i=0;i<sectionInfo.length; i++){
             if(sectionInfo[i].type === 'sticky'){
@@ -62,6 +62,7 @@
 
     //1. 스크롤 이벤트 시작
     window.addEventListener('load', () => {
+        setLayout();
         window.addEventListener('scroll', () => {
             yOffset = window.pageYOffset;   // 스크롤시 위치를 다시 받아옴
             fixedMenu();
