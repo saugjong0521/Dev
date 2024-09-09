@@ -41,7 +41,7 @@
         let imgItem;
         for (let i = 0; i < sectionInfo[0].values.videoImageCount; i++) {
             imgItem = new Image();  // 이미지 넣을 공간 생성
-            imgItem.src = `./images/setion01/00${i + 1}.png`  // 이미지 경로 설정
+            imgItem.src = `./images/section01/00${i + 1}.png`  // 이미지 경로 설정
             sectionInfo[0].objs.videoImages.push(imgItem)
 
             console.log(imgItem.src)
