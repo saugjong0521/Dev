@@ -45,7 +45,7 @@ body {
     background: url(../images/basic/logo_white.png) no-repeat center center/ 100%;
 }
 
-.gnb {
+.gnb {url(https://www.apple.com/kr/shop/goto/store)
     display: contents;
     /* 
     contents
@@ -59,8 +59,12 @@ body {
 }
 
 .gnb-list li a {
-    color: #fff;
+    color: rgba(255,255,255,0.5);
     font-size: 12px;
+    transition: 500ms;
+}
+.gnb-list li a:hover{
+    color: rgba(255,255,255,1)
 }
 
 .cs-list {
