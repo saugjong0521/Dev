@@ -23,7 +23,11 @@
                 container: document.query('#scroll-section-0'),
                 canvas: document.querySelector('#video-canvas-0'),
                 context: document.querySelector('#video-canvas-0').getContext('2d'),
-                videoImages: []
+                videoImages: [] // 이미지가 들어올 배열
+            },
+            values: {
+                videoImageCount: 64,    // 사용될 이미지의 갯수
+                imgSequence: [0, 64],   // 이미지 시퀀스(첫 프레임과 끝 프레임)
             }
 
         }
@@ -31,7 +35,7 @@
 
 
 
-    //1. 
+    //1. 스크롤 이벤트 시작
     window.addEventListener('load', () => {
         window.addEventListener('scroll', () => {
             yOffset = window.pageYOffset;   // 스크롤시 위치를 다시 받아옴
@@ -39,7 +43,7 @@
         })
     })
 
-    //2. 
+    //2. 맨 위 상단메뉴
     function fixedMenu() {
         if (yOffset > 50) {
             document.body.classList.add('nav-fixed')
