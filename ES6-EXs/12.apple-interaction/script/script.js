@@ -87,14 +87,20 @@
                     resultValue = ((currentY - scrollStart) / scrollRealH) * (val[1] - val[0]) + val[0]
                     // 애니메이션의 진행 비율을 계산하고 값으로 반환
                 }
+                // 스크롤이 애니메이션 범위보다 위에 있는 경우 시작값으로 지정
+                else if (currentY < scrollStart) {
+                    resultValue = val[0]
+                }
+                // 스크롤이 애니메이션 범위보다 아래 있는 경우 종료값으로 지정
+                else if (current > scrollEnd) {
+                    resultValue = val[1]
+                }
             }
-            // 스크롤이 애니메이션 범위보다 위에 있는 경우 시작값으로 지정
-            else if (currentY < scrollStart) {
-                resultValue = val[0]
-            } else if (current > scrollEnd) {
-                resultValue = val[1]
+            // 배열의 길이가 2일경우 애니메이션 섹션 전체에서 발생, 스크롤 비율에 따라 값을 계산
+            else {
+                resultValue = scrollRatio * (val[1] - val[0]) + val[0]
             }
-
+            return resultValue
         }
     }
 
