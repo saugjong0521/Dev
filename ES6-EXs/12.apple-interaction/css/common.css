@@ -150,7 +150,8 @@ body {
     top: 0;
     width: 100%;
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: saturate(150%) blur(20px);
+    -webkit-backdrop-filter: : saturate(180%) blur(15px);
+    backdrop-filter: saturate(180%) blur(15px);
     /* 
     backdrop-filter: 배경에 효과를 주는 속성
     saturate: 채도
