@@ -51,7 +51,12 @@
 
     //5.
     function setLayout() {
-        for(let i=0;i<sectionInfo.length.F)
+        for(let i=0;i<sectionInfo.length; i++){
+            if(sectionInfo[i].type === 'sticky'){
+                sectionInfo[i].scrollHeight = sectionInfo[i].heightNum * window.innerHeight
+            }
+            sectionInfo[i].objs.container.style.height = `${sectionInfo[i].scrollHeight}px`
+        }
     }
 
 
