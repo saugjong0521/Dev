@@ -60,7 +60,7 @@
     }
 
 
-    //1. 스크롤 이벤트 시작
+    //1. 스크롤 이벤트 시작 및 각 함수를 적용
     window.addEventListener('load', () => {
         setLayout();
         window.addEventListener('scroll', () => {
