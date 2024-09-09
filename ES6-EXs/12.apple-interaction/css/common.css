@@ -46,6 +46,11 @@ body {
 
 .gnb{
     display: contents;
+    /* 
+    contents
+        부모 요소의 속성을 자식요소로 변환하는 css
+        부모요소는 사라지고, 자식요소들은 부모요소를 대체하게 된다.
+    */
 }
 .gnb-list{
     display: contents;
