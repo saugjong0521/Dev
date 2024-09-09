@@ -41,7 +41,7 @@
         let imgItem;
         for (let i = 0; i < sectionInfo[0].values.videoImageCount; i++) {
             imgItem = new Image();  // 이미지 넣을 공간 생성
-            imgItem.src = `./images/setion01/00${i+1}.png`  // 이미지 경로 설정
+            imgItem.src = `./images/setion01/00${i + 1}.png`  // 이미지 경로 설정
             sectionInfo[0].objs.videoImages.push(imgItem)
 
             console.log(imgItem.src)
@@ -49,13 +49,7 @@
     }
 
 
-    //1. 스크롤 이벤트 시작
-    window.addEventListener('load', () => {
-        window.addEventListener('scroll', () => {
-            yOffset = window.pageYOffset;   // 스크롤시 위치를 다시 받아옴
-            fixedMenu();
-        })
-    })
+
 
 
     //2. 맨 위 상단메뉴
@@ -66,6 +60,15 @@
             document.body.classList.remove('nav-fixed')
         }
     }
+
+    //1. 스크롤 이벤트 시작
+    window.addEventListener('load', () => {
+        window.addEventListener('scroll', () => {
+            yOffset = window.pageYOffset;   // 스크롤시 위치를 다시 받아옴
+            fixedMenu();
+        })
+    })
+    setCanvasImage();
 
 
 })()
