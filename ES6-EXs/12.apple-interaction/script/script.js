@@ -38,7 +38,7 @@
 
     //1.
     function fixedMenu() {
-        if (yOffset > 1) {
+        if (yOffset > 50) {
             document.body.classList.add('nav-fixed')
         } else {
             document.body.classList.remove('nav-fixed')
