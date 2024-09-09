@@ -12,7 +12,7 @@
 
 
 
-    //3. 
+    //3. 섹션 info
     const sectionInfo = [
         {
             type: 'sticky', // 화면에 보여질 방식
@@ -36,6 +36,14 @@
         }
     ]
 
+    //4. 캔버스에 적재할 이미지를 로드
+    function setCanvasImage() {
+        let imgSize;
+        for (let i = 0; i < sectionInfo[0].values.videoImageCount; i++) {
+
+        }
+
+    }
 
 
     //1. 스크롤 이벤트 시작
