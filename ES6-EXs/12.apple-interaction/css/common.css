@@ -45,8 +45,8 @@ body {
 }
 
 .gnb{
-    display: content;
+    display: contents;
 }
 .gnb-list{
-    display: flex;
+    display: contents;
 }
