@@ -71,5 +71,6 @@ body {
 
 .cs-list li a{
     color: #fff;
+    display: flex;
     align-items: center;
 }
