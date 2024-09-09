@@ -41,6 +41,7 @@ body {
     width: 30px;
     height: 100%;
     padding: 0px 8px;
+    box-sizing: border-box;
     background: url(../images/basic/logo_white.png) no-repeat center center/ 100%;
 }
 
@@ -54,4 +55,11 @@ body {
 }
 .gnb-list{
     display: contents;
+}
+
+.cs-list{
+    display: contents;
+}
+.cs-list li{
+    padding: 0px 8px;
 }
