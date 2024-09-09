@@ -36,5 +36,12 @@
         })
     })
 
+    //1.
+    function fixedMenu() {
+        if (yOffset > 50) {
+            document.body.classList.add('nav-fixed')
+        }
+    }
+
 
 })()
