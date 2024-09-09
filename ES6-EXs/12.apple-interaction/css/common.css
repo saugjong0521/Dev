@@ -151,7 +151,14 @@ body {
     width: 100%;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: saturate(150%) blur(20px);
-    /* backdrop-filter: 배경에 효과를 주는 속성 */
+    /* 
+    backdrop-filter: 배경에 효과를 주는 속성
+    saturate: 채도
+    blur: 선명도
+    opacity: 투명도
+    brightness: 밝기
+    contrast: 대비
+    */
     border-bottom: solid 1px rgba(255, 255, 255, 0.7);
     transition: 300ms;
 }
