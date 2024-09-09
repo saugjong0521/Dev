@@ -149,8 +149,13 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: saturate(150%) blur(20px);
-    border-bottom: solid 1px rgba(255,255,255,0.7);
-    transition: 300ms;F
+    /* backdrop-filter: 배경에 효과를 주는 속성 */
+    border-bottom: solid 1px rgba(255, 255, 255, 0.7);
+    transition: 300ms;
+}
+
+.nav-fixed .content-header-container .content-header {
+    border: none;
 }
