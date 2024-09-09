@@ -69,39 +69,39 @@
             }
         }
         document.body.setAttribute('id', `show-section-${currentSection}`)
+    }
 
-        //5. 애니메이션 값이 스크롤 위치에 따라 어떻게 변화할지 계산, opacity 및 translate등을 계산해주는 함수 (val을 지정하지 않아서 현재는 확인 불가)
-        function calcValue(val, currentY) {
-            let resultValue;    // 최종적으로 반환할 계산된 값이 들어올 변수
-            const scrollH = sectionInfo[currentSection].scrollHeight;   //현재 섹션의 전체 스크롤 길이
-            const scrollRatio = currentY / scrollH; // 현재 섹션에서 스크롤된 비율
+    //5. 애니메이션 값이 스크롤 위치에 따라 어떻게 변화할지 계산, opacity 및 translate등을 계산해주는 함수 (val을 지정하지 않아서 현재는 확인 불가)
+    function calcValue(val, currentY) {
+        let resultValue;    // 최종적으로 반환할 계산된 값이 들어올 변수
+        const scrollH = sectionInfo[currentSection].scrollHeight;   //현재 섹션의 전체 스크롤 길이
+        const scrollRatio = currentY / scrollH; // 현재 섹션에서 스크롤된 비율
 
-            // val의 배열 길이가 3이면, 애니메이션의 시작과 끝 범위가 정의된 경우
-            if (val.length === 3) {
-                const scrollStart = val[2].start * scrollH; // 애니메이션이 시작할 위치(스크롤 높이 기준)
-                const scrollEnd = val[2].end * scrollH; //애니메이션이 끝나는 위치(스크롤 높이 기준)
-                const scrollRealH = scrollEnd - scrollStart; //애니메이션이 진행되는 구간의 스크롤 높이
+        // val의 배열 길이가 3이면, 애니메이션의 시작과 끝 범위가 정의된 경우
+        if (val.length === 3) {
+            const scrollStart = val[2].start * scrollH; // 애니메이션이 시작할 위치(스크롤 높이 기준)
+            const scrollEnd = val[2].end * scrollH; //애니메이션이 끝나는 위치(스크롤 높이 기준)
+            const scrollRealH = scrollEnd - scrollStart; //애니메이션이 진행되는 구간의 스크롤 높이
 
-                // 현재 스크롤의 위치가 애니메이션 진행영역 내에 있는 경우
-                if (currentY >= scrollStart && currentY <= scrollEnd) {
-                    resultValue = ((currentY - scrollStart) / scrollRealH) * (val[1] - val[0]) + val[0]
-                    // 애니메이션의 진행 비율을 계산하고 값으로 반환
-                }
-                // 스크롤이 애니메이션 범위보다 위에 있는 경우 시작값으로 지정
-                else if (currentY < scrollStart) {
-                    resultValue = val[0]
-                }
-                // 스크롤이 애니메이션 범위보다 아래 있는 경우 종료값으로 지정
-                else if (current > scrollEnd) {
-                    resultValue = val[1]
-                }
+            // 현재 스크롤의 위치가 애니메이션 진행영역 내에 있는 경우
+            if (currentY >= scrollStart && currentY <= scrollEnd) {
+                resultValue = ((currentY - scrollStart) / scrollRealH) * (val[1] - val[0]) + val[0]
+                // 애니메이션의 진행 비율을 계산하고 값으로 반환
             }
-            // 배열의 길이가 2일경우 애니메이션 섹션 전체에서 발생, 스크롤 비율에 따라 값을 계산
-            else {
-                resultValue = scrollRatio * (val[1] - val[0]) + val[0]
+            // 스크롤이 애니메이션 범위보다 위에 있는 경우 시작값으로 지정
+            else if (currentY < scrollStart) {
+                resultValue = val[0]
             }
-            return resultValue
+            // 스크롤이 애니메이션 범위보다 아래 있는 경우 종료값으로 지정
+            else if (current > scrollEnd) {
+                resultValue = val[1]
+            }
         }
+        // 배열의 길이가 2일경우 애니메이션 섹션 전체에서 발생, 스크롤 비율에 따라 값을 계산
+        else {
+            resultValue = scrollRatio * (val[1] - val[0]) + val[0]
+        }
+        return resultValue
     }
 
 
