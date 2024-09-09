@@ -58,6 +58,11 @@ body {
     display: contents;
 }
 
+.gnb-list li a {
+    color: #fff;
+    font-size: 12px;
+}
+
 .cs-list {
     display: contents;
 }
@@ -69,7 +74,7 @@ body {
     height: 100%;
 }
 
-.cs-list li a{
+.cs-list li a {
     color: #fff;
     display: flex;
     align-items: center;
