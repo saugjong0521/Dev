@@ -20,7 +20,7 @@
             // 고정된 화면에 이미지를 스크롤하기 위해서 여유 스크롤 영역을 만들기 위한 값
             scrollHeight: 0,    // 섹션의 실제 스크롤 높이(이벤트가 들어오면 계산)
             objs: {
-                container: document.query('#scroll-section-0'),
+                container: document.querySelector('#scroll-section-0'),
                 canvas: document.querySelector('#video-canvas-0'),
                 context: document.querySelector('#video-canvas-0').getContext('2d'),
                 videoImages: [] // 이미지가 들어올 배열
