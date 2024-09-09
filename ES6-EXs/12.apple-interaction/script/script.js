@@ -88,6 +88,12 @@
                     // 애니메이션의 진행 비율을 계산하고 값으로 반환
                 }
             }
+            // 스크롤이 애니메이션 범위보다 위에 있는 경우 시작값으로 지정
+            else if (currentY < scrollStart) {
+                resultValue = val[0]
+            } else if (current > scrollEnd) {
+                resultValue = val[1]
+            }
 
         }
     }
