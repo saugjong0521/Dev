@@ -43,3 +43,10 @@ body {
     padding: 0px 8px;
     background: url(../images/basic/logo_white.png) no-repeat center center/ 100%;
 }
+
+.gnb{
+    display: content;
+}
+.gnb-list{
+    display: flex;
+}
