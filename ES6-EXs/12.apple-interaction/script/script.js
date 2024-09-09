@@ -70,14 +70,21 @@
         }
         document.body.setAttribute('id', `show-section-${currentSection}`)
 
-        calcValue(val, currentY)
+        calcValue()
     }
 
     //5. 애니메이션 값이 스크롤 위치에 따라 어떻게 변화할지 계산, opacity 및 translate등을 계산해주는 함수
     function calcValue(val, currentY) {
         let resultValue;    // 최종적으로 반환할 계산된 값이 들어올 변수
-        const scrollH = section[currentSection].scrollHeight;   //현재 섹션의 전체 스크롤 길이
+        const scrollH = sectionInfo[currentSection].scrollHeight;   //현재 섹션의 전체 스크롤 길이
         const scrollRatio = currentY / scrollH; // 현재 섹션에서 스크롤된 비율
+
+        // val의 배열 길이가 3이면, 애니메이션의 시작과 끝 범위가 정의된 경우
+        if(val.length === 3){
+            const scrollStart = val[2].start * scrollH; // 애니메이션이 시작할 위치(스크롤 높이 기준)
+            const scrollEnd = val[2].end * scrollH; //애니메이션이 끝나는 위치(스크롤 높이 기준)
+            const scrollRealH = scrollEnd - scrollStart; //애니메이션이 진행되는 구간의 스크롤 높이
+        }
 
     }
 
