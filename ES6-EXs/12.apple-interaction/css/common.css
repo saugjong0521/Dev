@@ -1,0 +1,10 @@
+html,
+body {
+    font-family: 'Noto Sans KR', 'sans-serif';
+}
+
+body {
+    overflow-x: hidden;
+    background: #000;
+    height: 500vh;
+}
