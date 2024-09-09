@@ -71,6 +71,7 @@
         document.body.setAttribute('id', `show-section-${currentSection}`)
     }
 
+
     //5. 애니메이션 값이 스크롤 위치에 따라 어떻게 변화할지 계산, opacity 및 translate등을 계산해주는 함수 (val을 지정하지 않아서 현재는 확인 불가)
     function calcValue(val, currentY) {
         let resultValue;    // 최종적으로 반환할 계산된 값이 들어올 변수
@@ -103,8 +104,6 @@
         }
         return resultValue
     }
-
-
 
 
     //0. 스크롤 이벤트 시작 및 각 함수를 적용
