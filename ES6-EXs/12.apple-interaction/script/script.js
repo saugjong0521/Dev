@@ -38,9 +38,10 @@
 
     //4. 캔버스에 적재할 이미지를 로드
     function setCanvasImage() {
-        let imgSize;
+        let imgItem;
         for (let i = 0; i < sectionInfo[0].values.videoImageCount; i++) {
-
+            imgItem = new Image();
+            imgItem.src = `./images/setion01/00${i+1}.png`
         }
 
     }
