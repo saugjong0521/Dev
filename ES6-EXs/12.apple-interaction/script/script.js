@@ -61,14 +61,24 @@
         // 현재 위치한 section을 body의 id로 넘겨줌
         yOffset = window.pageYOffset;
         let totalScrollHeight = 0;
-        for (let i = 0; i < sectionInfo.length; i++){
+        for (let i = 0; i < sectionInfo.length; i++) {
             totalScrollHeight += sectionInfo[i].scrollHeight;
-            if(totalScrollHeight >= yOffset){
+            if (totalScrollHeight >= yOffset) {
                 currentSection = i;
                 break
             }
         }
         document.body.setAttribute('id', `show-section-${currentSection}`)
+
+        calcValue(val, currentY)
+    }
+
+    //5. 애니메이션 값이 스크롤 위치에 따라 어떻게 변화할지 계산, opacity 및 translate등을 계산해주는 함수
+    function calcValue(val, currentY) {
+        let resultValue;    // 최종적으로 반환할 계산된 값이 들어올 변수
+        const scrollH = section[currentSection].scrollHeight;   //현재 섹션의 전체 스크롤 길이
+        const scrollRatio = currentY / scrollH; // 현재 섹션에서 스크롤된 비율
+
     }
 
 
