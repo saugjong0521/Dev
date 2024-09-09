@@ -8,3 +8,12 @@ body {
     background: #000;
     height: 500vh;
 }
+
+.ir{
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 10px;
+    margin: -1px;
+    clip: rect(0,0,0,0);
+}
