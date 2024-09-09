@@ -9,17 +9,17 @@ body {
     height: 500vh;
 }
 
-.ir{
+.ir {
     position: absolute;
     overflow: hidden;
     width: 1px;
     height: 10px;
     margin: -1px;
-    clip: rect(0,0,0,0);
+    clip: rect(0, 0, 0, 0);
 }
 
 /*header*/
-.header-container{
+.header-container {
     position: absolute;
     top: 0;
     left: 0;
@@ -28,7 +28,7 @@ body {
     height: 44px;
 }
 
-.header-wrapper{
+.header-wrapper {
     display: flex;
     align-items: center;
     max-width: 1000px;
@@ -36,7 +36,10 @@ body {
     justify-content: space-between;
     height: 100%;
 }
-.logo{
+
+.logo {
     width: 30px;
     height: 100%;
+    padding: 0px 8px;
+    background: url(../images/basic/logo_white.png) no-repeat center center/ 100%;
 }
