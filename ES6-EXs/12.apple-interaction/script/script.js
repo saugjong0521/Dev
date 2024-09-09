@@ -44,19 +44,30 @@
             imgItem.src = `./images/section01/00${i + 1}.png`  // 이미지 경로 설정
             sectionInfo[0].objs.videoImages.push(imgItem)
 
-            console.log(imgItem.src)
+            // console.log(imgItem.src)
         }
     }
 
 
     //5. 각 섹션의 높이 설정 함수
     function setLayout() {
-        for(let i=0;i<sectionInfo.length; i++){
-            if(sectionInfo[i].type === 'sticky'){
+        for (let i = 0; i < sectionInfo.length; i++) {
+            if (sectionInfo[i].type === 'sticky') {
                 sectionInfo[i].scrollHeight = sectionInfo[i].heightNum * window.innerHeight
             }
             sectionInfo[i].objs.container.style.height = `${sectionInfo[i].scrollHeight}px`
         }
+
+        yOffset = window, pageYOffset;
+        let totalScrollHeight = 0;
+        for (let i = 0; i < sectionInfo.length; i++){
+            totalScrollHeight += sectionInfo[i].scrollHeight;
+            if(totalScrollHeight >= yOffset){
+                currentSection = i;
+                break
+            }
+        }
+        document.body.setAttribute('id', `show-section-${currentSection}`)
     }
 
 
