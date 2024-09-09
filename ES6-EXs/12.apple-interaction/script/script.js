@@ -29,7 +29,9 @@
 
 
 
-    window.addEventListener()
+    window.addEventListener('load', () => {
+
+    })
 
 
 })()
