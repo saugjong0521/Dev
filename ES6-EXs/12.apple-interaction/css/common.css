@@ -144,3 +144,9 @@ body {
     font-size: 12px;
     border-radius: 12px;
 }
+
+.nav-fixed .content-header-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
