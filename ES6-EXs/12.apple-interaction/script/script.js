@@ -10,13 +10,21 @@ window.onload = () => {
     let rafState;
 
 
-    const sectionInfo = [
-        {
-            type: 'sticky', // 화면에 보여질 방식
-            heightNum: 5,   // 해당 섹션의 높이를 브라우저의 높이의 5배로 설정함
 
-        }
-    ]
+    
+
+    // const sectionInfo = [
+    //     {
+    //         type: 'sticky', // 화면에 보여질 방식
+    //         heightNum: 5,   // 해당 섹션의 높이를 브라우저의 높이의 5배로 설정함
+    //         // 고정된 화면에 이미지를 스크롤하기 위해서 여유 스크롤 영역을 만들기 위한 값
+    //         scrollHeight: 0,    // 섹션의 실제 스크롤 높이(이벤트가 들어오면 계산)
+    //         objs:{
+
+    //         }
+
+    //     }
+    // ]
 
 
 }
