@@ -58,6 +58,7 @@
             sectionInfo[i].objs.container.style.height = `${sectionInfo[i].scrollHeight}px`
         }
 
+        // 현재 위치한 section을 body의 id로 넘겨줌
         yOffset = window, pageYOffset;
         let totalScrollHeight = 0;
         for (let i = 0; i < sectionInfo.length; i++){
