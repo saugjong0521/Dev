@@ -160,7 +160,7 @@ body {
     contrast: 대비
     */
     border-bottom: solid 1px rgba(255, 255, 255, 0.7);
-    transition: 300ms;
+    transition: backdrop-filter 300ms, background 300ms;
 }
 
 .nav-fixed .content-header-container .content-header {
