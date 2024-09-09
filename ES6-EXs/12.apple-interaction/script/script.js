@@ -12,7 +12,7 @@
 
 
 
-    //3. 섹션 info
+    //2. 섹션 info
     const sectionInfo = [
         {
             type: 'sticky', // 화면에 보여질 방식
@@ -36,7 +36,7 @@
         }
     ]
 
-    //4. 캔버스에 적재할 이미지를 로드
+    //3. 캔버스에 적재할 이미지를 로드
     function setCanvasImage() {
         let imgItem;
         for (let i = 0; i < sectionInfo[0].values.videoImageCount; i++) {
@@ -49,7 +49,7 @@
     }
 
 
-    //5. 각 섹션의 높이 설정 함수
+    //4. 각 섹션의 높이 설정 함수
     function setLayout() {
         for (let i = 0; i < sectionInfo.length; i++) {
             if (sectionInfo[i].type === 'sticky') {
@@ -59,7 +59,7 @@
         }
 
         // 현재 위치한 section을 body의 id로 넘겨줌
-        yOffset = window, pageYOffset;
+        yOffset = window.pageYOffset;
         let totalScrollHeight = 0;
         for (let i = 0; i < sectionInfo.length; i++){
             totalScrollHeight += sectionInfo[i].scrollHeight;
@@ -72,7 +72,7 @@
     }
 
 
-    //1. 스크롤 이벤트 시작 및 각 함수를 적용
+    //0. 스크롤 이벤트 시작 및 각 함수를 적용
     window.addEventListener('load', () => {
         setLayout();
         window.addEventListener('scroll', () => {
@@ -92,8 +92,7 @@
     */
 
 
-
-    //2. 맨 위 상단메뉴
+    //1. 맨 위 상단메뉴
     function fixedMenu() {
         if (yOffset > 50) {
             document.body.classList.add('nav-fixed')
