@@ -46,6 +46,7 @@
         }
         console.log(imgItem)
 
+        console.log(imgItem.src)
     }
 
 
@@ -54,10 +55,10 @@
         window.addEventListener('scroll', () => {
             yOffset = window.pageYOffset;   // 스크롤시 위치를 다시 받아옴
             fixedMenu();
-
-            setCanvasImage();
         })
     })
+    setCanvasImage();
+
 
     //2. 맨 위 상단메뉴
     function fixedMenu() {
