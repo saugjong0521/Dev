@@ -28,6 +28,7 @@
             values: {
                 videoImageCount: 64,    // 사용될 이미지의 갯수
                 imgSequence: [0, 64],   // 이미지 시퀀스(첫 프레임과 끝 프레임)
+                canvas_opacity: [1, 0, { start: 0.9, end: 1 }]
             }
 
         }
