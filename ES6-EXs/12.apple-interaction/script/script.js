@@ -49,6 +49,20 @@
     }
 
 
+    //5.
+    function setLayout() {
+
+    }
+
+
+    //1. 스크롤 이벤트 시작
+    window.addEventListener('load', () => {
+        window.addEventListener('scroll', () => {
+            yOffset = window.pageYOffset;   // 스크롤시 위치를 다시 받아옴
+            fixedMenu();
+        })
+    })
+    setCanvasImage();
 
 
 
@@ -60,15 +74,6 @@
             document.body.classList.remove('nav-fixed')
         }
     }
-
-    //1. 스크롤 이벤트 시작
-    window.addEventListener('load', () => {
-        window.addEventListener('scroll', () => {
-            yOffset = window.pageYOffset;   // 스크롤시 위치를 다시 받아옴
-            fixedMenu();
-        })
-    })
-    setCanvasImage();
 
 
 })()
