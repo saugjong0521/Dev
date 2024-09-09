@@ -46,7 +46,7 @@ body {
 }
 
 .gnb {
-    url(https://www.apple.com/kr/shop/goto/store) display: contents;
+    display: contents;
     /* 
     contents
         부모 요소의 속성을 자식요소로 변환하는 css
