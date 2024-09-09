@@ -45,7 +45,7 @@ body {
     background: url(../images/basic/logo_white.png) no-repeat center center/ 100%;
 }
 
-.gnb{
+.gnb {
     display: contents;
     /* 
     contents
@@ -53,13 +53,23 @@ body {
         부모요소는 사라지고, 자식요소들은 부모요소를 대체하게 된다.
     */
 }
-.gnb-list{
+
+.gnb-list {
     display: contents;
 }
 
-.cs-list{
+.cs-list {
     display: contents;
 }
-.cs-list li{
+
+.cs-list li {
     padding: 0px 8px;
+    box-sizing: border-box;
+    width: 30px;
+    height: 100%;
+}
+
+.cs-list li a{
+    color: #fff;
+    align-items: center;
 }
