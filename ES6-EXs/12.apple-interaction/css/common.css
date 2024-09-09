@@ -154,7 +154,7 @@ body {
     /* 
     backdrop-filter: 배경에 효과를 주는 속성
     saturate: 채도
-    blur: 선명도
+    blur: 선명도(흐림처리)
     opacity: 투명도
     brightness: 밝기
     contrast: 대비
