@@ -51,7 +51,7 @@
 
     //5.
     function setLayout() {
-
+        for(let i=0;i<sectionInfo.length.F)
     }
 
 
