@@ -43,10 +43,9 @@
             imgItem = new Image();  // 이미지 넣을 공간 생성
             imgItem.src = `./images/setion01/00${i+1}.png`  // 이미지 경로 설정
             sectionInfo[0].objs.videoImages.push(imgItem)
-        }
-        console.log(imgItem)
 
-        console.log(imgItem.src)
+            console.log(imgItem.src)
+        }
     }
 
 
@@ -57,7 +56,6 @@
             fixedMenu();
         })
     })
-    setCanvasImage();
 
 
     //2. 맨 위 상단메뉴
