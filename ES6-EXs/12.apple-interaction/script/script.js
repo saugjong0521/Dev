@@ -120,6 +120,9 @@
                 objs.context.clearRect(0, 0, objs.canvas.width, objs.canvas.height);
                 // 초기화
                 objs.canvas.style.opacity = calcValue(values.canvas_opacity, currentYOffset);
+                // 캔버스의 투명도를 계산해서 스크롤 비율에 따라 적용
+
+                let sequence = Math.round(calcValue([0, values.videoImageCount - 1], currentYOffset))
 
         }
     }
