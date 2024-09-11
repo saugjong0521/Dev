@@ -207,12 +207,25 @@
     window.addEventListener('load', () => {
         setLayout();
 
-        setCanvasImage();
-
+        setTimeout(() => {
+            sectionInfo[0].objs.context.drawImage(sectionInfo[0].objs.videoImages[0], 0, 0);
+            document.querySelector('.fixed-el-canvas').classList.add('active')
+            document.querySelector('.section-0-title').classList.add('active')
+        }, 500);
 
         //새로고침할 경우, 스크롤값 찾아서 애니메이션 적용
-        window.scrollTo(0, 0);
-        yOffset = window.pageYOffset;
+        let tempYoffset = yOffset;
+        let tempScrollCount = 0;
+        if (tempYoffset > 0) {
+            let item = setInterval(() => {
+                scrollTo(0, tempYoffset)
+                tempYoffset += 5
+                if (tempScrollCount > 20) {
+                    clearInterval(item);
+                }
+                tempScrollCount++;
+            }, 20)
+        }
 
 
         window.addEventListener('scroll', () => {
