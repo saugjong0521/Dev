@@ -136,6 +136,9 @@
         newSection = false; // 새로운 섹션에 진입했는지 여부 (진입 시, true를 반환하도록 함)
         prevScrollHeight = 0;   // 이전 섹션들의 총 스크롤 길이를 초기화
 
+        playAnimation();
+
+
         for(let i = 0; i < currentSection; i++){
             prevScrollHeight += sectionInfo[i].scrollHeight;
         }   // 현재 섹션 이전의 모든 섹션의 스크롤 높이를 더해서, 현재 스크롤 위치를 계산
@@ -160,7 +163,6 @@
                 // 섹션에 추가
             }
             document.body.setAttribute('id',`show-section-${currentSection}`)
-            playAnimation();
 
         }  
 
