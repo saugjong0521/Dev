@@ -213,7 +213,7 @@
             document.querySelector('.section-0-title').classList.add('active')
         }, 500);
 
-        //새로고침할 경우, 스크롤값 찾아서 애니메이션 적용ㄹ=
+        //새로고침할 경우, 스크롤값 찾아서 애니메이션 적용
         let tempYoffset = yOffset;
         let tempScrollCount = 0;
         if (tempYoffset > 0) {
