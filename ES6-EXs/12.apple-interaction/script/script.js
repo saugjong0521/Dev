@@ -183,7 +183,7 @@
             // 스크롤 상태 업데이트 시, 섹션 전환처리
 
             sectionInfo[0].objs.canvas.style.opacity = 1;
-            sectionInfo[0].centext.drawImage(sectionInfo[0].objs.videoImages[0], 0, 0)
+            sectionInfo[0].context.drawImage(sectionInfo[0].objs.videoImages[0], 0, 0)
         }
         rafId = requestAnimationFrame(loop)
         // 스크롤 위치가 지연된 스크롤 위치와 차이가 없으면 애니메이션 중단
