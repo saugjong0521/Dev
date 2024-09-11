@@ -189,7 +189,10 @@
             sectionInfo[0].centext.drawImage(sectionInfo[0].objs.videoImages[0], 0, 0)
         }
         rafId = requestAnimationFrame(loop)
-        if()
+        if(Math.abs(yOffset - delayYoffset) < 1){
+            cancelAnimationFrame(rafId)
+            rafState = false;
+        }
     }
 
 
