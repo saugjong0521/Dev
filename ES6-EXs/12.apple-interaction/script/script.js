@@ -69,8 +69,8 @@
             }
         }
         document.body.setAttribute('id', `show-section-${currentSection}`)
-        const heightRatio = window.innerHeight / 720;
-        sectionInfo[0].objs.canvas.style.transform = `translate(-50%, -50%) scale(${heightRatio})`
+        // const heightRatio = window.innerHeight / 720;
+        // sectionInfo[0].objs.canvas.style.transform = `translate(-50%, -50%) scale(${heightRatio})`
     }
 
 
