@@ -196,7 +196,7 @@ body {
 /*section0*/
 .fixed-el-canvas canvas{
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     width: 100%;
 }
