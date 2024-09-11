@@ -175,7 +175,7 @@ body {
 }
 
 .fixed-el{
-    display: none;
+    display: flex;
     position: fixed;
     left: 0;
     width: 100%;
