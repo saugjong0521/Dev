@@ -205,7 +205,7 @@
 
             if(!rafState){
                 rafId = requestAnimationFrame(loop);
-                rafState: true
+                rafState: true;
             }
         })
     })
