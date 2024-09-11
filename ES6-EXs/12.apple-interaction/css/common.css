@@ -211,7 +211,8 @@ body {
 .section-0-title .title {
     font-size: 200px;
     color: #fff;
-    font-weight: bold;
+    font-weight: 700;
     height: 100vh;
     line-height: 100vh;
+    text-align: center;
 }
