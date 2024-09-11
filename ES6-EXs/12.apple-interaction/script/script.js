@@ -123,15 +123,15 @@
                 // 캔버스의 투명도를 계산해서 스크롤 비율에 따라 적용
 
                 let sequence = Math.round(calcValue([0, values.videoImageCount - 1], currentYOffset))
-                if(objs.videoImages[sequence]){
-                    objs.context.drawImage(objs.videoImages[sequence],0,0)
+                if (objs.videoImages[sequence]) {
+                    objs.context.drawImage(objs.videoImages[sequence], 0, 0)
                 }
 
         }
     }
 
     //7. 페이지를 스크롤할때, 현재 섹션을 체크해서, 새로운 섹션이 시작되었는지와 끝났는지를 판단하여 무한으로 적용되도록 함
-    function scrollLoop(){
+    function scrollLoop() {
         newSection = false;
         prevScrollHeight = 0;
     }
