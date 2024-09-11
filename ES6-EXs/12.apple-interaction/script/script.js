@@ -31,7 +31,8 @@
                 // 1, 0 은 투명도를 나타내며, start: 와 end: 는 스크롤 비율을 나타낸다
                 // 지금 내용은 스크롤 90%가 되면 투명해지기 시작하고 스크롤이 100%가 되면 완전 투명해짐
 
-                title_opacity: [1,0,{start: 0.1, end: 0.5}]
+                title_opacity: [1,0,{start: 0.1, end: 0.5}],
+                title_scale: [1,1.3, {start: 0.1, end: 0.6}]
             }
 
         }
