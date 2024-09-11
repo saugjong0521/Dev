@@ -136,6 +136,7 @@
         window.addEventListener('scroll', () => {
             yOffset = window.pageYOffset;   // 스크롤시 위치를 다시 받아옴
             fixedMenu();
+            playAnimation();
         })
     })
     setCanvasImage();
