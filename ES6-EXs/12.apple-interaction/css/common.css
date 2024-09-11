@@ -181,5 +181,22 @@ body {
     width: 100%;
 }
 
+#show-section-0 #scroll-section-0 .fixed-el,
+#show-section-1 #scroll-section-1 .fixed-el,
+#show-section-2 #scroll-section-2 .fixed-el,
+#show-section-3 #scroll-section-3 .fixed-el,
+#show-section-4 #scroll-section-4 .fixed-el{
+    display: block;
+}
+
+.scroll-effect-end .fixed-el{
+    display: none;
+}
 
 /*section0*/
+.fixed-el-canvas canvas{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+}
