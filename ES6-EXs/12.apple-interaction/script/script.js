@@ -31,8 +31,8 @@
                 // 1, 0 은 투명도를 나타내며, start: 와 end: 는 스크롤 비율을 나타낸다
                 // 지금 내용은 스크롤 90%가 되면 투명해지기 시작하고 스크롤이 100%가 되면 완전 투명해짐
 
-                title_opacity: [1,0,{start: 0.1, end: 0.5}],
-                title_scale: [1,1.3, {start: 0.1, end: 0.6}]
+                title_opacity: [1, 0, { start: 0.1, end: 0.6 }],
+                title_scale: [1, 1.3, { start: 0.1, end: 0.7 }]
             }
 
         }
@@ -131,6 +131,10 @@
                     objs.context.drawImage(objs.videoImages[sequence], 0, 0)
                     // drawImage(들어올 이미지, x좌표, y좌표)
                 }
+                objs.title.style.opacity = calcValue(values.title_opacity, currentYOffset);
+                objs.title.style.transform = `scale(${calcValue(values.title_scale, currentYOffset)})`
+            //타이틀
+
 
         }
     }
@@ -191,7 +195,7 @@
         }
         rafId = requestAnimationFrame(loop)
         // 스크롤 위치가 지연된 스크롤 위치와 차이가 없으면 애니메이션 중단
-        if(Math.abs(yOffset - delayYoffset) < 1){
+        if (Math.abs(yOffset - delayYoffset) < 1) {
             cancelAnimationFrame(rafId)
             rafState = false;   // 애니메이션이 실행중이지 않음 체크
         }
@@ -207,7 +211,7 @@
             fixedMenu();
             scrollLoop();
 
-            if(!rafState){
+            if (!rafState) {
                 rafId = requestAnimationFrame(loop);
                 rafState: true;
             }
