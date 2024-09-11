@@ -6,48 +6,42 @@ window.onload = () => {
 class ScrollAction {
     constructor() {
 
+        // init으로 따로 빼면 가독성이 오히려 줄어들 것 같음
         this.currentScrollH = window.pageYOffset;
         this.winH = window.innerHeight;
         this.winW = window.innerWidth;
-
-        // Object.assign으로 가능
         this.itemClass = `slider`;
         this.itemActive = `slider-active`;
         this.itemEnd = `slider-end`;
         this.horizonSection = document.querySelectorAll('.horizontal-scroll')
 
         this.bindingEvent();
-
-
-        /*
-        1. bindingEvent = scroll시 일어날 함수들 입력
-        2. 현재 위치를 읽어올 함수 -> el로 위치값 전달
-        3. 특정 위치(horizonSection에 도달하면) slider-active적용
-        4. 특정 위치가 끝나면 slider-end적용
-        5. 해당 위치에
-
-        */
-
+        
 
     }
 
     bindingEvent() {
 
-        this.horizonSection.forEach(el => {
-            this.setScroll(el);
-            this.setActive(el);
-        })
-
+        // 스크롤과 관련되어 정리
         window.addEventListener('scroll', () => {
             this.currentScrollH = window.pageYOffset;
             this.horizonSection.forEach(el => {
                 this.setActive(el)
-                this.activeScroll(el)
+                this.activeScroll(el)   // 스크롤시 좌우 스크롤 적용
 
             })
         })
+
+        // horizonSection과 관련되어 정리
+        this.horizonSection.forEach(el => {
+            this.setScroll(el);  
+            this.setActive(el); // 좌우 스크롤 공간만큼 세로 스크롤에 만들어줌
+        })
+
+
     }
 
+    // horizonSection에 진입/진출 확인 및 클래스 추가/제거
     setActive(el) {
         const contentY = el.getBoundingClientRect();
                 // console.log(contentY)
@@ -74,28 +68,31 @@ class ScrollAction {
 
     }
 
+    // 스크롤에 가로길이를 더하여 길이를 늘림
     setScroll(el){
 
         const sectionClass = el.classList[0]
         const contentWrapper = el.querySelector(`.${sectionClass}-item`);
         const contentWrapperScrollW = contentWrapper.scrollWidth;
 
+        // 초기화, el(horizonSection의 내용을 받아와 넣어줌)
         el.contentWrapper = contentWrapper;
         el.contentWrapperScrollW = contentWrapperScrollW
+        // console.log(this.contentWrapper)
+        // console.log(el.contentWrapper)
 
         el.rightMax = -(el.contentWrapperScrollW - this.winW)
 
         el.style.height = `${el.contentWrapperScrollW}px`
         el.innerHeight = el.offsetHeight;
         
-        el.init = true;
         el.transformX = '0';
         el.classList.add(`${sectionClass}-init`)
 
     }
 
 
-
+    // 스크롤시 좌우 스크롤 적용
     activeScroll(el) {
         const scrollP = this.currentScrollH - el.offsetTop;
         const scrollCenter = scrollP / (el.innerHeight - (this.winH - this.winW))
