@@ -170,11 +170,11 @@ body {
 
 
 /*content*/
-.scroll-section{
+.scroll-section {
     position: relative;
 }
 
-.fixed-el{
+.fixed-el {
     display: flex;
     position: fixed;
     left: 0;
@@ -185,24 +185,33 @@ body {
 #show-section-1 #scroll-section-1 .fixed-el,
 #show-section-2 #scroll-section-2 .fixed-el,
 #show-section-3 #scroll-section-3 .fixed-el,
-#show-section-4 #scroll-section-4 .fixed-el{
+#show-section-4 #scroll-section-4 .fixed-el {
     display: block;
     will-change: transform, opacity;
 }
 
-.scroll-effect-end .fixed-el{
+.scroll-effect-end .fixed-el {
     display: none;
 }
 
 /*section0*/
-.fixed-el-canvas{
+.fixed-el-canvas {
     top: 0;
     height: 100%;
 }
-.fixed-el-canvas canvas{
+
+.fixed-el-canvas canvas {
     position: absolute;
     top: 50%;
     left: 50%;
     width: 100%;
     transform: translate(-50%, -50%);
+}
+
+.section-0-title .title {
+    font-size: 200px;
+    color: #fff;
+    font-weight: bold;
+    height: 100vh;
+    line-height: 
 }
