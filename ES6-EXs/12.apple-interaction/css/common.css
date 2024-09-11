@@ -194,6 +194,10 @@ body {
 }
 
 /*section0*/
+.fixed-el-canvas{
+    top: 0;
+    height: 100%;
+}
 .fixed-el-canvas canvas{
     position: absolute;
     top: 30%;
