@@ -105,7 +105,7 @@
         return resultValue
     }
 
-    //6. 
+    //6. 이미지를 스크롤 비율에 따라 적용
     function playAnimation() {
         const objs = sectionInfo[currentSection].objs;  // 현재 섹션의 객체
         const values = sectionInfo[currentSection].values;  // 현재 섹션의 설정값
@@ -125,6 +125,7 @@
                 let sequence = Math.round(calcValue([0, values.videoImageCount - 1], currentYOffset))
                 if (objs.videoImages[sequence]) {
                     objs.context.drawImage(objs.videoImages[sequence], 0, 0)
+                    // drawImage(들어올 이미지, x좌표, y좌표)
                 }
 
         }
@@ -132,8 +133,39 @@
 
     //7. 페이지를 스크롤할때, 현재 섹션을 체크해서, 새로운 섹션이 시작되었는지와 끝났는지를 판단하여 무한으로 적용되도록 함
     function scrollLoop() {
-        newSection = false;
-        prevScrollHeight = 0;
+        newSection = false; // 새로운 섹션에 진입했는지 여부 (진입 시, true를 반환하도록 함)
+        prevScrollHeight = 0;   // 이전 섹션들의 총 스크롤 길이를 초기화
+
+        for(let i = 0; i < currentSection; i++){
+            prevScrollHeight += sectionInfo[i].scrollHeight;
+        }   // 현재 섹션 이전의 모든 섹션의 스크롤 높이를 더해서, 현재 스크롤 위치를 계산
+
+        if(delayYoffset < prevScrollHeight + sectionInfo[currentSection].scrollHeight){
+            // 현재 스크롤 위치가 마지막 섹션의 끝을 넘었는지를 확인
+            // 끝나지 않은 경우 특정한 방법으로 체크
+            document.body.classList.remove('scroll-effect-end')
+            // 끝나지 않은 경우 scroll-effect-end 클래스를 삭제
+        }
+
+        if(delayYoffset > prevScrollHeight + sectionInfo[currentSection].scrollHeight){
+            newSection = true;
+             //스크롤이 현재 섹션의 끝을 넘었을때 다음 섹션으로 넘어가게 처리
+
+            if(currentSection === sectionInfo.length -1){
+                document.body.classList.add('scroll-effect-end')
+                // 마지막 섹션일 경우 클래스로 체크
+            }
+            if(currentSection < sectionInfo.length - 1){
+                currentSection ++;
+                // 섹션에 추가
+            }
+            document.body.setAttribute('id',`show-section-${currentSection}`)
+            playAnimation();
+
+        }  
+
+
+        
     }
 
 
@@ -144,7 +176,7 @@
         window.addEventListener('scroll', () => {
             yOffset = window.pageYOffset;   // 스크롤시 위치를 다시 받아옴
             fixedMenu();
-            playAnimation();
+            scrollLoop();
         })
     })
     setCanvasImage();
