@@ -200,8 +200,7 @@ body {
     height: 100%;
     transform: scale(0.8);
     opacity: 0;
-    transition: 1000ms;
-    transition-delay: 500ms;
+    transition: transform 500ms 300ms, opacity 300ms;
 }
 
 .fixed-el-canvas canvas {
