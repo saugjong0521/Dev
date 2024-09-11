@@ -209,9 +209,9 @@ body {
 }
 
 .section-0-title .title {
-    font-size: 200px;
+    font-size: 250px;
     color: #fff;
-    font-weight: 700;
+    font-weight: bold;
     height: 100vh;
     line-height: 100vh;
     text-align: center;
