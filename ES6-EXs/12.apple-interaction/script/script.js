@@ -182,7 +182,7 @@
             scrollLoop();
             // 스크롤 상태 업데이트 시, 섹션 전환처리
 
-            sectionInfo[0].objs.style.opacity = 1;
+            sectionInfo[0].objs.canvas.style.opacity = 1;
             sectionInfo[0].centext.drawImage(sectionInfo[0].objs.videoImages[0], 0, 0)
         }
         rafId = requestAnimationFrame(loop)
