@@ -164,9 +164,11 @@
             document.body.setAttribute('id',`show-section-${currentSection}`)
 
         }  
+    }
 
-
-        
+    
+    function loop(){
+        //requestAnimationFrame을 사용해서 화면을 갱신할때마다 부드럽게 애니메이션을 실행
     }
 
 
