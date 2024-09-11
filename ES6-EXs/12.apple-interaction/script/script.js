@@ -123,6 +123,9 @@
                 // 캔버스의 투명도를 계산해서 스크롤 비율에 따라 적용
 
                 let sequence = Math.round(calcValue([0, values.videoImageCount - 1], currentYOffset))
+                if(objs.videoImages[sequence]){
+                    objs.context.drawImage(objs.videoImages[sequence])
+                }
 
         }
     }
