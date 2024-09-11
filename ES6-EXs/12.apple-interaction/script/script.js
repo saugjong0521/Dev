@@ -119,6 +119,7 @@
             case 0:
                 objs.context.clearRect(0, 0, objs.canvas.width, objs.canvas.height);
                 // 초기화
+                objs.canvas.style.opacity = calcValue;
 
         }
     }
