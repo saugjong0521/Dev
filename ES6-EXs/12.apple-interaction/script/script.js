@@ -136,7 +136,7 @@
         newSection = false; // 새로운 섹션에 진입했는지 여부 (진입 시, true를 반환하도록 함)
         prevScrollHeight = 0;   // 이전 섹션들의 총 스크롤 길이를 초기화
 
-        playAnimation();    // 각 섹션에 들어오면 해당 애니메이션이 실행
+        playAnimation();    // 각 섹션에 들어오면 해당 애니메이션이 실행 (ScrollLoop의 맨 앞에 넣어서 스크롤 발생시 시작하도록 함)
 
         for (let i = 0; i < currentSection; i++) {
             prevScrollHeight += sectionInfo[i].scrollHeight;
