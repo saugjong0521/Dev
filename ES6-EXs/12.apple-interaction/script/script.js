@@ -186,7 +186,7 @@
             sectionInfo[0].centext.drawImage(sectionInfo[0].objs.videoImages[0], 0, 0)
         }
         rafId = requestAnimationFrame(loop)
-        // 스크롤 위치가
+        // 스크롤 위치가 지연된 스크롤 위치와 차이가 없으면 애니메이션 중단
         if(Math.abs(yOffset - delayYoffset) < 1){
             cancelAnimationFrame(rafId)
             rafState = false;   // 애니메이션이 실행중이지 않음 체크
