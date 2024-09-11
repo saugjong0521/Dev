@@ -185,7 +185,7 @@ body {
 #show-section-1 #scroll-section-1 .fixed-el,
 #show-section-2 #scroll-section-2 .fixed-el,
 #show-section-3 #scroll-section-3 .fixed-el,
-#show-section-4 .fixed-el{
+#show-section-4 #scroll-section-4 .fixed-el{
     display: block;
 }
 
