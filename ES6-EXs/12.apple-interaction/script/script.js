@@ -105,6 +105,23 @@
         return resultValue
     }
 
+    //6. 
+    function playAnimation() {
+        const objs = sectionInfo[currentSection].objs;  // 현재 섹션의 객체
+        const values = sectionInfo[currentSection].values;  // 현재 섹션의 설정값
+        const currentYOffset = yOffset - prevScrollHeight;  // 섹션 내에서 스크롤의 위치
+        const scrollH = sectionInfo[currentSection].scrollHeight;   //  섹션 내에서 스크롤의 높이
+        const scrollRatio = currentYOffset / scrollH;   // 섹션 내에서 스크롤된 비율 (0~1 사이)
+
+        switch (currentSection) {
+            // 섹션의 index마다 다른 애니메이션이 적용되기 때문에 for문보다 switch문이 효과적
+
+            case 0:
+                objs.context.clearRect(0, 0, objs.canvas.width, objs.canvas.height);
+                // 초기화
+
+        }
+    }
 
     //0. 스크롤 이벤트 시작 및 각 함수를 적용
     window.addEventListener('load', () => {
