@@ -219,7 +219,7 @@
         if (tempYoffset > 0) {
             let item = setInterval(() => {
                 scrollTo(0, tempYoffset)
-                tempYoffset += 1
+                tempYoffset += 5
                 if (tempScrollCount > 20) {
                     clearInterval(item);
                 }
