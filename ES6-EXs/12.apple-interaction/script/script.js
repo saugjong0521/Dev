@@ -213,21 +213,19 @@
             document.querySelector('.section-0-title').classList.add('active')
         }, 500);
 
-        // 페이지 새로고침 시 초기 상태 설정
-        window.scrollTo(0, 0);
-        yOffset = window.pageYOffset;
-
-        window.addEventListener('scroll', () => {
-            yOffset = window.pageYOffset;
-            fixedMenu();
-            scrollLoop();
-
-            if (!rafState) {
-                rafId = requestAnimationFrame(loop);
-                rafState = true;
-            }
-        });
-    });
+        //새로고침할 경우, 스크롤값 찾아서 애니메이션 적용
+        let tempYoffset = yOffset;
+        let tempScrollCount = 0;
+        if (tempYoffset > 0) {
+            let item = setInterval(() => {
+                scrollTo(0, tempYoffset)
+                tempYoffset += 5
+                if (tempScrollCount > 20) {
+                    clearInterval(item);
+                }
+                tempScrollCount++;
+            }, 20)
+        }
 
 
         window.addEventListener('scroll', () => {
