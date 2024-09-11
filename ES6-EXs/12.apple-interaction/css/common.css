@@ -167,3 +167,19 @@ body {
 .nav-fixed .content-header-container .content-header {
     border: none;
 }
+
+
+/*content*/
+.scroll-section{
+    position: relative;
+}
+
+.fixed-el{
+    display: none;
+    position: fixed;
+    left: 0;
+    width: 100%;
+}
+
+
+/*section0*/
