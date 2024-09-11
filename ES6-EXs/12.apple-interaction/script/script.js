@@ -10,9 +10,6 @@
     let rafState;
 
 
-    loop();
-
-
     //2. 섹션 info
     const sectionInfo = [
         {
@@ -189,9 +186,10 @@
             sectionInfo[0].centext.drawImage(sectionInfo[0].objs.videoImages[0], 0, 0)
         }
         rafId = requestAnimationFrame(loop)
+        // 스크롤 위치가
         if(Math.abs(yOffset - delayYoffset) < 1){
             cancelAnimationFrame(rafId)
-            rafState = false;
+            rafState = false;   // 애니메이션이 실행중이지 않음 체크
         }
     }
 
@@ -204,6 +202,11 @@
             yOffset = window.pageYOffset;   // 스크롤시 위치를 다시 받아옴
             fixedMenu();
             scrollLoop();
+
+            if(!rafState){
+                rafId = requestAnimationFrame(loop);
+                rafState: true
+            }
         })
     })
     setCanvasImage();
