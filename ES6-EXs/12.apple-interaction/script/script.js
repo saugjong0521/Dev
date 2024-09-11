@@ -94,7 +94,7 @@
                 resultValue = val[0]
             }
             // 스크롤이 애니메이션 범위보다 아래 있는 경우 종료값으로 지정
-            else if (current > scrollEnd) {
+            else if (currentY > scrollEnd) {
                 resultValue = val[1]
             }
         }
