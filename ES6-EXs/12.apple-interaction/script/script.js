@@ -208,7 +208,7 @@
         setLayout();
         
         setTimeout(()=>{
-            sectionInfo[0].objs.context.drawImage(section[0].objs.videoImages[0],0,0);
+            sectionInfo[0].objs.context.drawImage(sectionInfo[0].objs.videoImages[0],0,0);
             document.querySelector('.fixed-el-canvas').classList.add('active')
             document.querySelector('.section-0-title').classList.add('active')
         },100);

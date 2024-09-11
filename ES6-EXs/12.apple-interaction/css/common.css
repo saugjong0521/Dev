@@ -220,7 +220,7 @@ body {
     text-align: center;
     transform: scale(0.8);
     opacity: 0;
-    transition: 700ms;
+    transition: 7500ms;
 }
 
 .fixed-el-canvas.active,
