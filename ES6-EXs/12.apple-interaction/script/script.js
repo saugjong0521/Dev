@@ -21,6 +21,7 @@
                 container: document.querySelector('#scroll-section-0'),
                 canvas: document.querySelector('#video-canvas-0'),
                 context: document.querySelector('#video-canvas-0').getContext('2d'),
+                title: document.querySelector('.section-0-title'),
                 videoImages: [] // 이미지가 들어올 배열
             },
             values: {
@@ -29,6 +30,8 @@
                 canvas_opacity: [1, 0, { start: 0.9, end: 1 }]  // 캔버스의 투명도 조절
                 // 1, 0 은 투명도를 나타내며, start: 와 end: 는 스크롤 비율을 나타낸다
                 // 지금 내용은 스크롤 90%가 되면 투명해지기 시작하고 스크롤이 100%가 되면 완전 투명해짐
+
+                title_opacity: [1,0]
             }
 
         }
