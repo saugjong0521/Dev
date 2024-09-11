@@ -200,7 +200,7 @@ body {
     height: 100%;
     transform: scale(0.8);
     opacity: 0;
-    transition: transform 1500ms 500ms, opacity 500ms;
+    transition: transform 1000ms 500ms, opacity 500ms;
 }
 
 .fixed-el-canvas canvas {
@@ -220,7 +220,7 @@ body {
     text-align: center;
     transform: scale(0.8);
     opacity: 0;
-    transition: transform 1500ms 500ms, opacity 500ms 500ms;
+    transition: transform 1000ms 500ms, opacity 500ms 500ms;
 }
 
 .fixed-el-canvas.active,
