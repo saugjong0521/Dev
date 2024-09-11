@@ -211,7 +211,7 @@
             sectionInfo[0].objs.context.drawImage(sectionInfo[0].objs.videoImages[0],0,0);
             document.querySelector('.fixed-el-canvas').classList.add('active')
             document.querySelector('.section-0-title').classList.add('active')
-        },100);
+        },500);
 
         window.addEventListener('scroll', () => {
             yOffset = window.pageYOffset;   // 스크롤시 위치를 다시 받아옴
