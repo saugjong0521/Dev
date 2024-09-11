@@ -10,6 +10,7 @@
     let rafState;
 
 
+    loop();
 
 
     //2. 섹션 info
@@ -188,6 +189,7 @@
             sectionInfo[0].centext.drawImage(sectionInfo[0].objs.videoImages[0], 0, 0)
         }
         rafId = requestAnimationFrame(loop)
+        if()
     }
 
 
@@ -199,7 +201,6 @@
             yOffset = window.pageYOffset;   // 스크롤시 위치를 다시 받아옴
             fixedMenu();
             scrollLoop();
-            loop();
         })
     })
     setCanvasImage();
