@@ -206,6 +206,13 @@
     //0. 스크롤 이벤트 시작 및 각 함수를 적용
     window.addEventListener('load', () => {
         setLayout();
+        
+        setTimeout(()=>{
+            sectionInfo[0].objs.context.drawImage(section[0].objs.videoImages[0],0,0);
+            document.querySelector('.fixed-el-canvas').classList.add('active')
+            document.querySelector('.section-0-title').classList.add('active')
+        },100);
+
         window.addEventListener('scroll', () => {
             yOffset = window.pageYOffset;   // 스크롤시 위치를 다시 받아옴
             fixedMenu();
