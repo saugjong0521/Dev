@@ -187,6 +187,7 @@ body {
 #show-section-3 #scroll-section-3 .fixed-el,
 #show-section-4 #scroll-section-4 .fixed-el{
     display: block;
+    will-change: transform, opacity;
 }
 
 .scroll-effect-end .fixed-el{
