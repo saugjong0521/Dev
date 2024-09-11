@@ -138,52 +138,52 @@
 
         playAnimation();    // 현재 섹션에 들어오면 해당 애니메이션이 실행
 
-        for(let i = 0; i < currentSection; i++){
+        for (let i = 0; i < currentSection; i++) {
             prevScrollHeight += sectionInfo[i].scrollHeight;
         }   // 현재 섹션 이전의 모든 섹션의 스크롤 높이를 더해서, 현재 스크롤 위치를 계산
 
-        if(delayYoffset < prevScrollHeight + sectionInfo[currentSection].scrollHeight){
+        if (delayYoffset < prevScrollHeight + sectionInfo[currentSection].scrollHeight) {
             // 현재 스크롤 위치가 마지막 섹션의 끝을 넘었는지를 확인
             // 끝나지 않은 경우 특정한 방법으로 체크
             document.body.classList.remove('scroll-effect-end')
             // 끝나지 않은 경우 scroll-effect-end 클래스를 삭제
         }
 
-        if(delayYoffset > prevScrollHeight + sectionInfo[currentSection].scrollHeight){
+        if (delayYoffset > prevScrollHeight + sectionInfo[currentSection].scrollHeight) {
             newSection = true;
-             //스크롤이 현재 섹션의 끝을 넘었을때 다음 섹션으로 넘어가게 처리
+            //스크롤이 현재 섹션의 끝을 넘었을때 다음 섹션으로 넘어가게 처리
 
-            if(currentSection === sectionInfo.length -1){
+            if (currentSection === sectionInfo.length - 1) {
                 document.body.classList.add('scroll-effect-end')
                 // 마지막 섹션일 경우 클래스로 체크
             }
-            if(currentSection < sectionInfo.length - 1){
-                currentSection ++;
+            if (currentSection < sectionInfo.length - 1) {
+                currentSection++;
                 // 섹션에 추가
             }
-            document.body.setAttribute('id',`show-section-${currentSection}`)
+            document.body.setAttribute('id', `show-section-${currentSection}`)
 
-        }  
+        }
     }
 
-    
-    function loop(){
-        // requestAnimationFrame을 사용해서 화면을 갱신할때마다 부드럽게 애니메이션을 실행
+
+    //8. requestAnimationFrame을 사용해서 화면을 갱신할때마다 부드럽게 애니메이션을 실행
+    function loop() {
         delayYoffset = delayYoffset + (yOffset - delayYoffset) * acc;
 
         // 새로운 섹션에 진입되지 않았다면 애니메이션 효과 적용
-        if(!newSection){
+        if (!newSection) {
             const currentYOffset = delayYoffset - prevScrollHeight;
             const objs = sectionInfo[currentSection].objs;  // 현재 섹션의 객체
             const values = sectionInfo[currentSection].values;  //현재 섹션의 효과값 찾기
         }
 
-        if(delayYoffset < 1){
-            scrollLoop;
+        if (delayYoffset < 1) {
+            scrollLoop();
             // 스크롤 상태 업데이트 시, 섹션 전환처리
 
             sectionInfo[0].objs.style.opacity = 1;
-            sectionInfo[0].centext.drawImage(sectionInfo[0].objs.videoImages[0],0,0)
+            sectionInfo[0].centext.drawImage(sectionInfo[0].objs.videoImages[0], 0, 0)
         }
         rafId = requestAnimationFrame(loop)
     }
