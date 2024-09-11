@@ -27,11 +27,11 @@
             values: {
                 videoImageCount: 64,    // 사용될 이미지의 갯수
                 imgSequence: [0, 64],   // 이미지 시퀀스(첫 프레임과 끝 프레임)
-                canvas_opacity: [1, 0, { start: 0.9, end: 1 }]  // 캔버스의 투명도 조절
+                canvas_opacity: [1, 0, { start: 0.9, end: 1 }],  // 캔버스의 투명도 조절
                 // 1, 0 은 투명도를 나타내며, start: 와 end: 는 스크롤 비율을 나타낸다
                 // 지금 내용은 스크롤 90%가 되면 투명해지기 시작하고 스크롤이 100%가 되면 완전 투명해짐
 
-                title_opacity: [1,0]
+                title_opacity: [1,0,{start: 0.1, end: 0.5}]
             }
 
         }
