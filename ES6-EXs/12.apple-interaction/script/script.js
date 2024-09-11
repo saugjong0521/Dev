@@ -206,12 +206,28 @@
     //0. 스크롤 이벤트 시작 및 각 함수를 적용
     window.addEventListener('load', () => {
         setLayout();
-        
-        setTimeout(()=>{
-            sectionInfo[0].objs.context.drawImage(sectionInfo[0].objs.videoImages[0],0,0);
+
+        setTimeout(() => {
+            sectionInfo[0].objs.context.drawImage(sectionInfo[0].objs.videoImages[0], 0, 0);
             document.querySelector('.fixed-el-canvas').classList.add('active')
             document.querySelector('.section-0-title').classList.add('active')
-        },500);
+        }, 500);
+
+        //새로고침할 경우, 스크롤값 찾아서 애니메이션 적용ㄹ=
+        let tempYoffset = yOffset;
+        let tempScrollCount = 0;
+        if (tempYoffset > 0) {
+            let item = setInterval(() => {
+                scrollTo(0, tempYoffset){
+                    tempYoffset += 5
+                }
+                if (tempScrollCount > 20) {
+                    clearInterval(item);
+                }
+                tempScrollCount++;
+            }, 20)
+        }
+
 
         window.addEventListener('scroll', () => {
             yOffset = window.pageYOffset;   // 스크롤시 위치를 다시 받아옴
