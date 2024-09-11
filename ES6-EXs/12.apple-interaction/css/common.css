@@ -198,6 +198,9 @@ body {
 .fixed-el-canvas {
     top: 0;
     height: 100%;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: 500ms;
 }
 
 .fixed-el-canvas canvas {
@@ -215,4 +218,8 @@ body {
     height: 100vh;
     line-height: 100vh;
     text-align: center;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: 500ms;
 }
+
