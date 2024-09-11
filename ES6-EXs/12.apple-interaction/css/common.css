@@ -221,8 +221,8 @@ body {
     text-align: center;
     transform: scale(0.8);
     opacity: 0;
-    transition: 1000ms;
-    transition-delay: 500ms;
+    transition: 600ms;
+    transition-delay: 700ms;
 }
 
 .fixed-el-canvas.active,
