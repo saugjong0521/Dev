@@ -168,7 +168,19 @@
 
     
     function loop(){
-        //requestAnimationFrame을 사용해서 화면을 갱신할때마다 부드럽게 애니메이션을 실행
+        // requestAnimationFrame을 사용해서 화면을 갱신할때마다 부드럽게 애니메이션을 실행
+        delayYoffset = delayYoffset + (yOffset - delayYoffset) * acc;
+
+        // 새로운 섹션에 진입되지 않았다면 애니메이션 효과 적용
+        if(!newSection){
+            const currentYOffset = delayYoffset - prevScrollHeight;
+            const objs = sectionInfo[currentSection].objs;  // 현재 섹션의 객체
+            const values = sectionInfo[currentSection].values;  //현재 섹션의 효과값 찾기
+        }
+
+        if(delayYoffset < 1){
+            scrollLoop;
+        }
     }
 
 
