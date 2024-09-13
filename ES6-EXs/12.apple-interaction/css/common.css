@@ -224,8 +224,52 @@ body {
 }
 
 .fixed-el-canvas.active,
-.section-0-title.active .title{
+.section-0-title.active .title {
     transform: scale(1);
     opacity: 1;
 }
 
+.section-0-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.section-0-text p {
+    position: relative;
+}
+
+.section-0-text span {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 100px;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+
+/*section1*/
+#scroll-section-1 .content{
+    width: 50%;
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+#scroll-section-1 .content > span{
+    opacity: 0.5;
+    transition: opacity 500ms;
+}
+
+
+#scroll-section-1 .content .scroll-1-text{
+    font-size: 53px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #fff;
+}

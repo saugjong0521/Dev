@@ -22,21 +22,40 @@
                 canvas: document.querySelector('#video-canvas-0'),
                 context: document.querySelector('#video-canvas-0').getContext('2d'),
                 title: document.querySelector('.section-0-title'),
+                text: document.querySelector('.section-0-text'),
                 videoImages: [] // 이미지가 들어올 배열
             },
             values: {
                 videoImageCount: 64,    // 사용될 이미지의 갯수
                 imgSequence: [0, 64],   // 이미지 시퀀스(첫 프레임과 끝 프레임)
-                canvas_opacity: [1, 0, { start: 0.9, end: 1 }],  // 캔버스의 투명도 조절
+                canvas_opacity: [1, 0, { start: 0.4, end: 0.5 }],  // 캔버스의 투명도 조절
                 // 1, 0 은 투명도를 나타내며, start: 와 end: 는 스크롤 비율을 나타낸다
                 // 지금 내용은 스크롤 90%가 되면 투명해지기 시작하고 스크롤이 100%가 되면 완전 투명해짐
 
-                title_opacity: [1, 0, { start: 0.1, end: 0.7 }],
-                title_scale: [1, 1.3, { start: 0, end: 0.8 }]
-            }
+                title_opacity: [1, 0, { start: 0.1, end: 0.3 }],
+                title_scale: [1, 1.3, { start: 0, end: 0.6 }],
 
+                text_opacity_in: [0, 1, { start: 0.5, end: 0.6 }],
+                text_scale: [0.8, 1, { start: 0.55, end: 0.60 }],
+                text_opacity_out: [1, 0, { start: 0.4, end: 0.6 }]
+            }
+        },
+
+        {
+            type: 'text',
+            heightNum: 2,
+            scrollHeight: 0,
+            objs: {
+                container: document.querySelector('.scroll-1-text'),
+                words: [],   // 나눠진 텍스트를 배열에 저장
+            },
+            values: {
+                opacity_in: [0.5, 1, { start: 0, end: 1 }],
+            }
         }
     ]
+
+
 
     //3. 캔버스에 적재할 이미지를 로드
     function setCanvasImage() {
@@ -54,7 +73,7 @@
     //4. 각 섹션의 높이 설정 함수
     function setLayout() {
         for (let i = 0; i < sectionInfo.length; i++) {
-            if (sectionInfo[i].type === 'sticky') {
+            if (sectionInfo[i].type === 'sticky' || sectionInfo[i].type === 'text') {
                 sectionInfo[i].scrollHeight = sectionInfo[i].heightNum * window.innerHeight
             }
             sectionInfo[i].objs.container.style.height = `${sectionInfo[i].scrollHeight}px`
@@ -110,6 +129,7 @@
     }
 
     //6. 이미지를 스크롤 비율에 따라 적용
+    //10. section1 텍스트 이벤트
     function playAnimation() {
         const objs = sectionInfo[currentSection].objs;  // 현재 섹션의 객체
         const values = sectionInfo[currentSection].values;  // 현재 섹션의 설정값
@@ -133,7 +153,41 @@
                 }
                 objs.title.style.opacity = calcValue(values.title_opacity, currentYOffset);
                 objs.title.style.transform = `scale(${calcValue(values.title_scale, currentYOffset)})`
-            //타이틀
+                //타이틀
+
+                if (scrollRatio <= 0.6) {
+                    objs.text.style.opacity = calcValue(values.text_opacity_in, currentYOffset);
+                    objs.text.style.transform = `translate(-50%, -50%) scale(${calcValue(values.text_scale, currentYOffset)})`;
+                } else {
+                    objs.text.style.opacity = calcValue(values.text_opacity_out, currentYOffset);
+                }
+
+                break
+
+            case 1:
+                objs.words.forEach(el=>{
+                    el.style.opacity =  0.5;    //values내의 opacity로도 가능
+                })
+                const span = objs.words;
+                const triggerPoint = window.innerHeight * 0.7;    // 타이밍 조정
+                let lastIdx = -1;
+                
+                span.forEach((el,idx)=>{
+                    const spanTop = el.getBoundingClientRect().top;
+                    const spanBottom = el.getBoundingClientRect().bottom;
+
+                    if(spanTop <= triggerPoint && spanBottom >= 0){
+                        el.style.opacity = calcValue(values.opacity_in, currentYOffset)
+                        lastIdx = idx
+                    }
+                })
+                if(lastIdx !== -1){
+                    span.forEach((el,idx)=>{
+                        if(idx < lastIdx){
+                            el.style.opacity = 0.5
+                        }
+                    })
+                }
 
 
         }
@@ -143,21 +197,20 @@
     function scrollLoop() {
         newSection = false; // 새로운 섹션에 진입했는지 여부 (진입 시, true를 반환하도록 함)
         prevScrollHeight = 0;   // 이전 섹션들의 총 스크롤 길이를 초기화
+        const sectionBottom = sectionInfo[currentSection].objs.container.getBoundingClientRect().bottom;
+        const triggerPoint = window.innerHeight;
 
         playAnimation();    // 각 섹션에 들어오면 해당 애니메이션이 실행 (ScrollLoop의 맨 앞에 넣어서 스크롤 발생시 시작하도록 함)
 
-        for (let i = 0; i < currentSection; i++) {
-            prevScrollHeight += sectionInfo[i].scrollHeight;
-        }   // 현재 섹션 이전의 모든 섹션의 스크롤 높이를 더해서, 현재 스크롤 위치를 계산
 
-        if (delayYoffset < prevScrollHeight + sectionInfo[currentSection].scrollHeight) {
-            // 현재 스크롤 위치가 마지막 섹션의 끝을 넘었는지를 확인
-            // 끝나지 않은 경우 특정한 방법으로 체크
-            document.body.classList.remove('scroll-effect-end')
-            // 끝나지 않은 경우 scroll-effect-end 클래스를 삭제
+        if(sectionBottom <= triggerPoint){
+            if(currentSection < sectionInfo.length -1){
+                currentSection++;
+                newSection = true;
+                document.body.setAttribute('id', `show-section-${currentSection}`)
+            }
         }
-
-        if (delayYoffset > prevScrollHeight + sectionInfo[currentSection].scrollHeight) {
+        if (yOffset > prevScrollHeight + sectionInfo[currentSection].scrollHeight) {
             newSection = true;
             //스크롤이 현재 섹션의 끝을 넘었을때 다음 섹션으로 넘어가게 처리
 
@@ -165,13 +218,35 @@
                 document.body.classList.add('scroll-effect-end')
                 // 마지막 섹션일 경우 클래스로 체크
             }
-            if (currentSection < sectionInfo.length - 1) {
-                currentSection++;
-                // 섹션에 추가
-            }
-            document.body.setAttribute('id', `show-section-${currentSection}`)
-
         }
+        
+
+        for (let i = 0; i < currentSection; i++) {
+            prevScrollHeight += sectionInfo[i].scrollHeight;
+        }   // 현재 섹션 이전의 모든 섹션의 스크롤 높이를 더해서, 현재 스크롤 위치를 계산
+
+        // if (delayYoffset < prevScrollHeight + sectionInfo[currentSection].scrollHeight) {
+        //     // 현재 스크롤 위치가 마지막 섹션의 끝을 넘었는지를 확인
+        //     // 끝나지 않은 경우 특정한 방법으로 체크
+        //     document.body.classList.remove('scroll-effect-end')
+        //     // 끝나지 않은 경우 scroll-effect-end 클래스를 삭제
+        // }
+
+        // if (delayYoffset > prevScrollHeight + sectionInfo[currentSection].scrollHeight) {
+        //     newSection = true;
+        //     //스크롤이 현재 섹션의 끝을 넘었을때 다음 섹션으로 넘어가게 처리
+
+        //     if (currentSection === sectionInfo.length - 1) {
+        //         document.body.classList.add('scroll-effect-end')
+        //         // 마지막 섹션일 경우 클래스로 체크
+        //     }
+        //     if (currentSection < sectionInfo.length - 1) {
+        //         currentSection++;
+        //         // 섹션에 추가
+        //     }
+        //     document.body.setAttribute('id', `show-section-${currentSection}`)
+
+        // }
     }
 
 
@@ -200,6 +275,29 @@
             rafState = false;   // 애니메이션이 실행중이지 않음 체크
         }
     }
+
+
+    //9 section1의 문자 text 추가
+    function setWords() {
+        const splitWords = sectionInfo[1].objs.container;
+        const content = splitWords.innerText;
+        // console.log(content);
+
+        const words = content.split(/\./)
+        // console.log(words)
+        // 마침표는 특수문자이므로 정규식 \.처럼 이스케이프 처리를 해서 적용 ([\u002E] -> unicode도 가능)
+        // 특수문자를 문자처럼 처리하기 위해서는 이스케이프 처리가 필요
+        // 단순문자 분리에는 '.'로 사용해도 됨
+
+        splitWords.innerHTML = '';
+        words.forEach((el, idx) => {
+            const text = document.createElement('span')
+            text.innerHTML = `${el.trim()}. `;
+            sectionInfo[1].objs.words.push(text);
+            splitWords.appendChild(text);
+        })
+    }
+
 
 
 
@@ -240,6 +338,7 @@
         })
     })
     setCanvasImage();
+    setWords();
     /*
     최초 골자
         window.addEventListener('load', () => {
