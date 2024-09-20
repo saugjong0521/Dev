@@ -267,14 +267,14 @@
         const sectionBottom = sectionInfo[currentSection].objs.container.getBoundingClientRect().bottom;
         const triggerPoint = window.innerHeight;
 
-        playAnimation();    // 각 섹션에 들어오면 해당 애니메이션이 실행 (ScrollLoop의 맨 앞에 넣어서 스크롤 발생시 시작하도록 함)
-
         // console.log(sectionBottom)
         // console.log(triggerPoint)
 
         for (let i = 0; i < currentSection; i++) {
             prevScrollHeight += sectionInfo[i].scrollHeight;
         }   // 현재 섹션 이전의 모든 섹션의 스크롤 높이를 더해서, 현재 스크롤 위치를 계산
+
+        playAnimation();    // 각 섹션에 들어오면 해당 애니메이션이 실행 (ScrollLoop의 맨 앞에 넣어서 스크롤 발생시 시작하도록 함)
 
         if (sectionBottom <= triggerPoint) {
             if (currentSection < sectionInfo.length - 1) {
