@@ -274,6 +274,7 @@
             prevScrollHeight += sectionInfo[i].scrollHeight;
         }   // 현재 섹션 이전의 모든 섹션의 스크롤 높이를 더해서, 현재 스크롤 위치를 계산
 
+        playAnimation();    // 각 섹션에 들어오면 해당 애니메이션이 실행 (스크롤 위치를 계산하는 for문 뒤에 작성)
 
         if (sectionBottom <= triggerPoint) {
             if (currentSection < sectionInfo.length - 1) {
@@ -282,7 +283,6 @@
                 document.body.setAttribute('id', `show-section-${currentSection}`);
             }
         }
-        
         if (yOffset < prevScrollHeight) {
             if (currentSection > 0) {
                 currentSection--;
@@ -302,8 +302,6 @@
                 //마지막 섹션일 경우 클래스로 체크
             }
         }
-        playAnimation();    // 각 섹션에 들어오면 해당 애니메이션이 실행 (스크롤 위치를 계산하는 for문 뒤에 작성)
-
         if (newSection) return
 
 
