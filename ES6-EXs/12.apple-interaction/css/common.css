@@ -285,11 +285,11 @@ body {
     transform: scale(1);
 }
 
-#scroll-section-2 .content .section-2-text{
+#scroll-section-2 .content .section-2-text left{
     position: absolute;
-    width: 30%;
-    top: 0;
-    left: 0;
+    width: 20%;
+    top: 50%;
+    left: 30%;
 }
 
 #scroll-section-2 .content .section-2-text p{
