@@ -288,8 +288,7 @@ body {
 #scroll-section-2 .content .section-2-text {
     width: 15%;
     max-width: 300px;
-    top: 50%;
-    left: 30%;
+    top: 70%;
 }
 
 #scroll-section-2 .content .section-2-text p{
@@ -297,6 +296,10 @@ body {
     font-size: 20px;
 }
 
-#scroll-section-2 .content .section-2-text .text-1{
-    top: 50%;
+#scroll-section-2 .content .section-2-text .left{
+    left: 30%;
+}
+
+#scroll-section-2 .content .section-2-text .right{
+    right: 30%;
 }
