@@ -245,6 +245,13 @@
                 }
               objs.canvas.style.opacity = 0;
 
+              const opacityValue = values[`canvas_opacity_in_${sequence2 + 1}`];
+              const scaleValue = values[`canvas_scale_in_${sequence2 + 1}`];
+              if(opacityValue && scaleValue){
+                objs.canvas.style.opacity = calcValue(opacityValue, currentYOffset);
+                objs.canvas.style.transform = `translate(-50%, -50%) scale(${calcValue(scaleValue, currentYOffset)})`;
+              }
+
         }
     }
 
