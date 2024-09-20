@@ -231,7 +231,9 @@
                     const ch = objs.canvas.height;
                     const iw = img.width;
                     const ih = img.height;
-                    objs.context.drawImage(objs.videoImages[sequence2], 500, 0)
+                    const x = (cw - iw)/2
+                    const y = (ch - ih)/2
+                    objs.context.drawImage(objs.videoImages[sequence2], x, y)
                 }
                 if (sequence2 === 0) {
                     objs.canvas.style.opacity = calcValue(values.canvas_opacity_in_1, currentYOffset);
