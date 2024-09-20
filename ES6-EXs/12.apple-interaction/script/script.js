@@ -63,6 +63,7 @@
                 canvas: document.querySelector('#video-canvas-1'),
                 context: document.querySelector('#video-canvas-1').getContext('2d'),
 
+                //text 부분
                 text1: document.querySelector('#scroll-section-2 .text-1'),
                 text2: document.querySelector('#scroll-section-2 .text-2'),
                 text3: document.querySelector('#scroll-section-2 .text-3'),
@@ -84,6 +85,11 @@
                 //세번째 이미지
                 canvas_opacity_in_3: [1, 0, { start: 0.5, end: 0.6 }],
                 canvas_scale_in_3: [1, 0.9, { start: 0.5, end: 0.6 }],
+
+
+                //첫번째 텍스트
+                text1_opacity_in: [0, 1, {start: 0.1, end: 0.3}],
+                text1_translateY_in: [ 0, -400, {start: 0.1, end: 0.3}]
 
             }
         }
