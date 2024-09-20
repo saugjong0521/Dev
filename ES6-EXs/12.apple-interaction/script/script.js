@@ -333,29 +333,45 @@
     function scrollLoop() {
         newSection = false; // 새로운 섹션에 진입했는지 여부 (진입 시, true를 반환하도록 함)
         prevScrollHeight = 0;   // 이전 섹션들의 총 스크롤 길이를 초기화
+        const section = se
         const sectionBottom = sectionInfo[currentSection].objs.container.getBoundingClientRect().bottom;
         const triggerPoint = window.innerHeight;
 
         // console.log(sectionBottom)
         // console.log(triggerPoint)
 
-        for (let i = 0; i < currentSection; i++) {
-            prevScrollHeight += sectionInfo[i].scrollHeight;
-        }   // 현재 섹션 이전의 모든 섹션의 스크롤 높이를 더해서, 현재 스크롤 위치를 계산
+        for (let i = 0; i < currentSection; i++) {   // 현재 섹션 이전의 모든 섹션의 스크롤 높이를 더해서, 현재 스크롤 위치를 계산
+            prevScrollHeight += sectionInfo[i].scrollHeight;    
+            
+            const section = sectionInfo[i];
+            const sectionTop = prevScrollHeight;
+            const sectionBottom = prevScrollHeight + section.scrollHeight;
 
-        if (yOffset > prevScrollHeight + sectionInfo[currentSection].scrollHeight) {
-            if (currentSection < sectionInfo.length - 1) {
-                currentSection++;
-                newSection = true;
-                document.body.setAttribute('id', `show-section-${currentSection}`)
+            if(yOffset + window.innerHeight > sectionTop && yOffset < sectionBottom){
+                if(currentSection !== i){
+                    currentSection = i;
+                    newSection = true;
+                    document.body.setAttribute('id', `show-section-${currentSection}`)
+                }
+                break
             }
-        } else if (yOffset < prevScrollHeight) {
-            if (currentSection) {
-                currentSection--;
-                newSection = true;
-                document.body.setAttribute('id', `show-section-${currentSection}`)
-            }
-        }
+            prevScrollHeight += section.scrollHeight
+
+        }  
+
+        // if (yOffset > prevScrollHeight + sectionInfo[currentSection].scrollHeight) {
+        //     if (currentSection < sectionInfo.length - 1) {
+        //         currentSection++;
+        //         newSection = true;
+        //         document.body.setAttribute('id', `show-section-${currentSection}`)
+        //     }
+        // } else if (yOffset < prevScrollHeight) {
+        //     if (currentSection) {
+        //         currentSection--;
+        //         newSection = true;
+        //         document.body.setAttribute('id', `show-section-${currentSection}`)
+        //     }
+        // }
 
         if (newSection) return
         playAnimation();    // 각 섹션에 들어오면 해당 애니메이션이 실행 (스크롤 위치를 계산하는 for문 뒤에 작성)
