@@ -202,8 +202,8 @@
 
         playAnimation();    // 각 섹션에 들어오면 해당 애니메이션이 실행 (ScrollLoop의 맨 앞에 넣어서 스크롤 발생시 시작하도록 함)
 
-        console.log(sectionBottom)
-        console.log(triggerPoint)
+        // console.log(sectionBottom)
+        // console.log(triggerPoint)
 
         for (let i = 0; i < currentSection; i++) {
             prevScrollHeight += sectionInfo[i].scrollHeight;
