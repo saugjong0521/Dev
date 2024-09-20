@@ -52,6 +52,22 @@
             values: {
                 opacity_in: [0.5, 1, { start: 0, end: 1 }],
             }
+        },
+
+        {
+            type: 'sticky',
+            heightNum: 5,
+            scrollHeight: 0,
+            objs: {
+                container: document.querySelector('#scroll-section-2'),
+                canvas: document.querySelector('#video-canvas-1'),
+                context: document.querySelector('#video-canvas-1').getContext('2d'),
+                videoImages: [],
+            },
+            values: {
+                videoImageCount: 3,
+                imgSequence: [0, 3],    // 이미지의 프레임이기에 0~3
+            }
         }
     ]
 
@@ -165,25 +181,25 @@
                 break
 
             case 1:
-                objs.words.forEach(el=>{
-                    el.style.opacity =  0.5;    //values내의 opacity로도 가능
+                objs.words.forEach(el => {
+                    el.style.opacity = 0.5;    //values내의 opacity로도 가능
                 })
                 const span = objs.words;
                 const triggerPoint = window.innerHeight * 0.7;    // 타이밍 조정
                 let lastIdx = -1;
-                
-                span.forEach((el,idx)=>{
+
+                span.forEach((el, idx) => {
                     const spanTop = el.getBoundingClientRect().top;
                     const spanBottom = el.getBoundingClientRect().bottom;
 
-                    if(spanTop <=triggerPoint && spanBottom >= 0){
+                    if (spanTop <= triggerPoint && spanBottom >= 0) {
                         el.style.opacity = 1;
                         lastIdx = idx;
                     }
                 })
-                if(lastIdx !== -1){
-                    span.forEach((el,idx)=>{
-                        if(idx < lastIdx){
+                if (lastIdx !== -1) {
+                    span.forEach((el, idx) => {
+                        if (idx < lastIdx) {
                             el.style.opacity = 0.5
                         }
                     })
