@@ -88,8 +88,16 @@
 
 
                 //첫번째 텍스트
-                text1_opacity_in: [0, 1, {start: 0.1, end: 0.3}],
-                text1_translateY_in: [ 0, -800, {start: 0.1, end: 0.3}]
+                text1_opacity_in: [0, 1, { start: 0.1, end: 0.3 }],
+                text1_translateY_in: [0, -800, { start: 0.1, end: 0.3 }],
+
+                //두번째 텍스트
+                text2_opacity_in: [0, 1, { start: 0.4, end: 0.6 }],
+                text2_translateY_in: [0, -800, { start: 0.4, end: 0.6 }],
+
+                //세번째 텍스트
+                text2_opacity_in: [0, 1, { start: 0.7, end: 0.9 }],
+                text2_translateY_in: [0, -800, { start: 0.7, end: 0.9 }],
 
             }
         }
@@ -263,7 +271,7 @@
                     objs.canvas.style.transform = `translate(-50%, -50%) scale(${calcValue(scaleValue, currentYOffset)})`;
                 }
                 // section2 text
-                if(scrollRatio <= 0.2){
+                if (scrollRatio <= 0.2) {
                     objs.text1.style.opacity = calcValue(values.text1_opacity_in, currentYOffset);
                     objs.text1.style.transform = `translateY(${calcValue(values.text1_translateY_in, currentYOffset)}px)`;
                 }
@@ -352,9 +360,9 @@
         // console.log(sectionBottom)
         // console.log(triggerPoint)
 
-        for (let i = 0; i < currentSection; i++) {  
+        for (let i = 0; i < currentSection; i++) {
             prevScrollHeight += sectionInfo[i].scrollHeight;
-        }  
+        }
 
         if (yOffset > prevScrollHeight + sectionInfo[currentSection].scrollHeight) {
             if (currentSection < sectionInfo.length - 1) {
