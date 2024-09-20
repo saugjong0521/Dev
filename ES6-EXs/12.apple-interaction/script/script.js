@@ -5,7 +5,7 @@
     let currentSection = 0; // 현재 활성화된 섹션
     let newSection = false; // 새로운 섹션이 시작됨을 알려줌
     let acc = 0.5;
-    let delayYoffset = 0;
+    let delayYOffset = 0;
     let rafId;
     let rafState;
 
@@ -176,9 +176,9 @@
                     const spanTop = el.getBoundingClientRect().top;
                     const spanBottom = el.getBoundingClientRect().bottom;
 
-                    if(spanTop <= triggerPoint && spanBottom >= 0){
-                        el.style.opacity = calcValue(values.opacity_in, currentYOffset)
-                        lastIdx = idx
+                    if(spanTop <=triggerPoint && spanBottom >= 0){
+                        el.style.opacity = 1;
+                        lastIdx = idx;
                     }
                 })
                 if(lastIdx !== -1){
@@ -188,7 +188,7 @@
                         }
                     })
                 }
-
+                break
 
         }
     }
@@ -202,37 +202,51 @@
 
         playAnimation();    // 각 섹션에 들어오면 해당 애니메이션이 실행 (ScrollLoop의 맨 앞에 넣어서 스크롤 발생시 시작하도록 함)
 
-
-        if(sectionBottom <= triggerPoint){
-            if(currentSection < sectionInfo.length -1){
-                currentSection++;
-                newSection = true;
-                document.body.setAttribute('id', `show-section-${currentSection}`)
-            }
-        }
-        if (yOffset > prevScrollHeight + sectionInfo[currentSection].scrollHeight) {
-            newSection = true;
-            //스크롤이 현재 섹션의 끝을 넘었을때 다음 섹션으로 넘어가게 처리
-
-            if (currentSection === sectionInfo.length - 1) {
-                document.body.classList.add('scroll-effect-end')
-                // 마지막 섹션일 경우 클래스로 체크
-            }
-        }
-        
+        console.log(sectionBottom)
+        console.log(triggerPoint)
 
         for (let i = 0; i < currentSection; i++) {
             prevScrollHeight += sectionInfo[i].scrollHeight;
         }   // 현재 섹션 이전의 모든 섹션의 스크롤 높이를 더해서, 현재 스크롤 위치를 계산
 
-        // if (delayYoffset < prevScrollHeight + sectionInfo[currentSection].scrollHeight) {
+        if (sectionBottom <= triggerPoint) {
+            if (currentSection < sectionInfo.length - 1) {
+                currentSection++;
+                newSection = true;
+                document.body.setAttribute('id', `show-section-${currentSection}`);
+            }
+        }
+        if (yOffset < prevScrollHeight) {
+            if (currentSection > 0) {
+                currentSection--;
+                newSection = true;
+                document.body.setAttribute('id', `show-section-${currentSection}`);
+            }
+        }
+
+        if (delayYOffset < prevScrollHeight + sectionInfo[currentSection].scrollHeight) {
+            document.body.classList.remove('scroll-effect-end');
+        }
+        if (delayYOffset > prevScrollHeight + sectionInfo[currentSection].scrollHeight) {
+            //스크롤이 현재 섹션의 끝을 넘었을때 다음 섹션으로 넘어가게 처리
+            newSection = true;
+            if (currentSection === sectionInfo.length - 1) {
+                document.body.classList.add('scroll-effect-end');
+                //마지막 섹션일 경우 클래스로 체크
+            }
+        }
+        if (newSection) return
+
+
+
+        // if (delayYOffset < prevScrollHeight + sectionInfo[currentSection].scrollHeight) {
         //     // 현재 스크롤 위치가 마지막 섹션의 끝을 넘었는지를 확인
         //     // 끝나지 않은 경우 특정한 방법으로 체크
         //     document.body.classList.remove('scroll-effect-end')
         //     // 끝나지 않은 경우 scroll-effect-end 클래스를 삭제
         // }
 
-        // if (delayYoffset > prevScrollHeight + sectionInfo[currentSection].scrollHeight) {
+        // if (delayYOffset > prevScrollHeight + sectionInfo[currentSection].scrollHeight) {
         //     newSection = true;
         //     //스크롤이 현재 섹션의 끝을 넘었을때 다음 섹션으로 넘어가게 처리
 
@@ -252,16 +266,16 @@
 
     //8. requestAnimationFrame을 사용해서 화면을 갱신할때마다 부드럽게 애니메이션을 실행
     function loop() {
-        delayYoffset = delayYoffset + (yOffset - delayYoffset) * acc;
+        delayYOffset = delayYOffset + (yOffset - delayYOffset) * acc;
 
         // 새로운 섹션에 진입되지 않았다면 애니메이션 효과 적용
         if (!newSection) {
-            const currentYOffset = delayYoffset - prevScrollHeight;
+            const currentYOffset = delayYOffset - prevScrollHeight;
             const objs = sectionInfo[currentSection].objs;  // 현재 섹션의 객체
             const values = sectionInfo[currentSection].values;  //현재 섹션의 효과값 찾기
         }
 
-        if (delayYoffset < 1) {
+        if (delayYOffset < 1) {
             scrollLoop();
             // 스크롤 상태 업데이트 시, 섹션 전환처리
 
@@ -270,7 +284,7 @@
         }
         rafId = requestAnimationFrame(loop)
         // 스크롤 위치가 지연된 스크롤 위치와 차이가 없으면 애니메이션 중단
-        if (Math.abs(yOffset - delayYoffset) < 1) {
+        if (Math.abs(yOffset - delayYOffset) < 1) {
             cancelAnimationFrame(rafId)
             rafState = false;   // 애니메이션이 실행중이지 않음 체크
         }
@@ -352,7 +366,7 @@
 
     //1. 맨 위 상단메뉴
     function fixedMenu() {
-        if (yOffset > 50) {
+        if (yOffset > 1) {
             document.body.classList.add('nav-fixed')
         } else {
             document.body.classList.remove('nav-fixed')
