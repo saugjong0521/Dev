@@ -62,6 +62,11 @@
                 container: document.querySelector('#scroll-section-2'),
                 canvas: document.querySelector('#video-canvas-1'),
                 context: document.querySelector('#video-canvas-1').getContext('2d'),
+
+                text1: document.querySelector('#scroll-section-2 .text-1'),
+                text2: document.querySelector('#scroll-section-2 .text-2'),
+                text3: document.querySelector('#scroll-section-2 .text-3'),
+
                 videoImages: [],
             },
             values: {
