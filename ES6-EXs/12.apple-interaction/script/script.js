@@ -337,15 +337,17 @@
 
         for(let i = 0; i < sectionInfo.length; i++){
             prevscrollHeight += sectionInfo[i].scrollHeight;
-            if(prevScrollHeight >= yOffset){
+            if(prevScrollHeight >= currentYOffset){
                 if(currentSection !== i){
                     currentSection = i;
                     newSection = true;
                     document.body.setAttribute('id', `show-section-${currentSection}`)
                 }
+                break;
             }
-            break
         }
+        if(newSection) return;
+        playAnimation();
 
 
 
