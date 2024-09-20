@@ -333,20 +333,12 @@
     function scrollLoop() {
         newSection = false; // 새로운 섹션에 진입했는지 여부 (진입 시, true를 반환하도록 함)
         prevScrollHeight = 0;   // 이전 섹션들의 총 스크롤 길이를 초기화
-        const section = se
-        const sectionBottom = sectionInfo[currentSection].objs.container.getBoundingClientRect().bottom;
-        const triggerPoint = window.innerHeight;
-
         // console.log(sectionBottom)
         // console.log(triggerPoint)
 
-        for (let i = 0; i < currentSection.length; i++) {   // 현재 섹션 이전의 모든 섹션의 스크롤 높이를 더해서, 현재 스크롤 위치를 계산
-            prevScrollHeight += sectionInfo[i].scrollHeight;    
-            
-            const section = sectionInfo[i];
-            const sectionTop = prevScrollHeight;
-            const sectionBottom = prevScrollHeight + section.scrollHeight;
-
+        for (let i = 0; i < currentSection; i++) {  
+            prevScrollHeight += sectionInfo[i].scrollHeight;
+        }  
 
         if (yOffset > prevScrollHeight + sectionInfo[currentSection].scrollHeight) {
             if (currentSection < sectionInfo.length - 1) {
