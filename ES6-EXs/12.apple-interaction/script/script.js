@@ -62,7 +62,7 @@
                 container: document.querySelector('#scroll-section-2'),
                 canvas: document.querySelector('#video-canvas-1'),
                 context: document.querySelector('#video-canvas-1').getContext('2d'),
-                videoImages: [],
+                videoImages: [], 
             },
             values: {
                 videoImageCount: 3,
@@ -99,7 +99,7 @@
 
         for (let i = 0; i < sectionInfo[2].values.videoImageCount; i++) {
             imgItem = new Image();
-            imgItem.src = `./images/section02/00${i + 1}.jpg`;
+            imgItem.src = `./images/section02/00${i}.jpg`;
             sectionInfo[2].objs.videoImages.push(imgItem)
 
             // console.log(imgItem.src)
