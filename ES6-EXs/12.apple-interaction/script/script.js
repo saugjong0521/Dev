@@ -88,10 +88,10 @@
 
 
                 //첫번째 텍스트
-                text1_opacity_in: [0, 1, { start: 0.05, end: 0.3 }],
+                text1_opacity_in: [0, 1, { start: 0.05, end: 0.15 }],
                 text1_translateY_in: [0, -400, { start: 0.05, end: 0.3 }],
 
-                text1_opacity_out: [0, 1, { start: 0.15, end: 0.3 }],
+                text1_opacity_out: [1, 0, { start: 0.15, end: 0.3 }],
                 text1_translateY_out: [-400, 0, { start: 0.15, end: 0.3 }],
 
                 // //두번째 텍스트
