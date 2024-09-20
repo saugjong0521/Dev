@@ -347,31 +347,20 @@
             const sectionTop = prevScrollHeight;
             const sectionBottom = prevScrollHeight + section.scrollHeight;
 
-            if(yOffset + window.innerHeight > sectionTop && yOffset < sectionBottom){
-                if(currentSection !== i){
-                    currentSection = i;
-                    newSection = true;
-                    document.body.setAttribute('id', `show-section-${currentSection}`)
-                }
-                break
+
+        if (yOffset > prevScrollHeight + sectionInfo[currentSection].scrollHeight) {
+            if (currentSection < sectionInfo.length - 1) {
+                currentSection++;
+                newSection = true;
+                document.body.setAttribute('id', `show-section-${currentSection}`)
             }
-            prevScrollHeight += section.scrollHeight
-
-        }  
-
-        // if (yOffset > prevScrollHeight + sectionInfo[currentSection].scrollHeight) {
-        //     if (currentSection < sectionInfo.length - 1) {
-        //         currentSection++;
-        //         newSection = true;
-        //         document.body.setAttribute('id', `show-section-${currentSection}`)
-        //     }
-        // } else if (yOffset < prevScrollHeight) {
-        //     if (currentSection) {
-        //         currentSection--;
-        //         newSection = true;
-        //         document.body.setAttribute('id', `show-section-${currentSection}`)
-        //     }
-        // }
+        } else if (yOffset < prevScrollHeight) {
+            if (currentSection) {
+                currentSection--;
+                newSection = true;
+                document.body.setAttribute('id', `show-section-${currentSection}`)
+            }
+        }
 
         if (newSection) return
         playAnimation();    // 각 섹션에 들어오면 해당 애니메이션이 실행 (스크롤 위치를 계산하는 for문 뒤에 작성)
