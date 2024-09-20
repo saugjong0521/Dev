@@ -337,7 +337,7 @@
 
         for(let i = 0; i < sectionInfo.length; i++){
             prevscrollHeight += sectionInfo[i].scrollHeight;
-            if(prevScrollHeight >= currentYOffset){
+            if(prevScrollHeight >= yOffset){
                 if(currentSection !== i){
                     currentSection = i;
                     newSection = true;
