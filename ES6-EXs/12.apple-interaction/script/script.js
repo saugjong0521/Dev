@@ -226,11 +226,11 @@
                 // console.log(sequence2)
 
                 if (objs.videoImages[sequence2]) {
-                    objs.context.drawImage(objs.videoImages[sequence2], 0, 0)
+                    objs.context.drawImage(objs.videoImages[sequence2], 500, 0)
                 }
                 if (sequence2 === 0) {
                     objs.canvas.style.opacity = calcValue(values.canvas_opacity_in_1, currentYOffset);
-                    objs.canvas.style.transform = `scale(${calcValue(values.canvas_scale_in_1, currentYOffset)})`;
+                    objs.canvas.style.transform = `translate(-50%, -50%) scale(${calcValue(values.canvas_scale_in_1, currentYOffset)})`;
                 }
 
         }
