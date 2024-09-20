@@ -344,6 +344,7 @@
                     document.body.setAttribute('id', `show-section-${currentSection}`)
                 }
             }
+            break
         }
 
 
