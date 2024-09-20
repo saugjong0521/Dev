@@ -14,7 +14,7 @@
     const sectionInfo = [
         {
             type: 'sticky', // 화면에 보여질 방식
-            heightNum: 2,   // 해당 섹션의 높이를 브라우저의 높이의 5배로 설정함
+            heightNum: 5,   // 해당 섹션의 높이를 브라우저의 높이의 5배로 설정함
             // 고정된 화면에 이미지를 스크롤하기 위해서 여유 스크롤 영역을 만들기 위한 값
             scrollHeight: 0,    // 섹션의 실제 스크롤 높이(이벤트가 들어오면 계산)
             objs: {
@@ -359,118 +359,118 @@
 
         if (newSection) return
         playAnimation();    // 각 섹션에 들어오면 해당 애니메이션이 실행 (스크롤 위치를 계산하는 for문 뒤에 작성)
+    }
 
 
+    //8. requestAnimationFrame을 사용해서 화면을 갱신할때마다 부드럽게 애니메이션을 실행
+    function loop() {
+        delayYOffset = delayYOffset + (yOffset - delayYOffset) * acc;
 
-        //8. requestAnimationFrame을 사용해서 화면을 갱신할때마다 부드럽게 애니메이션을 실행
-        function loop() {
-            delayYOffset = delayYOffset + (yOffset - delayYOffset) * acc;
-
-            // 새로운 섹션에 진입되지 않았다면 애니메이션 효과 적용
-            if (!newSection) {
-                const currentYOffset = delayYOffset - prevScrollHeight;
-                const objs = sectionInfo[currentSection].objs;  // 현재 섹션의 객체
-                const values = sectionInfo[currentSection].values;  //현재 섹션의 효과값 찾기
-            }
-
-            if (delayYOffset < 1) {
-                scrollLoop();
-                // 스크롤 상태 업데이트 시, 섹션 전환처리
-
-                sectionInfo[0].objs.canvas.style.opacity = 1;
-                sectionInfo[0].objs.context.drawImage(sectionInfo[0].objs.videoImages[0], 0, 0)
-            }
-            rafId = requestAnimationFrame(loop)
-            // 스크롤 위치가 지연된 스크롤 위치와 차이가 없으면 애니메이션 중단
-            if (Math.abs(yOffset - delayYOffset) < 1) {
-                cancelAnimationFrame(rafId)
-                rafState = false;   // 애니메이션이 실행중이지 않음 체크
-            }
+        // 새로운 섹션에 진입되지 않았다면 애니메이션 효과 적용
+        if (!newSection) {
+            const currentYOffset = delayYOffset - prevScrollHeight;
+            const objs = sectionInfo[currentSection].objs;  // 현재 섹션의 객체
+            const values = sectionInfo[currentSection].values;  //현재 섹션의 효과값 찾기
         }
 
+        if (delayYOffset < 1) {
+            scrollLoop();
+            // 스크롤 상태 업데이트 시, 섹션 전환처리
 
-        //9 section1의 문자 text 추가
-        function setWords() {
-            const splitWords = sectionInfo[1].objs.container;
-            const content = splitWords.innerText;
-            // console.log(content);
-
-            const words = content.split(/\./)
-            // console.log(words)
-            // 마침표는 특수문자이므로 정규식 \.처럼 이스케이프 처리를 해서 적용 ([\u002E] -> unicode도 가능)
-            // 특수문자를 문자처럼 처리하기 위해서는 이스케이프 처리가 필요
-            // 단순문자 분리에는 '.'로 사용해도 됨
-
-            splitWords.innerHTML = '';
-            words.forEach((el, idx) => {
-                const text = document.createElement('span')
-                text.innerHTML = `${el.trim()}. `;
-                sectionInfo[1].objs.words.push(text);
-                splitWords.appendChild(text);
-            })
+            sectionInfo[0].objs.canvas.style.opacity = 1;
+            sectionInfo[0].objs.context.drawImage(sectionInfo[0].objs.videoImages[0], 0, 0)
         }
+        rafId = requestAnimationFrame(loop)
+        // 스크롤 위치가 지연된 스크롤 위치와 차이가 없으면 애니메이션 중단
+        if (Math.abs(yOffset - delayYOffset) < 1) {
+            cancelAnimationFrame(rafId)
+            rafState = false;   // 애니메이션이 실행중이지 않음 체크
+        }
+    }
+
+
+    //9 section1의 문자 text 추가
+    function setWords() {
+        const splitWords = sectionInfo[1].objs.container;
+        const content = splitWords.innerText;
+        // console.log(content);
+
+        const words = content.split(/\./)
+        // console.log(words)
+        // 마침표는 특수문자이므로 정규식 \.처럼 이스케이프 처리를 해서 적용 ([\u002E] -> unicode도 가능)
+        // 특수문자를 문자처럼 처리하기 위해서는 이스케이프 처리가 필요
+        // 단순문자 분리에는 '.'로 사용해도 됨
+
+        splitWords.innerHTML = '';
+        words.forEach((el, idx) => {
+            const text = document.createElement('span')
+            text.innerHTML = `${el.trim()}. `;
+            sectionInfo[1].objs.words.push(text);
+            splitWords.appendChild(text);
+        })
+    }
 
 
 
 
-        //0. 스크롤 이벤트 시작 및 각 함수를 적용
-        window.addEventListener('load', () => {
-            setLayout();
+    //0. 스크롤 이벤트 시작 및 각 함수를 적용
+    window.addEventListener('load', () => {
+        setLayout();
 
-            setTimeout(() => {
-                sectionInfo[0].objs.context.drawImage(sectionInfo[0].objs.videoImages[0], 0, 0);
-                document.querySelector('.fixed-el-canvas').classList.add('active')
-                document.querySelector('.section-0-title').classList.add('active')
-            }, 100);
+        setTimeout(() => {
+            sectionInfo[0].objs.context.drawImage(sectionInfo[0].objs.videoImages[0], 0, 0);
+            document.querySelector('.fixed-el-canvas').classList.add('active')
+            document.querySelector('.section-0-title').classList.add('active')
+        }, 100);
 
-            //새로고침할 경우, 스크롤값 찾아서 애니메이션 적용
-            let tempYoffset = yOffset;
-            let tempScrollCount = 0;
-            if (tempYoffset > 0) {
-                let item = setInterval(() => {
-                    scrollTo(0, tempYoffset)
-                    tempYoffset += 5
-                    if (tempScrollCount > 20) {
-                        clearInterval(item);
-                    }
-                    tempScrollCount++;
-                }, 20)
-            }
-
-
-            window.addEventListener('scroll', () => {
-                yOffset = window.pageYOffset;   // 스크롤시 위치를 다시 받아옴
-                fixedMenu();
-                scrollLoop();
-
-                if (!rafState) {
-                    rafId = requestAnimationFrame(loop);
-                    rafState = true;
+        //새로고침할 경우, 스크롤값 찾아서 애니메이션 적용
+        let tempYoffset = yOffset;
+        let tempScrollCount = 0;
+        if (tempYoffset > 0) {
+            let item = setInterval(() => {
+                scrollTo(0, tempYoffset)
+                tempYoffset += 5
+                if (tempScrollCount > 20) {
+                    clearInterval(item);
                 }
-            })
-        })
-
-        setCanvasImage();
-        setWords();
-        /*
-        최초 골자
-            window.addEventListener('load', () => {
-            window.addEventListener('scroll', () => {
-                yOffset = window.pageYOffset;   // 스크롤시 위치를 다시 받아옴
-                fixedMenu();
-            })
-        })
-        */
-
-
-        //1. 맨 위 상단메뉴
-        function fixedMenu() {
-            if (yOffset > 1) {
-                document.body.classList.add('nav-fixed')
-            } else {
-                document.body.classList.remove('nav-fixed')
-            }
+                tempScrollCount++;
+            }, 20)
         }
 
 
-    }) ()
+        window.addEventListener('scroll', () => {
+            yOffset = window.pageYOffset;   // 스크롤시 위치를 다시 받아옴
+            fixedMenu();
+            scrollLoop();
+
+            if (!rafState) {
+                rafId = requestAnimationFrame(loop);
+                rafState = true;
+            }
+        })
+    })
+
+    setCanvasImage();
+    setWords();
+    /*
+    최초 골자
+        window.addEventListener('load', () => {
+        window.addEventListener('scroll', () => {
+            yOffset = window.pageYOffset;   // 스크롤시 위치를 다시 받아옴
+            fixedMenu();
+        })
+    })
+    */
+
+
+    //1. 맨 위 상단메뉴
+    function fixedMenu() {
+        if (yOffset > 1) {
+            document.body.classList.add('nav-fixed')
+        } else {
+            document.body.classList.remove('nav-fixed')
+        }
+    }
+
+
+})()
