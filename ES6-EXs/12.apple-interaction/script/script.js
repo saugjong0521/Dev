@@ -56,7 +56,7 @@
 
         {
             type: 'sticky',
-            heightNum: 5,
+            heightNum: 3,
             scrollHeight: 0,
             objs: {
                 container: document.querySelector('#scroll-section-2'),
