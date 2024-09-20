@@ -243,21 +243,7 @@
 
                     objs.context.drawImage(objs.videoImages[sequence2], x, y)
                 }
-                if (sequence2 === 0) {
-                    objs.canvas.style.opacity = calcValue(values.canvas_opacity_in_1, currentYOffset);
-                    objs.canvas.style.transform = `translate(-50%, -50%) scale(${calcValue(values.canvas_scale_in_1, currentYOffset)})`;
-                    console.log('Opacity 1:', objs.canvas.style.opacity);
-                } else if (sequence2 === 1) {
-                    objs.canvas.style.opacity = calcValue(values.canvas_opacity_in_2, currentYOffset);
-                    objs.canvas.style.transform = `translate(-50%, -50%) scale(${calcValue(values.canvas_scale_in_2, currentYOffset)})`;
-                    console.log('Opacity 2:', objs.canvas.style.opacity);
-                } else if (sequence2 === 2) {
-                    objs.canvas.style.opacity = calcValue(values.canvas_opacity_in_3, currentYOffset);
-                    objs.canvas.style.transform = `translate(-50%, -50%) scale(${calcValue(values.canvas_scale_in_3, currentYOffset)})`;
-                    console.log('Opacity 3:', objs.canvas.style.opacity);
-                }
-            
-                break;
+              objs.canvas.style.opacity = 0;
 
         }
     }
