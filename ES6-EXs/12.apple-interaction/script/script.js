@@ -65,7 +65,7 @@
                 videoImages: [], 
             },
             values: {
-                videoImageCount: 3,
+                videoImageCount: 4,
                 imgSequence: [0, 3],    // 이미지의 프레임이기에 0~3
 
                 //첫번째 이미지
@@ -102,7 +102,7 @@
             imgItem.src = `./images/section02/00${i + 1}.jpg`;
             sectionInfo[2].objs.videoImages.push(imgItem)
 
-            // console.log(imgItem.src)
+            console.log(imgItem.src)
         }
     }
 
