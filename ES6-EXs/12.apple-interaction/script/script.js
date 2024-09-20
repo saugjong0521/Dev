@@ -65,7 +65,7 @@
                 videoImages: [], 
             },
             values: {
-                videoImageCount: 4,
+                videoImageCount: 3,
                 imgSequence: [0, 3],    // 이미지의 프레임이기에 0~3
 
                 //첫번째 이미지
