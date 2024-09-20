@@ -102,7 +102,7 @@
             imgItem.src = `./images/section02/00${i + 1}.jpg`;
             sectionInfo[2].objs.videoImages.push(imgItem)
 
-            console.log(imgItem.src)
+            // console.log(imgItem.src)
         }
     }
 
