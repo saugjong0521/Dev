@@ -226,6 +226,11 @@
                 // console.log(sequence2)
 
                 if (objs.videoImages[sequence2]) {
+                    const img = objs.videoImages[sequence2];
+                    const cw = objs.canvas.width;
+                    const ch = objs.canvas.height;
+                    const iw = img.width;
+                    const ih = img.height;
                     objs.context.drawImage(objs.videoImages[sequence2], 500, 0)
                 }
                 if (sequence2 === 0) {
