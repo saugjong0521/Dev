@@ -89,7 +89,7 @@
 
                 //첫번째 텍스트
                 text1_opacity_in: [0, 1, {start: 0.1, end: 0.3}],
-                text1_translateY_in: [ 0, -400, {start: 0.1, end: 0.3}]
+                text1_translateY_in: [ 0, -800, {start: 0.1, end: 0.3}]
 
             }
         }
@@ -265,7 +265,7 @@
                 // section2 text
                 if(scrollRatio <= 0.2){
                     objs.text1.style.opacity = calcValue(values.text1_opacity_in, currentYOffset);
-                    objs.text1.style.transform = `translateY(${calcValue(values.text1_translateY_in, currentYOffset)})`;
+                    objs.text1.style.transform = `translateY(${calcValue(values.text1_translateY_in, currentYOffset)}px)`;
                 }
 
         }
