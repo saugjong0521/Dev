@@ -69,23 +69,31 @@
                 imgSequence: [0, 3],    // 이미지의 프레임이기에 0~3
 
                 //첫번째 이미지
-                canvas_opacity_in_1: [0, 1, {start: 0, end: 0}],
-                canvas_scale_in_1: [1, 0.9, {start: 0.1, end: 0.2}]
+                canvas_opacity_in_1: [0, 1, { start: 0, end: 0 }],
+                canvas_scale_in_1: [1, 0.9, { start: 0.1, end: 0.2 }]
 
-                
+
             }
         }
     ]
 
 
 
-    //3. 캔버스에 적재할 이미지를 로드
+    //3, 11. 캔버스에 적재할 이미지를 로드
     function setCanvasImage() {
         let imgItem;
         for (let i = 0; i < sectionInfo[0].values.videoImageCount; i++) {
             imgItem = new Image();  // 이미지 넣을 공간 생성
             imgItem.src = `./images/section01/00${i + 1}.png`  // 이미지 경로 설정
             sectionInfo[0].objs.videoImages.push(imgItem)
+
+            // console.log(imgItem.src)
+        }
+
+        for (let i = 0; i < sectionInfo[2].values.videoImageCount; i++) {
+            imgItem = new Image();
+            imgItem.src = `./image/section02/00${i + 1}.jpg`;
+            sectionInfo[2].objs.videoImages.push(imgItem)
 
             // console.log(imgItem.src)
         }
