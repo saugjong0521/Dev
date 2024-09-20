@@ -70,8 +70,15 @@
 
                 //첫번째 이미지
                 canvas_opacity_in_1: [1, 0, { start: 0.1, end: 0.2 }],
-                canvas_scale_in_1: [1, 0.9, { start: 0.1, end: 0.2 }]
+                canvas_scale_in_1: [1, 0.9, { start: 0.1, end: 0.2 }],
 
+                //두번째 이미지
+                canvas_opacity_in_2: [1, 0, { start: 0.3, end: 0.4 }],
+                canvas_scale_in_2: [1, 0.9, { start: 0.3, end: 0.4 }],
+
+                //세번째 이미지
+                canvas_opacity_in_3: [1, 0, { start: 0.5, end: 0.6 }],
+                canvas_scale_in_3: [1, 0.9, { start: 0.5, end: 0.6 }],
 
             }
         }
@@ -233,13 +240,22 @@
                     const ih = img.height;
                     const x = (cw - iw) / 2
                     const y = (ch - ih) / 1.2
-                    
+
                     objs.context.drawImage(objs.videoImages[sequence2], x, y)
                 }
                 if (sequence2 === 0) {
                     objs.canvas.style.opacity = calcValue(values.canvas_opacity_in_1, currentYOffset);
                     objs.canvas.style.transform = `translate(-50%, -50%) scale(${calcValue(values.canvas_scale_in_1, currentYOffset)})`;
                 }
+                else if (sequence2 === 1) {
+                    objs.canvas.style.opacity = calcValue(values.canvas_opacity_in_2, currentYOffset);
+                    objs.canvas.style.transform = `translate(-50%, -50%) scale(${calcValue(values.canvas_scale_in_2, currentYOffset)})`;
+                }
+                else if (sequence2 === 2) {
+                    objs.canvas.style.opacity = calcValue(values.canvas_opacity_in_3, currentYOffset);
+                    objs.canvas.style.transform = `translate(-50%, -50%) scale(${calcValue(values.canvas_scale_in_3, currentYOffset)})`;
+                }
+                break;
 
         }
     }
