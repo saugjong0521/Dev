@@ -288,7 +288,8 @@ body {
 #scroll-section-2 .content .section-2-text{
     position: absolute;
     width: 30%;
-    
+    top: 0;
+    left: 0;
 }
 
 #scroll-section-2 .content .section-2-text p{
