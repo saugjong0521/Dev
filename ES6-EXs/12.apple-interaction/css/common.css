@@ -285,9 +285,9 @@ body {
     transform: scale(1);
 }
 
-#scroll-section-2 .content .section-2-text left{
-    position: absolute;
-    width: 20%;
+#scroll-section-2 .content .section-2-text {
+    width: 15%;
+    max-width: 300px;
     top: 50%;
     left: 30%;
 }
