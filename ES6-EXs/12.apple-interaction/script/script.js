@@ -262,6 +262,11 @@
                     objs.canvas.style.opacity = calcValue(opacityValue, currentYOffset);
                     objs.canvas.style.transform = `translate(-50%, -50%) scale(${calcValue(scaleValue, currentYOffset)})`;
                 }
+                // section2 text
+                if(scrollRatio <= 0.2){
+                    objs.text1.style.opacity = calcValue(values.text1_opacity_in, currentYOffset);
+                    objs.text1.style.transform = `translateY(${calcValue(values.text1_translateY_in, currentYOffset)})`;
+                }
 
         }
     }
