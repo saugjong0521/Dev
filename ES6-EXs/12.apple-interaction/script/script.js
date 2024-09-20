@@ -62,7 +62,7 @@
                 container: document.querySelector('#scroll-section-2'),
                 canvas: document.querySelector('#video-canvas-1'),
                 context: document.querySelector('#video-canvas-1').getContext('2d'),
-                videoImages: [], 
+                videoImages: [],
             },
             values: {
                 videoImageCount: 3,
@@ -243,18 +243,20 @@
 
                     objs.context.drawImage(objs.videoImages[sequence2], x, y)
                 }
-              objs.canvas.style.opacity = 0;
+                objs.canvas.style.opacity = 0;
 
-              const opacityValue = values[`canvas_opacity_in_${sequence2 + 1}`];
-              const scaleValue = values[`canvas_scale_in_${sequence2 + 1}`];
-              if(opacityValue && scaleValue){
-                objs.canvas.style.opacity = calcValue(opacityValue, currentYOffset);
-                objs.canvas.style.transform = `translate(-50%, -50%) scale(${calcValue(scaleValue, currentYOffset)})`;
-              }
+                const opacityValue = values[`canvas_opacity_in_${sequence2 + 1}`];
+                const scaleValue = values[`canvas_scale_in_${sequence2 + 1}`];
+                if (opacityValue && scaleValue) {
+                    objs.canvas.style.opacity = calcValue(opacityValue, currentYOffset);
+                    objs.canvas.style.transform = `translate(-50%, -50%) scale(${calcValue(scaleValue, currentYOffset)})`;
+                }
 
         }
     }
 
+
+    /*
     //7. 페이지를 스크롤할때, 현재 섹션을 체크해서, 새로운 섹션이 시작되었는지와 끝났는지를 판단하여 무한으로 적용되도록 함
     function scrollLoop() {
         newSection = false; // 새로운 섹션에 진입했는지 여부 (진입 시, true를 반환하도록 함)
@@ -323,6 +325,29 @@
         //     document.body.setAttribute('id', `show-section-${currentSection}`)
 
         // }
+    }
+*/
+
+
+    //7-1. scrollLoop 개선
+
+    function scrollLoop() {
+        newSection = false;
+        prevScrollHeight = 0;
+
+        for(let i = 0; i < sectionInfo.length; i++){
+            prevscrollHeight += sectionInfo[i].scrollHeight;
+            if(prevScrollHeight >= yOffset){
+                if(currentSection !== i){
+                    currentSection = i;
+                    newSection = true;
+                    document.body.setAttribute('id', `show-section-${currentSection}`)
+                }
+            }
+        }
+
+
+
     }
 
 
@@ -413,7 +438,7 @@
             }
         })
     })
-    
+
     setCanvasImage();
     setWords();
     /*
