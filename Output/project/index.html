@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT 채팅 앱</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>GPT 채팅 앱</h1>
+
+    <!-- 번역할 언어 선택 -->
+    <div>
+        <label for="language">번역할 언어:</label>
+        <select id="language">
+            <option value="English">영어</option>
+            <option value="Japanese">일본어</option>
+            <option value="Chinese">중국어</option>
+            <option value="Korean">한국어</option>
+        </select>
+    </div>
+    
+    <!-- 문체 선택 입력 -->
+    <div>
+        <label for="tone">문체를 입력하세요 (ex. formal, casual):</label>
+        <input type="text" id="tone" placeholder="문체를 입력하세요">
+    </div>
+
+    <!-- 채팅창 구분 (입력된 언어와 번역된 언어) -->
+    <div style="display: flex;">
+        <!-- 입력된 언어 출력 -->
+        <div id="original-box" style="border:1px solid #ccc; width: 50%; height: 300px; overflow-y: scroll; margin-right: 10px;">
+            <h3>입력된 메시지</h3>
+        </div>
+
+        <!-- 번역된 언어 출력 -->
+        <div id="translated-box" style="border:1px solid #ccc; width: 50%; height: 300px; overflow-y: scroll;">
+            <h3>번역된 메시지</h3>
+        </div>
+    </div>
+
+    <!-- 메시지 입력 및 전송 -->
+    <input type="text" id="message" placeholder="메시지를 입력하세요" style="width: 300px;">
+    
+    <script>
+        var socket = io();
+        var user_id = null;
+
+        // 고유 ID 받기
+        socket.on('user_id', function(data) {
+            user_id = data.user_id;
+            console.log("User ID assigned: " + user_id);
+        });
+
+        // 메시지 전송 (엔터 키로 전송)
+        $('#message').keypress(function(e) {
+            if (e.which == 13) {
+                var message = $('#message').val();
+                var language = $('#language').val();
+                var tone = $('#tone').val();
+                
+                // 서버로 메시지 전송
+                socket.emit('send_message', {
+                    'user_id': user_id,
+                    'message': message,
+                    'language': language,
+                    'tone': tone
+                });
+                
+                $('#message').val('');  // 메시지 입력 후 초기화
+            }
+        });
+
+        // 서버에서 메시지 수신
+        socket.on('receive_message', function(data) {
+            var originalMessage = data.message.split(' | ')[0];  // 보낸 메시지
+            var translatedMessage = data.message.split(' | ')[1];  // 번역된 메시지
+
+            // 입력된 언어 출력 창에 메시지 추가
+            $('#original-box').append('<p>[' + data.user_id + '] ' + originalMessage + '</p>');
+
+            // 번역된 언어 출력 창에 메시지 추가
+            $('#translated-box').append('<p>[' + data.user_id + '] ' + translatedMessage + '</p>');
+
+            // 각각의 창을 최신 메시지로 스크롤
+            $('#original-box').scrollTop($('#original-box')[0].scrollHeight);
+            $('#translated-box').scrollTop($('#translated-box')[0].scrollHeight);
+        });
+    </script>
+</body>
+</html>
