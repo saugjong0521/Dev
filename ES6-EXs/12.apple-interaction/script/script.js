@@ -229,7 +229,7 @@
 
             case 2:
                 objs.context.clearRect(0, 0, objs.canvas.width, objs.canvas.height);
-                let sequence2 = Math.round(calcValue([0, values.videoImageCount], currentYOffset))
+                let sequence2 = Math.floor(calcValue([0, values.videoImageCount -1], currentYOffset))
                 // console.log(sequence2)
 
                 if (objs.videoImages[sequence2]) {
