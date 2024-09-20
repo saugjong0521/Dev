@@ -92,7 +92,7 @@
 
         for (let i = 0; i < sectionInfo[2].values.videoImageCount; i++) {
             imgItem = new Image();
-            imgItem.src = `./image/section02/00${i + 1}.jpg`;
+            imgItem.src = `./images/section02/00${i + 1}.jpg`;
             sectionInfo[2].objs.videoImages.push(imgItem)
 
             // console.log(imgItem.src)
