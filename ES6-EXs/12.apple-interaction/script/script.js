@@ -341,7 +341,7 @@
         // console.log(triggerPoint)
 
         for (let i = 0; i < currentSection.length; i++) {   // 현재 섹션 이전의 모든 섹션의 스크롤 높이를 더해서, 현재 스크롤 위치를 계산
-            // prevScrollHeight += sectionInfo[i].scrollHeight;    
+            prevScrollHeight += sectionInfo[i].scrollHeight;    
             
             const section = sectionInfo[i];
             const sectionTop = prevScrollHeight;
