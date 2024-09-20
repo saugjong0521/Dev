@@ -296,10 +296,11 @@ body {
     font-size: 20px;
 }
 
-#scroll-section-2 .content .section-2-text .left{
+#scroll-section-2 .content .section-2-text.left{
     left: 30%;
 }
 
-#scroll-section-2 .content .section-2-text .right{
+#scroll-section-2 .content .section-2-text.right{
     right: 30%;
+    left: auto;
 }
