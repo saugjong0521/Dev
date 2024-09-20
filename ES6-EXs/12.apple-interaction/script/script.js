@@ -222,10 +222,16 @@
 
             case 2:
                 objs.context.clearRect(0, 0, objs.canvas.width, objs.canvas.height);
-                let sequence2 = Math.round(calcValue([0, values.videoImageCount -1 ], currentYOffset))
+                let sequence2 = Math.round(calcValue([0, values.videoImageCount - 1], currentYOffset))
                 // console.log(sequence2)
 
-                
+                if (objs.videoImages[sequence2]) {
+                    objs.context.drawImage(objs.videoImages[sequence2], 0, 0)
+                }
+                if (sequence2 === 0) {
+                    objs.canvas.style.opacity = calcValue(values.canvas_opacity_in_1, currentYOffset);
+                    objs.canvas.style.transform = `scale(${calcValue(values.canvas_scale_in_1, currentYOffset)})`;
+                }
 
         }
     }
