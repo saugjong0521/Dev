@@ -67,6 +67,12 @@
             values: {
                 videoImageCount: 3,
                 imgSequence: [0, 3],    // 이미지의 프레임이기에 0~3
+
+                //첫번째 이미지
+                canvas_opacity_in_1: [0, 1, {start: 0, end: 0}],
+                canvas_scale_in_1: [1, 0.9, {start: 0.1, end: 0.2}]
+
+                
             }
         }
     ]
