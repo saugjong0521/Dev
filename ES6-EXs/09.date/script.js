@@ -23,7 +23,7 @@ function formData() {
 
         const wrapper = document.createElement('div');
         wrapper.className = 'select';   // 새로 생성된 
-        // console.log(wrapper)
+        console.log(wrapper)
 
         el.parentNode.insertBefore(wrapper, el)
         wrapper.appendChild(el);
@@ -35,6 +35,9 @@ function formData() {
         wrapper.appendChild(styledSelect)
         // console.log(styledSelect)
 
+
+
+        
         const list = document.createElement('ul');
         list.className = 'select-options';
         wrapper.appendChild(list);

@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 모바일 최적화 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="/Output/Translate_Chat_App-main/style/reset.css">
-    <script src="../script/changeListStyle.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -27,7 +25,6 @@
             margin-bottom: 20px;
             font-size: 1.5em;
             /* 모바일 환경에 적합한 폰트 크기 */
-            font-weight: 700;
         }
 
         .chat-container {
@@ -41,50 +38,25 @@
 
         .settings {
             display: flex;
+            justify-content: space-between;
             margin-bottom: 20px;
-        }
-
-        .settings div {
-            display: inline-block;
-        }
-
-        .settings .tone-box {
-            margin-left: 10px;
-            margin-right: auto;
-        }
-
-        .settings .user_id-box {
-            margin-left: auto;
         }
 
         label {
             font-weight: bold;
-            margin-right: 5px;
-            font-size: 14px;
+            margin-right: 10px;
         }
 
-        select {
-            padding: 8px;
-            font-size: 12px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-            width: 100%;
-            max-width: 100px;
-            box-sizing: border-box;
-            margin-top: 5px;
-            width: 20vh;
-        }
-
+        select,
         input[type="text"] {
             padding: 8px;
             font-size: 12px;
             border-radius: 4px;
             border: 1px solid #ccc;
             width: 100%;
-            max-width: 150px;
+            /* 모바일에서 넓이 조정 */
             box-sizing: border-box;
             margin-top: 5px;
-            width: 20vh;
         }
 
         .chat-box {
@@ -131,29 +103,19 @@
         .input-container {
             display: flex;
             margin-top: 20px;
-            width: 100%;
-            justify-content: space-between;
-        }
-
-        .input-container form {
-            display: inline-block;
-            width: 100%;
+            justify-content: center;
         }
 
         #message {
-            display: flex;
             width: 100%;
             padding: 12px;
             font-size: 14px;
             border: 1px solid #ccc;
-            font-family: Arial, sans-serif;
             border-radius: 4px;
-            resize: none;
             box-sizing: border-box;
         }
 
         button {
-            display: inline-block;
             background-color: #4CAF50;
             color: white;
             padding: 12px 20px;
@@ -162,97 +124,10 @@
             border-radius: 4px;
             cursor: pointer;
             font-size: 14px;
-            align-items: center;
         }
 
         button:hover {
-            background-color: #4f9653;
-        }
-
-        /*hidden 처리 속성*/
-        .hidden {
-            display: none;
-            visibility: hidden;
-        }
-
-        .list {
-            cursor: pointer;
-            position: relative;
-            font-size: 12px;
-            font-weight: 500;
-            user-select: none;
-        }
-
-        .newList-style {
-            padding: 8px;
-            font-size: 12px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-            width: 100%;
-            max-width: 150px;
-            box-sizing: border-box;
-            margin-top: 5px;
-            width: 20vh;
-        }
-
-        .newList-option {
-            position: absolute;
-            top: 100%;
-            right: 0;
-            left: 0;
-            z-index: 999;
-            display: none;
-            margin-top: 10px;
-            padding: 5px 0px;
-            list-style: none;
-            border-radius: 4px;
-            background-color: #fff;
-            box-shadow: 0 10px 16px rgba(133, 184, 113, 0.5);
-        }
-
-        .newList-option li {
-            margin: 0;
-            padding: 8px 15px;
-            transition: all 0.15s;
-            color: #333333;
-        }
-
-        .newList-style.active {
-            background-color: #5cb986;
-            color: #fff;
-            box-shadow: 0px 0px 0 3px rgba(71, 194, 40, 0.5);
-        }
-
-        .newList-style:hover {
-            background-color: #5cb986;
-            color: #fff;
-        }
-
-        /*aside 접속유저*/
-        aside {
-            position: absolute;
-            right: 5%;
-            top: 5%;
-        }
-
-        aside div {
-            border: 1px solid #ccc;
-            padding: 2px;
-            background-color: #fff;
-            font-size: 10px;
-            width: 120px;
-            height: 50px;
-            border-radius: 5px;
-            max-height: 50px;
-            overflow-y: auto;
-            line-height: 1.2;
-            text-align: center;
-        }
-
-
-        /* 모바일용 접속 유저*/
-        #user-list-container-mobile {
-            display: none;
+            background-color: #45a049;
         }
 
         /* 모바일 화면을 위한 반응형 처리 */
@@ -264,28 +139,13 @@
 
             h1 {
                 font-size: 1.2em;
-                font-weight: 700;
                 /* 작은 화면에서 폰트 크기 조정 */
             }
 
             .settings {
-                display: inline-block;
                 flex-direction: column;
                 /* 설정 부분을 세로로 배치 */
                 gap: 10px;
-                width: 50%;
-            }
-
-            .settings .user_id-box,
-            .settings .tone-box,
-            .settings .language-box {
-                margin-left: 10px;
-                width: 100%;
-            }
-
-            label {
-                display: inline-block;
-                width: 20%;
             }
 
             .chat-box {
@@ -301,101 +161,57 @@
                 /* 높이를 조정 */
             }
 
-            label {
-                font-size: 13px;
-            }
-
             select,
             input[type="text"],
-            textarea,
             #message {
                 font-size: 12px;
                 /* 폰트 크기를 더 작게 조정 */
             }
 
             button {
-                padding: 8px 12px;
                 font-size: 12px;
                 /* 버튼 폰트 크기 조정 */
             }
-
-
-            aside {
-                display: none;
-            }
-
-            #user-list-container-mobile {
-                display: inline-block;
-                margin-left: 10px;
-            }
-
-            .user-list-mobile {
-                border: 1px solid #ccc;
-                padding: 2px;
-                background-color: #fff;
-                font-size: 10px;
-                width: 120px;
-                height: 70px;
-                max-height: 70px;
-                border-radius: 5px;
-                overflow-y: auto;
-                line-height: 1.2;
-                text-align: center;
-            }
-
-
-
-
-
         }
     </style>
-
-
-
 </head>
 
 <body>
-
     <div class="chat-container">
         <h1>Translate Chat Webapp</h1>
 
-        <!-- 번역할 언어 선택 및 문체 입력 -->
+        <div id="user-list-container">
+            <h3 style="font-size: 12px; margin-bottom: 5px;">Connected Users</h3>
+            <div id="user-list"
+                style="border: 1px solid #ccc;
+                       padding: 2px;
+                       background-color: #fafafa;
+                       font-size: 10px; /* 폰트 크기를 줄임 */
+                       width: 120px; /* 최대 넓이 설정 */
+                       border-radius: 5px;
+                       max-height: 50px; /* 최대 높이 설정 */
+                       overflow-y: auto; /* 스크롤 활성화 */
+                       line-height: 1.2; /* 줄 간격을 줄여 컴팩트하게 */
+                       text-align: center;">  <!-- 텍스트 가운데 정렬 -->
+            </div>
+        </div>
 
+        <!-- 번역할 언어 선택 및 문체 입력 -->
         <div class="settings">
-            <div class="language-box">
+            <div>
                 <label for="language">Language:</label>
-                <select id="language" class="list" name="language">
+                <select id="language">
                     <option value="English">English</option>
                     <option value="Japanese">Japanese</option>
                     <option value="Chinese">Chinese</option>
                     <option value="Korean">Korean</option>
                 </select>
             </div>
-
-
-            <div class="tone-box">
-                <label for="tone">Tone:</label>
-                <input type="text" id="tone" class="list" name="tone" placeholder="ex: formal, casual">
-                </select>
+            <div>
+                <label for="tone">tone:</label>
+                <input type="text" id="tone" placeholder="ex) formal, casual">
             </div>
-
-            <!-- <div class="user_id-box">
-                <label for="user_id">NickName:</label>
-                <input type="text" id="user_id" placeholder="type your nickname">
-            </div> -->
         </div>
-
-        <div id="user-list-container-mobile">
-            <p style="font-size: 13px; margin-bottom: 5px; font-weight: bold;">Connected Users</h3>
-            <div class="user-list user-list-mobile"></div>
-        </div>
-
-        <aside id="user-list-container-web">
-            <h3 style="font-size: 12px; margin-bottom: 5px;">Connected Users</h3>
-            <div class="user-list user-list-web"></div>
-        </aside>
-
-
 
         <!-- 채팅창 구분 (입력된 언어와 번역된 언어) -->
         <div class="chat-box">
@@ -408,20 +224,17 @@
             <div id="translated-box">
                 <h3>translated</h3>
             </div>
-
         </div>
 
         <!-- 메시지 입력 및 전송 -->
         <div class="input-container">
-            <form>
-                <textarea rows="3" id="message" placeholder="Please enter a message."></textarea>
-            </form>
+            <input type="text" id="message" placeholder="Please enter a message.">
             <button id="send">SEND</button>
         </div>
     </div>
 
     <script>
-        var socket = io();
+        var socket = io('http://localhost:5000');
         var user_id = null;
 
         // 4자리 ID 받기
@@ -433,12 +246,11 @@
         // 접속한 유저 목록 업데이트
         socket.on('update_user_list', function (users) {
             //console.log("User list updated:", users);  // 콘솔에 유저 목록 출력
-            $('.user-list').empty();
+            $('#user-list').empty();
             users.forEach(function (user) {
-                $('.user-list').append('<p>User_' + user + '</p>');
+                $('#user-list').append('<p>User_' + user + '</p>');
             });
         });
-
 
         // 유저별로 색상을 저장할 객체
         var userColors = {};
@@ -462,9 +274,7 @@
         });
 
         $('#message').keypress(function (e) {
-            // 엔터 키를 누를 때만 메시지를 전송
-            if (e.which == 13 && !e.shiftKey) {
-                e.preventDefault(); // 기본 Enter 동작 막기
+            if (e.which == 13) {
                 sendMessage();
             }
         });
