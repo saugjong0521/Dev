@@ -1,6 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 
+/*
+hook
+컴포넌트에서 상태(state)와 생명주기(lifecycle)의 기능을 사용할 수 있게 하는 요소
+
+
+
+*/
+
+
 function App() {
   return (
     <div className="App">
