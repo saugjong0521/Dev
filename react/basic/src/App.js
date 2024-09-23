@@ -78,6 +78,10 @@ jsx문법 규칙
 function user(userState){
   if(userState === 'admin'){
     return <p>admin</p>
+  } else if(userState === 'user'){
+    return <p>user</p>
+  } else {
+    return <p>guest</p>
   }
 }
 
