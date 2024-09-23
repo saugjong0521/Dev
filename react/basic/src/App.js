@@ -91,6 +91,7 @@ function App() {
       <p style={{width:'100px', height:"100px", backgroundColor:"pink"}}>리액트 스타일 기초</p>
       <p style={textStyle}>리액트 스타일 객체형태</p>
       <p style={textStyle}>{name}</p>
+      {name === 'park' ? <p>yes</p> : <p>no</p> }
     </>
   );
 }
