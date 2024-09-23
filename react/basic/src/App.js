@@ -105,7 +105,7 @@ function App() {
       {name === '김성종' && <p>{name}</p>}{/* &&조건문으로 텍스트 출력 */}
       {/* 주석은 {}로 감싸서 작성 */}
       {user(userState)}{/*if문을 직접적으로 작성할 수 없으므로 함수로 if문을 작성 후 출력 */}
-      {userStete === 'admin' ? (
+      {userState === 'admin' ? (
         <p>admin State</p>
         ) : userState === 'user' ? (
           <p>user State</p>
@@ -113,6 +113,8 @@ function App() {
           <p>guset State</p>
         )}
         {/* 연속 삼항 연산자의 경우 내부에서 작성할 수 있다는 장점이 있지만 코드가 복잡해지고 관리가 어려워지는 단점 때문에 함수로 따로 관리하는 편 */}
+        
+        <div className='bpx'>class는 자바스크립트 약속어이기 때문에 구분을 위해 className으로 변경</div>
     </>
   );
 }
