@@ -105,6 +105,13 @@ function App() {
       {name === '김성종' && <p>{name}</p>}{/* &&조건문으로 텍스트 출력 */}
       {/* 주석은 {}로 감싸서 작성 */}
       {user(userState)}{/*if문을 직접적으로 작성할 수 없으므로 함수로 if문을 작성 후 출력 */}
+      {userStete === 'admin' ? (
+        <p>admin State</p>
+        ) : userState === 'user' ? (
+          <p>user State</p>
+        ) : (
+          <p>guset State</p>
+        )}
     </>
   );
 }
