@@ -66,27 +66,20 @@ jsx문법 규칙
   - 인라인 방식으로 적용할 때에는 style={{속성: 값}}으로 작성
   - 오브젝트 전달
   - 기타 모듈을 사용하는 방법 (scss, styled-component, tailwind)
+9. 컴포넌트 파일명은 반드시 대문자로 시작할 것(약속)
+
+*네이밍 규칙
+모든 네이밍은 카멜기법을 기준
+  - 디렉터리 폴더명은 소문자
+  - 파일명은 대문자(컴포넌트 파일만)
+  - 의미론적인 네이밍(이름이 길어져도 상관없음)
 
 */
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    </>
   );
 }
 
