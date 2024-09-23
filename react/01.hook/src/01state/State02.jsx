@@ -1,0 +1,13 @@
+import { useState } from "react";
+import ChildState from "./components/ChildState";
+
+export default function State02(){
+    const [name,setName]= useState('park')
+    
+    return(
+        <>
+            <ChildState nameToss={name}/>
+            <button onClick={()=>setName('kim')}>클릭!</button>
+        </>
+    )
+}

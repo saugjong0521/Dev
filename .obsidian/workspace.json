@@ -140,6 +140,7 @@
   },
   "active": "1ef3909417067646",
   "lastOpenFiles": [
+    "react/hook/01state/State.jsx",
     "react/hook/src/index.css",
     "react/hook/src/setupTests.js",
     "react/hook/src/reportWebVitals.js",
@@ -151,7 +152,6 @@
     "react/hook/src",
     "react/hook/01state",
     "react/hook/node_modules/@babel/helper-create-regexp-features-plugin/node_modules",
-    "react/hook/node_modules/@babel/helper-create-class-features-plugin/node_modules",
     "react/hook/node_modules/@jest/types/node_modules/@types/yargs/README.md",
     "react/hook/node_modules/@types/testing-library__jest-dom/README.md",
     "react/hook/node_modules/@types/react-dom/README.md",
