@@ -140,6 +140,13 @@
   },
   "active": "1ef3909417067646",
   "lastOpenFiles": [
+    "react/basic/public/robots.txt",
+    "react/basic/public/manifest.json",
+    "react/basic/public/logo512.png",
+    "react/basic/public/logo192.png",
+    "react/basic/public/index.html",
+    "react/basic/public/favicon.ico",
+    "react/basic/public",
     "react/basic/src/setupTests.js",
     "react/basic/src/reportWebVitals.js",
     "react/basic/src/logo.svg",
@@ -147,12 +154,7 @@
     "react/basic/src/index.js",
     "react/basic/src/App.test.js",
     "react/basic/src/App.js",
-    "react/basic/src/App.css",
-    "react/basic/src",
-    "react/basic/yarn.lock",
     "react/basic/node_modules/make-dir/readme.md",
-    "react/basic/node_modules/make-dir/license",
-    "react/basic/node_modules/make-dir/node_modules",
     "react/basic/node_modules/flat-cache/README.md",
     "react/basic/node_modules/flat-cache/changelog.md",
     "react/basic/node_modules/espree/README.md",
@@ -183,8 +185,6 @@
     "react/basic/node_modules/serve-index/public/icons/page_white_picture.png",
     "react/basic/node_modules/istanbul-reports/lib/html-spa/assets/sort-arrow-sprite.png",
     "react/basic/node_modules/istanbul-reports/lib/html/assets/sort-arrow-sprite.png",
-    "react/basic/node_modules/istanbul-reports/lib/html/assets/favicon.png",
-    "react/basic/node_modules/renderkid/docs/images/usage.png",
-    "react/basic/node_modules/renderkid/docs/images/display.png"
+    "react/basic/node_modules/istanbul-reports/lib/html/assets/favicon.png"
   ]
 }
