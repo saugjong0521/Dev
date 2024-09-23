@@ -140,19 +140,20 @@
   },
   "active": "1ef3909417067646",
   "lastOpenFiles": [
+    "react/basic/src/setupTests.js",
+    "react/basic/src/reportWebVitals.js",
+    "react/basic/src/logo.svg",
+    "react/basic/src/index.css",
+    "react/basic/src/index.js",
+    "react/basic/src/App.test.js",
+    "react/basic/src/App.js",
+    "react/basic/src/App.css",
+    "react/basic/src",
     "react/basic/yarn.lock",
     "react/basic/node_modules/make-dir/readme.md",
     "react/basic/node_modules/make-dir/license",
     "react/basic/node_modules/make-dir/node_modules",
-    "react/basic/node_modules/make-dir/package.json",
-    "react/basic/node_modules/make-dir/index.js",
-    "react/basic/node_modules/make-dir/index.d.ts",
-    "react/basic/node_modules/make-dir",
-    "react/basic/node_modules/flat-cache/src/utils.js",
-    "react/basic/node_modules/flat-cache/src/del.js",
-    "react/basic/node_modules/flat-cache/src/cache.js",
     "react/basic/node_modules/flat-cache/README.md",
-    "react/basic/node_modules/flat-cache/src",
     "react/basic/node_modules/flat-cache/changelog.md",
     "react/basic/node_modules/espree/README.md",
     "react/basic/node_modules/escodegen/node_modules/optionator/README.md",
@@ -184,7 +185,6 @@
     "react/basic/node_modules/istanbul-reports/lib/html/assets/sort-arrow-sprite.png",
     "react/basic/node_modules/istanbul-reports/lib/html/assets/favicon.png",
     "react/basic/node_modules/renderkid/docs/images/usage.png",
-    "react/basic/node_modules/renderkid/docs/images/display.png",
-    "react/basic/node_modules/renderkid/docs/images/bullets-1.png"
+    "react/basic/node_modules/renderkid/docs/images/display.png"
   ]
 }
