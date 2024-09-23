@@ -140,6 +140,8 @@
   },
   "active": "1ef3909417067646",
   "lastOpenFiles": [
+    "react/hook/package.json",
+    "react/hook",
     "react/basic/node_modules/html-entities/package.json",
     "react/basic/node_modules/postcss-loader/package.json",
     "react/basic/node_modules/webpack/package.json",
@@ -151,8 +153,6 @@
     "react/basic/public/logo192.png",
     "react/basic/public/index.html",
     "react/basic/public/favicon.ico",
-    "react/basic/public",
-    "react/basic/src/setupTests.js",
     "react/basic/src/logo.svg",
     "react/basic/node_modules/make-dir/readme.md",
     "react/basic/node_modules/flat-cache/README.md",
