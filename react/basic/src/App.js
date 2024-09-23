@@ -92,6 +92,7 @@ function App() {
       <p style={textStyle}>리액트 스타일 객체형태</p>
       <p style={textStyle}>{name}</p>
       {name === 'park' ? <p>yes</p> : <p>no</p> }
+      {name === '김성종' && <p>{name}</p>}
     </>
   );
 }
