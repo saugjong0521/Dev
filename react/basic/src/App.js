@@ -79,6 +79,7 @@ jsx문법 규칙
 function App() {
   return (
     <>
+      <p style={{width:'100px', height:"100px", backgroundColor:"pink"}}>리액트 스타일 기초</p>
     </>
   );
 }
