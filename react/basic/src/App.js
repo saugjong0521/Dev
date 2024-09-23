@@ -75,6 +75,11 @@ jsx문법 규칙
   - 의미론적인 네이밍(이름이 길어져도 상관없음)
 
 */
+function user(userState){
+  if(userState === 'admin'){
+    return <p>admin</p>
+  }
+}
 
 function App() {
 
@@ -85,14 +90,17 @@ function App() {
   }
 
   const name = '김성종';
+  const userState = 'aaa'
 
   return (
     <>
       <p style={{width:'100px', height:"100px", backgroundColor:"pink"}}>리액트 스타일 기초</p>
       <p style={textStyle}>리액트 스타일 객체형태</p>
-      <p style={textStyle}>{name}</p>
-      {name === 'park' ? <p>yes</p> : <p>no</p> }
-      {name === '김성종' && <p>{name}</p>}
+      <p style={textStyle}>{name}</p>{/* 변수 불러오기 */}
+      {name === 'park' ? <p>yes</p> : <p>no</p> }{/* 삼항 연산자로 저건에 따라 다른 텍스트로 출력 */}
+      {name === '김성종' && <p>{name}</p>}{/* &&조건문으로 텍스트 출력 */}
+      {/* 주석은 {}로 감싸서 작성 */}
+      {user(userState)}{/*if문을 직접적으로 작성할 수 없으므로 함수로 if문을 작성 후 출력 */}
     </>
   );
 }
