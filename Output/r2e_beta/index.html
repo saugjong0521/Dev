@@ -3,6 +3,10 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="robots" content="noindex, nofollow" />
+    <meta http-equiv="Expires" content="0">
     <title>Referrer Reward Check</title>
     <!-- Papa Parse library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
@@ -77,6 +81,20 @@
         .copy-button:hover {
             background-color: #218838;
         }
+
+        .reward-date{
+            display: none;
+            font-size: 12px;
+            width: 90%;
+            max-width: 600px;
+            text-align: right;
+            margin-top: 5px;
+        }
+
+        .display-reward{
+            display: block;
+        }
+
     </style>
 </head>
 <body>
@@ -94,6 +112,7 @@
     <div class="output-container">
         <div id="output"></div>
     </div>
+    <p class="reward-date">Next Payment: 9/25</p>
     <script src="r2e.js?v=1.0.1"></script>
     <script>
         function copyAddress() {
