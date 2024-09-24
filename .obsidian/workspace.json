@@ -138,8 +138,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1ef3909417067646",
+  "active": "d5d31f538f436ad8",
   "lastOpenFiles": [
+    "react/package-lock.json",
     "react/hook/src/01state/components/ChildState.jsx",
     "react/hook/src/01state/State02.jsx",
     "react/hook/src/01state/State.jsx",
@@ -151,7 +152,6 @@
     "react/hook/src/App.js",
     "react/hook/src/index.css",
     "react/hook/src/App.test.js",
-    "react/hook/src/App.css",
     "react/hook/public/logo512.png",
     "react/hook/public/logo192.png",
     "react/00.basic/src/logo.svg",
