@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "e4ed4fd02d018594",
+        "id": "28e8f6c1371a9e0a",
         "type": "tabs",
         "children": [
           {
-            "id": "1ef3909417067646",
+            "id": "aee061683b861852",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "conflict-files-obsidian-git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "conflict-files-obsidian-git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "conflict-files-obsidian-git.md"
+              }
             }
           }
         ]
@@ -138,8 +146,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1ef3909417067646",
+  "active": "aee061683b861852",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
+    "react/01.hook/src/01state/State.jsx",
+    "react/01.hook/src/01state",
     "react/01.hook/src/setupTests.js",
     "react/01.hook/src/logo.svg",
     "react/01.hook/src/reportWebVitals.js",
@@ -149,11 +160,8 @@
     "react/01.hook/src/App.js",
     "react/01.hook/src/App.css",
     "react/01.hook/public/manifest.json",
-    "react/01.hook/public/robots.txt",
     "react/01.hook/public/logo512.png",
     "react/01.hook/public/logo192.png",
-    "react/01.hook/public/index.html",
-    "react/01.hook/public/favicon.ico",
     "react/01.hook/README.md",
     "react/hook/src/logo.svg",
     "react/hook/public/logo512.png",
@@ -165,7 +173,6 @@
     "react/00.basic/README.md",
     "ES6-EXs/12.apple-interaction/images/section02/bg.jpg",
     "Untitled.md",
-    "conflict-files-obsidian-git.md",
     "JS/14.swiper/Swiper 구조.md",
     "Output/KUSD_S3/node_modules/send/node_modules/ms/readme.md",
     "Output/KUSD_S3/node_modules/send/node_modules/ms/license.md",
