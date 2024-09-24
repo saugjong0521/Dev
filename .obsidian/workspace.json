@@ -140,6 +140,8 @@
   },
   "active": "d5d31f538f436ad8",
   "lastOpenFiles": [
+    "react/01.hook/package.json",
+    "react/01.hook",
     "react/package.json",
     "react/package-lock.json",
     "react/hook/src/01state/components/ChildState.jsx",
@@ -150,8 +152,6 @@
     "react/hook/src/reportWebVitals.js",
     "react/hook/src/logo.svg",
     "react/hook/src/index.js",
-    "react/hook/src/App.js",
-    "react/hook/src/index.css",
     "react/hook/public/logo512.png",
     "react/hook/public/logo192.png",
     "react/00.basic/src/logo.svg",
