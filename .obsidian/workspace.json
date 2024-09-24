@@ -140,6 +140,7 @@
   },
   "active": "1ef3909417067646",
   "lastOpenFiles": [
+    "react/package.json",
     "react/package-lock.json",
     "react/hook/src/01state/components/ChildState.jsx",
     "react/hook/src/01state/State02.jsx",
@@ -151,7 +152,6 @@
     "react/hook/src/index.js",
     "react/hook/src/App.js",
     "react/hook/src/index.css",
-    "react/hook/src/App.test.js",
     "react/hook/public/logo512.png",
     "react/hook/public/logo192.png",
     "react/00.basic/src/logo.svg",
