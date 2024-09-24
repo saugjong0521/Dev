@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 export default function State() {
     const [name, setName] = useState('홍길동');
     console.log(name)
