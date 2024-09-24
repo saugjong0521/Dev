@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "28e8f6c1371a9e0a",
+        "id": "a09c1ba476af8ad5",
         "type": "tabs",
         "children": [
           {
-            "id": "aee061683b861852",
+            "id": "b4822f9f6f1b2f27",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "conflict-files-obsidian-git.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "conflict-files-obsidian-git.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,7 +138,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "aee061683b861852",
+  "active": "b4822f9f6f1b2f27",
   "lastOpenFiles": [
     "conflict-files-obsidian-git.md",
     "react/01.hook/src/01state/State.jsx",
