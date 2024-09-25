@@ -1,8 +1,4 @@
 
-
-
-export default function Effect() {
-
     /*
     
     useEffect()
@@ -46,6 +42,12 @@ export default function Effect() {
 
     
     */
+
+import { useState } from "react"
+
+
+export default function Effect() {
+
 
     const [num, setNum] = useState(2)
     return (
