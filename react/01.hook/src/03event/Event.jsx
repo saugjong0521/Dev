@@ -49,6 +49,12 @@ export default function Event() {
 
     const [inputValue, setInputValue] = useState('');
 
+    //폼 이벤트
+    const handleChange = (e) => {
+        setInputValue(e.target.value);
+        console.log(inputValue);
+    }
+
 
     return (
         <>
