@@ -43,7 +43,7 @@
     
     */
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 
 export default function Effect() {
@@ -55,7 +55,7 @@ export default function Effect() {
         setNum(num * 2)
     }
 
-    useState(()=>{
+    useEffect(()=>{
         console.log(num)
     })
 
