@@ -14,11 +14,15 @@ export default function EffectEx() {
 
     const [cdinit, setCountdown] = useState(5);
 
-    useEffect(()=>{
-        const timer = setinterval(() => {
-            setCountdown((prev) => prev - 1);
-        },1000)
-    })
+
+
+    if(setCountdown > 0){
+        useEffect(()=>{
+            const timer = setinterval(() => {
+                setCountdown((prev) => prev - 1);
+            },1000)
+        })
+    }
 
     
 
