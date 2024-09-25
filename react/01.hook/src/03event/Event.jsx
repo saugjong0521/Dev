@@ -38,6 +38,11 @@ onKeyDown: 키를 누를때 사용
 onKeyUp: 키를 눌렀다 땔 때 발생
 onKeyPress: 키를 누르고 있는 상태
 
+- 터치 이벤트
+onTouchStart
+onTouchMove
+onTouchEnd
+
 
 */
 
