@@ -42,7 +42,7 @@ export default function EffectEx() {
     return (
         <>
             <p>{cdinit}</p>
-            {countNum === 0  && <p>카운트 종료</p>}
+            {cdinit === 0  && <p>카운트 종료</p>}
         </>
     )
 }
