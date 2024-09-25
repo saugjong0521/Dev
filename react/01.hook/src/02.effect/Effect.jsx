@@ -57,7 +57,7 @@ export default function Effect() {
 
     useEffect(()=>{
         console.log(num)
-    })
+    },[])
 
     return (
 
