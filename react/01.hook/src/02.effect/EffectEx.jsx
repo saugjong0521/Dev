@@ -27,4 +27,10 @@ export default function EffectEx() {
     return () => {
         clearInterval(timer)
     }
+
+    return (
+        <>
+            <p>{cdinit}</p>
+        </>
+    )
 }
