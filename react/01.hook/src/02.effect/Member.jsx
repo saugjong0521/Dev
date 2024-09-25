@@ -25,7 +25,8 @@ export default function Member() {
         // fetch = 비동기 방식으로 데이터를 호출하는 함수
         // then((res)=>res.json()) = fetch로 데이터를 성공적으로 가져온 경우(호출에 성공한 경우), 응답받은 파일을 .json()함수를 통해 json형식으로 파싱
         //public내의 폴더는 바로 접근 가능
-        console.log(res)
+        .then((data) => { setItem(data)})
+        console.log(item)
 
     }, [check])
 
