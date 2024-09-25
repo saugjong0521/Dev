@@ -29,7 +29,7 @@ export default function Member() {
 
         // console.log(item)
 
-    }, )
+    }, [check])
 
     const onCheckEvent = () => {
         setCheck((prev) => !prev)
