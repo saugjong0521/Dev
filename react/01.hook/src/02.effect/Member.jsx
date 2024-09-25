@@ -37,7 +37,7 @@ export default function Member() {
     //1
     return (
         <>
-    <input type="checkbox" onchange={onCheckEvent}/>비회원 체크
+    <input type="checkbox" onChange={onCheckEvent}/>비회원 체크
 
         </>
     )
