@@ -21,11 +21,12 @@ export default function Member () {
         - 코드가 흐름대로 작성되기 때문에 직관적
         */
 
-        fetch(`data/${check ? '' : 'no-'}member.json`);
+        fetch(`data/${check ? '' : 'no-'}member.json`).then((res)=>res.json())
         // fetch = 비동기 방식으로 데이터를 호출하는 함수
+        // then((res)=>res.json()) = fetch로 데이터를 성공적으로 가져온 경우(호출에 성공한 경우), 응답받은 파일을 .json()함수를 통해 json형식으로 파싱
         //public내의 폴더는 바로 접근 가능
 
-    })
+    },[check])
 
     //1
     return(
