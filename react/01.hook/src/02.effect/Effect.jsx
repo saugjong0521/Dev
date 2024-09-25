@@ -54,6 +54,8 @@ export default function Effect() {
     const [timeCount, setTimeCount] = useState(0);
 
 /*
+    const [초깃값, 업데이트 함수] => 뒤의 함수(업데이트 함수)의 초깃값은 앞의 변수다 라고 인식해서 작성하면 편함
+
     useState()를 설정할때 const대신 let은 권장하지 않는 타입
     상태관리와 변수의 재할당 방식에 대한 차이 때문에 권장하지 않음
     
