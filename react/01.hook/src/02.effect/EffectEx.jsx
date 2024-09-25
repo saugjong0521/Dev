@@ -13,6 +13,7 @@ import { useEffect } from "react";
 export default function EffectEx() {
 
     const [cdinit, setCountdown] = useState(5);
+    const finished = `멈춰!`;
 
 
 
@@ -25,5 +26,7 @@ export default function EffectEx() {
     } else {setCountdown == 0}
 
     
-
+    return () => {
+        clearInterval(timer)
+    }
 }
