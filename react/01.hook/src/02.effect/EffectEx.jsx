@@ -31,7 +31,7 @@ export default function EffectEx() {
     useEffect(()=>{
         if(cdinit > 0){
             const timer = setInterval(() => {
-                setCountdown((prev) => 0 ? prev - 1 : prev)
+                setCountdown((prev) => (prev > 0 ? prev - 1 : prev))
             }, 1000);
 
             return ()=> clearInterval(timer)
@@ -42,6 +42,7 @@ export default function EffectEx() {
     return (
         <>
             <p>{cdinit}</p>
+            {countNum === 0  && <p>카운트 종료</p>}
         </>
     )
 }
