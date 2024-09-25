@@ -8,14 +8,18 @@ useState와 useEffect를 이용해서 카운트다운을 만들기
 
 */
 
+import { useEffect } from "react";
+
 export default function EffectEx() {
 
     const [cdinit, setCountdown] = useState(5);
 
-    const cdCalc = ((){
+    const cdCalc = () => {
         setCountdown((prev) => prev - 1);
-    }, 1000)
+    }
 
-
+    useEffect(()=>{
+        const timer = setinterval
+    })
 
 }
