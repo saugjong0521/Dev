@@ -41,8 +41,12 @@ onKeyPress: 키를 누르고 있는 상태
 
 */
 
+import { useState } from "react";
+
 
 
 export default function Event() {
+
+    const [inputValue, setInputValue] = useState('')
 
 }
