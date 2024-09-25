@@ -7,6 +7,7 @@ import State from './01state/State';
 import State02 from './01state/State02';
 import Effect from './02.effect/Effect';
 import EffectEx from './02.effect/EffectEx';
+import Member from './02.effect/Member';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,7 +16,8 @@ root.render(
     {/* <State/> */}
     {/* <State02/> */}
     {/* <Effect/> */}
-    <EffectEx/>
+    {/* <EffectEx/> */}
+    <Member/>
   </React.StrictMode>
 );
 
