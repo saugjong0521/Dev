@@ -86,8 +86,8 @@ export default function Effect() {
 
     useEffect(() => {
         const timer = setInterval(() => {
-            // setTimeCount(timeCount + 1)
-            setTimeCount((prev) => prev + 1)
+            // setTimeCount(timeCount + 1)  // 변수형 업데이트
+            setTimeCount((prev) => prev + 1)    // 함수형 업데이트
         }, 1000)
 
         /* 
@@ -99,6 +99,9 @@ export default function Effect() {
         setTimeCount((prev) => prev + 1)
         setTimeCount에 prev를 인자로 전달한다. 이 함수는 현재 TimeCount의 값을 파라미터로 받아오고 있는 상태,
         이 값을 기반으로 다음 상태의 값을 계산한다.
+        setTimeCount는 최신 timecount의 상태값을 받아와 이를 기반으로 상태를 업데이트하는 방식
+
+        react에서는 상태 업데이트를 할 때, 비동기적인 작업이나, 타임아웃과 같은 작업을 할 때에는 최신의 값을 반영할 수 있도록 함수형 업데이트로 하는 것이 안정성에서 유리
         
         */
 
