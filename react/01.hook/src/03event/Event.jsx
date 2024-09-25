@@ -24,6 +24,20 @@ onClick
 onChange: 입력요소 안에서 값이 변경되는 것을 추적
 onSubmit: 사용자가 폼안에 있는 내용을 서버에 전달하는 이벤트
 
+- 포커스 이벤트
+onFocus: 요소에 포커스가 들어왔을때
+onBlur: 요소에 포커스가 아웃되었을때
+
+- 마우스 이벤트
+onMouseMove: 요소 내에서 마우스가 움직이는 이벤트
+onMouseEnter: hover이벤트
+onMouseLeave: out이벤트
+
+- 키보드 이벤트
+onKeyDown: 키를 누를때 사용
+onKeyUp: 키를 눌렀다 땔 때 발생
+onKeyPress: 키를 누르고 있는 상태
+
 
 */
 
