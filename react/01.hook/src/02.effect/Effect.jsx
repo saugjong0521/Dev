@@ -108,6 +108,9 @@ export default function Effect() {
         return () => {
             clearInterval(timer)
         }
+        // effect의 조건을 최초 마운트로 해도 setInterval은 언마운트 혹은 리랜더링 시에도 계속 실행되기 있기 때문에
+        // 예상하지 못한 값이 업데이트 되거나 또는 성능저하의 원인이 될 수 있다.
+        // 컴포넌트가 언마운트 될 때나 useeEffect가 재 실행될때 기존의 비동기 작업이나 실행 요소들을 중지시켜야 한다.
 
     }, [])
 
