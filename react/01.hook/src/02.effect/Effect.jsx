@@ -53,6 +53,14 @@ export default function Effect() {
     const [count, setCount] = useState(10);
     const [timeCount, setTimeCount] = useState(0);
 
+/*
+    useState()를 설정할때 const대신 let은 권장하지 않는 타입
+    상태관리와 변수의 재할당 방식에 대한 차이 때문에 권장하지 않음
+    
+    const
+    상수는 변수에 값을 한번 할당하면 재항당이 안된다.
+    리액트에서 useState로 선언된 상태변수는 재할당을 할 필요가 없다.
+*/
     const numCalc = () => {
         setNum(num * 2)
     }
@@ -70,10 +78,22 @@ export default function Effect() {
         const timer = setInterval(() => {
             // setTimeCount(timeCount + 1)
             setTimeCount((prev) => prev + 1)
-        },1000)
+        }, 1000)
+
+        /* 
+        setTimeCount(timeCount + 1)
+        는 실행되는 시점의 timecount 값에 의존한다.
+        useEffect에 []을 넣어 마운트가 실행되는 순간만 실행을 했기 때문에, 항상 초기값만 참조하려고 한다.
+        항상 초기값을 참조하기 때문에 0을 기준으로 하게 된다.
+
+        setTimeCount((prev) => prev + 1)
+        setTimeCount에 prev를 인자로 전달한다. 이 함수는 현재 TimeCount의 값을 파라미터로 받아오고 있는 상태,
+        이 값을 기반으로 다음 상태의 값을 계산한다.
+        
+        */
 
 
-    },[])
+    }, [])
 
     return (
 
