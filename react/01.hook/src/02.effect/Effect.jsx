@@ -49,8 +49,9 @@ import { useEffect, useState } from "react"
 export default function Effect() {
 
 
-    const [num, setNum] = useState(2)
-    const [count, setCount] = useState(10)
+    const [num, setNum] = useState(2);
+    const [count, setCount] = useState(10);
+    const [timeCount, setTimeCount] = useState(0);
 
     const numCalc = () => {
         setNum(num * 2)
@@ -65,11 +66,18 @@ export default function Effect() {
         console.log(count)
     }, [count])
 
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setTimeCount(timeCount + 1)
+        },1000)
+    })
+
     return (
 
         <>
             <p>{num}</p>
             <p>{count}</p>
+            <p>{timeCount}</p>
             <button onClick={numCalc}>클릭!</button>
             <button onClick={countCalc}>클릭!</button>
         </>
