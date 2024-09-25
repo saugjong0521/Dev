@@ -29,7 +29,9 @@ export default function Member() {
 
         // console.log(item)
 
-    }, [check])
+    }, 1000)
+        /*풀리던 걸리던 check의 상태는 변경되는 것이니까, 조건에 check로 들어감 */
+
 
     const onCheckEvent = () => {
         setCheck((prev) => !prev)
@@ -40,7 +42,7 @@ export default function Member() {
         <>
             <input type="checkbox" onChange={onCheckEvent} />회원 체크
             <ul>
-                {item.map((el)=>(
+                {item.map((el) => (
                     <li key={el.id}>
                         <p>{el.name}</p>
                         <p>{el.price}</p>
