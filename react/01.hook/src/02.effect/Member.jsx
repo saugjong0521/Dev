@@ -21,7 +21,8 @@ export default function Member () {
         - 코드가 흐름대로 작성되기 때문에 직관적
         */
 
-        fetch(`data/`)
+        fetch(`data/${check ? '' : 'no-'}member.json`);
+        // fetch = 비동기 방식으로 데이터를 호출하는 함수
         //public내의 폴더는 바로 접근 가능
 
     })
