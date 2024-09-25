@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import State from './01state/State';
 import State02 from './01state/State02';
+import Effect from './02.effect/Effect';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,6 +13,7 @@ root.render(
     {/* <App /> */}
     <State/>
     <State02/>
+    <Effect/>
   </React.StrictMode>
 );
 

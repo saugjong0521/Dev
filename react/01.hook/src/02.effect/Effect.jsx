@@ -50,6 +50,15 @@ export default function Effect() {
 
 
     const [num, setNum] = useState(2)
+
+    const numCalc = () => {
+        setNum(num * 2)
+    }
+
+    useEffect(()=>{
+        console.log(num)
+    })
+
     return (
 
         <>
