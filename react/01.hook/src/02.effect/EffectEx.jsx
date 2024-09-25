@@ -14,12 +14,12 @@ export default function EffectEx() {
 
     const [cdinit, setCountdown] = useState(5);
 
-    const cdCalc = () => {
-        setCountdown((prev) => prev - 1);
-    }
-
     useEffect(()=>{
-        const timer = setinterval
+        const timer = setinterval(() => {
+            setCountdown((prev) => prev - 1);
+        },1000)
     })
+
+    
 
 }
