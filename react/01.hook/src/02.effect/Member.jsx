@@ -3,12 +3,12 @@ import { useEffect, useState } from "react";
 
 
 
-export default function Member () {
+export default function Member() {
     //2
     const [item, setItem] = useState([]);
     const [check, setCheck] = useState(false);
 
-    useEffect (()=>{
+    useEffect(() => {
         //비동기 방식으로 데이터를 처리하는 메소드
         /*
         비동기 방식
@@ -21,18 +21,18 @@ export default function Member () {
         - 코드가 흐름대로 작성되기 때문에 직관적
         */
 
-        fetch(`data/${check ? '' : 'no-'}member.json`).then((res)=>res.json())
+        fetch(`data/${check ? '' : 'no-'}member.json`).then((res) => res.json())
         // fetch = 비동기 방식으로 데이터를 호출하는 함수
         // then((res)=>res.json()) = fetch로 데이터를 성공적으로 가져온 경우(호출에 성공한 경우), 응답받은 파일을 .json()함수를 통해 json형식으로 파싱
         //public내의 폴더는 바로 접근 가능
 
-    },[check])
+    }, [check])
 
     //1
-    return(
+    return (
         <>
-        
-        
+    <input type="checkbox" onchange={onCheckEvent}/>비회원 체크
+
         </>
     )
 
