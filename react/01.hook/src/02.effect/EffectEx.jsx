@@ -8,7 +8,7 @@ useState와 useEffect를 이용해서 카운트다운을 만들기
 
 */
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function EffectEx() {
 
@@ -17,13 +17,13 @@ export default function EffectEx() {
 
 
 
-        useEffect(()=>{
-            const timer = setinterval(() => {
-                setCountdown((prev) => prev - 1);
-            },1000)
-        })
+    useEffect(() => {
+        const timer = setinterval(() => {
+            setCountdown((prev) => prev - 1);
+        }, 1000)
+    })
 
-    
+
     return () => {
         clearInterval(timer)
     }
