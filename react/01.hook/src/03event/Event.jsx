@@ -59,7 +59,7 @@ export default function Event() {
     return (
         <>
 
-            <form>
+            <form onSubmit={handleSubmit}>
                 <input type='text'
                     value={inputValue}
                     onChange={handleChange}
