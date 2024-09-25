@@ -68,9 +68,11 @@ export default function Effect() {
 
     useEffect(() => {
         const timer = setInterval(() => {
-            setTimeCount(timeCount + 1)
+            setTimeCount((prev) => prev + 1)
         },1000)
-    })
+
+
+    },[])
 
     return (
 
