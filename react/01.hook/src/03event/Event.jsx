@@ -47,6 +47,20 @@ import { useState } from "react";
 
 export default function Event() {
 
-    const [inputValue, setInputValue] = useState('')
+    const [inputValue, setInputValue] = useState('');
+
+
+    return (
+        <>
+        
+        <form>
+            <input type='text'
+            value = {inputValue}
+            onChange = {handleChange}
+            />
+        </form>
+        
+        </>
+    )
 
 }
