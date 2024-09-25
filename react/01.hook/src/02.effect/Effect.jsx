@@ -52,7 +52,7 @@ export default function Effect() {
     const [num, setNum] = useState(2);
     const [count, setCount] = useState(10);
     const [timeCount, setTimeCount] = useState(0);
-// const [초깃값, 업데이트 함수] => 뒤의 함수(업데이트 함수)의 초깃값은 앞의 변수다 라고 인식해서 작성하면 편함
+// const [초깃값이자 변수, 업데이트 함수] => 뒤의 함수(업데이트 함수)의 초깃값은 앞의 변수다 라고 인식해서 작성하면 편함
 
 
 /*
