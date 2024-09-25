@@ -63,7 +63,7 @@ export default function Effect() {
     useEffect(() => {
         console.log(num)
         console.log(count)
-    }, )
+    }, [count])
 
     return (
 
