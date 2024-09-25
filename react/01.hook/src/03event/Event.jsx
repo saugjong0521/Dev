@@ -58,14 +58,15 @@ export default function Event() {
 
     return (
         <>
-        
-        <form>
-            <input type='text'
-            value = {inputValue}
-            onChange = {handleChange}
-            />
-        </form>
-        
+
+            <form>
+                <input type='text'
+                    value={inputValue}
+                    onChange={handleChange}
+                />
+                <input type="submit" value='제출'/>
+            </form>
+
         </>
     )
 
