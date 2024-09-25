@@ -22,7 +22,7 @@ export default function EffectEx() {
                 setCountdown((prev) => prev - 1);
             },1000)
         })
-    }
+    } else (setCountdown = 0)
 
     
 
