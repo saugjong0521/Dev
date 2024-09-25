@@ -60,6 +60,13 @@ export default function Effect() {
     const
     상수는 변수에 값을 한번 할당하면 재항당이 안된다.
     리액트에서 useState로 선언된 상태변수는 재할당을 할 필요가 없다.
+
+    즉
+    let [timeCount, setTimeCount] = useState(0);
+    으로 선언하고
+    setTimeCount(timeCount += 1)
+    으로 작성하면 작동은 되지만, 오류의 소지가 있음
+
 */
     const numCalc = () => {
         setNum(num * 2)
