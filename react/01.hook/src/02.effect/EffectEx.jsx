@@ -17,13 +17,11 @@ export default function EffectEx() {
 
 
 
-    if(setCountdown > 0){
         useEffect(()=>{
             const timer = setinterval(() => {
                 setCountdown((prev) => prev - 1);
             },1000)
         })
-    } else {setCountdown == 0}
 
     
     return () => {
