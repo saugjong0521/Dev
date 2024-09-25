@@ -17,16 +17,27 @@ export default function EffectEx() {
 
 
 
-    useEffect(() => {
-        const timer = setinterval(() => {
-            setCountdown((prev) => prev - 1);
-        }, 1000)
-    })
+    // useEffect(() => {
+    //     const timer = setinterval(() => {
+    //         setCountdown((prev) => prev - 1);
+    //     }, 1000)
+    // })
 
 
-    return () => {
-        clearInterval(timer)
-    }
+    // return () => {
+    //     clearInterval(timer)
+    // }
+
+    useEffect(()=>{
+        if(cdinit > 0){
+            const timer = setInterval(() => {
+                setCountdown((prev) => 0 ? prev - 1 : prev)
+            }, 1000);
+
+            return ()=> clearInterval(timer)
+        }
+    }, [cdinit])
+
 
     return (
         <>
