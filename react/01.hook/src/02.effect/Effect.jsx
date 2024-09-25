@@ -105,6 +105,9 @@ export default function Effect() {
         
         */
 
+        return () => {
+            clearInterval(timer)
+        }
 
     }, [])
 
