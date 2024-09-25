@@ -70,6 +70,7 @@ export default function Effect() {
     으로 작성하면 작동은 되지만, 오류의 소지가 있음
 
 */
+
     const numCalc = () => {
         setNum(num * 2)
     }
