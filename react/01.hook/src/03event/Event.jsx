@@ -55,6 +55,11 @@ export default function Event() {
         console.log(inputValue);
     }
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(`제출 내용 : ${inputValue}`)
+    }
+
 
     return (
         <>
