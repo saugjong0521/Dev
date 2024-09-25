@@ -55,7 +55,7 @@ export default function Effect() {
         setNum(num * 2)
     }
 
-    useEffect(()=>{
+    useState(()=>{
         console.log(num)
     })
 

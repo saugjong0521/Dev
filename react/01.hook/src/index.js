@@ -11,8 +11,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
-    <State/>
-    <State02/>
+    {/* <State/> */}
+    {/* <State02/> */}
     <Effect/>
   </React.StrictMode>
 );
