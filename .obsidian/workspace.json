@@ -140,6 +140,8 @@
   },
   "active": "1ef3909417067646",
   "lastOpenFiles": [
+    "react/01.hook/src/03event/Event.jsx",
+    "react/01.hook/src/03event",
     "react/01.hook/public/data/member.json",
     "react/01.hook/public/data/no-member.json",
     "react/01.hook/public/data/noMember.json",
@@ -149,8 +151,6 @@
     "react/01.hook/src/02.effect/Effect.jsx",
     "react/01.hook/src/02.effect",
     "react/00.test/node_modules/web-vitals/dist/modules/lib/polyfills/getFirstHiddenTimePolyfill.js",
-    "react/00.test/node_modules/web-vitals/dist/modules/lib/polyfills/firstInputPolyfill.js",
-    "react/00.test/node_modules/web-vitals/dist/modules/lib/polyfills/getFirstHiddenTimePolyfill.d.ts",
     "react/00.test/node_modules/web-vitals/README.md",
     "react/00.test/node_modules/pretty-format/node_modules/react-is/README.md",
     "react/00.test/node_modules/lz-string/README.md",

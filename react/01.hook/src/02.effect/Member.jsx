@@ -29,7 +29,7 @@ export default function Member() {
 
         // console.log(item)
 
-    }, 1000)
+    }, [check])
         /*풀리던 걸리던 check의 상태는 변경되는 것이니까, 조건에 check로 들어감 */
 
 
