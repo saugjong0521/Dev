@@ -28,21 +28,35 @@ export default function EffectEx() {
     //     clearInterval(timer)
     // }
 
-    useEffect(()=>{
-        if(cdinit > 0){
+
+
+
+
+    // 구동부
+    useEffect(() => {
+        if (cdinit > 0) {
             const timer = setInterval(() => {
-                setCountdown((prev) => (prev > 0 ? prev - 1 : prev))
+                // setCountdown((prev) => (prev > 0 ? prev - 1 : prev))
+                setCountdown((prev) => {
+                    if (prev > 0) {
+                        return prev - 1
+                    } else {
+                        return prev
+                    }
+                })
             }, 1000);
 
-            return ()=> clearInterval(timer)
+            return () => clearInterval(timer)
         }
     }, [cdinit])
 
 
+
+    // 출력부
     return (
         <>
             <p>{cdinit}</p>
-            {cdinit === 0  && <p>카운트 종료</p>}
+            {cdinit === 0 && <p>카운트 종료</p>}
         </>
     )
 }
