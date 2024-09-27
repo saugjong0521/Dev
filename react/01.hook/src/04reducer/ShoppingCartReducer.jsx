@@ -69,6 +69,13 @@ export function ShoppingCartReducer(state, action) {
                 }
 
             }
+            case 'clear-cart':
+                return{
+                    ...state,
+                    items: [],
+                    totalItems: 0,
+                    totalPrice: 0
+                }
 
 
 

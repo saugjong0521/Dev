@@ -28,6 +28,9 @@ export default function ShoppingCart() {
         dispatch({ type: 'remove-item', pay: product })
     }
 
+    const clearCart = () => {
+        dispatch({type: 'clear-cart'}); //전부 지우기 때문에 매개변수가 필요없음
+    }
 
     return (
         <>
@@ -49,7 +52,7 @@ export default function ShoppingCart() {
                     </li>
                 ))}
             </ul>
-            <p>total item: {state.totalItems}</p>
+            <p>total item: {state.totalItems}, </p>
             <p>total price: {state.totalPrice}</p>
 
         </>
