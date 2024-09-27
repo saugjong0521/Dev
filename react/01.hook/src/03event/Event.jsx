@@ -53,6 +53,8 @@ import { useState } from "react";
 export default function Event() {
 
     const [inputValue, setInputValue] = useState('');
+    const [isFocus, setIsFocus] = useState(false);
+
 
     //폼 이벤트
     const handleChange = (e) => {
@@ -60,10 +62,14 @@ export default function Event() {
         console.log(inputValue);
     }
 
+    //제출
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(`제출 내용 : ${inputValue}`)
     }
+
+    //포커스 이벤트
+    const handleFocus = 
 
 
     return (
@@ -73,6 +79,7 @@ export default function Event() {
                 <input type='text'
                     value={inputValue}
                     onChange={handleChange}
+                    onFus={handleFocus}
                 />
                 <input type="submit" value='제출'/>
             </form>
