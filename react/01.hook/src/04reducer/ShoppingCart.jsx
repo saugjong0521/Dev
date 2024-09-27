@@ -49,6 +49,8 @@ export default function ShoppingCart() {
                     </li>
                 ))}
             </ul>
+            <p>total item: {state.totalItems}</p>
+            <p>total price: {state.totalPrice}</p>
 
         </>
     )
