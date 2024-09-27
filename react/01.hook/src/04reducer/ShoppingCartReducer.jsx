@@ -8,7 +8,7 @@ function findItemIndex(el, idx){
 export function ShoppingCartReducer(state, action) {
     switch (action.type) {
         case 'add-item':
-            const currentIndex = 
+            const currentIndex = findItemIndex(state.el, action.id)
 
     }
 }
