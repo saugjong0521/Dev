@@ -55,8 +55,10 @@ export default function Event() {
     const [inputValue, setInputValue] = useState('');
     const [isFocus, setIsFocus] = useState(false);
     const [text, setText] = useState('마우스가 영역 밖에 있습니다.')
-    
+
     const [keyDownValue, setKeyDownValue] = useState('');
+    const [keyUpValue, setKeyUpValue] = useState('');
+    const [keyPressValue, setKeyPressValue] = useState('');
 
 
     //폼 이벤트
@@ -99,6 +101,24 @@ export default function Event() {
             setText(`마우스가 영역 밖으로 다시 나갔습니다.`)
         )
     }
+
+
+    //키보드 이벤트
+    const handleKeyDown = (e) => {
+            setKeyDownValue(`${e.key}`);
+            console.log(`${e.key}키를 눌렀습니다.`)
+    }
+
+    const handleKeyUp = (e) => {
+        setKeyUpValue(`${e.key}`);
+        console.log(`${e.key}키를 뗏습니다.`)
+}
+
+const handleKeyPress = (e) => {
+    setKeyPressValue(`${e.key}`);
+    console.log(`${e.key}키를 누르고 있습니다.`)
+}
+
 
 
     return (
