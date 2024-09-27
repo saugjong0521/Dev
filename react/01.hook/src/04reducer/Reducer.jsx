@@ -22,5 +22,13 @@ export default function Reducer () {
     //카운트 관리 useState버전
     const [count, setCount] = useState(0);
 
+    return (
+        <>
+            <h1>{count}</h1>
+            <button onClick={countPlus}>+</button>
+            <button onClick={countMinus}>-</button>
+        </>
+    )
+
 
 }
