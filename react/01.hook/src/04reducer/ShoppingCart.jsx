@@ -5,16 +5,16 @@ import { ShoppingCartReducer, init } from "./ShoppingCartReducer"
 
 export default function ShoppingCart() {
     const item = [
-        { id: 1, name: 'item01', price: 5000 },
-        { id: 2, name: 'item02', price: 5000 },
-        { id: 3, name: 'item03', price: 5000 },
+        { id: 1, name: 'item01', price: 500 },
+        { id: 2, name: 'item02', price: 15000 },
+        { id: 3, name: 'item03', price: 3000 },
         { id: 4, name: 'item04', price: 5000 },
-        { id: 5, name: 'item05', price: 5000 },
-        { id: 6, name: 'item06', price: 5000 },
-        { id: 7, name: 'item07', price: 5000 },
-        { id: 8, name: 'item08', price: 5000 },
-        { id: 9, name: 'item09', price: 5000 },
-        { id: 10, name: 'item10', price: 5000 },
+        { id: 5, name: 'item05', price: 8900 },
+        { id: 6, name: 'item06', price: 1500 },
+        { id: 7, name: 'item07', price: 45000 },
+        { id: 8, name: 'item08', price: 197000 },
+        { id: 9, name: 'item09', price: 5500 },
+        { id: 10, name: 'item10', price: 2500 },
     ]
 
 
@@ -23,6 +23,7 @@ export default function ShoppingCart() {
     const addItemCart = (product) => {
         dispatch({ type: 'add-item', pay: product })
     }
+    
 
     return (
         <>
