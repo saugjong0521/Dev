@@ -108,6 +108,9 @@ export default function Event() {
                     onChange={handleChange}
                     onFocus={handleFocus}
                     onBlur={handleBlur}
+                    onKeyDown={handleKeyDown}
+                    onKeyUp={handleKeyUp}
+                    onKeyPress={handleKeyPress} // 비권장 이벤트 타입(최신 브라우저에서 비권장)
                 />
                 <input type="submit" value='제출' />
             </form>
