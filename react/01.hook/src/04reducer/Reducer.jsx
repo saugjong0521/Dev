@@ -16,7 +16,7 @@ if문보다 switch의 사용도가 높은 편
 
 */
 
-import { useState } from "react";
+import { useReducer, useState } from "react";
 
 export default function Reducer() {
     //카운트 관리 useState버전
@@ -41,7 +41,7 @@ export default function Reducer() {
 
         - 사용: const reducer = (state, action) => {    }
     */
-    const reducer = (state, action) => {
+    const reducerFn = (state, action) => {
         // switch문에서는 액션의 타압애 따라 상태를 처리
 
         switch (action.type) {
@@ -56,6 +56,11 @@ export default function Reducer() {
         }
     }
 
+    const [state, dispatch] = useReducer(reducerFn, init)
+    //useReducer는 reduecerFn함수와 초기상태값(init)을 인자로 받아와 상태와 dispatch함수를 반환
+    //state: 현재 상태 값
+    //dispatch: 상태 업데이트 요청을 보내는 함수 (action을 전달해서 reducerFn을 호출)
+
 
 
     return (
@@ -63,6 +68,10 @@ export default function Reducer() {
             <h1>{count}</h1>
             <button onClick={countPlus}>+</button>
             <button onClick={countMinus}>-</button>
+
+
+            <h1>{state.countNum}</h1>
+            {/* 상태값에 접근할 때에는 state.countNum으로 접근 */}
         </>
     )
 
