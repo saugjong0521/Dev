@@ -37,7 +37,12 @@ export function ShoppingCartReducer(state, action) {
         }
 
             case 'remove-item':
-                const currentIndex = findItemIndex(state.items, action.pay.id)
+                {const currentIndex = findItemIndex(state.items, action.pay.id)
+
+
+
+                    
+                }
 
 
 
