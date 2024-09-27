@@ -132,7 +132,12 @@ export default function Event() {
                     onBlur={handleBlur}
                     onKeyDown={handleKeyDown}
                     onKeyUp={handleKeyUp}
+                    
                     onKeyPress={handleKeyPress} // 비권장 이벤트 타입(최신 브라우저에서 비권장)
+                    /* 
+                    KeyPress
+                    - 특정 브라우저에서 e.key의 값이 다르게 나올 수 있다.
+                    */
                 />
                 <input type="submit" value='제출' />
             </form>
