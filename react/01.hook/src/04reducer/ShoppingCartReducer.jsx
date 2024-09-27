@@ -60,6 +60,12 @@ export function ShoppingCartReducer(state, action) {
                     첫번째 매개변수는 반드시 값을 참조해야 하기 때문에 _로 매개변수를 설정하는 것
                     (_로 된 매개변수는 무시해도 되는 코드)
                     */
+                   return{
+                    ...state,
+                    items: updateItems,
+                    totalItems: state.totalItems - 1,
+                    totalPrice: state.totalPrice - removeIndex.price
+                   }
                 }
 
             }
