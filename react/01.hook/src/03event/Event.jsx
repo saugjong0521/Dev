@@ -99,6 +99,17 @@ export default function Event() {
             {isFocus && <p>포커스 이벤트가 실행 되었습니다.</p>}
 
             <div onMouseMove={handleMouseMove} style={{padding: '200px', backgroundColor: 'gray'}}>마우스 영역</div>
+
+            <div onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                style={{
+                    height: '200px',
+                    width: '300px',
+                    border: 'solid 1px black'
+                }}>
+                    {text}
+                </div>
+
         </>
     )
 
