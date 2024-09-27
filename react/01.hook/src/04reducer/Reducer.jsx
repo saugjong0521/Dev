@@ -72,6 +72,8 @@ export default function Reducer() {
 
             <h1>{state.countNum}</h1>
             {/* 상태값에 접근할 때에는 state.countNum으로 접근 */}
+            <button onClick={()=>dispatch({type: 'countNumPlus'})}>+</button>
+            <button onClick={()=>dispatch({type: 'countNumMinus'})}>+</button>
         </>
     )
 
