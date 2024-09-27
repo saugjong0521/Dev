@@ -6,8 +6,8 @@ export const init = {
     totalPrice: 0, //카트에 담긴 상품들의 총 금액
 }
 
-function findItemIndex(el, idx) {
-    return el.findIndex((item) => item.idx === idx)
+function findItemIndex(el, id) {
+    return el.findIndex((item) => item.idx === id)
 }
 
 
@@ -18,7 +18,7 @@ export function ShoppingCartReducer(state, action) {
             if (currentIndex >= 0) {
                 //새 상품이 아닐 경우 금액만 증가
                 const updateItems = state.items.map((item, idx) =>
-                    idx === currentIndex ? { ...item, quantity: item.quantity + 1 } : item)
+                    item.id === currentIndex ? { ...item, quantity: item.quantity + 1 } : item)
 
                 return {
                     ...state,
