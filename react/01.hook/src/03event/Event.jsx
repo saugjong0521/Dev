@@ -82,7 +82,7 @@ export default function Event() {
 
     //마우스 이벤트
     const handleMouseMove = (e) => {
-        console.log(`${e.clientX}, ${e.clientY}`)
+        // console.log(`${e.clientX}, ${e.clientY}`)
     }
 
 
