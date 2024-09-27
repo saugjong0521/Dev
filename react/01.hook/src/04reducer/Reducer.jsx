@@ -46,7 +46,7 @@ export default function Reducer() {
 
         switch (action.type) {
             case 'countNumPlus':
-                return { countNum: state.countNun ++};
+                return { countNum: state.countNum ++};
 
             case 'countNumMinus':
                 return { countNum: state.countNum --};
