@@ -93,6 +93,7 @@ export default function Event() {
             </form>
             {isFocus && <p>포커스 이벤트가 실행 되었습니다.</p>}
 
+            <div style={{padding: '200px', backgroundColor: 'gray'}}>마우스 영역</div>
         </>
     )
 
