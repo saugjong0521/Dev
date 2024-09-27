@@ -35,5 +35,8 @@ export function ShoppingCartReducer(state, action) {
                 }
 
             }
+
+            default:
+                return state
     }
 }
