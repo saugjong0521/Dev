@@ -21,7 +21,7 @@ export default function ShoppingCart() {
     const [state, dispatch] = useReducer(ShoppingCartReducer, init);
 
     const addItemCart = (product) => {
-        dispatch({type: 'add-item', pay: product})
+        dispatch({ type: 'add-item', pay: product })
     }
 
     return (
@@ -31,7 +31,7 @@ export default function ShoppingCart() {
                 <li key={el.id}>
                     <p>{el.name}</p>
                     <p>{el.price}</p>
-                    <button>장바구니 추가</button>
+                    <button onClick={() => addItemCart(el)}>장바구니 추가</button>
                     <button>장바구니 삭제</button>
                 </li>
             ))}
