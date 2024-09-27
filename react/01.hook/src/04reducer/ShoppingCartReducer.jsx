@@ -51,6 +51,15 @@ export function ShoppingCartReducer(state, action) {
                         items: updateItems,
                         totalPrice: state.totalPrice - removeIndex.price
                     }
+                } else {
+                    const updateItems = state.items.filter((_, idx)=> idx !== currentIndex)
+                    // _의 뜻
+                    /*
+                    변수의 위치때문에, 사용하지는 않지만 참조해야 할 때 암묵적으로 사용하는 변수 명
+                    현재 코드에서는 아이템의 값은 참조할 필요는 없고 index의 값만 참조하는 것이 목적이지만
+                    첫번째 매개변수는 반드시 값을 참조해야 하기 때문에 _로 매개변수를 설정하는 것
+                    (_로 된 매개변수는 무시해도 되는 코드)
+                    */
                 }
 
             }
