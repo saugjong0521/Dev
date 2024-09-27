@@ -65,11 +65,14 @@ export default function Event() {
     //제출
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(`제출 내용 : ${inputValue}`)
+        console.log(`제출 내용 : ${inputValue}`);
     }
 
     //포커스 이벤트
-    const handleFocus = 
+    const handleFocus = (e) => {
+        setIsFocus(true);
+        console.log(isFocus)
+    }
 
 
     return (
