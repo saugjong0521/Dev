@@ -89,7 +89,7 @@ export default function Event() {
                     onFocus={handleFocus}
                     onBlur={handleBlur}
                 />
-                <input type="submit" value='제출'/>
+                <input type="submit" value='제출' />
             </form>
             {isFocus && <p>포커스 이벤트가 실행 되었습니다.</p>}
 
