@@ -64,7 +64,7 @@ export default function Event() {
     //폼 이벤트
     const handleChange = (e) => {
         setInputValue(e.target.value);
-        console.log(inputValue);
+        // console.log(inputValue);
     }
 
     //제출
