@@ -74,6 +74,10 @@ export default function Event() {
         console.log(isFocus)
     }
 
+    const handleBlur = (e) => {
+        setIsFocus(false)
+        console.log(isFocus)
+    }
 
     return (
         <>
@@ -82,10 +86,12 @@ export default function Event() {
                 <input type='text'
                     value={inputValue}
                     onChange={handleChange}
-                    onFus={handleFocus}
+                    onFocus={handleFocus}
+                    onBlur={handleBlur}
                 />
                 <input type="submit" value='제출'/>
             </form>
+            {isFocus && <p>포커스 이벤트가 실행 되었습니다.</p>}
 
         </>
     )
