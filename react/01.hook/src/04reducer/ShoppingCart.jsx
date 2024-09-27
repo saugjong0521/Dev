@@ -1,4 +1,5 @@
 
+import { useReducer } from "react"
 import { ShoppingCartReducer, init } from "./ShoppingCartReducer"
 
 
@@ -16,6 +17,12 @@ export default function ShoppingCart() {
         { id: 10, name: 'item10', price: 5000 },
     ]
 
+
+    const [state, dispatch] = useReducer(ShoppingCartReducer, init);
+
+    const addItemCart = (product) => {
+        dispatch({type: 'add-item', pay: product})
+    }
 
     return (
         <>
