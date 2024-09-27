@@ -54,6 +54,7 @@ export default function ShoppingCart() {
             </ul>
             <p>total item: {state.totalItems}, </p>
             <p>total price: {state.totalPrice}</p>
+            <button onClick={clearCart}>장바구니 비우기</button>
 
         </>
     )
