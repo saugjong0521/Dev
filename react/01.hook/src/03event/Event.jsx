@@ -79,6 +79,11 @@ export default function Event() {
         console.log(isFocus)
     }
 
+    //마우스 이벤트
+    const handleMouseMove = (e) => {
+        console.log(`${e.clientX}`)
+    }
+
     return (
         <>
 
@@ -93,7 +98,7 @@ export default function Event() {
             </form>
             {isFocus && <p>포커스 이벤트가 실행 되었습니다.</p>}
 
-            <div style={{padding: '200px', backgroundColor: 'gray'}}>마우스 영역</div>
+            <div onMouseMove={handleMouseMove} style={{padding: '200px', backgroundColor: 'gray'}}>마우스 영역</div>
         </>
     )
 
