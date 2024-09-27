@@ -16,6 +16,11 @@ if문보다 switch의 사용도가 높은 편
 
 */
 
+import { useState } from "react";
+
 export default function Reducer () {
+    //카운트 관리 useState버전
+    const [count, setCount] = useState(0);
+
 
 }
