@@ -7,7 +7,7 @@ export const init = {
 }
 
 function findItemIndex(el, id) {
-    return el.findIndex((item) => item.idx === id)
+    return el.findIndex((item) => item.id === id)
 }
 
 
