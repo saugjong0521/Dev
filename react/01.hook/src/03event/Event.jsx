@@ -54,6 +54,7 @@ export default function Event() {
 
     const [inputValue, setInputValue] = useState('');
     const [isFocus, setIsFocus] = useState(false);
+    const [text, setText] = useState('마우스가 영역 밖에 있습니다.')
 
 
     //폼 이벤트
@@ -83,6 +84,20 @@ export default function Event() {
     const handleMouseMove = (e) => {
         console.log(`${e.clientX}, ${e.clientY}`)
     }
+
+
+    const handleMouseEnter = (e) => {
+        return (
+            setText('마우스가 영역 안으로 들어왔습니다.')
+        )
+    }
+
+    const handleMouseLeave = (e) => {
+        return (
+            setText(`마우스가 영역 밖으로 다시 나갔습니다.`)
+        )
+    }
+
 
     return (
         <>
