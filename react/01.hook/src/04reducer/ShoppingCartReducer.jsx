@@ -14,7 +14,7 @@ function findItemIndex(el, idx) {
 export function ShoppingCartReducer(state, action) {
     switch (action.type) {
         case 'add-item':
-            const currentIndex = findItemIndex(state.items, action.pay.id)
+            {const currentIndex = findItemIndex(state.items, action.pay.id) //{}로 묶어서 currentIndex를 지역변수로 만듬
             if (currentIndex >= 0) {
                 //새 상품이 아닐 경우 금액만 증가
                 const updateItems = state.items.map((item, idx) =>
@@ -33,8 +33,13 @@ export function ShoppingCartReducer(state, action) {
                     totalItems: state.totalItems + 1,
                     totalPrice: state.totalPrice + action.pay.price
                 }
-
             }
+        }
+
+            case 'remove-item':
+                const currentIndex = findItemIndex(state.items, action.pay.id)
+
+
 
             default:
                 return state
