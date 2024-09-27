@@ -18,7 +18,7 @@ if문보다 switch의 사용도가 높은 편
 
 import { useState } from "react";
 
-export default function Reducer () {
+export default function Reducer() {
     //카운트 관리 useState버전
     const [count, setCount] = useState(0);
 
@@ -30,7 +30,31 @@ export default function Reducer () {
         setCount((prev) => prev - 1)
     }
 
-    
+    //reducer 버전
+    const init = { countNum: 0 }
+    //초기값을 설정할 때, 객체로 설정한다. 객체로 설정하기 때문에, 여러 값을 한번에 관리하는 것도 가능하다.
+
+    /*
+    reducer 함수: 상태 없데이트를 어떻게 할건지 정의
+    state 매개변수: 현재 상태를 나타냄
+    action 매개변수: 상태를 변경할 때 사용되는 액션 객체 (switch문에서 action은 case로 구분)
+
+        - 사용: const reducer = (state, action) => {    }
+    */
+    const reducer = (state, action) => {
+        // switch문에서는 액션의 타압애 따라 상태를 처리
+
+        switch (action.type) {
+            case 'countNumPlus':
+                return { countNum: state.countNun ++};
+
+            case 'countNumMinus':
+                return { countNum: state.countNum --};
+
+            default:
+                return state
+        }
+    }
 
 
 
