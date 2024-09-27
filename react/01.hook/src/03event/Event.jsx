@@ -105,19 +105,19 @@ export default function Event() {
 
     //키보드 이벤트
     const handleKeyDown = (e) => {
-            setKeyDownValue(`${e.key}`);
-            console.log(`${e.key}키를 눌렀습니다.`)
+        setKeyDownValue(`${e.key}`);
+        console.log(`${e.key}키를 눌렀습니다.`)
     }
 
     const handleKeyUp = (e) => {
         setKeyUpValue(`${e.key}`);
         console.log(`${e.key}키를 뗏습니다.`)
-}
+    }
 
-const handleKeyPress = (e) => {
-    setKeyPressValue(`${e.key}`);
-    console.log(`${e.key}키를 누르고 있습니다.`)
-}
+    const handleKeyPress = (e) => {
+        setKeyPressValue(`${e.key}`);
+        console.log(`${e.key}키를 누르고 있습니다.`)
+    }
 
 
 
@@ -138,7 +138,7 @@ const handleKeyPress = (e) => {
             </form>
             {isFocus && <p>포커스 이벤트가 실행 되었습니다.</p>}
 
-            <div onMouseMove={handleMouseMove} style={{padding: '200px', backgroundColor: 'gray'}}>마우스 영역</div>
+            <div onMouseMove={handleMouseMove} style={{ padding: '200px', backgroundColor: 'gray' }}>마우스 영역</div>
 
             <div onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
@@ -147,8 +147,8 @@ const handleKeyPress = (e) => {
                     width: '300px',
                     border: 'solid 1px black'
                 }}>
-                    {text}
-                </div>
+                {text}
+            </div>
 
         </>
     )
