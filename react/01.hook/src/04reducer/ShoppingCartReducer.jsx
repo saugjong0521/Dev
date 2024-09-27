@@ -18,7 +18,7 @@ export function ShoppingCartReducer(state, action) {
             if (currentIndex >= 0) {
                 //새 상품이 아닐 경우 금액만 증가
                 const updateItems = state.items.map((item, idx) =>
-                    idx === currentIndex ? { ...items, quantity: items.quantity + 1 } : item)
+                    idx === currentIndex ? { ...item, quantity: item.quantity + 1 } : item)
 
                 return {
                     ...state,
