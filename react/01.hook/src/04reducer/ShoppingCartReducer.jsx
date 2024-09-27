@@ -45,8 +45,12 @@ export function ShoppingCartReducer(state, action) {
 
                 if (removeIndex.quantity > 1) {
                     const updateItems = state.items.map((el, idx) =>
-                        idx === currentIndex ? { ...el, quantity: el.quantity - 1 } : item
-                    )
+                        idx === currentIndex ? { ...el, quantity: el.quantity - 1 } : item)
+                    return {
+                        ...state,
+                        items: updateItems,
+                        totalPrice: state.totalPrice - removeIndex.price
+                    }
                 }
 
             }
