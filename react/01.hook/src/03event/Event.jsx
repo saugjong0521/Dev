@@ -34,6 +34,7 @@ onMouseEnter: hover이벤트
 onMouseLeave: out이벤트
 
 - 키보드 이벤트
+한글로 입력시 console창에는 다른 글이 나올 수 있음
 onKeyDown: 키를 누를때 사용
 onKeyUp: 키를 눌렀다 땔 때 발생
 onKeyPress: 키를 누르고 있는 상태
