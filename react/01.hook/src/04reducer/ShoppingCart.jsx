@@ -25,9 +25,9 @@ export default function ShoppingCart() {
     }
 
     const deleteItemCart = (product) => {
-        dispatch({ type: 'delete-item', pay: product})
+        dispatch({ type: 'delete-item', pay: product })
     }
-    
+
 
     return (
         <>
@@ -40,6 +40,16 @@ export default function ShoppingCart() {
                     <button onClick={() => deleteItemCart(el)}>장바구니 삭제</button>
                 </li>
             ))}
+
+            <h1>카트 리스트</h1>
+            <ul>
+                {state.items.map((el) => (
+                    <li key={el.id}>
+                        <p>{el.name}: {el.price}</p>
+                    </li>
+                ))}
+            </ul>
+
         </>
     )
 
