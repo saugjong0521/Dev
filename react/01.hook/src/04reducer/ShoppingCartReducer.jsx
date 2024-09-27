@@ -6,8 +6,8 @@ export const init = {
     totalPrice: 0, //카트에 담긴 상품들의 총 금액
 }
 
-function findItemIndex(el, id) {
-    return el.findIndex((item) => item.id === id)
+function findItemIndex(el, idx) {
+    return el.findIndex((item) => item.id === idx)
 }
 
 
