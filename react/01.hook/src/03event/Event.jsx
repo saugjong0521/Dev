@@ -76,12 +76,12 @@ export default function Event() {
     //포커스 이벤트
     const handleFocus = (e) => {
         setIsFocus(true);
-        console.log(isFocus)
+        // console.log(isFocus)
     }
 
     const handleBlur = (e) => {
         setIsFocus(false)
-        console.log(isFocus)
+        // console.log(isFocus)
     }
 
     //마우스 이벤트
