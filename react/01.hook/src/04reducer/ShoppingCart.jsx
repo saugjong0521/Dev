@@ -23,6 +23,10 @@ export default function ShoppingCart() {
     const addItemCart = (product) => {
         dispatch({ type: 'add-item', pay: product })
     }
+
+    const deleteItemCart = (product) => {
+        dispatch({ type: 'delete-item', pay: product})
+    }
     
 
     return (
@@ -33,7 +37,7 @@ export default function ShoppingCart() {
                     <p>{el.name}</p>
                     <p>{el.price}</p>
                     <button onClick={() => addItemCart(el)}>장바구니 추가</button>
-                    <button>장바구니 삭제</button>
+                    <button onClick={() => deleteItemCart(el)}>장바구니 삭제</button>
                 </li>
             ))}
         </>
