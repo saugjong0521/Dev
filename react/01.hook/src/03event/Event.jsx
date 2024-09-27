@@ -55,6 +55,8 @@ export default function Event() {
     const [inputValue, setInputValue] = useState('');
     const [isFocus, setIsFocus] = useState(false);
     const [text, setText] = useState('마우스가 영역 밖에 있습니다.')
+    
+    const [keyDownValue, setKeyDownValue] = useState('');
 
 
     //폼 이벤트
