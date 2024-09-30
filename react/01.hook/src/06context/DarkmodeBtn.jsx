@@ -8,12 +8,13 @@ export default function DarkmodeBtn() {
     const { theme, toggleTheme } = useContext(ThemeContext)
     console.log(theme)
     const darkMode = {
-        backgroungColor: theme === 'light' ? 'white' : 'black',
+        backgroundColor: theme === 'light' ? 'white' : 'black',
         color: theme === 'light' ? 'black' : 'white'
     }
 
     return (
         <div style={darkMode}>
+            <h1>컬러 모드</h1>
             <button onClick={toggleTheme}
                 style={{
                     background: theme === 'light' ? 'black' : 'white',
