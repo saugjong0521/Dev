@@ -64,6 +64,9 @@ export default function Game() {
     */
 
 
+    const handleClick = (choice) => {
+        
+    }
 
 
     return (
@@ -78,6 +81,8 @@ export default function Game() {
             </div>
 
             <button onClick={handleClick('가위')}>가위</button>
+            <button onClick={handleClick('바위')}>바위</button>
+            <button onClick={handleClick('보')}>보</button>
         </>
 
     )
