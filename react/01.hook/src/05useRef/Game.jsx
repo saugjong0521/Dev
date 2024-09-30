@@ -77,7 +77,7 @@ export default function Game() {
                 }}>
             </div>
 
-            <button onClick={}>멈춰!</button>
+            <button onClick={handleClick('가위')}>가위</button>
         </>
 
     )
