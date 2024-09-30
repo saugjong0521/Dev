@@ -18,9 +18,9 @@ export default function Game() {
     */
 
     const scoreSetting = {
-        가위 : 1,
+        가위 : -1,
         바위 : 0,
-        보 : -1
+        보 : 1
     }   //점수 기준 정하기
 
     const gamePo = {
