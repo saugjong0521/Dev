@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import gameImg from '../gameImg.png';
 
 
@@ -35,9 +35,11 @@ export default function Game() {
     const [score, setScroe] = useState(0);   //기본 점수
     const [imgPo, setImgPo] = useState(gamePo.바위);
 
+    // 이미지가 돌아가는 동안 리랜더링이 계속 되지 않도록 ref를 사용
+    const intervalRef = useRef();
 
     useEffect(() => {
-        
+        intervalRef.current = setInterval(changeHand, 50)
     })
 
     return (
