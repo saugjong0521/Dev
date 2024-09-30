@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { ThemeContext } from "./Darkmode";
+import ChildContainer02 from "./ChildContainer02";
 
 
 
@@ -23,6 +24,7 @@ export default function DarkmodeBtn() {
             >
                 {theme === 'light' ? 'dark로 변경' : 'light로 변경'}
             </button>
+            <ChildContainer02/>
         </div>
     )
 

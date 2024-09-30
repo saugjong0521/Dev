@@ -8,7 +8,7 @@ export default function ChildContainer02 (){
 
     return (
 <>
-<p>{theme}</p>
+<p>텍스트</p>
 </>
 
     )
