@@ -12,7 +12,7 @@ e.g.) 랜더링 주기와 상관없이 지속적으로 유지해야 할 데이�
 
 */
 
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 
 
@@ -23,6 +23,9 @@ export default function Ref() {
     const ref = useRef(); //선택한 값을 넣기 전에 빈 값으로 초기화/선언 작업
     console.log(ref)
 
+    useEffect(()=>{
+        ref.current.focus()
+    })
 
     return (
 
