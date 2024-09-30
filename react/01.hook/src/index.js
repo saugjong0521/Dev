@@ -12,6 +12,7 @@ import Event from './03event/Event';
 import Reducer from './04reducer/Reducer';
 import ShoppingCart from './04reducer/ShoppingCart';
 import Ref from './05useRef/Ref';
+import Game from './05useRef/Game';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -26,7 +27,8 @@ root.render(
     {/* <Event/> */}
     {/* <Reducer/> */}
     {/* <ShoppingCart/> */}
-    <Ref/>
+    {/* <Ref/> */}
+    <Game/>
   </React.StrictMode>
 );
 

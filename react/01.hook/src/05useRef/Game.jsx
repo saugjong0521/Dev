@@ -22,7 +22,7 @@ export default function Game() {
         보 : -1
     }   //점수 기준 정하기
 
-    const gamePosi = {
+    const gamePo = {
         바위 : '-100px',
         가위 : '-500px',
         보 : '-900px'
@@ -30,7 +30,23 @@ export default function Game() {
 
     const [result, setResult] = useState('')    //결과값 (승리, 비김, 패배)
     const [score, setScroe] = useState(0)   //기본 점수
-    const [imgPosi, setImgPosi] = useState(gamePosi.바위);
+    const [imgPo, setImgPo] = useState(gamePosi.바위);
+
+
+    return(
+
+        <>
+            <div className="handleImg" 
+            style={{
+                width: '400px',
+                height: '570px',
+                background: `url(${gamePo})`}}>
+
+
+            </div>
+        </>
+
+    )
 
 
 }
