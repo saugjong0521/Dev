@@ -73,7 +73,7 @@ export default function Game() {
         if(isPlay){
             return; //게임이 진행 중이라면 즉시 종료
         }
-        setIsPlay = true;
+        setIsPlay(true);
         clearInterval(intervalRef.current);
     }
 
@@ -89,9 +89,9 @@ export default function Game() {
                 }}>
             </div>
 
-            <button onClick={handleClick('가위')}>가위</button>
-            <button onClick={handleClick('바위')}>바위</button>
-            <button onClick={handleClick('보')}>보</button>
+            <button onClick={() => handleClick('가위')}>가위</button>
+            <button onClick={() => handleClick('바위')}>바위</button>
+            <button onClick={() => handleClick('보')}>보</button>
         </>
 
     )
