@@ -90,12 +90,12 @@ export default function Game() {
         if(calcScore === 0){
             setResult('비겼습니다. 다시 한 번 더')
         } else if([-1, 2].includes(calcScore)){
-            setResult('축하합니다. 이겼습니다!');
-            setScore((prev) => prev + 1);
-        } else (
+            setResult('축하합니다. 이겼습니다!')
+            setScore((prev) => prev + 1)
+        } else {
             setResult('아쉽네요. 졌습니다.')
             setScore((prev) => prev - 1)
-        )
+        }
 
         //게임이 끝난 후 일정시간 이후 다시 게임 시작
         setTimeout(()=>{
