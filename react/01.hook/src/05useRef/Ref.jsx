@@ -57,7 +57,7 @@ export default function Ref() {
         <p>{num}</p>
         <button onClick={handleCount}>1더하기</button>
 
-        <p>{numRef}</p>
+        <p>{numRef.current}</p>
         <button onClick={handleCountRef}>1더하기</button>
 
 
