@@ -140,6 +140,7 @@
   },
   "active": "1ef3909417067646",
   "lastOpenFiles": [
+    "react/01.hook/src/05useRef/Game.jsx",
     "react/01.hook/src/KakaoTalk_20240930_192633894.png",
     "react/01.hook/src/05useRef/Ref.jsx",
     "react/01.hook/src/05useRef",
@@ -184,7 +185,6 @@
     "react/01.hook/node_modules/serve-index/public/icons/page_white_zip.png",
     "react/01.hook/node_modules/serve-index/public/icons/page_white_wrench.png",
     "react/01.hook/node_modules/serve-index/public/icons/page_white_word.png",
-    "react/01.hook/node_modules/serve-index/public/icons/page_white_world.png",
-    "react/01.hook/node_modules/serve-index/public/icons/page_white_width.png"
+    "react/01.hook/node_modules/serve-index/public/icons/page_white_world.png"
   ]
 }
