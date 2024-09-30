@@ -5,7 +5,7 @@ import { ThemeContext } from "./Darkmode";
 
 export default function DarkmodeBtn (){
 
-    const [theme, toggleTheme] = useContext('ThemeContext')
+    const {theme, toggleTheme} = useContext(ThemeContext)
     console.log(theme)
     const darkMode = {
         backgroungColor : theme === 'light' ? 'white' : 'black',
