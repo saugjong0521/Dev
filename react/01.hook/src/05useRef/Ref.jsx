@@ -21,11 +21,11 @@ export default function Ref() {
 
     //case 01 객체에 직접적으로 접근
     const ref = useRef(); //선택한 값을 넣기 전에 빈 값으로 초기화/선언 작업
-    console.log(ref)
+    // console.log(ref)
 
     useEffect(()=>{
         ref.current.focus() //선택된 객체에 focus()주기
-        console.log(ref)
+        // console.log(ref)
     })
 
     
@@ -35,6 +35,11 @@ export default function Ref() {
     const [num,setNum] = useState(0);
     console.log('랜더링 실행')
 
+    const handleCount = () => {
+        setNum((prev) => prev+1F)
+    }
+
+
     return (
 
         <>
@@ -42,6 +47,7 @@ export default function Ref() {
         <input ref={ref} /> 
         {/* 초기화 된 ref를 연결할 객체에 ref라는 속성을 주고, 초기화된 ref에 변수를 입력 */}
 
+        <button onClick={handleCount}>1더하기</button>
         </>
 
     )
