@@ -77,10 +77,14 @@ export default function Game() {
         clearInterval(intervalRef.current);
 
         const myScore = scoreSetting[choice];
-        console.log(myScore)
+        // console.log(myScore)
 
         const pcScore = scoreSetting[getChoicePC(imgPo)]
-        console.log(pcScore)
+        // console.log(pcScore)
+
+
+        const calcScore = myScore - pcScore;
+        console.log(calcScore)
 
     }
 
