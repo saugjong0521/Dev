@@ -26,8 +26,8 @@ export default function Game() {
     };   //점수 기준 정하기
 
     const gamePo = {
-        바위: '-200px',
-        가위: '-500px',
+        바위: '-120px',
+        가위: '-450px',
         보: '-800px'
     };
 
