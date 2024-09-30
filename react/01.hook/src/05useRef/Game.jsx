@@ -47,7 +47,15 @@ export default function Game() {
     }, [imgPo])
 
     const changeHand = () => {
-        
+        if(imgPo === gamePo.바위){
+            setImgPo(gamePo.가위)
+        }
+        else if(imgPo === gamePo.가위){
+            setImgPo(gamePo.보)
+        }
+        else if(imgPo === gamePo.보){
+            setImgPo(gamePo.바위)
+        }
     }
 
     return (
@@ -57,7 +65,7 @@ export default function Game() {
                 style={{
                     width: '400px',
                     height: '570px',
-                    background: `url(${gameImg})`
+                    background: `url(${gameImg}) ${imgPo} 0` 
                 }}>
 
 
