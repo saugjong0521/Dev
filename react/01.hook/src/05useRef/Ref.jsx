@@ -36,7 +36,7 @@ export default function Ref() {
     console.log('랜더링 실행')
 
     const handleCount = () => {
-        setNum((prev) => prev+1F)
+        setNum((prev) => prev+1)
     }
 
 
@@ -47,6 +47,7 @@ export default function Ref() {
         <input ref={ref} /> 
         {/* 초기화 된 ref를 연결할 객체에 ref라는 속성을 주고, 초기화된 ref에 변수를 입력 */}
 
+        <p>{num}</p>
         <button onClick={handleCount}>1더하기</button>
         </>
 
