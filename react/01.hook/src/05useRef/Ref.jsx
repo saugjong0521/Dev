@@ -45,6 +45,7 @@ export default function Ref() {
 
     const handleCountRef = () => {
         numRef.current += 1;
+        console.log(`${numRef.current}`)
     };
 
     return (
