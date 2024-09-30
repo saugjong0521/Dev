@@ -77,6 +77,7 @@ export default function Game() {
         clearInterval(intervalRef.current);
 
         const myScore = scoreSetting[choice];
+        console.log(myScore)
 
         const pcScore = scoreSetting[getChoicePC(imgPo)]
         console.log(pcScore)
