@@ -35,7 +35,7 @@ export default function Game() {
     const [score, setScroe] = useState(0);   //기본 점수
     const [imgPo, setImgPo] = useState(gamePo.바위);
 
-    
+
     // 이미지가 돌아가는 동안 리랜더링이 계속 되지 않도록 ref를 사용
     const intervalRef = useRef();
 
@@ -70,7 +70,11 @@ export default function Game() {
 
 
     const handleClick = (choice) => {
-
+        if(isPlay){
+            return; //게임이 진행 중이라면 즉시 종료
+        }
+        setIsPlay = true;
+        clearInterval(intervalRef.current);
     }
 
 
