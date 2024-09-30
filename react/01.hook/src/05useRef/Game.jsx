@@ -40,7 +40,7 @@ export default function Game() {
             style={{
                 width: '400px',
                 height: '570px',
-                background: `url(${gamePo})`}}>
+                background: `url(${gameImg})`}}>
 
 
             </div>
