@@ -79,6 +79,12 @@ export default function Game() {
         const myScore = scoreSetting[choice];
         console.log(myScore)
 
+        const pcScore = 
+
+    }
+
+    const getChoicePC = (imgPo) => {
+        return Object.keys(gamePo).find((key)=>gamePo[key] === imgPo)
     }
 
 
