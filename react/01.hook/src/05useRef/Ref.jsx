@@ -45,7 +45,7 @@ export default function Ref() {
     const handleCountRef = () => {
         numRef.current += 1;
         console.log(`${numRef.current}`)
-        //화면의 값은 리랜더링을 통해서만 변경되기 때문에, ref로 라이브에서 값이 변경되는 것을 확인할 수 없다.
+        //화면의 값은 리랜더링을 통해서만 변경되기 때문에, ref로 라이브에서 값이 변경되는 것을 확인할 수 없다. (console로 찍어볼 시 변함)
     };
 
     return (
