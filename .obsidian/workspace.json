@@ -140,6 +140,7 @@
   },
   "active": "1ef3909417067646",
   "lastOpenFiles": [
+    "react/01.hook/src/06context",
     "react/01.hook/src/02effect/Member.jsx",
     "react/01.hook/src/02effect/EffectEx.jsx",
     "react/01.hook/src/02effect/Effect.jsx",
@@ -152,7 +153,6 @@
     "react/01.hook/src/04reducer/ShoppingCartReducer.jsx",
     "react/01.hook/src/04reducer/ShoppingCart.jsx",
     "react/01.hook/src/04reducer/Reducer.jsx",
-    "react/01.hook/src/04reducer/Reducer.ts",
     "react/00.test/node_modules/web-vitals/README.md",
     "react/00.test/node_modules/pretty-format/node_modules/react-is/README.md",
     "react/00.test/node_modules/lz-string/README.md",

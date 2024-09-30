@@ -50,6 +50,7 @@ export default function Game() {
             clearInterval(intervalRef.current)
         }
     }, [imgPo])
+    
 
     const changeHand = () => {
         if(imgPo === gamePo.바위){
