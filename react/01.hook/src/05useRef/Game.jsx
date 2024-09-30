@@ -39,7 +39,7 @@ export default function Game() {
     const intervalRef = useRef();
 
     useEffect(() => {
-        intervalRef.current = setInterval(changeHand, 500)
+        intervalRef.current = setInterval(changeHand, 50)
 
         return ()=> {
             clearInterval(intervalRef.current)
@@ -60,7 +60,7 @@ export default function Game() {
     /*
     imgPo = 현재 손동작의 위치
     gamePo = 가위 바위 보 각각의 이미지가 표시된 위치값
-    
+        -> 값이 다르면 계속 다음 포지션으로 이동시킴
     */
 
     return (
