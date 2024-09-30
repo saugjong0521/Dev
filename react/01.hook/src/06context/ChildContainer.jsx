@@ -1,8 +1,9 @@
 
 
-expost default function ChildContainer (){
+export default function ChildContainer (){
 
     return (
-        <></>
+        <>
+        </>
     )
 }
