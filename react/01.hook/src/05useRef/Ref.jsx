@@ -24,7 +24,7 @@ export default function Ref() {
     console.log(ref)
 
     useEffect(()=>{
-        ref.current.focus()
+        ref.current.focus() //선택된 객체에 focus()주기
     })
 
     return (
