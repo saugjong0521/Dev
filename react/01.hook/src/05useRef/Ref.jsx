@@ -42,6 +42,9 @@ export default function Ref() {
     //useRef버전
     const numRef = useRef(0);
 
+    const handleCountRef = () => {
+        numRef.current += 1;
+    }
 
     return (
 
@@ -53,6 +56,8 @@ export default function Ref() {
         <p>{num}</p>
         <button onClick={handleCount}>1더하기</button>
 
+        <p>{numRef}</p>
+        <button onClick={handleCountRef}>1더하기</button>
 
 
 
