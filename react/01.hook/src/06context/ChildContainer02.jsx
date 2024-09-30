@@ -2,14 +2,15 @@ import { useContext } from "react"
 import { ThemeContext } from "./Darkmode"
 
 
-export default function ChildContainer02 (){
+export default function ChildContainer02() {
 
-    const {theme, toggleTheme} = useContext(ThemeContext)
+    const { theme, toggleTheme } = useContext(ThemeContext)
 
     return (
-<>
-<p>{theme}</p>
-</>
+        <>
+            <p>{theme}</p>
+            <p>text</p>
+        </>
 
     )
 }
