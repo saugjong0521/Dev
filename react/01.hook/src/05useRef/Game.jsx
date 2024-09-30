@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import gameImg from '../gameImg.png';
 
 
@@ -40,7 +40,11 @@ export default function Game() {
 
     useEffect(() => {
         intervalRef.current = setInterval(changeHand, 50)
-    })
+
+        return ()=> {
+            clearInterval(intervalRef.current)
+        }
+    }, [imgPo])
 
     return (
 
