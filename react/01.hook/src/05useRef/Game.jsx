@@ -84,7 +84,7 @@ export default function Game() {
 
     }
 
-    const getChoicePC = (imgPo) => {
+    const getChoicePC = (gamePo) => {
         return Object.keys(gamePo).find((key)=>gamePo[key] === imgPo)
     }
 
