@@ -26,9 +26,9 @@ export default function Game() {
     };   //점수 기준 정하기
 
     const gamePo = {
-        바위: '-100px',
+        바위: '-200px',
         가위: '-500px',
-        보: '-900px'
+        보: '-800px'
     };
 
     const [result, setResult] = useState('');    //결과값 (승리, 비김, 패배)
@@ -39,7 +39,7 @@ export default function Game() {
     const intervalRef = useRef();
 
     useEffect(() => {
-        intervalRef.current = setInterval(changeHand, 50)
+        intervalRef.current = setInterval(changeHand, 500)
 
         return ()=> {
             clearInterval(intervalRef.current)
@@ -57,6 +57,11 @@ export default function Game() {
             setImgPo(gamePo.바위)
         }
     }
+    /*
+    imgPo = 현재 손동작의 위치
+    gamePo = 가위 바위 보 각각의 이미지가 표시된 위치값
+    
+    */
 
     return (
 
