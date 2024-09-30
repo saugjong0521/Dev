@@ -41,7 +41,6 @@ export default function Ref() {
 
     //useRef버전
     const numRef = useRef(0);
-    console.log('랜더링 실행')
 
     const handleCountRef = () => {
         numRef.current += 1;
