@@ -13,6 +13,7 @@ import Reducer from './04reducer/Reducer';
 import ShoppingCart from './04reducer/ShoppingCart';
 import Ref from './05useRef/Ref';
 import Game from './05useRef/Game';
+import Darkmode from './06context/Darkmode';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -29,6 +30,7 @@ root.render(
     {/* <ShoppingCart/> */}
     {/* <Ref/> */}
     {/* <Game/> */}
+    <Darkmode/>
   </React.StrictMode>
 );
 
