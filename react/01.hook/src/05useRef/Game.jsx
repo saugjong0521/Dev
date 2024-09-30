@@ -83,8 +83,17 @@ export default function Game() {
         // console.log(pcScore)
 
 
+        // 점수 계산
         const calcScore = myScore - pcScore;
         console.log(calcScore)
+
+        if(calcScore === 0){
+            setResult('비겼습니다. 다시 한 번 더')
+        } else if([-1, 2].includes(calcScore)){
+            setResult('축하합니다. 이겼습니다!')
+        } else (
+            setResult('아쉽네요. 졌습니다.')
+        )
 
     }
 
@@ -108,6 +117,8 @@ export default function Game() {
             <button onClick={() => handleClick('바위')}>바위</button>
             <button onClick={() => handleClick('보')}>보</button> 
             {/*<button onClick={handleClick('보')}>보</button> 면 즉시실행이라서, 버튼을 누를 시 작동하도록 ()=>{}를 통해 적용 */}
+
+            <h1>{result}</h1>
         </>
 
     )
