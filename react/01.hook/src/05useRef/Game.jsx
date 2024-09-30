@@ -63,6 +63,9 @@ export default function Game() {
         -> 값이 다르면 계속 다음 포지션으로 이동시킴
     */
 
+
+
+
     return (
 
         <>
@@ -72,9 +75,9 @@ export default function Game() {
                     height: '570px',
                     background: `url(${gameImg}) ${imgPo} 0` 
                 }}>
-
-
             </div>
+
+            <button onClick={}>멈춰!</button>
         </>
 
     )
