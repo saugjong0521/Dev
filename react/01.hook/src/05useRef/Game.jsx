@@ -32,7 +32,7 @@ export default function Game() {
     };
 
     const [result, setResult] = useState('');    //결과값 (승리, 비김, 패배)
-    const [score, setScroe] = useState(0);   //기본 점수
+    const [score, setScore] = useState(0);   //기본 점수
     const [imgPo, setImgPo] = useState(gamePo.바위);
 
 
@@ -96,6 +96,8 @@ export default function Game() {
             setResult('아쉽네요. 졌습니다.');
             setScore((prev) => prev - 1);
         )
+
+        
 
     }
 
