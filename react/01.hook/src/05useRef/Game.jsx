@@ -20,15 +20,15 @@ export default function Game() {
     */
 
     const scoreSetting = {
-        가위 : 1,
-        바위 : 0,
-        보 : -1
+        가위: 1,
+        바위: 0,
+        보: -1
     };   //점수 기준 정하기
 
     const gamePo = {
-        바위 : '-100px',
-        가위 : '-500px',
-        보 : '-900px'
+        바위: '-100px',
+        가위: '-500px',
+        보: '-900px'
     };
 
     const [result, setResult] = useState('');    //결과값 (승리, 비김, 패배)
@@ -36,14 +36,18 @@ export default function Game() {
     const [imgPo, setImgPo] = useState(gamePo.바위);
 
 
-    return(
+    useEffect(() => {
+        
+    })
+
+    return (
 
         <>
-            <div className="handleImg" 
-            style={{
-                width: '400px',
-                height: '570px',
-                background: `url(${gameImg})`
+            <div className="handleImg"
+                style={{
+                    width: '400px',
+                    height: '570px',
+                    background: `url(${gameImg})`
                 }}>
 
 
