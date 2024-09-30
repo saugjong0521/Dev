@@ -20,7 +20,7 @@ export default function DarkmodeBtn() {
                     color: 'gray'
                 }}
             >
-                테마 변경
+                {theme === 'light' ? 'dark로 변경' : 'light로 변경'}
             </button>
         </div>
     )
