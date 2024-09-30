@@ -77,14 +77,13 @@ export default function Game() {
         clearInterval(intervalRef.current);
 
         const myScore = scoreSetting[choice];
-        console.log(myScore)
 
-        const pcScore = scoreSetting[getChoicePC]
+        const pcScore = scoreSetting[getChoicePC(imgPo)]
         console.log(pcScore)
 
     }
 
-    const getChoicePC = (gamePo) => {
+    const getChoicePC = (imgPo) => {
         return Object.keys(gamePo).find((key)=>gamePo[key] === imgPo)
     }
 
