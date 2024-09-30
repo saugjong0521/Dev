@@ -25,11 +25,15 @@ export default function Ref() {
 
     useEffect(()=>{
         ref.current.focus() //선택된 객체에 focus()주기
+        console.log(focus)
     })
 
     return (
 
         <>
+
+        <input ref={ref} /> 
+        {/* 초기화 된 ref를 연결할 객체에 ref라는 속성을 주고, 초기화된 ref에 변수를 입력 */}
 
         </>
 
