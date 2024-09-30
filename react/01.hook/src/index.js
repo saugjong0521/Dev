@@ -11,6 +11,7 @@ import Member from './02.effect/Member';
 import Event from './03event/Event';
 import Reducer from './04reducer/Reducer';
 import ShoppingCart from './04reducer/ShoppingCart';
+import Ref from './05useRef/Ref';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -24,7 +25,8 @@ root.render(
     {/* <Member/> */}
     {/* <Event/> */}
     {/* <Reducer/> */}
-    <ShoppingCart/>
+    {/* <ShoppingCart/> */}
+    <Ref/>
   </React.StrictMode>
 );
 
