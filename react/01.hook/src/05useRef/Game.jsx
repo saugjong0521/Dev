@@ -46,6 +46,10 @@ export default function Game() {
         }
     }, [imgPo])
 
+    const changeHand = () => {
+        
+    }
+
     return (
 
         <>
