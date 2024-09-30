@@ -12,7 +12,7 @@ e.g.) 랜더링 주기와 상관없이 지속적으로 유지해야 할 데이�
 
 */
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 
 
@@ -25,8 +25,15 @@ export default function Ref() {
 
     useEffect(()=>{
         ref.current.focus() //선택된 객체에 focus()주기
-        console.log(focus)
+        console.log(ref)
     })
+
+    
+    //case 02 상태값 관리
+    //useState버전
+
+    const [num,setNum] = useState(0);
+    console.log('랜더링 실행')
 
     return (
 
