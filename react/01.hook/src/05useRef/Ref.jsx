@@ -36,8 +36,11 @@ export default function Ref() {
     console.log('랜더링 실행')
 
     const handleCount = () => {
-        setNum((prev) => prev+1)
-    }
+        setNum((prev) => prev+1);
+    };
+
+    //useRef버전
+    const numRef = useRef(0);
 
 
     return (
@@ -49,6 +52,10 @@ export default function Ref() {
 
         <p>{num}</p>
         <button onClick={handleCount}>1더하기</button>
+
+
+
+
         </>
 
     )
