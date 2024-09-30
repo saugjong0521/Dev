@@ -5,9 +5,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import State from './01state/State';
 import State02 from './01state/State02';
-import Effect from './02.effect/Effect';
-import EffectEx from './02.effect/EffectEx';
-import Member from './02.effect/Member';
+import Effect from './02effect/Effect';
+import EffectEx from './02effect/EffectEx';
+import Member from './02effect/Member';
 import Event from './03event/Event';
 import Reducer from './04reducer/Reducer';
 import ShoppingCart from './04reducer/ShoppingCart';
@@ -28,7 +28,7 @@ root.render(
     {/* <Reducer/> */}
     {/* <ShoppingCart/> */}
     {/* <Ref/> */}
-    <Game/>
+    {/* <Game/> */}
   </React.StrictMode>
 );
 
