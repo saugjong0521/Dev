@@ -91,7 +91,8 @@ export default function Game() {
 
             <button onClick={() => handleClick('가위')}>가위</button>
             <button onClick={() => handleClick('바위')}>바위</button>
-            <button onClick={() => handleClick('보')}>보</button>
+            <button onClick={() => handleClick('보')}>보</button> 
+            {/*<button onClick={handleClick('보')}>보</button> 면 즉시실행이라서, 버튼을 누를 시 작동하도록 ()=>{}를 통해 적용 */}
         </>
 
     )
