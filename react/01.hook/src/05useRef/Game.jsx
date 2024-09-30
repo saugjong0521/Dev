@@ -79,7 +79,8 @@ export default function Game() {
         const myScore = scoreSetting[choice];
         console.log(myScore)
 
-        const pcScore = 
+        const pcScore = scoreSetting[getChoicePC]
+        console.log(pcScore)
 
     }
 
