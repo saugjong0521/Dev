@@ -75,6 +75,10 @@ export default function Game() {
         }
         setIsPlay(true);
         clearInterval(intervalRef.current);
+
+        const myScore = scoreSetting[choice];
+        console.log(myScore)
+
     }
 
 
