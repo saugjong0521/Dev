@@ -5,4 +5,14 @@ scss의 특징
 3. 여러가지 sass용 메서드 활용(mixin, for, if, function 등) 가능
 4. import 방식을 채택
 
+scss와 sass의 차이
+중첩시 {}유무와 세미콜론
+결론적으로 scss가 한번에 구조를 파악하기에 익숙하다.
+
 */
+
+.container{
+    div{
+
+    }
+}
