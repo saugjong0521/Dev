@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import BasicCss from './00.basicCss/BasicCss';
 import StyledCom from './02.styledComponents/StyledCom';
 import GlobalStyle from './02.styledComponents/GlobalStyle';
+import Scss from './03.scss/Scss';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -14,7 +15,8 @@ root.render(
     <GlobalStyle/>
     {/* <App /> */}
     {/* <BasicCss/> */}
-    <StyledCom/>
+    {/* <StyledCom/> */}
+    <Scss/>
   </React.StrictMode>
 );
 
