@@ -4,6 +4,11 @@ import './BasicCss.css'
 
 export default function BasicCss() {
 
+    const text = {
+        color: 'pink',
+        fontSize: '30px'
+    }
+
     return (
 
         <div className="container">
@@ -12,6 +17,7 @@ export default function BasicCss() {
             <p style={{ fontSize: '40px', backgroundColor: 'coral' }}>
                 태그에 직접 작성하는 인라인 스타일 방식
             </p>
+            <p style={text}>변수로 선언해서 객체로 전달하는 방식</p>
 
         </div>
 
