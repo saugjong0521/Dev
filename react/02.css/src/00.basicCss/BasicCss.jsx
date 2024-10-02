@@ -1,6 +1,6 @@
 import './BasicCss.css'
 // 외부에서 작성한 css파일을 import해서 작성하는 방식
-// 리셋css같은 파일은 최상위 컴포넌트에 연결해주면 된다.
+// 리셋css같은 파일은 최상위 컴포넌트에 연결해주면 된다. (index.jsx에 보통 연결)
 
 export default function BasicCss() {
 
