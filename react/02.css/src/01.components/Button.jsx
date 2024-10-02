@@ -1,11 +1,11 @@
 import './Button.css'
-
+import styles from './Button.module.css'
 
 
 export default function Button (){
 
 
     return (
-        <button className="btns01">클릭!</button>
+        <button className={styles.btns}>클릭!</button>
     )
 }
