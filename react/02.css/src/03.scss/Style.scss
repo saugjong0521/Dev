@@ -11,12 +11,12 @@ scss와 sass의 차이
 
 */
 
-@import './Component.scss'
+@import './Component.scss';
 
 .container{
     background: gray;
     //mixin호출 @include minin명
-    @include flex-center;
+    // @include flex-center;
     width: 100%;
     max-width: 1200px;
 }

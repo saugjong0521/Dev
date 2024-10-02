@@ -1,4 +1,4 @@
-
+import './Style.scss'
 
 export default function Scss() {
     return(
