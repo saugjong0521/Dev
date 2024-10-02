@@ -30,6 +30,11 @@ scss와 sass의 차이
             @include square(2)
         }
 
+        &.cyan{
+            background: $colorCyab;
+            @include square(1+1);
+        }
+
         &:hover{
             opacity: 1;
         }
