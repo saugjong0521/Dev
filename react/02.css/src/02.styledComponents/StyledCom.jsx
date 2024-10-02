@@ -1,5 +1,5 @@
 import styled, { css, keyframes } from 'styled-components';
-import Keyframes from 'styled-components/dist/models/Keyframes';
+import keyframes from 'styled-components/dist/models/Keyframes';
 
 /*
 styled-components
@@ -75,7 +75,18 @@ const Box = styled(({bgColor, ...props})=><div{...props}/>)`
 `
 
 const CircleAni = keyframes`
-    
+    25%{
+        background: lightcyan;
+    }
+    50%{
+        background: lightsalmon;
+    }
+    75%{
+        background: lightblue;
+    }
+    100%{
+        background: lightyellow;
+    }
 `
 //애니메이션 기능은 keyframes를 추가로 import해서 사용해야 하며,
 //기본 사용법은 일반 css의 애니메이션과 동일하다.
