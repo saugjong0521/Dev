@@ -67,3 +67,6 @@ img{
    width: 100%;
 }
 `
+
+export default GlobalStyle
+//외부에서 컴포넌트를 참조하기 때문에 export 필수
