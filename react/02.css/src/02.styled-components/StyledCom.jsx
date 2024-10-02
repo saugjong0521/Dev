@@ -22,3 +22,6 @@ export default function StyledCom (){
         </>
     )
 }
+
+
+const Container = styled.div``

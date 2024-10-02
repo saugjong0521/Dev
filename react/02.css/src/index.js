@@ -4,12 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import BasicCss from './00.basicCss/BasicCss';
+import StyledCom from './02.styled-components/StyledCom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
-    <BasicCss/>
+    {/* <BasicCss/> */}
+    <StyledCom/>
   </React.StrictMode>
 );
 
