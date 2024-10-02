@@ -1,4 +1,5 @@
 import Button from '../01.components/Button'
+import Button02 from '../01.components/Button02'
 import './BasicCss.css'
 // 외부에서 작성한 css파일을 import해서 작성하는 방식
 // 리셋css같은 파일은 최상위 컴포넌트에 연결해주면 된다. (index.jsx에 보통 연결)
@@ -21,6 +22,7 @@ export default function BasicCss() {
             <p style={text}>변수로 선언해서 객체로 전달하는 방식</p>
 
             <Button/>
+            <Button02/>
 
         </div>
 
