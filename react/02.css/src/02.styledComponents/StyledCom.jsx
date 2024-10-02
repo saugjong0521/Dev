@@ -1,5 +1,4 @@
 import styled, { css, keyframes } from 'styled-components';
-import keyframes from 'styled-components/dist/models/Keyframes';
 
 /*
 styled-components
@@ -28,7 +27,7 @@ export default function StyledCom (){
 
             <Box bgColor={`aqua`}>box</Box>
 
-            <Circle style={{pink}}></Circle>
+            <Circle bgColor={{'pink'}}></Circle>
 
         </Container>
         </>
