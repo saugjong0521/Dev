@@ -47,6 +47,7 @@ const ButtonItem = styled(({fontColor, ...props}) => <button{...props}/>)`
     cursor: pointer;
     opacity: 0.5;
     transition: 500ms;
+    color: ${(color) => color.fontColor}
     &:hover{
         opacity: 1;
         /* 
