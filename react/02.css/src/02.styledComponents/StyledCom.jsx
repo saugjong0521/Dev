@@ -47,7 +47,12 @@ const ButtonItem = styled(({fontColor, ...props}) => <button{...props}/>)`
     cursor: pointer;
     opacity: 0.5;
     transition: 500ms;
-    color: ${(color) => color.fontColor}
+    color: ${(color) => color.fontColor};
+    /*
+    스타일 컴포넌트에는 컴포넌트에 전달된 props를 스타일 정의에 직접적으로 전달할 수 있다.
+    $ {}구문은 자바스크립트 표현식에서 문자열 리터럴 안에 값을 넣어서 문자열에 포함
+    (props) => props.fontColor는 현재 컴포넌트에 전달된 props객체에서 값을 전달받아 styles에 적용하는 방식
+    */
     &:hover{
         opacity: 1;
         /* 
