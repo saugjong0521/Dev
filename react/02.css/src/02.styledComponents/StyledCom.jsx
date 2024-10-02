@@ -1,3 +1,5 @@
+import styled from 'styled-components';
+
 /*
 
 styled-components
@@ -44,4 +46,7 @@ const ButtonItem = styled.button`
     cursor: pointer;
     opacity: 0.5;
     transition: 500ms;
+    &:hover{
+        opacity: 1;
+    }
 `
