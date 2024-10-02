@@ -47,5 +47,9 @@ const ButtonItem = styled.button`
     transition: 500ms;
     &:hover{
         opacity: 1;
+        /* 
+        &는 현재 요소 자신을 참조한다는 뜻 
+        즉, &:hover의 뜻은 해당 요소에 hover을 한다는 의미
+        */
     }
 `
