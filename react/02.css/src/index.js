@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import BasicCss from './00.basicCss/BasicCss';
-import StyledCom from './02.styled-components/StyledCom';
+import StyledCom from './02.styledComponents/StyledCom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

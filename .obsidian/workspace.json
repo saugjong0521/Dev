@@ -140,6 +140,7 @@
   },
   "active": "1ef3909417067646",
   "lastOpenFiles": [
+    "react/02.css/src/02.styledComponents/StyledCom.jsx",
     "react/02.css/src/02.styledComponents/StyledComponents.jsx",
     "react/02.css/src/02.styledComponents",
     "react/02.css/src/02StyledComponents/Styled.jsx",
@@ -151,7 +152,6 @@
     "react/02.css/node_modules/@types/prop-types/index.d.ts",
     "react/02.css/node_modules/@types/prop-types",
     "react/02.css/node_modules/@types/react-dom/test-utils/index.d.ts",
-    "react/02.css/node_modules/@types/react-dom/server.d.ts",
     "react/02.css/node_modules/@types/react-dom/README.md",
     "react/02.css/node_modules/@types/react/README.md",
     "react/02.css/node_modules/csstype/README.md",
