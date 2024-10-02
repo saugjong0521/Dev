@@ -5,10 +5,13 @@ import './BasicCss.css'
 export default function BasicCss() {
 
     return (
-        
+
         <div className="container">
 
             <h1 className="title">리액트 기본 css 작성 방식</h1>
+            <p style={{ fontSize: '40px', backgroundColor: 'coral' }}>
+                태그에 직접 작성하는 인라인 스타일 방식
+            </p>
 
         </div>
 
