@@ -38,7 +38,9 @@ const Container = styled.section`
     padding: 24px;
     margin: 0 auto;
 `
-const ButtonItem = styled.button`
+const ButtonItem = styled(({fontColor, ...props}) => <button{...props}/>)`
+//styled(({fontColor, ...props}) => <button{...props}/>) 스타일 컴포넌트에서 제공하는 기능
+//컴포넌트에 전달된 props를 필터링해서 필터링된 props만 실제 html요소에 전달하기 위해서 사용
     background: lightpink;
     width: 200px;
     height: 50px;
