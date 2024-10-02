@@ -54,7 +54,7 @@ const ButtonItem = styled(({fontColor, ...props}) => <button{...props}/>)`
     (props) => props.fontColor는 현재 컴포넌트에 전달된 props객체에서 값을 전달받아 styles에 적용하는 방식
     */
 
-    ${(props)=>props.sub && css `backgroundColor: cyan;`}
+    ${(props)=>props.sub(true) && css `backgroundColor: cyan`}
     //css를 조건부로 넘겨줄때 css를 체크하는 메소드, styled-components에서 추가로 import
     &:hover{
         opacity: 1;
