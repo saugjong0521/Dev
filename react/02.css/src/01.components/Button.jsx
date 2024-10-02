@@ -6,6 +6,6 @@ export default function Button (){
 
 
     return (
-        <button className="btns">클릭!</button>
+        <button className="btns01">클릭!</button>
     )
 }

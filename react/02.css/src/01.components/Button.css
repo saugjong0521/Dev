@@ -5,3 +5,13 @@ button{
     cursor: pointer;
     color: #fff;
 }
+
+
+
+.btns01{
+    background: pink;
+}
+
+.btns02{
+    background: lightcyan;
+}
