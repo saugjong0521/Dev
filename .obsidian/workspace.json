@@ -140,6 +140,8 @@
   },
   "active": "1ef3909417067646",
   "lastOpenFiles": [
+    "react/02.css/package.json",
+    "react/02.css",
     "react/01.hook/src/06context/ChildContainer02.jsx",
     "react/01.hook/src/06context/ChildContainer.jsx",
     "react/01.hook/src/06context/ChildContainer",
@@ -149,8 +151,6 @@
     "react/01.hook/src/06context/Context.jsx",
     "react/01.hook/src/06context",
     "react/01.hook/src/02effect/Member.jsx",
-    "react/01.hook/src/02effect/EffectEx.jsx",
-    "react/01.hook/src/02effect/Effect.jsx",
     "react/01.hook/src/gameImg.png",
     "react/01.hook/src/KakaoTalk_20240930_192633894.png",
     "react/00.test/node_modules/web-vitals/README.md",
