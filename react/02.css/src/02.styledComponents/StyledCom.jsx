@@ -41,5 +41,7 @@ const ButtonItem = styled.button`
     background: lightpink;
     width: 200px;
     height: 50px;
-    
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 500ms;
 `
