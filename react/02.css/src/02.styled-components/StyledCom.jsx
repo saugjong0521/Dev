@@ -15,6 +15,9 @@ styled-components
 export default function StyledCom (){
     return (
         <>
+        <Container>
+            
+        </Container>
         </>
     )
 }
