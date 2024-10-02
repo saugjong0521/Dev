@@ -7,3 +7,11 @@ $colorPink: pink;
 $colorpurple: purple;
 $colorCyab: cyan;
 
+//mixin: 여러가지 스타일을 선언후에 그룹화 및 재활용하는 목적을 가진 명령어 (@로 선언)
+
+@mixin square($size){
+    $calc: 100px * $size;
+    width: $calc;
+    height: $calc;
+}
+
