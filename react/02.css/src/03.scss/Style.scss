@@ -25,6 +25,11 @@ scss와 sass의 차이
         transition: 300ms;
         @include square(1);
 
+        &.orange{
+            background: $colorOrange;
+            @include square(2)
+        }
+
         &:hover{
             opacity: 1;
         }
