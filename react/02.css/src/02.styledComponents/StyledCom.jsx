@@ -21,7 +21,7 @@ export default function StyledCom (){
         <>
         <Container className='container'>
             {/* 컴포넌트 명과 클래스 명은 서로 다르게 작용하기 때문에 각각 적용 가능 */}
-            <ButtonItem fontColor={'orange'} sub = 'true'>클릭!</ButtonItem>
+            <ButtonItem fontColor={'orange'} sub ={true}>클릭!</ButtonItem>
             <ButtonItem fontColor={'blue'}>클릭!</ButtonItem>
             <ButtonItem>클릭!</ButtonItem>
 
@@ -54,7 +54,7 @@ const ButtonItem = styled(({fontColor, ...props}) => <button{...props}/>)`
     (props) => props.fontColor는 현재 컴포넌트에 전달된 props객체에서 값을 전달받아 styles에 적용하는 방식
     */
 
-    ${(props)=>props.sub(true) && css `backgroundColor: cyan`}
+    ${(props)=>props.sub && css `backgroundColor: cyan`}
     //css를 조건부로 넘겨줄때 css를 체크하는 메소드, styled-components에서 추가로 import
     &:hover{
         opacity: 1;
