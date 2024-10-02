@@ -41,4 +41,3 @@ module.css
 클래스 네임을 고유한 이름으로 변경시켜서 className의 중첩으로 충돌이 일어나지 않게 만들어 관리하는 것이 목적
  */
 
-//yarn add styled-components
