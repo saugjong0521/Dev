@@ -19,4 +19,14 @@ scss와 sass의 차이
     // @include flex-center;
     width: 100%;
     max-width: 1200px;
+    .box{
+        background: coral;
+        opacity: 0.7;
+        transition: 300ms;
+        @include square(1);
+
+        &:hover{
+            opacity: 1;
+        }
+    }
 }
