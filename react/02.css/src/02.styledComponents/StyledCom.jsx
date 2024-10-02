@@ -28,7 +28,7 @@ export default function StyledCom (){
 
             <Box bgColor={`aqua`}>box</Box>
 
-            <Circle></Circle>
+            <Circle style={{pink}}></Circle>
 
         </Container>
         </>
@@ -95,4 +95,6 @@ const CircleAni = keyframes`
 
 const Circle = styled(Box)`
     //이전에 만들어진 컴포넌트를 참조할 때에는 styled.태그명이 아닌 styled(컴포넌트명)으로 변경
+    border-radius: 100%;
+    animation: ${CircleAni} 5000ms infinite;
 `
