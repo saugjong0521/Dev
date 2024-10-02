@@ -27,7 +27,7 @@ export default function StyledCom (){
 
             <Box bgColor={`aqua`}>box</Box>
 
-            <Circle bgColor={{'pink'}}></Circle>
+            <Circle bgColor={'pink'}></Circle>
 
         </Container>
         </>
