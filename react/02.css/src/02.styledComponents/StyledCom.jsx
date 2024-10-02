@@ -21,7 +21,7 @@ export default function StyledCom (){
         <>
         <Container className='container'>
             {/* 컴포넌트 명과 클래스 명은 서로 다르게 작용하기 때문에 각각 적용 가능 */}
-            <ButtonItem fontColor={'orange'}>클릭!</ButtonItem>
+            <ButtonItem fontColor={'orange'} sub = 'true'>클릭!</ButtonItem>
             <ButtonItem fontColor={'blue'}>클릭!</ButtonItem>
             <ButtonItem>클릭!</ButtonItem>
 
