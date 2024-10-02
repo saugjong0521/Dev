@@ -140,17 +140,19 @@
   },
   "active": "1ef3909417067646",
   "lastOpenFiles": [
+    "react/02.css/public/robots.txt",
+    "react/02.css/public/logo512.png",
+    "react/02.css/public/manifest.json",
+    "react/02.css/public/logo192.png",
+    "react/02.css/public/index.html",
+    "react/02.css/public/favicon.ico",
+    "react/02.css/public",
     "react/02.css/src/02.styled-components/StyledCom.jsx",
     "react/02.css/src/02.styled-components",
     "react/02.css/yarn.lock",
     "react/02.css/node_modules/styled-components/node_modules/postcss/node_modules",
     "react/02.css/node_modules/source-map-loader/node_modules/iconv-lite/encodings/tables/gbk-added.json",
     "react/02.css/node_modules/source-map-loader/node_modules/iconv-lite/encodings/tables/shiftjis.json",
-    "react/02.css/node_modules/source-map-loader/node_modules/iconv-lite/encodings/tables/gb18030-ranges.json",
-    "react/02.css/node_modules/source-map-loader/node_modules/iconv-lite/encodings/tables/eucjp.json",
-    "react/02.css/node_modules/source-map-loader/node_modules/iconv-lite/encodings/tables/cp950.json",
-    "react/02.css/node_modules/source-map-loader/node_modules/iconv-lite/encodings/tables/cp949.json",
-    "react/02.css/node_modules/source-map-loader/node_modules/iconv-lite/encodings/tables/big5-added.json",
     "react/02.css/node_modules/source-map-loader/node_modules/iconv-lite/README.md",
     "react/02.css/node_modules/source-map-loader/node_modules/iconv-lite/Changelog.md",
     "react/02.css/node_modules/source-map-loader/README.md",
@@ -183,8 +185,6 @@
     "react/02.css/node_modules/istanbul-reports/lib/html-spa/assets/sort-arrow-sprite.png",
     "react/02.css/node_modules/istanbul-reports/lib/html/assets/sort-arrow-sprite.png",
     "react/02.css/node_modules/istanbul-reports/lib/html/assets/favicon.png",
-    "react/02.css/node_modules/detect-port-alt/logo.png",
-    "react/02.css/node_modules/serve-index/public/icons/page_world.png",
-    "react/02.css/node_modules/serve-index/public/icons/page_word.png"
+    "react/02.css/node_modules/detect-port-alt/logo.png"
   ]
 }
