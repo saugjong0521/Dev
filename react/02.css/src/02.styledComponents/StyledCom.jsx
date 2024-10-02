@@ -1,5 +1,5 @@
 import styled, { css, keyframes } from 'styled-components';
-import keyframes from 'styled-components/dist/models/Keyframes';
+import Keyframes from 'styled-components/dist/models/Keyframes';
 
 /*
 styled-components
