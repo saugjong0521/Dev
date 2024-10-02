@@ -1,14 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+// import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import BasicCss from './00.basicCss/BasicCss';
 import StyledCom from './02.styledComponents/StyledCom';
+import GlobalStyle from './02.styledComponents/GlobalStyle';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <GlobalStyle/>
     {/* <App /> */}
     {/* <BasicCss/> */}
     <StyledCom/>
