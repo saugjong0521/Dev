@@ -94,5 +94,5 @@ const CircleAni = keyframes`
 //기본 사용법은 일반 css의 애니메이션과 동일하다.
 
 const Circle = styled(Box)`
-    
+    //이전에 만들어진 컴포넌트를 참조할 때에는 styled.태그명이 아닌 styled(컴포넌트명)으로 변경
 `
