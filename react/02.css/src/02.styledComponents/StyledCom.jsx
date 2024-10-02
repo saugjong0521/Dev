@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 /*
 styled-components
@@ -53,6 +53,9 @@ const ButtonItem = styled(({fontColor, ...props}) => <button{...props}/>)`
     $ {}구문은 자바스크립트 표현식에서 문자열 리터럴 안에 값을 넣어서 문자열에 포함
     (props) => props.fontColor는 현재 컴포넌트에 전달된 props객체에서 값을 전달받아 styles에 적용하는 방식
     */
+
+    ${(props)=>props.sub && css `backgroundColor: cyan;`}
+    //css를 조건부로 넘겨줄때 css를 체크하는 메소드, styled-components에서 추가로 import
     &:hover{
         opacity: 1;
         /* 
