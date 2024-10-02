@@ -140,6 +140,7 @@
   },
   "active": "1ef3909417067646",
   "lastOpenFiles": [
+    "react/02.css/src/02.styled-components/StyledCom.jsx",
     "react/02.css/src/02.styled-components",
     "react/02.css/yarn.lock",
     "react/02.css/node_modules/styled-components/node_modules/postcss/node_modules",
@@ -150,7 +151,6 @@
     "react/02.css/node_modules/source-map-loader/node_modules/iconv-lite/encodings/tables/cp950.json",
     "react/02.css/node_modules/source-map-loader/node_modules/iconv-lite/encodings/tables/cp949.json",
     "react/02.css/node_modules/source-map-loader/node_modules/iconv-lite/encodings/tables/big5-added.json",
-    "react/02.css/node_modules/source-map-loader/node_modules/iconv-lite/encodings/tables/cp936.json",
     "react/02.css/node_modules/source-map-loader/node_modules/iconv-lite/README.md",
     "react/02.css/node_modules/source-map-loader/node_modules/iconv-lite/Changelog.md",
     "react/02.css/node_modules/source-map-loader/README.md",
