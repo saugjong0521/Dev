@@ -24,4 +24,10 @@ export default function StyledCom (){
 }
 
 
-const Container = styled.div``
+const Container = styled.section`
+    display: flex;
+    max-width: 1200px;
+    background: lightgray;
+    padding: 24px;
+    margin: 0 auto;
+`
