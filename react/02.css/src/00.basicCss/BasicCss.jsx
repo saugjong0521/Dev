@@ -36,4 +36,7 @@ export default function BasicCss() {
 인라인 스타일에서는 :hover, :focus, 미디어쿼리와 같은 가상요소를 사용할 수 없다.
 -> css파일을 따로 작성해야 하기 때문에 불편하다.
 
+
+module.css
+클래스 네임을 고유한 이름으로 변경시켜서 className의 중첩으로 충돌이 일어나지 않게 만들어 관리하는 것이 목적
  */
