@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 /*
-
 styled-components
 //yarn add styled-components
 //npm install styled-components
