@@ -1,5 +1,5 @@
 import styled, { css, keyframes } from 'styled-components';
-import Keyframes from 'styled-components/dist/models/Keyframes';
+import keyframes from 'styled-components/dist/models/Keyframes';
 
 /*
 styled-components
@@ -27,6 +27,8 @@ export default function StyledCom (){
             <ButtonItem>클릭!</ButtonItem>
 
             <Box bgColor={`aqua`}>box</Box>
+
+            <Circle></Circle>
 
         </Container>
         </>
@@ -90,3 +92,7 @@ const CircleAni = keyframes`
 `
 //애니메이션 기능은 keyframes를 추가로 import해서 사용해야 하며,
 //기본 사용법은 일반 css의 애니메이션과 동일하다.
+
+const Circle = styled(Box)`
+    
+`
