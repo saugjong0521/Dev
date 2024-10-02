@@ -13,7 +13,7 @@ scss와 sass의 차이
 
 @import './Component.scss'
 
-container{
+.container{
     background: gray;
     //mixin호출 @include minin명
     @include flex-center;
