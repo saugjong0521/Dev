@@ -56,7 +56,8 @@ const ButtonItem = styled(({fontColor, ...props}) => <button{...props}/>)`
     (props) => props.fontColor는 현재 컴포넌트에 전달된 props객체에서 값을 전달받아 styles에 적용하는 방식
     */
 
-    ${(props)=>props.sub && css `background: cyan`}
+    ${(props)=>props.sub && css `background: cyan`};
+    
     //css를 조건부로 넘겨줄때 css를 체크하는 메소드, styled-components에서 추가로 import
     &:hover{
         opacity: 1;
@@ -65,4 +66,10 @@ const ButtonItem = styled(({fontColor, ...props}) => <button{...props}/>)`
         즉, &:hover의 뜻은 해당 요소에 hover을 한다는 의미
         */
     }
+`
+
+const Box = styled(({bgColor, ...props})=><div{...props}/>)`
+    width: 500px;
+    height: 500px;
+    background: ${(props)=> props.bgColor};
 `
