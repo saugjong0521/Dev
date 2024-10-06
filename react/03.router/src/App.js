@@ -3,13 +3,13 @@ import './App.css';
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import Header from './pages/Header';
 import Footer from './pages/Footer';
+import Login from './pages/Login';
 import Home from './pages/Home';
 import About from './pages/About';
 import Products from './pages/Products';
 import ItemList from './pages/ItemList';
 import NotFound from './pages/NotFound';
 import ItemDetail from './pages/ItemDetail';
-import Login from './pages/Login';
 
 function App() {
   return (
