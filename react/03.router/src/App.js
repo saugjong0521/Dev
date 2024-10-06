@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Products from './pages/Products';
 import ItemList from './pages/ItemList';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
             <Route path='/about' element={<About/>}/>
             <Route path='/products' element={<Products/>}/>
             <Route path='/itemList' element={<ItemList/>}/>
+
+            <Route path='*' element={<NotFound/>}/>
           </Routes>
         </main>
 
