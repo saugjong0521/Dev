@@ -8,10 +8,10 @@ export default function Header () {
         <h1>header</h1>
         <nav>
             <ul>
-                <li><Link>Home</Link></li>
-                <li><Link>About</Link></li>
-                <li><Link>Product</Link></li>
-                <li><Link>Contact</Link></li>
+                <li><Link to='/'>Home</Link></li>
+                <li><Link to='/about'>About</Link></li>
+                <li><Link to='/product'>Product</Link></li>
+                <li><Link to='/itemList'>Contact</Link></li>
             </ul>
         </nav>
         </>
