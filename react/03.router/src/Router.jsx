@@ -14,8 +14,16 @@ export default function Router (){
     BrowserRouter는 앱을 감싸고 그 안에서 라우팅이 이루어 진다.
 
     Route / Routes
-    Route는 각 경로로 이동시켜주는 컴포넌트
+    Route는 각 경로와 매칭되는 컴포넌트로 이동시켜주는 컴포넌트
     Routes는 여러개의 Route를 감싸는 요소
 
+    Link
+    브라우저의 a태그와 같은 기능을 하며, SPA동작을 유지하면서 페이지간 탐색을 하게 해준다.
+
+    Link와 a태그의 차이점
+    랜더링 방식의 차이
+    a태그는 페이지 전체를 다시 로드하는 방식을 사용하기 때문에 SPA의 리액트와는 맞지 않는다.
+
+    yarn add react-router-dom
     */
 }
