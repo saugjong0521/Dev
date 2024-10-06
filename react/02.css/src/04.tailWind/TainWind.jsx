@@ -43,7 +43,7 @@ export default function TailWind () {
         <>
 
         <div className="flex bg-gray-50">
-            <div className="basis-48 bg-lime-100 text-3xl">box</div>
+            <div className="basis-48 bg-lime-100 text-3xl text-myColor-100">box</div>
         </div>
         
         </>
