@@ -14,6 +14,7 @@ export default function Header () {
                 <li><Link to='/products'>Products</Link></li>
                 <li><Link to='/itemList'>ItemList</Link></li>
             </ul>
+            <a href="https://www.naver.com">네이버</a>
         </nav>
         </>
 
