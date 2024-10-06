@@ -11,7 +11,9 @@ export default function ItemDetail (){
 
     return (
         <>
-        
+            <h1>상품명 {item.name}의 상세 페이지</h1>
+            <p>{item.id}</p>
+            <p>{item.name}</p>
         </>
     )
 
