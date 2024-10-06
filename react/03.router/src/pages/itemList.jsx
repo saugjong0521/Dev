@@ -14,12 +14,14 @@ export default function ItemList (){
     return (
         
         <>
-            <h1>Products Page</h1>
-            <p>Lorem</p>
-            <p>Lorem</p>
-            <p>Lorem</p>
-            <p>Lorem</p>
-            <p>Lorem</p>
+            <h1>아이템 리스트</h1>
+            <ul>
+                {items.map((el)=>(
+                    <li key = {el.id}>
+                        {el.name}
+                    </li>
+                ))}
+            </ul>
         </>
 
     )
