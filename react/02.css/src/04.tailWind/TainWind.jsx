@@ -31,6 +31,12 @@ components
 utilities
 - 클래스가 포함된 css를 불러와서 적용할수 있게 해주는 파일
 
+
+커스텀 클래스 생성
+tailwind.config.js 안의 theme에 작성
+주의할 점은 theme안에 바로 작성하게 되면 기본적으로 제공하는 css들이 적용되지 않게 되는 문제가 생긴다.
+=> extends 안에서 작성
+
 */
 
 

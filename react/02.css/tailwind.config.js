@@ -6,7 +6,12 @@ module.exports = {
       colors: {
         myColor : {
           100: '#ffb03f'
-        }
+        },
+        spacing : {
+          '72' : '18rem',
+          '84' : '21rem',
+          '96' : '24rem'
+        },
       }
    },
   },
