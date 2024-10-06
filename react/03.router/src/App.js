@@ -6,7 +6,7 @@ import Footer from './pages/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Products from './pages/Products';
-import ItemList from './pages/itemList';
+import ItemList from './pages/ItemList';
 
 function App() {
   return (
