@@ -24,6 +24,12 @@ function App() {
             <Route path='/itemList' element={<ItemList/>}/>
             <Route path='/items/:id' element={<ItemDetail/>}/>
 
+            {/*
+            path에 :이 붙는 경우, 매개변수를 참조한다.
+            현재 코드에서는 :id는 id를 지정된 주소로 참조하는 것이 아닌 매개변수로 참조해서
+            ItemDetail페이지에서 받아오는 useParams를 이용한 매개변수를 객체 형태로 반환
+            */}
+
             <Route path='*' element={<NotFound/>}/>
             {/*
             path에 *을 넣게 되면 route로 연결된 path를 제외한 모든 페이지를 선택한다.
