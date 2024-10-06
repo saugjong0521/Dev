@@ -1,7 +1,10 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom";
 
 
 export default function Login () {
+
+    const navigate = useNavigate()
 
     const [userName, setUserName] = useState('');
     const [message, setMessage] = useState('');
@@ -9,6 +12,7 @@ export default function Login () {
     const handleLogin = () => {
         if(userName === 'ksj'){
             setMessage('');
+            navigate('/')
         }
         else
         {
