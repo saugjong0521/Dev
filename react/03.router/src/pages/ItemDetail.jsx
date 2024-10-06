@@ -7,6 +7,8 @@ export default function ItemDetail (){
     console.log({id})
     //path에서 전달된 id를 useParams로 전달받음
 
+    const item = {id: id, name: `item${id}`}
+
     return (
         <>
         
