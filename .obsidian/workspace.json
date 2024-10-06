@@ -140,17 +140,18 @@
   },
   "active": "b4822f9f6f1b2f27",
   "lastOpenFiles": [
+    "react/03.router/src/setupTests.js",
+    "react/03.router/src/logo.svg",
+    "react/03.router/src/reportWebVitals.js",
+    "react/03.router/src/Router.jsx",
+    "react/03.router/src/index.js",
+    "react/03.router/src/index.css",
+    "react/03.router/src/App.test.js",
+    "react/03.router/src/App.js",
+    "react/03.router/src/App.css",
+    "react/03.router/src",
     "react/03.router/node_modules/jest-resolve/node_modules",
     "react/03.router/node_modules/react-dom/umd/react-dom.development.js",
-    "react/03.router/node_modules/react-dom/umd/react-dom.production.min.js",
-    "react/03.router/node_modules/react-dom/umd/react-dom.profiling.min.js",
-    "react/03.router/node_modules/react-dom/umd/react-dom-test-utils.production.min.js",
-    "react/03.router/node_modules/react-dom/umd/react-dom-test-utils.development.js",
-    "react/03.router/node_modules/react-dom/umd/react-dom-server-legacy.browser.development.js",
-    "react/03.router/node_modules/react-dom/umd/react-dom-server-legacy.browser.production.min.js",
-    "react/03.router/node_modules/react-dom/umd/react-dom-server.browser.development.js",
-    "react/03.router/node_modules/react-dom/umd/react-dom-server.browser.production.min.js",
-    "react/03.router/node_modules/react-dom/cjs/react-dom.profiling.min.js",
     "react/03.router/node_modules/react-dom/README.md",
     "react/03.router/node_modules/react/README.md",
     "react/03.router/node_modules/prop-types/node_modules/react-is/README.md",
@@ -184,7 +185,6 @@
     "react/02.css/node_modules/serve-index/public/icons/page_world.png",
     "react/02.css/node_modules/serve-index/public/icons/page_word.png",
     "react/02.css/node_modules/serve-index/public/icons/page_white_wrench.png",
-    "react/02.css/node_modules/serve-index/public/icons/page_white_width.png",
-    "react/02.css/node_modules/serve-index/public/icons/page_white_word.png"
+    "react/02.css/node_modules/serve-index/public/icons/page_white_width.png"
   ]
 }
