@@ -140,6 +140,7 @@
   },
   "active": "b4822f9f6f1b2f27",
   "lastOpenFiles": [
+    "react/03.router/src/pages/Header.jsx",
     "react/03.router/src/pages",
     "react/03.router/node_modules/flat-cache/src/utils.js",
     "react/03.router/node_modules/flat-cache/src/del.js",
@@ -152,7 +153,6 @@
     "react/03.router/node_modules/flat-cache/changelog.md",
     "react/03.router/node_modules/flat-cache",
     "react/03.router/node_modules/file-loader/node_modules/schema-utils/dist/keywords/undefinedAsNull.js",
-    "react/03.router/node_modules/file-loader/node_modules/schema-utils/dist/keywords/absolutePath.js",
     "react/03.router/node_modules/file-loader/node_modules/schema-utils/README.md",
     "react/03.router/node_modules/file-loader/node_modules/schema-utils/CHANGELOG.md",
     "react/03.router/node_modules/file-loader/README.md",
