@@ -140,6 +140,7 @@
   },
   "active": "b4822f9f6f1b2f27",
   "lastOpenFiles": [
+    "react/03.router/src/pages/Login.jsx",
     "react/03.router/src/pages/ItemDetail.jsx",
     "react/03.router/src/pages/ItemList.jsx",
     "react/03.router/src/pages/itemList.jsx",
@@ -150,7 +151,6 @@
     "react/03.router/src/pages/NotFound",
     "react/03.router/src/pages/Home.jsx",
     "react/03.router/src/pages/Footer.jsx",
-    "react/03.router/src/pages/Header.jsx",
     "react/03.router/node_modules/flat-cache/README.md",
     "react/03.router/node_modules/flat-cache/changelog.md",
     "react/03.router/node_modules/file-loader/node_modules/schema-utils/README.md",
