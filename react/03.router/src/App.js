@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import Header from './pages/Header';
 import Footer from './pages/Footer';
 import Home from './pages/Home';
@@ -11,7 +11,7 @@ import ItemList from './pages/ItemList';
 function App() {
   return (
     <>
-      <Router>
+      <BrowserRouter>
         <Header/>
 
         <main>
@@ -24,7 +24,7 @@ function App() {
         </main>
 
         <Footer/>
-      </Router>
+      </BrowserRouter>
     </>
   );
 }
