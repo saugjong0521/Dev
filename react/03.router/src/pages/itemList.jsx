@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 
 export default function ItemList (){
@@ -18,7 +19,7 @@ export default function ItemList (){
             <ul>
                 {items.map((el)=>(
                     <li key = {el.id}>
-                        {el.name}
+                        <Link to={`/items/${el.id}`}>{el.name}</Link>
                     </li>
                 ))}
             </ul>
