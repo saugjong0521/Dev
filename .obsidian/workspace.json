@@ -140,6 +140,7 @@
   },
   "active": "b4822f9f6f1b2f27",
   "lastOpenFiles": [
+    "react/03.router/src/pages/About.jsx",
     "react/03.router/src/pages/NotFound.jsx",
     "react/03.router/src/pages/NotFound",
     "react/03.router/src/pages/Home.jsx",
@@ -150,7 +151,6 @@
     "react/03.router/node_modules/flat-cache/src/del.js",
     "react/03.router/node_modules/flat-cache/src/cache.js",
     "react/03.router/node_modules/flat-cache/package.json",
-    "react/03.router/node_modules/flat-cache/src",
     "react/03.router/node_modules/flat-cache/README.md",
     "react/03.router/node_modules/flat-cache/changelog.md",
     "react/03.router/node_modules/file-loader/node_modules/schema-utils/README.md",
