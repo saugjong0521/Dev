@@ -140,6 +140,8 @@
   },
   "active": "773315788c9e80bd",
   "lastOpenFiles": [
+    "react/node_modules/yarn/preinstall.js",
+    "react/04.todolist/README.md",
     "conflict-files-obsidian-git.md",
     "react/04.todolist/node_modules/ansi-html-community/bin/ansi-html",
     "react/04.todolist/node_modules/ansi-html-community/README.md",
@@ -177,7 +179,6 @@
     "react/04.todolist/node_modules/@types/jest/node_modules/jest-matcher-utils/README.md",
     "react/04.todolist/node_modules/@types/jest/node_modules/jest-diff/README.md",
     "react/04.todolist/node_modules/@types/jest/node_modules/expect/README.md",
-    "react/04.todolist/node_modules/@types/jest/node_modules/ansi-styles/readme.md",
     "react/04.todolist/node_modules/renderkid/docs/images/usage.png",
     "react/04.todolist/node_modules/renderkid/docs/images/display.png",
     "react/04.todolist/node_modules/renderkid/docs/images/bullets-1.png",
