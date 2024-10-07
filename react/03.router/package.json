@@ -1,5 +1,5 @@
 {
-  "name": "02.css",
+  "name": "03.router",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,9 +8,8 @@
     "@testing-library/user-event": "^13.2.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2",
     "react-scripts": "5.0.1",
-    "sass": "^1.79.4",
-    "styled-components": "^6.1.13",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
@@ -36,8 +35,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "package": "^1.0.1"
   }
 }
