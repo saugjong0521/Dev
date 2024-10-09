@@ -140,6 +140,12 @@
   },
   "active": "b4822f9f6f1b2f27",
   "lastOpenFiles": [
+    "Output/canvas/script.js",
+    "Output/canvas/index.html",
+    "Output/canvas/reset.png",
+    "Output/canvas/save.png",
+    "Output/canvas/reset.css",
+    "Output/canvas",
     "react/node_modules/yarn/bin/yarnpkg.cmd",
     "react/node_modules/yarn/bin/yarnpkg",
     "react/node_modules/yarn/bin/yarn.js",
@@ -148,10 +154,6 @@
     "react/node_modules/yarn/bin/yarn.cmd",
     "react/node_modules/yarn/lib/v8-compile-cache.js",
     "react/node_modules/yarn/README.md",
-    "react/node_modules/yarn/package.json",
-    "react/node_modules/yarn/preinstall.js",
-    "react/node_modules/yarn/bin",
-    "react/node_modules/yarn/LICENSE",
     "react/04.todolist/src/logo.svg",
     "react/04.todolist/public/logo512.png",
     "react/04.todolist/public/logo192.png",
@@ -183,8 +185,6 @@
     "react/03.router/node_modules/renderkid/docs/images/usage.png",
     "react/03.router/node_modules/renderkid/docs/images/display.png",
     "react/03.router/node_modules/renderkid/docs/images/bullets-1.png",
-    "react/03.router/node_modules/@jest/core/build/assets/jest_logo.png",
-    "react/02.css/node_modules/serve-index/public/icons/page_white_zip.png",
-    "react/02.css/node_modules/serve-index/public/icons/page_world.png"
+    "react/03.router/node_modules/@jest/core/build/assets/jest_logo.png"
   ]
 }
