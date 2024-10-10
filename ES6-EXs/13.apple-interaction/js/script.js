@@ -25,7 +25,13 @@ const sectionInfo = [
             canvas : document.querySelector('#video-canvas-0'),
             context : document.querySelector('#video-canvas-0').getContext('2d'),
             title : document.querySelector('.section-0-title'),
-            title_text : document.querySelector
+            title_text : document.querySelector('.section-0-title .title'),
+            text: document.querySelector('section-0-text'),
+            videoImages : []    //이미지를 저장할 배열
+        },
+        values : {
+            videoImageCount : 64, //사용할 이미지의 갯수
+            imgSequence : [0, 64]
         }
     }
 
