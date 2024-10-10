@@ -61,6 +61,12 @@ const sectionInfo = [
     }
 ]
 
+//09.
+function setWords(){
+    const splitWords = section[1].objs.container;
+    const content = splitWords.innerText;
+    const words = content.split(/\./);
+}
 
 //03.
 function setCanvasImage () {
