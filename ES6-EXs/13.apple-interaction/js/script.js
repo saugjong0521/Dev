@@ -94,7 +94,7 @@ function scrollLoop(){
         prevScrollHeight += sectionInfo[i].scrollHeight;
     }
     
-    const currentScrollHeight = sectionInfo[currentsection].scrollHeight;
+    const currentScrollHeight = sectionInfo[currentSection].scrollHeight;
 
     //다음 섹션으로 전환
     if(yOffset > prevScrollHeight + currentScrollHeight){
