@@ -50,7 +50,14 @@ const sectionInfo = [
         objs:{
             container : document.querySelector('.scroll-1-text'),
             video : document.querySelector('.scroll-section-1 video'),
+            words : [],
         },
+        values : {
+            video_opacity : [0, 1, {start: 0.1, end: 0.3}],
+            text_opacity_in : [0.5, 1, {start: 0, end: 1}],
+
+            video_opacity_out : [1, 0, {start: 0.7, end: 1}]
+        }
     }
 ]
 
