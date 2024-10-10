@@ -9,6 +9,7 @@ let acc = 0.3;
 let delayYOffset = 0;
 let rafId;
 let refState;
+const video = document.querySelector('#scroll-section-1 video');
 
 
 //02. section 정리
@@ -262,6 +263,11 @@ function playAnimation (){
                 objs.text.style.opacity = calcValue(values.text_opacity_out, currentYOffset)
             }
             break;
+
+        case 1:
+            if(scrollRatio <= 0.8){
+                
+            }
     }
 
 }
