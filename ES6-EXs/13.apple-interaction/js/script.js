@@ -66,6 +66,14 @@ function setWords(){
     const splitWords = section[1].objs.container;
     const content = splitWords.innerText;
     const words = content.split(/\./);
+    splitWords.innerHTML = '';
+    words.forEach((el,idx) => {
+        const text = document.createElement('span');
+        text.innerHTML = `${el.trim()}.`;
+        text.classList.add('word');
+        sectionInfo[1].objs.words.push(text);
+        splitWords.appendChild(text);
+    })
 }
 
 //03.
@@ -285,7 +293,6 @@ window.addEventListener('scroll', () => {
     }
 })
 
+    setWords();
     setCanvasImage()    //스크립트 실행과 함께 이미지를 로드 처리
-
-
 })()
