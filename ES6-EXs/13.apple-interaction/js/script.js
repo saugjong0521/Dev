@@ -67,7 +67,7 @@ function setLayOut (){
         } else if(sectionInfo[i].type === 'normal'){
             sectionInfo[i].scrollHeight = sectionInfo[i].objs.container.offsetHeight;
         }
-        sectionInfo[i].objs.container.style.height = `${sectionInfo[i].scrollHeight}px`
+        sectionInfo[i].objs.container.style.height = `${sectionInfo[i].scrollHeight}px`;
     }
 
     yOffset = window.pageYOffset;
