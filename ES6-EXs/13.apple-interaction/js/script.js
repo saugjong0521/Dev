@@ -154,7 +154,25 @@ function calcValue(val, currentY){
         const scrollStart = val[2].start * scrollH; //애니메이션이 시작할 위치(스크롤의 높이 기준)
         const scrollEnd = val[2].end * scrollH; //애니메이션이 끝나는 위치(스크롤의 높이 기준)
         const scrollRealH = scrollEnd - scrollStart; //애니메이션이 진행되는 구간의 스크롤 높이
+
+        //현재 스크롤의 위치가 애니메이션 진행 영역 안에 있는 경우
+        if(currentY >= scrollStart && currentY <= scrollEnd){
+            resultValue = ((currentY - scrollStart) / scrollRealH) * (val[1] - val[0]) + val[0]
+            //애니메이션의 진행 비율을 계산하고 값으로 반환 -> 각 이벤트에서 애니메이션의 진행률을 0~1로 표현
+        } else if(currentY < scrollStart){
+            resultValue = val[0];
+            //스크롤이 애니메이션 범위보다 위에 있으면 시작값으로 지정
+        } else if(currentY > scrollEnd){
+            resultValue = val[1];
+            //스크롤이 애니메이션 범위보다 아래에 있으면 종료값으로 지정
+        }
+    } else {
+        //배열의 길이가 2일 경우 애니메이션 섹션 전체에서 발생
+        //스크롤 비율에 따라 값을 계싼
+        resultValue = scrollRatio * (val[1] - val[0] + val[0]);
     }
+    return resultValue;
+    console.log(resultValue)
 }
 
 
