@@ -154,7 +154,7 @@ function loop(){
     
     if(Math.abs(yOffset - delayYOffset) < 1){
         cancelAnimationFrame(rafId)
-        rafState = false; //애니메이션이 실행중이지 않음 체크
+        refState = false; //애니메이션이 실행중이지 않음 체크
     }
 }
 
