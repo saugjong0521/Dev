@@ -210,6 +210,16 @@ function playAnimation (){
     if(scrollRatio > 1){
         scrollRatio = 1;
     }
+
+    switch(currentSection){
+        //섹션의 인덱스마다 다른 애니메이션이 적용되기 때문에 if문보다는 switch 문으로 작성하는것이 깔끔
+
+        case 0 :
+            if(scrollRatio <= 0.6){
+                objs.title.style.opacity = calcValue(values.title_opacity, currentYOffset)
+            }
+    }
+
 }
 
 
