@@ -271,6 +271,8 @@ function playAnimation (){
             } else{
                 objs.video.style.opacity = calcValue(values.video_opacity_out, currentYOffset);
             }
+
+            const triggerPoint
     }
 
 }
