@@ -266,7 +266,10 @@ function playAnimation (){
 
         case 1:
             if(scrollRatio <= 0.8){
-                
+                video.play()
+                objs.video.style.opacity = calcValue(values.video_opacity, currentYOffset);
+            } else{
+                objs.video.style.opacity = calcValue(values.video_opacity_out, currentYOffset);
             }
     }
 
