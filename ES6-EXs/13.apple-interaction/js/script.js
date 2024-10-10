@@ -274,6 +274,7 @@ function playAnimation (){
 
 
 window.addEventListener('load', ()=> {
+    video.pause()
     setLayOut();
 })
 
@@ -292,6 +293,7 @@ window.addEventListener('scroll', () => {
     yOffset = window.pageYOffset;
     fixedMenu()
     scrollLoop()
+    playAnimation()
 
     if(!refState){
         rafId = requestAnimationFrame(loop);
