@@ -42,6 +42,15 @@ const sectionInfo = [
             
             text_opacity_out : [1, 0, {start: 0.91, end: 0.95}],
         }
+    },
+    {
+        type: 'sticky',
+        heightNum: 2,
+        scrollHeight : 0,
+        objs:{
+            container : document.querySelector('.scroll-1-text'),
+            video : document.querySelector('.scroll-section-1 video'),
+        },
     }
 ]
 
