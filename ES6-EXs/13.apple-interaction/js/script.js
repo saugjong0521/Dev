@@ -64,10 +64,17 @@ function setLayOut (){
     for (let i = 0; i < sectionInfo.length; i++){
         if(sectionInfo[i].type === 'sticky'){
             sectionInfo[i].scrollHeight = sectionInfo[i].heightNum * window.innerHeight;
+        } else if(sectionInfo[i].type === 'normal'){
+            sectionInfo[i].scrollHeight = sectionInfo[i].objs.container.offsetHeight;
         }
         sectionInfo[i].objs.container.style.height = `${sectionInfo[i].scrollHeight}px`
     }
 }
+
+
+window.addEventListener('load', ()=> {
+    setLayOut();
+})
 
 
 //01. 메뉴 fixed
