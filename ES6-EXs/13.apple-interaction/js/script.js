@@ -139,7 +139,22 @@ function loop(){
             const values = sectionInfo[currentSection].values;  //현재 섹션의 효과 찾기
             objs.context.clearRect(0, 0, objs.canvas.width, objs.canvas.height);
             let sequence = Math.round(calcValue(values.imgSequence, currentYOffset))
+
+            if(objs.videoImages[sequence]){
+                objs.context.drawImage(objs.videoImages[sequence],0 ,0)
+            }
         }
+    }
+
+    if(delayYOffset < 1){
+        scrollLoop();
+    }
+    rafId = requestAnimationFrame(loop)
+    //스크롤의 위치가 지연된 스크롤 위치와 차이가 없으면 애니메이션이 중단
+    
+    if(Math.abs(yOffset - delayYOffset) < 1){
+        cancelAnimationFrame(rafId)
+        rafState = false; //애니메이션이 실행중이지 않음 체크
     }
 }
 
