@@ -26,7 +26,7 @@ const sectionInfo = [
             context : document.querySelector('#video-canvas-0').getContext('2d'),
             title : document.querySelector('.section-0-title'),
             title_text : document.querySelector('.section-0-title .title'),
-            text: document.querySelector('section-0-text'),
+            text: document.querySelector('.section-0-text'),
             videoImages : []    //이미지를 저장할 배열
         },
         values : {
