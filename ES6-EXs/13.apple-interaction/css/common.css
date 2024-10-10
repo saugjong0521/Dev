@@ -181,7 +181,7 @@ body{
 .fixed-el-canvas{
     top: 0;
     height: 100%;
-    transform: scale(0.7);
+    /* transform: scale(0.7); */
     /* opacity: 0; */
     transition: transform 1500ms 300ms, opaicty 500ms;
 }
