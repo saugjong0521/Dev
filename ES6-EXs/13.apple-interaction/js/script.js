@@ -53,7 +53,7 @@ function setCanvasImage () {
         imgItem = new Image();
         imgItem.src = `./images/section01/00${i+1}.png`;    //이미지 경로 설정
         sectionInfo[0].objs.videoImages.push(imgItem)
-        console.log(imgItem)
+        // console.log(imgItem)
     }
 }
 
@@ -69,6 +69,18 @@ function setLayOut (){
         }
         sectionInfo[i].objs.container.style.height = `${sectionInfo[i].scrollHeight}px`
     }
+
+    yOffset = window.pageYOffset;
+    let totalScrollHeight = 0;
+
+    for(let i = 0; i < sectionInfo.length; i++){
+        totalScrollHeight += sectionInfo[i].scrollHeight;
+        if(totalScrollHeight >= yOffset){
+            currentSection = i;
+            break;
+        }
+    }
+    document.body.setAttribute('id',`show-section-${currentSection}`)
 }
 
 
