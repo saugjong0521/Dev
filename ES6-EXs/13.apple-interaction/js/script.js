@@ -199,7 +199,7 @@ function playAnimation (){
     const values = sectionInfo[currentSection].values;
     let currentYOffset = yOffset - prevScrollHeight;    //섹션 내에서 스크롤의 위치
     const scrollH = sectionInfo[currentSection].scrollHeight;   //현재 섹션의 스크롤 높이
-    let scrollRatio = currentYOffset / scrollH; //현재 섹션에서 스크롤된 비율(0~1)
+    let scrollRatio = currentYOffset / scrollH; //현재 섹션에서 스크롤된 비율(0 ~ 1)
 
     //이전 섹션으로 넘어가는 경우 currentYoffset이 음수가 되는것을 방지하기 위해 0으로 고정
     if(currentYOffset < 0){
