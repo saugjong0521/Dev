@@ -138,7 +138,7 @@ function loop(){
             const objs = sectionInfo[currentSection].objs; //현재 섹션에 있는 객체를 찾음
             const values = sectionInfo[currentSection].values;  //현재 섹션의 효과 찾기
             objs.context.clearRect(0, 0, objs.canvas.width, objs.canvas.height);
-            // let sequence = Math.round()
+            let sequence = Math.round(calcValue(values.imgSequence, currentYOffset))
         }
     }
 }
@@ -171,8 +171,9 @@ function calcValue(val, currentY){
         //스크롤 비율에 따라 값을 계싼
         resultValue = scrollRatio * (val[1] - val[0] + val[0]);
     }
-    return resultValue;
     console.log(resultValue)
+
+    return resultValue;
 }
 
 
