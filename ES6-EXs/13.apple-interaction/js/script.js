@@ -158,6 +158,7 @@ function loop(){
     }
 }
 
+
 //07.
 function calcValue(val, currentY){
     let resultValue; //최정적으로 반환할 계산된 값이 들어올 변수
@@ -211,6 +212,11 @@ window.addEventListener('scroll', () => {
     yOffset = window.pageYOffset;
     fixedMenu()
     scrollLoop()
+
+    if(!refState){
+        rafId = requestAnimationFrame(loop);
+        refState = true;
+    }
 })
 
     setCanvasImage()    //스크립트 실행과 함께 이미지를 로드 처리
