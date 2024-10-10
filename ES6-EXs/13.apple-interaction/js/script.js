@@ -38,7 +38,7 @@ const sectionInfo = [
             title_scale : [1, 2, {start: 0.1, end: 0.6}],
 
             text_opacity : [0, 1, {start: 0.7, end: 0.9}],
-            text_scale : [1, 1.3, {start: 0.7, end: 0.9}],
+            text_scale : [1, 1.5, {start: 0.7, end: 0.9}],
             
             text_opacity_out : [1, 0, {start: 0.91, end: 0.95}],
         }
@@ -231,6 +231,7 @@ function playAnimation (){
             } else{
                 objs.text.style.opacity = calcValue(values.text_opacity_out, currentYOffset)
             }
+            break;
     }
 
 }
