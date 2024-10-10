@@ -220,6 +220,7 @@ function playAnimation (){
         case 0 :
             if(scrollRatio <= 0.6){
                 objs.title.style.opacity = calcValue(values.title_opacity, currentYOffset)
+                objs.title.style.transform = `translate(-50%, -50%) scale(${calcValue(values.title_scale, currentYOffset)})`
             }
     }
 
