@@ -272,7 +272,7 @@ function playAnimation (){
                 objs.video.style.opacity = calcValue(values.video_opacity_out, currentYOffset);
             }
 
-            const triggerPoint = window.innerHeight / 100; //뷰포트의 중간 지점
+            const triggerPoint = window.innerHeight / 1.5; //뷰포트의 중간 지점
             let activeIndex = -1;
 
             objs.words.forEach((el, idx)=>{
