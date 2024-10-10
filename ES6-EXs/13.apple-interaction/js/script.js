@@ -18,7 +18,7 @@ const sectionInfo = [
 
     {
         type: 'sticky',
-        height : 3, //해당 섹션의 높이를 화면 기준으로 배수로 늘림 (1080*3), //normal에서는 사용할 필요는 없다.
+        heightNum : 3, //해당 섹션의 높이를 화면 기준으로 배수로 늘림 (1080*3), //normal에서는 사용할 필요는 없다.
         scrollHeight : 0, //섹션의 실제 스크롤 높이 (이벤트가 들어오면서 계산)
         objs:{
             container : document.querySelector('#scroll-section-0'),
@@ -57,6 +57,10 @@ function setCanvasImage () {
     }
 }
 
+//04.
+function setLayOut (){
+    //sectionInfo에서 받은 heightNum을 받아서 section길이를 늘려주는 함수
+}
 
 
 //01. 메뉴 fixed
@@ -74,7 +78,7 @@ window.addEventListener('scroll', () => {
     fixedMenu()
 })
 
-    setCanvasImage()
+    setCanvasImage()    //스크립트 실행과 함께 이미지를 로드 처리
 
 
 })()
