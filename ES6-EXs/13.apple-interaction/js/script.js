@@ -60,6 +60,13 @@ function setCanvasImage () {
 //04.
 function setLayOut (){
     //sectionInfo에서 받은 heightNum을 받아서 section길이를 늘려주는 함수
+
+    for (let i = 0; i < sectionInfo.length; i++){
+        if(sectionInfo[i].type === 'sticky'){
+            sectionInfo[i].scrollHeight = sectionInfo[i].heightNum * window.innerHeight;
+        }
+        sectionInfo[i].objs.container.style.height = `${sectionInfo[i].scrollHeight}px`
+    }
 }
 
 
