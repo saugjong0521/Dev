@@ -84,6 +84,30 @@ function setLayOut (){
 }
 
 
+//05.
+function scrollLoop(){
+    //스크롤 애니메이션
+    newSection = false;
+    prevScrollHeight = 0;
+
+    for(let i = 0; i < currentSection; i++){
+        prevScrollHeight += sectionInfo[i].scrollHeight;
+    }
+    
+    const currentScrollHeight = sectionInfo[currentsection].scrollHeight;
+
+    //다음 섹션으로 전환
+    if(yOffset > prevScrollHeight + currentScrollHeight){
+        if(currentSection < sectionInfo.length - 1){
+            newSection = true;
+            currentSection ++;
+        }
+        document.body.setAttribute('id',)
+    }
+
+}
+
+
 window.addEventListener('load', ()=> {
     setLayOut();
 })
@@ -102,6 +126,7 @@ function fixedMenu (){
 window.addEventListener('scroll', () => {
     yOffset = window.pageYOffset;
     fixedMenu()
+    scrollLoop()
 })
 
     setCanvasImage()    //스크립트 실행과 함께 이미지를 로드 처리
