@@ -129,6 +129,17 @@ function loop(){
     //requestAnimationFrame을 사용해서 화면 갱신마다 애니메이션을 부드럽게 실행해주는 함수
     delayYOffset = delayYOffset + (yOffset - delayYOffset) * acc;
     //애니메이션의 부드러움을 제어하는 코드
+    //스크롤의 지연 효과를 만들어 스크롤이 즉시 반영이 아니라 부드럽게 따라오도록 만들어 줌
+
+    //새로운 section에 진입하지 않았다면 애니메이션 효과 적용
+    if(!newSection){
+        if(currentSection === 0){
+            const currentYOffset = delayYOffset - prevScrollHeight;
+            const objs = sectionInfo[currentSection].objs; //현재 섹션에 있는 객체를 찾음
+            const values = sectionInfo[currentSection].values;  //현재 섹션의 효과 찾기
+            objs.context.clearRect(0, 0, objs.canvas.width, objs.canvas.height);
+        }
+    }
 }
 
 
