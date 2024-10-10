@@ -35,7 +35,7 @@ const sectionInfo = [
             canvas_opacity : [1, 0, {start : 0.0, end : 0.5}], //캔버스의 투명도를 스크롤 비중에 따라 조절
 
             title_opacity : [1, 0, {start: 0.1, end: 0.55}],
-            title_scale : [1, 1.3, {start: 0.1, end: 0.65}],
+            title_scale : [1, 2, {start: 0.1, end: 0.6}],
 
             text_opacity : [1, 0, {start: 0.7, end: 0.9}],
             text_scale : [1, 1.3, {start: 0.7, end: 0.9}],
