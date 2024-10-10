@@ -63,7 +63,7 @@ const sectionInfo = [
 
 //09.
 function setWords(){
-    const splitWords = section[1].objs.container;
+    const splitWords = sectionInfo[1].objs.container;
     const content = splitWords.innerText;
     const words = content.split(/\./);
     splitWords.innerHTML = '';
@@ -255,7 +255,7 @@ function playAnimation (){
                 objs.title.style.transform = `translate(-50%, -50%) scale(${calcValue(values.title_scale, currentYOffset)})`
             }
             //text
-            if(scrollRatio > 0.6 && scrollRatio <= 0.9){
+            if(scrollRatio < 0.6 && scrollRatio <= 0.9){
                 objs.text.style.opacity = calcValue(values.text_opacity, currentYOffset)
                 objs.text.style.transform = `translate(-50%, -50%) scale(${calcValue(values.text_scale, currentYOffset)})`
             } else{
