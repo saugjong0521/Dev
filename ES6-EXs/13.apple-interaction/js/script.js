@@ -102,7 +102,7 @@ function scrollLoop(){
             newSection = true;
             currentSection ++;
         }
-        document.body.setAttribute('id',)
+        document.body.setAttribute('id', `show-section-${currentSection}`)
     }
 
 }
