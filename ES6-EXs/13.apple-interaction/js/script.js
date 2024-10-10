@@ -90,6 +90,8 @@ function scrollLoop(){
     newSection = false;
     prevScrollHeight = 0;
 
+    playAnimation()
+
     for(let i = 0; i < currentSection; i++){
         prevScrollHeight += sectionInfo[i].scrollHeight;
     }
