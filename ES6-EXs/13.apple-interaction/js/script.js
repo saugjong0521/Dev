@@ -103,6 +103,14 @@ function scrollLoop(){
             currentSection ++;
         }
         document.body.setAttribute('id', `show-section-${currentSection}`)
+    } else if(yOffset < prevScrollHeight){
+        if(currentSection > 0){
+            newSection = true;
+            currentSection --;
+        }else{
+            currentSection = 0;
+        }
+        document.body.setAttribute('id', `show-section-${currentSection}`)
     }
 
 }
