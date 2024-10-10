@@ -193,6 +193,26 @@ function calcValue(val, currentY){
 }
 
 
+//08.
+function playAnimation (){
+    const objs = sectionInfo[currentSection].objs;
+    const values = sectionInfo[currentSection].values;
+    let currentYOffset = yOffset - prevScrollHeight;    //섹션 내에서 스크롤의 위치
+    const scrollH = sectionInfo[currentSection].scrollHeight;   //현재 섹션의 스크롤 높이
+    let scrollRatio = currentYOffset / scrollH; //현재 섹션에서 스크롤된 비율(0~1)
+
+    //이전 섹션으로 넘어가는 경우 currentYoffset이 음수가 되는것을 방지하기 위해 0으로 고정
+    if(currentYOffset < 0){
+        currentYOffset = 0;
+        scrollRatio = 0;
+    }
+    //섹션을 끝까지 스크롤한 경우 ratio값을 1으로 고정
+    if(scrollRatio > 1){
+        scrollRatio = 1;
+    }
+}
+
+
 window.addEventListener('load', ()=> {
     setLayOut();
 })
