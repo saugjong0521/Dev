@@ -138,7 +138,22 @@ function loop(){
             const objs = sectionInfo[currentSection].objs; //현재 섹션에 있는 객체를 찾음
             const values = sectionInfo[currentSection].values;  //현재 섹션의 효과 찾기
             objs.context.clearRect(0, 0, objs.canvas.width, objs.canvas.height);
+            // let sequence = Math.round()
         }
+    }
+}
+
+//07.
+function calcValue(val, currentY){
+    let resultValue; //최정적으로 반환할 계산된 값이 들어올 변수
+    const scrollH = sectionInfo[currentSection].scrollHeight;   //현재 섹션의 전체 스크롤 길이
+    const scrollRatio = currentY / scrollH; //현재 섹션에서 스크롤된 비율
+
+    //val의 배열 길이가 3이면, 애니메이션의 시작과 끝 범위가 지정된 경우로 봄
+    if(val.length === 3){
+        const scrollStart = val[2].start * scrollH; //애니메이션이 시작할 위치(스크롤의 높이 기준)
+        const scrollEnd = val[2].end * scrollH; //애니메이션이 끝나는 위치(스크롤의 높이 기준)
+        const scrollRealH = scrollEnd - scrollStart; //애니메이션이 진행되는 구간의 스크롤 높이
     }
 }
 
