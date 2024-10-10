@@ -24,7 +24,8 @@ const sectionInfo = [
             container : document.querySelector('#scroll-section-0'),
             canvas : document.querySelector('#video-canvas-0'),
             context : document.querySelector('#video-canvas-0').getContext('2d'),
-            
+            title : document.querySelector('.section-0-title'),
+            title_text : document.querySelector
         }
     }
 
