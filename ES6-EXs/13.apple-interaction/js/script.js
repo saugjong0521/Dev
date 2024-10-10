@@ -113,6 +113,14 @@ function scrollLoop(){
         document.body.setAttribute('id', `show-section-${currentSection}`)
     }
 
+    //currentSection이 변경된 후에 prevscrollHeight값을 재계산
+    prevScrollHeight = 0;
+    for(let i = 0; i < currentSection; i++){
+        prevScrollHeight += sectionInfo[i].scrollHeight
+    }
+
+    if(newSection) return; //새로운 섹션이 있을때에는 애니메이션을 실행시키지 않음
+
 }
 
 
