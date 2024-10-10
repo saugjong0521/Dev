@@ -10,7 +10,22 @@ let delayYOffset = 0;
 let rafId;
 let refState;
 
-//메뉴 fixed
+
+//02. section 정리
+//애니메이션이 들어가지 않는 section은 type을 normal.
+//애니메이션이 들어가는 section은 type을 sticky로 지정
+const sectionInfo = [
+
+    {
+        type: 'sticky',
+        height : 3, //해당 섹션의 높이를 화면 기준으로 배수로 늘림 (1080*3), //normal에서는 사용할 필요는 없다.
+    }
+
+]
+
+
+
+//01. 메뉴 fixed
 function fixedMenu (){
     if(yOffset > 1){
         document.body.classList.add('nav-fixed')
