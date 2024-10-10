@@ -56,7 +56,7 @@ const sectionInfo = [
             video_opacity : [0, 1, {start: 0.1, end: 0.3}],
             text_opacity_in : [0.5, 1, {start: 0, end: 1}],
 
-            video_opacity_out : [1, 0, {start: 0.7, end: 1}]
+            video_opacity_out : [1, 0, {start: 0.7, end: 1}],
         }
     }
 ]
