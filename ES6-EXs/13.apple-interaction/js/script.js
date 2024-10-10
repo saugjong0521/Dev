@@ -124,6 +124,14 @@ function scrollLoop(){
 }
 
 
+//06.
+function loop(){
+    //requestAnimationFrame을 사용해서 화면 갱신마다 애니메이션을 부드럽게 실행해주는 함수
+    delayYOffset = delayYOffset + (yOffset - delayYOffset) * acc;
+    //애니메이션의 부드러움을 제어하는 코드
+}
+
+
 window.addEventListener('load', ()=> {
     setLayOut();
 })
