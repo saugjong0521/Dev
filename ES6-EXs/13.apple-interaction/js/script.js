@@ -225,9 +225,11 @@ function playAnimation (){
                 objs.title.style.transform = `translate(-50%, -50%) scale(${calcValue(values.title_scale, currentYOffset)})`
             }
             //text
-            if(scrollRatio <= 0.9){
-                objs.text.style.opacity = calcValue(value.text_opacity, currentYOffset)
+            if(scrollRatio > 0.6 && scrollRatio <= 0.9){
+                objs.text.style.opacity = calcValue(values.text_opacity, currentYOffset)
                 objs.text.style.transform = `translate(-50%, -50%) scale(${calcValue(values.text_scale, currentYOffset)})`
+            } else{
+                objs.text.style.opacity = calcValue(values.text_opacity_out, currentYOffset)
             }
     }
 
