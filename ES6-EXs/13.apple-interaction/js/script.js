@@ -272,7 +272,26 @@ function playAnimation (){
                 objs.video.style.opacity = calcValue(values.video_opacity_out, currentYOffset);
             }
 
-            const triggerPoint
+            const triggerPoint = window.innerHeight / 1.5; //뷰포트의 중간 지점
+            let activeIndex = -1;
+
+            objs.words.forEach((el, idx)=>{
+                const rect = el.getBoundingClientRect();
+                const elementMiddle = rect.top + rect.height / 2;
+
+                if(elementMiddle < triggerPoint){
+                    activeIndex = idx;
+                }
+            })
+
+            objs.words.forEach((el, idx)=>{
+                if(idx === activeIndex){
+                    el.style.opacity = 1
+                }else{
+                    el.style.opacity = 0.5
+                }
+            })
+            break;
     }
 
 }
