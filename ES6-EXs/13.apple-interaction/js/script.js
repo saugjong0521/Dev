@@ -39,6 +39,8 @@ const sectionInfo = [
 
             text_opacity : [1, 0, {start: 0.7, end: 0.9}],
             text_scale : [1, 1.3, {start: 0.7, end: 0.9}],
+            
+            text_opacity_out : [1, 0, {start: 0.91, end: 0.95}],
         }
     }
 ]
@@ -225,7 +227,7 @@ function playAnimation (){
             //text
             if(scrollRatio <= 0.9){
                 objs.text.style.opacity = calcValue(value.text_opacity, currentYOffset)
-                objs.text.style.opacity = `translate(-50%, -50%) scale(${calcValue(values.text_scale, currentYOffset)})`
+                objs.text.style.transform = `translate(-50%, -50%) scale(${calcValue(values.text_scale, currentYOffset)})`
             }
     }
 
