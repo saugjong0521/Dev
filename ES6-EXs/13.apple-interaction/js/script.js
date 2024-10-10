@@ -31,11 +31,31 @@ const sectionInfo = [
         },
         values : {
             videoImageCount : 64, //사용할 이미지의 갯수
-            imgSequence : [0, 64]
+            imgSequence : [0, 64],   //이미지 시퀀스 지정(첫 프레임과 끝 프레임 설정)
+            canvas_opacity : [1, 0, {start : 0.0, end : 0.5}], //캔버스의 투명도를 스크롤 비중에 따라 조절
+
+            title_opacity : [1, 0, {start: 0.1, end: 0.55}],
+            title_scale : [1, 1.3, {start: 0.1, end: 0.65}],
+
+            text_opacity : [1, 0, {start: 0.7, end: 0.9}],
+            text_scale : [1, 1.3, {start: 0.7, end: 0.9}],
         }
     }
-
 ]
+
+
+//03.
+function setCanvasImage () {
+    //캔버스에 보여줄 이미지를 로드
+    let imgItem;
+    //section01
+    for(let i = 0; i < sectionInfo[0].values.videoImageCount; i++){
+        imgItem = new Image();
+        imgItem.src = `./images/section01/00${i+1}.png`;    //이미지 경로 설정
+        sectionInfo[0].objs.videoImages.push(imgItem)
+        console.log(imgItem)
+    }
+}
 
 
 
@@ -54,6 +74,7 @@ window.addEventListener('scroll', () => {
     fixedMenu()
 })
 
+    setCanvasImage()
 
 
-})
+})()
