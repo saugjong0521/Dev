@@ -50,7 +50,7 @@ const sectionInfo = [
         scrollHeight : 0,
         objs:{
             container : document.querySelector('.scroll-1-text'),
-            video : document.querySelector('.scroll-section-1 video'),
+            video : document.querySelector('#scroll-section-1 video'),
             words : [],
         },
         values : {
