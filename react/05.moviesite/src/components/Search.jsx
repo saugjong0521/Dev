@@ -81,9 +81,9 @@ export default function Search (){
 
     엔터를 치는 시점
     mousedown 상태에서 엔터를 입력하면 click 이벤트가 발생하기 전에 엔터를 친걸로 인식하므로
-    mousedown이벤트를 발생했지만 폼 제출은 안하게 됨
+    mousedown이벤트를 발생했지만 '폼 제출을 하지 않음'
 
-    click상태에서는 엔터를 입력하면 이미 click이벤트가 발생 후 엔터키를 눌렀으므로 폼 제출이 됨
+    click상태에서는 엔터를 입력하면 이미 click이벤트가 발생 후 엔터키를 눌렀으므로 '폼 제출이 됨'
 
     이벤트 우선순위
     click 이벤트는 mousedown과 mouseup 모두 완료된 상태로 봄
