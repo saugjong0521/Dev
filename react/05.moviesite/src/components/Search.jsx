@@ -80,6 +80,6 @@ const SearchForm = styled.form`
     }
     .search-bar{
         padding: 5px;
-        color: wh
+        color: #fff;
     }
 `
