@@ -140,6 +140,7 @@
   },
   "active": "773315788c9e80bd",
   "lastOpenFiles": [
+    "react/05.moviesite/src/pages/Router.jsx",
     "react/05.moviesite/src/pages/Main.jsx",
     "react/05.moviesite/src/pages/NotFound.jsx",
     "react/05.moviesite/src/pages/Home.jsx",
@@ -150,7 +151,6 @@
     "react/05.moviesite/node_modules/@remix-run/router/dist/router.umd.min.js",
     "react/05.moviesite/node_modules/@remix-run/router/dist/router.umd.min.js.map",
     "react/05.moviesite/node_modules/@remix-run/router/dist/router.umd.js.map",
-    "react/05.moviesite/node_modules/@remix-run/router/dist/router.umd.js",
     "react/05.moviesite/node_modules/@remix-run/router/README.md",
     "react/05.moviesite/node_modules/@remix-run/router/LICENSE.md",
     "react/05.moviesite/node_modules/@remix-run/router/CHANGELOG.md",
