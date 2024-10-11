@@ -64,6 +64,13 @@ img{
    width: 100%;
 }
 
+button{
+   cursor: pointer;
+   outline: none;
+   border: none;
+   background-color: transparent;
+   padding: 0;
+}
 
 `
 
