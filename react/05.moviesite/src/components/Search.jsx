@@ -59,9 +59,9 @@ export default function Search (){
 
                 //위 조건이 모두 만족이 되면 setVisible(false) 실행
             }
-            document.addEventListener('mousedown', handleClickOutside)
+            document.addEventListener('click', handleClickOutside)
             return () => {
-                document.removeEventListener('mousedown', handleClickOutside)
+                document.removeEventListener('click', handleClickOutside)
             }
         }
     },[keyword])
