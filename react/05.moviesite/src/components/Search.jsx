@@ -73,6 +73,10 @@ export default function Search (){
             document.removeEventListener('mousedown', handleClickOutside)
         }
     },[keyword])
+    /*
+    mousedown과 click 이벤트의 차이
+
+    */
 
 
     return(
