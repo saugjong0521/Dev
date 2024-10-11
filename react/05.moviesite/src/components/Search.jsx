@@ -36,8 +36,10 @@ export default function Search (){
         setClearBtn(true);
     }
     
-    const handleClearEvent = () => {
-        
+    const handleClearEvent = (e) => {
+        e.preventDefault();
+        setClearBtn(false);
+        setKeyword('');
     }
 
     return(
