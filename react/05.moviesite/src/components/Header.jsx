@@ -29,6 +29,7 @@ const HeaderContainer = styled.header`
     background-color: black;
     width: 100%;
     z-index: 99;    //fixed
+    gap: 60px;
 `
 
 const Logo = styled.h1`

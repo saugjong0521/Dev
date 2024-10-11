@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import styled from "styled-components"
 
 
 export default function NavigationBar (){
@@ -31,7 +32,7 @@ const Nav = styled.nav`
             a{
                 color: rgba(255, 255, 255, 1);
                 transition: 300ms;
-                font-size: 24px;
+                font-size: 13px;
                 &:hover{
                     color: rgba(255, 255, 255, 0.6);
                 }
