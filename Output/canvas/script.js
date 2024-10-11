@@ -6,9 +6,9 @@ window.onload = () => {
 // 캔버스 크기 조정
 function resizeCanvas() {
     const canvas = document.querySelector('#drawing');
-    const drawingArea = document.querySelector('.drawing')
-    canvas.width = drawingArea.innerWidth*0.95;  // 창 너비에 맞춰 캔버스 너비 설정
-    canvas.height = drawingArea.innerHeight*0.85; // 창 높이에 맞춰 캔버스 높이 설정
+    const drawingArea = document.querySelector('.drawingArea')
+    canvas.width = drawingArea.innerWidth;  // 창 너비에 맞춰 캔버스 너비 설정
+    canvas.height = drawingArea.clientHeight; // 창 높이에 맞춰 캔버스 높이 설정
 }
 
 function drawing() {
