@@ -1,4 +1,4 @@
-import { BsSearch } from "react-icons/bs";
+import { BsSearch, FiX  } from "react-icons/bs";
 import { motion } from "framer-motion"
 import { useState } from "react";
 import styled from "styled-components";
@@ -52,7 +52,7 @@ export default function Search (){
                     />
 
                     {clearBtn && (
-                        <button className = 'clear-btn'>X</button>
+                        <button className = 'clear-btn'><FiX /></button>
                     )}
 
                 </motion.div>
