@@ -72,6 +72,11 @@ button{
    padding: 0;
 }
 
+input{
+   padding: 0,
+   margin: 0,
+}
+
 `
 
 export default GlobalStyle

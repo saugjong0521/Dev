@@ -70,6 +70,7 @@ const SearchForm = styled.form`
         box-sizing: border-box;
         align-items: center;
         justify-content: space-between;
+        border-radius: 5px;
     }
     .search-btns{
         color:#fff;
