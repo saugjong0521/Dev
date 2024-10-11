@@ -51,6 +51,10 @@ export default function Search (){
                         placeholder = "검색어를 입력하세요"
                     />
 
+                    {clearBtn && (
+                        <button className = 'clear-btn'>X</button>
+                    )}
+
                 </motion.div>
             </SearchForm>
 
