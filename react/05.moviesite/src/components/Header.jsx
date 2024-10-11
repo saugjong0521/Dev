@@ -14,6 +14,11 @@ export default function Header () {
                 </Link>
             </Logo>
             <NavigationBar/>
+
+
+            <HeaderRight>
+                위치
+            </HeaderRight>
         </HeaderContainer>
 
     )
@@ -40,4 +45,10 @@ const Logo = styled.h1`
         font-size: 30px;
         color: red;
     }
+`
+
+const HeaderRight = styled.div`
+    margin-left: auto;
+    display: flex;
+    align-items: center;
 `
