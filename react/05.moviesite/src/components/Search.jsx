@@ -28,7 +28,11 @@ export default function Search (){
             <SearchForm>
                 <motion.div
                     initial = {{width : 50}}
-                    animate = {{width : searchOpen ? 300 : 50}}
+                    animate = {{
+                        width : searchOpen ? 300 : 50,
+                        transition : {duration: 30},
+                    }}
+                    
                 >
                     
                     <button type="button" className="search-btns">
