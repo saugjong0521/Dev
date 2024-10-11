@@ -86,6 +86,7 @@ export default function Search (){
     click상태에서는 엔터를 입력하면 이미 click이벤트가 발생 후 엔터키를 눌렀으므로 폼 제출이 됨
 
     이벤트 우선순위
+    click 이벤트는 mousedown과 mouseup 모두 완료된 상태로 봄
 
     */
 
