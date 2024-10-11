@@ -48,9 +48,10 @@ export default function Search (){
     }
 
     useEffect(()=>{
-        const handleClickOutside = (e) => {
-            if(searchRef.current && !searchRef.current.contains(e.target) && !keyword){
+        const handleClickOutside = (event) => {
+            if(searchRef.current && !searchRef.current.contains(event.target) && !keyword){
                 setVisible(false);
+                setSearchOpen(false)
                 //searchRef.current && !searchRef.current.contains(e.target)
                 //사용자가 searchRef가 참조하는 요소 외부를 클릭했는지 확인
                 
@@ -60,13 +61,10 @@ export default function Search (){
                 //위 조건이 모두 만족이 되면 setVisible(false) 실행
             }
         }
-            // 이벤트 리스너 등록
-    document.addEventListener('mousedown', handleClickOutside);
-    
-    // 클린업 함수
-    return () => {
-        document.removeEventListener('mousedown', handleClickOutside);
-    };
+        document.addEventListener('click', handleClickOutside)
+        return () => {
+            document.removeEventListener('click', handleClickOutside)
+        }
     },[keyword])
 
 
