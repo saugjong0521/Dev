@@ -51,7 +51,7 @@ export default function Search (){
         const handleClickOutside = (event) => {
             if(searchRef.current && !searchRef.current.contains(event.target) && !keyword){
                 setVisible(false);
-                setSearchOpen(false)
+                setSearchOpen(false);
                 //searchRef.current && !searchRef.current.contains(e.target)
                 //사용자가 searchRef가 참조하는 요소 외부를 클릭했는지 확인
                 
