@@ -55,4 +55,7 @@ const SearchForm = styled.form`
     position: relative;
     top: 0;
     left: 0;
+    div{
+        border: solid 1px #fff;
+    }
 `
