@@ -140,6 +140,7 @@
   },
   "active": "773315788c9e80bd",
   "lastOpenFiles": [
+    "react/05.moviesite/src/components/Header.jsx",
     "react/05.moviesite/src/components",
     "react/05.moviesite/node_modules/@emotion/is-prop-valid/dist/declarations/src/index.d.ts",
     "react/05.moviesite/node_modules/@emotion/is-prop-valid/dist/declarations/types/index.d.ts",
@@ -150,7 +151,6 @@
     "react/05.moviesite/node_modules/@emotion/unitless/dist/declarations/src",
     "react/05.moviesite/node_modules/@emotion/unitless/dist/declarations",
     "react/05.moviesite/node_modules/@emotion/memoize/dist/declarations/types/index.d.ts",
-    "react/05.moviesite/node_modules/@emotion/memoize/dist/declarations/src/index.d.ts",
     "react/05.moviesite/node_modules/stylis/README.md",
     "react/05.moviesite/node_modules/styled-components/node_modules/tslib/SECURITY.md",
     "react/05.moviesite/node_modules/styled-components/node_modules/tslib/README.md",
