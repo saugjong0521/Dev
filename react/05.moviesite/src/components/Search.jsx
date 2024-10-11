@@ -78,4 +78,8 @@ const SearchForm = styled.form`
         display: flex;
         align-items: center;
     }
+    .search-bar{
+        padding: 5px;
+        color: #fff;
+    }
 `
