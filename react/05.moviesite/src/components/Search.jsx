@@ -1,4 +1,6 @@
-import { BsSearch, FiX  } from "react-icons/bs";
+import { BsSearch} from "react-icons/bs";
+import { FiX } from "react-icons/fi";
+
 import { motion } from "framer-motion"
 import { useState } from "react";
 import styled from "styled-components";
