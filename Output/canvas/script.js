@@ -7,8 +7,17 @@ window.onload = () => {
 function resizeCanvas() {
     const canvas = document.querySelector('#drawing');
     const drawingArea = document.querySelector('.drawingArea')
-    canvas.width = drawingArea.innerWidth;  // 창 너비에 맞춰 캔버스 너비 설정
+    canvas.width = drawingArea.clientWidth;  // 창 너비에 맞춰 캔버스 너비 설정
     canvas.height = drawingArea.clientHeight; // 창 높이에 맞춰 캔버스 높이 설정
+
+    /*
+    window.innerWidth * (0.95)
+    window.innerHeight * (0.85)
+    도 가능
+    */
+
+
+
 }
 
 function drawing() {
@@ -45,7 +54,7 @@ function drawing() {
         changeColor();   // 색상 변경 함수 호출
 
         context.strokeStyle = color;     // 현재 선택된 색상으로 선을 그림
-        context.lineWidth = brush * 10;  // 선 두께 설정
+        context.lineWidth = brush * 8;  // 선 두께 설정
         context.lineCap = "round";       // 선 끝을 둥글게 설정
         context.beginPath();
         context.moveTo(x1, y1);
