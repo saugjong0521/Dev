@@ -46,7 +46,7 @@ export default function Search (){
 
     return(
 
-            <SearchForm>
+            <SearchForm visible={`${searchOpen}`} ref={searchRef}>
                 <motion.div
                     initial = {{width : 50}}
                     animate = {{
