@@ -26,4 +26,6 @@ const HeaderContainer = styled.header`
     z-index: 99;    //fixed
 `
 
-const logo
+const Logo = styled.h1`
+    position: fixed;
+`
