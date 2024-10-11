@@ -1,5 +1,5 @@
 import { BsSearch } from "react-icons/bs";
-import { motion } from "framer-motion/"
+import { motion } from "framer-motion"
 import { useState } from "react";
 import styled from "styled-components";
 
