@@ -2,7 +2,7 @@ import { BsSearch} from "react-icons/bs";
 import { FiX } from "react-icons/fi";
 
 import { motion } from "framer-motion"
-import { useState } from "react";
+import { useRef, useState } from "react";
 import styled from "styled-components";
 
 
@@ -26,6 +26,9 @@ export default function Search (){
     const [searchOpen, setSearchOpen] = useState(false);
     const [clearBtn, setClearBtn] = useState(false);
     const [keyword, setKeyword] = useState('');
+    
+    const [visible, setVisible] = useState(false);
+    const searchRef = useRef();
 
     const handleClickEvent =() =>{
         setSearchOpen((open) => !open)
