@@ -51,6 +51,17 @@ export default function Search (){
         const handleClickOutside = (e) => {
             if(searchRef.current && !searchRef.current.contains(e.target) && !keyword){
                 setVisible(false);
+                //searchRef.current && !searchRef.current.contains(e.target)
+                //사용자가 searchRef가 참조하는 요소 외부를 클릭했는지 확인
+                
+                //!keyword
+                //검색창에 keyword값이 있는지 확인
+
+                //위 조건이 모두 만족이 되면 setVisible(false) 실행
+            }
+            document.addEventListener('click', handleClickOutside)
+            return () => {
+                document.addEventListener('click', handleClickOutside)
             }
         }
     },[keyword])
