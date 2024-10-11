@@ -18,7 +18,7 @@ export default function Header () {
 
 
             <HeaderRight>
-                {/* <Search/> */}
+                <Search/>
             </HeaderRight>
         </HeaderContainer>
 
