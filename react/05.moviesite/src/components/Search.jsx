@@ -34,7 +34,7 @@ export default function Search (){
                     initial = {{width : 50}}
                     animate = {{
                         width : searchOpen ? 300 : 50,
-                        border : `rgba(255, 255, 255, ${searchOpen ? '1' : '0'})`,
+                        borderColor : `rgba(255, 255, 255, ${searchOpen ? '1' : '0'})`,
                         transition : {duration: 0.3},
                     }}
                     
