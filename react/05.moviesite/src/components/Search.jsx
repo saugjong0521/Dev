@@ -30,7 +30,7 @@ export default function Search (){
     const [visible, setVisible] = useState(false);
     const searchRef = useRef();
 
-    const handleClickEvent =() =>{
+    const handleClickEvent = () =>{
         setSearchOpen((open) => !open)
     };
 
