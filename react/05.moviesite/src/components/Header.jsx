@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 import { SiNetflix } from "react-icons/si";
 import NavigationBar from "./NavigationBar";
+import Search from "./Search";
 
 
 export default function Header () {
@@ -17,7 +18,7 @@ export default function Header () {
 
 
             <HeaderRight>
-                위치
+                <Search/>
             </HeaderRight>
         </HeaderContainer>
 
