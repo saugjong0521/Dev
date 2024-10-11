@@ -59,11 +59,14 @@ export default function Search (){
 
                 //위 조건이 모두 만족이 되면 setVisible(false) 실행
             }
-            document.addEventListener('click', handleClickOutside)
-            return () => {
-                document.removeEventListener('click', handleClickOutside)
-            }
         }
+            // 이벤트 리스너 등록
+    document.addEventListener('mousedown', handleClickOutside);
+    
+    // 클린업 함수
+    return () => {
+        document.removeEventListener('mousedown', handleClickOutside);
+    };
     },[keyword])
 
 
