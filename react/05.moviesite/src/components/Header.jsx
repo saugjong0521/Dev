@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 import { SiNetflix } from "react-icons/si";
+import NavigationBar from "./NavigationBar";
 
 
 export default function Header () {
@@ -12,6 +13,7 @@ export default function Header () {
                     <SiNetflix />
                 </Link>
             </Logo>
+            <NavigationBar/>
         </HeaderContainer>
 
     )

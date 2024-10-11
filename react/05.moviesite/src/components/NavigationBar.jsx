@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 
 export default function NavigationBar (){
@@ -18,3 +19,25 @@ export default function NavigationBar (){
     )
 
 }
+
+const Nav = styled.nav`
+    display: flex;
+    align-items: center;
+    ul{
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        li{
+            a{
+                color: rgba(255, 255, 255, 1);
+                transition: 300ms;
+                font-size: 24px;
+                &:hover{
+                    color: rgba(255, 255, 255, 0.6);
+                }
+            }
+        }
+    }
+
+
+`
