@@ -43,7 +43,7 @@ export default function Search (){
                     <button type="button" className="search-btns" onClick={handleClickEvent}>
                         <BsSearch />
                     </button>
-                    <motion.input type="text"
+                    <motion.input type="text" className="search-bar"
                         initial = {{width : 0}}
                         animate = {{width : searchOpen ? 250 : 0}}
                         transition = {{duration : 0.3}}

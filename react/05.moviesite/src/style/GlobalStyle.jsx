@@ -73,8 +73,10 @@ button{
 }
 
 input{
-   padding: 0,
-   margin: 0,
+   padding: 0;
+   outline: none;
+   border: none;
+   background: transparent;
 }
 
 `
