@@ -22,10 +22,11 @@ animate = 컴포넌트가 동적인 상태를 통해서 최종적으로 변경�
 export default function Search (){
 
     const [searchOpen, setSearchOpen] = useState(false);
+    const [clearBtn, setClearBtn] = useState(false);
 
     const handleClickEvent =() =>{
         setSearchOpen((open) => !open)
-    } 
+    };
 
     return(
 
