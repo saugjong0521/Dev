@@ -34,7 +34,7 @@ export default function Search (){
                     initial = {{width : 50}}
                     animate = {{
                         width : searchOpen ? 300 : 50,
-                        border : searchOpen ? 'solid 1px #fff' : 'solid 1px transparent',
+                        border : `rgba(255, 255, 255, ${searchOpen ? '1' : '0'})`,
                         transition : {duration: 0.3},
                     }}
                     
@@ -59,7 +59,7 @@ const SearchForm = styled.form`
     left: 0;
 
     div{
-        border: solid 1px #fff;
+        border: solid 1px transparent;
         padding: 5px;
         box-sizing: border-box;
     }
