@@ -43,7 +43,12 @@ export default function Search (){
                     <button type="button" className="search-btns" onClick={handleClickEvent}>
                         <BsSearch />
                     </button>
-                    <motion.input type="text"/>
+                    <motion.input type="text"
+                        initial = {{width : 0}}
+                        animate = {{width : searchOpen ? 250 : 0}}
+                        transition = {{duration : 0.3}}
+                        placeholder = "검색어를 입력하세요"
+                    />
 
                 </motion.div>
             </SearchForm>
@@ -59,9 +64,12 @@ const SearchForm = styled.form`
     left: 0;
 
     div{
+        display: flex;
         border: solid 1px transparent;
         padding: 5px;
         box-sizing: border-box;
+        align-items: center;
+        justify-content: space-between;
     }
     .search-btns{
         color:#fff;
