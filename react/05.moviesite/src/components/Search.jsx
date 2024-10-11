@@ -66,7 +66,8 @@ const SearchForm = styled.form`
     .search-btns{
         color:#fff;
         font-size: 18px;
-        display:flex;
+        display: flex;
         justify-content: center;
+        align-items: center;
     }
 `
