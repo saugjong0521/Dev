@@ -31,8 +31,9 @@ export default function Search (){
         setSearchOpen((open) => !open)
     };
 
-    const handleInputChange = () => {
-
+    const handleInputChange = (e) => {
+        setKeyword(e.target.value);
+        setClearBtn(true);
     }
 
     return(
@@ -56,8 +57,9 @@ export default function Search (){
                         animate = {{width : searchOpen ? 250 : 0}}
                         transition = {{duration : 0.3}}
                         placeholder = "검색어를 입력하세요"
-                        onChange={handleInputChange}
-                        // onKeyDown={handleInputKeyDown}
+                        value = {keyword}
+                        onChange = {handleInputChange}
+                        // onKeyDown = {handleInputKeyDown}
                     />
 
                     {clearBtn && (
