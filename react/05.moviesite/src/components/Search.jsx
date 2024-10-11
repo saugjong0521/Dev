@@ -34,7 +34,7 @@ export default function Search (){
                     initial = {{width : 50}}
                     animate = {{
                         width : searchOpen ? 300 : 50,
-                        border : 'solid 1px #fff',
+                        border : searchOpen ? 'solid 1px #fff' : 'solid 1px transparent',
                         transition : {duration: 0.3},
                     }}
                     
