@@ -27,5 +27,11 @@ const HeaderContainer = styled.header`
 `
 
 const Logo = styled.h1`
-    position: fixed;
+    font-size: 30px;
+    color: red;
+    a{
+        //link태그는 html에서 컴파일링 될 때에는 a태그로 인식함
+        display: flex;
+        align-items: center;
+    }
 `
