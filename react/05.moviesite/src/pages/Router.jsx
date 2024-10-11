@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./Home";
 import NotFound from "./NotFound";
 import Main from "./Main";
@@ -17,4 +17,7 @@ export default function Router(){
         }
 
     })
+
+    return <RouterProvider router = {router}/>
+
 }
