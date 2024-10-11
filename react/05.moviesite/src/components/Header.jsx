@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { styled } from "styled-components";
+import { SiNetflix } from "react-icons/si";
+
 
 export default function Header () {
     return(
@@ -7,7 +9,7 @@ export default function Header () {
         <HeaderContainer>
             <Logo>
                 <Link to = '/'>
-                    넷플릭스
+                    <SiNetflix />
                 </Link>
             </Logo>
         </HeaderContainer>
