@@ -61,7 +61,7 @@ export default function Search (){
             }
             document.addEventListener('mousedown', handleClickOutside)
             return () => {
-                document.addEventListener('mousedown', handleClickOutside)
+                document.removeEventListener('mousedown', handleClickOutside)
             }
         }
     },[keyword])
