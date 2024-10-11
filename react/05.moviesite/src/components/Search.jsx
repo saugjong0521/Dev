@@ -46,7 +46,6 @@ export default function Search (){
                         borderColor : `rgba(255, 255, 255, ${searchOpen ? '1' : '0'})`,
                         transition : {duration: 0.3},
                     }}
-                    
                 >
                     
                     <button type="button" className="search-btns" onClick={handleClickEvent}>
