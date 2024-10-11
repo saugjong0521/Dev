@@ -60,4 +60,9 @@ const SearchForm = styled.form`
     div{
         border: solid 1px #fff;
     }
+    .search-btns{
+        color:#fff;
+        font-size: 18px;
+        padding: 1px;
+    }
 `
