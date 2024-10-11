@@ -84,6 +84,7 @@ export default function Search (){
                         <BsSearch />
                     </button>
                     <motion.input type="text" className="search-bar"
+                        ref = {inputRef}
                         initial = {{width : 0}}
                         animate = {{width : searchOpen ? 250 : 0}}
                         transition = {{duration : 0.3}}
