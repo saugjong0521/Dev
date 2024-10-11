@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Header from './components/Header';
 import GlobalStyle from './style/GlobalStyle';
-import Router from './pages/Router';
+import Router from './router/Router';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
