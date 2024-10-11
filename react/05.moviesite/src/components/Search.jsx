@@ -22,6 +22,7 @@ export default function Search (){
 
     const [searchOpen, setSearchOpen] = useState(false);
 
+    const handleClickEvent = setSearchOpen((open) => !open)
 
     return(
 
@@ -35,7 +36,7 @@ export default function Search (){
                     
                 >
                     
-                    <button type="button" className="search-btns">
+                    <button type="button" className="search-btns" onClick={handleClickEvent}>
                         <BsSearch />
                     </button>
 
