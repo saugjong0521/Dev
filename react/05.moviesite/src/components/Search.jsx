@@ -76,6 +76,12 @@ export default function Search (){
     /*
     mousedown과 click 이벤트의 차이
 
+    mousedown 마우스가 눌리는 순간
+    click 마우스 버튼 눌럿다 떼는 순간
+
+    엔터를 치는 시점
+    mousedown 상태에서 엔터를 입력하면 click 이벤트가 발생하기 전에 엔터를 친걸로 인식함
+
     */
 
 
