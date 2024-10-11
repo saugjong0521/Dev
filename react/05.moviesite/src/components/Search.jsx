@@ -26,12 +26,15 @@ export default function Search (){
     const [searchOpen, setSearchOpen] = useState(false);
     const [clearBtn, setClearBtn] = useState(false);
     const [keyword, setKeyword] = useState('');
+    const inputRef = useRef();
     
     const [visible, setVisible] = useState(false);
     const searchRef = useRef();
 
     const handleClickEvent = () =>{
         setSearchOpen((open) => !open)
+
+        setTimeout((), 0)
     };
 
     const handleInputChange = (e) => {
