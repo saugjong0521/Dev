@@ -34,7 +34,11 @@ export default function Search (){
     const handleClickEvent = () =>{
         setSearchOpen((open) => !open)
 
-        setTimeout((), 0)
+        setTimeout(() => {
+            if(inputRef.current){
+                inputRef.current.focus()
+            }
+        }, 300)
     };
 
     const handleInputChange = (e) => {
