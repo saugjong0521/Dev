@@ -54,7 +54,7 @@ function drawing() {
         changeColor();   // 색상 변경 함수 호출
 
         context.strokeStyle = color;     // 현재 선택된 색상으로 선을 그림
-        context.lineWidth = brush * 8;  // 선 두께 설정
+        context.lineWidth = brush * 3;  // 선 두께 설정
         context.lineCap = "round";       // 선 끝을 둥글게 설정
         context.beginPath();
         context.moveTo(x1, y1);
