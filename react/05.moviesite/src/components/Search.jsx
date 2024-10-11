@@ -34,6 +34,7 @@ export default function Search (){
                     initial = {{width : 50}}
                     animate = {{
                         width : searchOpen ? 300 : 50,
+                        border : 'solid 1px #fff',
                         transition : {duration: 0.3},
                     }}
                     
@@ -43,7 +44,6 @@ export default function Search (){
                         <BsSearch />
                     </button>
 
-                    <input type="text"></input>
 
                 </motion.div>
             </SearchForm>
@@ -65,9 +65,8 @@ const SearchForm = styled.form`
     }
     .search-btns{
         color:#fff;
-        font-size: 18px;
+        font-size: 24px;
         display: flex;
-        justify-content: center;
         align-items: center;
     }
 `
