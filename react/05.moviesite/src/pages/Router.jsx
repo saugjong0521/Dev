@@ -6,7 +6,7 @@ import Main from "./Main";
 
 
 export default function Router(){
-    const router = createBrowserRouter({
+    const router = createBrowserRouter([
         {
             path: '/',
             element : <Home/>,
@@ -16,8 +16,8 @@ export default function Router(){
             ],
         }
 
-    })
+    ])
 
-    return <RouterProvider router = {router}/>
+    return <RouterProvider router = {router} s/>
 
 }
