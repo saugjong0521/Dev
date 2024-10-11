@@ -1,5 +1,6 @@
 import { BsSearch } from "react-icons/bs";
 import { motion } from "framer-motion/"
+import { useState } from "react";
 
 
 /*
@@ -19,12 +20,15 @@ animate = 컴포넌트가 동적인 상태를 통해서 최종적으로 변경�
 
 export default function Search (){
 
+    const [searchOpen, setSearchOpen] = useState(false);
+
+
     return(
 
             <SearchForm>
                 <motion.div
                     initial = {{width : 50}}
-                    animate = {{width : 250}}
+                    animate = {{width : searchOpen ? 300 : 50}}
                 >
                     
                     <button type="button" className="search-btns">
