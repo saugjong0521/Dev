@@ -35,6 +35,10 @@ export default function Search (){
         setKeyword(e.target.value);
         setClearBtn(true);
     }
+    
+    const handleClearEvent = () => {
+        
+    }
 
     return(
 
@@ -62,7 +66,7 @@ export default function Search (){
                     />
 
                     {clearBtn && (
-                        <button className = 'clear-btn'><FiX /></button>
+                        <button className = 'clear-btn' onClick={handleClearEvent}><FiX /></button>
                     )}
 
                 </motion.div>
