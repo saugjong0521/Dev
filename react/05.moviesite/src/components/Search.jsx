@@ -32,8 +32,9 @@ export default function Search (){
     };
 
     const handleInputChange = (e) => {
-        setKeyword(e.target.value);
-        setClearBtn(true);
+        const value = e.target.value
+        setKeyword(value);
+        setClearBtn(value !== '');
     }
     
     const handleClearEvent = (e) => {
