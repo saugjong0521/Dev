@@ -43,7 +43,7 @@ export default function Search (){
                     <button type="button" className="search-btns" onClick={handleClickEvent}>
                         <BsSearch />
                     </button>
-
+                    <motion.input type="text"/>
 
                 </motion.div>
             </SearchForm>
