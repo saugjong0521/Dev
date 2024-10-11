@@ -48,7 +48,11 @@ export default function Search (){
     }
 
     useEffect(()=>{
-
+        const handleClickOutside = (e) => {
+            if(searchRef.current && !searchRef.current.contains(e.target) && !keyword){
+                setVisible(false);
+            }
+        }
     },[keyword])
 
 
