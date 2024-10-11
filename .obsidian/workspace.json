@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "a09c1ba476af8ad5",
+        "id": "16cc3a0d2e3c15a1",
         "type": "tabs",
         "children": [
           {
-            "id": "b4822f9f6f1b2f27",
+            "id": "65c275eff19f794f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "conflict-files-obsidian-git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "conflict-files-obsidian-git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "conflict-files-obsidian-git.md"
+              }
             }
           }
         ]
@@ -138,26 +146,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b4822f9f6f1b2f27",
+  "active": "65c275eff19f794f",
   "lastOpenFiles": [
-    "Output/Translate_Chat_App/page/src/page/content/translateChat/TranslateChat.css",
-    "Output/Translate_Chat_App/page/src/page/content/translateChat/TranslateChat.jsx",
-    "Output/Translate_Chat_App/page/src/page/header/Gnb.jsx",
-    "Output/Translate_Chat_App/page/src/page/header/Gnb.css",
-    "Output/Translate_Chat_App/page/src/page/content/LoginPage.jsx",
-    "Output/Translate_Chat_App/page/src/page/content/LoginPage.css",
-    "Output/Translate_Chat_App/page/src/page/content/translateChat",
-    "Output/Translate_Chat_App/page/src/page/logo.png",
-    "Output/Translate_Chat_App/page/src/page/content",
-    "Output/Translate_Chat_App/page/src/page/header",
-    "Output/Translate_Chat_App/page/src/page/footer",
-    "Output/Translate_Chat_App/page/src/page/Layout.jsx",
-    "Output/Translate_Chat_App/page/src/logo.svg",
+    "conflict-files-obsidian-git.md",
+    "react/05.moviesite/src/style/GlobalStyle.jsx",
+    "react/05.moviesite/src/pages/NotFound.jsx",
+    "react/05.moviesite/src/pages/Main.jsx",
+    "react/05.moviesite/src/pages/Home.jsx",
+    "react/05.moviesite/src/components/Search.jsx",
+    "react/05.moviesite/src/router/Router.jsx",
+    "react/05.moviesite/src/components/Header.jsx",
+    "react/05.moviesite/src/components/NavigationBar.jsx",
+    "react/05.moviesite/src/style",
+    "react/05.moviesite/src/pages",
+    "react/05.moviesite/src/logo.svg",
+    "react/05.moviesite/public/logo192.png",
+    "react/05.moviesite/public/logo512.png",
+    "react/05.moviesite/README.md",
+    "ES6-EXs/13.apple-interaction/images/section02/004.jpg",
+    "ES6-EXs/13.apple-interaction/images/section02/003.jpg",
+    "ES6-EXs/13.apple-interaction/images/section02/002.jpg",
+    "ES6-EXs/13.apple-interaction/images/section02/001.jpg",
+    "ES6-EXs/13.apple-interaction/images/section01/008.png",
+    "ES6-EXs/13.apple-interaction/images/section01/0063.png",
+    "ES6-EXs/13.apple-interaction/images/section01/009.png",
     "Output/Translate_Chat_App/page/node_modules/@rollup/pluginutils/node_modules/@types/estree/README.md",
     "Output/Translate_Chat_App/page/node_modules/@jest/types/node_modules/@types/yargs/README.md",
     "Output/Translate_Chat_App/page/node_modules/@pmmmwh/react-refresh-webpack-plugin/node_modules/source-map/README.md",
     "Output/Translate_Chat_App/page/node_modules/@istanbuljs/load-nyc-config/node_modules/camelcase/readme.md",
-    "Output/Translate_Chat_App/page/node_modules/@jest/core/build/assets/jest_logo.png",
     "Output/Translate_Chat_App/page/node_modules/@isaacs/cliui/node_modules/wrap-ansi/readme.md",
     "Output/Translate_Chat_App/page/node_modules/@isaacs/cliui/node_modules/strip-ansi/readme.md",
     "Output/Translate_Chat_App/page/node_modules/@isaacs/cliui/node_modules/string-width/readme.md",
@@ -177,14 +193,6 @@
     "Output/Translate_Chat_App/page/node_modules/@babel/highlight/node_modules/chalk/readme.md",
     "Output/Translate_Chat_App/page/node_modules/@babel/highlight/node_modules/ansi-styles/readme.md",
     "Output/Translate_Chat_App/page/node_modules/@babel/highlight/node_modules/color-convert/README.md",
-    "Output/Translate_Chat_App/page/node_modules/@babel/highlight/node_modules/color-convert/CHANGELOG.md",
-    "Output/Translate_Chat_App/page/node_modules/@babel/eslint-parser/node_modules/eslint-visitor-keys/README.md",
-    "Output/canvas/reset.png",
-    "Output/canvas/save.png",
-    "react/04.todolist/src/logo.svg",
-    "react/04.todolist/public/logo512.png",
-    "react/04.todolist/public/logo192.png",
-    "react/03.router/src/logo.svg",
-    "react/03.router/node_modules/renderkid/docs/images/usage.png"
+    "Output/Translate_Chat_App/page/node_modules/@babel/highlight/node_modules/color-convert/CHANGELOG.md"
   ]
 }
