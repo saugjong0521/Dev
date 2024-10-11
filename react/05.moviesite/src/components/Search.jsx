@@ -1,4 +1,6 @@
 import { BsSearch } from "react-icons/bs";
+import { motion } from "framer-motion/"
+
 
 /*
 framer-motion
@@ -16,14 +18,15 @@ export default function Search (){
     return(
 
             <SearchForm>
-                
-                
-                <button type="button" className="search-btns">
-                    <BsSearch />
-                </button>
+                <motion.div>
+                    
+                    <button type="button" className="search-btns">
+                        <BsSearch />
+                    </button>
 
+                    <input type="text"></input>
 
-
+                </motion.div>
             </SearchForm>
 
     )
