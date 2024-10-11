@@ -88,6 +88,7 @@ export default function Search (){
     이벤트 우선순위
     click 이벤트는 mousedown과 mouseup 모두 완료된 상태로 봄
 
+
     */
 
 
