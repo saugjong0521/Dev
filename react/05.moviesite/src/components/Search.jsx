@@ -57,12 +57,16 @@ const SearchForm = styled.form`
     position: relative;
     top: 0;
     left: 0;
+
     div{
         border: solid 1px #fff;
+        padding: 5px;
+        box-sizing: border-box;
     }
     .search-btns{
         color:#fff;
         font-size: 18px;
-        padding: 1px;
+        display:flex;
+        justify-content: center;
     }
 `
