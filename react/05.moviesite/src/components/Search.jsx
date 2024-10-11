@@ -98,4 +98,10 @@ const SearchForm = styled.form`
         padding: 5px;
         color: #fff;
     }
+    .clear-btn{
+        color: #fff;
+        font: 24px;
+        display: flex;
+        align-items: center;
+    }
 `
