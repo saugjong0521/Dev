@@ -2,7 +2,7 @@ import { BsSearch} from "react-icons/bs";
 import { FiX } from "react-icons/fi";
 
 import { motion } from "framer-motion"
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 
 
@@ -46,6 +46,11 @@ export default function Search (){
         setClearBtn(false);
         setKeyword('');
     }
+
+    useEffect(()=>{
+
+    },[keyword])
+
 
     return(
 
