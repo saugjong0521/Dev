@@ -12,6 +12,7 @@ export default function Main (){
             const res = await getMovies(12)
             if( res && res.data ){
                 console.log(res.data)
+                setMovies(res.data) // 여기에 setMovies를 추가
             }
         }
         fetchMovies();
