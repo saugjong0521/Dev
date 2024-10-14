@@ -9,7 +9,7 @@ export default function Main (){
 
     useEffect(()=>{
         const fetchMovies = async () => {
-            const res = await getMovies('now_playing')
+            const res = await getMovies(12)
             if( res && res.data ){
                 console.log(res)
             }
