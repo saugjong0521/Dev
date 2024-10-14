@@ -140,6 +140,8 @@
   },
   "active": "773315788c9e80bd",
   "lastOpenFiles": [
+    "react/05.moviesite/src/axios/Axios.jsx",
+    "react/05.moviesite/src/axios",
     "react/05.moviesite/src/components/Footer.jsx",
     "react/05.moviesite/node_modules/react-icons/lia/index.d.ts",
     "react/05.moviesite/node_modules/react-icons/pi/index.d.ts",
@@ -149,8 +151,6 @@
     "react/05.moviesite/node_modules/react-icons/vsc/index.d.ts",
     "react/05.moviesite/node_modules/react-icons/cg/index.d.ts",
     "react/05.moviesite/node_modules/react-icons/bi/index.d.ts",
-    "react/05.moviesite/node_modules/react-icons/im/index.d.ts",
-    "react/05.moviesite/node_modules/react-icons/sl/index.d.ts",
     "react/05.moviesite/node_modules/react-router/README.md",
     "react/05.moviesite/node_modules/react-router/LICENSE.md",
     "react/05.moviesite/node_modules/react-router/CHANGELOG.md",
