@@ -62,7 +62,3 @@ const MovieItem = styled.div`
     }
 
 `
-
-const release_date = styled.div`
-    
-`
