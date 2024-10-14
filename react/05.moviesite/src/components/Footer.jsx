@@ -28,7 +28,11 @@ export default function Footer (){
                 <li><a href="#" target="_blank">문의하기</a></li>
             </FooterLinks>
 
-            <ServiceBtn>서비스 코드</ServiceBtn>
+            <ServiceBtn>
+            <button>
+                서비스 코드
+                </button>
+            </ServiceBtn>
 
             <FooterInfo>
                 <p>넥플릭스서비시스 코리아 유한회사 통신판매업 신고번호 : 제 2018-111111 전화번호 : 00-1111-1111(수신자부담)</p>
@@ -52,6 +56,7 @@ const FooterContainer = styled.footer`
     flex-direction: column;
     gap: 30px;
     background: 000;
+    padding: 10px 0px;
 `
 const SocialList = styled.ul`
     display: flex;
@@ -79,16 +84,24 @@ const FooterLinks = styled.ul`
     }
 `
 
-const ServiceBtn= styled.button `
+const ServiceBtn= styled.div `
+button {
     padding: 12px 24px;
     color: black;
     border: solid 1px #fff;
-
+    display: inline-block;
+}
 `
 
 const FooterInfo = styled.div`
     display:flex;
     flex-direction: column;
     gap: 10px;
-    p{}
+    p{
+        color: rgba(255,255,255,0.6);
+        font-size: 12px;
+        a{
+
+        }
+    }
 `
