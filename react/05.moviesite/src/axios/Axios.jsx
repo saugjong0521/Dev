@@ -29,6 +29,7 @@ const instance = axios.create({
     }
 })
 
+//영화 목록을 호출
 export const getMovies = async(genreId) => {
     try{
         const res = await instance.get(`discover/movie`, {
@@ -36,7 +37,7 @@ export const getMovies = async(genreId) => {
                 with_genres : genreId
             }
         });
-        return res.data.results; // 여기를 수정
+        return res.data.results;
     }catch(error){
         console.error(error)
     }
