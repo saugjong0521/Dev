@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { getMovies } from "../axios/Axios";
+import { getMainVideos, getMovies } from "../axios/Axios";
 
 
 export default function MainVideo () {
@@ -15,6 +15,10 @@ export default function MainVideo () {
 
                 const randomVideo = movies[Math.floor(Math.random() * movies.length)]
                 console.log(randomVideo)
+
+                setRandomMovie(randomVideo);
+                const videos = await getMainVideos(randomMovie.id);
+
             } catch (error){
                 console.log(error)
             }
