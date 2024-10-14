@@ -1,3 +1,4 @@
+import styled from "styled-components"
 
 
 export default function Main (){
@@ -6,8 +7,6 @@ export default function Main (){
         <>
             <MovieList>
 
-
-
             </MovieList>
         </>
 
@@ -15,6 +14,6 @@ export default function Main (){
 
 }
 
-const MovieList = style.div`
+const MovieList = styled.div`
     
 `
