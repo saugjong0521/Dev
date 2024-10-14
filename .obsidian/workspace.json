@@ -140,6 +140,7 @@
   },
   "active": "773315788c9e80bd",
   "lastOpenFiles": [
+    "react/05.moviesite/src/components/MainVideo.jsx",
     "react/05.moviesite/node_modules/axios/package.json",
     "react/05.moviesite/node_modules/axios/dist/esm/axios.js",
     "react/05.moviesite/node_modules/axios/dist/esm/axios.min.js",
@@ -150,7 +151,6 @@
     "react/05.moviesite/node_modules/axios/lib/platform/node",
     "react/05.moviesite/node_modules/axios/lib/platform/browser",
     "react/05.moviesite/node_modules/axios/lib/platform/common",
-    "react/05.moviesite/node_modules/axios/lib/env/classes",
     "react/05.moviesite/node_modules/react-router/README.md",
     "react/05.moviesite/node_modules/react-router/LICENSE.md",
     "react/05.moviesite/node_modules/react-router/CHANGELOG.md",
