@@ -20,6 +20,7 @@ export default function MainVideo () {
                 setRandomMovie(randomVideo);
                 const videos = await getMainVideos(randomVideo.id);
                 
+                console.log(videos[0].videoKey)
             } catch (error){
                 console.log(error)
             }
