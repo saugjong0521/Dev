@@ -27,8 +27,13 @@ export default function MainVideo () {
     }, [])
 
     return (
-        <> 
-        </>
+
+        <MainVideoContainer>
+            <VideoWrapper>
+                <ReactPlayer></ReactPlayer>
+            </VideoWrapper>
+        </MainVideoContainer>
+
     )
 
 }
