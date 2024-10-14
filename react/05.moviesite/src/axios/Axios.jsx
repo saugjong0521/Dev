@@ -29,7 +29,7 @@ const instance = axios.create({
     }
 })
 
-export const getMovies = async(type) => {
+export const getMovies = async(genreId) => {
     try{
         const res = await instance.get(`discover/movie`, {
             params : {
