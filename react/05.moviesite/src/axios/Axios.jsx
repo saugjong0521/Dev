@@ -34,7 +34,7 @@ const instance = axios.create({
 export const getMovies = async(type) => {
     try{
         const res = await instance.get(`/movie/${type}`);
-        return res;
+        return res.data.results;
     }catch(error){
         console.error(error)
     }
