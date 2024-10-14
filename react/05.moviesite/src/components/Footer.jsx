@@ -45,4 +45,9 @@ export default function Footer (){
 
 const FooterContainer = styled.footer`
     max-width: 980px;
+    width: 100%;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column
+    
 `
