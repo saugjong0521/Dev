@@ -47,7 +47,7 @@ export const getMainVideos = async(movieId) => {
         try-catch 비동기 요청에서 발생할 수 있는 오류를 처리해주기 위해서 사용하는 구문
 
         try = 비동기 작업 코드 (api호출과 관련된 코드)
-        catch = api 호출이 실패했을 경우에 대한 오류를 처리
+        catch = api 호출이 실패했을 경우에 대한 오류를 처리 -> console이나 alert로 에러 메시지, 강제로 페이지 이동시키는 등 가능
     
     */
 
