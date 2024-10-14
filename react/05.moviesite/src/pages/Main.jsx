@@ -39,7 +39,9 @@ export default function Main (){
 }
 
 const MovieList = styled.div`
-    
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px
 `
 
 const MovieItem = styled.div`
