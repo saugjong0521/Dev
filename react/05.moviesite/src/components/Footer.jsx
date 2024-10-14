@@ -1,4 +1,5 @@
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube  } from "react-icons/fa";
+import styled from "styled-components";
 
 
 export default function Footer (){
@@ -50,6 +51,7 @@ const FooterContainer = styled.footer`
     display: flex;
     flex-direction: column;
     gap: 30px;
+    background: 000;
 `
 const SocialList = styled.ul`
     display: flex;
@@ -69,7 +71,23 @@ const FooterLinks = styled.ul`
         a{
             color: rgba(255, 255, 255, 0.6);
             display: block;
-            font-size: 140ex;
+            font-size: 14px;
+            &:hover{
+                text-decoration: underline;
+            }
         }
     }
+`
+
+const ServiceBtn= styled.button `
+    padding: 12px 24px;
+    color:
+
+`
+
+const FooterInfo = styled.div`
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+    p{}
 `
