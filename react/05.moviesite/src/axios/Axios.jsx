@@ -57,9 +57,10 @@ export const getMainVideos = async(movieId) => {
     */
 
     try {
-
-    } catch {
-
+        const res = await instance.get(`movie/${movieId}/videos`)
+        return res.data.results
+    } catch(error) {
+        console.error(error)
     }
 
 
