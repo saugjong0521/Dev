@@ -30,7 +30,14 @@ export default function MainVideo () {
 
         <MainVideoContainer>
             <VideoWrapper>
-                <ReactPlayer></ReactPlayer>
+                <ReactPlayer
+                    url = {`https://youtube.${videoKey}`}
+                    muted = {true}
+                    controls = {false}
+                    width = '100%'
+                    height = '100%'
+                    playing = {true}
+                />
             </VideoWrapper>
         </MainVideoContainer>
 
