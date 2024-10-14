@@ -14,7 +14,8 @@ export default function Main (){
                 console.log(res.data)
             }
         }
-    })
+        fetchMovies();
+    }, [])
     
 
     return(
