@@ -1,5 +1,3 @@
-
-
 /*
 Axios
 node.js나 브라우저에서 사용할 수 있는 http기반의 클라이언트 라이브러리
@@ -34,7 +32,7 @@ const instance = axios.create({
 export const getMovies = async(type) => {
     try{
         const res = await instance.get(`/movie/${type}`);
-        return res.data.results;
+        return res.data; // 여기를 수정
     }catch(error){
         console.error(error)
     }
