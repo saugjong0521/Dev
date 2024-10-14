@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import styled from "styled-components"
 import { getMovies } from "../axios/Axios";
+import MainVideo from "../components/MainVideo";
 
 
 export default function Main (){
@@ -20,6 +21,7 @@ export default function Main (){
 
     return(
         <>
+            <MainVideo/>
             <MovieList>
                 {movies.length > 0 ? (
                     movies.map((movie) => (

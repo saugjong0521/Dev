@@ -15,9 +15,11 @@ export default function MainVideo () {
 
                 const randomVideo = movies[Math.floor(Math.random() * movies.length)]
                 console.log(randomVideo)
+            } catch (error){
+                console.log(error)
             }
         }
-
+        MovieData();
     }, [])
 
     return (
