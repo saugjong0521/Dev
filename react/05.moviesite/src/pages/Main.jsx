@@ -21,7 +21,16 @@ export default function Main (){
     return(
         <>
             <MovieList>
-
+                {movies.length > 0 ? (
+                    movies.map((movie) => (
+                        <MovieItem key = {movie.id}>
+                            <h3>{movie.title}</h3>
+                            <p>{release_date}</p>
+                        </MovieItem>
+                    ))
+                ) : (
+                    <p>영화 데이터를 불러오고 있습니다.</p>
+                )}
             </MovieList>
         </>
 
