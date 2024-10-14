@@ -44,6 +44,11 @@ export const getMovies = async(type) => {
 // 메인 비디오 받아오기
 export const getMainVideos = async(movieId) => {
     /*
+        async = 비동기 함수로 선언된 요소에 await를 사용할 수 있게 하는 메소드
+        await = 비동기 작업이 완료될 때까지 코드의 실행을 중단하고 비동기 통신이 완료될 때까지 대기했다가 결과값을 반환
+                비동기 함수에서만 사용 가능, async가 정의된 함수 안에서만 사용 가능
+
+
         try-catch 비동기 요청에서 발생할 수 있는 오류를 처리해주기 위해서 사용하는 구문
 
         try = 비동기 작업 코드 (api호출과 관련된 코드)
