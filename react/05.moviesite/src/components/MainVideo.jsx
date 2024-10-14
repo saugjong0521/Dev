@@ -10,7 +10,11 @@ export default function MainVideo () {
     useEffect(() => {
         async function MovieData(){
             try {
-                const movies = await getMovies('now_playing')
+                const movies = await getMovies('now_playing');  //메인 비디오에 들어갈 목록을 가져옴
+                console.log(movies)
+
+                const randomVideo = movies[Math.floor(Math.random() * movies.length)]
+                console.log(randomVideo)
             }
         }
 
