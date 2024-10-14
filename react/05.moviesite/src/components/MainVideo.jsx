@@ -44,3 +44,14 @@ export default function MainVideo () {
     )
 
 }
+
+const MainVideoContainer = styled.div`
+    position: relative;
+    width: 100%;
+    height: 100vh;
+`
+
+const VideoWrapper = styled.div`
+    width: 100%;
+    height: 100%;
+`
