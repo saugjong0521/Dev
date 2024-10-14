@@ -272,6 +272,7 @@ table {
 window.onload = () => {
     resizeCanvas();  // 캔버스 크기 설정
     drawing();       // 그리기 함수 호출
+    makecolor();
 }
 
 // 캔버스 크기 조정
@@ -460,7 +461,7 @@ document.querySelector('.saveBtn').addEventListener('click', () => {
 });
 
 
-
+function makecolor(){
 // 컬러팔레트 설정
 const pallete = document.querySelector('.color-pallete');
 const colorSet = [
@@ -503,7 +504,7 @@ function addColor (){
 
     });
 }
-
+}
 
     </script>
 
