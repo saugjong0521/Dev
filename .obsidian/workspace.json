@@ -140,6 +140,8 @@
   },
   "active": "773315788c9e80bd",
   "lastOpenFiles": [
+    "react/05.moviesite/node_modules/axios/lib/axios.js",
+    "react/05.moviesite/node_modules/axios/index.js",
     "react/05.moviesite/node_modules/memoize-one/dist/memoize-one.cjs.js",
     "react/05.moviesite/node_modules/memoize-one/dist/are-inputs-equal.d.ts",
     "react/05.moviesite/node_modules/load-script/test/hello.js",
@@ -151,8 +153,6 @@
     "react/05.moviesite/node_modules/react-player/dailymotion.d.ts",
     "react/05.moviesite/node_modules/react-player/CONTRIBUTING.md",
     "react/05.moviesite/node_modules/react-player/dailymotion.js",
-    "react/05.moviesite/node_modules/load-script/package.json",
-    "react/05.moviesite/node_modules/react-player/types/lib",
     "react/05.moviesite/node_modules/react-router/README.md",
     "react/05.moviesite/node_modules/react-router/LICENSE.md",
     "react/05.moviesite/node_modules/react-router/CHANGELOG.md",

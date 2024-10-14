@@ -64,7 +64,3 @@ const MovieItem = styled.div`
     }
 
 `
-
-const MainVideo = styled.div`
-    
-`
