@@ -11,7 +11,7 @@ export default function Main (){
         const fetchMovies = async () => {
             const res = await getMovies('now_playing')
             if(res){
-                console.log(res)
+                setMovies(res)
             }
         }
         fetchMovies();
@@ -41,11 +41,25 @@ export default function Main (){
 const MovieList = styled.div`
     display: flex;
     flex-wrap: wrap;
-    gap: 20px
+    gap: 20px;
 `
 
 const MovieItem = styled.div`
-    
+    background: gray;
+    padding: 24px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    max-width: 400px;
+
+    h3{
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: #fff
+    }
+    p{
+        color:#fff;
+        font-size: 14px;
+    }
 
 `
 
