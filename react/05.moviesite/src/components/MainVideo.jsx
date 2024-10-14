@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { getMainVideos, getMovies } from "../axios/Axios";
 import styled from "styled-components";
+import ReactPlayer from "react-player";
 
 
 export default function MainVideo () {
