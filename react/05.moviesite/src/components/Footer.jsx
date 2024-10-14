@@ -48,6 +48,28 @@ const FooterContainer = styled.footer`
     width: 100%;
     margin: 0px auto;
     display: flex;
-    flex-direction: column
-    
+    flex-direction: column;
+    gap: 30px;
+`
+const SocialList = styled.ul`
+    display: flex;
+    gap: 20px;
+    a{
+        color: #fff;
+        font-size: 20px;
+    }
+`
+
+const FooterLinks = styled.ul`
+    display: flex;
+    flex-wrap: wrap;   
+    gap: 20px 0px;
+    li{
+        width: 25%;
+        a{
+            color: rgba(255, 255, 255, 0.6);
+            display: block;
+            font-size: 140ex;
+        }
+    }
 `
