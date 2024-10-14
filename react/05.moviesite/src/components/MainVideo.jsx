@@ -39,7 +39,7 @@ export default function MainVideo () {
         <MainVideoContainer>
             <VideoWrapper>
                 <ReactPlayer
-                    url = {`https://youtube.${videoKey}`}
+                    url = {`https://youtu.be/${videoKey}`}
                     muted = {true}
                     controls = {false}
                     width = '100%'
@@ -62,7 +62,4 @@ const MainVideoContainer = styled.div`
 const VideoWrapper = styled.div`
     width: 100%;
     height: 100%;
-`
-const ReactPlayer =styled.div`
-    
 `
