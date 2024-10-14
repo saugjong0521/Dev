@@ -25,7 +25,7 @@ export default function Main (){
                     movies.map((movie) => (
                         <MovieItem key = {movie.id}>
                             <h3>{movie.title}</h3>
-                            <p>{release_date}</p>
+                            <p>{movie.release_date}</p>
                         </MovieItem>
                     ))
                 ) : (
