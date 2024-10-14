@@ -29,13 +29,33 @@ const instance = axios.create({
     }
 })
 
-//영화 목록을 호출
+// 인기있는, 현재 상영중인 영화 리스트 받아오기
 export const getMovies = async(type) => {
     try{
         const res = await instance.get(`/movie/${type}`);
-        
+
         return res.data.results;
     }catch(error){
         console.error(error)
     }
+}
+
+
+// 메인 비디오 받아오기
+export const getMainVideos = async(movieId) => {
+    /*
+        try-catch 비동기 요청에서 발생할 수 있는 오류를 처리해주기 위해서 사용하는 구문
+
+        try = 비동기 작업 코드 (api호출과 관련된 코드)
+        catch = api 호출이 실패했을 경우에 대한 오류를 처리
+    
+    */
+
+    try {
+
+    } catch {
+
+    }
+
+
 }
