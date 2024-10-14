@@ -27,6 +27,22 @@ export default function Footer (){
                 <li><a href="#" target="_blank">문의하기</a></li>
             </FooterLinks>
 
+            <ServiceBtn>서비스 코드</ServiceBtn>
+
+            <FooterInfo>
+                <p>넥플릭스서비시스 코리아 유한회사 통신판매업 신고번호 : 제 2018-111111 전화번호 : 00-1111-1111(수신자부담)</p>
+                <p>대표 : 홍길동</p>
+                <p>이메일 주소 : abc@abc.com</p>
+                <p>주소 : 대한민국 서울특별시 강님</p>
+                <p>사업자 등록번호 : 111-11-111111</p>
+                <p>클라우드 호스팅 : aaa</p>
+                <p><a href="#">공정거래위원회 웹사이트</a></p>
+            </FooterInfo>
+
         </FooterContainer>
     )
 }
+
+const FooterContainer = styled.footer`
+    max-width: 980px;
+`
