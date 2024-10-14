@@ -488,7 +488,7 @@ const colorInput = document.querySelector('.color-input')
 const colorInputBtn = document.querySelector('.more-color-btn')
 colorInputBtn.addEventListener('click', addColor)
 
-function addColor (e){    
+function addColor (){    
     const newColor = colorInput.value;
     colorSet.push(newColor)
 
@@ -501,6 +501,7 @@ function addColor (e){
         color = newColor;
     });
     changeColor();
+    console.log(colorDiv)
 }
 
 
