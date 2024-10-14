@@ -30,3 +30,12 @@ const instance = axios.create({
         language : 'ko-KR'  //기본 통신 언어 설정
     }
 })
+
+export const getMovies = async(type) => {
+    try{
+        const res = await instance.get(`/movie/${type}`);
+        return res;
+    }catch(error){
+        console.error(error)
+    }
+}
