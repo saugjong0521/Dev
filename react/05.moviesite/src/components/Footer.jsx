@@ -56,7 +56,7 @@ const FooterContainer = styled.footer`
     flex-direction: column;
     gap: 30px;
     background: 000;
-    padding: 10px 0px;
+    padding: 50px 0px;
 `
 const SocialList = styled.ul`
     display: flex;
