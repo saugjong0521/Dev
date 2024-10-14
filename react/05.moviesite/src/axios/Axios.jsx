@@ -32,11 +32,8 @@ const instance = axios.create({
 //영화 목록을 호출
 export const getMovies = async(type) => {
     try{
-        const res = await instance.get(`discover/movie`, {
-            params : {
-                with_genres : type
-            }
-        });
+        const res = await instance.get(`/movie/${type}`);
+        
         return res.data.results;
     }catch(error){
         console.error(error)
