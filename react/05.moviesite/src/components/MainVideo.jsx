@@ -18,8 +18,8 @@ export default function MainVideo () {
                 console.log(randomVideo)
 
                 setRandomMovie(randomVideo);
-                const videos = await getMainVideos(randomMovie.id);
-
+                const videos = await getMainVideos(randomVideo.id);
+                
             } catch (error){
                 console.log(error)
             }
@@ -55,4 +55,7 @@ const MainVideoContainer = styled.div`
 const VideoWrapper = styled.div`
     width: 100%;
     height: 100%;
+`
+const ReactPlayer =styled.div`
+    
 `
