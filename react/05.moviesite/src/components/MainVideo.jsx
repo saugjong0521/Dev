@@ -21,6 +21,12 @@ export default function MainVideo () {
                 const videos = await getMainVideos(randomVideo.id);
                 
                 console.log(videos[0].key)
+
+                if(videos.length > 0){
+                    setVideoKey(videos[0].key)
+                } else {
+                    console.log(videos[0].key)
+                }
             } catch (error){
                 console.log(error)
             }
