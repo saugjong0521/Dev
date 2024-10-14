@@ -87,7 +87,7 @@ const FooterLinks = styled.ul`
 const ServiceBtn= styled.div `
 button {
     padding: 12px 24px;
-    color: black;
+    color: white;
     border: solid 1px #fff;
     display: inline-block;
 }
