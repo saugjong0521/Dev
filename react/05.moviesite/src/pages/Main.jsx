@@ -41,3 +41,12 @@ export default function Main (){
 const MovieList = styled.div`
     
 `
+
+const MovieItem = styled.div`
+    
+
+`
+
+const release_date = styled.div`
+    
+`
