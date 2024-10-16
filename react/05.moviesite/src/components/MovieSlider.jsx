@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { getGenre } from "../axios/Axios";
-import { Swiper } from "react"
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation} from "swiper/modules"
 import styled from "styled-components";
 
