@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 
-export default function Button (accent, children, onclick){
+export default function Button ({accent, children, onclick}){
 
     return(
 
