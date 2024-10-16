@@ -9,15 +9,17 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import MovieCard from "./MovieCard";
 
-export default function MovieSlider ({movies, title}){
-    const [genres,setGenres] = useState({})
+
+export default function MovieSlider({ movies, title }) {
+    const [genres, setGenres] = useState({})
     const [hoverId, setHoverId] = useState(null)
+
 
     const imgVariants = {
         initial : {
             scale : 1,
         },
-        hover : {
+        hover:{
             scale : 1.5,
             transition : {
                 duration : 0.5
@@ -25,54 +27,55 @@ export default function MovieSlider ({movies, title}){
         }
     }
 
-    useEffect(()=> {
-        const fetchGenres =async () =>{
-            const genreData =await getGenre();
-            const genreMap =genreData.reduce((acc,genre)=>{
-                acc[genre.id] =genre.name
+
+    useEffect(() => {
+        const fetchGenres = async () => {
+            const genreData = await getGenre();
+            const genreMap = genreData.reduce((acc, genre) => {
+                acc[genre.id] = genre.name
                 return acc;
-            },{})
+            }, {})
             setGenres(genreMap)
 
         }
         fetchGenres();
-    },[])
+    }, [])
 
     const getGenresNames = (genreId) => {
         return genreId.map(id => genres[id]).join(', ')
     }
-    
-    return(
+    return (
         <MovieSliderItem>
             <h2 className="movieTitle">{title}</h2>
-            <Swiper 
+            <Swiper
                 modules={[Navigation]}
-                spaceBetween ={40}
-                slidesPerView = {6}
+                spaceBetween={40}
+                slidesPerView={6}
                 navigation
-                >
-                    {movies.map((movie, id) => {
-                        <SwiperSlide key ={movie.id}>
-                            <MovieCard 
-                                movie={movie}
-                                id={id}
-                                hoverId = {hoverId}
-                                setHoverId = {setHoverId}
-                                imgVariants = {imgVariants}
-                                getGeneresNames = {getGenresNames}
-                            >
+            >
+                {movies.map((movie, id) => (
+                    <SwiperSlide key={movie.id}>
+                        <MovieCard
+                            movie={movie}
+                            id={id}
+                            hoverId={hoverId}
+                            setHoverId={setHoverId}
+                            imgVariants ={imgVariants}
+                            getGenresNames={getGenresNames}
+                        >
 
-                            </MovieCard>
-                        </SwiperSlide>
-                    })}
+                        </MovieCard>
+                    </SwiperSlide>
+                ))}
             </Swiper>
+
         </MovieSliderItem>
     )
 }
 const MovieSliderItem = styled.div`
     padding: 40px 60px;
     box-sizing: border-box;
-
+    
     .movieTitle{
         font-size: 40px;
         color: #fff;
