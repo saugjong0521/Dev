@@ -87,6 +87,6 @@ export const getMovieGenre = async(genreId) => {
         })
         return res.data.results
     } catch(error){
-        console.error(erros)
+        console.error(error)
     }
 }
