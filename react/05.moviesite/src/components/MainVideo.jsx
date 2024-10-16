@@ -64,11 +64,13 @@ export default function MainVideo () {
 
                 <motion.p
                     initial = {{
-                        transform: 'scale(1)',
+                        transform: 'translateY(0)',
+                        opacity: 1,
                         transformOrigin : 'left bottom'
                     }}
                     animate = {{
-                        transform: 'scale(0)',
+                        transform: 'translateY(100px)',
+                        opacity: 0,
                         transition : {delay: 3, duration : 1}
                     }}
                     >
