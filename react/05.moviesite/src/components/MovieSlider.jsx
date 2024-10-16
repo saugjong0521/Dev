@@ -11,7 +11,7 @@ import MovieCard from "./MovieCard";
 
 export default function MovieSlider ({movies, title}){
     const [genres,setGenres] = useState({})
-    const [hoverId, setHoverId] = useState("null")
+    const [hoverId, setHoverId] = useState(null)
 
     useEffect(()=> {
         const fetchGenres =async () =>{
@@ -44,7 +44,6 @@ export default function MovieSlider ({movies, title}){
                             <MovieCard 
                                 movie={movie}
                                 id={id}
-                                movieId = {movieId}
                                 hoverId = {hoverId}
                                 setHoverId = {setHoverId}
                                 getGeneresNames = {getGenresNames}
