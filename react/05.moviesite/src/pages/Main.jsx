@@ -22,8 +22,12 @@ export default function Main (){
     
 
     const {
-        data : actin,
-    } = useQuery(['movies','28'])
+        data : action,
+        isLoading : isActionLoading,
+        error : actinError
+    } = useQuery(['movies','28'], ()=>getMovieGenre('28'),{
+        stateTime : 5000
+    })
     
     /*
     *useQuery
