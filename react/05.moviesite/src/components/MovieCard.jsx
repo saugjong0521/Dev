@@ -1,7 +1,7 @@
 import {motion} from 'framer-motion'
 import styled from 'styled-components'
 
-export default function MovieCard(movie, id, hoverId, setHoverId, getGenresNames){
+export default function MovieCard(movie, id, hoverId, setHoverId, imgVariants, getGenresNames){
     const genreNames = getGenresNames(movie.genre_id)
 
 
