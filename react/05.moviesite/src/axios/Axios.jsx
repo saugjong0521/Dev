@@ -80,13 +80,13 @@ export const getGenre = async () => {
 
 export const getMovieGenre = async(genreId) => {
     try {
-        const res = await instance.get(`/discover/movie`, {
-            params: {
-                with_genres: genreId  // 'width_genres'에서 'with_genres'로 수정
+        const res = await instance.get(`/discover/movie`,{
+            params : {
+                width_genres : genreId
             }
         })
         return res.data.results
-    } catch(error) {
+    } catch(error){
         console.error(error)
     }
 }
