@@ -23,7 +23,7 @@ export default function Main (){
 
     const {
         data : actin,
-    }=useQuery
+    } = useQuery(['movies,'])
     
     /*
     *useQuery
