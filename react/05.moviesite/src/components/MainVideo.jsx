@@ -119,3 +119,9 @@ const VideoInfoWrapper = styled.div`
         margin-bottom: 24px;
     }
 `
+
+const BtnsWrapper = styled.div`
+    display: flex;
+    gap: 12px;
+    z-index: 3;
+`
