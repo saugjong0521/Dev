@@ -7,9 +7,11 @@ import styled from "styled-components";
 //스와이퍼 css
 import 'swiper/css';
 import 'swiper/css/navigation';
+import MovieCard from "./MovieCard";
 
 export default function MovieSlider ({movies, title}){
     const [genres,setGenres] = useState({})
+    const [hoverId, setHoverId] = useState("null")
 
     useEffect(()=> {
         const fetchGenres =async () =>{
@@ -39,8 +41,16 @@ export default function MovieSlider ({movies, title}){
                 >
                     {movies.map((movie, id) => {
                         <SwiperSlide key ={movie.id}>
-                            <img src={`https://image/tmdb.org/t/p/w500${movie.poster_path}`}
-                            alt={movie.title}/>
+                            <MovieCard 
+                                movie={movie}
+                                id={id}
+                                movieId = {movieId}
+                                hoverId = {hoverId}
+                                setHoverId = {setHoverId}
+                                getGeneresNames = {getGenresNames}
+                                                                >
+
+                            </MovieCard>
                         </SwiperSlide>
                     })}
             </Swiper>
