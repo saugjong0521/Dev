@@ -80,7 +80,7 @@ export default function MainVideo () {
                         {randomMovie.overview}
                     </motion.p>
                     <BtnsWrapper>
-                        <Button accent='accent'>재생</Button>
+                        <Button accent='accent'><FaPlay />재생</Button>
                         <Button>상세정보</Button>
                     </BtnsWrapper>
             </VideoInfoWrapper>
