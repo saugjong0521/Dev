@@ -8,6 +8,8 @@ export default function MovieCard(movie, id, hoverId, setHoverId, imgVariants, g
     return (
         <MovieItem>
             <motion.div
+                className='sliderList'
+                initial='initial'
                 whileHover = 'hover'
                 //whileHover 
                 onMouseEnter = {()=>setHoverId(movie.id)}
@@ -27,5 +29,11 @@ export default function MovieCard(movie, id, hoverId, setHoverId, imgVariants, g
 }
 
 const MovieItem = styled.div`
-    
+    .sliderList{
+        position: relative;
+    }
+    .sliderList img{
+        width: 100%;
+        height: 100%;
+    }
 `

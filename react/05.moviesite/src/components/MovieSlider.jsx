@@ -60,7 +60,7 @@ export default function MovieSlider ({movies, title}){
                                 setHoverId = {setHoverId}
                                 imgVariants = {imgVariants}
                                 getGeneresNames = {getGenresNames}
-                                                                >
+                            >
 
                             </MovieCard>
                         </SwiperSlide>
