@@ -103,4 +103,10 @@ const VideoInfoWrapper = styled.div`
         font-weight: 700;
         margin-bottom: 24px;
     }
+    p{
+        font-size : 24px;
+        line-height: 1.3;
+        color: #fff;
+        
+    }
 `
