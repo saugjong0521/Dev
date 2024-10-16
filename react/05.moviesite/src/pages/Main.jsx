@@ -34,6 +34,11 @@ export default function Main (){
 
     서버에서 데이터를 가져오고 캐싱을 가져오고 업데이트 하게 해주는 라이브러리
     로딩, 오류, 데이터 캐싱, 자동 갱신을 지원한다.
+
+    query를 사용하는 모든 컴포넌트의 값을 전달해주기 위해서 queryClientProvider로 랩핑한다.
+    보통 최상위 요소(index)에 랩핑하며,
+    queryClientProvider로 랩핑된 하위 컴포넌트들은 query문을 전체적으로 공유할 수 있게 된다.
+
     */
 
 
