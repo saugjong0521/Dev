@@ -108,7 +108,7 @@ const VideoInfoWrapper = styled.div`
     p{
         font-size : 24px;
         line-height: 1.3;
-        width: 50%;
+        width: 40%;
         text-overflow: ellipsis;
         overflow: hidden;
         display: -webkit-box;
