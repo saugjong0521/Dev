@@ -8,7 +8,8 @@ export default function MovieCard(movie, id, hoverId, setHoverId, getGenresNames
     return (
         <MovieItem>
             <motion.div
-                wheelHover = 'hover'
+                whileHover = 'hover'
+                //whileHover 
                 onMouseEnter = {()=>setHoverId(movie.id)}
                 onMouseLeave = {()=>setHoverId(null)}
             >
