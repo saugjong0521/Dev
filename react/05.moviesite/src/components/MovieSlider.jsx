@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react"
 import { getGenre } from "../axios/Axios";
 import { Swiper } from "react"
+import { Navigation} from "swiper/modules"
 
 //스와이퍼 css
-import 'swiper/css'
+import 'swiper/css';
+import 'swiper/navigation'
 
 export default function MovieSlider(){
     
