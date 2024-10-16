@@ -51,20 +51,20 @@ export default function MovieSlider ({movies, title}){
                 slidesPerView = {6}
                 navigation
                 >
-                    {movies.map((movie, id) => {
-                        <SwiperSlide key ={movie.id}>
-                            <MovieCard 
-                                movie={movie}
-                                id={id}
-                                hoverId = {hoverId}
-                                setHoverId = {setHoverId}
-                                imgVariants = {imgVariants}
-                                getGenresNames = {getGenresNames}
-                            >
-
-                            </MovieCard>
-                        </SwiperSlide>
-                    })}
+{movies.map((movie, id) => {
+    return (  // return 추가
+        <SwiperSlide key={movie.id}>
+            <MovieCard
+                movie={movie}
+                id={id}
+                hoverId={hoverId}
+                setHoverId={setHoverId}
+                imgVariants={imgVariants}
+                getGenresNames={getGenresNames}
+            />
+        </SwiperSlide>
+    );
+})}
             </Swiper>
         </MovieSliderItem>
     )
