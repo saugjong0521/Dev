@@ -13,6 +13,18 @@ export default function MovieSlider ({movies, title}){
     const [genres,setGenres] = useState({})
     const [hoverId, setHoverId] = useState(null)
 
+    const imgVariants = {
+        initial : {
+            scale : 1,
+        },
+        hover : {
+            scale : 1.5,
+            transition : {
+                duration : 0.5
+            }
+        }
+    }
+
     useEffect(()=> {
         const fetchGenres =async () =>{
             const genreData =await getGenre();
@@ -46,6 +58,7 @@ export default function MovieSlider ({movies, title}){
                                 id={id}
                                 hoverId = {hoverId}
                                 setHoverId = {setHoverId}
+                                imgVariants = {imgVariants}
                                 getGeneresNames = {getGenresNames}
                                                                 >
 
