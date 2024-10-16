@@ -4,6 +4,8 @@ import styled from "styled-components";
 import ReactPlayer from "react-player";
 import {motion} from 'framer-motion'
 import Button from "./Button";
+import { FaPlay } from "react-icons/fa";
+
 
 
 export default function MainVideo () {
