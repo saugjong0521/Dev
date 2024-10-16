@@ -50,7 +50,15 @@ export default function MainVideo () {
                 />
             </VideoWrapper>
             <VideoInfoWrapper>
-                <motion.h2 in
+                <motion.h2 initial = {{
+                    trabsform : 'scale(1.3)',
+                    transformOrigin : 'left bottom', 
+                }}
+                animate = {{
+                    transform : 'scale(1)' 'translateY(50px)',
+                    transition : {delay: 3, duration : 1}
+                }}
+                ></motion.h2>
             </VideoInfoWrapper>
         </MainVideoContainer>
 
