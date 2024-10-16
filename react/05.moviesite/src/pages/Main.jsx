@@ -24,6 +24,15 @@ export default function Main (){
     const {
         data : actin,
     }=useQuery
+    
+    /*
+    *useQuery
+
+    서버에서 데이터를 가져오고 캐싱을 가져오고 업데이트 하게 해주는 라이브러리
+    로딩, 오류, 데이터 캐싱, 자동 갱신을 지원한다.
+    */
+
+
     return(
         <>
         <MainVideo/>
