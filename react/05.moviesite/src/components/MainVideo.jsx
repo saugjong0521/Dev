@@ -5,6 +5,7 @@ import ReactPlayer from "react-player";
 import {motion} from 'framer-motion'
 import Button from "./Button";
 import { FaPlay } from "react-icons/fa";
+import { IoIosInformationCircleOutline } from "react-icons/io";
 
 
 
@@ -80,8 +81,8 @@ export default function MainVideo () {
                         {randomMovie.overview}
                     </motion.p>
                     <BtnsWrapper>
-                        <Button accent='accent'><FaPlay />재생</Button>
-                        <Button>상세정보</Button>
+                        <Button accent='accent'><FaPlay /> 재생</Button>
+                        <Button><IoIosInformationCircleOutline /> 상세정보</Button>
                     </BtnsWrapper>
             </VideoInfoWrapper>
         </MainVideoContainer>
