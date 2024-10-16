@@ -80,7 +80,7 @@ export default function MainVideo () {
                     <BtnsWrapper>
                         <Button accent='accent'>재생</Button>
                         <Button>상세정보</Button>
-                        </BtnsWrapper>
+                    </BtnsWrapper>
             </VideoInfoWrapper>
         </MainVideoContainer>
 
