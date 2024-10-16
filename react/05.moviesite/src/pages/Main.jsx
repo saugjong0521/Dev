@@ -25,8 +25,8 @@ export default function Main (){
         data : action,
         isLoading : isActionLoading,
         error : actionError
-    } = useQuery(['movies','28'], ()=>getMovieGenre('28'),{
-        stateTime : 5000
+    } = useQuery(['movies', 28], () => getMovieGenre(28), {
+        staleTime: 5000,
     })
     
     /*
@@ -41,15 +41,15 @@ export default function Main (){
 
     */
    if(isActionLoading) return <div>로딩중입니다..</div>
-   if(actionError) return <div>오류가 발생했습니다.</div>
+   if(actionError) return <div>오류가 발생했습니다: {actionError.message}</div>
+   if(!action) return <div>데이터가 없습니다.</div>
 
 
     return(
         <>
         <MainVideo/>
-        <MovieSlider movies={action} title='액션 장르'/>
+        {action && action.length > 0 && <MovieSlider movies={action} title='액션 장르'/>}
         </>
-
     )
 
 }
