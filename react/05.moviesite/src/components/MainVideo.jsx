@@ -55,11 +55,12 @@ export default function MainVideo () {
                     transformOrigin : 'left bottom', 
                 }}
                 animate = {{
-                    transform : 'scale(1)' 'translateY(50px)',
+                    transform : 'scale(1) translateY(50px)',
                     transition : {delay: 3, duration : 1}
                 }}
+                >
                 {randomMovie.title}
-                ></motion.h2>
+                </motion.h2>
             </VideoInfoWrapper>
         </MainVideoContainer>
 
