@@ -45,3 +45,14 @@ export default function MovieSlider ({movies, title}){
         </MovieSliderItem>
     )
 }
+const MovieSliderItem = styled.div`
+    padding: 40px 60px;
+    box-sizing: border-box;
+
+    .movieTitle{
+        font-size: 40px;
+        color: #fff;
+        position: relative;
+        margin-bottom: 24px;
+    }
+`
