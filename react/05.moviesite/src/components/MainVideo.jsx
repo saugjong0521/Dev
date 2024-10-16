@@ -3,6 +3,7 @@ import { getMainVideos, getMovies } from "../axios/Axios";
 import styled from "styled-components";
 import ReactPlayer from "react-player";
 import {motion} from 'framer-motion'
+import Button from "./Button";
 
 
 export default function MainVideo () {
@@ -76,7 +77,7 @@ export default function MainVideo () {
                     >
                         {randomMovie.overview}
                     </motion.p>
-
+                        <Button accent='accent'></Button>
             </VideoInfoWrapper>
         </MainVideoContainer>
 
