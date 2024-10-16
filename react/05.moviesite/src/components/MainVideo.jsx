@@ -58,7 +58,7 @@ export default function MainVideo () {
                     transform : 'scale(1)' 'translateY(50px)',
                     transition : {delay: 3, duration : 1}
                 }}
-                {RandomMovie.title}
+                {randomMovie.title}
                 ></motion.h2>
             </VideoInfoWrapper>
         </MainVideoContainer>
@@ -80,5 +80,12 @@ const VideoWrapper = styled.div`
 const VideoInfoWrapper = styled.div`
     position: absolute;
     top: 50%;
-    transform:
+    transform: translateY(-50%);
+    padding: 0px 60px;
+    h2{
+        color: #fff;
+        font-size: 80px;
+        font-weight: 700;
+        margin-bottom: 24px;
+    }
 `
