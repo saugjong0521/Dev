@@ -68,7 +68,7 @@ export default function MainVideo () {
                         transformOrigin : 'left bottom'
                     }}
                     animate = {{
-                        transform: 'scale(1)',
+                        transform: 'scale(0)',
                         transition : {delay: 3, duration : 1}
                     }}
                     >
@@ -113,5 +113,6 @@ const VideoInfoWrapper = styled.div`
         -webkit-line-clamp: 3;
         -webkit-box-orient : vertical;
         color: #fff;
+
     }
 `
