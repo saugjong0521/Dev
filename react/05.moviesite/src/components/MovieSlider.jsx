@@ -2,11 +2,11 @@ import { useEffect, useState } from "react"
 import { getGenre } from "../axios/Axios";
 import { Swiper } from "react"
 import { Navigation} from "swiper/modules"
+import styled from "styled-components";
 
 //스와이퍼 css
 import 'swiper/css';
 import 'swiper/css/navigation';
-import styled from "styled-components";
 
 export default function MovieSlider ({movies, title}){
     const [genres,setGenres] = useState({})
@@ -55,6 +55,6 @@ const MovieSliderItem = styled.div`
         font-size: 40px;
         color: #fff;
         position: relative;
-        margin-bottom: 100px;
+        margin-bottom: 24px;
     }
 `
