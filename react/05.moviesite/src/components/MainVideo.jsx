@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { getMainVideos, getMovies } from "../axios/Axios";
 import styled from "styled-components";
 import ReactPlayer from "react-player";
+import {motion} from 'framer-motion'
 
 
 export default function MainVideo () {
@@ -48,6 +49,9 @@ export default function MainVideo () {
                     playing = {true}
                 />
             </VideoWrapper>
+            <VideoInfoWrapper>
+                <motion.h2 in
+            </VideoInfoWrapper>
         </MainVideoContainer>
 
     )
