@@ -65,3 +65,28 @@ export const getMainVideos = async(movieId) => {
 
 
 }
+
+
+//장르 가져오기
+export const getGenre = async () => {
+    try{
+        const res = await instance.get('/genre/movie/list')
+        console.log(res)
+        return res.data.genres
+    } catch (error){
+        console.log(error)
+    }
+}
+
+export const getMovieGenre = async(genreId) => {
+    try {
+        const res = await instance.get(`/discover/movie`,{
+            params : {
+                width_genres : genreId
+            }
+        })
+        return res.data.results
+    } catch(error){
+        console.error(erros)
+    }
+}
