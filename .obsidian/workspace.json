@@ -140,6 +140,7 @@
   },
   "active": "1e058879c73439fc",
   "lastOpenFiles": [
+    "react/05.moviesite/src/components/MovieCard.jsx",
     "react/05.moviesite/node_modules/match-sorter/dist/match-sorter.umd.js.map",
     "react/05.moviesite/node_modules/match-sorter/dist/match-sorter.umd.min.js.map",
     "react/05.moviesite/node_modules/match-sorter/dist/match-sorter.umd.js",
@@ -150,7 +151,6 @@
     "react/05.moviesite/node_modules/broadcast-channel/dist/es/methods/node.js",
     "react/05.moviesite/node_modules/broadcast-channel/dist/es/methods/native.js",
     "react/05.moviesite/node_modules/broadcast-channel/dist/es/methods/indexed-db.js",
-    "react/05.moviesite/node_modules/broadcast-channel/dist/es/methods/localstorage.js",
     "react/05.moviesite/node_modules/xmlchars/README.md",
     "react/05.moviesite/node_modules/unload/README.md",
     "react/05.moviesite/node_modules/remove-accents/README.md",
