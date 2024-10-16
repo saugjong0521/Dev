@@ -53,6 +53,6 @@ const MovieSliderItem = styled.div`
         font-size: 40px;
         color: #fff;
         position: relative;
-        margin-bottom: 24px;
+        margin-bottom: 100px;
     }
 `
