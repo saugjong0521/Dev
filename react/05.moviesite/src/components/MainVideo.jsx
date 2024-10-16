@@ -98,6 +98,7 @@ const VideoWrapper = styled.div`
 const VideoInfoWrapper = styled.div`
     position: absolute;
     top: 50%;
+    z-index: 2;
     transform: translateY(-50%);
     padding: 0px 60px;
     h2{
