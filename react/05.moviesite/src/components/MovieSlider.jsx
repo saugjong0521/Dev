@@ -16,6 +16,7 @@ export default function MovieSlider(){
             setGenres(genreMap)
 
         }
+        fetchGenres();
     },[])
 
     const getGenresNames = (genreId) => {
