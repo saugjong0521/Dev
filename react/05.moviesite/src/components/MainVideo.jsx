@@ -115,6 +115,6 @@ const VideoInfoWrapper = styled.div`
         -webkit-line-clamp: 3;
         -webkit-box-orient : vertical;
         color: #fff;
-
+        margin-bottom: 24px;
     }
 `
