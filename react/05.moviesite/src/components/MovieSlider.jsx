@@ -32,7 +32,7 @@ export default function MovieSlider ({movies, title}){
         <MovieSliderItem>
             <h2 className="movieTitle">{title}</h2>
             <Swiper 
-                modules={{Navigation}}
+                modules={[Navigation]}
                 spaceBetween ={40}
                 slidesPerView = {6}
                 navigation
