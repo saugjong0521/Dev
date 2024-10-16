@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import styled from "styled-components"
 import { getMovies } from "../axios/Axios";
 import MainVideo from "../components/MainVideo";
+import MovieSlider from "../components/MovieSlider";
 
 
 export default function Main (){
@@ -21,19 +22,8 @@ export default function Main (){
 
     return(
         <>
-            <MainVideo/>
-            <MovieList>
-                {movies.length > 0 ? (
-                    movies.map((movie) => (
-                        <MovieItem key = {movie.id}>
-                            <h3>{movie.title}</h3>
-                            <p>{movie.release_date}</p>
-                        </MovieItem>
-                    ))
-                ) : (
-                    <p>영화 데이터를 불러오고 있습니다.</p>
-                )}
-            </MovieList>
+        <MainVideo/>
+        <MovieSlider movies={action} title='액션 장르'/>
         </>
 
     )
