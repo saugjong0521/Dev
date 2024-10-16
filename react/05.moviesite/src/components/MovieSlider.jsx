@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { getGenre } from "../axios/Axios";
+import { Swiper } from "react"
 
 
 export default function MovieSlider(){
@@ -24,6 +25,9 @@ export default function MovieSlider(){
     }
     
     return(
-        <></>
+        <MovieSliderItem>
+            <h2 className="movieTitle">{title}</h2>
+
+        </MovieSliderItem>
     )
 }
