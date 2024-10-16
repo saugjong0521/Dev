@@ -1,31 +1,28 @@
-import {motion} from 'framer-motion'
-import styled from 'styled-components'
-
-export default function MovieCard(movie, id, hoverId, setHoverId, imgVariants, getGenresNames){
-    const genreNames = getGenresNames(movie.genre_ids)
-
-
+import { motion } from 'framer-motion'
+import styled from 'styled-components';
+export default function MovieCard({ movie, id, hoverId, imgVariants, setHoverId, getGenresNames }) {
+    const genreNames = getGenresNames(movie.genre_ids);
     return (
         <MovieItem>
-            <motion.div
+            <motion.div 
                 className='sliderList'
-                initial='initial'
-                whileHover = 'hover'
+                initia="initial"
+                whileHover='hover'
                 //whileHover 
-                onMouseEnter = {()=>setHoverId(movie.id)}
-                onMouseLeave = {()=>setHoverId(null)}
+                onMouseEnter={() => setHoverId(movie.id)}
+                onMouseLeave={() => setHoverId(null)}
             >
-                <motion.div className='sliderIng' variants={imgVariants}>
-                    <img 
-                        src={`https://image.tmdb/org/t/p/w500${movie.backdrop_path}`}
+                <motion.div className='sliderImg' variants={imgVariants}>
+                    <img
+                        src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
                         alt={movie.title}
-                        />
+                    />
                 </motion.div>
+
 
             </motion.div>
         </MovieItem>
     )
-    
 }
 
 const MovieItem = styled.div`
@@ -34,6 +31,8 @@ const MovieItem = styled.div`
     }
     .sliderList img{
         width: 100%;
-        height: 100%;
+        border-radius: 5px;
+        cursor: pointer;
     }
+
 `
