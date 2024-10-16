@@ -140,6 +140,7 @@
   },
   "active": "1e058879c73439fc",
   "lastOpenFiles": [
+    "react/05.moviesite/src/components/MovieGenre.jsx",
     "react/05.moviesite/node_modules/react-dom/umd/react-dom.profiling.min.js",
     "react/05.moviesite/node_modules/react-dom/umd/react-dom-test-utils.development.js",
     "react/05.moviesite/node_modules/react-dom/umd/react-dom.production.min.js",
@@ -150,7 +151,6 @@
     "react/05.moviesite/node_modules/react-dom/umd/react-dom-server-legacy.browser.production.min.js",
     "react/05.moviesite/node_modules/react-dom/umd/react-dom-server-legacy.browser.development.js",
     "react/05.moviesite/node_modules/react-dom/cjs/react-dom.development.js",
-    "react/05.moviesite/node_modules/react-dom/cjs/react-dom.profiling.min.js",
     "react/05.moviesite/node_modules/react-dom/README.md",
     "react/05.moviesite/node_modules/swiper/README.md",
     "react/05.moviesite/node_modules/pretty-format/node_modules/ansi-styles/readme.md",
