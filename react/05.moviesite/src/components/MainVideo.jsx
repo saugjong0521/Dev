@@ -61,6 +61,20 @@ export default function MainVideo () {
                 >
                 {randomMovie.title}
                 </motion.h2>
+
+                <motion.p
+                    initial = {{
+                        transform: 'scale(1)',
+                        transformOrigin : 'left bottom'
+                    }}
+                    animate = {{
+                        transform: 'scale(1)',
+                        transition : {delay: 3, duration : 1}
+                    }}
+                    >
+                        {randomMovie.overview}
+                    </motion.p>
+
             </VideoInfoWrapper>
         </MainVideoContainer>
 
