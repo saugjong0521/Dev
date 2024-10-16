@@ -25,6 +25,6 @@ const Btn = styled.div`
     font-weight: 500;
     cursor: pointer;
     &:hover {
-        background-color : ${(props)=>props.accent ? `rgba(255,255,255,0.7)` : `rgba(100,100,100,0.8)`}
+        background-color : ${(props)=>props.accent ? `rgba(255,255,255,0.9)` : `rgba(100,100,100,1)`}
     }
 `
