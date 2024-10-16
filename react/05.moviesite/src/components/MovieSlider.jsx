@@ -7,8 +7,7 @@ import { Navigation} from "swiper/modules"
 import 'swiper/css';
 import 'swiper/navigation'
 
-export default function MovieSlider(){
-    
+export default function MovieSlider ({movies, title}){
     const [genres,setGenres] = useState({})
 
     useEffect(()=> {
@@ -31,7 +30,18 @@ export default function MovieSlider(){
     return(
         <MovieSliderItem>
             <h2 className="movieTitle">{title}</h2>
-
+            <Swiper modules={{Navigation}}
+                spaceBetween ={40}
+                slidesPerView = {6}
+                navigation
+                >
+                    {movies.map((movie, id) => {
+                        <SwiperSlide key ={movie.id}>
+                            <img src={`https://image/tmdb.org/t/p/w500${movie.poster_path}`}
+                            alt={movie.title}/>
+                        </SwiperSlide>
+                    })}
+            </Swiper>
         </MovieSliderItem>
     )
 }
