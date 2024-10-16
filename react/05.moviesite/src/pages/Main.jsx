@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { getMovies } from "../axios/Axios";
 import MainVideo from "../components/MainVideo";
 import MovieSlider from "../components/MovieSlider";
+import {useQuery} from "react-query"
 
 
 export default function Main (){
@@ -20,6 +21,9 @@ export default function Main (){
     }, [])
     
 
+    const {
+        data : actin,
+    }=useQuery
     return(
         <>
         <MainVideo/>
