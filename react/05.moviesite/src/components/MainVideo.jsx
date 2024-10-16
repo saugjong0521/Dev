@@ -41,54 +41,53 @@ export default function MainVideo () {
     }, [])
 
     return (
-
         <MainVideoContainer>
             <VideoWrapper>
                 <ReactPlayer
-                    url = {`https://youtu.be/${videoKey}`}
-                    muted = {true}
-                    controls = {false}
-                    width = '100%'
-                    height = '100%'
-                    playing = {true}
+                    url={`https://youtu.be/${videoKey}`}
+                    muted={true}
+                    controls={false}
+                    width='100%'
+                    height='100%'
+                    playing={true}
                 />
             </VideoWrapper>
             <VideoInfoWrapper>
-                <motion.h2 initial = {{
-                    trabsform : 'scale(1.3)',
-                    transformOrigin : 'left bottom', 
+                <motion.h2 initial={{
+                    transform: 'scale(1.3) translateY(0px)',
+                    transformOrigin: 'left bottom'
                 }}
-                animate = {{
-                    transform : 'scale(1) translateY(50px)',
-                    transition : {delay: 3, duration : 1}
-                }}
+                    animate={{
+                        transform: 'scale(1) translateY(100px)',
+                        transition: { delay: 3, duration: 1 }
+                    }}
                 >
-                {randomMovie.title}
+                    {randomMovie.title}
                 </motion.h2>
 
                 <motion.p
-                    initial = {{
+                    initial={{
                         transform: 'translateY(0)',
-                        opacity: 1,
-                        transformOrigin : 'left bottom'
+                        opacity : 1,
+                        transformOrigin: 'left bottom'
                     }}
-                    animate = {{
-                        transform: 'translateY(100px)',
-                        opacity: 0,
-                        transition : {delay: 3, duration : 1}
+                    animate={{
+                        transform: 'translateY(110px)',
+                        opacity : 0,
+                        transition : { delay: 3, duration: 1 }
                     }}
-                    >
-                        {randomMovie.overview}
-                    </motion.p>
-                    <BtnsWrapper>
-                        <Button accent='accent'><FaPlay /> 재생</Button>
-                        <Button><IoIosInformationCircleOutline /> 상세정보</Button>
-                    </BtnsWrapper>
+
+                >
+                    {randomMovie.overview}
+                </motion.p>
+                <BtnsWrapper>
+                    <Button accent='accent'> <FaPlay />재생</Button>
+                    <Button> <IoIosInformationCircleOutline/>상세정보</Button>
+                </BtnsWrapper>
+
             </VideoInfoWrapper>
         </MainVideoContainer>
-
     )
-
 }
 
 const MainVideoContainer = styled.div`
@@ -96,22 +95,25 @@ const MainVideoContainer = styled.div`
     width: 100%;
     height: 100vh;
 `
-
 const VideoWrapper = styled.div`
     width: 100%;
     height: 100%;
 `
+
 const VideoInfoWrapper = styled.div`
     position: absolute;
     top: 50%;
-    z-index: 2;
     transform: translateY(-50%);
     padding: 0px 60px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
     h2{
         color: #fff;
         font-size: 80px;
-        font-weight: 700;
-        margin-bottom: 24px;
+        font-weight: bold;
     }
     p{
         font-size : 24px;
@@ -121,14 +123,17 @@ const VideoInfoWrapper = styled.div`
         overflow: hidden;
         display: -webkit-box;
         -webkit-line-clamp: 3;
-        -webkit-box-orient : vertical;
+        -webkit-box-orient: vertical;
         color: #fff;
         margin-bottom: 24px;
+        position: relative;
+        z-index: 1;
     }
 `
 
 const BtnsWrapper = styled.div`
     display: flex;
     gap: 12px;
+    position: relative;
     z-index: 3;
 `
