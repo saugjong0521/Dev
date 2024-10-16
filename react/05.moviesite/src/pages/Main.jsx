@@ -24,7 +24,7 @@ export default function Main (){
     const {
         data : action,
         isLoading : isActionLoading,
-        error : actinError
+        error : actionError
     } = useQuery(['movies','28'], ()=>getMovieGenre('28'),{
         stateTime : 5000
     })
@@ -40,6 +40,8 @@ export default function Main (){
     queryClientProvider로 랩핑된 하위 컴포넌트들은 query문을 전체적으로 공유할 수 있게 된다.
 
     */
+   if(isActionLoading) return <div>로딩중입니다..</div>
+   if(actionError) return <div>오류가 발생했습니다.</div>
 
 
     return(
