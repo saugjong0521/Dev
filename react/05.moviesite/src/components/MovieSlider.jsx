@@ -6,6 +6,7 @@ import { Navigation} from "swiper/modules"
 //스와이퍼 css
 import 'swiper/css';
 import 'swiper/navigation'
+import styled from "styled-components";
 
 export default function MovieSlider ({movies, title}){
     const [genres,setGenres] = useState({})
