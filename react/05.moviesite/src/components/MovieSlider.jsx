@@ -82,6 +82,7 @@ export default function MovieSlider({ movies, title, rate }) {
                             movie={movie}
                             id={id}
                             rate={rate}
+                            type = {type}
                             hoverId={hoverId}
                             setHoverId={setHoverId}
                             imgVariants ={imgVariants}

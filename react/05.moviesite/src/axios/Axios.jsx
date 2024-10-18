@@ -96,5 +96,7 @@ export const getModalDetail = async(movieId, type) => {
     try{
         const res= await instance.get(`${type}/${movieId}`);
         return res.data;
+    } catch (error){
+        console.error(error)
     }
 }
