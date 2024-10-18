@@ -5,7 +5,7 @@ import Button from './Button';
 import { AiOutlineLike } from "react-icons/ai";
 
 
-export default function MovieCard({ movie, id, hoverId, rate, imgVariants, infoVariants, getRating, setHoverId, getGenresNames }) {
+export default function MovieCard({ movie, id, hoverId, rate, imgVariants, infoVariants, getRating, setHoverId, getGenresNames, movieLength }) {
     const rating = getRating(movie.adult)
     const genreNames = getGenresNames(movie.genre_ids);
     return (
@@ -20,7 +20,7 @@ export default function MovieCard({ movie, id, hoverId, rate, imgVariants, infoV
                 style = {{position : 'relative'}}
             >
                 {rate && (
-                    <div className={`rateNum ${id === movie.length - 1 ? 'last' : ''}`}>
+                    <div className={`rateNum ${id === movieLength - 1 ? 'last' : ''}`}>
                         {id + 1}
                     </div>
                 )}

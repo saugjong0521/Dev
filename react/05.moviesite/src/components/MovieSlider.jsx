@@ -88,6 +88,7 @@ export default function MovieSlider({ movies, title, rate }) {
                             infoVariants = {infoVariants}
                             getGenresNames={getGenresNames}
                             getRating ={getRating}
+                            movieLength = {movies.length}
                         >
 
                         </MovieCard>
