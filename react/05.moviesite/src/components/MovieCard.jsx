@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import styled from 'styled-components';
 import { FaPlay, FaPlus, FaArrowDown } from "react-icons/fa";
+import Button from './Button';
 
 
 export default function MovieCard({ movie, id, hoverId, imgVariants, infoVariants, getRating, setHoverId, getGenresNames }) {
@@ -88,7 +89,7 @@ const MovieItem = styled.div`
                     display: flex;
                     gap: 4px;
                 }
-                Button{
+                button{
                     width : 24px;
                     height: 24px;
                     padding: 0;
