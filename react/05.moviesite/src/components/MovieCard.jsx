@@ -35,10 +35,12 @@ export default function MovieCard({ movie, id, hoverId, imgVariants, infoVariant
                                 <AioutlineLike>
 
                                 </AioutlineLike>
+                                
                             </div>
                             <Button/>
+                                <FaArrowDown/>
 
-                        </div>
+                        {</div>}
                     </div>
                 </motion.div>
 
