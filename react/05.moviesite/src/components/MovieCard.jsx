@@ -73,6 +73,15 @@ const MovieItem = styled.div`
             padding: 12px;
             box-sizing: border-box;
             flex : 12
+
+            .btnswrapper{
+                display: flex;
+                justify-content: center-between;
+                align-items
+                div{
+                    display:
+                } dap pxl
+            }
         }
     }
 
