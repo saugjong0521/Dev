@@ -22,7 +22,7 @@ export default function MovieCard({ movie, id, hoverId, imgVariants, infoVariant
 
                 <motion.div className='sliderInfo' variants={infoVariants}>
                     <div className='infoImg'>
-                        <img src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}></img>
+                        <img src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}/>
                     </div>
                 </motion.div>
 
