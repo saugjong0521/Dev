@@ -50,7 +50,7 @@ export default function Main (){
         <>
         <MainVideo/>
         <MovieSlider movies={nowPlaying.slice(1,11)} title='TOP 10 시리즈' rate={true} type='nowPlaying/>
-        <MovieSlider movies={action} title='액션 장르' type='action'/>
+        <MovieSlider movies={action} title=`액션 장르' type='action'/>
         </>
     )
 
