@@ -71,17 +71,6 @@ const MovieItem = styled.div`
         cursor: pointer;
     }
 
-    .sliderList.rate .rateNum{
-        position: absolute;
-        top: 0;
-        left: 0;
-        line-height: 200px;
-        font-size: 250px;
-        color: #000;
-        -webkit-text-stroke: 4px gray;
-        -webkit-text-fill-color: #000;
-    }
-
     .sliderInfo {
         position: absolute;
         top: 0;
@@ -89,7 +78,7 @@ const MovieItem = styled.div`
         width: 100%;
         height: 100%;
         z-index: 99;
-        
+
         .infoWrapper{
             display: flex;
             width: 100%;
@@ -128,5 +117,28 @@ const MovieItem = styled.div`
             }
         }
     }
+
+    //rate ver
+    .sliderList.rate .rateNum{
+        position: absolute;
+        top: 0;
+        left: 0;
+        line-height: 200px;
+        font-size: 250px;
+        color: #000;
+        -webkit-text-stroke: 4px gray;
+        -webkit-text-fill-color: #000;
+    }
+    .sliderList.rate .sliderImg{
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .sliderList.rate .sliderImg img{
+        object-fit: cover;
+    }
+
 
 `
