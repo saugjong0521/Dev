@@ -82,7 +82,7 @@ export const getMovieGenre = async(genreId) => {
     try {
         const res = await instance.get(`/discover/movie`,{
             params : {
-                width_genres : genreId
+                with_genres : genreId
             }
         })
         return res.data.results
