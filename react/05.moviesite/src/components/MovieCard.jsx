@@ -11,6 +11,7 @@ export default function MovieCard({ movie, id, hoverId, imgVariants, infoVariant
                 //whileHover 
                 onMouseEnter={() => setHoverId(movie.id)}
                 onMouseLeave={() => setHoverId(null)}
+                style = {{position : 'relative'}}
             >
                 <motion.div className='sliderImg' variants={imgVariants}>
                     <img
