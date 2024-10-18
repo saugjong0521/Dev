@@ -85,7 +85,7 @@ const MovieItem = styled.div`
                 justify-content: center-between;
                 align-items
                 div{
-                    display: flex
+                    display: flex;
                     gap: 4px;
                 }
                 button{
@@ -98,11 +98,8 @@ const MovieItem = styled.div`
                     font-size: 12px;
                     border-radius: 100%;
                 }
-
-                height: 24px;
-                align-items: flex}
-
             }
+
             .infoGenres{
                 color : #fff;
                 font-size: 12px;
