@@ -88,14 +88,16 @@ const MovieItem = styled.div`
                     display: flex
                     gap: 4px;
                 }
-                button{ width : 24px;
+                button{
+                    width : 24px;
                     height: 24px;
                     padding: 0;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     font-size: 12px;
-                    border-radious: 100%;
+                    border-radius: 100%;
+                }
 
                 height: 24px;
                 align-items: flex}
