@@ -40,7 +40,8 @@ export default function MovieCard({ movie, id, hoverId, imgVariants, infoVariant
                             <Button/>
                                 <FaArrowDown/>
 
-                        {</div>}
+                        </div>
+                        
                     </div>
                 </motion.div>
 
@@ -66,6 +67,9 @@ const MovieItem = styled.div`
         left: 0;
         width: 100%;
         height: 100%;
+        .infoWrapper{
+            display: flex;
+        }
     }
 
 `
