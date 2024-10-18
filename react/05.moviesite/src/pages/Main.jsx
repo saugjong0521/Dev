@@ -13,7 +13,7 @@ export default function Main (){
         data : action,
         isLoading : isActionLoading,
         error : actionError
-    } = useQuery(['movies', '28'], () => getMovieGenre('28'), {
+    } = useQuery(['movies', '28'], () => getMovies('28'), {
         staleTime: 5000,
     })
 
@@ -22,7 +22,7 @@ export default function Main (){
         data : nowPlaying,
         isLoading : isNowPlayingLoading,
         error : NowPlayingError
-    } = useQuery(['movies', 'nowPlaying'], () => getMovieGenre('now_playing'), {
+    } = useQuery(['movies', 'nowPlaying'], () => getMovies('now_playing'), {
         staleTime: 5000,
     })
 
