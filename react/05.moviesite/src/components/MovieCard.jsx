@@ -20,7 +20,9 @@ export default function MovieCard({ movie, id, hoverId, rate, imgVariants, infoV
                 style = {{position : 'relative'}}
             >
                 {rate && (
-                    <div className={`rateNum ${id === movie.length - 1 ? 'last' : ''}`}
+                    <div className={`rateNum ${id === movie.length - 1 ? 'last' : ''}`}>
+                        {id + 1}
+                    </div>
                 )}
                 <motion.div className='sliderImg' variants={imgVariants}>
                     <img
