@@ -22,7 +22,7 @@ export default function Main (){
         data : nowPlaying,
         isLoading : isNowPlayingLoading,
         error : NowPlayingError
-    } = useQuery(['movies', 'nowPlaying'], () => getMovieGenre('now_playing'), {
+    } = useQuery(['movies', 'nowPlaying'], () => getMovieGenre(now_playing), {
         staleTime: 5000,
     })
 
