@@ -33,7 +33,7 @@ export default function Main (){
     const {
         data : nowPlaying,
         isLoading : isNowPlayingLoading,
-        error : NowPlaingError
+        error : NowPlayingError
     } = useQuery(['movies', 'nowPlaying'], () => getMovieGenre('now_playing'), {
         staleTime: 5000,
     })
@@ -52,6 +52,10 @@ export default function Main (){
     */
    if(isActionLoading) return <div>로딩중입니다..</div>
    if(actionError) return <div>오류가 발생했습니다.</div>
+
+
+   if(isNowPlayingLoading) return <div>로딩중입니다..</div>
+   if(NowPlayingError) return <div>오류가 발생했습니다.</div>
 
 
     return(
