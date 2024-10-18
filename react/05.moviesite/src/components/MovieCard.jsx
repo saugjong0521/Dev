@@ -78,6 +78,7 @@ const MovieItem = styled.div`
             padding: 12px;
             box-sizing: border-box;
             flex : 12;
+            flex-direction: column; /* 세로 정렬 */
 
             .btnsWrapper{
                 display: flex;
