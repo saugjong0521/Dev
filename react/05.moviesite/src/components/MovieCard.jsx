@@ -10,7 +10,7 @@ export default function MovieCard({ movie, id, hoverId, imgVariants, infoVariant
         <MovieItem>
             <motion.div 
                 className='sliderList'
-                initia="initial"
+                initial="initial"
                 whileHover='hover'
                 //whileHover 
                 onMouseEnter={() => setHoverId(movie.id)}
@@ -88,7 +88,7 @@ const MovieItem = styled.div`
                     display: flex;
                     gap: 4px;
                 }
-                button{
+                Button{
                     width : 24px;
                     height: 24px;
                     padding: 0;
