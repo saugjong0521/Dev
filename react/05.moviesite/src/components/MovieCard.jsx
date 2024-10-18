@@ -3,11 +3,17 @@ import styled from 'styled-components';
 import { FaPlay, FaPlus, FaArrowDown } from "react-icons/fa";
 import Button from './Button';
 import { AiOutlineLike } from "react-icons/ai";
+import { useNavigate } from 'react-router-dom';
 
 
 export default function MovieCard({ movie, id, hoverId, rate, imgVariants, infoVariants, getRating, setHoverId, getGenresNames, movieLength }) {
     const rating = getRating(movie.adult)
     const genreNames = getGenresNames(movie.genre_ids);
+    
+    const navigate = useNavigate();
+
+    console.log(movie.id)
+
     return (
         <MovieItem>
             <motion.div 
