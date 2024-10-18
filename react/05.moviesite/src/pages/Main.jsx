@@ -47,6 +47,7 @@ export default function Main (){
     return(
         <>
         <MainVideo/>
+        <MovieSlider movies={nowPlaying} title='TOP 10 시리즈'/>
         <MovieSlider movies={action} title='액션 장르'/>
         </>
     )
