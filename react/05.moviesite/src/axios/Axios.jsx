@@ -93,8 +93,8 @@ export const getMovieGenre = async(genreId) => {
 
 //모달 정보 가져오기
 export const getModalDetail = async(movieId, type) => {
-    try(
-        const = instance.get(`${type}/$(movieId)`)
+    try{
+        const res= await instance.get(`${type}/${movieId}`);
         return res.data;
-    )
+    }
 }
