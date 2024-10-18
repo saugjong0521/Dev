@@ -78,7 +78,7 @@ const MovieItem = styled.div`
             width: 100%;
             padding: 12px;
             box-sizing: border-box;
-            flex : 12
+            flex : 12;
 
             .btnsWrapper{
                 display: flex;
@@ -95,14 +95,18 @@ const MovieItem = styled.div`
                     align-items: center;
                     justify-content: center;
                     font-size: 12px;
-                    brder-radious: 100%;
+                    border-radious: 100%;
 
                 height: 24px;
                 align-items: flex}
 
             }
             .infoGenres{
-
+                color : #fff;
+                font-size: 12px;
+                display: flex;
+                gap: 4px;
+                flex-direction: column;
             }
         }
     }
