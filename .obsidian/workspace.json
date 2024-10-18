@@ -140,6 +140,7 @@
   },
   "active": "773315788c9e80bd",
   "lastOpenFiles": [
+    "react/05.moviesite/src/components/MovieSlider.jsx",
     "react/node_modules/react-query/dist/react-query-hydration.development.js.map",
     "react/node_modules/react-query/dist/react-query-hydration.development.js",
     "react/node_modules/react-query/dist/react-query-devtools.production.min.js",
@@ -152,7 +153,6 @@
     "react/node_modules/balanced-match/index.js",
     "react/node_modules/balanced-match/LICENSE.md",
     "react/node_modules/big-integer/BigInteger.min.js",
-    "react/node_modules/broadcast-channel/dist/es/methods/simulate.js",
     "react/05.moviesite/node_modules/react-player/README.md",
     "react/05.moviesite/node_modules/react-player/CONTRIBUTING.md",
     "react/05.moviesite/node_modules/react-router/README.md",
