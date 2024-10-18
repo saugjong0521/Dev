@@ -28,6 +28,16 @@ export default function Main (){
     } = useQuery(['movies', 28], () => getMovieGenre(28), {
         staleTime: 5000,
     })
+
+    //nowPlaying
+    const {
+        data : nowPlaying,
+        isLoading : isNowPlayingLoading,
+        error : NowPlaingError
+    } = useQuery(['movies', 'nowPlaying'], () => getMovieGenre('now_playing'), {
+        staleTime: 5000,
+    })
+
     
     /*
     *useQuery
