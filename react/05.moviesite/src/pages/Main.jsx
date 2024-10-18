@@ -13,7 +13,7 @@ export default function Main (){
         data : action,
         isLoading : isActionLoading,
         error : actionError
-    } = useQuery(['movies', '28'], () => getMovies('28'), {
+    } = useQuery(['movies', '28'], () => getMovieGenre('28'), {
         staleTime: 5000,
     })
 
@@ -49,7 +49,7 @@ export default function Main (){
     return(
         <>
         <MainVideo/>
-        <MovieSlider movies={nowPlaying} title='TOP 10 시리즈'/>
+        <MovieSlider movies={nowPlaying} title='TOP 10 시리즈' rate={true}/>
         <MovieSlider movies={action} title='액션 장르'/>
         </>
     )
