@@ -61,6 +61,12 @@ export default function MovieSlider({ movies, title }) {
     const getGenresNames = (genreId) => {
         return genreId.map(id => genres[id]).join(', ')
     }
+
+    //관람등급 표시
+    const getRating = (adult) => {
+        return adult ? 
+    }
+
     return (
         <MovieSliderItem>
             <h2 className="movieTitle">{title}</h2>
@@ -80,6 +86,7 @@ export default function MovieSlider({ movies, title }) {
                             imgVariants ={imgVariants}
                             infoVariants = {infoVariants}
                             getGenresNames={getGenresNames}
+                            getRating ={getRating}
                         >
 
                         </MovieCard>

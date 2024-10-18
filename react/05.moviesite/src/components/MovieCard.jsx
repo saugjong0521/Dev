@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { FaPlay, FaPlus, FaArrowDown } from "react-icons/fa";
 
 
-export default function MovieCard({ movie, id, hoverId, imgVariants, infoVariants, setHoverId, getGenresNames }) {
+export default function MovieCard({ movie, id, hoverId, imgVariants, infoVariants, getRating, setHoverId, getGenresNames }) {
     const genreNames = getGenresNames(movie.genre_ids);
     return (
         <MovieItem>
@@ -96,7 +96,7 @@ const MovieItem = styled.div`
 
             }
             .infoGenres{
-                
+
             }
         }
     }
