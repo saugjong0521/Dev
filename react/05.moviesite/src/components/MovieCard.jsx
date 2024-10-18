@@ -34,10 +34,7 @@ export default function MovieCard({ movie, id, hoverId, imgVariants, infoVariant
                             <div>
                                 <FaPlay />
                                 <FaPlus />
-                                <AioutlineLike>
-
-                                </AioutlineLike>
-                                
+                                <AioutlineLike />
                             </div>
                             <Button>
                                 <FaArrowDown/>
