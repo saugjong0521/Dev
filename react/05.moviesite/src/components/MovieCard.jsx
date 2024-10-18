@@ -38,9 +38,14 @@ export default function MovieCard({ movie, id, hoverId, imgVariants, infoVariant
                                 </AioutlineLike>
                                 
                             </div>
-                            <Button/>
+                            <Button>
                                 <FaArrowDown/>
+                            <Button/>
 
+                        </div>{/*btnsWrapper */}
+                        <div className='infoGenres'>
+                            <p>{rating}</p>
+                            <p>{genreNames}</p>
                         </div>
                         
                     </div>
