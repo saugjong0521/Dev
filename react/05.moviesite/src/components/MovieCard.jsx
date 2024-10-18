@@ -35,7 +35,7 @@ export default function MovieCard({ movie, id, hoverId, rate, imgVariants, infoV
                     <div className='infoImg'>
                         <img src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}/>
                     </div>
-                    <div className="infoWrapper">
+                    <div className="infoWrapper" onClick={handleModal(movie.id)}>
                         <div className="btnsWrapper">
                             <div>
                                 <FaPlay />
