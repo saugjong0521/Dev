@@ -124,7 +124,7 @@ const MovieItem = styled.div`
         top: 0;
         left: 0;
         line-height: 200px;
-        font-size: 250px;
+        font-size: 300px;
         color: #000;
         -webkit-text-stroke: 4px gray;
         -webkit-text-fill-color: #000;
@@ -138,6 +138,8 @@ const MovieItem = styled.div`
 
     .sliderList.rate .sliderImg img{
         object-fit: cover;
+        width : 60%;
+        position: relative;
     }
 
 
