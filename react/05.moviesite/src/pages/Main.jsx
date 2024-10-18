@@ -8,18 +8,6 @@ import {useQuery} from "react-query"
 
 export default function Main (){
 
-    const [movies, setMovies] = useState([]);
-
-    useEffect(()=>{
-        const fetchMovies = async () => {
-            const res = await getMovies('now_playing')
-            if(res){
-                setMovies(res)
-            }
-        }
-        fetchMovies();
-    }, [])
-    
 
     const {
         data : action,
