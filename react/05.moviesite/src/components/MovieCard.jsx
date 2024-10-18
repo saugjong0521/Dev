@@ -11,6 +11,10 @@ export default function MovieCard({ movie, id, hoverId, rate, imgVariants, infoV
     const genreNames = getGenresNames(movie.genre_ids);
     
     const navigate = useNavigate();
+    
+    const handleModal = (movie.id) => {
+        navigate(`/${movie.id}`)
+    }
 
     console.log(movie.id)
 
