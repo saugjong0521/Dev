@@ -17,11 +17,13 @@ export default function MovieSlider({ movies, title }) {
     const imgVariants = {
         initial : {
             scale : 1,
+            zIndex : 1,
         },
         hover:{
             scale : 1.5,
             transition : {
-                duration : 0.5
+                duration : 0.5,
+                zIndex : 999,
             }
         }
     }
