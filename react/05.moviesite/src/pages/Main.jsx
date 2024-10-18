@@ -49,8 +49,8 @@ export default function Main (){
     return(
         <>
         <MainVideo/>
-        <MovieSlider movies={nowPlaying.slice(1,11)} title='TOP 10 시리즈' rate={true}/>
-        <MovieSlider movies={action} title='액션 장르'/>
+        <MovieSlider movies={nowPlaying.slice(1,11)} title='TOP 10 시리즈' rate={true} type='nowPlaying/>
+        <MovieSlider movies={action} title='액션 장르' type='action'/>
         </>
     )
 
