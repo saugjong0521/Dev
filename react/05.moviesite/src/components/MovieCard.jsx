@@ -144,7 +144,8 @@ const MovieItem = styled.div`
 
     .sliderList.rate .sliderImg img{
         object-fit: cover;
-        width : 60%;
+        width : 160px;
+        height: auto;
         position: relative;
     }
 
