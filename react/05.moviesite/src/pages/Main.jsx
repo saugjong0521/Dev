@@ -13,7 +13,7 @@ export default function Main (){
         data : action,
         isLoading : isActionLoading,
         error : actionError
-    } = useQuery(['movies', 28], () => getMovieGenre(28), {
+    } = useQuery(['movies', '28'], () => getMovieGenre('28'), {
         staleTime: 5000,
     })
 
