@@ -74,17 +74,29 @@ const MovieItem = styled.div`
             box-sizing: border-box;
             flex : 12
 
-            .btnswrapper{
+            .btnsWrapper{
                 display: flex;
                 justify-content: center-between;
                 align-items
                 div{
                     display: flex
                     gap: 4px;
-                } 
-                button: width : 24px;
+                }
+                button{ width : 24px;
+                    height: 24px;
+                    padding: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 12px;
+                    brder-radious: 100%;
+
                 height: 24px;
-                display: black;
+                align-items: flex}
+
+            }
+            .infoGenres{
+                
             }
         }
     }
