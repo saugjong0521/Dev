@@ -6,14 +6,14 @@ import { AiOutlineLike } from "react-icons/ai";
 import { useNavigate } from 'react-router-dom';
 
 
-export default function MovieCard({ movie, id, hoverId, rate, imgVariants, infoVariants, getRating, movieId, setHoverId, getGenresNames, movieLength }) {
+export default function MovieCard({ movie, id, hoverId, rate, imgVariants, infoVariants, getRating, setHoverId, getGenresNames, movieLength }) {
     const rating = getRating(movie.adult)
     const genreNames = getGenresNames(movie.genre_ids);
     
     const navigate = useNavigate();
     
     const handleModal = (movieId) => {
-        navigate(`/${movie.id}`)
+        navigate(`${type}/${movie.id}`)
     }
 
     console.log(movie.id)
