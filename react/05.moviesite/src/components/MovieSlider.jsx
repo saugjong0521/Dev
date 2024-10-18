@@ -81,4 +81,8 @@ const MovieSliderItem = styled.div`
         position: relative;
         margin-bottom: 24px;
     }
+
+    .swiper{
+        overflow: visible;
+    }
 `
