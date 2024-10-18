@@ -129,6 +129,12 @@ const MovieItem = styled.div`
         -webkit-text-stroke: 4px gray;
         -webkit-text-fill-color: #000;
     }
+
+    .sliderList.rate .rateNum.last{
+        letter-spacing: -50px;
+    }
+
+
     .sliderList.rate .sliderImg{
         position: relative;
         width: 100%;
