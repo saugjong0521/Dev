@@ -1,6 +1,6 @@
 
 
-export default function Modal(){
+export default function Modal(movie, type){
 
 
     return (
