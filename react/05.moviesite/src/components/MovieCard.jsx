@@ -4,6 +4,7 @@ import { FaPlay, FaPlus, FaArrowDown } from "react-icons/fa";
 
 
 export default function MovieCard({ movie, id, hoverId, imgVariants, infoVariants, getRating, setHoverId, getGenresNames }) {
+    const rating = getRating(movie.adult)
     const genreNames = getGenresNames(movie.genre_ids);
     return (
         <MovieItem>
