@@ -5,13 +5,13 @@ import Button from './Button';
 import { AiOutlineLike } from "react-icons/ai";
 
 
-export default function MovieCard({ movie, id, hoverId, imgVariants, infoVariants, getRating, setHoverId, getGenresNames }) {
+export default function MovieCard({ movie, id, hoverId, rate, imgVariants, infoVariants, getRating, setHoverId, getGenresNames }) {
     const rating = getRating(movie.adult)
     const genreNames = getGenresNames(movie.genre_ids);
     return (
         <MovieItem>
             <motion.div 
-                className='sliderList'
+                className={`sliderList ${rate ? 'rate' : ''}`}
                 initial="initial"
                 whileHover='hover'
                 //whileHover 
