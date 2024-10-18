@@ -20,7 +20,7 @@ export default function MovieSlider({ movies, title }) {
             zIndex : 1,
         },
         hover:{
-            scale : 1.5,
+            scale : 1.2,
             transition : {
                 duration : 0.5,
                 zIndex : 9,
@@ -101,7 +101,7 @@ const MovieSliderItem = styled.div`
         margin-bottom: 24px;
     }
 
-    .swiper{
+    /* .swiper{
         overflow: visible;
-    }
+    } */
 `
