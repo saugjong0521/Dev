@@ -79,8 +79,12 @@ const MovieItem = styled.div`
                 justify-content: center-between;
                 align-items
                 div{
-                    display:
-                } dap pxl
+                    display: flex
+                    gap: 4px;
+                } 
+                button: width : 24px;
+                height: 24px;
+                display: black;
             }
         }
     }
