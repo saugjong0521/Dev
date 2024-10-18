@@ -19,6 +19,10 @@ export default function MovieCard({ movie, id, hoverId, imgVariants, setHoverId,
                     />
                 </motion.div>
 
+                <motion.div className='sliderInfo'>
+
+                </motion.div>
+
 
             </motion.div>
         </MovieItem>
