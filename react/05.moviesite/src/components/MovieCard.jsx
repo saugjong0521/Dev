@@ -1,5 +1,8 @@
 import { motion } from 'framer-motion'
 import styled from 'styled-components';
+import { FaPlay } from "react-icons/fa";
+
+
 export default function MovieCard({ movie, id, hoverId, imgVariants, infoVariants, setHoverId, getGenresNames }) {
     const genreNames = getGenresNames(movie.genre_ids);
     return (
@@ -23,6 +26,15 @@ export default function MovieCard({ movie, id, hoverId, imgVariants, infoVariant
                 <motion.div className='sliderInfo' variants={infoVariants}>
                     <div className='infoImg'>
                         <img src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}/>
+                    </div>
+                    <div className="infoWrapper">
+                        <div className="btnsWrapper">
+                            <div className="">
+
+
+                            </div>
+
+                        </div>
                     </div>
                 </motion.div>
 
