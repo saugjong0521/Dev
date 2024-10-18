@@ -64,7 +64,7 @@ export default function MovieSlider({ movies, title }) {
 
     //관람등급 표시
     const getRating = (adult) => {
-        return adult ? 
+        return adult ? '청소년불가' : '전체 관람가능'
     }
 
     return (
