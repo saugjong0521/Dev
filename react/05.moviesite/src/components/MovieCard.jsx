@@ -40,7 +40,7 @@ export default function MovieCard({ movie, id, hoverId, imgVariants, infoVariant
                             </div>
                             <Button>
                                 <FaArrowDown/>
-                            <Button/>
+                            </Button>
 
                         </div>{/*btnsWrapper */}
                         <div className='infoGenres'>
