@@ -83,7 +83,10 @@ const MovieItem = styled.div`
                 display: flex;
                 justify-content: center-between;
                 align-items: center;
-                
+                color: white;
+                font-size: 12px;
+                gap: 8px; /* 간격 추가 */
+
                 div{
                     display: flex;
                     gap: 4px;
