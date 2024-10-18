@@ -42,4 +42,12 @@ const MovieItem = styled.div`
         cursor: pointer;
     }
 
+    .sliderInfo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
 `
