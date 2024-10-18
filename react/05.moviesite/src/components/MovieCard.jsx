@@ -19,6 +19,9 @@ export default function MovieCard({ movie, id, hoverId, rate, imgVariants, infoV
                 onMouseLeave={() => setHoverId(null)}
                 style = {{position : 'relative'}}
             >
+                {rate && (
+                    <div className={`rateNum ${id === movie.length - 1 ? 'last' : ''}`}
+                )}
                 <motion.div className='sliderImg' variants={imgVariants}>
                     <img
                         src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
