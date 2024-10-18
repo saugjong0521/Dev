@@ -26,7 +26,7 @@ export default function MovieCard({ movie, id, hoverId, rate, imgVariants, infoV
                 )}
                 <motion.div className='sliderImg' variants={imgVariants}>
                     <img
-                        src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
+                        src={`https://image.tmdb.org/t/p/w500${rate ? movie.poster_path : movie.backdrop_path}`}
                         alt={movie.title}
                     />
                 </motion.div>
