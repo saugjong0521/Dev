@@ -33,7 +33,6 @@ export default function Modal(movie, type){
         </AnimationPresence>
 
     ):null)
-    
 
 }
 
