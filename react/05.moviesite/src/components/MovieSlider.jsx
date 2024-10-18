@@ -101,7 +101,7 @@ const MovieSliderItem = styled.div`
         margin-bottom: 24px;
     }
 
-    /* .swiper{
+    .swiper{
         overflow: visible;
-    } */
+    }
 `
