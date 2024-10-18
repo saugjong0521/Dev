@@ -69,6 +69,10 @@ const MovieItem = styled.div`
         height: 100%;
         .infoWrapper{
             display: flex;
+            width: 100%;
+            padding: 12px;
+            box-sizing: border-box;
+            flex : 12
         }
     }
 
