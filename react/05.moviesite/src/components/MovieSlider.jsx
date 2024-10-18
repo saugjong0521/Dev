@@ -9,7 +9,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import MovieCard from "./MovieCard";
 
-export default function MovieSlider({ movies, title, rate }) {
+export default function MovieSlider({ movies, title, rate, type }) {
     const [genres, setGenres] = useState({})
     const [hoverId, setHoverId] = useState(null)
 
