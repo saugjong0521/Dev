@@ -29,7 +29,9 @@ export default function MovieCard({ movie, id, hoverId, imgVariants, infoVariant
                     </div>
                     <div className="infoWrapper">
                         <div className="btnsWrapper">
-                            <div className="">
+                            <div>
+                                <FaPlay />
+
 
 
                             </div>
