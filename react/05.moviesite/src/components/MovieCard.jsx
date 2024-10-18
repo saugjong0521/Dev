@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import styled from 'styled-components';
 import { FaPlay, FaPlus, FaArrowDown } from "react-icons/fa";
 import Button from './Button';
+import { AiOutlineLike } from "react-icons/ai";
 
 
 export default function MovieCard({ movie, id, hoverId, imgVariants, infoVariants, getRating, setHoverId, getGenresNames }) {
@@ -34,7 +35,7 @@ export default function MovieCard({ movie, id, hoverId, imgVariants, infoVariant
                             <div>
                                 <FaPlay />
                                 <FaPlus />
-                                <AioutlineLike />
+                                <AiOutlineLike />
                             </div>
                             <Button>
                                 <FaArrowDown/>
