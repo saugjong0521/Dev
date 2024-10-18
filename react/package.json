@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "react-query": "^3.39.3",
     "swiper": "^11.1.14",
     "yarn": "^1.22.22"
   }
