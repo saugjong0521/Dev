@@ -82,7 +82,8 @@ const MovieItem = styled.div`
             .btnsWrapper{
                 display: flex;
                 justify-content: center-between;
-                align-items
+                align-items: center;
+                
                 div{
                     display: flex;
                     gap: 4px;
