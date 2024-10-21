@@ -5,6 +5,21 @@ import MovieCard from "../components/MovieCard";
 
 
 export default function SearchResult (){
+    
+    const imgVariants = {
+        initial : {
+            scale : 1,
+            zIndex : 1,
+        },
+        hover:{
+            scale : 1.2,
+            transition : {
+                duration : 0.5,
+                zIndex : 9,
+            }
+        }
+    }
+
     const navigate = useNavigate();
     // const {movieId}
 
@@ -24,7 +39,7 @@ export default function SearchResult (){
                                 <MovieCard
                                 key = {movie.id}
                                 movie = {movie}
-                                id = {dix}
+                                id = {idx}
                                 rate = {movie.rate}
                                 navigate = {navigate}
                                 type = {type}
@@ -34,6 +49,9 @@ export default function SearchResult (){
                                 getGenresNames={getGenresNames}
                                 getRating={getRating}
                                 movieLength={movie.left}
+                                >
+
+                                </MovieCard>
                             })}
 
                         </div>
