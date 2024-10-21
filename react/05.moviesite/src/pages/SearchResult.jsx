@@ -60,7 +60,7 @@ export default function SearchResult (){
                                 id = {idx}
                                 rate = {movie.rate}
                                 navigate = {navigate}
-                                type = {type}
+                                type = {movie.type}
                                 setHoverId = {setHoverId}
                                 imgVariants={imgVariants}
                                 infoVariants={infoVariants}
