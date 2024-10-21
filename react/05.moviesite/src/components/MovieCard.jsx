@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { FaPlay, FaPlus, FaArrowDown } from "react-icons/fa";
 import Button from './Button';
 import { AiOutlineLike } from "react-icons/ai";
-import { navigate as useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function MovieCard({ movie, id, hoverId, type, rate, imgVariants, infoVariants, getRating, setHoverId, getGenresNames, movieLength }) {
@@ -13,7 +13,7 @@ export default function MovieCard({ movie, id, hoverId, type, rate, imgVariants,
     const navigate = useNavigate();
     
     const handleModal = (movieId) => {
-        navigate(`${type}/${movie.id}`)
+        navigate(`${type}/${movie.id}/`)
     }
 
     // console.log(movie.id)
