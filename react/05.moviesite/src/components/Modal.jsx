@@ -14,7 +14,9 @@ export default function Modal(movie, type){
 
     const {data, isLoading, error} = useQuery(
         ['detail', mediaType],
-        () => getModalDetail(movie.id, mediaType ? 'tv' : 'movie')
+        () => getModalDetail(movie.id, mediaType ? 'tv' : 'movie'),{
+            staleTime: 5000
+        }
     );
 
     return (
