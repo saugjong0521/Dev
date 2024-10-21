@@ -105,6 +105,7 @@ export const getModalDetail = async(movieId, type) => {
 export const getSearch = async(keyword) => {
 
     try {
+        console.log(keyword)
         const res = await instance.get(`search/multi?query=${keyword}`);
         // multi = 모든 장르(TMDB에서 영화 tv등등 모두 포함)
         console.log(res.data.results)
