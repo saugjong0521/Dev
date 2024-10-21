@@ -31,6 +31,11 @@ export default function Search (){
     const [visible, setVisible] = useState(false);
     const searchRef = useRef();
 
+    const [list, setList] = useState(false);    //  검색 리스트가 있는지 여부 확인
+    const [movieList, setMovieList] = useState([]); //  검색 결과 리스트를 출력
+
+    let data = []; //   영화 리스트가 들어올 변수
+
     const handleClickEvent = () =>{
         setSearchOpen((open) => !open)
 
@@ -46,6 +51,7 @@ export default function Search (){
         setKeyword(value);
         setClearBtn(value !== '');
         //input창의 값이 비어있지 않다면 value !== '', true로 설정해서 clearbtn 활성
+        
     }
     
     const handleClearEvent = (e) => {
