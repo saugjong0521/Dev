@@ -18,22 +18,29 @@ export default function MovieCard({ movie, id, hoverId, type, rate, imgVariants,
     
     const {category, movieId} = useParams();
 
+
     const navigate = useNavigate();
     
-    const handleCardClick = () => {
-        navigate(`/${type}/${movie.id}`);
-    }
+    // const handleModal = (movieId) => {
+    //     navigate(`${type}/${movie.id}/`)
+    // }
 
-    useEffect(() => {
-        if (type === category && `${movie.id}` === movieId) {
-            setIsModalOpen(true);
+    const isModalTrigger = type === category && `${movie.id}` === movieId
+
+    const handleModalOpen = () => {
+        if(isModalTrigger){
+        setIsModalOpen(true);
         }
-    }, [type, category, movie.id, movieId]);
+    }
 
     const handleModalClose = () => {
         setIsModalOpen(false);
-        navigate(-1); // Go back to the previous page
     }
+
+    useEffect(()=>{
+        console.log('type:', type, 'category:', category, 'movie.id:', movie.id, 'movieId:', movieId);
+        console.log('isModalOpen:', isModalOpen);
+    }, [type, category, movie.id, movieId, isModalOpen]);
 
     // console.log(movie.id)
 
@@ -43,6 +50,9 @@ export default function MovieCard({ movie, id, hoverId, type, rate, imgVariants,
                 className={`sliderList ${rate ? 'rate' : ''}`}
                 initial="initial"
                 whileHover='hover'
+                //whileHover 
+                // onMouseEnter={() => setHoverId(movie.id)}
+                // onMouseLeave={() => setHoverId(null)}
                 style = {{position : 'relative'}}
             >
                 {rate && (
@@ -61,7 +71,7 @@ export default function MovieCard({ movie, id, hoverId, type, rate, imgVariants,
                     <div className='infoImg'>
                         <img src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}/>
                     </div>
-                    <div className="infoWrapper" onClick={handleCardClick}>
+                    <div className="infoWrapper" onClick={handleModalOpen}>
                         <div className="btnsWrapper">
                             <div>
                                 <FaPlay />
@@ -80,7 +90,10 @@ export default function MovieCard({ movie, id, hoverId, type, rate, imgVariants,
                         
                     </div>
                 </motion.div>
-                {isModalOpen && <Modal movie={movie} type={type} onClose={handleModalClose}/>}
+                {/* Modal 컴포넌트 호출 */}
+                {isModalOpen && <Modal movie={movie} type={type}/>}
+
+
             </motion.div>
         </MovieItem>
     )
