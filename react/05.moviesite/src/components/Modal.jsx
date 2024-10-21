@@ -23,10 +23,12 @@ export default function Modal(movie, type){
         <AnimatiePresence>
             {movieId ? (
                 <Modal animate={{opacity : 1}} exit = {{opacity: 0}}
-                <motion.div className = 'modalContent'
-                transition = {{durnation : 0.5}}>
+                <motion.div 
+                    className = 'modalContent'
+                    transition = {{durnation : 0.5}}
+                >
                     <div className="modalBg">
-                        <img src = `https://image.org/t/p/w500${movie.backdrop_path}`/>
+                        <img src = {`https://image.org/t/p/w500${movie.backdrop_path}`}/>
                     </div>
                 </motion.div>
             )}
