@@ -20,6 +20,23 @@ export default function SearchResult (){
         }
     }
 
+    const infoVariants = {
+        initial : {
+            opacity : 0,
+            scale : 1,
+            zIndex : 1,
+        },
+        hover : {
+            opacity : 1,
+            scale : 1.5,
+            zIndex : 99,
+            transition : {
+                duration : 0.5,
+            }
+        }
+    }
+
+
     const navigate = useNavigate();
     // const {movieId}
     // const 
