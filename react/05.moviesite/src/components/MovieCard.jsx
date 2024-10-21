@@ -5,6 +5,7 @@ import Button from './Button';
 import { AiOutlineLike } from "react-icons/ai";
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import Modal from './Modal';
 
 
 export default function MovieCard({ movie, id, hoverId, type, rate, imgVariants, infoVariants, getRating, setHoverId, getGenresNames, movieLength }) {
@@ -77,6 +78,8 @@ export default function MovieCard({ movie, id, hoverId, type, rate, imgVariants,
                         
                     </div>
                 </motion.div>
+                {/* Modal 컴포넌트 호출 */}
+                {isModalOpen && <Modal movie={movie} type={type}/>}
 
 
             </motion.div>
