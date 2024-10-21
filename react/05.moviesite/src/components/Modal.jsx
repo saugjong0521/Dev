@@ -23,7 +23,7 @@ export default function Modal(movie, type){
         */
         <AnimatePresence>
             {movieId ? (
-                <ModalContainer animate={{opacity : 1}} exit = {{opacity: 0}}
+                <ModalContainer animate={{opacity : 1}} exit = {{opacity: 0}}>
                 <motion.div 
                     className = 'modalContent'
                     transition = {{duration : 0.5}}
