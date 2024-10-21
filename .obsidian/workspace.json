@@ -158,6 +158,7 @@
   },
   "active": "773315788c9e80bd",
   "lastOpenFiles": [
+    "react/05.moviesite/src/components/MovieHelpers.jsx",
     "react/05.moviesite/src/components/movieHelpers. jsx",
     "react/05.moviesite/src/pages/SearchResult.jsx",
     "react/node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js",
@@ -168,7 +169,6 @@
     "react/node_modules/react-query/es/core/mutation.js",
     "react/node_modules/react-query/es/core/infiniteQueryBehavior.js",
     "react/node_modules/@babel/runtime/helpers/esm/extends.js",
-    "react/node_modules/react-query/es/core/subscribable.js",
     "react/node_modules/balanced-match/README.md",
     "react/node_modules/balanced-match/LICENSE.md",
     "react/05.moviesite/node_modules/react-player/README.md",
