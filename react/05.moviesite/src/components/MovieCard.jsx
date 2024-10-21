@@ -16,7 +16,7 @@ export default function MovieCard({ movie, id, hoverId, type, rate, imgVariants,
         navigate(`${type}/${movie.id}`)
     }
 
-    console.log(movie.id)
+    // console.log(movie.id)
 
     return (
         <MovieItem>
