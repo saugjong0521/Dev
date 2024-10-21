@@ -22,7 +22,7 @@ export default function Modal(movie, type){
         */
         <AnimatiePresence>
             {movieId ? (
-                <Modal animate={{opacity : 1}} exit = {{opacity: 0}}
+                <ModalContainer animate={{opacity : 1}} exit = {{opacity: 0}}
                 <motion.div 
                     className = 'modalContent'
                     transition = {{durnation : 0.5}}
@@ -30,12 +30,13 @@ export default function Modal(movie, type){
                     <div className="modalBg">
                         <img src = {`https://image.org/t/p/w500${movie.backdrop_path}`}/>
                     </div>
+
                 </motion.div>
-            )}
+                </ModalContainer>
+            ):null}
+
         </AnimationPresence>
-
-    ):null)
-
+    )
 }
 
 const ModalContainer = styled(motion.div)`
