@@ -50,7 +50,9 @@ export default function Search (){
     };
 
     const handleInputChange = (e) => {
+
         const value = e.target.value
+        
         setKeyword(value);
         setClearBtn(value !== '');
         //input창의 값이 비어있지 않다면 value !== '', true로 설정해서 clearbtn 활성
