@@ -79,7 +79,7 @@ export default function SearchResult (){
                     <div className="searchWrapper">
                         <h3>{keyword}로 검색한 결과입니다.</h3>
                         <div className="searchList">
-                            {data.map((movie,idx) => {
+                            {data.map((movie,idx) => (
                                 <MovieCard
                                 key = {movie.id}
                                 movie = {movie}
@@ -96,7 +96,7 @@ export default function SearchResult (){
                                 >
 
                                 </MovieCard>
-                            })}
+                            ))}
 
                         </div>
                     </div>
