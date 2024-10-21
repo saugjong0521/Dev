@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { FaPlay, FaPlus, FaArrowDown } from "react-icons/fa";
 import Button from './Button';
 import { AiOutlineLike } from "react-icons/ai";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useState } from 'react';
 import Modal from './Modal';
 
@@ -16,16 +16,21 @@ export default function MovieCard({ movie, id, hoverId, type, rate, imgVariants,
     const rating = getRating(movie.adult)
     const genreNames = getGenresNames(movie.genre_ids);
     
+    const {category, movieId} = useParams();
+
+
     const navigate = useNavigate();
     
     // const handleModal = (movieId) => {
     //     navigate(`${type}/${movie.id}/`)
     // }
 
-    const isModalTrigger = type === category && `${movie.id}` === movieID
+    const isModalTrigger = type === category && `${movie.id}` === movieId
 
     const handleModalOpen = () => {
+        if(isModalTrigger){
         setIsModalOpen(true);
+        }
     }
 
     const handleModalClose = () => {
