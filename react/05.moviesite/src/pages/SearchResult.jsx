@@ -22,8 +22,18 @@ export default function SearchResult (){
                         <div className="searchList">
                             {data.map((moviem,idx) => {
                                 <MovieCard
-                                key = {moviem.id}
-
+                                key = {movie.id}
+                                movie = {movie}
+                                id = {dix}
+                                rate = {movie.rate}
+                                navigate = {navigate}
+                                type = {type}
+                                setHoverId = {setHoverId}
+                                imgVariants={imgVariants}
+                                infoVariants={infoVariants}
+                                getGenresNames={getGenresNames}
+                                getRating={getRating}
+                                movieLength={movie.left}
                             })}
 
                         </div>
