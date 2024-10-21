@@ -22,6 +22,7 @@ export default function SearchResult (){
 
     const navigate = useNavigate();
     // const {movieId}
+    // const 
 
     const location = useLocation()
     const keyWord = location.state.keyword
