@@ -91,7 +91,7 @@ export default function MovieCard({ movie, id, hoverId, type, rate, imgVariants,
                     </div>
                 </motion.div>
                 {/* Modal 컴포넌트 호출 */}
-                {isModalOpen && <Modal movie={movie} type={type} onClose={() => setIsModalOpen(false)} />}
+                {isModalOpen && <Modal movie={movie} type={type}/>}
 
 
             </motion.div>
