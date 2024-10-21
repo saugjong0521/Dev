@@ -1,5 +1,6 @@
 import { useQuery } from "react-query";
 import { useLocation, useNavigate } from "react-router-dom"
+import instance from '../axios/axios';
 
 
 export default function SearchResult (){
@@ -8,7 +9,7 @@ export default function SearchResult (){
 
     const location = useLocation()
     const keyWord = location.state.keyword
-    const {isLoading, error, data} = useQuery('search')
+    const {isLoading, error, data} = useQuery(['search', keyword], ()=> instance.getSearch(keyword))
     return (
         <>
         </>
