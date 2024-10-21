@@ -1,6 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom"
 import { getModalDetail } from "../axios/Axios";
 import { useQuery } from "react-query";
+import { motion, AnimatePresence } from "framer-motion";
 
 
 export default function Modal(movie, type){
@@ -20,12 +21,12 @@ export default function Modal(movie, type){
         AnimatePresence
         framer-motion에서 제공하는 애니메이션 컴포넌트로 마운트와 언마운트시 애니메이션을 정용할 수 있게 해주는 컴포넌트(기본적으로 리액트에서는 페이지가 변경될때 애니메이션을 적용할 수 없다.)
         */
-        <AnimatiePresence>
+        <AnimatePresence>
             {movieId ? (
                 <ModalContainer animate={{opacity : 1}} exit = {{opacity: 0}}
                 <motion.div 
                     className = 'modalContent'
-                    transition = {{durnation : 0.5}}
+                    transition = {{duration : 0.5}}
                 >
                     <div className="modalBg">
                         <img src = {`https://image.org/t/p/w500${movie.backdrop_path}`}/>
@@ -33,9 +34,9 @@ export default function Modal(movie, type){
 
                 </motion.div>
                 </ModalContainer>
-            ):null}
+            ) : null}
 
-        </AnimationPresence>
+        </AnimatePresence>
     )
 }
 
