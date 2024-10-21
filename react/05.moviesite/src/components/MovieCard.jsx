@@ -13,7 +13,7 @@ export default function MovieCard({ movie, id, hoverId, type, rate, imgVariants,
     const navigate = useNavigate();
     
     const handleModal = (movieId) => {
-        // navigate(`${type}/${movie.id}`)
+        navigate(`${type}/${movie.id}`)
     }
 
     console.log(movie.id)
