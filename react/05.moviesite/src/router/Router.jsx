@@ -14,7 +14,7 @@ export default function Router(){
             children : [    //자식 경로 설정
                 {index: true, element: <Main/>}, //main 컴포넌트를 기본경로로 설정
                 {path : '/:category/:movieId', element : <Main/>},
-                {path : '/'}
+                // {path : '/'}
             ],
         }
 
