@@ -44,7 +44,7 @@ export default function SearchResult (){
     // const 
 
     const location = useLocation()
-    const keyWord = location.state.keyword
+    const keyword = location.state.keyword
     const {isLoading, error, data} = useQuery(['search', keyword], ()=> instance.getSearch(keyword))
     return (
         <>
@@ -90,5 +90,22 @@ const ResultContainer = styled.div`
     padding: 20px;
     padding-top : 200px;
     box-sizing: border-box;
-
+    .resultText{
+        color: #fff;
+        font-size: 60px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 100px;
+    }
+    .searchList{
+        max-width: 70%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        gap: 40px 0px;
+        > div {
+            width: 30%;
+        }
+    }
 `
