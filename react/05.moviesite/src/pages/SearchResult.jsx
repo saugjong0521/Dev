@@ -69,6 +69,7 @@ export default function SearchResult (){
     const keyword = location.state.keyword || queryParams.get('keyword')
     const {isLoading, error, data} = useQuery(['search', keyword], ()=> getSearch(keyword))
     console.log(data)
+    console.log(keyword)
     return (
         <>
             {(!data || data.length === 0)} && <h2 className="resultText">검색 결과가 없습니다.</h2>
