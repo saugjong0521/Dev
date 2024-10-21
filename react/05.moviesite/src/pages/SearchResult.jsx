@@ -72,7 +72,7 @@ export default function SearchResult (){
     console.log(keyword)
     return (
         <>
-            {(!data || data.length === 0) && <h2 className="resultText">검색 결과가 없습니다.</h2>}
+            {(!data || data.length === 0)} && <h2 className="resultText">검색 결과가 없습니다.</h2>
 
             {data && (
                 <ResultContainer className = 'on'>
