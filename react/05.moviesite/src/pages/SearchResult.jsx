@@ -1,6 +1,6 @@
 import { useQuery } from "react-query";
 import { useLocation, useNavigate } from "react-router-dom";
-import instance, { getSearch } from "../axios/Axios";
+import instance, { getGenre, getSearch } from "../axios/Axios";
 import MovieCard from "../components/MovieCard";
 import { getGenreNames, getRating } from "../utils/MovieHelpers";
 import styled from "styled-components";

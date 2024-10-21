@@ -25,8 +25,8 @@ export default function MovieCard({ movie, id, hoverId, type, rate, imgVariants,
                 initial="initial"
                 whileHover='hover'
                 //whileHover 
-                onMouseEnter={() => setHoverId(movie.id)}
-                onMouseLeave={() => setHoverId(null)}
+                // onMouseEnter={() => setHoverId(movie.id)}
+                // onMouseLeave={() => setHoverId(null)}
                 style = {{position : 'relative'}}
             >
                 {rate && (
