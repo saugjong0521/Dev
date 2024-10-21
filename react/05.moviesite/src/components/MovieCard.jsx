@@ -4,9 +4,15 @@ import { FaPlay, FaPlus, FaArrowDown } from "react-icons/fa";
 import Button from './Button';
 import { AiOutlineLike } from "react-icons/ai";
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 
 export default function MovieCard({ movie, id, hoverId, type, rate, imgVariants, infoVariants, getRating, setHoverId, getGenresNames, movieLength }) {
+    
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    
+    
     const rating = getRating(movie.adult)
     const genreNames = getGenresNames(movie.genre_ids);
     
