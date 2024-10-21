@@ -44,6 +44,7 @@ export default function SearchResult (){
     const [hoverId, setHoverId] = useState(null);
 
     const location = useLocation()
+    const queryParams = location.state.keyword || queryParams.get('keyword')
     const keyword = location.state.keyword
     const {isLoading, error, data} = useQuery(['search', keyword], ()=> getSearch(keyword))
     return (
