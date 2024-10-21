@@ -4,7 +4,7 @@ import { FaPlay, FaPlus, FaArrowDown } from "react-icons/fa";
 import Button from './Button';
 import { AiOutlineLike } from "react-icons/ai";
 import { useNavigate, useParams } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Modal from './Modal';
 
 
@@ -36,6 +36,11 @@ export default function MovieCard({ movie, id, hoverId, type, rate, imgVariants,
     const handleModalClose = () => {
         setIsModalOpen(false);
     }
+
+    useEffect(()=>{
+        console.log('type:', type, 'category:', category, 'movie.id:', movie.id, 'movieId:', movieId);
+        console.log('isModalOpen:', isModalOpen);
+    }, [type, category, movie.id, movieId, isModalOpen]);
 
     // console.log(movie.id)
 
