@@ -4,6 +4,7 @@ import instance from "../axios/Axios";
 import MovieCard from "../components/MovieCard";
 import { getGenreNames, getRating } from "../utils/MovieHelpers";
 import styled from "styled-components";
+import { useState } from "react";
 
 
 export default function SearchResult (){
@@ -40,8 +41,7 @@ export default function SearchResult (){
 
 
     const navigate = useNavigate();
-    // const {movieId}
-    // const 
+    const [hoverId, setHoverId] = useState(null);
 
     const location = useLocation()
     const keyword = location.state.keyword
