@@ -22,7 +22,11 @@ export default function MovieCard({ movie, id, hoverId, type, rate, imgVariants,
     }
 
     const handleModalOpen = () => {
-        
+        setIsModalOpen(true);
+    }
+
+    const handleModalClose = () => {
+        setIsModalOpen(false);
     }
 
     // console.log(movie.id)
