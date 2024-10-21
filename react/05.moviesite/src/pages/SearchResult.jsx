@@ -74,31 +74,33 @@ export default function SearchResult (){
         <>
             {(!data || data.length === 0) && <h2 className="resultText">검색 결과가 없습니다.</h2>}
 
-            {data && data.length > 0 && (
+            {data} && (
                 <ResultContainer className = 'on'>
                     <div className="searchWrapper">
                         <h3>{keyword}로 검색한 결과입니다.</h3>
                         <div className="searchList">
                             {data.map((movie,idx) => (
                                 <MovieCard
-                                    key = {movie.id}
-                                    movie = {movie}
-                                    id = {idx}
-                                    rate = {movie.rate}
-                                    navigate = {navigate}
-                                    type = {movie.type}
-                                    setHoverId = {setHoverId}
-                                    imgVariants={imgVariants}
-                                    infoVariants={infoVariants}
-                                    getGenresNames={getGenresNames}
-                                    getRating={getRating}
-                                    movieLength={movie.left}
-                                />
+                                key = {movie.id}
+                                movie = {movie}
+                                id = {idx}
+                                rate = {movie.rate}
+                                navigate = {navigate}
+                                type = {movie.type}
+                                setHoverId = {setHoverId}
+                                imgVariants={imgVariants}
+                                infoVariants={infoVariants}
+                                getGenresNames={getGenresNames}
+                                getRating={getRating}
+                                movieLength={movie.left}
+                                >
+
+                                </MovieCard>
                             ))}
                         </div>
                     </div>
                 </ResultContainer>
-            )}
+            )
         </>
     )
 }
