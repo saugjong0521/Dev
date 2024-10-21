@@ -1,6 +1,6 @@
 import { useQuery } from "react-query";
 import { useLocation, useNavigate } from "react-router-dom";
-import instance from '../axios/axios';
+import instance from "../axios/Axios";
 import MovieCard from "../components/MovieCard";
 
 
