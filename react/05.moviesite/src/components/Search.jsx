@@ -54,10 +54,11 @@ export default function Search (){
         setKeyword(value);
         setClearBtn(value !== '');
         //input창의 값이 비어있지 않다면 value !== '', true로 설정해서 clearbtn 활성
+        if (value.trim()){
+            const searchUrl = `/search?keyword = ${value}`
+            navigate(searchUrl, {state: {value}})    
+        }
         
-        const searchUrl = `/search?keyword = ${value}`
-        navigate(searchUrl, {state: {value}})
-
     }
     
     const handleClearEvent = (e) => {
