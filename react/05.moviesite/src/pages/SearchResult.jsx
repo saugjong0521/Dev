@@ -88,7 +88,7 @@ export default function SearchResult (){
                                 setHoverId = {setHoverId}
                                 imgVariants={imgVariants}
                                 infoVariants={infoVariants}
-                                getGenreNames={getGenreNames}
+                                getGenresNames={getGenresNames}
                                 getRating={getRating}
                                 movieLength={movie.left}
                                 >
