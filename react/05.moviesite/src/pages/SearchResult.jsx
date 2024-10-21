@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import instance from "../axios/Axios";
 import MovieCard from "../components/MovieCard";
 import { getGenreNames, getRating } from "../utils/MovieHelpers";
+import styled from "styled-components";
 
 
 export default function SearchResult (){
@@ -47,7 +48,7 @@ export default function SearchResult (){
     const {isLoading, error, data} = useQuery(['search', keyword], ()=> instance.getSearch(keyword))
     return (
         <>
-            {(!data || data.length === 0)} && <div>검색 결과가 없습니다.</div>
+            {(!data || data.length === 0)} && <h2 className="resultText">검색 결과가 없습니다.</h2>
 
             {data} && (
                 <ResultContainer className = 'on'>
@@ -81,3 +82,13 @@ export default function SearchResult (){
         </>
     )
 }
+
+const ResultContainer = styled.div`
+    width: 100%;
+    height: 100%;
+    background: black;
+    padding: 20px;
+    padding-top : 200px;
+    box-sizing: border-box;
+
+`
