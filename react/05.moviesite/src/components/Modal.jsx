@@ -16,7 +16,6 @@ export default function Modal(movie, type){
         ['detail', mediaType],
         () => getModalDetail(movie.id, mediaType ? 'tv' : 'movie')
     );
-        stateModalDetail ()
 
     return (
         /*
