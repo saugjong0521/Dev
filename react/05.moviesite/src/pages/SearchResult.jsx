@@ -2,6 +2,7 @@ import { useQuery } from "react-query";
 import { useLocation, useNavigate } from "react-router-dom";
 import instance from "../axios/Axios";
 import MovieCard from "../components/MovieCard";
+import { getGenreNames, getRating } from "../utils/MovieHelpers";
 
 
 export default function SearchResult (){
@@ -53,7 +54,7 @@ export default function SearchResult (){
                     <div className="searchWrapper">
                         <h3>{keyword}로 검색한 결과입니다.</h3>
                         <div className="searchList">
-                            {data.map((moviem,idx) => {
+                            {data.map((movie,idx) => {
                                 <MovieCard
                                 key = {movie.id}
                                 movie = {movie}
@@ -64,7 +65,7 @@ export default function SearchResult (){
                                 setHoverId = {setHoverId}
                                 imgVariants={imgVariants}
                                 infoVariants={infoVariants}
-                                getGenresNames={getGenresNames}
+                                getGenreNames={getGenreNames}
                                 getRating={getRating}
                                 movieLength={movie.left}
                                 >
