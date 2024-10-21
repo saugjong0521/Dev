@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "../pages/Home";
 import NotFound from "../pages/NotFound";
 import Main from "../pages/Main";
+import SearchResult from "../pages/SearchResult";
 
 
 
@@ -14,7 +15,8 @@ export default function Router(){
             children : [    //자식 경로 설정
                 {index: true, element: <Main/>}, //main 컴포넌트를 기본경로로 설정
                 {path : '/:category/:movieId', element : <Main/>},
-                // {path : '/'}
+                {path : '/search', element: <SearchResult/>},
+                {path : '/search/:movieId', element: <searchResult />},
             ],
         }
 
