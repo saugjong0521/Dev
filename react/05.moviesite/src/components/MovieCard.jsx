@@ -10,7 +10,6 @@ import { useState } from 'react';
 export default function MovieCard({ movie, id, hoverId, type, rate, imgVariants, infoVariants, getRating, setHoverId, getGenresNames, movieLength }) {
     
     const [isModalOpen, setIsModalOpen] = useState(false);
-
     
     
     const rating = getRating(movie.adult)
@@ -20,6 +19,10 @@ export default function MovieCard({ movie, id, hoverId, type, rate, imgVariants,
     
     const handleModal = (movieId) => {
         navigate(`${type}/${movie.id}/`)
+    }
+
+    const handleModalOpen = () => {
+        
     }
 
     // console.log(movie.id)
