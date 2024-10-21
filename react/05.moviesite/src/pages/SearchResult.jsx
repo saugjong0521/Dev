@@ -4,7 +4,7 @@ import instance, { getSearch } from "../axios/Axios";
 import MovieCard from "../components/MovieCard";
 import { getGenreNames, getRating } from "../utils/MovieHelpers";
 import styled from "styled-components";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 export default function SearchResult (){
@@ -37,6 +37,27 @@ export default function SearchResult (){
                 duration : 0.5,
             }
         }
+    }
+    const [genres, setGenres] = useState({});
+
+    useEffect(()=> {
+        const fetchGenres = async() => {
+            const genreData = await getGenre();
+            const genreMap = genreData.reduce((acc,genre) => {
+                acc[genre.id] = genre.name;
+                return acc;
+            }, {})
+            setGenres(genreMap);
+        }
+        fetchGenres()
+    },[])
+
+    const getGenresNames = (genreId) => {
+        return genreId.map(id => genres[id]).join(',')
+    }
+
+    const getRating = (adult) => {
+        return adult ? '청소년불가' : '전체 관람가능'
     }
 
 
