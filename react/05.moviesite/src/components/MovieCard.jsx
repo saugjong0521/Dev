@@ -18,9 +18,11 @@ export default function MovieCard({ movie, id, hoverId, type, rate, imgVariants,
     
     const navigate = useNavigate();
     
-    const handleModal = (movieId) => {
-        navigate(`${type}/${movie.id}/`)
-    }
+    // const handleModal = (movieId) => {
+    //     navigate(`${type}/${movie.id}/`)
+    // }
+
+    const isModalTrigger = type === category && `${movie.id}` === movieID
 
     const handleModalOpen = () => {
         setIsModalOpen(true);
