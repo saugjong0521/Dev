@@ -1,7 +1,12 @@
 import styled from "styled-components"
+import { googleLogin } from "../api/firebase";
 
 
 export default function Login (){
+
+    const handleGoogleLogin = async() => {
+        const user = await googleLogin();
+    }
 
     return (
         <>
@@ -12,5 +17,5 @@ export default function Login (){
 }
 
 const GoogleBtn = styled.button`
-    
+    padding: 100px 200px;
 `
