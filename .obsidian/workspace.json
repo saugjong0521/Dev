@@ -156,6 +156,8 @@
   },
   "active": "49abb90004e00981",
   "lastOpenFiles": [
+    "Output/shoppingmall/node_modules/@types/node/globals.d.ts",
+    "Output/shoppingmall/src/api/Firebase.jsx",
     "Output/shoppingmall/src/api",
     "Output/shoppingmall/public/robots.txt",
     "Output/shoppingmall/public/manifest.json",
@@ -167,8 +169,6 @@
     "Output/shoppingmall/node_modules/web-vitals/dist/modules/lib/polyfills/getFirstHiddenTimePolyfill.js",
     "Output/shoppingmall/node_modules/web-vitals/dist/modules/lib/polyfills/firstInputPolyfill.js",
     "Output/shoppingmall/node_modules/web-vitals/dist/modules/lib/polyfills/getFirstHiddenTimePolyfill.d.ts",
-    "Output/shoppingmall/node_modules/web-vitals/dist/modules/lib/polyfills/firstInputPolyfill.d.ts",
-    "Output/shoppingmall/node_modules/web-vitals/src/lib/polyfills/getFirstHiddenTimePolyfill.ts",
     "Output/shoppingmall/node_modules/web-vitals/README.md",
     "Output/shoppingmall/node_modules/@types/aria-query/README.md",
     "Output/shoppingmall/node_modules/file-loader/node_modules/schema-utils/README.md",
