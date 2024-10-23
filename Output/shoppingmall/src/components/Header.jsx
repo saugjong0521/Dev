@@ -34,7 +34,7 @@ export default function Header (){
             </h1>
             <div className="rightMenu">
                 {user && user.isAdmin &&
-                    <p>관리자</p>
+                    <Link to='/admin'>업로드</Link>
                 }
                 {user ? (
                     <>

@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import NotFound from './pages/NotFound';
 import Login from './pages/Login';
+import AdminSection from './pages/AdminSection';
 
 const routes = createBrowserRouter([
   {
@@ -14,6 +15,7 @@ const routes = createBrowserRouter([
     errorElement : <NotFound/>,
     children : [
       { path: '/login', element: <Login/>},
+      { path: '/admin', element: <AdminSection/>},
       // children 은 중첩구조가 가능
       // e.g. children : [{ path: '/login', element: <Login/>, children : { path: '/page', element: <Page/> }},], 는 /home/login/page
     ]
