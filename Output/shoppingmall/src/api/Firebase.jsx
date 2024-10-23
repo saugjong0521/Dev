@@ -61,6 +61,14 @@ export function onUserState(callback){
 async function adminUser(user){
     try {
         const snapshot = await get(ref(database, 'admin'))
+        // snapshot : firebase 안의 database의 admin 폴더를 검색해서 체크
+        if(snapshot.exists()){
+            // snapshot.exists() = snapshot안에 데이터가 있음을 의미
+            const admins = snapshot.val()    //admin폴더 안에 있는 데이터들을 검색
+            const isAdmin = admins.includes(user.email);
+            // 검색된 admins에 현재 로그인된 이메일과 일치하는 이메일이 있는지 확인
+            return(...user, isAdmin);
+        }
     }
 }
 
