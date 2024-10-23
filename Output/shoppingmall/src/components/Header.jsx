@@ -16,7 +16,7 @@ export default function Header (){
                 <Link to=''>logo</Link>
             </h1>
             <div className="rightMenu">
-                    <button className="loginBtn" onClick={handleLogin}>login</button>
+                <button className="loginBtn" onClick={handleLogin}>login</button>
             </div>
         </HeaderContainer>
     )
