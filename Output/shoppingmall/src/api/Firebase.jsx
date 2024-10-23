@@ -25,6 +25,11 @@ const provider = new GoogleAuthProvider()
 const auth = getAuth()
 
 
+//구글 자동로그인 방지
+provider.setCustomParameters({
+    prompt: 'select_account',
+})
+
 //구글 로그인
 export async function googleLogin(){
     try {
