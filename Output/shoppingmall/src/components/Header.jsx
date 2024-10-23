@@ -1,9 +1,14 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import styled from "styled-components"
 
 
 export default function Header (){
 
+    const navigate = useNavigate();
+
+    const handleLogin = ()=> {
+        navigate('/login')
+    }
 
     return (
         <HeaderContainer>
@@ -11,7 +16,7 @@ export default function Header (){
                 <Link to=''>logo</Link>
             </h1>
             <div className="rightMenu">
-                    <button className="loginBtn">login</button>
+                    <button className="loginBtn" onClick={handleLogin}>login</button>
             </div>
         </HeaderContainer>
     )
