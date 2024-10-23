@@ -46,16 +46,32 @@ export async function googleLogin(){
     }
 }
 
-//리 로드에도 로그인 상태 유지
+//리 로드에도 로그인 상태 유지 (일반버전)
+// export function onUserState(callback){
+//     onAuthStateChanged(auth, async(user)=>{
+//         if (user) {
+//                 const updateUser = user;
+//                 callback(updateUser);
+//         }
+//     })
+// }
+// onAuthStateChanged = 사용자 인증 상태의 변화를 체크하는 훅
+
+
 export function onUserState(callback){
     onAuthStateChanged(auth, async(user)=>{
         if (user) {
-                const updateUser = user;
+            try{
+                const updateUser = await adminUser(user);
                 callback(updateUser);
+            } catch (error){
+                console.error(error)
+            }
+        } else {
+            callback(null);
         }
     })
 }
-// onAuthStateChanged = 사용자 인증 상태의 변화를 체크하는 훅
 
 // 관리자 계정 추가
 async function adminUser(user){
