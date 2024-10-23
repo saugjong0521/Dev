@@ -19,7 +19,7 @@ export default function Header (){
             setUser(user)
         })
     },[])
-    
+
     console.log(user)
 
     return (
@@ -31,7 +31,7 @@ export default function Header (){
                 {user ? (
                     <>
                     <UserData user={user}/>
-                    <button className="logoutBtn">logout</button>
+                    <button className="logoutBtn" onClick={handleLogout}>logout</button>
                     </>
                 ):(
                     <button className="loginBtn" onClick={handleLogin}>login</button>
