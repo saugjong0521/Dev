@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app" ;
-import { getAuth } from "firebase/auth";
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 
 
@@ -21,4 +21,13 @@ process = 현재 node.js에서 프로세스의 전역객체로 실행중인 프�
 */
 
 const app = initializeApp(firebaseConfig);
+const provider = new GoogleAuthProvider()
 const auth = getAuth()
+
+
+//구글 로그인
+export async function googleLogin(){
+    try {
+        const res = await signInWithPopup(auth, provider)
+    }
+}
