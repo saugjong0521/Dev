@@ -28,6 +28,12 @@ const auth = getAuth()
 //구글 로그인
 export async function googleLogin(){
     try {
-        const res = await signInWithPopup(auth, provider)
+        const res = await signInWithPopup(auth, provider);
+        const user = res.user;
+        console.log(user);
+
+        return user;
+    } catch(error){
+        console.error(error);
     }
 }
