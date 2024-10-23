@@ -156,6 +156,8 @@
   },
   "active": "49abb90004e00981",
   "lastOpenFiles": [
+    "Output/shoppingmall/package.json",
+    "Output/shoppingmall",
     "Output/page.zip",
     "react/05.moviesite/src/utils/MovieHelpers.jsx",
     "react/05.moviesite/src/utils",
@@ -165,8 +167,6 @@
     "react/node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js",
     "react/node_modules/react-query/es/react/useBaseQuery.js",
     "react/node_modules/react-query/es/react/utils.js",
-    "react/node_modules/react-query/es/react/logger.js",
-    "react/node_modules/react-query/es/react/reactBatchedUpdates.js",
     "react/node_modules/balanced-match/README.md",
     "react/node_modules/balanced-match/LICENSE.md",
     "react/05.moviesite/node_modules/react-player/README.md",
