@@ -156,6 +156,7 @@
   },
   "active": "49abb90004e00981",
   "lastOpenFiles": [
+    "Output/shoppingmall/src/api",
     "Output/shoppingmall/public/robots.txt",
     "Output/shoppingmall/public/manifest.json",
     "Output/shoppingmall/public/logo512.png",
@@ -168,7 +169,6 @@
     "Output/shoppingmall/node_modules/web-vitals/dist/modules/lib/polyfills/getFirstHiddenTimePolyfill.d.ts",
     "Output/shoppingmall/node_modules/web-vitals/dist/modules/lib/polyfills/firstInputPolyfill.d.ts",
     "Output/shoppingmall/node_modules/web-vitals/src/lib/polyfills/getFirstHiddenTimePolyfill.ts",
-    "Output/shoppingmall/node_modules/web-vitals/src/lib/polyfills/firstInputPolyfill.ts",
     "Output/shoppingmall/node_modules/web-vitals/README.md",
     "Output/shoppingmall/node_modules/@types/aria-query/README.md",
     "Output/shoppingmall/node_modules/file-loader/node_modules/schema-utils/README.md",
