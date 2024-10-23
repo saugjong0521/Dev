@@ -9,11 +9,10 @@ export default function Header (){
         <HeaderContainer>
             <h1>
                 <Link to=''>logo</Link>
-
-                <div className="rightMenu">
-                    <button className="loginBtn">login</button>
-                </div>
             </h1>
+            <div className="rightMenu">
+                    <button className="loginBtn">login</button>
+            </div>
         </HeaderContainer>
     )
 
