@@ -14,7 +14,7 @@ export default function Header (){
     }
 
     const [user,setUser] = useState();
-    
+
     useEffect(()=>{
         onUserState((user)=>{
             setUser(user)
@@ -33,6 +33,9 @@ export default function Header (){
                 <Link to=''>logo</Link>
             </h1>
             <div className="rightMenu">
+                {user && user.isAdmin &&
+                    <p>관리자</p>
+                }
                 {user ? (
                     <>
                     <UserData user={user}/>
