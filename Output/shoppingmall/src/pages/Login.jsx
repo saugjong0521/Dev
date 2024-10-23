@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { googleLogin } from "../api/firebase";
+import { googleLogin } from "../api/Firebase";
 
 
 export default function Login (){
