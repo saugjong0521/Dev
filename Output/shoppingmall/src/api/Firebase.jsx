@@ -1,4 +1,5 @@
-import { initializeApp } from "firebase/app"
+import { initializeApp } from "firebase/app" ;
+import { getAuth } from "firebase/auth";
 
 
 
@@ -20,3 +21,4 @@ process = 현재 node.js에서 프로세스의 전역객체로 실행중인 프�
 */
 
 const app = initializeApp(firebaseConfig);
+const auth = getAuth()
