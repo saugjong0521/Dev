@@ -19,6 +19,7 @@ export default function Header (){
             setUser(user)
         })
     },[])
+    
     console.log(user)
 
     return (
