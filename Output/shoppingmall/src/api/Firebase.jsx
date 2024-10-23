@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app" ;
-import { getDatabase } from "firebase/database" ;
+import { get, getDatabase, ref } from "firebase/database" ;
 import { getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from "firebase/auth";
 
 
@@ -60,7 +60,7 @@ export function onUserState(callback){
 // 관리자 계정 추가
 async function adminUser(user){
     try {
-        const snapshot = await get(ref())
+        const snapshot = await get(ref(database, 'admin'))
     }
 }
 
