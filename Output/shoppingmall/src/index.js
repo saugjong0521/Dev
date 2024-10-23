@@ -13,7 +13,7 @@ const routes = createBrowserRouter([
     element : <App/>,
     errorElement : <NotFound/>,
     children : [
-      { path: '/login', element: <Login/>}
+      { path: '/login', element: <Login/>},
     ]
   }
 
