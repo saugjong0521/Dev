@@ -14,6 +14,11 @@ export default function UserData({user}){
 const UserInfo = styled.div`
     display: flex;
     align-items: center;
+    img{
+        width: 36px;
+        height: auto;
+        border-radius: 50%;
+    }
     span{
         font-size: 16px;
     }
