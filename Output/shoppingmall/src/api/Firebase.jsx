@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app" ;
-import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup } from "firebase/auth";
 
 
 
@@ -42,3 +42,14 @@ export async function googleLogin(){
         console.error(error);
     }
 }
+
+//리 로드에도 로그인 상태 유지
+export function onUserState(callback){
+    onAuthStateChanged(auth, async(user)=>{
+        if (user) {
+                const updateUser = user;
+                callback(updateUser);
+        }
+    })
+}
+// onAuthStateChanged = 사용자 인증 상태의 변화를 체크하는 훅
