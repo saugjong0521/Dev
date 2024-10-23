@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom"
 import styled from "styled-components"
 import UserData from "./UserData";
+import { onUserState } from "../api/Firebase";
 
 
 export default function Header (){
@@ -13,6 +14,11 @@ export default function Header (){
     }
 
     const [user,setUser] = useState();
+    useEffect(()=>{
+        onUserState((user)=>{
+            setUser(user)
+        })
+    },[])
     console.log(user)
 
     return (
