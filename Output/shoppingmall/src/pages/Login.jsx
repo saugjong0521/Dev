@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 import { googleLogin } from "../api/Firebase";
 import { useNavigate } from "react-router-dom";
 
@@ -9,7 +9,7 @@ export default function Login (){
 
     const handleGoogleLogin = async() => {
         const user = await googleLogin();
-        navigate('/')
+        navigate('/');
     }
 
     return (
