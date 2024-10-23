@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom"
 import styled from "styled-components"
+import UserData from "./UserData";
 
 
 export default function Header (){
@@ -10,13 +12,23 @@ export default function Header (){
         navigate('/login')
     }
 
+
+    const [user,setUser] = useState();
+
     return (
         <HeaderContainer>
             <h1>
                 <Link to=''>logo</Link>
             </h1>
             <div className="rightMenu">
-                <button className="loginBtn" onClick={handleLogin}>login</button>
+                {user ? (
+                    <>
+                    <UserData user={user}/>
+                    <button className="logoutBtn">logout</button>
+                    </>
+                ):(
+                    <button className="loginBtn" onClick={handleLogin}>login</button>
+                )}
             </div>
         </HeaderContainer>
     )
