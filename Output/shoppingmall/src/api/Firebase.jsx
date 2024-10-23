@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app" ;
-import { getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup } from "firebase/auth";
+import { getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from "firebase/auth";
 
 
 
@@ -56,9 +56,9 @@ export function onUserState(callback){
 
 // 구글 로그아웃
 export async function googleLogOut (){
-    try(
+    try{
         await signOut(auth)
-    )catch(error){
+    } catch (error){
         console.error(error)
     }
 }
