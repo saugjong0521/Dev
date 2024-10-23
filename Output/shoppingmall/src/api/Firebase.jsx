@@ -67,8 +67,11 @@ async function adminUser(user){
             const admins = snapshot.val()    //admin폴더 안에 있는 데이터들을 검색
             const isAdmin = admins.includes(user.email);
             // 검색된 admins에 현재 로그인된 이메일과 일치하는 이메일이 있는지 확인
-            return(...user, isAdmin);
+            return{...user, isAdmin};
         }
+        return user;
+    } catch(error){
+        console.error(error);
     }
 }
 
