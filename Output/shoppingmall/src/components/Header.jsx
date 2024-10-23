@@ -12,8 +12,8 @@ export default function Header (){
         navigate('/login')
     }
 
-
     const [user,setUser] = useState();
+    console.log(user)
 
     return (
         <HeaderContainer>
