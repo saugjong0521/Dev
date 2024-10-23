@@ -1,4 +1,5 @@
 import { initializeApp } from "firebase/app" ;
+import { getDatabase } from "firebase/database" ;
 import { getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from "firebase/auth";
 
 
@@ -24,6 +25,7 @@ process = 현재 node.js에서 프로세스의 전역객체로 실행중인 프�
 const app = initializeApp(firebaseConfig);
 const provider = new GoogleAuthProvider()
 const auth = getAuth()
+const database = getDatabase(app);
 
 
 //구글 자동로그인 방지
@@ -54,6 +56,13 @@ export function onUserState(callback){
     })
 }
 // onAuthStateChanged = 사용자 인증 상태의 변화를 체크하는 훅
+
+// 관리자 계정 추가
+async function adminUser(user){
+    try {
+        const snapshot = await get(ref())
+    }
+}
 
 // 구글 로그아웃
 export async function googleLogout (){
