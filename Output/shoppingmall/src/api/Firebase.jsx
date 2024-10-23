@@ -53,3 +53,12 @@ export function onUserState(callback){
     })
 }
 // onAuthStateChanged = 사용자 인증 상태의 변화를 체크하는 훅
+
+// 구글 로그아웃
+export async function googleLogOut (){
+    try(
+        await signOut(auth)
+    )catch(error){
+        console.error(error)
+    }
+}
