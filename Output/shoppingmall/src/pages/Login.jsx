@@ -9,7 +9,9 @@ export default function Login (){
 
     const handleGoogleLogin = async() => {
         const user = await googleLogin();
-        navigate('/');
+        if(user){
+            navigate('/');
+        }
     }
 
     return (
