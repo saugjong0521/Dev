@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import NotFound from './pages/NotFound';
 import Login from './pages/Login';
 import AdminSection from './pages/AdminSection';
+import { userAuthContext } from './context/AuthContext';
 
 const routes = createBrowserRouter([
   {
@@ -24,6 +25,20 @@ const routes = createBrowserRouter([
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const protectRouter = ({checkAdmin, children}) => {
+  const {user, isLoading} = userAuthContext();
+
+  if(isLoading){
+    return
+  }
+
+  if(!user || (checkAdmin && !user.isAdmin)){
+    return <Navigate to='/' replace/>
+  }
+  return children
+}
+
 root.render(
   <React.StrictMode>
     <RouterProvider router={routes}/>
