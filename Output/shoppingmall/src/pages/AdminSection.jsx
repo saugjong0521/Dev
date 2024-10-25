@@ -24,8 +24,14 @@ export default function AdminSection(){
     })  //모든 상품의 상태를 빈 문자열로 초기화
 
     return(
-        <>
-            <h1>어드민섹션</h1>
-        </>
+        <Container>
+            <h1>상품 업로드</h1>
+            <FormContainer>
+                <div className="imgUploadWrap">
+
+                    
+                </div>
+            </FormContainer>
+        </Container>
     )
 }
