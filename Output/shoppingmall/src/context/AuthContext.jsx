@@ -53,9 +53,9 @@ export function AuthContextProvider ({children}){
     },[]) // useEffect
 
     return(
-        <AuthContextProvider value={{user,googleLogin,googleLogout, isLoading, uid:user && user.uid}}>
+        <AuthContext.Provider value={{user,googleLogin,googleLogout, isLoading, uid:user && user.uid}}>
             {children}
-        </AuthContextProvider>
+        </AuthContext.Provider>
     )
 
 }
