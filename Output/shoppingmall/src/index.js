@@ -9,25 +9,6 @@ import Login from './pages/Login';
 import AdminSection from './pages/AdminSection';
 import { useAuthContext, userAuthContext } from './context/AuthContext';
 
-const routes = createBrowserRouter([
-  {
-    path: '/',
-    element : <App/>,
-    errorElement : <NotFound/>,
-    children : [
-      { path: '/login', element: <Login/>},
-      { path: '/admin', element: 
-      <ProtectRouter checkAdmin>
-      <AdminSection/>
-      </ProtectRouter>
-    },
-      // children 은 중첩구조가 가능
-      // e.g. children : [{ path: '/login', element: <Login/>, children : { path: '/page', element: <Page/> }},], 는 /home/login/page
-    ]
-  }
-
-])
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const ProtectRouter = ({checkAdmin, children}) => {
@@ -48,6 +29,25 @@ const ProtectRouter = ({checkAdmin, children}) => {
   }
   return children
 }
+
+const routes = createBrowserRouter([
+  {
+    path: '/',
+    element : <App/>,
+    errorElement : <NotFound/>,
+    children : [
+      { path: '/login', element: <Login/>},
+      { path: '/admin', element: 
+      <ProtectRouter checkAdmin>
+      <AdminSection/>
+      </ProtectRouter>
+    },
+      // children 은 중첩구조가 가능
+      // e.g. children : [{ path: '/login', element: <Login/>, children : { path: '/page', element: <Page/> }},], 는 /home/login/page
+    ]
+  }
+
+])
 
 root.render(
   <React.StrictMode>
