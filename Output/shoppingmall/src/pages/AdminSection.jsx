@@ -66,6 +66,37 @@ export default function AdminSection(){
                         value={product.title}
                         onChange={productInfoChange}
                     />
+                    {/* 상품명 업로드 */}
+
+                    <input 
+                        type="text"
+                        name="price"
+                        placeholder="상품 가격을 입력하세요"
+                        value={product.price}
+                        onChange={productInfoChange}
+                    />
+                    {/* 상품 가격 업로드 */}
+
+                    <select
+                        name="category"
+                        value={product.category}
+                        onChange={productInfoChange}>
+                            <option value={''}>분류 선택</option>
+                            {categoryList.map((el, idx) => (
+                                <option key={idx} value={el}>{el}</option>
+                            ))}
+                        </select>
+                    {/* 카테고리 */}
+
+                    <input
+                        type="text"
+                        name="size"
+                        placeholder="상품 옵션을 ,로 구분해서 입력하세요."
+                        value={product.size}
+                        onChange={productInfoChange}
+                    />
+                    {/* 상품 사이즈 */}
+
                 </form>
             </FormContainer>
         </Container>
