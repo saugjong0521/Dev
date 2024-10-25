@@ -37,7 +37,7 @@ const routes = createBrowserRouter([
     children : [
       { path: '/login', element: <Login/>},
       { path: '/admin', element: 
-      // <ProtectRouter checkAdmin>
+      {/* <ProtectRouter checkAdmin> */}
       <AdminSection/>
       {/* </ProtectRouter> */}
     },
