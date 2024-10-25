@@ -17,7 +17,7 @@ export default function AdminSection(){
 
     const colors = ['#fff', '#000', '#fdbb2d', '#775305', '#ff9ff9', '#999999', '#000099']
 
-    const [products, setProduct] = useState({
+    const [product, setProduct] = useState({
         title: '',
         price: '',
         size: '',
@@ -33,7 +33,7 @@ export default function AdminSection(){
         if(name === 'file' && files && files[0]){
             setFile(files[0])
         } else{
-            setProducts((prev)=>({...prev, [name]:value}))
+            setProduct((prev)=>({...prev, [name]:value}))
         }
     }
 
@@ -59,7 +59,13 @@ export default function AdminSection(){
                     />
                     {/* 이미지 업로드 */}
 
-                    <input type="text" name="title" placeholder="상품명을 입력하세요" value={}
+                    <input 
+                        type="text"
+                        name="title"
+                        placeholder="상품명을 입력하세요"
+                        value={product.title}
+                        onChange={productInfoChange}
+                    />
                 </form>
             </FormContainer>
         </Container>
