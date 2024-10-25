@@ -7,7 +7,7 @@ import { createBrowserRouter, RouterProvider, useLocation } from 'react-router-d
 import NotFound from './pages/NotFound';
 import Login from './pages/Login';
 import AdminSection from './pages/AdminSection';
-import { userAuthContext } from './context/AuthContext';
+import { useAuthContext, userAuthContext } from './context/AuthContext';
 
 const routes = createBrowserRouter([
   {
@@ -17,9 +17,9 @@ const routes = createBrowserRouter([
     children : [
       { path: '/login', element: <Login/>},
       { path: '/admin', element: 
-      <rotectRouter checkAdmin>
+      <ProtectRouter checkAdmin>
       <AdminSection/>
-      </protectRouter>
+      </ProtectRouter>
     },
       // children 은 중첩구조가 가능
       // e.g. children : [{ path: '/login', element: <Login/>, children : { path: '/page', element: <Page/> }},], 는 /home/login/page
@@ -31,7 +31,7 @@ const routes = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const ProtectRouter = ({checkAdmin, children}) => {
-  const {user, isLoading} = userAuthContext();
+  const {user, isLoading} = useAuthContext();
 
   // 이전 페이지로 보내기
   const location = useLocation(); // 현재 경로 정보를 가져옴
