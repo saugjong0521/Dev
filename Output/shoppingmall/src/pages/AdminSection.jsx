@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import { CategoryContext } from "../context/CategoryContext";
 
 
@@ -11,6 +11,8 @@ export default function AdminSection(){
 
     const {categoryList} = useContext(CategoryContext);
     // console.log(categoryList)
+
+    const fileRef = useRef();
 
     const colors = ['#fff', '#000', '#fdbb2d', '#775305', '#ff9ff9', '#999999', '#000099']
 
