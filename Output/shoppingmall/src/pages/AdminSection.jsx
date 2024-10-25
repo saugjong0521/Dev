@@ -67,11 +67,32 @@ const Container = styled.div`
 `
 
 const FormContainer = styled.div`
+    max-width: 1200px;
+    padding: 30px 0px;
+    margin: 0 auto;
     display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    div{
-        width: 200px;
-        height: 200px;
+    gap: 40px;
+    .imgUploadWrap{
+        max-width: 400px;
+        height: auto;
+        img{
+            display: block;
+            height: 100%;
+        }
+    }
+
+    form{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        input{
+            width: 100%;
+            box-sizing: border-box;
+            height: 50px;
+            border-radius: 4px;
+            border-color: rgba(0,0,0,0.2);
+            padding: 6px 12px;
+        }
     }
 `
