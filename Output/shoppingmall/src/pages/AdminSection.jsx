@@ -14,6 +14,15 @@ export default function AdminSection(){
 
     const colors = ['#fff', '#000', '#fdbb2d', '#775305', '#f596e6']
 
+    const [products, setProducts] = useState({
+        title: '',
+        price: '',
+        size: '',
+        category: '',
+        description: '',
+        colors : [],
+    })  //모든 상품의 상태를 빈 문자열로 초기화
+
     return(
         <>
             <h1>어드민섹션</h1>
