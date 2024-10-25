@@ -26,7 +26,12 @@ export default function AdminSection(){
 
     // 업로드 함수들
     const productInfoChange = (e) => {
-        const {name, value, files} = e.target
+        const {name, value, files} = e.target;
+        if(name === 'file' && files && files[0]){
+            setFile(files[0])
+        } else{
+            setProducts((prev)=>({...prev, [name]:value}))
+        }
     }
 
 
