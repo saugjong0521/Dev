@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { createBrowserRouter, Navigate, RouterProvider, useLocation } from 'react-router-dom';
+import { createBrowserRouter, Navigate, RouterProvider, useLocation, useNavigate } from 'react-router-dom';
 import NotFound from './pages/NotFound';
 import Login from './pages/Login';
 import AdminSection from './pages/AdminSection';
@@ -16,6 +16,7 @@ const ProtectRouter = ({checkAdmin, children}) => {
 
   // 이전 페이지로 보내기
   const location = useLocation(); // 현재 경로 정보를 가져옴
+  const navigate = useNavigate();
 
   if(isLoading){
     return null
