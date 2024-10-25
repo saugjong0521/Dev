@@ -12,7 +12,7 @@ export default function AdminSection(){
     const {categoryList} = useContext(CategoryContext);
     // console.log(categoryList)
 
-    const colors = ['#fff', '#000', '#fdbb2d', '#775305', '#ff9ff9']
+    const colors = ['#fff', '#000', '#fdbb2d', '#775305', '#ff9ff9', '#999999', '#0000bb']
 
     const [products, setProducts] = useState({
         title: '',
