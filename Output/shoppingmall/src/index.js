@@ -29,12 +29,18 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 const protectRouter = ({checkAdmin, children}) => {
   const {user, isLoading} = userAuthContext();
 
+  // 이전 페이지로 보내기
+  const location = useLocation(); // 현재 경로 정보를 가져옴
+
   if(isLoading){
     return
   }
 
   if(!user || (checkAdmin && !user.isAdmin)){
-    return <Navigate to='/' replace/>
+    // return <Navigate to='/' replace/>
+    return(
+      <Navigate to ='/' replace state={{from: location}}/>
+    )
   }
   return children
 }
