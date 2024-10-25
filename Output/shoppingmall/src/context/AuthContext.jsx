@@ -42,7 +42,7 @@ export function AuthContextProvider ({children}){
                 sessionStorage.removeItem('user')
                 // 로그아웃 시, 'user' 데이터를 제거
             }
-            const unSubscribeFunc = onUserState(userChange)
+            const unSubscribeFunc = onUserState(userChange) // 여기서 로그인을 감지
             setUnSubscribe(()=>unSubscribeFunc);
             return () => {
                 if(unSubscribeFunc){
@@ -64,3 +64,12 @@ export function userAuthContet(){
     return useContext(AuthContext)
 }
 // 다른 곳에서 참조할 수 있도록 context를 export
+
+
+/*
+newuser의 로그인 상태를 감지하는 코드는 onUserState가 감지함.
+-> api폴더 내에서 만들었음
+onUserState는 사용자가 로그인/로그아웃 할때마다 실행되는 함수
+매번 로그인 상태가 바뀔때마다 userChange를 호출해서 uewUser의 값을 update하는 방식
+
+*/
