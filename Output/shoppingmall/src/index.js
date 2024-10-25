@@ -16,7 +16,11 @@ const routes = createBrowserRouter([
     errorElement : <NotFound/>,
     children : [
       { path: '/login', element: <Login/>},
-      { path: '/admin', element: <AdminSection/>},
+      { path: '/admin', element: 
+      <rotectRouter checkAdmin>
+      <AdminSection/>
+      </protectRouter>
+    },
       // children 은 중첩구조가 가능
       // e.g. children : [{ path: '/login', element: <Login/>, children : { path: '/page', element: <Page/> }},], 는 /home/login/page
     ]
@@ -26,7 +30,7 @@ const routes = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const protectRouter = ({checkAdmin, children}) => {
+const ProtectRouter = ({checkAdmin, children}) => {
   const {user, isLoading} = userAuthContext();
 
   // 이전 페이지로 보내기
