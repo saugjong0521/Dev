@@ -97,6 +97,12 @@ export default function AdminSection(){
                     />
                     {/* 상품 사이즈 */}
 
+                    <ColorChipWrap>
+                        {colors.map((color,idx) => {
+                            <div className="colorChipItem" key={idx} style={{backgroundColor : color}}></div>
+                        })}
+                    </ColorChipWrap>
+
                 </form>
             </FormContainer>
         </Container>
