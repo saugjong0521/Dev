@@ -143,3 +143,16 @@ const FormContainer = styled.div`
         }
     }
 `
+
+const ColorChipWrap = styled.div`
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    .colorChipItem{
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+`
