@@ -42,6 +42,8 @@ export default function AdminSection(){
             <h1>상품 업로드</h1>
             <FormContainer>
                 <div className="imgUploadWrap">
+                        <img src={URL.createObjectURL(file)}/>
+                        {/* createObjectURL = url주소를 string형태로 변환 */}
                     
                 </div>
                 <form>
