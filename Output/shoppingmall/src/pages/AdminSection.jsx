@@ -1,5 +1,6 @@
 import { useContext, useRef, useState } from "react";
 import { CategoryContext } from "../context/CategoryContext";
+import styled from "styled-components";
 
 
 export default function AdminSection(){
@@ -61,4 +62,12 @@ export default function AdminSection(){
     )
 }
 
-const 
+const Container = styled.div`
+    
+`
+
+const FormContainer = styled.div`
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+`
