@@ -28,9 +28,18 @@ export default function AdminSection(){
             <h1>상품 업로드</h1>
             <FormContainer>
                 <div className="imgUploadWrap">
-
                     
                 </div>
+                <form>
+                    <input
+                        type="file"
+                        name="file"
+                        accept="image/*"
+                        onChange={productInfoChage}
+                        ref={fileRef}
+                    />
+                    {/* 이미지 업로드 */}
+                </form>
             </FormContainer>
         </Container>
     )
