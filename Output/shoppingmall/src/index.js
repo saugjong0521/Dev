@@ -7,7 +7,7 @@ import { createBrowserRouter, Navigate, RouterProvider, useLocation, useNavigate
 import NotFound from './pages/NotFound';
 import Login from './pages/Login';
 import AdminSection from './pages/AdminSection';
-import { useAuthContext } from './context/AuthContext';
+import { AuthContextProvider, useAuthContext } from './context/AuthContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -32,7 +32,7 @@ const ProtectRouter = ({checkAdmin, children}) => {
 const routes = createBrowserRouter([
   {
     path: '/',
-    element : <App/>,
+    element :     <AuthContextProvider><App/></AuthContextProvider>,
     errorElement : <NotFound/>,
     children : [
       { path: '/login', element: <Login/>},
