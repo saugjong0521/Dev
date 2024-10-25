@@ -70,4 +70,8 @@ const FormContainer = styled.div`
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+    div{
+        width: 200px;
+        height: 200px;
+    }
 `
