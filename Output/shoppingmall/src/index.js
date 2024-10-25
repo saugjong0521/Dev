@@ -18,7 +18,7 @@ const ProtectRouter = ({checkAdmin, children}) => {
   const location = useLocation(); // 현재 경로 정보를 가져옴
 
   if(isLoading){
-    return
+    return null
   }
 
   if(!user || (checkAdmin && !user.isAdmin)){
