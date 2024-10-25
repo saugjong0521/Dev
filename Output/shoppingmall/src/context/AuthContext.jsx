@@ -60,7 +60,7 @@ export function AuthContextProvider ({children}){
 
 }
 
-export function userAuthContet(){
+export function userAuthContext(){
     return useContext(AuthContext)
 }
 // 다른 곳에서 참조할 수 있도록 context를 export
