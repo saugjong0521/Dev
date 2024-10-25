@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { CategoryContext } from "../context/CategoryContext";
 
 
 export default function AdminSection(){
@@ -7,6 +8,9 @@ export default function AdminSection(){
     const [isLoading, setIsLoading] = useState(false);
     const [success, setSuccess] = useState(null);
     const [error, setError] = useState(null);
+
+    const {categoryList} = useContext(CategoryContext);
+    // console.log(categoryList)
 
     return(
         <>
