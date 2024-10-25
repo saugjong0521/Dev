@@ -17,7 +17,7 @@ export default function AdminSection(){
 
     const colors = ['#fff', '#000', '#fdbb2d', '#775305', '#ff9ff9', '#999999', '#000099']
 
-    const [products, setProducts] = useState({
+    const [products, setProduct] = useState({
         title: '',
         price: '',
         size: '',
@@ -58,6 +58,8 @@ export default function AdminSection(){
                         ref={fileRef}
                     />
                     {/* 이미지 업로드 */}
+
+                    <input type="text" name="title" placeholder="상품명을 입력하세요" value={}
                 </form>
             </FormContainer>
         </Container>
