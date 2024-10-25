@@ -56,6 +56,7 @@ export function AuthContextProvider ({children}){
         <AuthContext.Provider value={{user,googleLogin,googleLogout, isLoading, uid:user && user.uid}}>
             {children}
         </AuthContext.Provider>
+        // provider 래핑되어 있는 하위에 있는 모든 컴포넌트에서 AuthContext에 접근할 수 있도록 해서 데이터를 공유하게 하는 역할을 함
     )
 
 }
