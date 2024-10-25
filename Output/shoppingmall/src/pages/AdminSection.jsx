@@ -12,6 +12,8 @@ export default function AdminSection(){
     const {categoryList} = useContext(CategoryContext);
     // console.log(categoryList)
 
+    const colors = ['#fff', '#000', '#fdbb2d', '#775305', '#f596e6']
+
     return(
         <>
             <h1>어드민섹션</h1>
