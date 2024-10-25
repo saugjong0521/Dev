@@ -23,6 +23,13 @@ export default function AdminSection(){
         colors : [],
     })  //모든 상품의 상태를 빈 문자열로 초기화
 
+
+    // 업로드 함수들
+    const productInfoChange = (e) => {
+        const {name, value, files} = e.target
+    }
+
+
     return(
         <Container>
             <h1>상품 업로드</h1>
@@ -35,7 +42,7 @@ export default function AdminSection(){
                         type="file"
                         name="file"
                         accept="image/*"
-                        onChange={productInfoChage}
+                        onChange={productInfoChange}
                         ref={fileRef}
                     />
                     {/* 이미지 업로드 */}
@@ -44,3 +51,5 @@ export default function AdminSection(){
         </Container>
     )
 }
+
+const 
