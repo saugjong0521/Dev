@@ -7,7 +7,7 @@ import { createBrowserRouter, Navigate, RouterProvider, useLocation } from 'reac
 import NotFound from './pages/NotFound';
 import Login from './pages/Login';
 import AdminSection from './pages/AdminSection';
-import { useAuthContext, userAuthContext } from './context/AuthContext';
+import { useAuthContext } from './context/AuthContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
