@@ -37,9 +37,8 @@ const routes = createBrowserRouter([
     children : [
       { path: '/login', element: <Login/>},
       { path: '/admin', element: 
-      {/* <ProtectRouter checkAdmin> */}
-      <AdminSection/>
-      {/* </ProtectRouter> */}
+        <AdminSection/>
+      // <ProtectRouter checkAdmin></ProtectRouter>
     },
       // children 은 중첩구조가 가능
       // e.g. children : [{ path: '/login', element: <Login/>, children : { path: '/page', element: <Page/> }},], 는 /home/login/page
