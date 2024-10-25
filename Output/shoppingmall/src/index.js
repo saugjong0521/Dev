@@ -22,10 +22,10 @@ const ProtectRouter = ({checkAdmin, children}) => {
   }
 
   if(!user || (checkAdmin && !user.isAdmin)){
-    return <Navigate to='/' replace/>
-    // return(
-    //   <Navigate to ='/' replace state={{from: location}}/>
-    // )
+    // return <Navigate to='/' replace/>
+    return(
+      <Navigate to ='/' replace state={{from: location}}/>
+    )
   }
   return children
 }
