@@ -2,5 +2,5 @@ import { createContext } from "react";
 
 
 export const CategoryContext = createContext({
-    categoryList:['']
+    categoryList:['Bag', 'Wallet', 'Acc', 'Clothes', 'Muffler']
 })
