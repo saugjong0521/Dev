@@ -101,6 +101,12 @@ export async function googleLogout (){
     }
 }
 
+// 가격 단위
+export function formatCurrency(item){
+    const number = parseInt(item);
+    return number.toLocaleString;
+}
+
 
 export async function addProducts (product, img){
    
