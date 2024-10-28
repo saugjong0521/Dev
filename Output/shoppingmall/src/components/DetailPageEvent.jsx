@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { formatCurrency } from "../api/Firebase";
 
 
 export default function DetailPageEvent({product}){
@@ -12,7 +13,7 @@ export default function DetailPageEvent({product}){
             <div className="textWrap">
                 <h3>{product.title}</h3>
                 <div className="itemFlex">
-                    <p className="itemPrice">{product.price}</p>
+                    <p className="itemPrice">{formatCurrency(product.price)}</p>
                     <p className="itemSize">{product.size}</p>
                 </div>
                 <div className="itemColor">
