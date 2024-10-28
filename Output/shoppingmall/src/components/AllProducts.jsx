@@ -21,7 +21,7 @@ export default function AllProduct (){
     return(
         <>
         <div className="container">
-            <Products/>
+            <Products product={product}/>
         </div>
 
         </>
