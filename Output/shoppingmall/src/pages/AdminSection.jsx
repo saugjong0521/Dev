@@ -45,6 +45,11 @@ export default function AdminSection(){
         }))
     }
 
+    // 컬러 삭제
+    const removeColor = (colorRemove) => {
+        setProduct((prev)=>())
+    }
+
 
     return(
         <Container>
@@ -109,7 +114,7 @@ export default function AdminSection(){
                         {colors.map((color,idx) => (
                             <div className="colorChipItem" 
                             key={idx} style={{backgroundColor : color}}
-                            onClick={colorPicker()}
+                            onClick={colorPicker(color)}
                             ></div>
 
                         ))}
