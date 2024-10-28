@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app" ;
-import { get, getDatabase, ref } from "firebase/database" ;
+import { get, getDatabase, ref, set } from "firebase/database" ;
 import { getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from "firebase/auth";
 import { v4 as uuid } from "uuid"
 
@@ -115,4 +115,9 @@ export async function addProducts (product, img){
     */
 
     const id = uuid()
+    return set(ref(database, `products/${id}`),{
+        ...product,
+        img,
+        id,
+    })
 }

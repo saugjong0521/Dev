@@ -54,12 +54,12 @@ export default function AdminSection(){
     }
 
     // handleUpload
-    // const handleUpload = async (e) => {
-    //     e.preventDefault();
-    //     try{
-    //         const url = await uploadImg()
-    //     }
-    // }
+    const handleUpload = async (e) => {
+        e.preventDefault();
+        try{
+            const url = await uploadImg()
+        }
+    }
 
     return(
         <Container>
