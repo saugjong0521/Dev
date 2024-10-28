@@ -15,4 +15,16 @@ export default function AllProduct (){
         }
         fetchProducts();
     }, [])
+
+    return(
+        <>
+            {product && product.map(el => (
+                <div key={el.id}>
+                    <img src={el.image}/>
+                    <p>{el.title}</p>
+                </div>
+            ))}
+        </>
+    )
+
 }
