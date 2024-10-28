@@ -8,6 +8,7 @@ import NotFound from './pages/NotFound';
 import Login from './pages/Login';
 import AdminSection from './pages/AdminSection';
 import { AuthContextProvider, useAuthContext } from './context/AuthContext';
+import CategoryPages from './pages/CategoryPages';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -36,7 +37,7 @@ const routes = createBrowserRouter([
     errorElement : <NotFound/>,
     children : [
       { path: '/login', element: <Login/>},
-      // { path: '/products/:category', element= }
+      { path: '/products/:category', element: <CategoryPages/> },
       { path: '/admin', element: 
         <AdminSection/>
       // <ProtectRouter checkAdmin></ProtectRouter>
