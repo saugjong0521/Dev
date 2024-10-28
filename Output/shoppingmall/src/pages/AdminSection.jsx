@@ -99,7 +99,11 @@ export default function AdminSection(){
 
                     <ColorChipWrap>
                         {colors.map((color,idx) => (
-                            <div className="colorChipItem" key={idx} style={{backgroundColor : color}}></div>
+                            <div className="colorChipItem" 
+                            key={idx} style={{backgroundColor : color}}
+                            onClick={(colorPicker())}
+                            ></div>
+
                         ))}
                     </ColorChipWrap>
 
