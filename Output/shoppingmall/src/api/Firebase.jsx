@@ -144,3 +144,16 @@ export async function getProducts(){
         return [];
     }
 }
+
+
+// 카테고리별 상품 가져오기
+export async function getCategoryProduct(category){
+    return get(ref(database,'products')).then((snapshot)=>{
+        if(snapshot.exists()){
+            const allProducts = Object.values(snapshot.val());
+            const filterProducts = allProducts.filter((product) => product.category === category)
+            return filterProducts
+        }
+        return []
+    })
+}
