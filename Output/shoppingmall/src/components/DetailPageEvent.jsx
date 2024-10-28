@@ -55,6 +55,7 @@ const DetailItem = styled.div`
             div{
                 width: 20px;
                 height: 20px;
+                border: solid 0.5px #000;
             }
         }
     }
