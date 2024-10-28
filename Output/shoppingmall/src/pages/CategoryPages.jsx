@@ -10,9 +10,11 @@ export default function CategoryPages(){
     const {category} = useParams();
 
     useEffect(()=>{
-        getCategoryProduct(category).then((product)=>{
-            setProduct(category)
-        }).catch((error)=>{
+        getCategoryProduct(category)
+        .then((product)=>{
+            setProduct(product)
+        })
+        .catch((error)=>{
             console.error(error)
         })
     },[category])
