@@ -8,7 +8,7 @@ export default function Products({products}){
 
 
         <ProductList>
-            {product && product.map((product) => (
+            {products && products.map((product) => (
                 <li key={product.id}>
                     <DetailPageEvent product={product}/>
                 </li>

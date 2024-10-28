@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getProducts } from "../api/Firebase";
+import Products from "./Products";
 
 
 export default function AllProduct (){
@@ -19,7 +20,9 @@ export default function AllProduct (){
 
     return(
         <>
-        <div className="container"/>
+        <div className="container">
+            <Products/>
+        </div>
 
         </>
     )
