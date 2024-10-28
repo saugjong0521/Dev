@@ -1,12 +1,13 @@
 import { useParams } from "react-router-dom"
 import CategoryProductsList from "../components/CategoryProductsList";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { getCategoryProduct } from "../api/Firebase";
 
 
-export default function CategoryPages({category, product}){
+export default function CategoryPages({}){
     console.log(product)
     const {category} = useParams();
+    const [product, setProduct] = useState([]);
 
     useEffect(()=>{
         getCategoryProduct(category)

@@ -4,7 +4,7 @@ import DetailPageEvent from "./DetailPageEvent";
 
 export default function CategoryProductsList ({category, product}){
 
-    const [products, setproducts] = useState(product);
+    // const [products, setproducts] = useState(product);
 
     return(
         <div className="container">
