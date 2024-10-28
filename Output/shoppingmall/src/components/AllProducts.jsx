@@ -1,0 +1,18 @@
+import { getProducts } from "../api/Firebase";
+
+
+export default function AllProduct (){
+    const [product, setProduct] = useState([]);
+
+    useEffect(()=>{
+        const fetchProducts = async() => {
+            try{
+                const products = await getProducts();
+                setProduct(products);
+            } catch(error){
+                console.error(error)
+            }
+        }
+        fetchProducts();
+    }, [])
+}
