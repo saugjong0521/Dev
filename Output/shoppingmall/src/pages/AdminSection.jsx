@@ -127,7 +127,7 @@ export default function AdminSection(){
                             <div key={idx}
                                 style={{backgroundColor: color}}>
                                 {color}
-                                <button onClick={()=>removeColor(color)}>x</button>
+                                <button onClick={(e)=> {e.preventDefault(); removeColor(color)}}>x</button>
                             </div>
                         ))}
                     </ColorSelect>
