@@ -104,7 +104,13 @@ export async function googleLogout (){
 // 가격 단위
 export function formatCurrency(item){
     const number = parseInt(item);
-    return number.toLocaleString;
+    return number.toLocaleString('ko-KR');
+    /*
+    ko-KR 한국
+    en-US 미국
+    ja-JP 일본
+    zh-CN 중국
+    */
 }
 
 

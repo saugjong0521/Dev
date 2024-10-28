@@ -2,13 +2,13 @@ import styled from "styled-components"
 import DetailPageEvent from "./DetailPageEvent"
 
 
-export default function Products({products}){
+export default function Products({product}){
 
     return (
 
 
         <ProductList>
-            {products && products.map((product) => (
+            {product && product.map((product) => (
                 <li key={product.id}>
                     <DetailPageEvent product={product}/>
                 </li>
