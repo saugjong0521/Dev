@@ -57,7 +57,21 @@ export default function AdminSection(){
     const handleUpload = async (e) => {
         e.preventDefault();
         try{
-            const url = await uploadImg()
+            const url = await uploadImg(file);
+            await addProducts(product, url)
+            setSuccess('업로드가 완료 되었습니다.')
+            setTimeout(()=>{
+                setSuccess(null)
+            },2000)
+            setFile(null)
+            setProduct({
+                title: '',
+                price: '',
+                size: '',
+                category: '',
+                description: '',
+                colors: [],
+            })
         }
     }
 
