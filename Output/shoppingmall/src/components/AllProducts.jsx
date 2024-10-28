@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { getProducts } from "../api/Firebase";
 
 
@@ -20,7 +21,7 @@ export default function AllProduct (){
         <>
             {product && product.map(el => (
                 <div key={el.id}>
-                    <img src={el.image}/>
+                    <img src={el.img}/>
                     <p>{el.title}</p>
                 </div>
             ))}
