@@ -41,14 +41,14 @@ export default function AdminSection(){
     const colorPicker = (color) => {
         setProduct((prev)=>({
             ...prev, colors : prev.colors.includes(color) ?
-            prev.colors : [...prev.colors,color]
+            prev.colors : [...prev.colors, color]
         }))
     }
 
     // 컬러 삭제
     const removeColor = (colorRemove) => {
         setProduct((prev) => ({
-            ...prev, colors: prev.colors.filter(color => color !== colorRemove) // Fixed 'color' to 'colors'
+            ...prev, colors: prev.colors.filter(color => color !== colorRemove)
         }))
     }
 
