@@ -72,6 +72,15 @@ export default function AdminSection(){
                 description: '',
                 colors: [],
             })
+
+            if(fileRef.current){
+                fileRef.current.value = '';
+            }
+        }catch(error){
+            console.error(error)
+            setError('업로드에 실패했습니다.')
+        }finally{
+            setIsLoading(false)
         }
     }
 
