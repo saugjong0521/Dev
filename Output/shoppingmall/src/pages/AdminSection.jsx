@@ -130,6 +130,14 @@ export default function AdminSection(){
                             </div>
                         ))}
                     </ColorSelect>
+                    
+                    <input 
+                        type = 'text' 
+                        name='description' 
+                        placeholer='상품 설명을 입력하세요'
+                        value={product.desciption}
+                        onChange={productInfoChange}
+                    />
 
                 </form>
             </FormContainer>
