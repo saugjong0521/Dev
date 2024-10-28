@@ -7,7 +7,7 @@ export default function Nav(){
     const {categoryList} = useContext(CategoryContext);
 
     return (
-        <NavList>
+        <MainMenu>
             <ul>
                 {categoryList.map((el, idx)=>(
                     <li key={idx}>
@@ -15,10 +15,10 @@ export default function Nav(){
                     </li>
                 ))}
             </ul>
-        </NavList>
+        </MainMenu>
     )
 }
 
-const NavList = styled.nav`
+const MainMenu = styled.nav`
 
 `
