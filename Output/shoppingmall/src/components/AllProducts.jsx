@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { getProducts } from "../api/Firebase";
 import Products from "./Products";
-import styled from "styled-components";
 
 
 export default function AllProduct (){
@@ -29,7 +28,3 @@ export default function AllProduct (){
     )
 
 }
-
-const Products = styled.div`
-
-`
