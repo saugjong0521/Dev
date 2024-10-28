@@ -7,10 +7,9 @@ export default function Products({products}){
 
         <ProductList>
             {product && product.map((product) => (
-                <li key={product.id}/>)
+                <li key={product.id}/>))}
         </ProductList>
 
     )
-)
 
 }
