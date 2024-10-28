@@ -8,8 +8,13 @@ export default function Nav(){
     return (
         <Nav>
             <ul>
-                {categoryList.map(el, idx)}
+                {categoryList.map((el, idx)=>(
+                    <li key={idx}>
+                        {el}
+                    </li>
+                ))}
             </ul>
         </Nav>
     )
 }
+

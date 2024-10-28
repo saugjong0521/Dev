@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom"
 import styled from "styled-components"
 import UserData from "./UserData";
 import { googleLogout, onUserState } from "../api/Firebase";
+import Nav from "./Nav";
 
 
 export default function Header (){
@@ -32,6 +33,7 @@ export default function Header (){
             <h1>
                 <Link to=''>logo</Link>
             </h1>
+            <Nav/>
             <div className="rightMenu">
                 {user && user.isAdmin &&
                     <Link to='/admin'>관리</Link>
