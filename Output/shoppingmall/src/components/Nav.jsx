@@ -20,5 +20,5 @@ export default function Nav(){
 }
 
 const NavList = styled.nav`
-    
+
 `
