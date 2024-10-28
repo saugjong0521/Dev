@@ -1,6 +1,7 @@
 import { useContext, useRef, useState } from "react";
 import { CategoryContext } from "../context/CategoryContext";
 import styled from "styled-components";
+import { uploadImg } from "../api/ImgUpload";
 
 
 export default function AdminSection(){
@@ -52,6 +53,13 @@ export default function AdminSection(){
         }))
     }
 
+    // handleUpload
+    const handleUpload = async (e) => {
+        e.preventDefault();
+        try{
+            const url = await uploadImg()
+        }
+    }
 
     return(
         <Container>
