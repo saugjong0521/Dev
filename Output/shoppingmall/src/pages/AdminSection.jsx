@@ -37,6 +37,14 @@ export default function AdminSection(){
         }
     }
 
+    // 컬러 지정
+    const colorPicker = (color) => {
+        setProduct((prev)=>({
+            ...prev, colors : prev.colors.includes(color) ?
+            prev.colors : [...prev.colors,color]
+        }))
+    }
+
 
     return(
         <Container>
