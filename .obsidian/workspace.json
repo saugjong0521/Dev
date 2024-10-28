@@ -156,6 +156,7 @@
   },
   "active": "49abb90004e00981",
   "lastOpenFiles": [
+    "Output/shoppingmall/src/components/AllProducts.jsx",
     "Output/shoppingmall/node_modules/uuid/dist/cjs-browser/test/v7.test.js",
     "Output/shoppingmall/node_modules/uuid/dist/cjs-browser/test/v7.test.d.ts",
     "Output/shoppingmall/node_modules/uuid/dist/cjs-browser/test/v4.test.d.ts",
@@ -167,7 +168,6 @@
     "Output/shoppingmall/node_modules/uuid/dist/cjs-browser/test",
     "Output/shoppingmall/node_modules/uuid/dist/esm-browser/test",
     "Output/shoppingmall/node_modules/uuid/dist/esm",
-    "Output/shoppingmall/node_modules/uuid/dist/cjs",
     "Output/shoppingmall/node_modules/undici-types/README.md",
     "Output/shoppingmall/node_modules/buffer-from/readme.md",
     "Output/shoppingmall/node_modules/ansi-regex/readme.md",
