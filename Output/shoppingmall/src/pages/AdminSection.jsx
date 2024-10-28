@@ -47,9 +47,9 @@ export default function AdminSection(){
 
     // 컬러 삭제
     const removeColor = (colorRemove) => {
-        setProduct((prev)=>
-            ({...prev, color : prev.colors.filter(color => color !== colorRemove)})
-        )
+        setProduct((prev) => ({
+            ...prev, colors: prev.colors.filter(color => color !== colorRemove) // Fixed 'color' to 'colors'
+        }))
     }
 
 
