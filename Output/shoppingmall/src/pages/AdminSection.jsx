@@ -139,6 +139,17 @@ export default function AdminSection(){
                         onChange={productInfoChange}
                     />
 
+                    <button disabled={isLoading}>
+                        {isLoading ? '업로드 중' : '제품 등록하기'}
+                    </button>
+
+                    {success && (
+                        <p>{success}</p>
+                    )}
+                    {error && (
+                        <p>{error}</p>
+                    )}
+
                 </form>
             </FormContainer>
         </Container>
