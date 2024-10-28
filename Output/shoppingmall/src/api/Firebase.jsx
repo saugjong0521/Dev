@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app" ;
 import { get, getDatabase, ref } from "firebase/database" ;
 import { getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from "firebase/auth";
+import { v4 as uuid } from "uuid"
 
 
 
@@ -102,5 +103,16 @@ export async function googleLogout (){
 
 
 export async function addProducts (product, img){
-    
+   
+    /*
+     uuid = 식별자를 만들어주는 라이브러리
+    숫자와 영문으로 조합된 식별자 코드를 부여해서 고유값으로 사용하는 라이브러리
+    데이터베이스에 데이터를 저장할때 원시형태의 값으로 유지시켜서 저장하고 출력할 때에는 변환해주는 과정을 넣어주는 것이
+    일반적이고 가장 안전한 방법으로 보고 있다.
+    우선적으로 변환을 해서 저장을 하게 되면 지역이 바뀌는 경우 재변환이 필요한 경우가 생긴다.
+
+    그렇기에, 원시형태로 저장 후 필요할 때마다 방법으로 변환하는 것이 재사용성과 유연성에 더 알맞다
+    */
+
+    const id = uuid()
 }
