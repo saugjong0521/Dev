@@ -36,6 +36,7 @@ const routes = createBrowserRouter([
     errorElement : <NotFound/>,
     children : [
       { path: '/login', element: <Login/>},
+      // { path: '/products/:category', element= }
       { path: '/admin', element: 
         <AdminSection/>
       // <ProtectRouter checkAdmin></ProtectRouter>
