@@ -64,7 +64,7 @@ export default function AdminSection(){
                         {/* createObjectURL = url주소를 string형태로 변환 */}
                     
                 </div>
-                <form>
+                <form onSubmit={handleUpload}>
                     <input
                         type="file"
                         name="file"
@@ -135,7 +135,7 @@ export default function AdminSection(){
                         type = 'text' 
                         name='description' 
                         placeholer='상품 설명을 입력하세요'
-                        value={product.desciption}
+                        value={product.description}
                         onChange={productInfoChange}
                     />
 
