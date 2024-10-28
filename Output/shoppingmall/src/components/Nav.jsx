@@ -1,12 +1,13 @@
 import { useContext } from "react";
 import { CategoryContext } from "../context/CategoryContext";
+import styled from "styled-components";
 
 
 export default function Nav(){
     const {categoryList} = useContext(CategoryContext);
 
     return (
-        <Nav>
+        <NavList>
             <ul>
                 {categoryList.map((el, idx)=>(
                     <li key={idx}>
@@ -14,7 +15,10 @@ export default function Nav(){
                     </li>
                 ))}
             </ul>
-        </Nav>
+        </NavList>
     )
 }
 
+const NavList = styled.nav`
+    
+`
