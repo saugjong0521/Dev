@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { CategoryContext } from "../context/CategoryContext";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 
 export default function Nav(){
@@ -11,7 +12,7 @@ export default function Nav(){
             <ul>
                 {categoryList.map((el, idx)=>(
                     <li key={idx}>
-                        {el}
+                        <Link to={`/product/${el}`}>{el}</Link>
                     </li>
                 ))}
             </ul>
