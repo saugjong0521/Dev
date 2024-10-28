@@ -1,3 +1,4 @@
+import styled from "styled-components"
 
 
 export default function Products({products}){
@@ -13,3 +14,8 @@ export default function Products({products}){
     )
 
 }
+
+
+const ProductList = styled.div`
+    
+`

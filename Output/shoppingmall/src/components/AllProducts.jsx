@@ -19,12 +19,8 @@ export default function AllProduct (){
 
     return(
         <>
-            {product && product.map(el => (
-                <div key={el.id}>
-                    <img src={el.img}/>
-                    <p>{el.title}</p>
-                </div>
-            ))}
+        <div className="container"/>
+
         </>
     )
 

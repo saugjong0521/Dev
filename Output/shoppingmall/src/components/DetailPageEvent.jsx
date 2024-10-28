@@ -1,3 +1,4 @@
+import styled from "styled-components";
 
 
 export default function DetailPageEvent({product}){
@@ -14,10 +15,17 @@ export default function DetailPageEvent({product}){
                     <p className="itemPrice">{product.price}</p>
                     <p className="itemSize">{product.size}</p>
                 </div>
+                <div className="itemColor">
+                    {colorItem && colorItem.map((color, idx)=>(
+                        <div key={idx} style={{backgroundColor: color}}></div>
+                    ))}
+                </div>
             </div>
-
-
         </DetailItem>
 
     )
 }
+
+const DetailItem = styled.div`
+
+`
