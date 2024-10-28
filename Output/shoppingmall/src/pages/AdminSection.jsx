@@ -2,6 +2,7 @@ import { useContext, useRef, useState } from "react";
 import { CategoryContext } from "../context/CategoryContext";
 import styled from "styled-components";
 import { uploadImg } from "../api/ImgUpload";
+import { addProducts } from "../api/firebase";
 
 
 export default function AdminSection(){
