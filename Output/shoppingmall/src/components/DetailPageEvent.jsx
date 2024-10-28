@@ -28,5 +28,12 @@ export default function DetailPageEvent({product}){
 }
 
 const DetailItem = styled.div`
-
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .textWrap{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
 `
