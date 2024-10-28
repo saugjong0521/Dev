@@ -166,7 +166,7 @@ export default function AdminSection(){
                     <input 
                         type = 'text' 
                         name='description' 
-                        placeholer='상품 설명을 입력하세요'
+                        placeholder='상품 설명을 입력하세요'
                         value={product.description}
                         onChange={productInfoChange}
                     />
