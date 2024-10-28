@@ -1,4 +1,5 @@
 import { useState } from "react"
+import DetailPageEvent from "./DetailPageEvent";
 
 
 export default function CategoryProductsList ({category, product}){
@@ -10,7 +11,11 @@ export default function CategoryProductsList ({category, product}){
             <h2>{category}</h2>
 
             <ul className="productList">
-                {products}
+                {products.map((el) => {
+                    <li key={el.id}>
+                        <DetailPageEvent product={el}/>
+                    </li>
+                })}
             </ul>
         </div>
     )
