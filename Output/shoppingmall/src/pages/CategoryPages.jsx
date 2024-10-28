@@ -4,8 +4,7 @@ import { useEffect, useState } from "react";
 import { getCategoryProduct } from "../api/Firebase";
 
 
-export default function CategoryPages(){
-    const [product, setProduct] = useState([]);
+export default function CategoryPages({category, product}){
     console.log(product)
     const {category} = useParams();
 
@@ -21,7 +20,6 @@ export default function CategoryPages(){
 
     return (
         <>
-            <h1>{category}</h1>
             <CategoryProductsList category={category} product={product}/>
         </>
     )
