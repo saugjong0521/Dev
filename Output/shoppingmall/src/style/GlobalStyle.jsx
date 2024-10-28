@@ -60,11 +60,11 @@ img{
 
 
 .container{
-   div{
    max-width: 1200px;
+   width: 100px;
+   height: auto;
    margin: 0 auto;
    padding: 100px 0px;
-}
 }
 `
 
