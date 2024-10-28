@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom"
 import CategoryProductsList from "../components/CategoryProductsList";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { getCategoryProduct } from "../api/Firebase";
 
 
