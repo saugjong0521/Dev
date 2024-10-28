@@ -118,7 +118,6 @@ export default function AdminSection(){
                                 key={idx} style={{backgroundColor : color}}
                                 onClick={() => colorPicker(color)}>
                             </div>
-
                         ))}
                     </ColorChipWrap>
 
