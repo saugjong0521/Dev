@@ -178,3 +178,17 @@ const ColorChipWrap = styled.div`
         border-radius: 50%;
     }
 `
+
+const ColorSelect = styled.div`
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    div{
+        width: 100px;
+        height: 30px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+`
