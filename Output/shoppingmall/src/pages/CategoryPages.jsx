@@ -6,7 +6,7 @@ import { getCategoryProduct } from "../api/Firebase";
 
 export default function CategoryPages(){
     const [product, setProduct] = useState([]);
-
+    console.log(product)
     const {category} = useParams();
 
     useEffect(()=>{
