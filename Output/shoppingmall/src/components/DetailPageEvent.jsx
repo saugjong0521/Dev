@@ -45,7 +45,17 @@ const DetailItem = styled.div`
             }
         }
         .itemFlex{
-
+            display: flex;
+            justify-content: space-between;
+        }
+        .itemColor{
+            display: flex;
+            height: 20px;
+            gap: 2px;
+            div{
+                width: 20px;
+                height: 20px;
+            }
         }
     }
 `
