@@ -118,9 +118,9 @@ export default function AdminSection(){
                     <ColorSelect>
                         {product.colors.map((color,idx)=>(
                             <div key={idx}
-                            style={{backgroundColor: color}}
-                            >
+                                style={{backgroundColor: color}}>
                                 {color}
+                                <button onClick={()=>removeColor(color)}>x</button>
                             </div>
                         ))}
                     </ColorSelect>
