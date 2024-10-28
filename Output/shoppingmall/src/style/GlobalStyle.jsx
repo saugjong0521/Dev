@@ -58,6 +58,13 @@ img{
    width: 100%;
 }
 
+
+.container{
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 100px 0px;
+}
 `
+
 
 export default GlobalStyle
