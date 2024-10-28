@@ -99,12 +99,18 @@ export default function AdminSection(){
 
                     <ColorChipWrap>
                         {colors.map((color,idx) => (
-                            <div className="colorChipItem" key={idx} style={{backgroundColor : color},{border : solid 1px #000}}></div>
+                            <div className="colorChipItem" key={idx} style={{backgroundColor : color}}></div>
                         ))}
                     </ColorChipWrap>
 
                     <ColorSelect>
-                        {product.colors.map}
+                        {product.colors.map((color,idx)=>(
+                            <div key={idx}
+                            style={{backgroundColor: color}}
+                            >
+                                {color}
+                            </div>
+                        ))}
                     </ColorSelect>
 
                 </form>
