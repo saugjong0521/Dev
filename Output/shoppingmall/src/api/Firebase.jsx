@@ -99,3 +99,8 @@ export async function googleLogout (){
         console.error(error)
     }
 }
+
+
+export async function addProducts (product, img){
+    
+}
