@@ -38,6 +38,7 @@ const routes = createBrowserRouter([
     children : [
       { path: '/login', element: <Login/>},
       { path: '/product/:category', element: <CategoryPages/> },
+      // category 앞에 ':'를 붙임으로서, 매개변수로 만듬
       { path: '/admin', element: 
         <AdminSection/>
       // <ProtectRouter checkAdmin></ProtectRouter>
