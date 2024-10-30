@@ -11,7 +11,7 @@ export default function (){
     const queryClient = useQueryClient();
 
     const addItemCart = useMutation({
-        mutationFn : (product) = updateCart(uid, product),
+        mutationFn : (product) => updateCart(uid, product),
         onSuccess : ()=>{
             queryClient.invalidateQueries(['cart', uid])
             //상태값을 최신으로 갱신(쿠키값을 무효화 시켜서 상품의 정보를 최신으로 업데이트)
