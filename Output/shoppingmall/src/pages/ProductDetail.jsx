@@ -34,8 +34,9 @@ export default function ProductDetail (){
                     <h3>{title}</h3>
                     <p className="price">가격<span>{formatCurrency(price)}원</span></p>
                     <p className="description">{description}</p>
-                </div>
-                <div className="detailOpt">
+
+
+                    <div className="detailOpt">
                     {/* react에서는 label에 for 대신 htmlFor을 사용 */}
                     <label className="labelText" htmlFor="sizeSelect">옵션</label>
                     {size=="" ? <span>one-size</span> : 
@@ -46,12 +47,15 @@ export default function ProductDetail (){
                     </select>
                     }
                 </div>
-            </DetailPage>
 
-            <div className="detailBtns">
+                    <div className="detailBtns">
                         <button className="cartBtn" onClick={handleCart}>장바구니</button>
                         <button className="buyBtn">구매하기</button>
                     </div>
+                    
+                </div>
+            </DetailPage>
+
         </div>
         
 
