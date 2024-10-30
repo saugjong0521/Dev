@@ -33,13 +33,13 @@ export default function ProductDetail (){
                         ))}
                     </select>
                 </div>
-                <div className="detailBtns">
+            </DetailPage>
+            <div className="detailBtns">
                     <button className="cartBtn">장바구니</button>
                     <button className="buyBtn">구매하기</button>
                 </div>
-            </DetailPage>
-
         </div>
+        
 
     )
 
