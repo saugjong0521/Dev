@@ -1,6 +1,7 @@
 import { useLocation } from "react-router-dom"
 import styled from "styled-components";
 import { formatCurrency } from "../api/Firebase";
+import { useState } from "react";
 
 
 export default function ProductDetail (){
@@ -11,9 +12,11 @@ export default function ProductDetail (){
 
     const setSize = size.split(',').map((opt)=>opt.trim());
     console.log(setSize);
+    
+    const [selected, setSelected] = useState(setSize && setSize[0])
 
     const handleCart = () => {
-        const product = {id, img, title, price, size, colors}
+        const product = {id, img, title, price, size, size}
     }
 
     return(
