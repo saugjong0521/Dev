@@ -29,6 +29,9 @@ const MainMenu = styled.nav`
         align-items: center;
         justify-content: center;
         li{
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: 100px;
             height: 20px;
             border: solid 1px rgba(0,0,0,0.3);
