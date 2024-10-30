@@ -46,6 +46,7 @@ export default function Header (){
                 ):(
                     <button className="loginBtn" onClick={handleLogin}>login</button>
                 )}
+                <Link to='cart'>장바구니</Link>
             </div>
         </HeaderContainer>
     )
