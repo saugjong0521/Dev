@@ -14,9 +14,13 @@ export default function ProductDetail (){
     console.log(setSize);
     
     const [selected, setSelected] = useState(setSize && setSize[0])
+    
+    const selectOpt = (e) => {
+        setSelected(e.target.value)
+    }
 
     const handleCart = () => {
-        const product = {id, img, title, price, size, size}
+        const product = {id, img, title, price, size, size:selected, quantity: 1}
     }
 
     return(
