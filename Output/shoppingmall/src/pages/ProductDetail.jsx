@@ -23,7 +23,7 @@ export default function ProductDetail (){
                     <h3>{title}</h3>
                     <p className="price">가격<span>{formatCurrency(price)}원</span></p>
                     <p className="description">{description}</p>
-                    <div className="detailBtns">
+                <div className="detailBtns">
                     <button className="cartBtn">장바구니</button>
                     <button className="buyBtn">구매하기</button>
                 </div>
