@@ -1,5 +1,6 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useAuthContext } from "./AuthContext";
+import { updateCart } from "../api/Firebase";
 
 
 export default function (){
