@@ -12,7 +12,7 @@ const queryClient = new QueryClient();
 function App() {
   return (
     <>
-    <QueryClientProvider>
+    <QueryClientProvider client={queryClient}>
     <GlobalStyle/>
     <Header/>
       <Routes>
