@@ -46,13 +46,8 @@ export default function DetailPageEvent({product}){
 
 const DetailItem = styled.div`
     display: flex;
-    
-    gap: 20px 5%;
-    flex-wrap: wrap;
-
-        flex-shrink: 0;
-        width: 30%;
-
+    flex-direction: column;
+    gap: 20px;
     .textWrap{
         display: flex;
         flex-direction: column;
