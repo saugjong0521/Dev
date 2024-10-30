@@ -7,9 +7,9 @@ export default function ProductDetail (){
     console.log(state);
 
     return(
-        <>
-            <h1>디테일 페이지</h1>
-        </>
+
+        <div className="container"></div>
+
     )
 
 }
