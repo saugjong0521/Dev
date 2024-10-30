@@ -1,14 +1,21 @@
 import styled from "styled-components";
 import { formatCurrency } from "../api/Firebase";
+import { useNavigate } from "react-router-dom";
 
 
 export default function DetailPageEvent({product}){
 
     const colorItem = product.colors;
 
+    const navigate = useNavigate();
+
+    const handleDetailEvent = () => {
+        navigate(`/product/detail/${product.id}`)
+    }
+
     return(
 
-        <DetailItem>
+        <DetailItem onClick={handleDetailEvent}>
             <img src={product.img}/>
             <div className="textWrap">
                 <h3>{product.title}</h3>
