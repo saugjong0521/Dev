@@ -85,12 +85,15 @@ async function adminUser(user){
             const isAdmin = admins.includes(user.email);
             // 검색된 admins에 현재 로그인된 이메일과 일치하는 이메일이 있는지 확인
             return{...user, isAdmin};
+            console.log(user)
+
         }
         return user;
     } catch(error){
         console.error(error);
     }
 }
+
 
 // 구글 로그아웃
 export async function googleLogout (){
