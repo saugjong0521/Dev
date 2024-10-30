@@ -59,20 +59,23 @@ export async function googleLogin(){
 // onAuthStateChanged = 사용자 인증 상태의 변화를 체크하는 훅
 
 
-export function onUserState(callback){
-    onAuthStateChanged(auth, async(user)=>{
+export function onUserState(callback) {
+    onAuthStateChanged(auth, async (user) => {
         if (user) {
-            try{
+            try {
                 const updateUser = await adminUser(user);
+                console.log('Updated User:', updateUser); // 업데이트된 user 확인용 로그
                 callback(updateUser);
-            } catch (error){
-                console.error(error)
+            } catch (error) {
+                console.error(error);
             }
         } else {
+            console.log('User is null');
             callback(null);
         }
-    })
+    });
 }
+
 
 // 관리자 계정 추가
 async function adminUser(user){
