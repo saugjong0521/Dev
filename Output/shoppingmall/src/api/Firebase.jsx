@@ -76,8 +76,6 @@ export function onUserState(callback){
 
 // 관리자 계정 추가
 async function adminUser(user){
-    console.log(user)
-
     try {
         const snapshot = await get(ref(database, 'admin'))
         // snapshot : firebase 안의 database의 admin 폴더를 검색해서 체크
