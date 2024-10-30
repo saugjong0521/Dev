@@ -163,7 +163,9 @@ export async function getCategoryProduct(category){
 export async function updateCart(userId, product){
     try{
         const cartRef = ref(database, `cart/${userId}/${product.id}`);
+        // 경로로 database에 생성
         await set(cartRef, product)
+        // cartRef에 저장
     } catch(error){
         console.error(error)
     }
