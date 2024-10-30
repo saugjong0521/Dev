@@ -46,5 +46,25 @@ export default function ProductDetail (){
 }
 
 const DetailPage = styled.div`
-    
+    width: 100%;
+    display: flex;
+    gap: 60px;
+    .datailImg{
+        max-width: 400px;
+        img{
+            width: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+    .detailText{
+        display: flex;
+        flex-direction: column;
+        gap : 12px;
+        width: 100%;
+        h3{
+            font-size: 40px;
+            font-weight: 500;
+        }
+    }
 `
