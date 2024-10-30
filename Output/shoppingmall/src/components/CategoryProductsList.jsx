@@ -27,9 +27,7 @@ const DetailListCSS = styled.li`
 display: flex;
 gap: 20px 5%;
 flex-wrap: wrap;
-li{
 flex-shrink: 0;
 width: 30%;
-}
 `
 
