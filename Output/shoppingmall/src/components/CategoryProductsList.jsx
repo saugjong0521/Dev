@@ -11,13 +11,13 @@ export default function CategoryProductsList ({category, product}){
         <div className="container">
             <h2>{category}</h2>
 
-            <ul className="productList">
+            <DetailListCSS className="productList">
                 {product.map((el) => (
-                    <DetailListCSS key={el.id}>
+                    <li key={el.id}>
                         <DetailPageEvent product={el}/>
-                    </DetailListCSS>
+                    </li>
                 ))}
-            </ul>
+            </DetailListCSS>
         </div>
     )
 
