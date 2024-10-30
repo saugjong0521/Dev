@@ -21,7 +21,7 @@ export default function ProductDetail (){
                 </div>
                 <div className="detailText">
                     <h3>{title}</h3>
-                    <p className="price">가격<span>{formatCurrency(price)}</span>원</p>
+                    <p className="price">가격<span>{formatCurrency(price)}원</span></p>
                     <p className="description">{description}</p>
                 </div>
                 <div className="detailOpt">
@@ -65,6 +65,13 @@ const DetailPage = styled.div`
         h3{
             font-size: 40px;
             font-weight: 500;
+            border-bottom: solid 1px rgba(0,0,0,0.2);
+            padding-bottom: 20px;
+        }
+        .price{
+            display: flex;
+            align-items: center;
+            gap: 24px;
         }
     }
 `
