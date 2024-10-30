@@ -10,6 +10,7 @@ import AdminSection from './pages/AdminSection';
 import { AuthContextProvider, useAuthContext } from './context/AuthContext';
 import CategoryPages from './pages/CategoryPages';
 import ProductDetail from './pages/ProductDetail';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -31,10 +32,13 @@ const ProtectRouter = ({checkAdmin, children}) => {
   return children
 }
 
+const queryClient = new QueryClient();
+
+
 const routes = createBrowserRouter([
   {
     path: '/',
-    element :     <AuthContextProvider><App/></AuthContextProvider>,
+    element :     <QueryClientProvider><AuthContextProvider><App/></AuthContextProvider></QueryClientProvider>,
     errorElement : <NotFound/>,
     children : [
       { path: '/login', element: <Login/>},
