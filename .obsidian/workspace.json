@@ -156,6 +156,7 @@
   },
   "active": "49abb90004e00981",
   "lastOpenFiles": [
+    "Output/shoppingmall/node_modules/@tanstack/react-query/build/modern/useMutation.d.ts",
     "Output/shoppingmall/node_modules/@tanstack/react-query/build/modern/isRestoring.d.cts",
     "Output/shoppingmall/node_modules/@tanstack/react-query/build/modern/useInfiniteQuery.d.cts",
     "Output/shoppingmall/node_modules/@tanstack/react-query/build/modern/useMutation.d.cts",
@@ -166,7 +167,6 @@
     "Output/shoppingmall/node_modules/@tanstack/react-query/build/modern/QueryClientProvider.d.cts",
     "Output/shoppingmall/node_modules/@tanstack/react-query/build/modern/infiniteQueryOptions.d.cts",
     "Output/shoppingmall/node_modules/@tanstack/react-query/build/modern/usePrefetchInfiniteQuery.d.cts",
-    "Output/shoppingmall/node_modules/@tanstack/react-query/build/modern/usePrefetchQuery.d.cts",
     "Output/shoppingmall/node_modules/@tanstack/react-query/build/codemods/src/v5/keep-previous-data/README.md",
     "Output/shoppingmall/node_modules/sockjs/node_modules/uuid/CONTRIBUTING.md",
     "Output/shoppingmall/node_modules/undici-types/README.md",
