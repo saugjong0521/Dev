@@ -8,11 +8,11 @@ import UseCart from "../context/UseCart";
 export default function ProductDetail (){
 
     const state = useLocation().state;
-    console.log(state);
+    // console.log(state);
     const {id, img, price, size, colors, description, title} = state;
 
     const setSize = size.split(',').map((opt)=>opt.trim());
-    console.log(setSize);
+    // console.log(setSize);
     
     const [selected, setSelected] = useState(setSize && setSize[0])
     
