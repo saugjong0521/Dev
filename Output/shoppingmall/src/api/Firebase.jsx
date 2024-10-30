@@ -157,3 +157,14 @@ export async function getCategoryProduct(category){
         return []
     })
 }
+
+
+// 장바구니 업데이트
+export async function updateCart(userId, product){
+    try{
+        const cartRef = ref(database, `cart/${userId}/${product.id}`);
+        await set(cartRef, product)
+    } catch(error){
+        console.error(error)
+    }
+}
