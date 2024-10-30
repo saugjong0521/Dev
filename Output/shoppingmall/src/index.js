@@ -49,6 +49,7 @@ const routes = createBrowserRouter([
       { path: '/product/:category', element: <CategoryPages/> },
       // category 앞에 ':'를 붙임으로서, 매개변수로 만듬
       { path: '/product/detail/:id', element: <ProductDetail/>},
+      // { path: '/product' }
       { path: '/admin', element: 
         <AdminSection/>
       // <ProtectRouter checkAdmin></ProtectRouter>
