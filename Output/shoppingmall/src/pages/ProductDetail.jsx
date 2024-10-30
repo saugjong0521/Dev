@@ -7,7 +7,7 @@ export default function ProductDetail (){
 
     const state = useLocation().state;
     console.log(state);
-    const {id, img, price, size, color, descruotion, title} = state;
+    const {id, img, price, size, color, description, title} = state;
 
     return(
 
@@ -19,9 +19,10 @@ export default function ProductDetail (){
                 <div className="detailText">
                     <h3>{title}</h3>
                     <p className="price">가격<span>{formatCurrency(price)}</span>원</p>
+                    <p className="description">{description}</p>
                 </div>
-                <div className="description">
-                    {description}
+                <div className="detailOpt">
+                    
                 </div>
             </DetailPage>
 
