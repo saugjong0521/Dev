@@ -23,7 +23,7 @@ export default function CategoryProductsList ({category, product}){
 
 }
 
-const DetailListCSS = styled.li`
+const DetailListCSS = styled.ul`
 display: flex;
 gap: 20px 5%;
 flex-wrap: wrap;
