@@ -10,7 +10,17 @@ export default function DetailPageEvent({product}){
     const navigate = useNavigate();
 
     const handleDetailEvent = () => {
-        navigate(`/product/detail/${product.id}`)
+        navigate(`/product/detail/${product.id}`,{
+            state: {
+                title: product.title,
+                id: product.id,
+                img: product.img,
+                price: product.price,
+                size: product.size,
+                color: product.color,
+                description: product.description,
+            }
+        })
     }
 
     return(
