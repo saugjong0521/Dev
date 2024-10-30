@@ -8,7 +8,7 @@ export default function ProductDetail (){
 
     const state = useLocation().state;
     console.log(state);
-    const {id, img, price, size, color, description, title} = state;
+    const {id, img, price, size, colors, description, title} = state;
 
     const setSize = size.split(',').map((opt)=>opt.trim());
     console.log(setSize);
