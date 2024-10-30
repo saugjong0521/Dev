@@ -21,5 +21,8 @@ export default function Nav(){
 }
 
 const MainMenu = styled.nav`
-
+    display: flex;
+    li{
+        display: flex;
+    }
 `
