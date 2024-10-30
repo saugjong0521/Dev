@@ -9,6 +9,8 @@ export default function ProductDetail (){
     console.log(state);
     const {id, img, price, size, color, description, title} = state;
 
+    const setSize = size.split(',');
+
     return(
 
         <div className="container">
@@ -24,6 +26,9 @@ export default function ProductDetail (){
                 <div className="detailOpt">
                     {/* react에서는 label에 for 대신 htmlFor을 사용 */}
                     <label className="labelText" htmlFor="sizeSelect">옵션</label>
+                    <select id="sizeSelect">
+
+                    </select>
                 </div>
             </DetailPage>
 
