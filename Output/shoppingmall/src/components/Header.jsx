@@ -22,7 +22,7 @@ export default function Header (){
         })
     },[])
 
-    console.log(user)
+    // console.log(user)
 
     const handleLogout = () => {
         googleLogout().then(setUser);
