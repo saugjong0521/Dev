@@ -156,6 +156,7 @@
   },
   "active": "49abb90004e00981",
   "lastOpenFiles": [
+    "Output/shoppingmall/src/context/UseCart.jsx",
     "Output/shoppingmall/src/pages/ProductDetail.jsx",
     "Output/DoodleDraw/result.html",
     "Output/DoodleDraw/question.html",
@@ -166,7 +167,6 @@
     "Output/shoppingmall/src/pages/CategoryPages.jsx",
     "Output/shoppingmall/src/components/Nav.jsx",
     "Output/shoppingmall/src/components/DetailPageEvent.jsx",
-    "Output/shoppingmall/src/components/Products.jsx",
     "Output/shoppingmall/node_modules/sockjs/node_modules/uuid/CONTRIBUTING.md",
     "Output/shoppingmall/node_modules/undici-types/README.md",
     "Output/shoppingmall/node_modules/buffer-from/readme.md",
