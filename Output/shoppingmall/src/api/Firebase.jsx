@@ -170,3 +170,5 @@ export async function updateCart(userId, product){
         console.error(error)
     }
 }
+
+// 장바구니 목록 가져오기
