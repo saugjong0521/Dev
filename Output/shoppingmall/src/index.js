@@ -9,6 +9,7 @@ import Login from './pages/Login';
 import AdminSection from './pages/AdminSection';
 import { AuthContextProvider, useAuthContext } from './context/AuthContext';
 import CategoryPages from './pages/CategoryPages';
+import ProductDetail from './pages/ProductDetail';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -39,6 +40,7 @@ const routes = createBrowserRouter([
       { path: '/login', element: <Login/>},
       { path: '/product/:category', element: <CategoryPages/> },
       // category 앞에 ':'를 붙임으로서, 매개변수로 만듬
+      { path: '/product/detail/:id', element: <ProductDetail/>},
       { path: '/admin', element: 
         <AdminSection/>
       // <ProtectRouter checkAdmin></ProtectRouter>
