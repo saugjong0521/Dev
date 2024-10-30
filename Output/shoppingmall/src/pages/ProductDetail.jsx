@@ -38,7 +38,7 @@ export default function ProductDetail (){
                 <div className="detailOpt">
                     {/* react에서는 label에 for 대신 htmlFor을 사용 */}
                     <label className="labelText" htmlFor="sizeSelect">옵션</label>
-                    <select id="sizeSelect">
+                    <select id="sizeSelect" onChange={selectOpt} value={selected}>
                         {setSize && setSize.map((opt, idx)=>(
                             <option key={idx} value={opt}>{opt}</option>
                         ))}
