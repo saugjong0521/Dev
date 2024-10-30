@@ -22,7 +22,7 @@ export default function (){
 
     console.log("User ID:", uid)
 
-    
+
     return {addItemCart}
 
 }
