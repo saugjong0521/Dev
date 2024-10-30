@@ -24,10 +24,10 @@ export default function CategoryProductsList ({category, product}){
 }
 
 const DetailListCSS = styled.ul`
-display: flex;
-gap: 20px 5%;
-flex-wrap: wrap;
-flex-shrink: 0;
-width: 30%;
+    display: flex;
+    gap: 20px 5%;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    width: 30%;
 `
 
