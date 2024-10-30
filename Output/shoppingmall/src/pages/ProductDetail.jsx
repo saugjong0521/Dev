@@ -13,7 +13,7 @@ export default function ProductDetail (){
     console.log(setSize);
 
     const handleCart = () => {
-        
+        const product = {id, img, title, price, size, colors}
     }
 
     return(
