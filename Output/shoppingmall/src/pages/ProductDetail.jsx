@@ -2,6 +2,7 @@ import { useLocation } from "react-router-dom"
 import styled from "styled-components";
 import { formatCurrency } from "../api/Firebase";
 import { useState } from "react";
+import UseCart from "../context/UseCart";
 
 
 export default function ProductDetail (){
@@ -19,8 +20,13 @@ export default function ProductDetail (){
         setSelected(e.target.value)
     }
 
+    const [success, setSuccess] = useState();
+
+    const {addItemCart} = UseCart()
     const handleCart = () => {
         const product = {id, img, title, price, size, size:selected, quantity:1}
+
+        addItemCart.mutate(product,)
     }
 
     return(
