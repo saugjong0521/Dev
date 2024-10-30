@@ -20,13 +20,17 @@ export default function ProductDetail (){
         setSelected(e.target.value)
     }
 
-    const [success, setSuccess] = useState();
+    const [success, setSuccess] = useState(); // 장바구니 아이템 전송 여부
 
     const {addItemCart} = UseCart()
     const handleCart = () => {
         const product = {id, img, title, price, size, size:selected, quantity:1}
 
-        addItemCart.mutate(product,)
+        addItemCart.mutate(product,{
+            onSuccess: () => {
+                setSuccess('장바구니에 아이템이 추가되었습니다.')
+            }
+        })
     }
 
     return(
