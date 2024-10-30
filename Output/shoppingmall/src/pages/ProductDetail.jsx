@@ -35,18 +35,17 @@ export default function ProductDetail (){
                     <p className="price">가격<span>{formatCurrency(price)}원</span></p>
                     <p className="description">{description}</p>
 
-
                     <div className="detailOpt">
-                    {/* react에서는 label에 for 대신 htmlFor을 사용 */}
-                    <label className="labelText" htmlFor="sizeSelect">옵션</label>
-                    {size=="" ? <span>one-size</span> : 
-                    <select id="sizeSelect" onChange={selectOpt} value={selected}>
-                        {size && setSize.map((opt, idx)=>(
-                            <option key={idx} value={opt}>{opt}</option>
-                        ))}   
-                    </select>
-                    }
-                </div>
+                        {/* react에서는 label에 for 대신 htmlFor을 사용 */}
+                        <label className="labelText" htmlFor="sizeSelect">옵션</label>
+                        {size=="" ? <span>one-size</span> : 
+                        <select id="sizeSelect" onChange={selectOpt} value={selected}>
+                            {size && setSize.map((opt, idx)=>(
+                                <option key={idx} value={opt}>{opt}</option>
+                            ))}   
+                        </select>
+                        }
+                    </div>
 
                     <div className="detailBtns">
                         <button className="cartBtn" onClick={handleCart}>장바구니</button>
@@ -90,6 +89,10 @@ const DetailPage = styled.div`
             display: flex;
             align-items: center;
             gap: 24px;
+        }
+        .detailOpt{
+            display: flex;
+            gap: 10px;
         }
         .detailBtns{
             display: flex;
