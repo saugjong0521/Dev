@@ -1,5 +1,6 @@
 import { useState } from "react"
 import DetailPageEvent from "./DetailPageEvent";
+import styled from "styled-components";
 
 
 export default function CategoryProductsList ({category, product}){
@@ -12,13 +13,23 @@ export default function CategoryProductsList ({category, product}){
 
             <ul className="productList">
                 {product.map((el) => (
-                    <li key={el.id}>
+                    <DetailListCSS key={el.id}>
                         <DetailPageEvent product={el}/>
-                    </li>
+                    </DetailListCSS>
                 ))}
             </ul>
         </div>
     )
 
 }
+
+const DetailListCSS = styled.li`
+display: flex;
+gap: 20px 5%;
+flex-wrap: wrap;
+li{
+flex-shrink: 0;
+width: 30%;
+}
+`
 
