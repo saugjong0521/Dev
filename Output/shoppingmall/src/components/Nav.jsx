@@ -22,7 +22,9 @@ export default function Nav(){
 
 const MainMenu = styled.nav`
     display: flex;
-    li{
+    margin-left: 10vw;
+    ul{
         display: flex;
+        gap: 30px;
     }
 `
