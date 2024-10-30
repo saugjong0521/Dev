@@ -43,7 +43,7 @@ export function AuthContextProvider ({children}){
                 // 로그아웃 시, 'user' 데이터를 제거
             }
             const unSubscribeFunc = onUserState(userChange) // 여기서 로그인을 감지
-            setUnSubscribe(()=>unSubscribeFunc);
+            setUnSubscribe(() => unSubscribeFunc);
             return () => {
                 if(unSubscribeFunc){
                     unSubscribeFunc();
