@@ -17,7 +17,7 @@ export default function DetailPageEvent({product}){
                 img: product.img,
                 price: product.price,
                 size: product.size,
-                color: product.color,
+                colors: product.colors,
                 description: product.description,
             }
         })
