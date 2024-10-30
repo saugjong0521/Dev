@@ -21,7 +21,7 @@ export function AuthContextProvider ({children}){
         */
 
         const storeUser = sessionStorage.getItem('user');
-        // sessionStorage = 웹 브라우저에서 제공하는 저장소, 페이지가 유지되는 동안 데이터를 저장��는 용도
+        // sessionStorage = 웹 브라우저에서 제공하는 저장소, 페이지가 유지되는 동안 데이터를 저장하는 용도
         // 현재 열린 창을 닫으면 데이터가 삭제되므로, 임시 데이터를 저장하는데에 사용
         // 다크모드같은 경우는 세션스토리지가 아닌 로컬스토리지에 저장해서 유지
         
@@ -30,24 +30,24 @@ export function AuthContextProvider ({children}){
             // JSON.parse는 JSON.stringify로 저장된 데이터를 자바스크립트 객체로 변환
         }
         
-        // 로그인 상태를 감지하는 함수
+        //로그인, 로그아웃을 확인하는 함수
         const userChange = (newUser) => {
-            setUser(newUser);
+            setUser(newUser)
             setIsLoading(false);
 
             if(newUser){
                 sessionStorage.setItem('user', JSON.stringify(newUser));
+                // 로그인 시 sessionStorage에 'user' 데이터를 저장
             } else {
-                sessionStorage.removeItem('user');
+                sessionStorage.removeItem('user')
+                // 로그아웃 시, 'user' 데이터를 제거
             }
-        }
-
-        const unSubscribeFunc = onUserState(userChange); // 여기서 로그인을 감지
-        setUnSubscribe(() => unSubscribeFunc);
-
-        return () => {
-            if(unSubscribeFunc){
-                unSubscribeFunc();
+            const unSubscribeFunc = onUserState(userChange) // 여기서 로그인을 감지
+            setUnSubscribe(() => unSubscribeFunc);
+            return () => {
+                if(unSubscribeFunc){
+                    unSubscribeFunc();
+                }
             }
         }
     },[]) // useEffect
