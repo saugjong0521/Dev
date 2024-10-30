@@ -50,7 +50,7 @@ const DetailPage = styled.div`
     display: flex;
     gap: 60px;
     .datailImg{
-        max-width: 400px;
+        min-width: 400px;
         img{
             width: 100%;
             object-fit: cover;
@@ -73,5 +73,13 @@ const DetailPage = styled.div`
             align-items: center;
             gap: 24px;
         }
+        .detailBtns{
+            display: flex;
+            gap: 12px;
+        }
+        button{
+
+        }
     }
 `
+
