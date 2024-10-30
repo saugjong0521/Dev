@@ -22,9 +22,16 @@ export default function Nav(){
 
 const MainMenu = styled.nav`
     display: flex;
+    align-items: center;
+    justify-content: center;
     margin-left: 10vw;
     ul{
         display: flex;
         gap: 30px;
+        align-items: center;
+        justify-content: center;
+        li{
+            
+        }
     }
 `
