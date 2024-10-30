@@ -23,6 +23,10 @@ export default function ProductDetail (){
                     <h3>{title}</h3>
                     <p className="price">가격<span>{formatCurrency(price)}원</span></p>
                     <p className="description">{description}</p>
+                    <div className="detailBtns">
+                    <button className="cartBtn">장바구니</button>
+                    <button className="buyBtn">구매하기</button>
+                </div>
                 </div>
                 <div className="detailOpt">
                     {/* react에서는 label에 for 대신 htmlFor을 사용 */}
@@ -32,12 +36,10 @@ export default function ProductDetail (){
                             <option key={idx} value={opt}>{opt}</option>
                         ))}
                     </select>
+                    
                 </div>
             </DetailPage>
-            <div className="detailBtns">
-                    <button className="cartBtn">장바구니</button>
-                    <button className="buyBtn">구매하기</button>
-                </div>
+
         </div>
         
 
@@ -76,9 +78,10 @@ const DetailPage = styled.div`
         .detailBtns{
             display: flex;
             gap: 12px;
+            margin-top: auto;
         }
-        button{
-
+        .detailBtns button{
+            padding: 12px 24px;
         }
     }
 `
