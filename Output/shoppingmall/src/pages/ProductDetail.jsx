@@ -22,7 +22,8 @@ export default function ProductDetail (){
                     <p className="description">{description}</p>
                 </div>
                 <div className="detailOpt">
-                    
+                    {/* react에서는 label에 for 대신 htmlFor을 사용 */}
+                    <label className="labelText" htmlFor="sizeSelect">옵션</label>
                 </div>
             </DetailPage>
 
