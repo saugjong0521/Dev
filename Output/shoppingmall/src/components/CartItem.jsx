@@ -1,6 +1,13 @@
+import UseCart from "../context/UseCart"
 
 
 export default function CartItem ({product, index}){
+
+    const {addItemCart} = UseCart()
+
+    const handleItemAdd = ()=> {
+        addItemCart.mutate
+    }
 
     return(
         <li>
@@ -11,6 +18,8 @@ export default function CartItem ({product, index}){
             <p>{product.price}</p>
             <div className="quantityWrap">
                 <p>수량: {product.quantity}</p>
+                <button onClick={handleItemAdd}>+</button>
+                <button>-</button>
             </div>
         </li>
     )
