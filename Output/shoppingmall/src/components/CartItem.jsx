@@ -18,7 +18,7 @@ export default function CartItem ({product, index}){
         addItemCart.mutate({...product, quantity: product.quantity - 1})
     }
 
-    const handleItemRemove = () => {
+    const handleItemDelete = () => {
         removeCart.mutate(product.id)
     }
 
@@ -34,7 +34,7 @@ export default function CartItem ({product, index}){
                 <button onClick={handleItemAdd}>+</button>
                 <button onClick={handleItemSubstract}>-</button>
             </div>
-            <button onClick={()=>handleItemRemove(product.id)}>X</button>
+            <button onClick={()=>handleItemDelete(product.id)}>X</button>
         </li>
     )
 
