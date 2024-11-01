@@ -1,4 +1,4 @@
-import { removeCart } from "../api/Firebase"
+import { removeCart } from "../context/UseCart"
 import UseCart from "../context/UseCart"
 
 
