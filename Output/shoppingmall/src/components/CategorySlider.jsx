@@ -28,5 +28,4 @@ export default function CategorySlider ({imgs}){
             ))}
         </Swiper>
     )
-
 }
