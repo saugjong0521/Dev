@@ -12,7 +12,16 @@ export default function Register(){
     const [pwErr, setPwErr] = useState('');
 
     //이름 유효형 검사
-    const validateName = (userName)
+    const validateName = (userName) => {
+        if(!userName){
+            setNameErr('이름을 입력해주세요')
+            return false;
+        } // 이름을 생략하거나 공백으로 넣은 경우
+        if(userName.length <2){
+            setNameErr('이름이 너무 짧습니다.')
+            return false;
+        }
+    }
 
     return(
         <div className="container">
