@@ -1,3 +1,4 @@
+import CartItem from "../components/CartItem";
 import UseCart from "../context/UseCart"
 
 
@@ -14,7 +15,7 @@ export default function MyCart(){
             {isItem &&(
                 <ul>
                     {products && products.map((el, idx) => (
-                        <li><img src={el.img}/>{el.title}</li>
+                        <CartItem key={el.id} product={el} index={idx}/>
                     ))}
                 </ul>
             )}
