@@ -33,7 +33,7 @@ export default function CategoryPages(){
             // 양수 (a>b)면 a가 b보다 뒤에 위치
             // 0 : 위치를 변경하지 않음
 
-            const selectImg = randomImg.slice(0,4).map((el)=>el.img)  // slice(a,b) a:시작 인덱스 b:인덱스의 숫자 => 즉 
+            const selectImg = randomImg.slice(0,4).map((el)=>el.img)  // slice(a,b) a:시작 인덱스 b:인덱스의 숫자 => 즉 slice(0,4)의 경우 첫 index부터 4번째 index까지를 의미
             setRandomImages(selectImg)
             console.log(randomImages)
         }
