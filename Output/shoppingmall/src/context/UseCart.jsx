@@ -27,7 +27,7 @@ export default function (){
         // cart의 데이터를 가져오는 비동기 쿼리 설정
         queryKey : ['cart', uid || ''],// 쿼리를 식별해주는 키
         queryFn : () => getCart(uid), // 데이터를 가져오는 함수
-        enabled : !!uid // 쿼리를 활성화 되어야 하는 조건(!!)
+        enabled : !!uid, // 쿼리를 활성화 되어야 하는 조건(!!)
     })
     
 
