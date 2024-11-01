@@ -6,7 +6,7 @@ export default function CartItem ({product, index}){
     const {addItemCart} = UseCart()
 
     const handleItemAdd = ()=> {
-        addItemCart.mutate
+        addItemCart.mutate({...product, quantity: product.quantity + 1})
     }
 
     return(
