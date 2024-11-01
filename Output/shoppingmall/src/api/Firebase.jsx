@@ -177,3 +177,16 @@ export async function updateCart(userId, product){
 }
 
 // 장바구니 목록 가져오기
+export async function getCart(userId){
+    try{
+        const snapshot = await(get(ref(database, `cart/${userId}`)))
+        if(snapshot.exists()){
+            const item = snapshot.val();
+            return Object.values(item);
+        } else {
+            return [];
+        }
+    } catch(error){
+        console.error(error)
+    }
+}
