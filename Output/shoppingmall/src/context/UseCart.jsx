@@ -22,6 +22,7 @@ export default function (){
 
     // console.log("User ID:", uid)
 
+
     // 장바구니 아이템의 경우 사용자가 아이템의 목록을 삭제하거나 수정할 수도 있기 때문에, 업데이트 내역을 상시로 갱신해줄 수 있는 useQuery로 받아와야 한다.
     const cartInfo = useQuery({
         // cart의 데이터를 가져오는 비동기 쿼리 설정
@@ -36,6 +37,15 @@ export default function (){
         */
     })
 
-    return {addItemCart, cartInfo}
+
+    const removeCart = useMutation({
+        mutation : (id) => removeCart(uid, id),
+        onSuccess : () => {
+            queryClient.invalidateQueries(['cart', uid])
+        }
+    })
+
+
+    return {addItemCart, cartInfo, removeCart}
 
 }
