@@ -21,6 +21,17 @@ export default function Register(){
             setNameErr('이름이 너무 짧습니다.')
             return false;
         }
+        if(!/^[A-Za-z가-힣\s'-]+$/.test(userName)){
+            /*
+            !/^[A-Za-z가-힣\s'-]+$
+            정규 표현식
+            ^는 문자열의 시작 $는 문자열의 끝
+            현재 영어 대소문자 및 한글 허용
+            \s 공백 허용
+            '- 따옴표와 하이픈 허용(큰따옴표, 작은따옴표)
+            + 한글자 이상이어야 함
+            */
+        }
     }
 
     return(
