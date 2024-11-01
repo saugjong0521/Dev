@@ -25,7 +25,7 @@ export default function CategoryPages(){
     useEffect(()=>{
         if(product.length > 0){
             const randomImg = [...product].sort(()=>0.5-Math.random())
-            console.log(randomImg)
+            // console.log(randomImg)
             // 배열을 램덤하게 섞어주는 정렬
             // sort 메소드는 배열의 요소를 정렬하기 위해 비교함
             // 이 비교 함수에서는 배열의 두 요소 a,b를 비교해서 양수, 음수, 0을 반환
@@ -35,7 +35,7 @@ export default function CategoryPages(){
 
             const selectImg = randomImg.slice(0,4).map((el)=>el.img)  // slice(a,b) a:시작 인덱스 b:인덱스의 숫자 => 즉 slice(0,4)의 경우 첫 index부터 4번째 index까지를 의미
             setRandomImages(selectImg)
-            console.log(randomImages)
+            // console.log(randomImages)
         }
     },[product])
 
