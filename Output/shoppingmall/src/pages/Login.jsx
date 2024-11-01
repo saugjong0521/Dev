@@ -1,11 +1,15 @@
 import styled from "styled-components";
 import { googleLogin } from "../api/Firebase";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 
 export default function Login (){
 
     const navigate = useNavigate();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [errMsg, setErrMsg] = useState('')
 
     const handleGoogleLogin = async() => {
         const user = await googleLogin();
