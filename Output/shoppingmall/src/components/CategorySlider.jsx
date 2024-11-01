@@ -8,7 +8,7 @@ const sliderWrap = {
     height: '600px',
 }
 
-export default function CategorySlider (){
+export default function CategorySlider ({imgs}){
 
 
     return (
@@ -20,7 +20,9 @@ export default function CategorySlider (){
             speed={3000}
             modules={[Autoplay, EffectFade]}
             cubeEffect={'fade'}
-        ></Swiper>
+        >
+            
+        </Swiper>
     )
 
 }
