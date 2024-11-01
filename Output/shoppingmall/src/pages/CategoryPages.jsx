@@ -22,6 +22,12 @@ export default function CategoryPages(){
         })
     },[category])
 
+    useEffect(()=>{
+        if(product.length > 0){
+            const randomImg = [...product].sort(()=>0.5-Math.random())
+        }
+    })
+
     return (
         <>
             <CategorySlider imgs={}/>
