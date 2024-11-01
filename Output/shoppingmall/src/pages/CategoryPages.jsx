@@ -10,6 +10,8 @@ export default function CategoryPages(){
     const {category} = useParams();
     const [product, setProduct] = useState([]);
 
+    const [randomImages, setRandomImages] = useState([]);
+
     useEffect(()=>{
         getCategoryProduct(category)
         .then((product)=>{
@@ -22,7 +24,7 @@ export default function CategoryPages(){
 
     return (
         <>
-        <CategorySlider/>
+            <CategorySlider imgs={}/>
             <CategoryProductsList category={category} product={product}/>
         </>
     )
