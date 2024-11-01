@@ -38,7 +38,7 @@ export default function Login (){
                 <GoogleBtn onClick={handleGoogleLogin}>구글 로그인</GoogleBtn>
             </form>
 
-            <Link to='/join'>회원가입</Link>
+            <Link to='/register'>회원가입</Link>
             
         </div>
     )
