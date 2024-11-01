@@ -3,7 +3,13 @@ import { useState } from "react"
 
 export default function Register(){
 
-    const [userName, setUserName] = useState('')
+    const [userName, setUserName] = useState('');
+    const [userEmail, setUserEmail] = useState('');
+    const [userPassword, setUserPassword] = useState('');
+    
+    const [nameErr, setNameErr] = useState('');
+    const [emailErr, setEmailErr] = useState('');
+    const [pwErr, setPwErr] = useState('');
 
     return(
         <div className="container">
