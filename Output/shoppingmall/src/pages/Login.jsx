@@ -35,8 +35,9 @@ export default function Login (){
                     onChange={(e)=>setPassword(e.target.value)}
                 />
                 <button type="submit">로그인</button>
-                <GoogleBtn onClick={handleGoogleLogin}>구글 로그인</GoogleBtn>
             </form>
+            <GoogleBtn onClick={handleGoogleLogin}>구글 로그인</GoogleBtn>
+
 
             <Link to='/register'>회원가입</Link>
             
