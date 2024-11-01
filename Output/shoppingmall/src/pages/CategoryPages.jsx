@@ -33,13 +33,15 @@ export default function CategoryPages(){
             // 양수 (a>b)면 a가 b보다 뒤에 위치
             // 0 : 위치를 변경하지 않음
 
-            const selectImg = randomImg.slice(5)
+            const selectImg = randomImg.slice(0,4).map((el)=>el.img)  // slice(a,b) a:시작 인덱스 b:인덱스의 숫자 => 즉 
+            setRandomImages(selectImg)
+            console.log(randomImages)
         }
-    })
+    },[product])
 
     return (
         <>
-            <CategorySlider imgs={}/>
+            <CategorySlider imgs={randomImages}/>
             <CategoryProductsList category={category} product={product}/>
         </>
     )

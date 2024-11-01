@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css'
 import { Autoplay, EffectFade } from "swiper/modules";
-import 'swiper/css/effect-fate'
+import 'swiper/css/effect-fade'
 
 const sliderWrap = {
     width: '500px',
