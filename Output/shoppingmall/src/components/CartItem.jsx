@@ -19,7 +19,7 @@ export default function CartItem ({product, index}){
     }
 
     const handleItemRemove = () => {
-        removeCart
+        removeCart.mutate(product.id)
     }
 
     return(
