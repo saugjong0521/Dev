@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app" ;
-import { get, getDatabase, ref, set } from "firebase/database" ;
+import { get, getDatabase, ref, remove, set } from "firebase/database" ;
 import { getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from "firebase/auth";
 import { v4 as uuid } from "uuid"
 
@@ -189,4 +189,9 @@ export async function getCart(userId){
     } catch(error){
         console.error(error)
     }
+}
+
+// 장바구니 목록 삭제
+export async function removeCart(userId, productId){
+    return remove(ref(database, `cart/${userId}/${productId}`))
 }
