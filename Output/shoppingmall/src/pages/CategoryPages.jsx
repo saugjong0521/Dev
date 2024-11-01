@@ -36,7 +36,7 @@ export default function CategoryPages(){
 
     return (
         <>
-            <CategorySlider imgs={}/>
+            <CategorySlider/>
             <CategoryProductsList category={category} product={product}/>
         </>
     )
