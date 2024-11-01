@@ -17,6 +17,21 @@ export default function Login (){
     return (
         <div className="container">
             <h1>로그인 페이지</h1>
+            <form>
+                <input 
+                    type="email" 
+                    placeholder="이메일을 입력하세요"
+                    value={email}
+                    onChange={}
+                />
+                <input 
+                    type="password"
+                    placeholder="비밀번호를 입력하세요"
+                    value={password}
+                    onChange={}
+                />
+                <button type="submit">로그인</button>
+            </form>
             <GoogleBtn onClick={handleGoogleLogin}>구글 로그인</GoogleBtn>
         </div>
     )
