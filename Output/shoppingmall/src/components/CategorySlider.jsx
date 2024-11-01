@@ -1,4 +1,4 @@
-import { Swiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css'
 import { Autoplay, EffectFade } from "swiper/modules";
 import 'swiper/css/effect-fate'
@@ -21,7 +21,11 @@ export default function CategorySlider ({imgs}){
             modules={[Autoplay, EffectFade]}
             cubeEffect={'fade'}
         >
-            
+            {imgs.map((img, idx)=>(
+                <SwiperSlide key={idx}>
+                    <img src={img}/>
+                </SwiperSlide>
+            ))}
         </Swiper>
     )
 

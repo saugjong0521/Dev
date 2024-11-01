@@ -1,6 +1,7 @@
 import { useState } from "react"
 import DetailPageEvent from "./DetailPageEvent";
 import styled from "styled-components";
+import CategorySlider from "./CategorySlider";
 
 
 export default function CategoryProductsList ({category, product}){
@@ -11,6 +12,7 @@ export default function CategoryProductsList ({category, product}){
         <div className="container">
             <h2>{category}</h2>
 
+        <CategorySlider/>
             <DetailListCSS className="productList">
                 {product.map((el) => (
                     <li key={el.id}>
