@@ -1,4 +1,3 @@
-import { removeCart } from "../context/UseCart"
 import UseCart from "../context/UseCart"
 
 
