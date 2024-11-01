@@ -35,9 +35,6 @@ export default function (){
         uid가 있는(undefinded, null, 빈 공백을 제외한) 경우 true로 반환하고, 나머지의 경우 false를 반환하기에 조금 더 정확해짐
         */
     })
-    
-
-
 
     return {addItemCart, cartInfo}
 
