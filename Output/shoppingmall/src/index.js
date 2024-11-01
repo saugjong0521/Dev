@@ -27,8 +27,7 @@ const ProtectRouter = ({checkAdmin, children}) => {
   }
 
   if(!user || (checkAdmin && !user.isAdmin)){
-    // return <Navigate to='/' replace/>
-    navigate('/',{replace : true, state:{from: location}})
+    return <Navigate to='/' replace/>
   }
   return children
 }
@@ -52,8 +51,9 @@ const routes = createBrowserRouter([
       { path: '/product/detail/:id', element: <ProductDetail/>},
       { path: '/cart', element: <MyCart/> },
       { path: '/admin', element: 
-        <AdminSection/>
-      // <ProtectRouter checkAdmin></ProtectRouter>
+      <ProtectRouter checkAdmin>
+                <AdminSection/>
+      </ProtectRouter>
     },
       // children 은 중첩구조가 가능
       // e.g. children : [{ path: '/login', element: <Login/>, children : { path: '/page', element: <Page/> }},], 는 /home/login/page
