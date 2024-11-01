@@ -31,7 +31,10 @@ export default function Register(){
             '- 따옴표와 하이픈 허용(큰따옴표, 작은따옴표)
             + 한글자 이상이어야 함
             */
+           setNameErr('유효하지 않은 문자가 포함되어 있습니다.')
+           return false
         }
+        return true
     }
 
     return(
@@ -41,7 +44,7 @@ export default function Register(){
                 <div>
                     <input type="email"></input>
                     <input type="password"></input>
-                    <input type="text" placeholder="이름을 입력하세요"/>
+                    <input type="text" placeholder="유저이름을 입력하세요"/>
                     
                 </div>
             </form>
