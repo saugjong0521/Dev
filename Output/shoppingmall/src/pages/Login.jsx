@@ -26,13 +26,13 @@ export default function Login (){
                     type="email" 
                     placeholder="이메일을 입력하세요"
                     value={email}
-                    onChange={}
+                    onChange={''}
                 />
                 <input 
                     type="password"
                     placeholder="비밀번호를 입력하세요"
                     value={password}
-                    onChange={}
+                    onChange={''}
                 />
                 <button type="submit">로그인</button>
             </form>
