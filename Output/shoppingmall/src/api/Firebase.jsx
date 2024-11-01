@@ -192,6 +192,6 @@ export async function getCart(userId){
 }
 
 // 장바구니 목록 삭제
-export async function removeCart(userId, productId){
+export async function deleteCart(userId, productId){
     return remove(ref(database, `cart/${userId}/${productId}`))
 }

@@ -1,10 +1,10 @@
-import { removeCart } from "../api/Firebase"
+import { deleteCart, removeCart } from "../api/Firebase"
 import UseCart from "../context/UseCart"
 
 
 export default function CartItem ({product, index}){
 
-    const {addItemCart, removeCart} = UseCart()
+    const {addItemCart, deleteCart} = UseCart()
 
     const handleItemAdd = ()=> {
         addItemCart.mutate({...product, quantity: product.quantity + 1})
@@ -19,7 +19,7 @@ export default function CartItem ({product, index}){
     }
 
     const handleItemRemove = () => {
-        removeCart.mutate(product.id)
+        deleteCart.mutate(product.id)
     }
 
     return(
