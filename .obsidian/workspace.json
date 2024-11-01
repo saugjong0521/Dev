@@ -156,6 +156,7 @@
   },
   "active": "49abb90004e00981",
   "lastOpenFiles": [
+    "Output/shoppingmall/src/components/CartItem.jsx",
     "Output/shoppingmall/node_modules/@tanstack/query-core/build/modern/utils.js.map",
     "Output/shoppingmall/node_modules/@tanstack/query-core/build/modern/utils.js",
     "Output/shoppingmall/node_modules/@tanstack/query-core/build/modern/types.js.map",
@@ -166,7 +167,6 @@
     "Output/shoppingmall/node_modules/@tanstack/query-core/build/modern/subscribable.js",
     "Output/shoppingmall/node_modules/@tanstack/query-core/build/modern/subscribable.d.cts",
     "Output/shoppingmall/node_modules/@tanstack/query-core/build/modern/retryer.js.map",
-    "Output/shoppingmall/node_modules/@tanstack/query-core/build/modern/retryer.js",
     "Output/shoppingmall/node_modules/@tanstack/react-query/build/codemods/src/v5/keep-previous-data/README.md",
     "Output/shoppingmall/node_modules/sockjs/node_modules/uuid/CONTRIBUTING.md",
     "Output/shoppingmall/node_modules/undici-types/README.md",
