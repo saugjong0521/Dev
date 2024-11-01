@@ -39,7 +39,7 @@ export default function (){
 
 
     const removeCart = useMutation({
-        mutation : (id) => deleteCart(uid, id),
+        mutationFn : (id) => deleteCart(uid, id),
         onSuccess : () => {
             queryClient.invalidateQueries(['cart', uid])
         }
