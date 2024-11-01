@@ -30,6 +30,7 @@ export function AuthContextProvider ({children}){
             // JSON.parse는 JSON.stringify로 저장된 데이터를 자바스크립트 객체로 변환
         }
         
+        /*
         //로그인, 로그아웃을 확인하는 함수
         const userChange = (newUser) => {
             setUser(newUser)
@@ -48,6 +49,24 @@ export function AuthContextProvider ({children}){
                 if(unSubscribeFunc){
                     unSubscribeFunc();
                 }
+            }
+        }
+            */
+
+        const unSubscribeFunc = onUserState((newUser)=>{
+            setUser(newUser);
+            setIsLoading(false);
+
+            if(newUser){
+                sessionStorage.setItem('user', JSON.stringify(newUser))
+            } else {
+                sessionStorage.removeItem('user')
+            }
+        })
+
+        return () => {
+            if(unSubscribeFunc){
+                unSubscribeFunc();
             }
         }
     },[]) // useEffect
