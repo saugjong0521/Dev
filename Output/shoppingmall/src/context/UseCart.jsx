@@ -28,11 +28,17 @@ export default function (){
         queryKey : ['cart', uid || ''],// 쿼리를 식별해주는 키
         queryFn : () => getCart(uid), // 데이터를 가져오는 함수
         enabled : !!uid, // 쿼리를 활성화 되어야 하는 조건(!!)
+        /* 
+        uid 대신 !!uid인 이유
+        uid가 없는 경우 null이나 undefinded를 출력한다.
+        !!uid를 사용 시, true|false를 판단하기 때문
+        uid가 있는(undefinded, null, 빈 공백을 제외한) 경우 true로 반환하고, 나머지의 경우 false를 반환하기에 조금 더 정확해짐
+        */
     })
     
 
 
 
-    return {addItemCart}
+    return {addItemCart, cartInfo}
 
 }
