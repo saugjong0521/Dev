@@ -19,7 +19,7 @@ export default function CategorySlider ({imgs}){
             autoplay={{delay: 2000}}
             speed={3000}
             modules={[Autoplay, EffectFade]}
-            cubeEffect={'fade'}
+            effect={'fade'}
         >
             {imgs.map((img, idx)=>(
                 <SwiperSlide key={idx}>
