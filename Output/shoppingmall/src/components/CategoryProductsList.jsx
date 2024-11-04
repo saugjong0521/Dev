@@ -49,7 +49,7 @@ export default function CategoryProductsList ({category, product}){
             <SortBtn sortName={sortName} sortPrice={sortPrice}/>
 
             <DetailListCSS className="productList">
-                {product.map((el) => (
+                {sortProducts.map((el) => (
                     <li key={el.id}>
                         <DetailPageEvent product={el}/>
                     </li>
