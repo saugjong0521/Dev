@@ -48,28 +48,48 @@ export default function Register(){
         setNameErr('');
 
         
+        // try{
+        //     const result = await registerEmail(userEmail, userPassword, userName)
+        //         if(result.error){
+        //             if(result.error === 'auth/email-already-in-use'){
+        //                 setEmailErr('사용중인 이메일입니다.')
+        //             }
+        //             return
+                    
+        //         } else{
+        //             navigate('/login')
+        //         }
+
+        //         if(userPassword.length < 6){
+        //             setPwErr('비밀번호는 4글자 이상이어야 합니다.')
+        //             return
+        //         }
+        //         if(!validateName(userName)){
+        //             return
+        //         }
+        //     } catch(error){
+        //         console.error(error)
+        //     }
+
+
         try{
             const result = await registerEmail(userEmail, userPassword, userName)
-                if(result.error){
-                    if(result.error === 'auth/email-already-in-use'){
-                        setEmailErr('사용중인 이메일입니다.')
-                    }
-                    return
-                    
-                } else{
-                    navigate('/login')
-                }
 
-                if(userPassword.length < 6){
-                    setPwErr('비밀번호는 4글자 이상이어야 합니다.')
-                    return
-                }
-                if(!validateName(userName)){
-                    return
-                }
-            } catch(error){
+            if(result){
+                navigate('/login')
+            }
+
+
+        } catch(error){
+            if(error.code === 'auth/email-already-in-use'){
+                setEmailErr('이미 사용중인 이메일 입니다.')
+            } else if(error.code === 'auth/weak-password'){
+                setPwErr('비밀번호는 6글자 이상입니다.')
+            } else{
                 console.error(error)
             }
+
+        }
 
     }
 
