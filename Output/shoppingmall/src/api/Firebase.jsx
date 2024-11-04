@@ -243,8 +243,12 @@ export async function SearchProducts(query){
                 const itemTitle = product.title;
                 return itemTitle.includes(query)
             })
+
+            return matchProducts
+        }else {
+            return [];
         }
     } catch(error){
-        console.error(error)
+        console.error(error);
     }
 }
