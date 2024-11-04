@@ -21,7 +21,7 @@ export default function Login (){
     return (
         <div className="container">
             <h1>로그인 페이지</h1>
-            <form>
+            <form onSubmit={hangleLoginEvent}>
                 <input 
                     type="email" 
                     placeholder="이메일을 입력하세요"
