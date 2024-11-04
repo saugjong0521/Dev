@@ -8,7 +8,7 @@ export default function Search(){
 
     return(
         <div className="container">
-            <input type="text" />
+            <input type="text" value={query}/>
         </div>
     )
 
