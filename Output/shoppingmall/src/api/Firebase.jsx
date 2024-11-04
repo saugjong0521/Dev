@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app" ;
 import { get, getDatabase, ref, remove, set } from "firebase/database" ;
-import { getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from "firebase/auth";
 import { v4 as uuid } from "uuid"
 
 
@@ -194,4 +194,24 @@ export async function getCart(userId){
 // 장바구니 목록 삭제
 export async function deleteCart(userId, productId){
     return remove(ref(database, `cart/${userId}/${productId}`))
+}
+
+
+//이메일 회원가입
+export async function registerEmail(email, password, name){
+    const auth = getAuth()  // 저장할 사용자 인증폼을 불러옴
+    try{
+        const userData = await createUserWithEmailAndPassword(auth, email, password)
+        // createUserWithEmailAndPassword는 사용자 정보중에서 이메일과 패스워드만 저장되며
+        // 추가로 저장할 요소가 있을 때에는 우회하는 방법을 사용해야 한다.
+
+        const user = userData.user
+        await updateProfile(user, {
+            displayName : name
+        })
+        await signOut(auth);
+        return {success : true}
+    } catch(error){
+        console.error(error)
+    }
 }
