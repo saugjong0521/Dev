@@ -28,7 +28,10 @@ export default function CategoryProductsList ({category, product}){
                 // 둘 중 하나라도 이름이 정의되지 않았다면, 순서를 변경하지 말 것
             }
             return a.name.charAt(0).localeCompare(b.name.charAt(0))
+            // localeCompare = 문자열끼리 서로 비교하고 정렬 순서를 정하는 함수
         })
+        setSortProducts(sortList);
+        setSortType('name');
     }
 
     return(
