@@ -36,11 +36,15 @@ export default function Register(){
         }
         return true
     }
+    
+    const handleRegisterEvent = async (e) => {
+        e.preventDefault()
+    }
 
     return(
         <div className="container">
             <h2>회원가입</h2>
-            <form onSubmit={handleRegister}>
+            <form onSubmit={handleRegisterEvent}>
                 <div>
                     <input 
                         type="email"
