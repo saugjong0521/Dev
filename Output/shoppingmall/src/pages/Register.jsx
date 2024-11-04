@@ -58,6 +58,7 @@ export default function Register(){
         <div className="container">
             <h2>회원가입</h2>
             <form onSubmit={handleRegisterEvent} noValidate>
+            {/*noValidate 기본 유효성 검사 제거*/}
                 <div>
                     <input 
                         type="email"
