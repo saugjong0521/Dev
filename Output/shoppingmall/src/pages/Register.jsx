@@ -42,8 +42,24 @@ export default function Register(){
             <h2>회원가입</h2>
             <form>
                 <div>
-                    <input type="email"></input>
-                    <input type="password"></input>
+                    <input 
+                        type="email"
+                        placeholder="이메일을 입력하세요"
+                        value={userEmail}
+                        onChange={(e) => setUserEmail(e.target.value)}
+                    />
+                    {emailErr && <span className="errorText">{emailErr}</span>}
+                </div>
+                <div>
+                    <input 
+                        type="password"
+                        placeholder="비밀번호를 입력하세요"
+                        value={userPassword}
+                        onChange={(e) => setPwErr(e.target.value)}
+                    />
+                    {pwErr && <span className="errorText">{pwErr}</span>}
+                </div>
+                <div>
                     <input 
                         type="text" 
                         placeholder="유저이름을 입력하세요"
@@ -51,8 +67,8 @@ export default function Register(){
                         onChange={(e)=>setUserName(e.target.value)}        
                     />
                     {nameErr && <span className="errorText">{nameErr}</span>}
-                    
                 </div>
+                <button type="submit"/>
             </form>
         </div>
     )
