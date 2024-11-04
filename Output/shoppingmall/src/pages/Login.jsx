@@ -18,7 +18,7 @@ export default function Login (){
         }
     }
 
-    const handleLogin = asyne (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault();
         setErrMsg('')
         try{
