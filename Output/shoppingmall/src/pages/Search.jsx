@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { SearchProducts } from "../api/Firebase";
+import DetailPageEvent from "../components/DetailPageEvent";
 
 
 export default function Search(){
@@ -33,7 +34,9 @@ export default function Search(){
             <input type="text" value={query} onChange={handleSearchEvent}/>
             <ul className="productList">
                 {result.map((el)=>(
-                    <li>{el.title}</li>
+                    <li>
+                        <DetailPageEvent key={el.id} product={el}/>
+                    </li>
 
                 ))}
             </ul>
