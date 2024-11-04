@@ -212,6 +212,6 @@ export async function registerEmail(email, password, name){
         await signOut(auth);
         return {success : true}
     } catch(error){
-        console.error(error)
+        return {error: error.code}
     }
 }
