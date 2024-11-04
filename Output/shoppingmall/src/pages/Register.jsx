@@ -44,7 +44,13 @@ export default function Register(){
                 <div>
                     <input type="email"></input>
                     <input type="password"></input>
-                    <input type="text" placeholder="유저이름을 입력하세요"/>
+                    <input 
+                        type="text" 
+                        placeholder="유저이름을 입력하세요"
+                        value={userName}
+                        onChange={(e)=>setUserName(e.target.value)}        
+                    />
+                    {nameErr && <span className="errorText">{nameErr}</span>}
                     
                 </div>
             </form>
