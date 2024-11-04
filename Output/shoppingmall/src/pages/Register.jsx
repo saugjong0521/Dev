@@ -1,4 +1,6 @@
 import { useState } from "react"
+import { registerEmail } from "../api/Firebase";
+import { useNavigate } from "react-router-dom";
 
 
 export default function Register(){
@@ -10,6 +12,8 @@ export default function Register(){
     const [nameErr, setNameErr] = useState('');
     const [emailErr, setEmailErr] = useState('');
     const [pwErr, setPwErr] = useState('');
+
+    const navigate = useNavigate();
 
     //이름 유효형 검사
     const validateName = (userName) => {
@@ -52,6 +56,21 @@ export default function Register(){
         if(!validateName(userName)){
             return
         }
+        try{
+            const result = await registerEmail(userEmail, userPassword, userName){
+                if(result.error){
+                    if(result.error === 'auth/email-already-exists'){
+                        setEmailErr('사용중인 이메일입니다.')
+                    }
+                    return
+                } else{
+                    navigate('/login')
+                }
+        } catch(error){
+                console.error(error)
+            }
+        }
+        
     }
 
     return(
