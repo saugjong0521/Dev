@@ -57,7 +57,7 @@ export default function Register(){
     return(
         <div className="container">
             <h2>회원가입</h2>
-            <form onSubmit={handleRegisterEvent}>
+            <form onSubmit={handleRegisterEvent} noValidate>
                 <div>
                     <input 
                         type="email"
