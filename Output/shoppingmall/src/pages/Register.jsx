@@ -48,48 +48,28 @@ export default function Register(){
         setNameErr('');
 
         
-        // try{
-        //     const result = await registerEmail(userEmail, userPassword, userName)
-        //         if(result.error){
-        //             if(result.error === 'auth/email-already-in-use'){
-        //                 setEmailErr('사용중인 이메일입니다.')
-        //             }
-        //             return
-                    
-        //         } else{
-        //             navigate('/login')
-        //         }
-
-        //         if(userPassword.length < 6){
-        //             setPwErr('비밀번호는 4글자 이상이어야 합니다.')
-        //             return
-        //         }
-        //         if(!validateName(userName)){
-        //             return
-        //         }
-        //     } catch(error){
-        //         console.error(error)
-        //     }
-
-
         try{
             const result = await registerEmail(userEmail, userPassword, userName)
+                if(result.error){
+                    if(result.error === 'auth/email-already-in-use'){
+                        setEmailErr('사용중인 이메일입니다.')
+                    }
+                    return
+                    
+                } else{
+                    navigate('/login')
+                }
 
-            // if(result){
-            //     // navigate('/login')
-            // }
-
-
-        } catch(error){
-            if(error.code === 'auth/email-already-in-use'){
-                setEmailErr('이미 사용중인 이메일 입니다.')
-            } else if(error.code === 'auth/weak-password'){
-                setPwErr('비밀번호는 6글자 이상입니다.')
-            } else{
+                if(userPassword.length < 6){
+                    setPwErr('비밀번호는 4글자 이상이어야 합니다.')
+                    return
+                }
+                if(!validateName(userName)){
+                    return
+                }
+            } catch(error){
                 console.error(error)
             }
-
-        }
 
     }
 
@@ -100,12 +80,12 @@ export default function Register(){
             {/*noValidate 기본 유효성 검사 제거*/}
                 <div>
                     <input 
-                        type="email"
-                        placeholder="이메일을 입력하세요"
-                        value={userEmail}
-                        onChange={(e) => setUserEmail(e.target.value)}
+                        type="text" 
+                        placeholder="유저이름을 입력하세요"
+                        value={userName}
+                        onChange={(e)=>setUserName(e.target.value)}        
                     />
-                    {emailErr && <span className="errorText">{emailErr}</span>}
+                    {nameErr && <span className="errorText">{nameErr}</span>}
                 </div>
                 <div>
                     <input 
@@ -118,12 +98,12 @@ export default function Register(){
                 </div>
                 <div>
                     <input 
-                        type="text" 
-                        placeholder="유저이름을 입력하세요"
-                        value={userName}
-                        onChange={(e)=>setUserName(e.target.value)}        
+                        type="email"
+                        placeholder="이메일을 입력하세요"
+                        value={userEmail}
+                        onChange={(e) => setUserEmail(e.target.value)}
                     />
-                    {nameErr && <span className="errorText">{nameErr}</span>}
+                    {emailErr && <span className="errorText">{emailErr}</span>}
                 </div>
                 <button type="submit">가입하기</button>
             </form>
