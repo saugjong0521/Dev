@@ -58,16 +58,17 @@ export default function Register(){
                 } else{
                     navigate('/login')
                 }
+                if(userPassword.length < 6){
+                    setPwErr('비밀번호는 4글자 이상이어야 합니다.')
+                    return
+                }
+                if(!validateName(userName)){
+                    return
+                }
             } catch(error){
                 console.error(error)
             }
-            if(userPassword.length < 6){
-                setPwErr('비밀번호는 4글자 이상이어야 합니다.')
-                return
-            }
-            if(!validateName(userName)){
-                return
-            }
+
     }
 
     return(
