@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import DetailPageEvent from "./DetailPageEvent";
 import styled from "styled-components";
 import SortBtn from "./SortBtn";
@@ -7,6 +7,29 @@ import SortBtn from "./SortBtn";
 export default function CategoryProductsList ({category, product}){
 
     // const [products, setproducts] = useState(product);
+
+    const [sortProducts, setSortProducts] = useState(product);
+    const [sortType, setSortType] = useState();
+
+    useEffect(()=>{
+        if(sortType === 'name'){
+            sortName()
+        } else if(sortType === 'price'){
+            sortPrice()
+        } else{
+            setSortProducts(product)
+        }
+    }, [product, sortType])
+
+    const sortName = () => {
+        const sortList = [...product].sort((a,b) => {
+            if(!a.name || !b.name){
+                return 0
+                // 둘 중 하나라도 이름이 정의되지 않았다면, 순서를 변경하지 말 것
+            }
+            return a.name.charAt(0).localeCompare(b.name.charAt(0))
+        })
+    }
 
     return(
         <div className="container">
