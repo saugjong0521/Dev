@@ -225,3 +225,26 @@ export async function loginEmail(email, password){
         console.error(error);
     }
 }
+
+
+// 검색
+export async function SearchProducts(query){
+    try{
+        const dbRef = ref(database, `products`);
+        const snapshot = await get(dbRef);
+        if(snapshot.exists()){
+            const data = snapshot.val();
+            const allProducts = Object.values(data);
+
+            if(allProducts.length === 0){
+                return []
+            }
+            const matchProducts = allProducts.filter((product)=>{
+                const itemTitle = product.title;
+                return itemTitle.includes(query)
+            })
+        }
+    } catch(error){
+        console.error(error)
+    }
+}
