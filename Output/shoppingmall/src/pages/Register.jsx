@@ -55,6 +55,7 @@ export default function Register(){
                         setEmailErr('사용중인 이메일입니다.')
                     }
                     return
+                    
                 } else{
                     navigate('/login')
                 }
