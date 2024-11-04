@@ -59,7 +59,7 @@ export default function Register(){
         try{
             const result = await registerEmail(userEmail, userPassword, userName)
                 if(result.error){
-                    if(result.error === 'auth/email-already-exists'){
+                    if(result.error === 'auth/email-in-use'){
                         setEmailErr('사용중인 이메일입니다.')
                     }
                     return
