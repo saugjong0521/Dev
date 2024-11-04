@@ -35,9 +35,9 @@ export default function CategoryProductsList ({category, product}){
     }
 
     const sortPrice = () => {
-        const sortList = [...product].sort((a,b)=>{
-            a.price - b.price;
-        })
+        const sortList = [...product].sort((a,b)=>
+            a.price - b.price
+        )
         setSortProducts(sortList);
         setSortType('price')
     }
