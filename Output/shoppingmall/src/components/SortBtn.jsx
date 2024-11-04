@@ -12,7 +12,7 @@ export default function SortBtn({sortName, sortPrice}){
 
 }
 
-SortBtn.PropTypes = {
+SortBtn.propTypes = {
     sortName : PropTypes.func.isRequired,
     sortPrice : PropTypes.func.isRequired,
 }
