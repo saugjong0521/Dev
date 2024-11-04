@@ -221,5 +221,7 @@ export async function loginEmail(email, password){
     try{
         const userData = await signInWithEmailAndPassword(auth, email, password);
         return userData.user;
+    }catch(error){
+        console.error(error);
     }
 }
