@@ -40,7 +40,7 @@ export default function Register(){
     return(
         <div className="container">
             <h2>회원가입</h2>
-            <form>
+            <form onSubmit={handleRegister}>
                 <div>
                     <input 
                         type="email"
@@ -68,7 +68,7 @@ export default function Register(){
                     />
                     {nameErr && <span className="errorText">{nameErr}</span>}
                 </div>
-                <button type="submit"/>
+                <button type="submit">가입하기</button>
             </form>
         </div>
     )
