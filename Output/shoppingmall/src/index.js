@@ -13,6 +13,7 @@ import ProductDetail from './pages/ProductDetail';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import MyCart from './pages/MyCart';
 import Register from './pages/Register';
+import Search from './pages/Search';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -51,6 +52,7 @@ const routes = createBrowserRouter([
       { path: '/product/:category', element: <CategoryPages/> },
       // category 앞에 ':'를 붙임으로서, 매개변수로 만듬
       { path: '/product/detail/:id', element: <ProductDetail/>},
+      { path: '/search', element: <Search/>},
       { path: '/cart', element: <MyCart/> },
       { path: '/admin', element: 
       <ProtectRouter checkAdmin>
