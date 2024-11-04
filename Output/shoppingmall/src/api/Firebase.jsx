@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app" ;
 import { get, getDatabase, ref, remove, set } from "firebase/database" ;
-import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { v4 as uuid } from "uuid"
 
 
@@ -197,7 +197,7 @@ export async function deleteCart(userId, productId){
 }
 
 
-//이메일 회원가입
+// 이메일 회원가입
 export async function registerEmail(email, password, name){
     const auth = getAuth()  // 저장할 사용자 인증폼을 불러옴
     try{
@@ -213,5 +213,13 @@ export async function registerEmail(email, password, name){
         return {success : true}
     } catch(error){
         return {error: error.code}
+    }
+}
+
+// 이메일 로그인
+export async function loginEmail(email, password){
+    try{
+        const userData = await signInWithEmailAndPassword(auth, email, password);
+        return userData.user;
     }
 }
