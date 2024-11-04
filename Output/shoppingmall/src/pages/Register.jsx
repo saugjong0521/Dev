@@ -75,9 +75,9 @@ export default function Register(){
         try{
             const result = await registerEmail(userEmail, userPassword, userName)
 
-            if(result){
-                navigate('/login')
-            }
+            // if(result){
+            //     // navigate('/login')
+            // }
 
 
         } catch(error){
