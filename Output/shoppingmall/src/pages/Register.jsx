@@ -57,7 +57,7 @@ export default function Register(){
             return
         }
         try{
-            const result = await registerEmail(userEmail, userPassword, userName){
+            const result = await registerEmail(userEmail, userPassword, userName)
                 if(result.error){
                     if(result.error === 'auth/email-already-exists'){
                         setEmailErr('사용중인 이메일입니다.')
@@ -66,10 +66,9 @@ export default function Register(){
                 } else{
                     navigate('/login')
                 }
-        } catch(error){
+            } catch(error){
                 console.error(error)
             }
-        }
         
     }
 
