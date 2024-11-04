@@ -48,14 +48,6 @@ export default function Register(){
         setEmailErr('');
 
         
-        if(userPassword.length < 6){
-            setPwErr('비밀번호는 4글자 이상이어야 합니다.')
-            return
-        }
-        // if(){}
-        if(!validateName(userName)){
-            return
-        }
         try{
             const result = await registerEmail(userEmail, userPassword, userName)
                 if(result.error){
@@ -69,7 +61,13 @@ export default function Register(){
             } catch(error){
                 console.error(error)
             }
-        
+        if(userPassword.length < 6){
+            setPwErr('비밀번호는 4글자 이상이어야 합니다.')
+            return
+        }
+        if(!validateName(userName)){
+            return
+        }
     }
 
     return(
