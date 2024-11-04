@@ -72,7 +72,7 @@ export default function Register(){
                         type="password"
                         placeholder="비밀번호를 입력하세요"
                         value={userPassword}
-                        onChange={(e) => setPwErr(e.target.value)}
+                        onChange={(e) => setUserPassword(e.target.value)}
                     />
                     {pwErr && <span className="errorText">{pwErr}</span>}
                 </div>
