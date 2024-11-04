@@ -1,6 +1,7 @@
 import { useState } from "react"
 import DetailPageEvent from "./DetailPageEvent";
 import styled from "styled-components";
+import SortBtn from "./SortBtn";
 
 
 export default function CategoryProductsList ({category, product}){
@@ -10,6 +11,8 @@ export default function CategoryProductsList ({category, product}){
     return(
         <div className="container">
             <h2>{category}</h2>
+
+            <SortBtn sortName={sortName} sortPrice={sortPrice}/>
 
             <DetailListCSS className="productList">
                 {product.map((el) => (
