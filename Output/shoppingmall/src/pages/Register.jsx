@@ -48,7 +48,7 @@ export default function Register(){
         setEmailErr('');
 
         
-        if(userPassword.length < 3){
+        if(userPassword.length < 6){
             setPwErr('비밀번호는 4글자 이상이어야 합니다.')
             return
         }
