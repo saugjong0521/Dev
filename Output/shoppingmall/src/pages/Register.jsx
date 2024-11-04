@@ -38,7 +38,20 @@ export default function Register(){
     }
     
     const handleRegisterEvent = async (e) => {
-        e.preventDefault()
+        e.preventDefault();
+        setPwErr('');
+        setNameErr('');
+        setEmailErr('');
+
+        
+        if(userPassword.length < 3){
+            setPwErr('비밀번호는 4글자 이상이어야 합니다.')
+            return
+        }
+        // if(){}
+        if(!validateName(userName)){
+            return
+        }
     }
 
     return(
