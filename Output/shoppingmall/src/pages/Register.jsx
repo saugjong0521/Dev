@@ -43,9 +43,9 @@ export default function Register(){
     
     const handleRegisterEvent = async (e) => {
         e.preventDefault();
+        setEmailErr('');
         setPwErr('');
         setNameErr('');
-        setEmailErr('');
 
         
         try{
