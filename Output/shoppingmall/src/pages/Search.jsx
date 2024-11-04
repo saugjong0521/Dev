@@ -25,7 +25,7 @@ export default function Search(){
 
     const handleSearchEvent = (e) => {
         e.preventDefault();
-        setQuery(e.target.value)
+        setQuery(e.target.value.toUpperCase())  // 입력한 값을 대문자로 변환
     }
 
     return(
