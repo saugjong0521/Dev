@@ -23,10 +23,14 @@
             "id": "d0a9023605229a1c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "teset.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "teset"
             }
           }
         ],
@@ -173,6 +177,7 @@
   },
   "active": "d0a9023605229a1c",
   "lastOpenFiles": [
+    "teset.md",
     "conflict-files-obsidian-git.md",
     "react/node_modules/unload/dist/lib/index.js",
     "react/node_modules/unload/dist/lib/node.js",
@@ -211,7 +216,6 @@
     "react/05.moviesite/node_modules/string_decoder/README.md",
     "react/05.moviesite/node_modules/punycode/README.md",
     "react/05.moviesite/node_modules/eslint-plugin-import/memo-parser/README.md",
-    "react/05.moviesite/node_modules/unbox-primitive/README.md",
     "react/05.moviesite/node_modules/istanbul-reports/lib/html-spa/assets/sort-arrow-sprite.png",
     "react/05.moviesite/node_modules/istanbul-reports/lib/html/assets/favicon.png",
     "react/05.moviesite/node_modules/istanbul-reports/lib/html/assets/sort-arrow-sprite.png",
