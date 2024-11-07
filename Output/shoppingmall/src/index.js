@@ -14,6 +14,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import MyCart from './pages/MyCart';
 import Register from './pages/Register';
 import Search from './pages/Search';
+import WritePage from './pages/WritePage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -54,6 +55,7 @@ const routes = createBrowserRouter([
       { path: '/product/detail/:id', element: <ProductDetail/>},
       { path: '/search', element: <Search/>},
       { path: '/cart', element: <MyCart/> },
+      { path: '/board/write', element: <WritePage/> },
       { path: '/admin', element: 
       <ProtectRouter checkAdmin>
                 <AdminSection/>
