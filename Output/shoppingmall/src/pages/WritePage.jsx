@@ -10,13 +10,26 @@ export default function WritePage (){
     const [title, setTitle] = useState('')
     const [text, setText] = useState('')
 
+    const today = new Date();
+    const date = `${today.getFullYear()}년 ${today.getMonth()+1}월 ${today.getDate()}일`
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try{
+            await addBoard(email, date, title, text);
+        } catch(error){
+            console.error(error)
+        }
+    }
+
+
     return(
 
         <div className="container">
 
             <h2>게시글 작성하기</h2>
 
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div className="writeBox">
                     <label htmlFor="boardTitle">제목</label>
                     <input 
