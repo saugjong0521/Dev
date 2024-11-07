@@ -1,8 +1,15 @@
+import { useNavigate } from "react-router-dom"
 
 
 export default function BoardListItem({post}){
+
+    const navigate = useNavigate();
+    const handleDetail = () => {
+        navigate(`/board/qna/${post.id}`)
+    }
+
     return(
-        <li>
+        <li onClick={handleDetail}>
             <p>{post.title}</p>
             <p>{post.date}</p>
         </li>
