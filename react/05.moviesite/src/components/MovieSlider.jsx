@@ -1,16 +1,15 @@
 import { useEffect, useState } from "react"
-import { getGenre } from "../axios/Axios"
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { getGenre } from "../axios/Axios";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation} from "swiper/modules"
+import styled from "styled-components";
 
 //스와이퍼 css
 import 'swiper/css';
 import 'swiper/css/navigation';
-import styled from "styled-components";
 import MovieCard from "./MovieCard";
 
-
-export default function MovieSlider({ movies, title }) {
+export default function MovieSlider({ movies, title, rate, type }) {
     const [genres, setGenres] = useState({})
     const [hoverId, setHoverId] = useState(null)
 
@@ -18,11 +17,29 @@ export default function MovieSlider({ movies, title }) {
     const imgVariants = {
         initial : {
             scale : 1,
+            zIndex : 1,
         },
         hover:{
-            scale : 1.5,
+            scale : 1.2,
             transition : {
-                duration : 0.5
+                duration : 0.5,
+                zIndex : 9,
+            }
+        }
+    }
+
+    const infoVariants = {
+        initial : {
+            opacity : 0,
+            scale : 1,
+            zIndex : 1,
+        },
+        hover : {
+            opacity : 1,
+            scale : 1.5,
+            zIndex : 99,
+            transition : {
+                duration : 0.5,
             }
         }
     }
@@ -44,6 +61,12 @@ export default function MovieSlider({ movies, title }) {
     const getGenresNames = (genreId) => {
         return genreId.map(id => genres[id]).join(', ')
     }
+
+    //관람등급 표시
+    const getRating = (adult) => {
+        return adult ? '청소년불가' : '전체 관람가능'
+    }
+
     return (
         <MovieSliderItem>
             <h2 className="movieTitle">{title}</h2>
@@ -58,10 +81,15 @@ export default function MovieSlider({ movies, title }) {
                         <MovieCard
                             movie={movie}
                             id={id}
+                            rate={rate}
+                            type = {type}
                             hoverId={hoverId}
                             setHoverId={setHoverId}
                             imgVariants ={imgVariants}
+                            infoVariants = {infoVariants}
                             getGenresNames={getGenresNames}
+                            getRating ={getRating}
+                            movieLength = {movies.length}
                         >
 
                         </MovieCard>
@@ -81,5 +109,9 @@ const MovieSliderItem = styled.div`
         color: #fff;
         position: relative;
         margin-bottom: 24px;
+    }
+
+    .swiper{
+        overflow: visible;
     }
 `

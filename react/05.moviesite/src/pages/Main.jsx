@@ -8,26 +8,24 @@ import {useQuery} from "react-query"
 
 export default function Main (){
 
-    const [movies, setMovies] = useState([]);
-
-    useEffect(()=>{
-        const fetchMovies = async () => {
-            const res = await getMovies('now_playing')
-            if(res){
-                setMovies(res)
-            }
-        }
-        fetchMovies();
-    }, [])
-    
 
     const {
         data : action,
         isLoading : isActionLoading,
         error : actionError
-    } = useQuery(['movies', 28], () => getMovieGenre(28), {
+    } = useQuery(['movies', '28'], () => getMovieGenre('28'), {
         staleTime: 5000,
     })
+
+    //nowPlaying
+    const {
+        data : nowPlaying,
+        isLoading : isNowPlayingLoading,
+        error : NowPlayingError
+    } = useQuery(['movies', 'nowPlaying'], () => getMovies('now_playing'), {
+        staleTime: 5000,
+    })
+
     
     /*
     *useQuery
@@ -44,10 +42,15 @@ export default function Main (){
    if(actionError) return <div>오류가 발생했습니다.</div>
 
 
+   if(isNowPlayingLoading) return <div>로딩중입니다..</div>
+   if(NowPlayingError) return <div>오류가 발생했습니다.</div>
+
+
     return(
         <>
         <MainVideo/>
-        <MovieSlider movies={action} title='액션 장르'/>
+        <MovieSlider movies={nowPlaying.slice(1,11)} title='TOP 10 시리즈' rate={true} type='nowPlaying'/>
+        <MovieSlider movies={action} title='액션 장르' type='action'/>
         </>
     )
 
