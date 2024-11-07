@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom";
 import { getBoard, onUserState } from "../api/Firebase";
 import { useQuery } from "@tanstack/react-query";
+import BoardListItem from "../components/BoardListItem";
 
 
 export default function QnA (){
@@ -30,7 +31,7 @@ export default function QnA (){
 
             <ul className="boardList">
                 {board && board.map((el)=>(
-                    <li>{el.title}</li>
+                    <BoardListItem key={el.id} post={el}/>
                 ))}
             </ul>
         </div>
