@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom";
 import { getBoard, onUserState } from "../api/Firebase";
 import { useQuery } from "@tanstack/react-query";

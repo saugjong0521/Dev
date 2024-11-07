@@ -15,6 +15,7 @@ import MyCart from './pages/MyCart';
 import Register from './pages/Register';
 import Search from './pages/Search';
 import WritePage from './pages/WritePage';
+import QnA from './pages/QnA';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -55,6 +56,7 @@ const routes = createBrowserRouter([
       { path: '/product/detail/:id', element: <ProductDetail/>},
       { path: '/search', element: <Search/>},
       { path: '/cart', element: <MyCart/> },
+      { path: '/board/qna', element: <QnA/> },
       { path: '/board/write', element: <WritePage/> },
       { path: '/admin', element: 
       <ProtectRouter checkAdmin>

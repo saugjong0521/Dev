@@ -34,7 +34,7 @@ export default function Header (){
                 <Link to=''>logo</Link>
             </h1>
             <Nav/>
-            <Link to='/board'>QnA</Link>
+            <Link to='/board/qna'>QnA</Link>
             <div className="rightMenu">
                 {user && user.isAdmin &&
                     <Link to='/admin'>관리</Link>
