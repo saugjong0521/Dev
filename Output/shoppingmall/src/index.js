@@ -16,6 +16,7 @@ import Register from './pages/Register';
 import Search from './pages/Search';
 import WritePage from './pages/WritePage';
 import QnA from './pages/QnA';
+import QnADetailPage from './pages/QnADetailPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -58,6 +59,7 @@ const routes = createBrowserRouter([
       { path: '/cart', element: <MyCart/> },
       { path: '/board/qna', element: <QnA/> },
       { path: '/board/write', element: <WritePage/> },
+      { path: '/board/qna/:id', element: <QnADetailPage/> },
       { path: '/admin', element: 
       <ProtectRouter checkAdmin>
                 <AdminSection/>

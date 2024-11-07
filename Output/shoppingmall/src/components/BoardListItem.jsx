@@ -5,7 +5,15 @@ export default function BoardListItem({post}){
 
     const navigate = useNavigate();
     const handleDetail = () => {
-        navigate(`/board/qna/${post.id}`)
+        navigate(`/board/qna/${post.id}` ,{
+            state : {
+                id: post.id,
+                user: post.user,
+                date: post.date,
+                title: post.title,
+                text: post.text,
+            }
+        })
     }
 
     return(
