@@ -11,8 +11,12 @@
             "id": "1e058879c73439fc",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.7.4"
+              },
+              "icon": "lucide-file",
+              "title": "Release Notes 1.7.4"
             }
           }
         ]
@@ -35,7 +39,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -50,7 +56,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -58,7 +66,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -88,7 +98,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
             }
           },
           {
@@ -99,7 +111,9 @@
               "state": {
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
             }
           },
           {
@@ -110,7 +124,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -118,7 +134,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {},
+              "icon": "lucide-list",
+              "title": "Outline"
             }
           }
         ]
@@ -140,6 +158,7 @@
   },
   "active": "1e058879c73439fc",
   "lastOpenFiles": [
+    "Output/page.zip",
     "react/05.moviesite/src/components/MovieCard.jsx",
     "react/05.moviesite/node_modules/match-sorter/dist/match-sorter.umd.js.map",
     "react/05.moviesite/node_modules/match-sorter/dist/match-sorter.umd.min.js.map",
@@ -150,7 +169,6 @@
     "react/05.moviesite/node_modules/broadcast-channel/dist/es/methods/simulate.js",
     "react/05.moviesite/node_modules/broadcast-channel/dist/es/methods/node.js",
     "react/05.moviesite/node_modules/broadcast-channel/dist/es/methods/native.js",
-    "react/05.moviesite/node_modules/broadcast-channel/dist/es/methods/indexed-db.js",
     "react/05.moviesite/node_modules/xmlchars/README.md",
     "react/05.moviesite/node_modules/unload/README.md",
     "react/05.moviesite/node_modules/remove-accents/README.md",
