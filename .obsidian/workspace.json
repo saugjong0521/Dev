@@ -160,6 +160,7 @@
   },
   "active": "0c9100d4049f053a",
   "lastOpenFiles": [
+    "Output/shoppingmall/src/pages/QnADetailPage.jsx",
     "Output/shoppingmall/src/components/BoardListItem.jsx",
     "Output/shoppingmall/src/pages/QnA.jsx",
     "Output/shoppingmall/node_modules/@firebase/storage-compat/dist/esm/test/unit/index.test.d.ts",
@@ -170,7 +171,6 @@
     "Output/shoppingmall/node_modules/@firebase/storage-compat/dist/esm/test/unit",
     "Output/shoppingmall/node_modules/@firebase/storage-compat/dist/esm/test/integration",
     "Output/shoppingmall/node_modules/@firebase/storage-compat/dist/esm/test/setup.d.ts",
-    "Output/shoppingmall/node_modules/@firebase/storage-compat/dist/test/unit/service.test.d.ts",
     "Output/shoppingmall/node_modules/html-entities/README.md",
     "Output/shoppingmall/node_modules/strip-ansi/readme.md",
     "Output/shoppingmall/node_modules/sanitize.css/README.md",
