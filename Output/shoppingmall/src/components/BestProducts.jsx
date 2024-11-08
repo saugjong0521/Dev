@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { getAllProduct } from "../api/Firebase";
+import { getAllProduct, getLike } from "../api/Firebase";
+import DetailPageEvent from "./DetailPageEvent";
 
 
 export default function BestProducts(){
@@ -34,4 +35,16 @@ export default function BestProducts(){
         }
         fetchProducts()
     }, [])
+
+    return(
+        <div className="container">
+            <h2>인기 상품</h2>
+            <ul>
+                {products.map((el)=>(
+                    <DetailPageEvent product={el}/>    
+                ))}
+            </ul>
+        </div>
+    )
+
 }
