@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import UseCart from "../context/UseCart";
 import ProductReview from "../components/ProductReview";
 import { GoHeart, GoHeartFill } from "react-icons/go";
+import { getAuth } from "firebase/auth";
 
 
 export default function ProductDetail (){
@@ -45,7 +46,19 @@ export default function ProductDetail (){
         .catch((error)=>{
             console.error(error)
         })
-    })
+
+        const auth = getAuth();
+        const user = auth.currentUser;
+        if(user){
+            hasLike(id, user.uid)
+            .then((liked)=>{
+                setLiked(liked)
+            })
+            .catch((error)=>{
+                console.error(error)
+            })
+        }
+    },[id])
 
     const handleLike = async () => {
         try{
