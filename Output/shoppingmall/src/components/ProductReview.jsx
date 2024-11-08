@@ -1,10 +1,18 @@
 import { useState } from "react"
+import { addReview } from "../api/Firebase";
 
 
 export default function ProductReview({productId}){
 
     const [review, setReview] = useState([]);
     const [newReview, setNewReview] = useState('')
+
+    const handleReview = async () => {
+        try {
+            const user = 'user';
+            await addReview(productId, user, newReview)
+        }
+    }
 
     return(
 
