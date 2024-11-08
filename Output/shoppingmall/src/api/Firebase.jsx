@@ -335,8 +335,9 @@ export async function getReview(productId){
 
 
 // 좋아요 추가
-export async function addLike (productId){
-    const likeRef = ref(database, `like/${productId}`)
+export async function addLike (productId, userId){
+    const likeRef = ref(database, `like/${productId}/count`)
+    const userRef = ref(database, `likes/${productId}/user/${userId}`)
     try{
         const snapshot = await get(likeRef);
         if(snapshot.exists()){
