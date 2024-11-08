@@ -341,7 +341,11 @@ export async function addLike (productId){
         const snapshot = await get(likeRef);
         if(snapshot.exists()){
             const currentLike = snapshot.val();
-            await set(likeRef, currentLike + 1)
+            await set(likeRef, currentLike + 1);
+        } else{
+            await set(likeRef, 1)
         }
+    } catch(error){
+        console.error(error);
     }
 }
