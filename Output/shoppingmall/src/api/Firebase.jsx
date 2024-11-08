@@ -301,7 +301,7 @@ export async function getComments(boardId){
 }
 
 // 리뷰 글 작성
-export async function addReview(productId, user, text){
+export async function addReview(productId, user, text, timestamp){
     const reviewId = uuid();
     const reviewRef = ref(database, `review/${productId}/${reviewId}`)
     try {
@@ -309,6 +309,7 @@ export async function addReview(productId, user, text){
             id : reviewId,
             user : user,
             text : text,
+            timestamp : timestamp,
         })
         return reviewId
     } catch(error){
