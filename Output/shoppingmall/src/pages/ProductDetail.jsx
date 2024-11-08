@@ -64,6 +64,12 @@ export default function ProductDetail (){
         try{
             if(liked){
                 await removeLike(id);
+                setLikes((prev) => prev - 1)
+                setLiked(false);
+            } else{
+                await addLike(id)
+                setLikes((prev) => prev + 1)
+                setLiked(true);
             }
         } catch(error){
             console.error(error)
