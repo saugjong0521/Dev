@@ -16,6 +16,10 @@ export default function QnA (){
         })
     },[])
 
+    const handleWrite = () => {
+        navigate(`/board/write`, {state : {email : user.email}})
+    }
+
     const {data : board,} = useQuery({
         queryKey: 'board',
         queryFn : getBoard
@@ -26,7 +30,7 @@ export default function QnA (){
             <div className="boardTop">
                 <h2>QnA 게시판</h2>
                 {user && user.isAdmin &&
-                    <button className="writeBtn">작성하기</button>}
+                    <button className="writeBtn" onClick={handleWrite}>작성하기</button>}
             </div>
 
             <ul className="boardList">
