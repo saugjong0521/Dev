@@ -422,3 +422,9 @@ export async function getLike(productId){
 
 
 // 인기 상품(좋아요) 출력
+export async function getAllProduct(){
+    const productRef = ref(database, `products`)
+    try {
+        const snapshot = await get(productRef);
+    }
+}
