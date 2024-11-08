@@ -332,3 +332,16 @@ export async function getReview(productId){
         console.error(error)
     }
 }
+
+
+// 좋아요 추가
+export async function addLike (productId){
+    const likeRef = ref(database, `like/${productId}`)
+    try{
+        const snapshot = await get(likeRef);
+        if(snapshot.exists()){
+            const currentLike = snapshot.val();
+            await set(likeRef, currentLike + 1)
+        }
+    }
+}
