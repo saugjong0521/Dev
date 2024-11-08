@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { addComments, onUserState } from "../api/Firebase";
+import { useQuery } from "@tanstack/react-query";
 
 
 export default function QnADetailPage (){
@@ -9,7 +10,7 @@ export default function QnADetailPage (){
     const {id, user, date, title, text} = state;
 
     const [loginUser, setLoginUser] = useState();
-    const [comments, setComments] = useState('');
+    const [commentWrite, setCommentWrite] = useState('');
 
     useEffect(() => {
         onUserState((user) => {
@@ -28,6 +29,8 @@ export default function QnADetailPage (){
         }
     }
 
+    const {data: comments} = useQuery
+
     return(
 
         <div className="container">
@@ -42,8 +45,8 @@ export default function QnADetailPage (){
                     {loginUser == null ?
                     <input type="text" placeholder="로그인 후 작성할 수 있습니다." disabled/>
                     :
-                    <input type="text" placeholder="댓글을 작성해 주세요" value={comments}
-                    onChange={(e) => setComments(e.target.value)}/>
+                    <input type="text" placeholder="댓글을 작성해 주세요" value={commentWrite}
+                    onChange={(e) => setCommentWrite(e.target.value)}/>
                     }
 
                     <button type="submit">작성하기</button>
