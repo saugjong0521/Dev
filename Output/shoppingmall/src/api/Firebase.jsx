@@ -419,3 +419,6 @@ export async function getLike(productId){
         return 0;
     }
 }
+
+
+// 인기 상품(좋아요) 출력
