@@ -54,6 +54,11 @@ export default function QnADetailPage (){
 
                     <button type="submit">작성하기</button>
 
+                    <ul className="commentList">
+                        {comments && comments.map((el) => (
+                            <li>{el.text}</li>
+                        ))}
+                    </ul>
                 </form>
             </div>
         </div>
