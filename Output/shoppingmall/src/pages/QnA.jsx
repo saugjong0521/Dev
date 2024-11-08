@@ -28,7 +28,7 @@ export default function QnA (){
     return(
         <div className="container">
             <div className="boardTop">
-                <h2>QnA 게시판</h2>
+                <h2>QnA</h2>
                 {user && user.isAdmin &&
                     <button className="writeBtn" onClick={handleWrite}>작성하기</button>}
             </div>
