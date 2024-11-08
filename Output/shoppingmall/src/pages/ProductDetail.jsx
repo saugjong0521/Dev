@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom"
 import styled from "styled-components";
-import { formatCurrency } from "../api/Firebase";
+import { addLike, formatCurrency } from "../api/Firebase";
 import { useEffect, useState } from "react";
 import UseCart from "../context/UseCart";
 import ProductReview from "../components/ProductReview";
@@ -36,7 +36,13 @@ export default function ProductDetail (){
 
     const [likes, setLikes] = useState(0);
 
-    
+    const handleLike = async () => {
+        try{
+            await addLike(id);
+        } catch(error){
+            console.error(error)
+        }
+    }
 
     return(
 
