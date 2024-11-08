@@ -65,7 +65,7 @@ export default function ProductDetail (){
                     <div className="detailBtns">
                         <button className="cartBtn" onClick={handleCart}>장바구니</button>
                         <button className="buyBtn">구매하기</button>
-                        <button className="likeBtn">♡</button>
+                        <button className="likeBtn" onClick={handleLike}>♡</button>
                     </div>
                     {success && <p>{success}</p>}
                     
