@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "ef4ba50e0534151b",
+        "id": "788ca38c36531933",
         "type": "tabs",
         "children": [
           {
-            "id": "0c9100d4049f053a",
+            "id": "49abb90004e00981",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -73,7 +73,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "13820a4c2dc8a27d",
@@ -89,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +98,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for conflict-files-obsidian-git"
+              "title": "Backlinks"
             }
           },
           {
@@ -108,12 +107,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from conflict-files-obsidian-git"
+              "title": "Outgoing links"
             }
           },
           {
@@ -134,11 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "conflict-files-obsidian-git.md"
-              },
+              "state": {},
               "icon": "lucide-list",
-              "title": "Outline of conflict-files-obsidian-git"
+              "title": "Outline"
             }
           }
         ]
@@ -158,53 +154,53 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0c9100d4049f053a",
+  "active": "49abb90004e00981",
   "lastOpenFiles": [
+    "Output/shoppingmall/src/pages/WritePage.jsx",
     "Output/shoppingmall/src/pages/QnADetailPage.jsx",
-    "Output/shoppingmall/src/components/BoardListItem.jsx",
     "Output/shoppingmall/src/pages/QnA.jsx",
-    "Output/shoppingmall/node_modules/@firebase/storage-compat/dist/esm/test/unit/index.test.d.ts",
-    "Output/shoppingmall/node_modules/@firebase/storage-compat/dist/esm/test/unit/service.test.d.ts",
-    "Output/shoppingmall/node_modules/@firebase/storage-compat/dist/esm/test/unit/reference.test.d.ts",
-    "Output/shoppingmall/node_modules/@firebase/storage-compat/dist/esm/test/integration/integration.test.d.ts",
-    "Output/shoppingmall/node_modules/@firebase/storage-compat/dist/esm/test/utils.d.ts",
-    "Output/shoppingmall/node_modules/@firebase/storage-compat/dist/esm/test/unit",
-    "Output/shoppingmall/node_modules/@firebase/storage-compat/dist/esm/test/integration",
-    "Output/shoppingmall/node_modules/@firebase/storage-compat/dist/esm/test/setup.d.ts",
-    "Output/shoppingmall/node_modules/html-entities/README.md",
+    "Output/shoppingmall/src/components/BoardListItem.jsx",
+    "Output/shoppingmall/src/components/SortBtn.jsx",
+    "Output/shoppingmall/src/pages/Search.jsx",
+    "Output/shoppingmall/src/pages/Register.jsx",
+    "Output/shoppingmall/node_modules/swiper/modules/effect-coverflow.mjs",
+    "Output/shoppingmall/node_modules/swiper/modules/a11y.mjs",
+    "Output/shoppingmall/node_modules/swiper/modules/a11y.scss",
+    "Output/shoppingmall/node_modules/swiper/modules/a11y.min.mjs",
+    "Output/shoppingmall/node_modules/swiper/README.md",
+    "Output/shoppingmall/node_modules/@tanstack/react-query/build/codemods/src/v5/keep-previous-data/README.md",
+    "Output/shoppingmall/node_modules/sockjs/node_modules/uuid/CONTRIBUTING.md",
+    "Output/shoppingmall/node_modules/undici-types/README.md",
+    "Output/shoppingmall/node_modules/buffer-from/readme.md",
+    "Output/shoppingmall/node_modules/ansi-regex/readme.md",
     "Output/shoppingmall/node_modules/strip-ansi/readme.md",
-    "Output/shoppingmall/node_modules/sanitize.css/README.md",
-    "Output/shoppingmall/node_modules/sanitize.css/LICENSE.md",
-    "Output/shoppingmall/node_modules/lodash.merge/README.md",
-    "Output/shoppingmall/node_modules/ignore/README.md",
-    "Output/shoppingmall/node_modules/strip-json-comments/readme.md",
-    "Output/shoppingmall/node_modules/import-fresh/node_modules/resolve-from/readme.md",
-    "Output/shoppingmall/node_modules/import-fresh/readme.md",
-    "Output/shoppingmall/node_modules/compressible/node_modules/mime-db/README.md",
-    "Output/shoppingmall/node_modules/compressible/node_modules/mime-db/HISTORY.md",
-    "Output/shoppingmall/node_modules/compressible/README.md",
-    "Output/shoppingmall/node_modules/compressible/HISTORY.md",
-    "Output/shoppingmall/node_modules/colorette/README.md",
-    "Output/shoppingmall/node_modules/colorette/LICENSE.md",
-    "Output/shoppingmall/node_modules/serve-static/README.md",
-    "Output/shoppingmall/node_modules/serve-static/HISTORY.md",
-    "Output/shoppingmall/node_modules/safer-buffer/Readme.md",
-    "Output/shoppingmall/node_modules/safer-buffer/Porting-Buffer.md",
-    "Output/shoppingmall/node_modules/vary/README.md",
-    "Output/shoppingmall/node_modules/vary/HISTORY.md",
-    "Output/shoppingmall/node_modules/cookie/SECURITY.md",
-    "Output/shoppingmall/node_modules/cookie/README.md",
-    "Output/shoppingmall/node_modules/cookie-signature/Readme.md",
-    "Output/shoppingmall/node_modules/cookie-signature/History.md",
-    "Output/shoppingmall/node_modules/istanbul-reports/lib/html/assets/sort-arrow-sprite.png",
-    "Output/shoppingmall/node_modules/istanbul-reports/lib/html/assets/favicon.png",
-    "Output/shoppingmall/node_modules/istanbul-reports/lib/html-spa/assets/sort-arrow-sprite.png",
+    "Output/shoppingmall/node_modules/react-dev-utils/node_modules/p-locate/readme.md",
+    "Output/shoppingmall/node_modules/react-dev-utils/node_modules/p-limit/readme.md",
+    "Output/shoppingmall/node_modules/react-dev-utils/node_modules/locate-path/readme.md",
+    "Output/shoppingmall/node_modules/react-dev-utils/node_modules/loader-utils/README.md",
+    "Output/shoppingmall/node_modules/react-dev-utils/node_modules/find-up/readme.md",
+    "Output/shoppingmall/node_modules/react-dev-utils/README.md",
+    "Output/shoppingmall/node_modules/strip-bom/readme.md",
+    "Output/shoppingmall/node_modules/minimatch/node_modules/brace-expansion/README.md",
+    "Output/shoppingmall/node_modules/minimatch/README.md",
+    "Output/shoppingmall/node_modules/babel-preset-react-app/README.md",
+    "Output/shoppingmall/node_modules/react-router/README.md",
+    "Output/shoppingmall/node_modules/react-router/LICENSE.md",
+    "Output/shoppingmall/node_modules/react-router/CHANGELOG.md",
+    "Output/shoppingmall/node_modules/react-router-dom/README.md",
+    "Output/shoppingmall/node_modules/react-router-dom/LICENSE.md",
+    "Output/shoppingmall/node_modules/react-router-dom/CHANGELOG.md",
+    "Output/shoppingmall/node_modules/@types/stylis/README.md",
+    "Output/shoppingmall/node_modules/shallowequal/README.md",
+    "Output/shoppingmall/public/logo512.png",
+    "Output/shoppingmall/public/logo192.png",
+    "Output/shoppingmall/src/logo.svg",
     "Output/shoppingmall/node_modules/@jest/core/build/assets/jest_logo.png",
-    "Output/shoppingmall/node_modules/resolve-url-loader/docs/detailed-problem.svg",
-    "Output/shoppingmall/node_modules/resolve-url-loader/docs/basic-problem.svg",
-    "Output/shoppingmall/node_modules/dotenv-expand/dotenv-expand.png",
-    "Output/shoppingmall/node_modules/renderkid/docs/images/bullets-1.png",
-    "Output/shoppingmall/node_modules/renderkid/docs/images/usage.png",
-    "Output/shoppingmall/node_modules/renderkid/docs/images/display.png"
+    "Output/shoppingmall/node_modules/istanbul-reports/lib/html-spa/assets/sort-arrow-sprite.png",
+    "Output/shoppingmall/node_modules/istanbul-reports/lib/html/assets/favicon.png",
+    "Output/shoppingmall/node_modules/istanbul-reports/lib/html/assets/sort-arrow-sprite.png",
+    "Output/shoppingmall/node_modules/serve-index/public/icons/page_world.png",
+    "Output/shoppingmall/node_modules/serve-index/public/icons/page_white_wrench.png",
+    "Output/shoppingmall/node_modules/serve-index/public/icons/page_word.png"
   ]
 }
