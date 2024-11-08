@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom"
 import styled from "styled-components";
 import { formatCurrency } from "../api/Firebase";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import UseCart from "../context/UseCart";
 import ProductReview from "../components/ProductReview";
 
@@ -34,6 +34,8 @@ export default function ProductDetail (){
         })
     }
 
+    const [likes, setLikes] = useState(0);
+
     
 
     return(
@@ -63,6 +65,7 @@ export default function ProductDetail (){
                     <div className="detailBtns">
                         <button className="cartBtn" onClick={handleCart}>장바구니</button>
                         <button className="buyBtn">구매하기</button>
+                        <button className="likeBtn">♡</button>
                     </div>
                     {success && <p>{success}</p>}
                     
