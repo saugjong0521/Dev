@@ -299,3 +299,35 @@ export async function getComments(boardId){
         return []
     })
 }
+
+// 리뷰 글 작성
+export async function addReview(productId, user, text){
+    const reviewId = uuid();
+    const reviewRef = ref(database, `review/${productId}/${reviewId}`)
+    try {
+        await set(reviewRef, {
+            id : reviewId,
+            user : user,
+            text : text,
+        })
+        return reviewId
+    } catch(error){
+        console.error(error)
+    }
+}
+
+// 리뷰 글 불러오기
+export async function getReview(productId){
+    const reviewRef = ref(database, `review/${productId}`)
+
+    try {
+        const snapshot = await get(reviewRef);
+        if(snapshot.exists()){
+            return Object.values(snapshot.val())
+        } else{
+            return []
+        }
+    } catch(error){
+        console.error(error)
+    }
+}
