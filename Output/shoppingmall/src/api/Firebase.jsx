@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app" ;
-import { get, getDatabase, ref, remove, set } from "firebase/database" ;
+import { get, getDatabase, ref, remove, set, update } from "firebase/database" ;
 import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { v4 as uuid } from "uuid"
 
