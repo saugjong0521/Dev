@@ -23,7 +23,7 @@ export default function QnADetailPage (){
 
         try {
             await addComments(id, user, comments);
-            setComments('')
+            setCommentWrite('')
         }catch(error){
             console.error(error)
         }
