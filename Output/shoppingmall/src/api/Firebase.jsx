@@ -426,5 +426,13 @@ export async function getAllProduct(){
     const productRef = ref(database, `products`)
     try {
         const snapshot = await get(productRef);
+        if(snapshot.exists()){
+            const products = snapshot.val();
+            return Object.keys(products).map((key) => ({id: key, ...products[key]}))
+        } else{
+            return []
+        }
+    } catch(error){
+        console.error(error)
     }
 }
