@@ -12,6 +12,9 @@ export default function ProductReview({productId}){
         .then((review)=>{
             setReview(review)
         })
+        .catch((error)=>{
+            console.error(error)
+        })
     },[productId])
 
     const handleReview = async () => {
