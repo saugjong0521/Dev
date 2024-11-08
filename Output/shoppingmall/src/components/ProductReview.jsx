@@ -33,7 +33,7 @@ export default function ProductReview({productId}){
         <div>
             <h3>review</h3>
             <ul>
-                {review && review.map((el, idx) => (
+                {review && review.slice(0,5).map((el, idx) => (
                     <li>{el.text}</li>
                 ))}
             </ul>
