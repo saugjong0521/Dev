@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { addReview } from "../api/Firebase";
+import { addReview, getReview } from "../api/Firebase";
 
 
 export default function ProductReview({productId}){
@@ -10,7 +10,11 @@ export default function ProductReview({productId}){
     const handleReview = async () => {
         try {
             const user = 'user';
-            await addReview(productId, user, newReview)
+            await addReview(productId, user, newReview);
+            setNewReview('');
+            // getReview(productId)
+        } catch(error){
+            console.log(error);
         }
     }
 
