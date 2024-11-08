@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app" ;
 import { get, getDatabase, ref, remove, set, update } from "firebase/database" ;
-import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
+import { browserSessionPersistence, createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, setPersistence, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { v4 as uuid } from "uuid"
 
 
@@ -27,6 +27,12 @@ const app = initializeApp(firebaseConfig);
 const provider = new GoogleAuthProvider()
 const auth = getAuth()
 const database = getDatabase(app);
+
+
+// 브라우저를 닫으면 로그인이 유지되지 않도록 설정
+setPersistence(auth, browserSessionPersistence).then(()=>{
+    return
+})
 
 
 //구글 자동로그인 방지
