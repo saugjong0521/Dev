@@ -340,12 +340,14 @@ export async function addLike (productId, userId){
     const userRef = ref(database, `likes/${productId}/user/${userId}`)
     try{
         const snapshot = await get(likeRef);
-        if(snapshot.exists()){
-            const currentLike = snapshot.val();
-            await set(likeRef, currentLike + 1);
-        } else{
-            await set(likeRef, 1)
-        }
+        let currentLikes = snapshot.exists() ? snapshot.val() : 0;
+        currentLikes += 1;
+
+        await update(ref(database, `likes/${productId}`),{
+            count : currentLikes,
+            [`user/${userId}`] : true,
+        })
+
     } catch(error){
         console.error(error);
     }
