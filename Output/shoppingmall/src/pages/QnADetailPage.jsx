@@ -22,7 +22,7 @@ export default function QnADetailPage (){
         e.preventDefault();
 
         try {
-            await addComments(id, user, commentWrite);
+            await addComments(id, loginUser.displayName, commentWrite);
             setCommentWrite('')
             refetch();
         }catch(error){
