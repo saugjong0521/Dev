@@ -56,7 +56,9 @@ export default function QnADetailPage (){
 
                     <ul className="commentList">
                         {comments && comments.map((el) => (
-                            <li>{el.text}</li>
+                            <li key={el.id}>
+                                <p>{el.text}</p>
+                            </li>
                         ))}
                     </ul>
                 </form>
