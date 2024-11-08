@@ -349,3 +349,19 @@ export async function addLike (productId){
         console.error(error);
     }
 }
+
+// 좋아요 가져오기
+export async function getLike(productId){
+    const likeRef = ref(database, `like/${productId}`);
+    try{
+        const snapshot = await get(likeRef);
+        if(snapshot.exists()){
+            return snapshot.val()
+        } else{
+            return 0;
+        }
+    } catch(error){
+        console.error(error);
+        return 0;
+    }
+}
