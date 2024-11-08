@@ -20,9 +20,10 @@ export default function ProductReview({productId}){
     const handleReview = async () => {
         try {
             const user = 'user';
-            await addReview(productId, user, newReview);
+            const timestamp = Date.now();
+            await addReview(productId, user, newReview, timestamp);
             setNewReview('');
-            getReview(productId).then(setReview);
+            getReview(productId).then(setReview.sort((a,b)=>b.timestamp - a.timestamp));
         } catch(error){
             console.log(error);
         }
