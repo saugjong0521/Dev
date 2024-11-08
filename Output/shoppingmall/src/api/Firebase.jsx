@@ -378,6 +378,18 @@ export async function removeLike (productId, userId){
 }
 
 
+// 사용자가 좋아요 했는지 여부 확인
+export async function hasLike(productId, userId){
+    const userRef = ref(database, `like/${productId}/user/${userId}`)
+    try{
+        const snapshot = await get(userRef);
+        return snapshot.exists();
+    } catch(error){
+        console.error(error);
+    }
+}
+
+
 // 좋아요 가져오기
 export async function getLike(productId){
     const likeRef = ref(database, `like/${productId}`);
