@@ -32,6 +32,14 @@ const database = getDatabase(app);
 // 브라우저를 닫으면 로그인이 유지되지 않도록 설정
 setPersistence(auth, browserSessionPersistence).then(()=>{
     return
+    /*
+    firebase의 기본 설정은 브라우저를 닫아도 세션에 로그인 정보를 저장해서,
+    브라우저를 다시 실행하면 로그인이 되어 있다.
+
+    브라우저를 닫을 때에 로그아웃이 되도록 설정하려면
+    setPersistence(auth, browserSessionPersistence) 를 추가해서
+    브라우저가 닫힐때 로그인 정보가 없어지도록 해줘야 한다.
+    */
 })
 
 
