@@ -156,6 +156,7 @@
   },
   "active": "49abb90004e00981",
   "lastOpenFiles": [
+    "Output/shoppingmall/src/components/ProductReview.jsx",
     "Output/shoppingmall/src/pages/WritePage.jsx",
     "Output/shoppingmall/src/pages/QnADetailPage.jsx",
     "Output/shoppingmall/src/pages/QnA.jsx",
@@ -166,7 +167,6 @@
     "Output/shoppingmall/node_modules/swiper/modules/effect-coverflow.mjs",
     "Output/shoppingmall/node_modules/swiper/modules/a11y.mjs",
     "Output/shoppingmall/node_modules/swiper/modules/a11y.scss",
-    "Output/shoppingmall/node_modules/swiper/modules/a11y.min.mjs",
     "Output/shoppingmall/node_modules/swiper/README.md",
     "Output/shoppingmall/node_modules/@tanstack/react-query/build/codemods/src/v5/keep-previous-data/README.md",
     "Output/shoppingmall/node_modules/sockjs/node_modules/uuid/CONTRIBUTING.md",
