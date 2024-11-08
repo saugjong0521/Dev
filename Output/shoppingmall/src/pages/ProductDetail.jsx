@@ -51,6 +51,7 @@ export default function ProductDetail (){
         try{
             await addLike(id);
             getLike(id).then((likes)=>setLikes(likes));
+            setLiked(true);
         } catch(error){
             console.error(error)
         }
