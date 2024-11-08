@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom"
 import styled from "styled-components";
-import { addLike, formatCurrency, getLike, hasLike, removeLike } from "../api/Firebase";
+import { addLike, formatCurrency, getLike, hasLike, onUserState, removeLike } from "../api/Firebase";
 import { useEffect, useState } from "react";
 import UseCart from "../context/UseCart";
 import ProductReview from "../components/ProductReview";
@@ -38,6 +38,7 @@ export default function ProductDetail (){
 
     const [likes, setLikes] = useState(0);
     const [liked, setLiked] = useState(false); // 사용자가 좋아요 버튼을 눌렀는지 여부 체크
+    const [user,  setUser] = useState(null);
 
     useEffect(()=>{
         getLike(id).then((likes)=>{
@@ -47,17 +48,17 @@ export default function ProductDetail (){
             console.error(error)
         })
 
-        const auth = getAuth();
-        const user = auth.currentUser;
-        if(user){
-            hasLike(id, user.uid)
-            .then((liked)=>{
-                setLiked(liked)
-            })
-            .catch((error)=>{
-                console.error(error)
-            })
-        }
+        onUserState((currentUser) => {
+            console.log(currentUser)
+            setUser(currentUser);
+            if(currentUser) {
+                hasLike(id, currentUser.uid)
+                .then((liked) => {
+                    setLiked(liked)
+                })
+            }
+        })
+        
     },[id])
 
     const handleLike = async () => {
