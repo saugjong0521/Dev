@@ -4,7 +4,7 @@ import { addLike, formatCurrency, getLike } from "../api/Firebase";
 import { useEffect, useState } from "react";
 import UseCart from "../context/UseCart";
 import ProductReview from "../components/ProductReview";
-import { GoHeart } from "react-icons/go";
+import { GoHeart, GoHeartFill } from "react-icons/go";
 
 
 export default function ProductDetail (){
@@ -36,6 +36,7 @@ export default function ProductDetail (){
     }
 
     const [likes, setLikes] = useState(0);
+    const [liked, setLiked] = useState(false); // 사용자가 좋아요 버튼을 눌렀는지 여부 체크
 
     useEffect(()=>{
         getLike(id).then((likes)=>{
@@ -82,7 +83,7 @@ export default function ProductDetail (){
                     <div className="detailBtns">
                         <button className="cartBtn" onClick={handleCart}>장바구니</button>
                         <button className="buyBtn">구매하기</button>
-                        <button className="likeBtn" onClick={handleLike}>♡ {likes}</button>
+                        <button className="likeBtn" onClick={handleLike}><GoHeart /> {likes}</button>
                     </div>
                     {success && <p>{success}</p>}
                     
