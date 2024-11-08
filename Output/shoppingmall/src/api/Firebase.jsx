@@ -288,3 +288,14 @@ export async function addComments (boardId, user, text){
         text,
     })
 }
+
+// 게시글에 댓글 가져오기
+export async function getComments(boardId){
+    return get(ref(database, `/board/${boardId}/comments`))
+    .then((snapshot) => {
+        if(snapshot.exists()){
+            return Object.values(snapshot.val())
+        }
+        return []
+    })
+}
