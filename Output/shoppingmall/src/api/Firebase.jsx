@@ -337,13 +337,14 @@ export async function getReview(productId){
 // 좋아요 추가
 export async function addLike (productId, userId){
     const likeRef = ref(database, `like/${productId}/count`)
-    const userRef = ref(database, `likes/${productId}/user/${userId}`)
+    const userRef = ref(database, `like/${productId}/user/${userId}`)
+    
     try{
         const snapshot = await get(likeRef);
         let currentLikes = snapshot.exists() ? snapshot.val() : 0;
         currentLikes += 1;
 
-        await update(ref(database, `likes/${productId}`),{
+        await update(ref(database, `like/${productId}`),{
             count : currentLikes,
             [`user/${userId}`] : true,
         })
@@ -351,7 +352,31 @@ export async function addLike (productId, userId){
     } catch(error){
         console.error(error);
     }
+
 }
+
+
+// 좋아요 취소
+export async function removeLike (productId, userId){
+    const likeRef = ref(database, `like/${productId}/count`)
+    const userRef = ref(database, `like/${productId}/user/${userId}`)
+
+    try{
+        const snapshot = await get(likeRef)
+        let currentLikes = snapshot.exists() ? snapshot.val() : 0;
+        currentLikes = currentLikes > 0 ? currentLikes - 1 : 0;
+
+        await update(ref(database, `like/${productId}`),{
+            count : currentLikes
+        })
+        await remove(userRef);
+
+    } catch(error){
+        console.error(error);
+    }
+
+}
+
 
 // 좋아요 가져오기
 export async function getLike(productId){
