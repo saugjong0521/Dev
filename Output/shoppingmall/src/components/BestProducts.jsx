@@ -24,7 +24,8 @@ export default function BestProducts(){
                 //좋아요 수 기준으로 정렬해서 상위 상품만 출력
                 const bestProducts = likeProducts
                     .filter((product) => product.likes > 0)
-                    .sort((a,b)=>b.likes - a.likes); // 좋아요 기준 내림차순
+                    .sort((a,b)=>b.likes - a.likes) // 좋아요 기준 내림차순
+                    .slice(0, 10); // 10개만 출력
 
                     setProducts(bestProducts)
             } catch(error){
