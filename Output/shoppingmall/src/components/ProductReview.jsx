@@ -12,7 +12,7 @@ export default function ProductReview({productId}){
             const user = 'user';
             await addReview(productId, user, newReview);
             setNewReview('');
-            // getReview(productId)
+            getReview(productId).then(setReview);
         } catch(error){
             console.log(error);
         }
