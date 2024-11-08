@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { formatCurrency } from "../api/Firebase";
 import { useState } from "react";
 import UseCart from "../context/UseCart";
+import ProductReview from "../components/ProductReview";
 
 
 export default function ProductDetail (){
@@ -67,6 +68,7 @@ export default function ProductDetail (){
                     
                 </div>
             </DetailPage>
+            <ProductReview productId={id}/>
 
         </div>
         
