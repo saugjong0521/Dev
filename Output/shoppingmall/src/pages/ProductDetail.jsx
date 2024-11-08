@@ -63,11 +63,11 @@ export default function ProductDetail (){
     const handleLike = async () => {
         try{
             if(liked){
-                await removeLike(id);
+                await removeLike(id, user.uid);
                 setLikes((prev) => prev - 1)
                 setLiked(false);
             } else{
-                await addLike(id)
+                await addLike(id, user.uid)
                 setLikes((prev) => prev + 1)
                 setLiked(true);
             }
