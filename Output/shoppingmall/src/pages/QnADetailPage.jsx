@@ -29,7 +29,7 @@ export default function QnADetailPage (){
         }
     }
 
-    const {data: comments} = useQuery({
+    const {data: comments, refetch } = useQuery({
         queryKey : [`/board/${id}/comments`],
         queryFn : ()=> getComments(id)
     })
