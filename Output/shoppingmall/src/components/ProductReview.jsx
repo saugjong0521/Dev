@@ -10,7 +10,7 @@ export default function ProductReview({productId}){
     useEffect(()=> {
         getReview(productId)
         .then((review)=>{
-            setReview(review.sort((a,b)=>b.timestamp))
+            setReview(review.sort((a,b)=>b.timestamp - a.timestamp))
         })
         .catch((error)=>{
             console.error(error)
