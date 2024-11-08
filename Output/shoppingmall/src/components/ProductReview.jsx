@@ -15,6 +15,13 @@ export default function ProductReview({productId}){
                     <li>{el.text}</li>
                 ))}
             </ul>
+
+            <input 
+                type="text"
+                value={newReview}
+                onChange={(e) => setNewReview(e.target.value)}
+            />
+            <button onClick={handleReview}>작성하기</button>
         </div>
 
     )
