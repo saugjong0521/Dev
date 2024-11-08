@@ -1,19 +1,32 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { onUserState } from "../api/Firebase";
+import { addComments, onUserState } from "../api/Firebase";
 
 
 export default function QnADetailPage (){
 
     const state = useLocation().state;
     const {id, user, date, title, text} = state;
+
     const [loginUser, setLoginUser] = useState();
+    const [comments, setComments] = useState('');
 
     useEffect(() => {
         onUserState((user) => {
             setLoginUser(user)
         })
-    })
+    },[])
+
+    const handleComments = async (e) => {
+        e.preventDefault();
+
+        try {
+            await addComments(id, user, comments);
+            setComments('')
+        }catch(error){
+            console.error(error)
+        }
+    }
 
     return(
 
@@ -22,6 +35,20 @@ export default function QnADetailPage (){
                 <strong>{title}</strong>
                 <p>{text}</p>
                 <p>{date}</p>
+            </div>
+            
+            <div className="commentWrap">
+                <form onSubmit={handleComments}>
+                    {loginUser == null ?
+                    <input type="text" placeholder="로그인 후 작성할 수 있습니다." disabled/>
+                    :
+                    <input type="text" placeholder="댓글을 작성해 주세요" value={comments}
+                    onChange={(e) => setComments(e.target.value)}/>
+                    }
+
+                    <button type="submit">작성하기</button>
+
+                </form>
             </div>
         </div>
 
