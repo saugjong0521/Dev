@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { addComments, onUserState } from "../api/Firebase";
+import { addComments, getComments, onUserState } from "../api/Firebase";
 import { useQuery } from "@tanstack/react-query";
 
 
@@ -29,7 +29,10 @@ export default function QnADetailPage (){
         }
     }
 
-    const {data: comments} = useQuery
+    const {data: comments} = useQuery({
+        queryKey : [`/board/${id}/comments`],
+        queryFn : ()=> getComments(id)
+    })
 
     return(
 
