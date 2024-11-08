@@ -4,6 +4,7 @@ import { addLike, formatCurrency, getLike } from "../api/Firebase";
 import { useEffect, useState } from "react";
 import UseCart from "../context/UseCart";
 import ProductReview from "../components/ProductReview";
+import { GoHeart } from "react-icons/go";
 
 
 export default function ProductDetail (){
