@@ -434,5 +434,6 @@ export async function getAllProduct(){
         }
     } catch(error){
         console.error(error)
+        return []
     }
 }
