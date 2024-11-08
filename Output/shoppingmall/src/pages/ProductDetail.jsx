@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom"
 import styled from "styled-components";
-import { addLike, formatCurrency, getLike } from "../api/Firebase";
+import { addLike, formatCurrency, getLike, hasLike, removeLike } from "../api/Firebase";
 import { useEffect, useState } from "react";
 import UseCart from "../context/UseCart";
 import ProductReview from "../components/ProductReview";
@@ -62,9 +62,9 @@ export default function ProductDetail (){
 
     const handleLike = async () => {
         try{
-            await addLike(id);
-            getLike(id).then((likes)=>setLikes(likes));
-            setLiked(true);
+            if(liked){
+                await removeLike(id);
+            }
         } catch(error){
             console.error(error)
         }
