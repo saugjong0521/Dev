@@ -268,7 +268,7 @@ export async function addBoard(user, date, title, text){
     return set(ref(database, `/board/${id}`), postData)
 }
 
-
+// 게시글 가져오기
 export async function getBoard(){
     return get(ref(database, `/board`))
     .then((snapshot)=>{
@@ -276,5 +276,15 @@ export async function getBoard(){
             return Object.values(snapshot.val())
         }
         return []
+    })
+}
+
+// 게시글에 댓글 저장
+export async function addComments (boardId, user, text){
+    const id = uuid();
+    return set(ref(database, `/board/${boardId}/comments/${id}`),{
+        id,
+        user,
+        text,
     })
 }
