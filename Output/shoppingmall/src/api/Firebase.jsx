@@ -392,13 +392,13 @@ export async function hasLike(productId, userId){
 
 // 좋아요 가져오기
 export async function getLike(productId){
-    const likeRef = ref(database, `like/${productId}`);
+    const likeRef = ref(database, `like/${productId}/count`);
     try{
         const snapshot = await get(likeRef);
         if(snapshot.exists()){
             return snapshot.val()
         } else{
-            return 0;
+            return snapshot.exists() ? snapshot.val() : 0;
         }
     } catch(error){
         console.error(error);
