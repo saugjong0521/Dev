@@ -4,8 +4,8 @@ import { Autoplay, EffectFade } from "swiper/modules";
 import 'swiper/css/effect-fade'
 
 const sliderWrap = {
-    width: '100px',
-    height: '100px',
+    width: '200px',
+    height: '300px',
 }
 
 export default function CategorySlider ({imgs}){
