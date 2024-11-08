@@ -48,6 +48,7 @@ export default function ProductDetail (){
     const handleLike = async () => {
         try{
             await addLike(id);
+            getLike(id).then((likes)=>setLikes(likes));
         } catch(error){
             console.error(error)
         }
@@ -80,7 +81,7 @@ export default function ProductDetail (){
                     <div className="detailBtns">
                         <button className="cartBtn" onClick={handleCart}>장바구니</button>
                         <button className="buyBtn">구매하기</button>
-                        <button className="likeBtn" onClick={handleLike}>♡</button>
+                        <button className="likeBtn" onClick={handleLike}>♡ {likes}</button>
                     </div>
                     {success && <p>{success}</p>}
                     
