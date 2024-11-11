@@ -32,12 +32,27 @@ export default function ProductEdit(){
         })
     },[id])
 
-    console.log(formData)
-    console.log(product)
+    // console.log(formData)
+    // console.log(product)
+
+    const handleEditItem = (e) => {
+        const {name, value} = e.target.value;
+        setFormData(prev => ({...prev, [name]: value}))
+    }
 
     return(
         <div className="container">
             <h2>상품 수정</h2>
+            <form>
+                <input
+                    type="text"
+                    name="title"
+                    value={formData.title}
+                    onChange={handleEditItem}
+                    placeholder="상품 이름을 입력하세요"
+                />
+
+            </form>
         </div>
     )
 }
