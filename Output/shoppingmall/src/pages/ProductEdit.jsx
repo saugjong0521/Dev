@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
 import { getProductById, getProducts } from "../api/Firebase";
+import ProductAdd from "./ProductAdd";
 
 
 export default function ProductEdit(){
@@ -20,9 +21,9 @@ export default function ProductEdit(){
 
     return(
         <div className="container">
-            product && {
-                <UploadProduct initialProduct={product} isEdit={true} onSave={}/>
-            }
+            product && (
+                <ProductAdd initialProduct={product} isEdit={true} />
+            )
         </div>
     )
 }
