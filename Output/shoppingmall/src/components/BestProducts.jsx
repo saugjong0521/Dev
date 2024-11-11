@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getAllProduct, getLike } from "../api/Firebase";
 import DetailPageEvent from "./DetailPageEvent";
+import styled from "styled-components";
 
 
 export default function BestProducts(){
@@ -39,12 +40,23 @@ export default function BestProducts(){
     return(
         <div className="container">
             <h2>인기 상품</h2>
-            <ul>
+            <BestItemList>
                 {products.map((el)=>(
                     <DetailPageEvent product={el}/>    
                 ))}
-            </ul>
+            </BestItemList>
         </div>
     )
 
 }
+
+const BestItemList = styled.ul`
+    display: flex;
+    gap: 20px 5%;
+    flex-wrap: wrap;
+    width: 100%;
+    li {
+        flex-shrink: 0;
+        width: 30%;
+    }
+`
