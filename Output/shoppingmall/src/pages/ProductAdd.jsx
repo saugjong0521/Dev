@@ -187,7 +187,7 @@ export default function ProductAdd({initialProduct, isEdit = false, onSave}){
                     />
 
                     <button disabled={isLoading}>
-                        {isLoading ? '업로드 중' : '제품 등록하기'}
+                        {isLoading ? '업로드 중' : isEdit ? '수정 완료' : '제품 등록하기'}
                     </button>
 
                     {success && (
