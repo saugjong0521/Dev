@@ -30,10 +30,10 @@ export default function ProductEdit(){
                 colors: data.colors || [],
             })
         })
-    })
+    },[id])
 
     console.log(formData)
-    console.log()
+    console.log(product)
 
     return(
         <div className="container">
