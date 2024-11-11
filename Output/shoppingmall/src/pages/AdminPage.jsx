@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react"
 import { DeleteItem, getProducts } from "../api/Firebase";
+import { useNavigate } from "react-router-dom";
 
 
 export default function AdminPage (){
 
+    const navigate = useNavigate()
     const [products, setProducts] = useState([]);
+
     useEffect(() => {
         getProducts().then(setProducts)
         // 전체 상품 가져오기
@@ -47,6 +50,7 @@ export default function AdminPage (){
                         <li key={el.id}>
                             {el.title}
                             <button onClick={()=>handleDeleteItem(el.id)}>삭제</button>
+                            <button onClick={() => handleEditItem(el.id)}>상품 수정</button>
                         </li>
                     ))}
                 </ul>
