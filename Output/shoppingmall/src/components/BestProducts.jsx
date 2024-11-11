@@ -42,8 +42,9 @@ export default function BestProducts(){
             <h2>인기 상품</h2>
             <BestItemList>
                 {products.map((el)=>(
-                    <DetailPageEvent product={el}/>    
-                ))}
+                    <li key={el.id}>
+                    <DetailPageEvent product={el} />
+                </li>                ))}
             </BestItemList>
         </div>
     )
