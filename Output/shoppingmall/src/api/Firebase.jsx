@@ -78,7 +78,7 @@ export function onUserState(callback) {
         if (user) {
             try {
                 const updateUser = await adminUser(user);
-                console.log('Updated User:', updateUser); // 업데이트된 user 확인용 로그
+                //console.log('Updated User:', updateUser); // 업데이트된 user 확인용 로그
                 callback(updateUser);
             } catch (error) {
                 console.error(error);

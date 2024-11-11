@@ -1,4 +1,4 @@
-import { useContext, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { CategoryContext } from "../context/CategoryContext";
 import styled from "styled-components";
 import { uploadImg } from "../api/ImgUpload";
