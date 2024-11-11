@@ -85,6 +85,15 @@ export default function ProductAdd({initialProduct, isEdit = false, onSave}){
         }
     }
 
+
+    //11.11추가 (edititem)
+    useEffect(() => {
+        if(isEdit && initialProduct){
+            setProduct(initialProduct)
+        }
+    }, [isEdit, initialProduct])
+
+
     return(
         <Container>
             <h1>상품 업로드</h1>
