@@ -15,7 +15,7 @@ export default function AdminPage (){
         const confirmDelete = window.confirm('상품을 삭제하시겠습니까?')
         if(confirmDelete){
             await DeleteItem(id);
-            set
+            setProducts(products.filter(product => product.id !== id));
         }
     }
 
