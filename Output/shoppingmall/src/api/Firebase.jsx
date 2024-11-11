@@ -437,3 +437,20 @@ export async function getAllProduct(){
         return []
     }
 }
+
+
+// 상품 제거하기
+export async function DeleteItem (productId){
+    try{
+        const productRef = ref(database, `products/${productId}`);
+        await remove(productRef)
+        return {success: true};
+    } catch(error){
+        console.error('상품 삭제에 오류가 생겼습니다', error);
+        return {error};
+    }
+}
+
+
+
+// 상품 수정하기
