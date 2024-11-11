@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
-import { getProductById, getProducts } from "../api/Firebase";
+import { getProductById, getProducts, updateProduct } from "../api/Firebase";
 import ProductAdd from "./ProductAdd";
 
 
@@ -18,6 +18,14 @@ export default function ProductEdit(){
     },[id])
 
     console.log(product)
+
+    const handleSave = async(item) => {
+        try{
+            await updateProduct(id, item);
+        } catch(error){
+            console.error(error)
+        }
+    }
 
     return(
         <div className="container">
