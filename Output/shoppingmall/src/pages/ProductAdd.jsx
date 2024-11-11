@@ -2,7 +2,7 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { CategoryContext } from "../context/CategoryContext";
 import styled from "styled-components";
 import { uploadImg } from "../api/ImgUpload";
-import { addProducts } from "../api/Firebase";
+import { addProducts, updateProduct } from "../api/Firebase";
 
 
 export default function ProductAdd({initialProduct, isEdit = false, onSave}){
@@ -58,9 +58,15 @@ export default function ProductAdd({initialProduct, isEdit = false, onSave}){
     const handleUpload = async (e) => {
         e.preventDefault();
         try{
-            const url = await uploadImg(file);
-            await addProducts(product, url)
-            setSuccess('업로드가 완료 되었습니다.')
+            const url = file ? await uploadImg(file) : initialProduct.img // 수정시 기본 이미지
+            if(isEdit){
+                await updateProduct(initialProduct.id,{...product, img : url})
+                setSuccess('수정이 완료되었습니다.')
+            } else{
+                await addProducts(product, url)
+                setSuccess('업로드가 완료 되었습니다.')
+            }
+
             setTimeout(()=>{
                 setSuccess(null)
             },2000)
