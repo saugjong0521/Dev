@@ -19,6 +19,7 @@ import QnA from './pages/QnA';
 import QnADetailPage from './pages/QnADetailPage';
 import AdminPage from './pages/AdminPage';
 import ProductEdit from './pages/ProductEdit';
+import ProductAdd from './pages/ProductAdd';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -63,6 +64,7 @@ const routes = createBrowserRouter([
       { path: '/board/write', element: <WritePage/> },
       { path: '/board/qna/:id', element: <QnADetailPage/> },
       { path: '/admin/edit/:id', element: <ProductEdit/> },
+      { path: '/admin/add', element: <ProductAdd/> },
       { path: '/admin', element: 
       <ProtectRouter checkAdmin>
                 <AdminPage/>
