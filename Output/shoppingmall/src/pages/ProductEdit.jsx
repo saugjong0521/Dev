@@ -20,9 +20,9 @@ export default function ProductEdit(){
 
     return(
         <div className="container">
-            {/* product && {
-                <UploadProduct initialProduct={product} isEdit={true} onSave={handleSave}/>
-            } */}
+            product && {
+                <UploadProduct initialProduct={product} isEdit={true} onSave={}/>
+            }
         </div>
     )
 }
