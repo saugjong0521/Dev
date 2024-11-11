@@ -464,3 +464,20 @@ export async function updateProduct(productId){
         return{error}
     }
 }
+
+
+// id의 상품 가져오기
+export async function getProductById(productId){
+    try{
+        const productRef = ref(database, `product/${productId}`);
+        const snapshot = await get(productRef)
+        if(snapshot.exists()){
+            return snapshot.val()
+        } else{
+            throw new Error('해당 제품이 존재하지 않습니다.')   // 제품이 없는경우
+        }
+    } catch(error){
+        console.error('제품을 가져오는중 오류가 발생했습니다.', error)  // 제품을 가져오다 오류가 발생하는 경우
+        return null;
+    }
+}
