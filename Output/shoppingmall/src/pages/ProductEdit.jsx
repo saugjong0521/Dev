@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
+import { getProducts } from "../api/Firebase";
 
 
 export default function ProductEdit(){
@@ -12,9 +13,27 @@ export default function ProductEdit(){
         title: '',
         price: '',
         size: '',
+        category: '',
         description: '',
         colors: [],
     });
+
+    useEffect(()=>{
+        getProducts(id).then(data => {
+            setProduct(data)
+            setFormData({
+                title: data.title || '',
+                price: data.price || '',
+                size: data.size || '',
+                category: data.category || '',
+                description: data.description || '',
+                colors: data.colors || [],
+            })
+        })
+    })
+
+    console.log(formData)
+    console.log()
 
     return(
         <div className="container">
