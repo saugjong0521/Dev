@@ -58,8 +58,8 @@ export default function ProductAdd({initialProduct, isEdit = false, onSave}){
     const handleUpload = async (e) => {
         e.preventDefault();
         try{
-            const url = file ? await uploadImg(file) : initialProduct.img // 수정시 기본 이미지
-            if(isEdit){
+            const url = file ? await uploadImg(file) : initialProduct.img // 수정시 기본 이미지, 11.11추가 조건부 이미지 수정 editItem
+            if(isEdit){ // editItem 분기 추가
                 await updateProduct(initialProduct.id,{...product, img : url})
                 setSuccess('수정이 완료되었습니다.')
             } else{
