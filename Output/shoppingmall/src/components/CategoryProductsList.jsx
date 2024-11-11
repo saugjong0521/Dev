@@ -48,7 +48,7 @@ export default function CategoryProductsList ({category, product}){
 
             <SortBtn sortName={sortName} sortPrice={sortPrice}/>
 
-            <DetailListCSS className="productList">
+            <DetailListCSS>
                 {sortProducts.map((el) => (
                     <li key={el.id}>
                         <DetailPageEvent product={el}/>
