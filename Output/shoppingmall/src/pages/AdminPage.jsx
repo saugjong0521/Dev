@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { DeleteItem, getProducts } from "../api/Firebase";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 export default function AdminPage (){
@@ -49,6 +49,7 @@ export default function AdminPage (){
     return(
         <div className="container">
             <h2>관리</h2>
+            <Link to='/admin/upload'>상품 업로드</Link>
             <div className="adminList">
                 <ul>
                     {products.map(el => (
