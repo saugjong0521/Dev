@@ -16,6 +16,8 @@ export default function ProductEdit(){
         })
     },[id])
 
+    console.log(product)
+
     return(
         <div className="container">
             {/* product && {
