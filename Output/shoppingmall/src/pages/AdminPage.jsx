@@ -12,7 +12,7 @@ export default function AdminPage (){
 
     //상품 삭제
     const handleDeleteItem = (id) => {
-        
+        const confirmDelete = window.confirm('상품을 삭제하시겠습니까?')
     }
 
     return(
