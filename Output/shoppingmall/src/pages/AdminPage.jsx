@@ -27,7 +27,7 @@ export default function AdminPage (){
                     {products.map(el => (
                         <li key={el.id}>
                             {el.title}
-                            <button onClick={handleDeleteItem(el.id)}>삭제</button>
+                            <button onClick={()=>handleDeleteItem(el.id)}>삭제</button>
                         </li>
                     ))}
                 </ul>
