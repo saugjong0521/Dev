@@ -43,8 +43,9 @@ export default function BestProducts(){
             <BestItemList>
                 {products.map((el)=>(
                     <li key={el.id}>
-                    <DetailPageEvent product={el} />
-                </li>                ))}
+                        <DetailPageEvent product={el} />
+                    </li>
+                ))}
             </BestItemList>
         </div>
     )
@@ -58,6 +59,6 @@ const BestItemList = styled.ul`
     width: 100%;
     li {
         flex-shrink: 0;
-        width: 30%;
+        width: 45%;
     }
 `
