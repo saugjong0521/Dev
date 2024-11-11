@@ -37,7 +37,7 @@ export default function Header (){
             <Link to='/board/qna'>QnA</Link>
             <div className="rightMenu">
                 {user && user.isAdmin &&
-                    <Link to='/admin'>관리</Link>
+                    <Link to='/admin'>관리자</Link>
                 }
                 {user ? (
                     <>

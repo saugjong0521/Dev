@@ -3,9 +3,9 @@
 export default function AdminPage (){
 
     return(
-        <>
-            <h1>관리자 페이지</h1>
-        </>
+        <div className="container">
+            <h1>관리</h1>
+        </div>
     )
 
 }
