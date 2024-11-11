@@ -17,6 +17,7 @@ import Search from './pages/Search';
 import WritePage from './pages/WritePage';
 import QnA from './pages/QnA';
 import QnADetailPage from './pages/QnADetailPage';
+import AdminPage from './pages/AdminPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -62,7 +63,7 @@ const routes = createBrowserRouter([
       { path: '/board/qna/:id', element: <QnADetailPage/> },
       { path: '/admin', element: 
       <ProtectRouter checkAdmin>
-                <AdminSection/>
+                <AdminPage/>
       </ProtectRouter>
     },
       // children 은 중첩구조가 가능
