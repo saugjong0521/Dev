@@ -41,6 +41,11 @@ export default function AdminPage (){
     async 비동기데이터 // await 비동기데이터가 가져와지기 전까지 기다리게 함
     */
 
+
+    const handleEditItem = (id) => {
+        navigate(`/admin/edit/${id}`)
+    }
+
     return(
         <div className="container">
             <h2>관리</h2>
@@ -49,7 +54,7 @@ export default function AdminPage (){
                     {products.map(el => (
                         <li key={el.id}>
                             {el.title}
-                            <button onClick={()=>handleDeleteItem(el.id)}>삭제</button>
+                            <button onClick={() => handleDeleteItem(el.id)}>삭제</button>
                             <button onClick={() => handleEditItem(el.id)}>상품 수정</button>
                         </li>
                     ))}
