@@ -22,7 +22,7 @@ export default function ProductEdit(){
     return(
         <div className="container">
             {product && (
-                <ProductAdd initialProduct={product} isEdit={true} />
+                <ProductAdd initialProduct={product} isEdit={true} onSave={handleSave} />
             )}
         </div>
     )
