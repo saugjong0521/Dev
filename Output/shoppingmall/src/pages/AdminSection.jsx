@@ -5,7 +5,7 @@ import { uploadImg } from "../api/ImgUpload";
 import { addProducts } from "../api/Firebase";
 
 
-export default function AdminSection(){
+export default function ProductAdd(){
 
     const [file, setFile] = useState(null); // 파일 업로드
     const [isLoading, setIsLoading] = useState(false);
