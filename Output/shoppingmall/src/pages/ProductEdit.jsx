@@ -9,50 +9,10 @@ export default function ProductEdit(){
     console.log(id)
 
     const [product, setProduct] = useState(null);
-    const [formData, setFormData] = useState({
-        title: '',
-        price: '',
-        size: '',
-        category: '',
-        description: '',
-        colors: [],
-    });
-
-    useEffect(()=>{
-        getProducts(id).then(data => {
-            setProduct(data)
-            setFormData({
-                title: data.title || '',
-                price: data.price || '',
-                size: data.size || '',
-                category: data.category || '',
-                description: data.description || '',
-                colors: data.colors || [],
-            })
-        })
-    },[id])
-
-    // console.log(formData)
-    // console.log(product)
-
-    const handleEditItem = (e) => {
-        const {name, value} = e.target.value;
-        setFormData(prev => ({...prev, [name]: value}))
-    }
 
     return(
         <div className="container">
-            <h2>상품 수정</h2>
-            <form>
-                <input
-                    type="text"
-                    name="title"
-                    value={formData.title}
-                    onChange={handleEditItem}
-                    placeholder="상품 이름을 입력하세요"
-                />
-
-            </form>
+            product && {}
         </div>
     )
 }
