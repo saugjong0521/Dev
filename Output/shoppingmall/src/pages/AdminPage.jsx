@@ -20,10 +20,10 @@ export default function AdminPage (){
     }
 
     // async를 사용하지 않는 옛날 방법
-    // const handleProductDelete = (id) => {
+    // const handleDeleteItem = (id) => {
     //     const confirmDelete = window.confirm('상품을 삭제하시겠습니까?')
     //     if(confirmDelete){
-    //         deleteProduct(id).then(() => {
+    //         DeleteItem(id).then(() => {
     //             setProducts(products.filter(product => product.id !== id))
     //         }).catch((error)=>{
     //             console.error(error)
