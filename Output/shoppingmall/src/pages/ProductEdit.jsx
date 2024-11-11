@@ -6,7 +6,7 @@ import { getProductById, getProducts } from "../api/Firebase";
 export default function ProductEdit(){
 
     const {id} = useParams()//url에 있는 상품 id받아오기
-    console.log(id)
+    // console.log(id)
 
     const [product, setProduct] = useState(null);
 

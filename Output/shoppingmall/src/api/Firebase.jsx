@@ -469,7 +469,7 @@ export async function updateProduct(productId){
 // id의 상품 가져오기
 export async function getProductById(productId){
     try{
-        const productRef = ref(database, `product/${productId}`);
+        const productRef = ref(database, `products/${productId}`);
         const snapshot = await get(productRef)
         if(snapshot.exists()){
             return snapshot.val()
