@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { DeleteItem, getProducts } from "../api/Firebase";
 import { Link, useNavigate } from "react-router-dom";
+import styled from "styled-components";
 
 
 export default function AdminPage (){
@@ -50,7 +51,7 @@ export default function AdminPage (){
         <div className="container">
             <h2>관리</h2>
             <button><Link to='/admin/upload'>상품 업로드</Link></button>
-            <div className="adminList">
+            <AdminList>
             <h2>업로드된 상품 관리</h2>
                 <ul>
                     {products.map(el => (
@@ -61,8 +62,14 @@ export default function AdminPage (){
                         </li>
                     ))}
                 </ul>
-            </div>
+            </AdminList>
         </div>
     )
 
 }
+
+const AdminList = styled.div`
+    display: flex;
+    margin-top: 20px;
+    
+`
