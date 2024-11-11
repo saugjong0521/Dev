@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "788ca38c36531933",
+        "id": "d093cb54c6be0ab0",
         "type": "tabs",
         "children": [
           {
-            "id": "49abb90004e00981",
+            "id": "0a8b01e5bc966a9e",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -154,7 +154,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "49abb90004e00981",
+  "active": "0a8b01e5bc966a9e",
   "lastOpenFiles": [
     "Output/shoppingmall/src/components/BestProducts.jsx",
     "Output/shoppingmall/public.zip",
