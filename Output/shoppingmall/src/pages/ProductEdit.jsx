@@ -8,7 +8,13 @@ export default function ProductEdit(){
     console.log(id)
 
     const [product, setProduct] = useState(null);
-    const [formData, setFormData] = useState({title});
+    const [formData, setFormData] = useState({
+        title: '',
+        price: '',
+        size: '',
+        description: '',
+        colors: [],
+    });
 
     return(
         <div className="container">
