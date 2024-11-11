@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { getProducts } from "../api/Firebase";
+import { DeleteItem, getProducts } from "../api/Firebase";
 
 
 export default function AdminPage (){
@@ -11,8 +11,12 @@ export default function AdminPage (){
     },[])
 
     //상품 삭제
-    const handleDeleteItem = (id) => {
+    const handleDeleteItem = async (id) => {
         const confirmDelete = window.confirm('상품을 삭제하시겠습니까?')
+        if(confirmDelete){
+            await DeleteItem(id);
+            set
+        }
     }
 
     return(
