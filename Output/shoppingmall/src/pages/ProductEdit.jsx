@@ -23,7 +23,7 @@ export default function ProductEdit(){
         try{
             await updateProduct(id, item);
         } catch(error){
-            console.error(error)
+            console.error('제품 수정 오류', error)
         }
     }
 

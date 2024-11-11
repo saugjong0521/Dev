@@ -454,10 +454,10 @@ export async function DeleteItem (productId){
 
 
 // 상품 수정하기
-export async function updateProduct(productId){
+export async function updateProduct(productId, item){
     try{
         const productRef = ref(database, `products/${productId}`)
-        await update(productRef)
+        await update(productRef, item)
         return {success: true};
     } catch(error){
         console.error('상품 수정에 오류가 발생했습니다.', error)
