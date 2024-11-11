@@ -71,5 +71,10 @@ export default function AdminPage (){
 const AdminList = styled.div`
     display: flex;
     margin-top: 20px;
-    
+    flex-direction: column;
+    ul{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 `
