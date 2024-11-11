@@ -54,7 +54,7 @@ export default function BestProducts(){
 
 const BestItemList = styled.ul`
     display: flex;
-    gap: 20px 5%;
+    gap: 20px 10%;
     flex-wrap: wrap;
     width: 100%;
     li {
