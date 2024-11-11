@@ -62,7 +62,7 @@ const routes = createBrowserRouter([
       { path: '/board/qna', element: <QnA/> },
       { path: '/board/write', element: <WritePage/> },
       { path: '/board/qna/:id', element: <QnADetailPage/> },
-      { path: '/admin/product/edit/:id', element: <ProductEdit/> },
+      { path: '/admin/edit/:id', element: <ProductEdit/> },
       { path: '/admin', element: 
       <ProtectRouter checkAdmin>
                 <AdminPage/>
