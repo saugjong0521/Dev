@@ -13,7 +13,15 @@ export default function AdminPage (){
     return(
         <div className="container">
             <h2>관리</h2>
-            <div className="adminList"></div>
+            <div className="adminList">
+                <ul>
+                    {products.map(el) => (
+                        <li key={el.id}>
+                        {el.name}
+                        </li>
+                    )}
+                </ul>
+            </div>
         </div>
     )
 
