@@ -10,6 +10,11 @@ export default function AdminPage (){
         // 전체 상품 가져오기
     },[])
 
+    //상품 삭제
+    const handleDeleteItem = (id) => {
+        
+    }
+
     return(
         <div className="container">
             <h2>관리</h2>
