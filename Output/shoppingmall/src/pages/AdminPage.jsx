@@ -8,18 +8,18 @@ export default function AdminPage (){
     useEffect(() => {
         getProducts().then(setProducts)
         // 전체 상품 가져오기
-    })
+    },[])
 
     return(
         <div className="container">
             <h2>관리</h2>
             <div className="adminList">
                 <ul>
-                    {products.map(el) => (
+                    {products.map(el => (
                         <li key={el.id}>
-                        {el.name}
+                            {el.title}
                         </li>
-                    )}
+                    ))}
                 </ul>
             </div>
         </div>
