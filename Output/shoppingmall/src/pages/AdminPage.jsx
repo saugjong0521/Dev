@@ -49,8 +49,9 @@ export default function AdminPage (){
     return(
         <div className="container">
             <h2>관리</h2>
-            <Link to='/admin/upload'>상품 업로드</Link>
+            <button><Link to='/admin/upload'>상품 업로드</Link></button>
             <div className="adminList">
+            <h2>업로드된 상품 관리</h2>
                 <ul>
                     {products.map(el => (
                         <li key={el.id}>
