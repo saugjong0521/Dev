@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, Navigate, RouterProvider, useLocation, useNavigate } from 'react-router-dom';
 import NotFound from './pages/NotFound';
 import Login from './pages/Login';
-import AdminSection from './pages/AdminSection';
+import AdminSection from './pages/ProductAdd';
 import { AuthContextProvider, useAuthContext } from './context/AuthContext';
 import CategoryPages from './pages/CategoryPages';
 import ProductDetail from './pages/ProductDetail';
@@ -62,7 +62,7 @@ const routes = createBrowserRouter([
       { path: '/board/qna', element: <QnA/> },
       { path: '/board/write', element: <WritePage/> },
       { path: '/board/qna/:id', element: <QnADetailPage/> },
-      { path: '/admin/edit', element: <ProductEdit/> },
+      { path: '/admin/product/edit/:id', element: <ProductEdit/> },
       { path: '/admin', element: 
       <ProtectRouter checkAdmin>
                 <AdminPage/>
