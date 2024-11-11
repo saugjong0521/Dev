@@ -49,7 +49,7 @@ export default function ProductEdit(){
                     name="title"
                     value={formData.title}
                     onChange={handleEditItem}
-                    placeholder="상품 이름을 입력하세요"
+                    defaultValue="상품 이름을 입력하세요"
                 />
 
             </form>
