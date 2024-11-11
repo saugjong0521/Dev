@@ -21,9 +21,9 @@ export default function ProductEdit(){
 
     return(
         <div className="container">
-            product && (
+            {product && (
                 <ProductAdd initialProduct={product} isEdit={true} />
-            )
+            )}
         </div>
     )
 }
