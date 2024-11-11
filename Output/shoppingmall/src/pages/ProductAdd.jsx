@@ -2,7 +2,7 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { CategoryContext } from "../context/CategoryContext";
 import styled from "styled-components";
 import { uploadImg } from "../api/ImgUpload";
-import { addProducts, updateProduct } from "../api/Firebase";
+import { addProducts } from "../api/Firebase";
 
 
 export default function ProductAdd({initialProduct, isEdit = false, onSave}){
@@ -57,20 +57,14 @@ export default function ProductAdd({initialProduct, isEdit = false, onSave}){
     // handleUpload
     const handleUpload = async (e) => {
         e.preventDefault();
-        setIsLoading(true); // 로딩 상태 시작
-        try {
-            let url = file ? await uploadImg(file) : initialProduct.img; // 수정 시 기존 이미지 사용
-            if (isEdit) {
-                await updateProduct(initialProduct.id, { ...product, img: url }); // 수정 로직
-                setSuccess('수정이 완료되었습니다.');
-            } else {
-                await addProducts(product, url); // 추가 로직
-                setSuccess('업로드가 완료되었습니다.');
-            }
-            setTimeout(() => {
-                setSuccess(null);
-            }, 2000);
-            setFile(null);
+        try{
+            const url = await uploadImg(file);
+            await addProducts(product, url)
+            setSuccess('업로드가 완료 되었습니다.')
+            setTimeout(()=>{
+                setSuccess(null)
+            },2000)
+            setFile(null)
             setProduct({
                 title: '',
                 price: '',
@@ -78,16 +72,16 @@ export default function ProductAdd({initialProduct, isEdit = false, onSave}){
                 category: '',
                 description: '',
                 colors: [],
-            });
+            })
 
-            if (fileRef.current) {
+            if(fileRef.current){
                 fileRef.current.value = '';
             }
-        } catch (error) {
-            console.error(error);
-            setError('업로드에 실패했습니다.');
-        } finally {
-            setIsLoading(false); // 로딩 상태 종료
+        }catch(error){
+            console.error(error)
+            setError('업로드에 실패했습니다.')
+        }finally{
+            setIsLoading(false)
         }
     }
 
