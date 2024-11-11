@@ -446,7 +446,7 @@ export async function DeleteItem (productId){
         await remove(productRef)
         return {success: true};
     } catch(error){
-        console.error('상품 삭제에 오류가 생겼습니다', error);
+        console.error('상품 삭제에 오류가 발생했습니다', error);
         return {error};
     }
 }
@@ -454,3 +454,13 @@ export async function DeleteItem (productId){
 
 
 // 상품 수정하기
+export async function updateProduct(productId){
+    try{
+        const productRef = ref(database, `products/${productId}`)
+        await update(productRef)
+        return {success: true};
+    } catch(error){
+        console.error('상품 수정에 오류가 발생했습니다.', error)
+        return{error}
+    }
+}
