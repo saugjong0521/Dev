@@ -116,13 +116,16 @@ export default function AdminPage (){
                         리뷰
                 </TabBtn>
             </TabButtonContainer>
-            <h2>관리</h2>
-            <button><Link to='/admin/upload'>상품 업로드</Link></button>
+            {activeTab === 'products'&& (
+                <div className="tabList">
 
-            <ManageBox>
-                <AdminList>
+<h2>관리</h2>
+<button><Link to='/admin/upload'>상품 업로드</Link></button>
+
                 <h2>업로드된 상품 관리</h2>
                 <label htmlFor="categorySelect">카테고리별 상품 보기</label>
+
+                <AdminList>
                 <DropCategoryList>
                     <DropDownBtn onClick={()=>setIsDrop(!isDrop)}>
                         {selectCategory || '전체'}
@@ -147,8 +150,13 @@ export default function AdminPage (){
                             </li>
                         ))}
                     </ul>
+
+                </div>
                 </AdminList>
 
+            )}
+
+            {activeTab === 'reviews'&&(
                 <ReviewList>
                 <h2>상품 리뷰</h2>
                 {Object.keys(review).map(productId => (
@@ -165,25 +173,19 @@ export default function AdminPage (){
                     </div>
                 ))}
                 </ReviewList>
-            </ManageBox>
-            
-                    
+            )}
+
+
 
         </div>
     )
 
 }
 
-const ManageBox = styled.div`
-display: flex;
-width: 100%;
-margin-top: 20px;
 
-`
 
 const AdminList = styled.div`
     display: flex;
-    width: 50%;
     flex-direction: column;
     gap: 10px;
     ul{
