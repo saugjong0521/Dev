@@ -100,7 +100,7 @@ export default function AdminPage (){
                 </ul>
             </AdminList>
 
-            
+
             <h2>상품 리뷰</h2>
             {Object.keys(review).map(productId => (
                 <div key={productId}>
