@@ -265,9 +265,8 @@ const ReviewList = styled.div`
     ul{
         display: flex;
         flex-direction: column;
-        gap: 5px;
         li{
-            gap: 20px;
+            gap: 5px;
         }
     }
 
