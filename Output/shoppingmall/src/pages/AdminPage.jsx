@@ -20,8 +20,10 @@ export default function AdminPage (){
         getProducts().then(setProducts)
         // 전체 상품 가져오기
 
-        getAllReviews().then(setReview)
+        getAllReviews().then(setReview);
     },[])
+
+    console.log(review)
 
     //상품 삭제
     const handleDeleteItem = async (id) => {
@@ -51,7 +53,7 @@ export default function AdminPage (){
     async 비동기데이터 // await 비동기데이터가 가져와지기 전까지 기다리게 함
     */
 
-    console.log(categoryList)
+    // console.log(categoryList)
 
     const handleCategoryChange = (category) => {
         setSelectCategory(category)
