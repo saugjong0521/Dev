@@ -99,6 +99,10 @@ export default function AdminPage (){
                     ))}
                 </ul>
             </AdminList>
+            <h2>상품 리뷰</h2>
+
+                    
+
         </div>
     )
 
