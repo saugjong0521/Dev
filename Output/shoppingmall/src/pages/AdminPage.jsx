@@ -99,8 +99,22 @@ export default function AdminPage (){
                     ))}
                 </ul>
             </AdminList>
-            <h2>상품 리뷰</h2>
 
+            
+            <h2>상품 리뷰</h2>
+            {Object.keys(review).map(productId => (
+                <div key={productId}>
+                    <h3>{productId}</h3>
+                    <ul>
+                        {Object.keys(review[productId]).map(reviewId => (
+                            <li key = {reviewId}>
+                                {review[productId][reviewId].text}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            ))}
+            
                     
 
         </div>
