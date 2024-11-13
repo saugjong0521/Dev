@@ -61,7 +61,19 @@ export default function AdminPage (){
             <h2>업로드된 상품 관리</h2>
             <label htmlFor="categorySelect">카테고리별 상품 보기</label>
             <DropCategoryList>
-                <DropDownBtn onClick={()=>setIsDrop(!isDrop)}
+                <DropDownBtn onClick={()=>setIsDrop(!isDrop)}>
+                    {selectCategory || '전체'}
+                    {isDrop && (
+                        <ItemCategory>
+                            <MenuItem onClick={()=>handleCategoryChange('')}>전체</MenuItem>
+                            {categoryList.map((category, idx) => (
+                                <MenuItem key={idx} onClick={()=>handleCategoryChange(category)}>
+                                    {category}
+                                </MenuItem>
+                            ))}
+                        </ItemCategory>
+                    )}
+                </DropDownBtn>
             </DropCategoryList>
                 <ul>
                     {products.map(el => (
