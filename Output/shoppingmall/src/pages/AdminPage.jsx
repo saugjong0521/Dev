@@ -31,6 +31,13 @@ export default function AdminPage (){
         if(confirmDelete){
             await DeleteItem(id);
             setProducts(products.filter(product => product.id !== id));
+            
+            // 11.13 추가 삭제시 리뷰도 제거
+            setReview(reviews => {
+                const updateReview = {...reviews};
+                delete updateReview[id]
+                return reviews
+            })
         }
     }
 
