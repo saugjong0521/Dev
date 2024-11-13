@@ -144,11 +144,13 @@ export default function AdminPage (){
 const ManageBox = styled.div`
 display: flex;
 width: 100%;
+margin-top: 20px;
+
 `
 
 const AdminList = styled.div`
     display: flex;
-    margin-top: 20px;
+    width: 50%;
     flex-direction: column;
     gap: 10px;
     ul{
@@ -187,4 +189,8 @@ const MenuItem = styled.div`
     &:hover{
         background: #ddd;
     }
+`
+
+const ReviewList = styled.div`
+    width: 50%;
 `
