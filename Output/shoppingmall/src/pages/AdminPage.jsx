@@ -48,7 +48,10 @@ export default function AdminPage (){
 
     console.log(categoryList)
 
-    const handleCategoryChange = (category)
+    const handleCategoryChange = (category) => {
+        setSelectCategory(category)
+        setIsDrop(false)
+    }
 
 
     const handleEditItem = (id) => {
