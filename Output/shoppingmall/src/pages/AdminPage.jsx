@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { CategoryContext } from "../context/CategoryContext";
 
 
-export default function AdminPage (){
+export default function AdminPage (productId){
 
     const navigate = useNavigate()
     const [products, setProducts] = useState([]);
@@ -20,7 +20,7 @@ export default function AdminPage (){
         getProducts().then(setProducts)
         // 전체 상품 가져오기
 
-        getAllReviews().then((updateReview)=>{
+        getAllReviews(productId).then((updateReview)=>{
                 setReview(updateReview.sort((a,b)=>b.timestamp - a.timestamp))})
     },[])
 
