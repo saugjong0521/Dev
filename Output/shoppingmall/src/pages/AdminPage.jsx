@@ -20,7 +20,7 @@ export default function AdminPage (){
         getProducts().then(setProducts)
         // 전체 상품 가져오기
 
-        getAllReviews().then(setReview);
+        getAllReviews().then(setReview.sort((a,b)=>b.timestamp - a.timestamp));
     },[])
 
     console.log(review)
