@@ -485,7 +485,7 @@ export async function getProductById(productId){
 
 
 // 전체 댓글 가져오기
-export async function getAllreviews (){
+export async function getAllReviews (){
     try{
         const reviewRef = ref(database, 'review');
         const snapshot = await get(reviewRef)

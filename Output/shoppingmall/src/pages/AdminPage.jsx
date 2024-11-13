@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react"
-import { DeleteItem, getProducts } from "../api/Firebase";
+import { DeleteItem, getAllReviews, getProducts } from "../api/Firebase";
 import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { CategoryContext } from "../context/CategoryContext";
@@ -9,13 +9,18 @@ export default function AdminPage (){
 
     const navigate = useNavigate()
     const [products, setProducts] = useState([]);
+    
     const {categoryList} = useContext(CategoryContext);
     const [selectCategory, setSelectCategory] = useState('');
     const [isDrop, setIsDrop] = useState(false) // 드롭 상태 설정(기본값은 닫힘: false)
 
+    const [review, setReview] = useState({});
+
     useEffect(() => {
         getProducts().then(setProducts)
         // 전체 상품 가져오기
+
+        getAllReviews().then(setReview)
     },[])
 
     //상품 삭제
