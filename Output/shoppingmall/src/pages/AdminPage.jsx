@@ -126,6 +126,7 @@ const ItemCategory = styled.div`
 
 const MenuItem = styled.div`
     padding: 8px 16px;
+    text-align: left;
     cursor: pointer;
     &hover{
         background: #ddd
