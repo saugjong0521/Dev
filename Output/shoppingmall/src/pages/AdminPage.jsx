@@ -90,7 +90,7 @@ export default function AdminPage (){
                 const updateReview = {...prevReview}
                 if(updateReview[productId]){
                     delete updateReview[productId][reviewId]
-                    return update
+                    return updateReview
                 }
             })
         } else{
