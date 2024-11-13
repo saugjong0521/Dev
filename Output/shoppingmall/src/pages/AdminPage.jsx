@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { DeleteItem, getProducts } from "../api/Firebase";
 import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
@@ -8,6 +8,7 @@ export default function AdminPage (){
 
     const navigate = useNavigate()
     const [products, setProducts] = useState([]);
+    const {categoryList} = useContext(categoryList);
 
     useEffect(() => {
         getProducts().then(setProducts)
@@ -42,6 +43,8 @@ export default function AdminPage (){
     async 비동기데이터 // await 비동기데이터가 가져와지기 전까지 기다리게 함
     */
 
+    console.log(categoryList)
+
 
     const handleEditItem = (id) => {
         navigate(`/admin/edit/${id}`)
@@ -53,6 +56,8 @@ export default function AdminPage (){
             <button><Link to='/admin/upload'>상품 업로드</Link></button>
             <AdminList>
             <h2>업로드된 상품 관리</h2>
+            <label htmlFor="categorySelect">카테고리별 상품 보기</label>
+            {/* <select id="categorySelect" value={}/> */}
                 <ul>
                     {products.map(el => (
                         <li key={el.id}>
