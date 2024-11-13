@@ -2,13 +2,14 @@ import { useContext, useEffect, useState } from "react"
 import { DeleteItem, getProducts } from "../api/Firebase";
 import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import { CategoryContext } from "../context/CategoryContext";
 
 
 export default function AdminPage (){
 
     const navigate = useNavigate()
     const [products, setProducts] = useState([]);
-    const {categoryList} = useContext(categoryList);
+    const {categoryList} = useContext(CategoryContext);
 
     useEffect(() => {
         getProducts().then(setProducts)
