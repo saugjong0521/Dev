@@ -67,6 +67,11 @@ export default function AdminPage (){
         navigate(`/admin/edit/${id}`)
     }
 
+
+    // 상품 title 넘겨주기
+    const productNames = products.reduce((item, product))
+
+
     return(
         <div className="container">
             <h2>관리</h2>
@@ -104,7 +109,7 @@ export default function AdminPage (){
             <h2>상품 리뷰</h2>
             {Object.keys(review).map(productId => (
                 <div key={productId}>
-                    <h3>{productId}</h3>
+                    <h3>상품명 : {productNames[productId]}</h3>
                     <ul>
                         {Object.keys(review[productId]).map(reviewId => (
                             <li key = {reviewId}>
