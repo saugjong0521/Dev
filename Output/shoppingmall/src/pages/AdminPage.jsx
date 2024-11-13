@@ -101,6 +101,7 @@ const AdminList = styled.div`
     display: flex;
     margin-top: 20px;
     flex-direction: column;
+    gap: 10px;
     ul{
         display: flex;
         flex-direction: column;
