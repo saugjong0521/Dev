@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react"
-import { DeleteItem, getAllReviews, getProducts } from "../api/Firebase";
+import { DeleteItem, deleteReview, getAllReviews, getProducts } from "../api/Firebase";
 import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { CategoryContext } from "../context/CategoryContext";
@@ -82,6 +82,23 @@ export default function AdminPage (){
     },{})
 
 
+    const handleDeleteReview = async(productId, reviewId) => {
+        const confirmDelete = window.confirm('리뷰를 삭제하시겠습니까?')
+        if(confirmDelete){
+            await deleteReview(productId, reviewId)
+            setReview(prevReview => {
+                const updateReview = {...prevReview}
+                if(updateReview[productId]){
+                    delete updateReview[productId][reviewId]
+                    return update
+                }
+            })
+        } else{
+
+        }
+    }
+
+
     return(
         <div className="container">
             <h2>관리</h2>
@@ -126,7 +143,7 @@ export default function AdminPage (){
                             {Object.keys(review[productId]).map(reviewId => (
                                 <li key = {reviewId}>
                                     {review[productId][reviewId].text}
-                                    <button onClick={()=>handleDeleteReview(productId)}>삭제</button>
+                                    <button onClick={()=>handleDeleteReview(productId, reviewId)}>삭제</button>
                                 </li>
                             ))}
                         </ul>
