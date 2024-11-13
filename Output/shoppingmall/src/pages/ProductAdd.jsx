@@ -28,7 +28,6 @@ export default function ProductAdd({initialProduct, isEdit = false, onSave}){
         colors : [],
     })  //모든 상품의 상태를 빈 문자열로 초기화
 
-
     // 업로드 함수들
     const productInfoChange = (e) => {
         const {name, value, files} = e.target;

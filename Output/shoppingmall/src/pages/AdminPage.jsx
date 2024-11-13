@@ -16,6 +16,8 @@ export default function AdminPage (){
 
     const [review, setReview] = useState({});
 
+    const [activeTab, setActiveTab] = useState('products')
+
     useEffect(() => {
         getProducts().then(setProducts)
         // 전체 상품 가져오기
