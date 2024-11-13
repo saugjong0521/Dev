@@ -124,37 +124,36 @@ export default function AdminPage (){
 
             {activeTab === 'products'&& (
                 <div className="tabList">
+                    <AdminList>
+                    <h2>업로드된 상품 관리</h2>
+                    <label htmlFor="categorySelect">카테고리별 상품 보기</label>
+                    
+                    <DropCategoryList>
+                        <DropDownBtn onClick={()=>setIsDrop(!isDrop)}>
+                            {selectCategory || '전체'}
+                            {isDrop && (
+                                <ItemCategory>
+                                    <MenuItem onClick={()=>handleCategoryChange('')}>전체</MenuItem>
+                                    {categoryList.map((category, idx) => (
+                                        <MenuItem key={idx} onClick={()=>handleCategoryChange(category)}>
+                                            {category}
+                                        </MenuItem>
+                                    ))}
+                                </ItemCategory>
+                            )}
+                        </DropDownBtn>
+                    </DropCategoryList>
+                        <ul>
+                            {filterCategoryItem.map(el => (
+                                <li key={el.id}>
+                                    {el.title}
+                                    <button onClick={() => handleDeleteItem(el.id)}>삭제</button>
+                                    <button onClick={() => handleEditItem(el.id)}>상품 수정</button>
+                                </li>
+                            ))}
+                        </ul>
 
-                <AdminList>
-                <h2>업로드된 상품 관리</h2>
-                <label htmlFor="categorySelect">카테고리별 상품 보기</label>
-                
-                <DropCategoryList>
-                    <DropDownBtn onClick={()=>setIsDrop(!isDrop)}>
-                        {selectCategory || '전체'}
-                        {isDrop && (
-                            <ItemCategory>
-                                <MenuItem onClick={()=>handleCategoryChange('')}>전체</MenuItem>
-                                {categoryList.map((category, idx) => (
-                                    <MenuItem key={idx} onClick={()=>handleCategoryChange(category)}>
-                                        {category}
-                                    </MenuItem>
-                                ))}
-                            </ItemCategory>
-                        )}
-                    </DropDownBtn>
-                </DropCategoryList>
-                    <ul>
-                        {filterCategoryItem.map(el => (
-                            <li key={el.id}>
-                                {el.title}
-                                <button onClick={() => handleDeleteItem(el.id)}>삭제</button>
-                                <button onClick={() => handleEditItem(el.id)}>상품 수정</button>
-                            </li>
-                        ))}
-                    </ul>
-
-                </AdminList>
+                    </AdminList>
                 </div>
 
             )}
@@ -162,24 +161,23 @@ export default function AdminPage (){
 
 
             {activeTab === 'reviews'&&(
-                                <div className="tabList">
-
-                <ReviewList>
-                <h2>상품 리뷰</h2>
-                {Object.keys(review).map(productId => (
-                    <div key={productId}>
-                        <h3>상품명 : {productNames[productId]}</h3>
-                        <ul>
-                            {Object.keys(review[productId]).map(reviewId => (
-                                <li key = {reviewId}>
-                                    {review[productId][reviewId].text}
-                                    <button onClick={()=>handleDeleteReview(productId, reviewId)}>삭제</button>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                ))}
-                </ReviewList>
+                <div className="tabList">
+                    <ReviewList>
+                    <h2>상품 리뷰</h2>
+                    {Object.keys(review).map(productId => (
+                        <div key={productId}>
+                            <h3>상품명 : {productNames[productId]}</h3>
+                            <ul>
+                                {Object.keys(review[productId]).map(reviewId => (
+                                    <li key = {reviewId}>
+                                        {review[productId][reviewId].text}
+                                        <button onClick={()=>handleDeleteReview(productId, reviewId)}>삭제</button>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                    </ReviewList>
                 </div>
             )}
         </div>
