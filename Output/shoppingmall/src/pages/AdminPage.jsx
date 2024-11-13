@@ -19,11 +19,18 @@ export default function AdminPage (){
     const [activeTab, setActiveTab] = useState('products')
 
     useEffect(() => {
-        getProducts().then(setProducts)
+        getProducts().then(setProducts);
         // 전체 상품 가져오기
 
-        getAllReviews().then(setReview)
-    },[])
+        getAllReviews().then(reviews => {
+            // 리뷰를 timestamp 기준으로 정렬
+            const sortedReviews = Object.keys(reviews).reduce((acc, productId) => {
+                acc[productId] = reviews[productId].sort((a, b) => b.timestamp - a.timestamp);
+                return acc;
+            }, {});
+            setReview(sortedReviews);
+        });
+    }, []);
 
     console.log(review)
 
