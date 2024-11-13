@@ -481,3 +481,21 @@ export async function getProductById(productId){
         return null;
     }
 }
+
+
+
+// 전체 댓글 가져오기
+export async function getAllreviews (){
+    try{
+        const reviewRef = ref(database, 'review');
+        const snapshot = await get(reviewRef)
+        if(snapshot.exists()){
+            return snapshot.val()
+        } else{
+            return {}
+        }
+    } catch(error){
+        console.error("댓글 불러오기 오류", error)
+        return {}
+    }
+}
