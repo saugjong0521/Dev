@@ -33,9 +33,12 @@ export default function ProductReview({productId}){
         <div>
             <h3>review</h3>
             <ul>
-                {review && review.slice(0,5).map((el, idx) => (
-                    <li key={idx}>{el.text}</li>
-                ))}
+                {review && review
+                    .slice(0, 5)
+                    .sort((a, b) => a.timestamp - b.timestamp)
+                    .map((el, idx) => (
+                        <li key={idx}>{el.text}</li>
+                    ))}
             </ul>
 
             <form onSubmit={handleReview}>
