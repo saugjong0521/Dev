@@ -44,12 +44,14 @@ export default function ProductReview({productId}){
                 ))}
             </ul>
 
-            <input 
-                type="text"
-                value={newReview}
-                onChange={(e) => setNewReview(e.target.value)}
-            />
-            <button onClick={handleReview}>작성하기</button>
+            <form onSubmit={handleReview}>
+                <input 
+                    type="text"
+                    value={newReview}
+                    onChange={(e) => setNewReview(e.target.value)}
+                />
+                <button>작성하기</button>
+            </form>
         </div>
 
     )
