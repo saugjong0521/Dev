@@ -48,6 +48,8 @@ export default function AdminPage (){
 
     console.log(categoryList)
 
+    const handleCategoryChange = (category)
+
 
     const handleEditItem = (id) => {
         navigate(`/admin/edit/${id}`)
@@ -102,5 +104,27 @@ const AdminList = styled.div`
 `
 
 const DropCategoryList = styled.div`
+    position: relative;
+    display: inline-block;
+`
 
+const DropDownBtn = styled.div`
+    padding: 8px 16px;
+    border: solid 1px #000;
+    cursor: pointer;
+    background: #ddd;
+`
+
+const ItemCategory = styled.div`
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    border: solid 1px #000;
+    width: 100%;
+`
+
+const MenuItem = styled.div`
+    padding: 8px 16px
+    cursor: pointer;
 `
