@@ -17,7 +17,8 @@ export default function ProductReview({productId}){
         })
     },[productId])
 
-    const handleReview = async () => {
+    const handleReview = async (e) => {
+        e.preventDefault();
         try {
             const user = 'user';
             const timestamp = Date.now();
@@ -50,7 +51,7 @@ export default function ProductReview({productId}){
                     value={newReview}
                     onChange={(e) => setNewReview(e.target.value)}
                 />
-                <button>작성하기</button>
+                <button type="submit">작성하기</button>
             </form>
         </div>
 
