@@ -119,13 +119,13 @@ export default function AdminPage (){
             {activeTab === 'products'&& (
                 <div className="tabList">
 
-<h2>관리</h2>
-<button><Link to='/admin/upload'>상품 업로드</Link></button>
+                <h2>관리</h2>
+                <button><Link to='/admin/upload'>상품 업로드</Link></button>
 
+<AdminList>
                 <h2>업로드된 상품 관리</h2>
                 <label htmlFor="categorySelect">카테고리별 상품 보기</label>
-
-                <AdminList>
+                
                 <DropCategoryList>
                     <DropDownBtn onClick={()=>setIsDrop(!isDrop)}>
                         {selectCategory || '전체'}
