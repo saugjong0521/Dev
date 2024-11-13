@@ -24,6 +24,7 @@ export default function ProductReview({productId}){
             await addReview(productId, user, newReview, timestamp);
             setNewReview('');
             getReview(productId).then(setReview.sort((a,b)=>b.timestamp - a.timestamp));
+
         } catch(error){
             console.log(error);
         }
