@@ -36,7 +36,7 @@ export default function AdminPage (){
             setReview(reviews => {
                 const updateReview = {...reviews};
                 delete updateReview[id]
-                return reviews
+                return updateReview;
             })
         }
     }
