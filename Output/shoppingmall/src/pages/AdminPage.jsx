@@ -105,9 +105,10 @@ export default function AdminPage (){
         <div className="container">
             <h2>관리자 페이지</h2>
 
-            <h2>관리</h2>
-            <button><Link to='/admin/upload'>상품 업로드</Link></button>
-
+            <AdminUploadItem>
+                <h2>관리</h2>
+                <button><Link to='/admin/upload'>상품 업로드</Link></button>
+            </AdminUploadItem>
 
             <TabButtonContainer>
                 <TabBtn 
@@ -187,6 +188,10 @@ export default function AdminPage (){
     )
 
 }
+
+const AdminUploadItem = styled.div`
+    margin-bottom: 10px;
+`
 
 
 const TabButtonContainer = styled.div`
