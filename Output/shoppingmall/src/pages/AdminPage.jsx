@@ -25,7 +25,10 @@ export default function AdminPage (){
         getAllReviews().then(reviews => {
             // 리뷰를 timestamp 기준으로 정렬
             const sortedReviews = Object.keys(reviews).reduce((acc, productId) => {
-                acc[productId] = reviews[productId].sort((a, b) => b.timestamp - a.timestamp);
+                // reviews[productId]가 배열인지 확인
+                acc[productId] = Array.isArray(reviews[productId])
+                    ? reviews[productId].sort((a, b) => b.timestamp - a.timestamp)
+                    : []; // 배열이 아닐 경우 빈 배열로 초기화
                 return acc;
             }, {});
             setReview(sortedReviews);
@@ -177,9 +180,9 @@ export default function AdminPage (){
                             <h3>상품명 : {productNames[productId]}</h3>
                             <ul>
                                 {Object.keys(review[productId]).map(reviewId => (
-                                    <li key = {reviewId}>
+                                    <li key={reviewId}>
                                         {review[productId][reviewId].text}
-                                        <button onClick={()=>handleDeleteReview(productId, reviewId)}>삭제</button>
+                                        <button onClick={() => handleDeleteReview(productId, reviewId)}>삭제</button>
                                     </li>
                                 ))}
                             </ul>
