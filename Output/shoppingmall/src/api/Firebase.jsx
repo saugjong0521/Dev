@@ -444,6 +444,10 @@ export async function DeleteItem (productId){
     try{
         const productRef = ref(database, `products/${productId}`);
         await remove(productRef)
+
+        const reviewRef = ref(database, `review/${productId}`)
+        await remove(reviewRef);
+
         return {success: true};
     } catch(error){
         console.error('상품 삭제에 오류가 발생했습니다', error);
