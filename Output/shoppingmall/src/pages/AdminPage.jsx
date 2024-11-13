@@ -162,6 +162,8 @@ export default function AdminPage (){
 
 
             {activeTab === 'reviews'&&(
+                                <div className="tabList">
+
                 <ReviewList>
                 <h2>상품 리뷰</h2>
                 {Object.keys(review).map(productId => (
@@ -178,6 +180,7 @@ export default function AdminPage (){
                     </div>
                 ))}
                 </ReviewList>
+                </div>
             )}
         </div>
 
