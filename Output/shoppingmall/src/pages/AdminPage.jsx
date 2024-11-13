@@ -126,6 +126,7 @@ export default function AdminPage (){
                             {Object.keys(review[productId]).map(reviewId => (
                                 <li key = {reviewId}>
                                     {review[productId][reviewId].text}
+                                    <button onClick={()=>handleDeleteReview(productId)}>삭제</button>
                                 </li>
                             ))}
                         </ul>
