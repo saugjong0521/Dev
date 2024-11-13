@@ -69,7 +69,10 @@ export default function AdminPage (){
 
 
     // 상품 title 넘겨주기
-    const productNames = products.reduce((item, product))
+    const productNames = products.reduce((item, product) => {
+        item[product.id] = product.title;
+        return item
+    },{})
 
 
     return(
