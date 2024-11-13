@@ -53,6 +53,8 @@ export default function AdminPage (){
         setIsDrop(false)
     }
 
+    const filterCategoryItem = selectCategory
+    ? products.filter((product)=>product.category === selectCategory) : products
 
     const handleEditItem = (id) => {
         navigate(`/admin/edit/${id}`)
@@ -81,7 +83,7 @@ export default function AdminPage (){
                 </DropDownBtn>
             </DropCategoryList>
                 <ul>
-                    {products.map(el => (
+                    {filterCategoryItem.map(el => (
                         <li key={el.id}>
                             {el.title}
                             <button onClick={() => handleDeleteItem(el.id)}>삭제</button>
