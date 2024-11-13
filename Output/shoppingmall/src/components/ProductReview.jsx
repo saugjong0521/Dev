@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import { addReview, getReview } from "../api/Firebase";
 
-
 export default function ProductReview({productId}){
 
     const [review, setReview] = useState([]);
@@ -9,9 +8,7 @@ export default function ProductReview({productId}){
 
     useEffect(()=> {
         getReview(productId)
-        .then((review)=>{
-            setReview(review.sort((a,b)=>b.timestamp - a.timestamp))
-        })
+        .then(setReview)
         .catch((error)=>{
             console.error(error)
         })
@@ -24,11 +21,8 @@ export default function ProductReview({productId}){
             const timestamp = Date.now();
             await addReview(productId, user, newReview, timestamp);
             setNewReview('');
-            // getReview(productId).then(setReview.sort((a,b)=>b.timestamp - a.timestamp));
 
-            getReview(productId).then((updateReview)=>{
-                setReview(updateReview.sort((a,b)=>b.timestamp - a.timestamp))
-            })
+            getReview(productId).then(setReview);
 
         } catch(error){
             console.log(error);
@@ -36,12 +30,11 @@ export default function ProductReview({productId}){
     }
 
     return(
-
         <div>
             <h3>review</h3>
             <ul>
                 {review && review.slice(0,5).map((el, idx) => (
-                    <li>{el.text}</li>
+                    <li key={idx}>{el.text}</li>
                 ))}
             </ul>
 
@@ -54,7 +47,5 @@ export default function ProductReview({productId}){
                 <button type="submit">작성하기</button>
             </form>
         </div>
-
     )
-
 }
