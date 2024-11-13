@@ -8,7 +8,7 @@ export default function AdminPage (){
 
     const navigate = useNavigate()
     const [products, setProducts] = useState([]);
-    const {categoryList} = useContext(categoryContext);
+    const {categoryList} = useContext(categoryList);
 
     useEffect(() => {
         getProducts().then(setProducts)
