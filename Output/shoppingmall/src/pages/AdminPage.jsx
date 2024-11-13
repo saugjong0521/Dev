@@ -111,6 +111,7 @@ const AdminList = styled.div`
 const DropCategoryList = styled.div`
     position: relative;
     display: inline-block;
+    width: 20vw;
 `
 
 const DropDownBtn = styled.div`
