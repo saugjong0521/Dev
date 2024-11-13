@@ -338,8 +338,8 @@ export async function getReview(productId){
     try {
         const snapshot = await get(reviewRef);
         if(snapshot.exists()){
-            // Sort reviews by timestamp before returning
-            return Object.values(snapshot.val()).sort((a, b) => b.timestamp - a.timestamp);
+            // Sort reviews by timestamp in ascending order (oldest first)
+            return Object.values(snapshot.val()).sort((a, b) => a.timestamp - b.timestamp);
         } else {
             return [];
         }
