@@ -103,6 +103,19 @@ export default function AdminPage (){
 
     return(
         <div className="container">
+            <h2>관리자 페이지</h2>
+            <TabButtonContainer>
+                <TabBtn 
+                    active = {activeTab === 'products'}
+                    onClick={()=>setActiveTab('products')}>
+                        상품관리
+                </TabBtn>
+                <TabBtn 
+                    active = {activeTab === 'reviews'}
+                    onClick={()=>setActiveTab('reviews')}>
+                        리뷰
+                </TabBtn>
+            </TabButtonContainer>
             <h2>관리</h2>
             <button><Link to='/admin/upload'>상품 업로드</Link></button>
 
