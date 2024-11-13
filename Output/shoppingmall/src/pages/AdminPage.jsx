@@ -21,7 +21,7 @@ export default function AdminPage (){
         // 전체 상품 가져오기
 
         getAllReviews().then((updateReview)=>{
-            setReview(updateReview.sort((a,b)=>b.timestamp - a.timestamp));
+            setReview(updateReview.sort((a,b)=>b.timestamp - a.timestamp))});
     },[])
 
     console.log(review)
