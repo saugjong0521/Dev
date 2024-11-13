@@ -35,8 +35,10 @@ export default function AdminPage (){
             // 11.13 추가 삭제시 리뷰도 제거
             setReview(reviews => {
                 const updateReview = {...reviews};
-                delete updateReview[id]
+                delete (updateReview[id].sort((a,b)=>b.timestamp - a.timestamp))
                 return updateReview;
+
+
             })
         }
     }
