@@ -112,13 +112,13 @@ export default function AdminPage (){
 
             <TabButtonContainer>
                 <TabBtn 
-                    active = {activeTab === 'products'}
-                    onClick={()=>setActiveTab('products')}>
+                    active={activeTab === 'products' ? 'true' : 'false'}
+                    onClick={() => setActiveTab('products')}>
                         상품관리
                 </TabBtn>
                 <TabBtn 
-                    active = {activeTab === 'reviews'}
-                    onClick={()=>setActiveTab('reviews')}>
+                    active={activeTab === 'reviews' ? 'true' : 'false'}
+                    onClick={() => setActiveTab('reviews')}>
                         리뷰
                 </TabBtn>
             </TabButtonContainer>
@@ -200,11 +200,11 @@ const TabButtonContainer = styled.div`
     margin-bottom: 20px;
 `
 
-const TabBtn = styled.div`
+const TabBtn = styled.button`
     padding: 8px 16px;
     cursor: pointer;
-    background: ${({active})=>(active ? '#333' : '#ddd')};
-    color: ${({active})=>(active ? '#fff' : '#333')};
+    background: ${({ active }) => (active === 'true' ? '#333' : '#ddd')};
+    color: ${({ active }) => (active === 'true' ? '#fff' : '#333')};
     border: none;
     outline: none;
     &:hover{
