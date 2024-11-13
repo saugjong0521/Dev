@@ -11,6 +11,7 @@ export default function AdminPage (){
     const [products, setProducts] = useState([]);
     const {categoryList} = useContext(CategoryContext);
     const [selectCategory, setSelectCategory] = useState('');
+    const [isDrop, setIsDrop] = useState(false) // 드롭 상태 설정(기본값은 닫힘: false)
 
     useEffect(() => {
         getProducts().then(setProducts)
@@ -59,16 +60,9 @@ export default function AdminPage (){
             <AdminList>
             <h2>업로드된 상품 관리</h2>
             <label htmlFor="categorySelect">카테고리별 상품 보기</label>
-            <select id="categorySelect" 
-                value={selectCategory} 
-                onChange={(e) => setSelectCategory(e.target.value)}>
-                    <option value="">전체</option>
-                    {categoryList.map((category, idx)=>(
-                        <option key={idx} value={category}>
-                            {category}
-                        </option>
-                    ))}
-            </select>
+            <DropCategoryList>
+
+            </DropCategoryList>
                 <ul>
                     {products.map(el => (
                         <li key={el.id}>
@@ -93,4 +87,8 @@ const AdminList = styled.div`
         flex-direction: column;
         gap: 20px;
     }
+`
+
+const DropCategoryList = styled.div`
+
 `
