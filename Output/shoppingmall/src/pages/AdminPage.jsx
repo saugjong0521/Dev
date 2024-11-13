@@ -195,7 +195,7 @@ const TabButtonContainer = styled.div`
     margin-bottom: 20px;
 `
 
-const TabBtn = styled.dix`
+const TabBtn = styled.div`
     padding: 8px 16px;
     cursor: pointer;
     background: ${({active})=>(active ? '#333' : '#ddd')};
