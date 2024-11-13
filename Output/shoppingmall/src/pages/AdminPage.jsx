@@ -86,49 +86,53 @@ export default function AdminPage (){
         <div className="container">
             <h2>관리</h2>
             <button><Link to='/admin/upload'>상품 업로드</Link></button>
-            <AdminList>
-            <h2>업로드된 상품 관리</h2>
-            <label htmlFor="categorySelect">카테고리별 상품 보기</label>
-            <DropCategoryList>
-                <DropDownBtn onClick={()=>setIsDrop(!isDrop)}>
-                    {selectCategory || '전체'}
-                    {isDrop && (
-                        <ItemCategory>
-                            <MenuItem onClick={()=>handleCategoryChange('')}>전체</MenuItem>
-                            {categoryList.map((category, idx) => (
-                                <MenuItem key={idx} onClick={()=>handleCategoryChange(category)}>
-                                    {category}
-                                </MenuItem>
-                            ))}
-                        </ItemCategory>
-                    )}
-                </DropDownBtn>
-            </DropCategoryList>
-                <ul>
-                    {filterCategoryItem.map(el => (
-                        <li key={el.id}>
-                            {el.title}
-                            <button onClick={() => handleDeleteItem(el.id)}>삭제</button>
-                            <button onClick={() => handleEditItem(el.id)}>상품 수정</button>
-                        </li>
-                    ))}
-                </ul>
-            </AdminList>
 
-
-            <h2>상품 리뷰</h2>
-            {Object.keys(review).map(productId => (
-                <div key={productId}>
-                    <h3>상품명 : {productNames[productId]}</h3>
+            <ManageBox>
+                <AdminList>
+                <h2>업로드된 상품 관리</h2>
+                <label htmlFor="categorySelect">카테고리별 상품 보기</label>
+                <DropCategoryList>
+                    <DropDownBtn onClick={()=>setIsDrop(!isDrop)}>
+                        {selectCategory || '전체'}
+                        {isDrop && (
+                            <ItemCategory>
+                                <MenuItem onClick={()=>handleCategoryChange('')}>전체</MenuItem>
+                                {categoryList.map((category, idx) => (
+                                    <MenuItem key={idx} onClick={()=>handleCategoryChange(category)}>
+                                        {category}
+                                    </MenuItem>
+                                ))}
+                            </ItemCategory>
+                        )}
+                    </DropDownBtn>
+                </DropCategoryList>
                     <ul>
-                        {Object.keys(review[productId]).map(reviewId => (
-                            <li key = {reviewId}>
-                                {review[productId][reviewId].text}
+                        {filterCategoryItem.map(el => (
+                            <li key={el.id}>
+                                {el.title}
+                                <button onClick={() => handleDeleteItem(el.id)}>삭제</button>
+                                <button onClick={() => handleEditItem(el.id)}>상품 수정</button>
                             </li>
                         ))}
                     </ul>
-                </div>
-            ))}
+                </AdminList>
+
+                <ReviewList>
+                <h2>상품 리뷰</h2>
+                {Object.keys(review).map(productId => (
+                    <div key={productId}>
+                        <h3>상품명 : {productNames[productId]}</h3>
+                        <ul>
+                            {Object.keys(review[productId]).map(reviewId => (
+                                <li key = {reviewId}>
+                                    {review[productId][reviewId].text}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                ))}
+                </ReviewList>
+            </ManageBox>
             
                     
 
@@ -136,6 +140,11 @@ export default function AdminPage (){
     )
 
 }
+
+const ManageBox = styled.div`
+display: flex;
+width: 100%;
+`
 
 const AdminList = styled.div`
     display: flex;
