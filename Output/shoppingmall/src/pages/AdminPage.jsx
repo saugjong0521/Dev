@@ -181,6 +181,19 @@ export default function AdminPage (){
 }
 
 
+const TabButtonContainer = styled.div`
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+`
+
+const TapBtn = styled.dix`
+    padding: 8px 16px;
+    cursor: pointer;
+    background: ${({active})=>(active ? '#333' : '#ddd')}
+`
+
+
 
 const AdminList = styled.div`
     display: flex;
