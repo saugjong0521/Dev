@@ -190,7 +190,7 @@ export default function AdminPage (){
 }
 
 const AdminUploadItem = styled.div`
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 `
 
 
@@ -261,10 +261,13 @@ const ReviewList = styled.div`
     width: 50%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     ul{
         display: flex;
         flex-direction: column;
+        li{
+            gap: 5px;
+        }
     }
 
 `
