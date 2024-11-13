@@ -10,6 +10,7 @@ export default function AdminPage (){
     const navigate = useNavigate()
     const [products, setProducts] = useState([]);
     const {categoryList} = useContext(CategoryContext);
+    const [selectCategory, setSelectCategory] = useState('')
 
     useEffect(() => {
         getProducts().then(setProducts)
@@ -58,7 +59,7 @@ export default function AdminPage (){
             <AdminList>
             <h2>업로드된 상품 관리</h2>
             <label htmlFor="categorySelect">카테고리별 상품 보기</label>
-            {/* <select id="categorySelect" value={}/> */}
+            <select id="categorySelect" value={categoryList}/>
                 <ul>
                     {products.map(el => (
                         <li key={el.id}>
