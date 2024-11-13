@@ -193,4 +193,12 @@ const MenuItem = styled.div`
 
 const ReviewList = styled.div`
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    ul{
+        display: flex;
+        flex-direction: column;
+    }
+
 `
