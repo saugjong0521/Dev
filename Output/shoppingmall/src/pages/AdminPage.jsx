@@ -104,6 +104,11 @@ export default function AdminPage (){
     return(
         <div className="container">
             <h2>관리자 페이지</h2>
+
+            <h2>관리</h2>
+            <button><Link to='/admin/upload'>상품 업로드</Link></button>
+
+
             <TabButtonContainer>
                 <TabBtn 
                     active = {activeTab === 'products'}
@@ -119,9 +124,7 @@ export default function AdminPage (){
             {activeTab === 'products'&& (
                 <div className="tabList">
 
-                <h2>관리</h2>
-                <button><Link to='/admin/upload'>상품 업로드</Link></button>
-
+                <AdminList>
                 <h2>업로드된 상품 관리</h2>
                 <label htmlFor="categorySelect">카테고리별 상품 보기</label>
                 
@@ -151,7 +154,7 @@ export default function AdminPage (){
                     </ul>
 
                 </div>
-
+                </AdminList>
             )}
 
             {activeTab === 'reviews'&&(
@@ -170,12 +173,12 @@ export default function AdminPage (){
                         </ul>
                     </div>
                 ))}
-                </ReviewList>
             )}
-
-
-
         </div>
+                </ReviewList>
+
+
+
     )
 
 }
@@ -187,10 +190,17 @@ const TabButtonContainer = styled.div`
     margin-bottom: 20px;
 `
 
-const TapBtn = styled.dix`
+const TabBtn = styled.dix`
     padding: 8px 16px;
     cursor: pointer;
-    background: ${({active})=>(active ? '#333' : '#ddd')}
+    background: ${({active})=>(active ? '#333' : '#ddd')};
+    color: ${({active})=>(active ? '#fff' : '#333')};
+    border: none;
+    outline: none;
+    &:hover{
+        background: #666;
+        color: #fff;
+    }
 `
 
 
