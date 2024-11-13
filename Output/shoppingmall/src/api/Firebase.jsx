@@ -503,3 +503,13 @@ export async function getAllReviews (){
         return {}
     }
 }
+
+// 리뷰글 삭제
+export async function deleteReview(productId, reviewId){
+    try{
+        const reviewRef = ref(database, `review/${productId}/${reviewId}`)
+        await remove(reviewRef)
+    } catch(error){
+        console.error('리뷰 삭제 오류', error)
+    }
+}
