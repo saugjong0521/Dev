@@ -121,6 +121,7 @@ export default function AdminPage (){
                         리뷰
                 </TabBtn>
             </TabButtonContainer>
+
             {activeTab === 'products'&& (
                 <div className="tabList">
 
@@ -153,9 +154,12 @@ export default function AdminPage (){
                         ))}
                     </ul>
 
-                </div>
                 </AdminList>
+                </div>
+
             )}
+
+
 
             {activeTab === 'reviews'&&(
                 <ReviewList>
@@ -173,9 +177,9 @@ export default function AdminPage (){
                         </ul>
                     </div>
                 ))}
+                </ReviewList>
             )}
         </div>
-                </ReviewList>
 
 
 
