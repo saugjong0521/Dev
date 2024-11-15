@@ -28,9 +28,15 @@ export default function Canvas(){
     })
 
 
+
+
     return(
         <CanvasBox>
-            <canvas ref={CanvasRef}></canvas>
+            <canvas 
+                ref={CanvasRef}
+
+
+            ></canvas>
         </CanvasBox>
     )
 }
