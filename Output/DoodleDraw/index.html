@@ -457,6 +457,39 @@ function drawing() {
         }
     }
 
+    // 컬러 팔레트 생성
+function ColorPalette(pallete, colors) {
+    colors.forEach(color => {
+        let colorDiv = document.createElement("div");
+        colorDiv.classList.add("colors");
+        colorDiv.style.backgroundColor = color;
+        pallete.appendChild(colorDiv);
+    });
+}
+ColorPalette(pallete, colorSet);
+
+// 컬러 팔레트 추가
+
+const colorInput = document.querySelector('.color-input')
+const colorInputBtn = document.querySelector('.more-color-btn')
+colorInputBtn.addEventListener('click', addColor)
+
+function addColor (){    
+    const newColor = colorInput.value;
+    colorSet.push(newColor)
+
+    let colorDiv = document.createElement("div");
+    colorDiv.classList.add("colors");
+    colorDiv.style.backgroundColor = newColor;
+    pallete.appendChild(colorDiv);
+
+    colorDiv.addEventListener('click', () => {
+        color = newColor;
+    });
+
+    console.log(newColor)
+}
+
     changeColor();  // 색상 변경 적용
     resetCanvas();  // 리셋 버튼 설정
     const undoBtn = document.querySelector('.undoBtn');
@@ -514,39 +547,7 @@ const colorSet = [
     "#4169E1", "#87CEFA", "#C71585", "#FF00FF", "#40E0D0"
 ];
 
-// 컬러 팔레트 생성
-function ColorPalette(pallete, colors) {
-    colors.forEach(color => {
-        let colorDiv = document.createElement("div");
-        colorDiv.classList.add("colors");
-        colorDiv.style.backgroundColor = color;
-        pallete.appendChild(colorDiv);
-    });
-}
-ColorPalette(pallete, colorSet);
 
-// 컬러 팔레트 추가
-
-const colorInput = document.querySelector('.color-input')
-const colorInputBtn = document.querySelector('.more-color-btn')
-colorInputBtn.addEventListener('click', addColor)
-
-function addColor (){    
-    const newColor = colorInput.value;
-    colorSet.push(newColor)
-
-    let colorDiv = document.createElement("div");
-    colorDiv.classList.add("colors");
-    colorDiv.style.backgroundColor = newColor;
-    pallete.appendChild(colorDiv);
-
-    colorDiv.addEventListener('click', () => {
-        color = newColor;
-    });
-
-    console.log(newColor)
-    changeColor();
-}
 
     </script>
 
