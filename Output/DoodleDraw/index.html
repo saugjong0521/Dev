@@ -331,15 +331,10 @@ function drawing() {
     let currentPath = [];
     let isDrawing = false;
 
+
     // 컬러팔레트 설정
     const pallete = document.querySelector('.color-pallete');
-    const colorSet = [
-        "#000000", "#FFFFFF", "#FF5733", "#FFC300", "#DAF7A6", "#FF33FF", "#33FF57", "#3380FF", "#FF9966", 
-        "#FF6347", "#FF4500", "#FF1493", "#FFD700", "#FFA500", "#FF8C00", "#32CD32", "#00FF7F", "#228B22", 
-        "#1E90FF", "#0000FF", "#00BFFF", "#8A2BE2", "#9370DB", "#800080", "#A52A2A", "#8B4513", "#D2691E", 
-        "#B22222", "#FFB6C1", "#FF69B4", "#ADFF2F", "#7FFF00", "#F0E68C", "#FFDEAD", "#5F9EA0", "#4682B4", 
-        "#4169E1", "#87CEFA", "#C71585", "#FF00FF", "#40E0D0"
-    ];
+    const colorSet = ["#000000", "#FFFFFF", "#FF5733", "#FFC300", "#DAF7A6"];
 
 
     // 좌표 추출 (마우스/터치 구분)
