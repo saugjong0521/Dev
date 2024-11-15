@@ -12,8 +12,8 @@ export default function Canvas(){
     // 영역 
     useEffect(()=>{
         const canvas = CanvasRef.current;
-        canvas.width = CanvasBox.innerWidth;
-        canvas.height = CanvasBox.innerHeight;
+        canvas.width = Canvas.parentElement.clientWidth;
+        canvas.height = CanvasBox.parentElement.clientHeight;
     })
 
 
@@ -38,4 +38,9 @@ export default function Canvas(){
 const CanvasBox = styled.div`
     width: 100vw;
     height: 100vh;
+
+    canvas{
+        width: 100%;
+        height: 100%;
+    }
 `
