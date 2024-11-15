@@ -156,6 +156,7 @@
   },
   "active": "b35f2d7cd194916b",
   "lastOpenFiles": [
+    "Output/DoodleDraw/Login.jsx",
     "Output/DoodleDraw/components/login",
     "Output/DoodleDraw/components/doodleDraw/Event.jsx",
     "Output/DoodleDraw/components/doodleDraw/Result.jsx",
@@ -166,7 +167,6 @@
     "Output/DoodleDraw/components/doodleDraw/UndoBtn.jsx",
     "Output/DoodleDraw/components/doodleDraw/ResetBtn.jsx",
     "Output/DoodleDraw/components/doodleDraw/ToolBox.jsx",
-    "Output/DoodleDraw/components/doodleDraw/ThicknessBar.jsx",
     "Output/shoppingmall/node_modules/swiper/README.md",
     "Output/shoppingmall/node_modules/@tanstack/react-query/build/codemods/src/v5/keep-previous-data/README.md",
     "Output/shoppingmall/node_modules/sockjs/node_modules/uuid/CONTRIBUTING.md",
