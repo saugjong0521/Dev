@@ -540,24 +540,11 @@ function addColor (){
     colorDiv.style.backgroundColor = newColor;
     pallete.appendChild(colorDiv);
 
-    // 새로 추가된 색상에 대한 클릭 이벤트 리스너 추가
     colorDiv.addEventListener('click', () => {
-        color = newColor;  // 색상 변경
+        color = newColor;
     });
+    changeColor();
 }
-
-// 색상 변경 처리
-function changeColor() {
-    const colorItems = document.querySelectorAll('.colors');
-    colorItems.forEach(item => {
-        item.addEventListener('click', () => {
-            color = window.getComputedStyle(item).getPropertyValue('background-color');
-        });
-    });
-}
-
-// 초기 색상 변경 처리
-changeColor();  // 초기 색상 변경 적용
     </script>
 
 
