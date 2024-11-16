@@ -5,21 +5,21 @@
     "children": [
       {
         "id": "ef4ba50e0534151b",
+        "id": "c2e0847a18ac5f9f",
         "type": "tabs",
         "children": [
           {
-            "id": "0c9100d4049f053a",
+            "id": "b35f2d7cd194916b",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.7.6"
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Release Notes 1.7.6"
+              "title": "New tab"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -160,20 +160,25 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0c9100d4049f053a",
+  "active": "b35f2d7cd194916b",
   "lastOpenFiles": [
-    "Output/shoppingmall/src/pages/ProductEdit.jsx",
-    "Output/shoppingmall/src/pages/ProductAdd.jsx",
-    "Output/shoppingmall/src/pages/AdminPage.jsx",
-    "Output/shoppingmall/src/components/ProductReview.jsx",
-    "Output/shoppingmall/src/components/BestProducts.jsx",
-    "Output/shoppingmall/src/pages/QnADetailPage.jsx",
-    "Output/shoppingmall/src/components/BoardListItem.jsx",
-    "Output/shoppingmall/src/pages/QnA.jsx",
-    "Output/shoppingmall/node_modules/@firebase/storage-compat/dist/esm/test/unit/index.test.d.ts",
-    "Output/shoppingmall/node_modules/@firebase/storage-compat/dist/esm/test/unit/service.test.d.ts",
-    "Output/shoppingmall/node_modules/@firebase/storage-compat/dist/esm/test/unit/reference.test.d.ts",
-    "Output/shoppingmall/node_modules/html-entities/README.md",
+    "Output/DoodleDraw/Login.jsx",
+    "Output/DoodleDraw/components/login",
+    "Output/DoodleDraw/components/doodleDraw/Event.jsx",
+    "Output/DoodleDraw/components/doodleDraw/Result.jsx",
+    "Output/DoodleDraw/components/doodleDraw/Question.jsx",
+    "Output/DoodleDraw/components/doodleDraw/LoadingOverlay.jsx",
+    "Output/DoodleDraw/components/globalComponents/MiniChattingRoom.jsx",
+    "Output/DoodleDraw/components/doodleDraw/Drawing.jsx",
+    "Output/DoodleDraw/components/doodleDraw/UndoBtn.jsx",
+    "Output/DoodleDraw/components/doodleDraw/ResetBtn.jsx",
+    "Output/DoodleDraw/components/doodleDraw/ToolBox.jsx",
+    "Output/shoppingmall/node_modules/swiper/README.md",
+    "Output/shoppingmall/node_modules/@tanstack/react-query/build/codemods/src/v5/keep-previous-data/README.md",
+    "Output/shoppingmall/node_modules/sockjs/node_modules/uuid/CONTRIBUTING.md",
+    "Output/shoppingmall/node_modules/undici-types/README.md",
+    "Output/shoppingmall/node_modules/buffer-from/readme.md",
+    "Output/shoppingmall/node_modules/ansi-regex/readme.md",
     "Output/shoppingmall/node_modules/strip-ansi/readme.md",
     "Output/shoppingmall/node_modules/sanitize.css/README.md",
     "Output/shoppingmall/node_modules/sanitize.css/LICENSE.md",
