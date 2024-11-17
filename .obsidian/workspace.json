@@ -11,10 +11,14 @@
             "id": "b35f2d7cd194916b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "로그인 API 문서.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "로그인 API 문서"
             }
           }
         ]
@@ -156,6 +160,7 @@
   },
   "active": "b35f2d7cd194916b",
   "lastOpenFiles": [
+    "로그인 API 문서.md",
     "Output/DoodleDraw/Login.jsx",
     "Output/DoodleDraw/components/login",
     "Output/DoodleDraw/components/doodleDraw/Event.jsx",
@@ -166,7 +171,6 @@
     "Output/DoodleDraw/components/doodleDraw/Drawing.jsx",
     "Output/DoodleDraw/components/doodleDraw/UndoBtn.jsx",
     "Output/DoodleDraw/components/doodleDraw/ResetBtn.jsx",
-    "Output/DoodleDraw/components/doodleDraw/ToolBox.jsx",
     "Output/shoppingmall/node_modules/swiper/README.md",
     "Output/shoppingmall/node_modules/@tanstack/react-query/build/codemods/src/v5/keep-previous-data/README.md",
     "Output/shoppingmall/node_modules/sockjs/node_modules/uuid/CONTRIBUTING.md",
