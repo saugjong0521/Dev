@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "로그인 API 문서"
             }
+          },
+          {
+            "id": "0c57153143905089",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.7.7"
+              },
+              "icon": "lucide-file",
+              "title": "Release Notes 1.7.7"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -158,7 +171,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d5d31f538f436ad8",
+  "active": "0c57153143905089",
   "lastOpenFiles": [
     "typescript/basic/02.function.js",
     "typescript/basic/02.function.ts",

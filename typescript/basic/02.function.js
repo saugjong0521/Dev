@@ -1,4 +1,13 @@
 "use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 // 자바 스크립트 방식
 function addJsVer(num01, num02) {
     return num01 + num02;
@@ -39,9 +48,55 @@ function result(item) {
 let result01 = result('hi');
 console.log(result01.toUpperCase());
 let result02 = result(1212);
-console.log(result02.toUpperCase()); // 에러
+// console.log(result02.toUpperCase()) // 에러
 function resultAny(item) {
     return item;
 }
 let resultAny01 = resultAny(1212);
-console.log(resultAny01.toUpperCase());
+// console.log(resultAny01.toUpperCase())
+// 선택옵션 변수
+// 기본 변수값에서 변수가 선언되지 않은 경우, 유효성 검사에서 에러가 출력
+/*
+아래의 코드는 에러
+function nameItem (firstName : string, lastName : string){
+    console.log(firstName, lastName)
+}
+nameItem('lee')
+ */
+function nameItem2(firstName, lastName) {
+    console.log(firstName, lastName);
+}
+nameItem2('이');
+function nameItem3(firstName, lastName = '순신') {
+    console.log(firstName, lastName);
+}
+nameItem3('이');
+// 변수명 뒤에 ?가 붙게 되면 필수값이 아닌 선택값으로 변경
+// ? 가 없으면 무조건적으로 필수값이 되며, 생략할 경우 유효성 검사에서 에러
+// ? 를 작성 후에는 유효성 검사에서 검사되지 않으며, 기본값은 undefined가 된다.
+// 비동기 통신
+function fetchData(url) {
+    return new Promise((res) => {
+        setTimeout(() => {
+            res('data' + url);
+        }, 100);
+    });
+}
+fetchData('https://www.naver.com').then((data) => {
+    console.log(data);
+}).catch((error) => {
+    console.error(error);
+});
+//aync-await버전
+function fromData() {
+    return __awaiter(this, void 0, void 0, function* () {
+        try {
+            const data = yield fetchData('https://www.daum.net');
+            console.log(data);
+        }
+        catch (error) {
+            console.error(error);
+        }
+    });
+}
+fromData();

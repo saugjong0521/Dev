@@ -49,11 +49,68 @@ let result01 = result<string>('hi');
 console.log(result01.toUpperCase())
 
 let result02 = result<number>(1212);
-console.log(result02.toUpperCase()) // 에러
+// console.log(result02.toUpperCase()) // 에러
 
 
 function resultAny (item : any) : any {
     return item;
 }
 let resultAny01 = resultAny(1212);
-console.log(resultAny01.toUpperCase())
+// console.log(resultAny01.toUpperCase())
+
+
+
+
+
+// 선택옵션 변수
+
+// 기본 변수값에서 변수가 선언되지 않은 경우, 유효성 검사에서 에러가 출력
+/*
+아래의 코드는 에러
+function nameItem (firstName : string, lastName : string){
+    console.log(firstName, lastName)
+}
+nameItem('lee')
+ */
+
+function nameItem2 (firstName: string, lastName?: string) :void {
+    console.log(firstName, lastName)
+}
+nameItem2('이')
+
+
+function nameItem3 (firstName: string, lastName: string = '순신') {
+    console.log(firstName, lastName)
+}
+nameItem3('이')
+
+// 변수명 뒤에 ?가 붙게 되면 필수값이 아닌 선택값으로 변경
+// ? 가 없으면 무조건적으로 필수값이 되며, 생략할 경우 유효성 검사에서 에러
+// ? 를 작성 후에는 유효성 검사에서 검사되지 않으며, 기본값은 undefined가 된다.
+
+
+
+// 비동기 통신
+function fetchData(url: string) : Promise<string> {
+    return new Promise((res)=>{
+        setTimeout(() => {
+            res('data' + url)
+        }, 100)
+    })
+}
+fetchData('https://www.naver.com').then((data)=>{
+    console.log(data)
+}).catch((error)=>{
+    console.error(error)
+})
+
+//aync-await버전
+async function fromData(){
+    try {
+        const data = await fetchData('https://www.daum.net')
+        console.log(data)
+    } catch(error){
+        console.error(error)
+    }
+}
+fromData();
