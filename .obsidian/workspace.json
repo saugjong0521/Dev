@@ -5,21 +5,21 @@
     "children": [
       {
         "id": "ef4ba50e0534151b",
-        "id": "c2e0847a18ac5f9f",
         "type": "tabs",
         "children": [
           {
-            "id": "b35f2d7cd194916b",
+            "id": "0c9100d4049f053a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.7.6"
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Release Notes 1.7.6"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -160,25 +160,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b35f2d7cd194916b",
+  "active": "0c9100d4049f053a",
   "lastOpenFiles": [
-    "Output/DoodleDraw/Login.jsx",
-    "Output/DoodleDraw/components/login",
-    "Output/DoodleDraw/components/doodleDraw/Event.jsx",
-    "Output/DoodleDraw/components/doodleDraw/Result.jsx",
-    "Output/DoodleDraw/components/doodleDraw/Question.jsx",
-    "Output/DoodleDraw/components/doodleDraw/LoadingOverlay.jsx",
+    "conflict-files-obsidian-git.md",
+    "Output/DoodleDraw/components/globalComponents/NavigateBar.jsx",
     "Output/DoodleDraw/components/globalComponents/MiniChattingRoom.jsx",
-    "Output/DoodleDraw/components/doodleDraw/Drawing.jsx",
     "Output/DoodleDraw/components/doodleDraw/UndoBtn.jsx",
-    "Output/DoodleDraw/components/doodleDraw/ResetBtn.jsx",
+    "Output/DoodleDraw/components/doodleDraw/ThicknessBar.jsx",
     "Output/DoodleDraw/components/doodleDraw/ToolBox.jsx",
-    "Output/shoppingmall/node_modules/swiper/README.md",
-    "Output/shoppingmall/node_modules/@tanstack/react-query/build/codemods/src/v5/keep-previous-data/README.md",
-    "Output/shoppingmall/node_modules/sockjs/node_modules/uuid/CONTRIBUTING.md",
-    "Output/shoppingmall/node_modules/undici-types/README.md",
-    "Output/shoppingmall/node_modules/buffer-from/readme.md",
-    "Output/shoppingmall/node_modules/ansi-regex/readme.md",
+    "Output/DoodleDraw/components/doodleDraw/SaveBtn.jsx",
+    "Output/DoodleDraw/components/doodleDraw/Result.jsx",
+    "Output/DoodleDraw/components/doodleDraw/LoadingOverlay.jsx",
+    "Output/DoodleDraw/components/doodleDraw/Question.jsx",
+    "Output/DoodleDraw/components/doodleDraw/Drawing.jsx",
+    "Output/shoppingmall/node_modules/html-entities/README.md",
     "Output/shoppingmall/node_modules/strip-ansi/readme.md",
     "Output/shoppingmall/node_modules/sanitize.css/README.md",
     "Output/shoppingmall/node_modules/sanitize.css/LICENSE.md",
