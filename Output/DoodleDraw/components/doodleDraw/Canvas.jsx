@@ -28,6 +28,7 @@ export default function Canvas(){
     })
 
 
+    //drawing에서는 nativeEvent offsetX, offsetY으로 구현
 
 
     return(
