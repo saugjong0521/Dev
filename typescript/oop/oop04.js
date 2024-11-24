@@ -42,3 +42,9 @@ class PizzaMaker {
 }
 PizzaMaker.basePrice = 10;
 PizzaMaker.baseToppingPrice = 2;
+class CheesePizzaMaker extends PizzaMaker {
+    makePizza(size, topping) {
+        const cheeseTopping = ['cheese', ...topping];
+        return super.makePizza(size, cheeseTopping);
+    }
+}

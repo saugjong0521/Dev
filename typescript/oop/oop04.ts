@@ -50,11 +50,18 @@ class PizzaMaker {
     calcPrice(pizza: Pizza): number{
         const sizePrice = pizza.size === 'L' ? 1.5 : pizza.size === 'M' ? 1.2 : 1.0;
         return(
-            (PizzaMaker.basePrice + pizza.topping.length * PizzaMaker.baseToppingPrice) * sizePrice;
+            (PizzaMaker.basePrice + pizza.topping.length * PizzaMaker.baseToppingPrice) * sizePrice
         )
     }
 
     checkStatus() :void{
         console.log(`남은 피자 도우 갯수: ${this.pizzaCount}`)
+    }
+}
+
+class CheesePizzaMaker extends PizzaMaker{
+    makePizza(size: string, topping: string[]): Pizza {
+        const cheeseTopping = ['cheese', ...topping];
+        return super.makePizza(size, cheeseTopping)
     }
 }
