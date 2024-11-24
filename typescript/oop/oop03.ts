@@ -54,3 +54,15 @@ class HoneyTeaMaker extends TeaMaker3{
         }
     }
 }
+
+
+const machines : TeaMaker3[] = [
+    new TeaMaker3(1000),
+    new MilkTeaMaker(1000),
+    new HoneyTeaMaker(1000)
+]
+
+machines.forEach(el => {
+    console.log('-----------------------');
+    console.log(el.makeTea3(2, true));
+})

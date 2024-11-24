@@ -33,3 +33,12 @@ class HoneyTeaMaker extends TeaMaker3 {
         return Object.assign(Object.assign({}, tea), { isHoney: true });
     }
 }
+const machines = [
+    new TeaMaker3(1000),
+    new MilkTeaMaker(1000),
+    new HoneyTeaMaker(1000)
+];
+machines.forEach(el => {
+    console.log('-----------------------');
+    console.log(el.makeTea3(2, true));
+});
