@@ -60,3 +60,17 @@ class BulgogiPizzaMaker extends PizzaMaker {
         return super.makePizza(size, bulgogiTopping);
     }
 }
+const makers = [
+    new PizzaMaker(5),
+    new CheesePizzaMaker(5),
+    new PepperroniPizzaMaker(3),
+    new BulgogiPizzaMaker(2)
+];
+makers.forEach(el => {
+    console.log('----------------------');
+    const pizza = el.makePizza(`M`, ['mushroom', 'olive']);
+    console.log(pizza);
+    const price = el.calcPrice(pizza);
+    console.log(`피자 가격은 ${price}원 입니다.`);
+    el.checkStatus();
+});
