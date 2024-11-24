@@ -47,5 +47,5 @@ class Pizzamaker {
         }
     }
 
-    calcPri
+    calcPrice(pizza: Pizza): number
 }
