@@ -36,6 +36,6 @@ function makeTea(teaBags: number, addLemon: boolean): TeaCup{
     }
 }
 
-waterAmount += 4 * WaterTeaBag;
+waterAmount += 1253;
 const tea = makeTea(2, false)
 console.log(tea)
