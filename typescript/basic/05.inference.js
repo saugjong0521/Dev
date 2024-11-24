@@ -19,7 +19,7 @@ function test001(message = 'hello') {
     console.log(message);
 }
 test001('hi');
-test001(235); // Argument of type 'number' is not assignable to parameter of type 'string'.
+// test001(235) // Argument of type 'number' is not assignable to parameter of type 'string'.
 function add(x, y) {
     return x + y;
 } // 매개변수의 타입이 미리 지정되어 있지 않다면 any 타입으로 추론

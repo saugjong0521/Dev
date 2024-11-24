@@ -20,7 +20,7 @@ function test001(message = 'hello'){
 }
 
 test001('hi')
-test001(235) // Argument of type 'number' is not assignable to parameter of type 'string'.
+// test001(235) // Argument of type 'number' is not assignable to parameter of type 'string'.
 
 
 function add(x,y){ // Parameter 'x','y' implicitly has an 'any' type.
