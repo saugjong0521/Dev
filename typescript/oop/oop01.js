@@ -27,5 +27,7 @@ function makeTea(teaBags, addLemon) {
     };
 }
 waterAmount += 1253;
-const tea = makeTea(2, false);
-console.log(tea);
+const tea1 = makeTea(2, false);
+// const tea2 = makeTea(7, true)
+console.log(tea1);
+// console.log(tea2)
