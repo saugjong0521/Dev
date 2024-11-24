@@ -421,7 +421,6 @@ function drawing() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             drawingHistory = [];
             currentStep = -1;
-            saveState();
         });
     }
 
@@ -438,6 +437,8 @@ function drawing() {
             });
         }
         currentPath = [];
+        console.log(currentStep)
+
     }
 
     function undo() {
@@ -454,6 +455,7 @@ function drawing() {
             ctx.strokeStyle = state.color;
             ctx.lineWidth = state.brush * 3;
             ctx.lineCap = "round";
+            ctx.lineJoin = "round";
             ctx.beginPath();
             ctx.moveTo(state.path[0].x, state.path[0].y);
             for (let j = 1; j < state.path.length; j++) {

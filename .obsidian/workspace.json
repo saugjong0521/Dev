@@ -18,8 +18,21 @@
               "icon": "lucide-file",
               "title": "Release Notes 1.7.6"
             }
+          },
+          {
+            "id": "5773f8ebdd474fb8",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.7.7"
+              },
+              "icon": "lucide-file",
+              "title": "Release Notes 1.7.7"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -160,7 +173,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0c9100d4049f053a",
+  "active": "5773f8ebdd474fb8",
   "lastOpenFiles": [
     "conflict-files-obsidian-git.md",
     "로그인 API 문서.md",
