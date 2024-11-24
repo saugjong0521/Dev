@@ -48,3 +48,15 @@ class CheesePizzaMaker extends PizzaMaker {
         return super.makePizza(size, cheeseTopping);
     }
 }
+class PepperroniPizzaMaker extends PizzaMaker {
+    makePizza(size, topping) {
+        const salamiTopping = ['salami', ...topping];
+        return super.makePizza(size, salamiTopping);
+    }
+}
+class BulgogiPizzaMaker extends PizzaMaker {
+    makePizza(size, topping) {
+        const bulgogiTopping = ['bulgogi', ...topping];
+        return super.makePizza(size, bulgogiTopping);
+    }
+}
