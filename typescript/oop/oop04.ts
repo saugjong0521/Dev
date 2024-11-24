@@ -23,7 +23,7 @@ class Pizzamaker {
     static baseToppingPrice : number = 2;
     pizzaCount : number;
 
-    constructor(pizzeCount: number){
+    constructor(pizzaCount: number){
         this.pizzaCount = this.pizzaCount;
     }
 
@@ -37,7 +37,15 @@ class Pizzamaker {
         const baseTime = size === 'L' ? 20 : size === 'M' ? 15 : 10;
         const toppingTime = 1
         const totalTime = baseTime + (topping.length * toppingTime)
-        const time = `${ + topping.length * 1}분` // 기본 10분, 토핑당 1분
-        console.log(`피자를 만드는 중입니다. 예상 소요시간은 ${time}분 입니다.`)
+
+        console.log(`피자를 만드는 중입니다. 예상 소요시간은 ${totalTime}분 입니다.`)
+
+        return{
+            size,
+            topping,
+            time: `${totalTime}분`
+        }
     }
+
+    calcPri
 }

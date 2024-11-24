@@ -13,7 +13,7 @@ class로 피자의 로직 설계
 
 */
 class Pizzamaker {
-    constructor(pizzeCount) {
+    constructor(pizzaCount) {
         this.pizzaCount = this.pizzaCount;
     }
     makePizza(size, topping) {
@@ -25,8 +25,12 @@ class Pizzamaker {
         const baseTime = size === 'L' ? 20 : size === 'M' ? 15 : 10;
         const toppingTime = 1;
         const totalTime = baseTime + (topping.length * toppingTime);
-        const time = `${+topping.length * 1}분`; // 기본 10분, 토핑당 1분
-        console.log(`피자를 만드는 중입니다. 예상 소요시간은 ${time}분 입니다.`);
+        console.log(`피자를 만드는 중입니다. 예상 소요시간은 ${totalTime}분 입니다.`);
+        return {
+            size,
+            topping,
+            time: `${totalTime}분`
+        };
     }
 }
 Pizzamaker.basePrice = 10;
