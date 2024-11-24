@@ -24,7 +24,7 @@ class PizzaMaker {
     pizzaCount : number;
 
     constructor(pizzaCount: number){
-        this.pizzaCount = this.pizzaCount;
+        this.pizzaCount = pizzaCount;
     }
 
     makePizza(size: string, topping: string[]): Pizza{
@@ -52,5 +52,9 @@ class PizzaMaker {
         return(
             (PizzaMaker.basePrice + pizza.topping.length * PizzaMaker.baseToppingPrice) * sizePrice;
         )
+    }
+
+    checkStatus() :void{
+        console.log(`남은 피자 도우 갯수: ${this.pizzaCount}`)
     }
 }

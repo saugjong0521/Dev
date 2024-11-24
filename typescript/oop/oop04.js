@@ -14,7 +14,7 @@ class로 피자의 로직 설계
 */
 class PizzaMaker {
     constructor(pizzaCount) {
-        this.pizzaCount = this.pizzaCount;
+        this.pizzaCount = pizzaCount;
     }
     makePizza(size, topping) {
         if (this.pizzaCount <= 0) {
@@ -35,6 +35,9 @@ class PizzaMaker {
     calcPrice(pizza) {
         const sizePrice = pizza.size === 'L' ? 1.5 : pizza.size === 'M' ? 1.2 : 1.0;
         return ((PizzaMaker.basePrice + pizza.topping.length * PizzaMaker.baseToppingPrice) * sizePrice);
+    }
+    checkStatus() {
+        console.log(`남은 피자 도우 갯수: ${this.pizzaCount}`);
     }
 }
 PizzaMaker.basePrice = 10;
