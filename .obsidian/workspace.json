@@ -175,6 +175,8 @@
   },
   "active": "d5d31f538f436ad8",
   "lastOpenFiles": [
+    "typescript/oop/oop04.js",
+    "typescript/oop/oop04.ts",
     "typescript/oop/oop03.js",
     "typescript/oop/oop03.ts",
     "typescript/oop/oop02.js",
@@ -186,8 +188,6 @@
     "conflict-files-obsidian-git.md",
     "typescript/basic/04.enum.ts",
     "typescript/basic/04.enum.js",
-    "typescript/basic/05.inference.ts",
-    "typescript/basic/05.inference.js",
     "Output/shoppingmall/node_modules/html-entities/README.md",
     "Output/shoppingmall/node_modules/strip-ansi/readme.md",
     "Output/shoppingmall/node_modules/sanitize.css/README.md",
