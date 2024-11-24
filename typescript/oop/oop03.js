@@ -26,3 +26,10 @@ class MilkTeaMaker extends TeaMaker3 {
         return Object.assign(Object.assign({}, tea), { isMilk: true });
     }
 }
+class HoneyTeaMaker extends TeaMaker3 {
+    makeTea3(teaBags, addLemon) {
+        const tea = super.makeTea3(teaBags, addLemon);
+        console.log('꿀을 추가했습니다.');
+        return Object.assign(Object.assign({}, tea), { isHoney: true });
+    }
+}

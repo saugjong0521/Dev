@@ -43,3 +43,14 @@ class MilkTeaMaker extends TeaMaker3 {
         }
     }
 }
+
+class HoneyTeaMaker extends TeaMaker3{
+    makeTea3(teaBags: number, addLemon: boolean): TeaCup3 {
+        const tea = super.makeTea3(teaBags, addLemon);
+        console.log('꿀을 추가했습니다.')
+        return{
+            ...tea,
+            isHoney: true
+        }
+    }
+}
