@@ -6,7 +6,7 @@ class TeaMaker3 {
         this.waterAmount3 = waterAmount3;
     }
     makeTea3(teaBags, addLemon) {
-        if (this.waterAmount3 < teaBags * TeaMaker3waterTeaBag3) {
+        if (this.waterAmount3 < teaBags * TeaMaker3.waterTeaBag3) {
             throw new Error('물의 양이 부족합니다.');
         }
         this.waterAmount3 -= teaBags * TeaMaker3.waterTeaBag3;
@@ -18,3 +18,11 @@ class TeaMaker3 {
     }
 }
 TeaMaker3.waterTeaBag3 = 250;
+// 우유와 꿀은 상속을 이용해서 코드 작성
+class MilkTeaMaker extends TeaMaker3 {
+    makeTea3(teaBags, addLemon) {
+        const tea = super.makeTea3(teaBags, addLemon);
+        console.log('우유를 추가했습니다.');
+        return (isMilk) => ;
+    }
+}
