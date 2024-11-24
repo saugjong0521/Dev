@@ -12,7 +12,7 @@ class로 피자의 로직 설계
 - 각 피자메이커를 사용해서 피자를 만들고 결과와 가격을 출력
 
 */
-class Pizzamaker {
+class PizzaMaker {
     constructor(pizzaCount) {
         this.pizzaCount = this.pizzaCount;
     }
@@ -32,6 +32,10 @@ class Pizzamaker {
             time: `${totalTime}분`
         };
     }
+    calcPrice(pizza) {
+        const sizePrice = pizza.size === 'L' ? 1.5 : pizza.size === 'M' ? 1.2 : 1.0;
+        return ((PizzaMaker.basePrice + pizza.topping.length * PizzaMaker.baseToppingPrice) * sizePrice);
+    }
 }
-Pizzamaker.basePrice = 10;
-Pizzamaker.baseToppingPrice = 2;
+PizzaMaker.basePrice = 10;
+PizzaMaker.baseToppingPrice = 2;

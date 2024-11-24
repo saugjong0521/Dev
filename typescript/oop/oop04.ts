@@ -18,7 +18,7 @@ type Pizza = {
     time?: string   //?는 선택, 필수가 아니게 만드는 요소
 }
 
-class Pizzamaker {
+class PizzaMaker {
     static basePrice : number = 10;
     static baseToppingPrice : number = 2;
     pizzaCount : number;
@@ -47,5 +47,10 @@ class Pizzamaker {
         }
     }
 
-    calcPrice(pizza: Pizza): number
+    calcPrice(pizza: Pizza): number{
+        const sizePrice = pizza.size === 'L' ? 1.5 : pizza.size === 'M' ? 1.2 : 1.0;
+        return(
+            (PizzaMaker.basePrice + pizza.topping.length * PizzaMaker.baseToppingPrice) * sizePrice;
+        )
+    }
 }
