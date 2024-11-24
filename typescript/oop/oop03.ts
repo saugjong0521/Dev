@@ -18,7 +18,7 @@ class TeaMaker3 {
     }
 
     makeTea3(teaBags: number, addLemon: boolean): TeaCup3{
-        if(this.waterAmount3 < teaBags * waterTeaBag3){
+        if(this.waterAmount3 < teaBags * TeaMaker3waterTeaBag3){
             throw new Error('물의 양이 부족합니다.')
         }
         this.waterAmount3 -= teaBags * TeaMaker3.waterTeaBag3;
