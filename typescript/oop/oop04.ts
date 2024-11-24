@@ -90,7 +90,7 @@ const makers : PizzaMaker[] = [
 
 makers.forEach(el => {
     console.log('----------------------')
-    const pizza = el.makePizza(`M`, ['mushroom', 'olive'])
+    const pizza = el.makePizza(`S`, ['mushroom', 'olive'])
     console.log(pizza)
     const price = el.calcPrice(pizza)
     console.log(`피자 가격은 ${price}원 입니다.`)
