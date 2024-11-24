@@ -15,29 +15,29 @@ object-oriented programming (객체지향 프로그래밍)
 
 // 기존 tea 만들기 관리 로직
 
-type TeaCup = {
+type TeaCup1 = {
     teaBags: number,    // 티 백의 갯수를 밧아옴
     isLemon: boolean    // 레몬의 포함여부를 받아옴
 }
 
-const WaterTeaBag : number = 250;   // 하나의 티백당 필요한 물의 양을 상수로 선언
-let waterAmount : number = 0;   // 현재 보유중인 물의 양
+const WaterTeaBag1 : number = 250;   // 하나의 티백당 필요한 물의 양을 상수로 선언
+let waterAmount1 : number = 0;   // 현재 보유중인 물의 양
 
 // tea를 만드는 함수를 제작 : TeaBag의 갯수를 매개변수로 받아옴
-function makeTea(teaBags: number, addLemon: boolean): TeaCup{
-    if(waterAmount < teaBags * WaterTeaBag){
+function makeTea1(teaBags: number, addLemon: boolean): TeaCup1{
+    if(waterAmount1 < teaBags * WaterTeaBag1){
         throw new Error('물의 양이 부족합니다.')
     }
     // tea를 만들면서 사용된 물의 양만큼 빼기
-    waterAmount -= teaBags * WaterTeaBag
+    waterAmount1 -= teaBags * WaterTeaBag1
     return {
         teaBags,
         isLemon: addLemon
     }
 }
 
-waterAmount += 1253;
-const tea1 = makeTea(2, false)
+waterAmount1 += 1253;
+const tea1 = makeTea1(2, false)
 // const tea2 = makeTea(7, true)
 console.log(tea1)
 // console.log(tea2)
