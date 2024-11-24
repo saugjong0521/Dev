@@ -19,5 +19,13 @@ function makeTea(teaBags, addLemon) {
     if (waterAmount < teaBags * WaterTeaBag) {
         throw new Error('물의 양이 부족합니다.');
     }
+    // tea를 만들면서 사용된 물의 양만큼 빼기
     waterAmount -= teaBags * WaterTeaBag;
+    return {
+        teaBags,
+        isLemon: addLemon
+    };
 }
+waterAmount += 4 * WaterTeaBag;
+const tea = makeTea(2, false);
+console.log(tea);
