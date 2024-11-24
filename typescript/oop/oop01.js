@@ -12,4 +12,12 @@ object-oriented programming (객체지향 프로그래밍)
 - 한 클래스가 다른 클래스의 속성과 메소드를 물려받아서 사용하는 기능
 - 코드의 재사용성이나 유지보수성이 좋아짐
 */
-const WaterTeaBag = 250;
+const WaterTeaBag = 250; // 하나의 티백당 필요한 물의 양을 상수로 선언
+let waterAmount = 0; // 현재 보유중인 물의 양
+// tea를 만드는 함수를 제작 : TeaBag의 갯수를 매개변수로 받아옴
+function makeTea(teaBags, addLemon) {
+    if (waterAmount < teaBags * WaterTeaBag) {
+        throw new Error('물의 양이 부족합니다.');
+    }
+    waterAmount -= teaBags * WaterTeaBag;
+}
