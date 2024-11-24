@@ -23,6 +23,6 @@ class MilkTeaMaker extends TeaMaker3 {
     makeTea3(teaBags, addLemon) {
         const tea = super.makeTea3(teaBags, addLemon);
         console.log('우유를 추가했습니다.');
-        return (isMilk) => ;
+        return Object.assign(Object.assign({}, tea), { isMilk: true });
     }
 }

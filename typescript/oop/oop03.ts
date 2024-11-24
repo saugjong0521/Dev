@@ -37,8 +37,9 @@ class MilkTeaMaker extends TeaMaker3 {
     makeTea3(teaBags: number, addLemon: boolean): TeaCup3 {
         const tea = super.makeTea3(teaBags, addLemon);
         console.log('우유를 추가했습니다.')
-        return (
+        return {
+            ...tea,
             isMilk: true
-        )
+        }
     }
 }
