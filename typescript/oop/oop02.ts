@@ -40,3 +40,8 @@ class TeaMaker {
         this.waterAmount2 += amount
     }
 }
+
+
+const teaMaker = new TeaMaker(1000);
+teaMaker.makeTea2(3, true)
+teaMaker.addWater(500)

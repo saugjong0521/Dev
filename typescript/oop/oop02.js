@@ -28,3 +28,6 @@ class TeaMaker {
     }
 }
 TeaMaker.waterTeaBag2 = 250;
+const teaMaker = new TeaMaker(1000);
+teaMaker.makeTea2(3, true);
+teaMaker.addWater(500);
