@@ -13,7 +13,7 @@ object-oriented programming (객체지향 프로그래밍)
 */
 
 
-// tea 만들기 관리 로직
+// 기존 tea 만들기 관리 로직
 
 type TeaCup = {
     teaBags: number,    // 티 백의 갯수를 밧아옴
@@ -41,3 +41,12 @@ const tea1 = makeTea(2, false)
 // const tea2 = makeTea(7, true)
 console.log(tea1)
 // console.log(tea2)
+
+/*
+현재 코드의 문제점
+- 외부에서의 상태변경이 가능해짐
+waterAmout가 외부에 의해 변경될 가능성이 있다.
+
+변수의 변경시점을 추적하기 어려워 유지보수에 단점
+데이터와 로직이 분리되어 있다.
+*/
