@@ -41,8 +41,9 @@ export default function RootLayout({ children }) {
 
 /*
 nextJs에서 달라지는 것들
-
-
+- src 폴더가 중요해지지는 않는다.
+(프로젝트의 규모가 커지면 폴더링을 쉽게 구분하기 위해 가지고 있는 경우가 있음)
+폴더링의 최상위 루트로 사용되기 때문에 선택사항
 
 라우팅 기본 탑재
 app폴더 안에 생성된 폴더명은 라우터 주소가 되고,내부폴더에 있는 page.jsx파일을 랜더링 하는 방식 page.jsx, index.jsx
