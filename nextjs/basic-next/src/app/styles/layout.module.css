@@ -12,5 +12,6 @@
     display: flex;
     list-style-type: none;
     flex-wrap: nowrap;
-    width: 10vw;
+    align-items: center;
+    justify-content: center;
 }
