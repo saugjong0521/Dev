@@ -173,6 +173,7 @@
   },
   "active": "0c57153143905089",
   "lastOpenFiles": [
+    "nextjs/basic-next/src/app/styles/layout.module.css",
     "nextjs/basic-next/src/app/styles/globals.css",
     "nextjs/basic-next/src/app/styles",
     "nextjs/basic-next/node_modules/next/dist/esm/client/components/react-dev-overlay/internal/container/RuntimeError/index.js.map",
@@ -183,7 +184,6 @@
     "nextjs/basic-next/node_modules/next/dist/esm/client/components/react-dev-overlay/internal/container/RuntimeError/ComponentStackFrameRow.js",
     "nextjs/basic-next/node_modules/next/dist/esm/client/components/react-dev-overlay/internal/container/RuntimeError/component-stack-pseudo-html.js.map",
     "nextjs/basic-next/node_modules/next/dist/esm/client/components/react-dev-overlay/internal/container/RuntimeError/component-stack-pseudo-html.js",
-    "nextjs/basic-next/node_modules/next/dist/esm/client/components/react-dev-overlay/internal/container/RuntimeError/CallStackFrame.js.map",
     "nextjs/basic-next/node_modules/next/dist/compiled/@babel/runtime/README.md",
     "nextjs/basic-next/node_modules/next/dist/compiled/regenerator-runtime/README.md",
     "nextjs/basic-next/node_modules/next/dist/compiled/react-refresh/README.md",
