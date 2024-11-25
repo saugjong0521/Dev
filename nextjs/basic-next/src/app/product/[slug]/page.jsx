@@ -1,6 +1,6 @@
-export default function ProductDetailPage(){
+export default function ProductDetailPage({params}){
     return(
-        <></>
+        <h1>{params.slug} 상세페이지</h1>
     )
 }
 
