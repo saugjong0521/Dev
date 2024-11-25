@@ -11,4 +11,6 @@
 .gnb {
     display: flex;
     list-style-type: none;
+    gap: 10px;
+    justify-content: flex-end;
 }
