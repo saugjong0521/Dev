@@ -173,6 +173,7 @@
   },
   "active": "0c57153143905089",
   "lastOpenFiles": [
+    "nextjs",
     "typescript/oop/oop04.ts",
     "typescript/oop/oop04.js",
     "typescript/oop/oop03.ts",
@@ -183,7 +184,6 @@
     "typescript/oop/oop01.js",
     "typescript/oop",
     "typescript/basic/02.function.js",
-    "typescript/basic/02.function.ts",
     "로그인 API 문서.md",
     "Output/shoppingmall/node_modules/swiper/README.md",
     "Output/shoppingmall/node_modules/@tanstack/react-query/build/codemods/src/v5/keep-previous-data/README.md",
