@@ -1,5 +1,8 @@
 import localFont from "next/font/local";
 import "./styles/layout.module.css"
+import styles from "./styles/layout.module.css"
+import Link from "next/link";
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -22,11 +25,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         {/* {children} */}
-        <heder>
+        <heder className="styles.header">
           <h1>로고</h1>
           <nav>
             <ul>
-              <li><Linl href='/about'>About</Link></li>
+              <li><Link href='/about'>About</Link></li>
             </ul>
           </nav>
         </heder>
