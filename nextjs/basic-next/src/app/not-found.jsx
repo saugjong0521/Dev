@@ -2,7 +2,10 @@
 
 export default function NotFound(){
     return(
+        <>
         <h1>페이지를 출력할 수 없습니다.</h1>
+        <p>자세한 내용은 고객센터에 문의해 주세요</p>
+        </>
     )
 }
 

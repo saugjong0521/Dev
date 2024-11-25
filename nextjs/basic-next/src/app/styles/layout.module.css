@@ -11,5 +11,5 @@
 .gnb {
     display: flex;
     list-style-type: none;
-    
+    background-color: aliceblue;
 }
