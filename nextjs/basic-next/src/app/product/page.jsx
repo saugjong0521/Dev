@@ -13,11 +13,11 @@ export default function ProductPage(){
         <>
         <h1>제품 페이지 입니다.</h1>
         <ul>
-        {products.map((el, idx)=>{
+        {products.map((el, idx)=>(
             <li key={idx}>
                 <Link href={`/product/${el}`}>{el}</Link>
             </li>
-        })}
+        ))}
         </ul>
 
         </>
