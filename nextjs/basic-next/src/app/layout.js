@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import "./styles/globals.css"
 import styles from "./styles/layout.module.css"
 import Link from "next/link";
 
