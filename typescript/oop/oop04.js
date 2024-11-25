@@ -65,7 +65,7 @@ const makers = [
     new CheesePizzaMaker(5),
     new PepperroniPizzaMaker(3),
     new BulgogiPizzaMaker(2)
-]; // 이게 그럼 각 피자들의 수량에 대한 정의인가?
+];
 makers.forEach(el => {
     console.log('----------------------');
     const pizza = el.makePizza(`M`, ['mushroom', 'olive']);
@@ -73,4 +73,4 @@ makers.forEach(el => {
     const price = el.calcPrice(pizza);
     console.log(`피자 가격은 ${price}원 입니다.`);
     el.checkStatus();
-}); // 그리고 각 피자들을 M 사이즈로 하나씩 만든건가
+});
