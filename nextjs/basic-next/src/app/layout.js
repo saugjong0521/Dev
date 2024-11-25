@@ -24,9 +24,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         {/* {children} */}
-        <heder className="styles.header">
+        <heder className={styles.header}>
           <h1>로고</h1>
-          <nav className="styles.gnb">
+          <nav className={styles.gnb}>
             <ul>
               <li><Link href='/about'>About</Link></li>
             </ul>
