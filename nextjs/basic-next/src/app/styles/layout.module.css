@@ -4,7 +4,7 @@
     align-items: center;
     padding: 24px 12px;
     box-sizing: border-box;
-    width: 100vw;
+    width: 100%;
     border-bottom: solid 1px rgba(255, 255, 255, 0.5);
 }
 
@@ -12,6 +12,5 @@
     display: flex;
     list-style-type: none;
     flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
 }
