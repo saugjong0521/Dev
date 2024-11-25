@@ -173,6 +173,7 @@
   },
   "active": "0c57153143905089",
   "lastOpenFiles": [
+    "nextjs/basic-next/src/app/product/page.jsx",
     "nextjs/basic-next/src/app/product",
     "nextjs/basic-next/src/app/not-found.jsx",
     "nextjs/basic-next/src/not-found.jsx",
@@ -183,7 +184,6 @@
     "nextjs/basic-next/node_modules/next/dist/esm/client/components/react-dev-overlay/internal/container/RuntimeError/index.js",
     "nextjs/basic-next/node_modules/next/dist/esm/client/components/react-dev-overlay/internal/container/RuntimeError/ComponentStackFrameRow.js.map",
     "nextjs/basic-next/node_modules/next/dist/esm/client/components/react-dev-overlay/internal/container/RuntimeError/GroupedStackFrames.js",
-    "nextjs/basic-next/node_modules/next/dist/esm/client/components/react-dev-overlay/internal/container/RuntimeError/GroupedStackFrames.js.map",
     "nextjs/basic-next/node_modules/next/dist/compiled/@babel/runtime/README.md",
     "nextjs/basic-next/node_modules/next/dist/compiled/regenerator-runtime/README.md",
     "nextjs/basic-next/node_modules/next/dist/compiled/react-refresh/README.md",

@@ -30,10 +30,11 @@ export default function RootLayout({ children }) {
           <nav className={styles.gnb}>
             <ul>
               <li><Link href='/about'>About</Link></li>
+              <li><Link href='/product'>product</Link></li>
             </ul>
           </nav>
         </heder>
-        {children}
+        { children }
       </body>
     </html>
   );
