@@ -18,8 +18,8 @@ export default function ProductPage(){
                 <Link href={`/product/${el}`}>{el}</Link>
             </li>
         })}
-    </ul>
+        </ul>
 
-    </>
+        </>
     )
 }
