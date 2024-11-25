@@ -7,3 +7,22 @@
 항상 layout.jsx으로 설정하게 되면, {children}으로 공통 랜더링 설정을 해주면 된다.
 
 */
+
+import Link from "next/link";
+
+export default function ProductLayout({children}){
+    return(
+        <>
+        <nav>
+            <ul>
+                <li><Link href="/product/women">여성복</Link></li>
+                <li><Link href="/product/men">남성복</Link></li>
+                <li><Link href="/product/kids">어린이옷</Link></li>
+            </ul>
+        </nav>
+        <div>
+            {children}
+        </div>
+        </>
+    )
+}
