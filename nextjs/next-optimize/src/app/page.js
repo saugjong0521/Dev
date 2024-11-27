@@ -69,6 +69,7 @@ export default function Home() {
             width={1600}
             height={900}
             sizes=""
+            alt="img3"
             />
 
     </>
