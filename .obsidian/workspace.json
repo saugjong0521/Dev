@@ -173,6 +173,7 @@
   },
   "active": "0c57153143905089",
   "lastOpenFiles": [
+    "nextjs/next-optimize/public/images/bg.jpg",
     "nextjs/next-optimize/public/images/daniel-lincoln-ALG0gP4GDbw-unsplash.jpg",
     "nextjs/next-optimize/public/images",
     "nextjs/next-optimize/public/fonts/Sunshiney-Regular.woff2",
@@ -217,7 +218,6 @@
     "nextjs/basic-next/public/window.svg",
     "nextjs/basic-next/public/vercel.svg",
     "nextjs/basic-next/public/next.svg",
-    "nextjs/basic-next/public/globe.svg",
-    "nextjs/basic-next/public/file.svg"
+    "nextjs/basic-next/public/globe.svg"
   ]
 }
