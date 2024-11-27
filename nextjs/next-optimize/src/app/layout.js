@@ -1,4 +1,6 @@
 import localFont from "next/font/local";
+// 구글폰트에서 폰트 import하기
+import {Jaro} from "next/font/google";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -26,3 +28,10 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+
+/*
+nextJs에서 폰트 적용하는 방법
+
+구글폰트를 이용하는 방법
+*/
