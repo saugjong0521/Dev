@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import bgImage from "../public/images/bg.jpg"
 
 /*
 Image 컴포넌트
@@ -18,7 +19,7 @@ export default function Home() {
   return (
     <>
       {/* 로컬 이미지 불러오기 */}
-
+      <Image src={bgImage} alt="bg" width={600} height={400}/>
     </>
 
   );
