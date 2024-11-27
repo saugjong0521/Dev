@@ -59,7 +59,7 @@ export default function Home() {
       layout="responsive"
       width = {16}
       height = {9}
-      sizes = "(max-width: 768px) 500px, (max-height: "
+      sizes = "(max-width: 768px) 500px, (max-height: 1024px) 50vw, 33vw"
       // layout="reponsive가 되면 width와 height는 값이 아닌 비율로 변경"
       />
     </>
