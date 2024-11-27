@@ -43,7 +43,7 @@ export default function Home() {
     <>
       {/* 로컬 이미지 불러오기 */}
 
-      <img src="../public/images/bg.jpg" width={600}/>
+      <img src="../../public/images/bg.jpg" width={600}/>
       
       <Image src={bgImage} alt="bg" width={600} height={400}/>
 
@@ -59,6 +59,7 @@ export default function Home() {
       layout="responsive"
       width = {16}
       height = {9}
+      max
       // layout="reponsive가 되면 width와 height는 값이 아닌 비율로 변경"
       />
     </>
