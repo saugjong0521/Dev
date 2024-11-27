@@ -68,7 +68,7 @@ export default function Home() {
             sreset="https://images.unsplash.com/photo-1732530361158-09f4154b6b3b?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5fHx8ZW58MHx8fHx8"
             width={1600}
             height={900}
-            sizes=""
+            sizes="(max-width: 768px) 100vw, 50vw"
             alt="img3"
             />
 
