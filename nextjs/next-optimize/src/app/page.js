@@ -42,6 +42,8 @@ export default function Home() {
   return (
     <>
       {/* 로컬 이미지 불러오기 */}
+
+      <img src="../../public/images/bg.jpg" width={600}/>
       <Image src={bgImage} alt="bg" width={600} height={400}/>
 
       {/* 외부 경로에 있는 이미지 가져오기 */}
