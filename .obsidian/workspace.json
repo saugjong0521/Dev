@@ -173,6 +173,7 @@
   },
   "active": "0c57153143905089",
   "lastOpenFiles": [
+    "nextjs/next-optimize/src/app/fonts/Sunshiney-Regular.woff2",
     "nextjs/next-optimize/Sunshiney-Regular.woff2",
     "nextjs/next-optimize/src/app/fonts/GeistVF.woff",
     "nextjs/next-optimize/src/app/fonts/GeistMonoVF.woff",
@@ -183,7 +184,6 @@
     "nextjs/next-optimize/src/app/layout.js",
     "nextjs/next-optimize/src/app/favicon.ico",
     "nextjs/next-optimize/src/app",
-    "nextjs/next-optimize/src",
     "nextjs/next-optimize/node_modules/source-map-js/README.md",
     "nextjs/next-optimize/node_modules/semver/README.md",
     "nextjs/next-optimize/node_modules/sharp/README.md",
