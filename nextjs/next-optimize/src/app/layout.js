@@ -27,10 +27,10 @@ subsets: 웹 폰트에서 특정 문자만 불러오도록 지정(로딩시간�
 영어권: latin
 */
 
-// local폰트
-// const sunshiney = localFont({
-//   src: "../public/fonts/Sunshiney-Regular.woff2",
-// });
+local폰트
+const sunshiney = localFont({
+  src: "../public/fonts/Sunshiney-Regular.woff2",
+});
 
 
 export const metadata = {
