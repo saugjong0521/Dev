@@ -173,6 +173,13 @@
   },
   "active": "0c57153143905089",
   "lastOpenFiles": [
+    "nextjs/next-optimize/public/window.svg",
+    "nextjs/next-optimize/public/next.svg",
+    "nextjs/next-optimize/public/vercel.svg",
+    "nextjs/next-optimize/public/globe.svg",
+    "nextjs/next-optimize/public/file.svg",
+    "nextjs/next-optimize/public",
+    "nextjs/next-optimize",
     "nextjs/basic-next/src/app/product/[slug]/page.jsx",
     "nextjs/basic-next/src/app/product/[slug]",
     "nextjs/basic-next/src/app/product/layout.jsx",
@@ -181,9 +188,6 @@
     "nextjs/basic-next/src/app/about/Page.jsx",
     "nextjs/basic-next/src/app/about",
     "nextjs/basic-next/src/app/product/page.jsx",
-    "nextjs/basic-next/src/app/product",
-    "nextjs/basic-next/src/app/not-found.jsx",
-    "nextjs/basic-next/src/not-found.jsx",
     "nextjs/basic-next/node_modules/next/dist/compiled/@babel/runtime/README.md",
     "nextjs/basic-next/node_modules/next/dist/compiled/regenerator-runtime/README.md",
     "nextjs/basic-next/node_modules/next/dist/compiled/react-refresh/README.md",
@@ -214,10 +218,6 @@
     "nextjs/basic-next/public/next.svg",
     "nextjs/basic-next/public/globe.svg",
     "nextjs/basic-next/public/file.svg",
-    "nextjs/00.basic/public/window.svg",
-    "nextjs/00.basic/public/vercel.svg",
-    "nextjs/00.basic/public/next.svg",
-    "nextjs/00.basic/public/globe.svg",
-    "nextjs/00.basic/public/file.svg"
+    "nextjs/00.basic/public/window.svg"
   ]
 }
