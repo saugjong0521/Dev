@@ -21,15 +21,17 @@ export default function Home() {
       {/* 로컬 이미지 불러오기 */}
       {/* <Image src={bgImage} alt="bg" width={600} height={400}/> */}
 
+      {/* 외부 경로에 있는 이미지 가져오기 */}
       <Image src="https://images.unsplash.com/photo-1732601471612-213023f569d8?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3fHx8ZW58MHx8fHx8"
       width={600} height={400}
       />
 
-      {/* 이미지 반응형 작업 */}
+      {/* 이미지컴포넌트 반응형 작업 */}
       <Image src="https://images.unsplash.com/photo-1732601471612-213023f569d8?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3fHx8ZW58MHx8fHx8"
       layout="responsive"
       width = {16}
       height = {9}
+      // layout="reponsive가 되면 width와 height는 값이 아닌 비율로 변경"
       />
     </>
 
