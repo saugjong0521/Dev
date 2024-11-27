@@ -173,6 +173,8 @@
   },
   "active": "0c57153143905089",
   "lastOpenFiles": [
+    "nextjs/next-optimize/src/app/images/bg.jpg",
+    "nextjs/next-optimize/src/app/images",
     "nextjs/next-optimize/node_modules/@img/sharp-win32-x64/lib/sharp-win32-x64.node",
     "nextjs/next-optimize/node_modules/@img/sharp-win32-x64/lib/libvips-cpp.dll",
     "nextjs/next-optimize/node_modules/@img/sharp-win32-x64/lib/libvips-42.dll",
@@ -184,8 +186,6 @@
     "nextjs/next-optimize/public/fonts/Sunshiney-Regular.woff2",
     "nextjs/next-optimize/src/app/fonts.jsx",
     "nextjs/next-optimize/public/fonts/SunshineyRegular.woff2",
-    "nextjs/next-optimize/public/fonts",
-    "nextjs/next-optimize/public/fonsts",
     "nextjs/next-optimize/node_modules/source-map-js/README.md",
     "nextjs/next-optimize/node_modules/semver/README.md",
     "nextjs/next-optimize/node_modules/sharp/README.md",
