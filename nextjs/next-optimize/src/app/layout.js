@@ -14,7 +14,7 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-const jaro = Jaro({subsets: ["latin"], weight: "700"})
+const jaro = Jaro({subsets: ["latin"]})
 /*
 import {Jaro} from "next/font/google";
 Jaro라는 이름은 폰트 자체 고유이름이기 때문에, 변경이 불가능하고 대소문자를 구별해야 한다.
@@ -34,7 +34,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${jaro.classroom}`}>
         {children}
       </body>
     </html>
