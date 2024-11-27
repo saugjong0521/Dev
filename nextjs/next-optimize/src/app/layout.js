@@ -34,7 +34,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${jaro}`}>
+      <body className={`${jaro.className}`}>
         {children}
       </body>
     </html>
@@ -46,4 +46,9 @@ export default function RootLayout({ children }) {
 nextJs에서 폰트 적용하는 방법
 
 구글폰트를 이용하는 방법
+
+넥스트 폰트
+- nextJS는 개발자가 원하는 폰트를 자체적으로 호스팅하고, 이를 최적화해주는 기능 제공
+- 외부 네트워크에 대한 의존성이 생김
+
 */
