@@ -42,7 +42,7 @@ export default function Home() {
   return (
     <>
       {/* 로컬 이미지 불러오기 */}
-      <img src="../../public/images/bg.jpg" width={600}/>
+      <img src="../../public/images/bg.jpg" width={600} alt="bg1"/>
       
       {/* public에 저장하고 이미지 가져오기 */}
       <Image src={bgImage} alt="bg" width={600} height={400}/>
