@@ -2,7 +2,7 @@ import localFont from "next/font/local";
 // 구글폰트에서 폰트 import하기
 import {Jaro} from "next/font/google";
 import "./globals.css";
-import {Roboto} from "./fonts"
+import {roboto, Roboto} from "./fonts"
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -41,7 +41,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${jaro.className}`}>
+      <body className={`${roboto.className}`}>
         {children}
       </body>
     </html>
