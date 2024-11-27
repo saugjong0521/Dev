@@ -17,6 +17,8 @@ nextJs에서 Image컴포넌트
 export default function Home() {
   return (
     <>
+      {/* 로컬 이미지 불러오기 */}
+
     </>
 
   );
