@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 // 구글폰트에서 폰트 import하기
 import {Jaro} from "next/font/google";
 import "./globals.css";
+import {Roboto} from "./fonts"
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -27,9 +28,9 @@ subsets: 웹 폰트에서 특정 문자만 불러오도록 지정(로딩시간�
 */
 
 // local폰트
-const sunshiney = localFont({
-  src: "../public/fonts/Sunshiney-Regular.woff2",
-});
+// const sunshiney = localFont({
+//   src: "../public/fonts/Sunshiney-Regular.woff2",
+// });
 
 
 export const metadata = {
