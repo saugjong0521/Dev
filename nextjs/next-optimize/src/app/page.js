@@ -62,6 +62,15 @@ export default function Home() {
       sizes = "(max-width: 768px) 500px, (max-height: 1024px) 50vw, 33vw"
       // layout="reponsive가 되면 width와 height는 값이 아닌 비율로 변경"
       />
+
+
+            <Image src="https://images.unsplash.com/photo-1732601471612-213023f569d8?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3fHx8ZW58MHx8fHx8"
+            sreSet="https://images.unsplash.com/photo-1732530361158-09f4154b6b3b?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5fHx8ZW58MHx8fHx8"
+            width={1600}
+            height={900}
+            
+            />
+
     </>
 
   );
