@@ -12,6 +12,23 @@ nextJs에서 Image컴포넌트
 - 지연로딩: 화면에 보이는 이미지부터 로드
 - 포맷관리: 이미지 포맷을 jpg가 아닌 webp로 관리
 
+image 컴포넌트에 사용되는 속성
+src: 이미지 경로 (외부 url, import된 파일)
+alt: 이미지 대체 텍스트
+wigth & height: 가로 & 세로 사이즈(반응형에서는 비율로 인식)
+layout{
+  responsive: 부모 컨테이너의 너비를 기준으로 크기 조정, 비율 유지
+  fixed: 지정된 width와 height를 고정값으로 사용
+  fill: 부모요소를 채우며 비율을 조정
+  intrinsic: 이미지의 원본 크기를 기준으로 비율 유지(기본값)
+}
+objectfit: 이미지가 부모 컨테이너 안에서 크기를 맞추는 기준 설정(cover, contain)
+priority: 이미지를 로드할때 우선적으로 로드하도록 설정
+placeholder: 이미지가 로드될때 어떻게 표시해줄지 정하는 속성 (blur, empty 존재)
+  - blur: 뿌옇게 처리
+  - emply: 아무것도 표시하지 않음
+quality: 이미지 품질 1~100사이의 값 표시, 기본값 75
+
 */
 
 
