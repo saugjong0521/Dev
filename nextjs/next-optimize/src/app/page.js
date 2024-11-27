@@ -42,9 +42,9 @@ export default function Home() {
   return (
     <>
       {/* 로컬 이미지 불러오기 */}
-
       <img src="../../public/images/bg.jpg" width={600}/>
       
+      {/* public에 저장하고 이미지 가져오기 */}
       <Image src={bgImage} alt="bg" width={600} height={400}/>
 
       {/* 외부 경로에 있는 이미지 가져오기 */}
@@ -64,13 +64,13 @@ export default function Home() {
       />
 
 
-            <Image src="https://images.unsplash.com/photo-1732601471612-213023f569d8?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3fHx8ZW58MHx8fHx8"
-            sreset="https://images.unsplash.com/photo-1732530361158-09f4154b6b3b?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5fHx8ZW58MHx8fHx8"
-            width={1600}
-            height={900}
-            sizes="(max-width: 768px) 100vw, 50vw"
-            alt="img3"
-            />
+      <Image src="https://images.unsplash.com/photo-1732601471612-213023f569d8?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3fHx8ZW58MHx8fHx8"
+      sreset="https://images.unsplash.com/photo-1732530361158-09f4154b6b3b?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5fHx8ZW58MHx8fHx8"
+      width={1600}
+      height={900}
+      sizes="(max-width: 768px) 100vw, 50vw"
+      alt="img3"
+      />
 
     </>
 
