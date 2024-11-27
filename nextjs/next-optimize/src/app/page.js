@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import bgImage from "..../public/images/bg.jpg"
+import bgImage from "../public/images/bg.jpg"
 
 /*
 Image 컴포넌트
