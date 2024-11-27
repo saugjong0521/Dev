@@ -21,7 +21,7 @@ export default function Home() {
       {/* 로컬 이미지 불러오기 */}
       {/* <Image src={bgImage} alt="bg" width={600} height={400}/> */}
 
-      <Image src='https://unsplash.com/ko/%EC%82%AC%EC%A7%84/%ED%99%94%EC%9D%B4%ED%8A%B8-%EC%BC%80%EC%9D%B4%ED%81%AC%EA%B0%80-%EB%86%93%EC%9D%B8-%ED%85%8C%EC%9D%B4%EB%B8%94-%EC%98%86%EC%97%90-%EC%99%80%EC%9D%B8-%ED%95%9C-%EB%B3%91-aYO2uaBlkoI'
+      <Image src='https://plus.unsplash.com/premium_photo-1732564236763-2eaab170bf97?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
       width={600} height={400}
       />
     </>
