@@ -27,8 +27,8 @@ subsets: 웹 폰트에서 특정 문자만 불러오도록 지정(로딩시간�
 */
 
 // local폰트
-const sunshinyRegular = localFont({
-  src: "../public/fonts/Sunshiney-Regular.woff2"
+const sunshiney = localFont({
+  src: "../public/fonts/SunshineyRegular.woff2",
 })
 
 
@@ -40,7 +40,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${jaro.className}`}>
+      <body className={`${sunshineyRegular.className}`}>
         {children}
       </body>
     </html>
