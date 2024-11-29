@@ -13,6 +13,7 @@ nextJs는 서버사이드 랜더링 방식을 기본으로 사용하고 있다.
 */
 
 import { addTodoList, getTodoList } from "@/api/todoApi";
+import TodoList from "@/components/TodoList";
 import { Todo } from "@/types/todo";
 import { useEffect, useState } from "react";
 
@@ -65,6 +66,7 @@ export default function Home() {
         >내용 추가</button>
 
       </div>
+      <TodoList todos={todos}/>
     </div>
   );
 }
