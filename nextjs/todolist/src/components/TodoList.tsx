@@ -11,6 +11,12 @@ const TodoList:React.FC<TodoListProps> = ({todos}) => {
     함수형 컴포넌트를 생성하는 타입스크립트 타입 유형
     */
     return(
-
+        <div className="todoList">
+            {todos.map((todo)=>(
+                <div key={todo.id} className="p-4 border-b">
+                    {todo.title}
+                </div>
+            ))}
+        </div>
     )
 }
