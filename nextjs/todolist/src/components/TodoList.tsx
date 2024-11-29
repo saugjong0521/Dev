@@ -1,4 +1,5 @@
 import { Todo } from "@/types/todo";
+import Link from "next/link";
 
 
 interface TodoListProps{
@@ -14,7 +15,7 @@ const TodoList:React.FC<TodoListProps> = ({todos}) => {
         <div className="todoList">
             {todos.map((todo)=>(
                 <div key={todo.id} className="p-4 border-b">
-                    {todo.title}
+                    <Link href={`/todo/${todo.id}`}>{todo.title}</Link>
                 </div>
             ))}
         </div>
