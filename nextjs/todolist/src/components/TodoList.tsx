@@ -21,3 +21,5 @@ const TodoList:React.FC<TodoListProps> = ({todos}) => {
         </div>
     )
 }
+
+export default TodoList
