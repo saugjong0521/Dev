@@ -156,6 +156,7 @@
   },
   "active": "b35f2d7cd194916b",
   "lastOpenFiles": [
+    "nextjs/todolist/src/app/todos",
     "nextjs/todolist/next-env.d.ts",
     "nextjs/todolist/node_modules/typescript/lib/zh-cn/diagnosticMessages.generated.json",
     "nextjs/todolist/node_modules/typescript/lib/zh-tw/diagnosticMessages.generated.json",
@@ -166,7 +167,6 @@
     "nextjs/todolist/node_modules/typescript/lib/ko/diagnosticMessages.generated.json",
     "nextjs/todolist/node_modules/typescript/lib/ja/diagnosticMessages.generated.json",
     "nextjs/todolist/node_modules/typescript/lib/it/diagnosticMessages.generated.json",
-    "nextjs/todolist/node_modules/typescript/lib/fr/diagnosticMessages.generated.json",
     "nextjs/todolist/node_modules/websocket-extensions/lib/pipeline/README.md",
     "nextjs/todolist/node_modules/websocket-extensions/README.md",
     "nextjs/todolist/node_modules/websocket-extensions/LICENSE.md",
