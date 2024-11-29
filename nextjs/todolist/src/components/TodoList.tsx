@@ -6,6 +6,10 @@ interface TodoListProps{
 }
 
 const TodoList:React.FC<TodoListProps> = ({todos}) => {
+    /*
+    React.FC
+    함수형 컴포넌트를 생성하는 타입스크립트 타입 유형
+    */
     return(
 
     )
