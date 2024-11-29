@@ -11,7 +11,7 @@ export const addTodoList = async(todo : Omit<Todo, "id">) => {
     현재 코드에서는 title과 content만 작성되고 id는 외부에서 자동으로 생성되기 때문에
     Omit을 활용해서 id를 제외한 title과 content만 생성되도록 하용
  ]  */
-    const todoRef = ref(db, `todos `)
+    const todoRef = ref(db, `todos`)
     await push(todoRef, todo)
 }
 
