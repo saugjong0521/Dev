@@ -12,9 +12,9 @@ nextJs는 서버사이드 랜더링 방식을 기본으로 사용하고 있다.
 대표적으로 useState, useEffect가 있다.
 */
 
-import { addTodoList } from "@/api/todoApi";
+import { addTodoList, getTodoList } from "@/api/todoApi";
 import { Todo } from "@/types/todo";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 export default function Home() {
@@ -23,9 +23,17 @@ export default function Home() {
   const [newTitle, setNewTitle] = useState('');
   const [newContent, setNewContent] = useState('');
 
+
+  useEffect(()=>{
+    getTodoList().then(setTodos)
+  },[])
+
+
+
   const handleAddTodo = async() => {
     if(newTitle && newContent){
-      await addTodoList({title: newTitle, content: newContent})
+      await addTodoList({title: newTitle, content: newContent});
+      getTodoList().then(setTodos)  // todoList 갱신
       setNewContent('');
       setNewTitle('');
     }
