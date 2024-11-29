@@ -156,6 +156,8 @@
   },
   "active": "b35f2d7cd194916b",
   "lastOpenFiles": [
+    "nextjs/todolist/src/components/TodoList.tsx",
+    "nextjs/todolist/src/components",
     "nextjs/todolist/src/api/todoApi.tsx",
     "nextjs/todolist/src/api",
     "nextjs/todolist/src/types/todo.tsx",
@@ -165,8 +167,6 @@
     "nextjs/todolist/node_modules/@firebase/firestore/dist/packages/firestore/test/unit/remote/bloom_filter_golden_test_data/index.d.ts",
     "nextjs/todolist/node_modules/@firebase/firestore/dist/lite/firestore/test/unit/remote/bloom_filter_golden_test_data/index.d.ts",
     "nextjs/todolist/node_modules/@firebase/firestore/dist/packages/firestore/test/unit/util/sorted_set.test.d.ts",
-    "nextjs/todolist/node_modules/@firebase/firestore/dist/packages/firestore/test/unit/util/sorted_map.test.d.ts",
-    "nextjs/todolist/node_modules/@firebase/firestore/dist/packages/firestore/test/unit/util/obj_map.test.d.ts",
     "nextjs/todolist/node_modules/@firebase/webchannel-wrapper/README.md",
     "nextjs/todolist/node_modules/@firebase/vertexai/README.md",
     "nextjs/todolist/node_modules/@firebase/util/README.md",
