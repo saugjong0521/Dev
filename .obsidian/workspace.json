@@ -156,6 +156,8 @@
   },
   "active": "b35f2d7cd194916b",
   "lastOpenFiles": [
+    "nextjs/todolist/src/hooks",
+    "nextjs/todolist/src/containers",
     "nextjs/todolist/node_modules/@types/react-dom/package.json",
     "nextjs/todolist/node_modules/@types/react/package.json",
     "nextjs/todolist/node_modules/@types/prop-types/package.json",
@@ -165,8 +167,6 @@
     "nextjs/todolist/node_modules/idb/build/wrap-idb-value.d.ts",
     "nextjs/todolist/node_modules/idb/build/wrap-idb-value.cjs",
     "nextjs/todolist/node_modules/idb/build/util.d.ts",
-    "nextjs/todolist/node_modules/idb/build/umd.js",
-    "nextjs/todolist/node_modules/idb/build/umd-with-async-ittr.js",
     "nextjs/todolist/node_modules/idb/README.md",
     "nextjs/todolist/node_modules/idb/CHANGELOG.md",
     "nextjs/todolist/node_modules/faye-websocket/README.md",
