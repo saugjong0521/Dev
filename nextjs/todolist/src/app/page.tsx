@@ -1,8 +1,10 @@
+import { Todo } from "@/types/todo";
 import { useState } from "react";
 
 
 export default function Home() {
 
+  const [todos, setTodos] = useState<Todo[]>([]); // todo 리스트의 전체 상태관리
   const [newTitle, setNewTitle] = useState('');
   const [nextContent, setNewContent] = useState('');
 
@@ -13,6 +15,7 @@ export default function Home() {
         <input 
           type="text" 
           placeholder="제목을 입력하세요"
+          value={ newTitle }
         />
       </div>
     </div>
