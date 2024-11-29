@@ -6,7 +6,7 @@ export default function Home() {
 
   const [todos, setTodos] = useState<Todo[]>([]); // todo 리스트의 전체 상태관리
   const [newTitle, setNewTitle] = useState('');
-  const [nextContent, setNewContent] = useState('');
+  const [newContent, setNewContent] = useState('');
 
   return (
     <div className="container mx-auto">
@@ -17,6 +17,14 @@ export default function Home() {
           placeholder="제목을 입력하세요"
           value={ newTitle }
           onChange={(e)=>setNewTitle(e.target.value)}
+          className="border p-2"
+        />
+
+        <input
+          type="text"
+          placeholder="내용을 입력하세요"
+          value={newContent}
+          onChange={(e)=>setNewContent(e.target.value)}
           className="border p-2"
         />
       </div>
