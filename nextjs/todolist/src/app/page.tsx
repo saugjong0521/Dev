@@ -1,3 +1,6 @@
+"use client"
+
+import { addTodoList } from "@/api/todoApi";
 import { Todo } from "@/types/todo";
 import { useState } from "react";
 
@@ -7,6 +10,14 @@ export default function Home() {
   const [todos, setTodos] = useState<Todo[]>([]); // todo 리스트의 전체 상태관리
   const [newTitle, setNewTitle] = useState('');
   const [newContent, setNewContent] = useState('');
+
+  const handleAddTodo = async () => {
+    if(newTitle && newContent){
+      await addTodoList({title: newTitle, content: newContent})
+      setNewContent('');
+      setNewTitle('');
+    }
+  }
 
   return (
     <div className="container mx-auto">
