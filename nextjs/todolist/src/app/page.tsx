@@ -16,6 +16,8 @@ export default function Home() {
           type="text" 
           placeholder="제목을 입력하세요"
           value={ newTitle }
+          onChange={(e)=>setNewTitle(e.target.value)}
+          className="border p-2"
         />
       </div>
     </div>
