@@ -23,8 +23,7 @@ export default function Home() {
   const [newTitle, setNewTitle] = useState('');
   const [newContent, setNewContent] = useState('');
 
-  const handleAddTodo = async(e) => {
-    e.preventDefault()
+  const handleAddTodo = async() => {
     if(newTitle && newContent){
       await addTodoList({title: newTitle, content: newContent})
       setNewContent('');
