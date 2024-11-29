@@ -31,8 +31,8 @@ export default function Home() {
         <button 
           onClick={handleAddTodo}
           className="bg-blue-400 text-white p-3 rounded"
-        />
-        
+        >내용 추가</button>
+
       </div>
     </div>
   );

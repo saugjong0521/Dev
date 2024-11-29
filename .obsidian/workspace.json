@@ -156,6 +156,12 @@
   },
   "active": "b35f2d7cd194916b",
   "lastOpenFiles": [
+    "nextjs/todolist/public/window.svg",
+    "nextjs/todolist/public/vercel.svg",
+    "nextjs/todolist/public/next.svg",
+    "nextjs/todolist/public/globe.svg",
+    "nextjs/todolist/public/file.svg",
+    "nextjs/todolist/public",
     "nextjs/todolist/node_modules/busboy/test/test.js",
     "nextjs/todolist/node_modules/busboy/test/test-types-urlencoded.js",
     "nextjs/todolist/node_modules/busboy/test/test-types-multipart.js",
@@ -165,8 +171,6 @@
     "nextjs/todolist/node_modules/busboy/test",
     "nextjs/todolist/src/components/TodoList.tsx",
     "nextjs/todolist/src/components",
-    "nextjs/todolist/src/api/todoApi.tsx",
-    "nextjs/todolist/src/api",
     "nextjs/todolist/node_modules/@firebase/webchannel-wrapper/README.md",
     "nextjs/todolist/node_modules/@firebase/vertexai/README.md",
     "nextjs/todolist/node_modules/@firebase/util/README.md",
@@ -197,10 +201,6 @@
     "nextjs/next-optimize/public/window.svg",
     "nextjs/next-optimize/public/vercel.svg",
     "nextjs/next-optimize/public/next.svg",
-    "nextjs/next-optimize/public/globe.svg",
-    "nextjs/next-optimize/public/file.svg",
-    "nextjs/basic-next/public/window.svg",
-    "nextjs/basic-next/public/vercel.svg",
-    "nextjs/basic-next/public/next.svg"
+    "nextjs/next-optimize/public/globe.svg"
   ]
 }
