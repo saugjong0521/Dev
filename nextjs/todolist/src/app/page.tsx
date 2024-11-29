@@ -27,6 +27,12 @@ export default function Home() {
           onChange={(e)=>setNewContent(e.target.value)}
           className="border p-2"
         />
+
+        <button 
+          onClick={handleAddTodo}
+          className="bg-blue-400 text-white p-3 rounded"
+        />
+        
       </div>
     </div>
   );
