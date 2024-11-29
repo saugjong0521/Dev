@@ -2,7 +2,7 @@
 
 import { db } from "@/states/firebase";
 import { Todo } from "@/types/todo";
-import { push, ref } from "firebase/database";
+import { child, get, push, ref } from "firebase/database";
 
 // 항목의 추가
 export const addTodoList = async(todo : Omit<Todo, "id">) => {
@@ -16,3 +16,8 @@ export const addTodoList = async(todo : Omit<Todo, "id">) => {
 }
 
 
+// 리스트 가져오기
+export const getTodoList = async() => {
+    const dbRef = ref(db);
+    const snapshot = await get(child(dbRef, 'todos'))
+}
