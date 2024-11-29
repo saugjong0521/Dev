@@ -19,5 +19,10 @@ export const addTodoList = async(todo : Omit<Todo, "id">) => {
 // 리스트 가져오기
 export const getTodoList = async() => {
     const dbRef = ref(db);
-    const snapshot = await get(child(dbRef, 'todos'))
+    const snapshot = await get(child(dbRef, 'todos'));
+    if(snapshot.exists()){
+        const todoObj = snapshot.val();
+        return Object.keys(todoObj).map((key)=>({id: key, ...todoObj[key]}))
+    }
+    return []
 }
