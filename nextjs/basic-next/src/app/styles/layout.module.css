@@ -11,5 +11,6 @@
 .gnb ul{
     display: flex;
     list-style-type: none;
-    flex-wrap: nowrap;
+    gap: 10px;
+    margin-right: 20px;
 }
