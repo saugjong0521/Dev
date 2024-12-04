@@ -27,7 +27,7 @@ const EditTodoPage = () => {
     },[id])
 
     const handleEditTodoList = async() => {
-        if(title && content){
+        if(typeof id === 'string' && title && content){
             await editTodoList(id, {title, content})
             router.push('/')
         }
