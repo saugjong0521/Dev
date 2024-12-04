@@ -21,6 +21,14 @@ const EditTodoPage = () => {
         })
     },[id])
 
+    return(
+
+        <div className="container mx-auto p-4">
+            <h1 className="text-white text-3xl font-bold">Edit Todo</h1>
+        </div>
+
+    )
+
 }
 
 
