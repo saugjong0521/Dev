@@ -2,7 +2,7 @@
 
 import { editTodoList, getTodoList } from "@/api/todoApi";
 import { Todo } from "@/types/todo";
-import { useParams } from "next/navigation"
+import { useParams, useRouter } from "next/navigation"
 import { useEffect, useState } from "react";
 
 
@@ -11,6 +11,9 @@ const EditTodoPage = () => {
     const [todo, setTodo] = useState<Todo | null>(null);
     const [title, setTitle] = useState('')
     const [content, setContent] = useState('')
+
+    const router = useRouter()
+
 
     useEffect(() => {
         getTodoList().then((todos)=>{
@@ -26,6 +29,7 @@ const EditTodoPage = () => {
     const handleEditTodoList = async() => {
         if(title && content){
             await editTodoList(id, {title, content})
+            router.push('/')
         }
     }
 
