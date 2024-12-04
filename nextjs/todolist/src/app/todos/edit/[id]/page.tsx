@@ -24,7 +24,17 @@ const EditTodoPage = () => {
     return(
 
         <div className="container mx-auto p-4">
-            <h1 className="text-white text-3xl font-bold">Edit Todo</h1>
+            <h1 className="text-white text-3xl font-bold mb-4">Edit Todo</h1>
+            <div>
+                <input 
+                    type="text" 
+                    placeholder="제목" 
+                    value={title} 
+                    onChange={((e)=>setTitle(e.target.value))}
+                    className="border p-2 mb-2 w-full"
+                />
+
+            </div>
         </div>
 
     )
