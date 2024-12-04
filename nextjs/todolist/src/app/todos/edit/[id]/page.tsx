@@ -1,3 +1,5 @@
+"use client"
+
 import { getTodoList } from "@/api/todoApi";
 import { Todo } from "@/types/todo";
 import { useParams } from "next/navigation"
