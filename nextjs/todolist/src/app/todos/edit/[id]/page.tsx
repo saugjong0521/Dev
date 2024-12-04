@@ -34,6 +34,14 @@ const EditTodoPage = () => {
                     className="border p-2 mb-2 w-full"
                 />
 
+                <input
+                    type="text"
+                    placeholder="내용"
+                    value={content}
+                    onChange={(e)=>setContent(e.target.value)}
+                    className="border p-2 mb-2 w-full"
+                />
+
             </div>
         </div>
 
