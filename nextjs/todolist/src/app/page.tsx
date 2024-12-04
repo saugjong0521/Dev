@@ -24,10 +24,10 @@ export default function Home() {
   const [newTitle, setNewTitle] = useState('');
   const [newContent, setNewContent] = useState('');
 
-
-  const [reloadTodoList, setReloadTodoList] = useState();
-
-  const 
+  const reloadTodoList = async() =>{
+    const updateTodoList = await getTodoList();
+    setTodos(updateTodoList);
+  }
 
   useEffect(()=>{
     getTodoList().then(setTodos)
