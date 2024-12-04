@@ -17,16 +17,19 @@ export const addTodoList = async(todo : Omit<Todo, "id">) => {
 
 
 // 리스트 가져오기
-export const getTodoList = async() => {
-    const dbRef = ref(db);
-    const snapshot = await get(child(dbRef, 'todos'));
+export const getTodoLists = async () => {
+    const dbRef = ref(db) // db 참조 생성 
+    //snapshot 데이터 가져오기 
+    const snapshot = await get(child(dbRef, `todos`)); //db ref의 하위 노드 참조 
+    // const snapshot = await get(dbRef); // child 제거, 직접 참조
     if(snapshot.exists()){
-        const todoObj = snapshot.val();
-        return Object.keys(todoObj).map((key)=>({id: key, ...todoObj[key]}))
+      const todoObj = snapshot.val();
+      return Object.keys(todoObj).map((key)=> ({id: key, ...todoObj[key]})) as Todo[]
     }
-    return []
-}
-
+    return [];
+  
+  }
+  
 
 
 export const editTodoList = async (id: string, editTodo: Partial<Todo>) => {
