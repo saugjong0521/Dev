@@ -29,7 +29,7 @@ const EditTodoPage = () => {
     const handleEditTodoList = async() => {
         if(typeof id === 'string' && title && content){
             await editTodoList(id, {title, content})
-            router.push('/')
+            router.push('/')    // 수정완료시 메인페이지로 이동
         }
     }
 
