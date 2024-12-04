@@ -25,6 +25,10 @@ export default function Home() {
   const [newContent, setNewContent] = useState('');
 
 
+  const [reloadTodoList, setReloadTodoList] = useState();
+
+  const 
+
   useEffect(()=>{
     getTodoList().then(setTodos)
   },[])
@@ -66,7 +70,7 @@ export default function Home() {
         >내용 추가</button>
 
       </div>
-      <TodoList todos={todos}/>
+      <TodoList todos={todos} reloadTodoList={reloadTodoList}/>
     </div>
   );
 }
