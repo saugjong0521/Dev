@@ -2,7 +2,7 @@
 
 import { db } from "@/states/firebase";
 import { Todo } from "@/types/todo";
-import { child, get, push, ref } from "firebase/database";
+import { child, get, push, ref, update } from "firebase/database";
 
 // 항목의 추가
 export const addTodoList = async(todo : Omit<Todo, "id">) => {
@@ -25,4 +25,17 @@ export const getTodoList = async() => {
         return Object.keys(todoObj).map((key)=>({id: key, ...todoObj[key]}))
     }
     return []
+}
+
+
+
+export const editTodoList = async (id: string, editTodo: Partial<Todo>) => {
+    // Partial : 모든 속성을 선택적으로 만들어주는 타입
+    /*
+    Omit과의 차이점
+    Partial: 모든 속성 선택가능, Omit: 특정 속성을 제외한 타입
+    객체의 일부만 업데이트 할때에 사용할 경우, 일부 속성만 전달해도 속성 에러가 나지 않음 (title을 지정시, content는 알아서 지정되도록 함)
+    */
+    const todoRef = ref(db, `todos/${id}`);
+    await update(todoRef, editTodo);
 }
