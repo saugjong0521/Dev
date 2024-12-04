@@ -16,6 +16,7 @@ const TodoList:React.FC<TodoListProps> = ({todos}) => {
             {todos.map((todo)=>(
                 <div key={todo.id} className="p-4 border-b">
                     <Link href={`/todos/${todo.id}`}>{todo.title}</Link>
+                    <Link href={`/todo/edit/${todo.id}`}
                 </div>
             ))}
         </div>
