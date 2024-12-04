@@ -2,7 +2,7 @@
 
 import { db } from "@/states/firebase";
 import { Todo } from "@/types/todo";
-import { child, get, push, ref, update } from "firebase/database";
+import { child, get, push, ref, remove, update } from "firebase/database";
 
 // 항목의 추가
 export const addTodoList = async(todo : Omit<Todo, "id">) => {
@@ -38,4 +38,11 @@ export const editTodoList = async (id: string, editTodo: Partial<Todo>) => {
     */
     const todoRef = ref(db, `todos/${id}`);
     await update(todoRef, editTodo);
+}
+
+
+
+export const removeTodoList = async (id: string) => {
+    const todoRef = ref(db, `todos/${id}`)
+    await remove(todoRef)
 }
