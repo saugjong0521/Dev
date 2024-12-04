@@ -1,6 +1,6 @@
 "use client"
 
-import { getTodoList } from "@/api/todoApi";
+import { editTodoList, getTodoList } from "@/api/todoApi";
 import { Todo } from "@/types/todo";
 import { useParams } from "next/navigation"
 import { useEffect, useState } from "react";
@@ -23,6 +23,12 @@ const EditTodoPage = () => {
         })
     },[id])
 
+    const handleEditTodoList = async() => {
+        if(title && content){
+            await editTodoList(id, {title, content})
+        }
+    }
+
     return(
 
         <div className="container mx-auto p-4">
@@ -44,6 +50,7 @@ const EditTodoPage = () => {
                     className="border p-2 mb-2 w-full"
                 />
 
+                <button onClick={handleEditTodoList}>수정</button>
             </div>
         </div>
 
