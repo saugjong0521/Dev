@@ -11,13 +11,30 @@
             "id": "b35f2d7cd194916b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "로그인 API 문서.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "로그인 API 문서"
+            }
+          },
+          {
+            "id": "0c57153143905089",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.7.7"
+              },
+              "icon": "lucide-file",
+              "title": "Release Notes 1.7.7"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -154,53 +171,53 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b35f2d7cd194916b",
+  "active": "0c57153143905089",
   "lastOpenFiles": [
     "nextjs/todolist/src/app/todos/edit/[id]/page.tsx",
     "nextjs/todolist/src/app/todos/[id]/page.tsx",
     "nextjs/todolist/src/app/todos/edit/[id]",
     "nextjs/todolist/src/app/todos/[id]",
     "nextjs/todolist/src/app/todos/edit",
-    "nextjs/todolist/src/app/todos",
-    "nextjs/todolist/src/app/todo/edit/[id]/page.tsx",
-    "nextjs/todolist/src/app/todo/[id]/page.tsx",
-    "nextjs/todolist/src/app/todo/edit/[id]",
-    "nextjs/todolist/src/app/todo/[id]",
-    "nextjs/todolist/src/app/todo/edit",
-    "nextjs/todolist/node_modules/websocket-extensions/lib/pipeline/README.md",
-    "nextjs/todolist/node_modules/websocket-extensions/README.md",
-    "nextjs/todolist/node_modules/websocket-extensions/LICENSE.md",
-    "nextjs/todolist/node_modules/websocket-extensions/CHANGELOG.md",
-    "nextjs/todolist/node_modules/http-parser-js/README.md",
-    "nextjs/todolist/node_modules/http-parser-js/LICENSE.md",
-    "nextjs/todolist/node_modules/safe-buffer/README.md",
-    "nextjs/todolist/node_modules/websocket-driver/README.md",
-    "nextjs/todolist/node_modules/websocket-driver/LICENSE.md",
-    "nextjs/todolist/node_modules/websocket-driver/CHANGELOG.md",
-    "nextjs/todolist/node_modules/idb/README.md",
-    "nextjs/todolist/node_modules/idb/CHANGELOG.md",
-    "nextjs/todolist/node_modules/faye-websocket/README.md",
-    "nextjs/todolist/node_modules/faye-websocket/LICENSE.md",
-    "nextjs/todolist/node_modules/faye-websocket/CHANGELOG.md",
+    "nextjs/todolist/src/app/fonts/GeistVF.woff",
+    "nextjs/todolist/src/app/fonts/GeistMonoVF.woff",
+    "nextjs/todolist/src/types/todo.tsx",
+    "nextjs/todolist/src/app/layout.tsx",
+    "nextjs/todolist/src/states/firebase.tsx",
+    "nextjs/todolist/src/components/TodoList.tsx",
     "nextjs/todolist/public/window.svg",
     "nextjs/todolist/public/vercel.svg",
     "nextjs/todolist/public/next.svg",
     "nextjs/todolist/public/globe.svg",
     "nextjs/todolist/public/file.svg",
-    "nextjs/todolist/node_modules/@firebase/webchannel-wrapper/README.md",
-    "nextjs/todolist/node_modules/@firebase/vertexai/README.md",
-    "nextjs/todolist/node_modules/@firebase/util/README.md",
-    "nextjs/todolist/node_modules/@firebase/storage-types/README.md",
-    "nextjs/todolist/node_modules/@firebase/storage-compat/README.md",
-    "nextjs/todolist/node_modules/@firebase/storage/README.md",
-    "nextjs/todolist/node_modules/@firebase/remote-config-types/README.md",
-    "nextjs/todolist/node_modules/@firebase/remote-config-compat/README.md",
-    "nextjs/todolist/node_modules/@firebase/remote-config/README.md",
-    "nextjs/todolist/node_modules/@firebase/performance-compat/README.md",
+    "nextjs/todolist/README.md",
     "nextjs/next-optimize/src/app/images/bg.jpg",
     "nextjs/next-optimize/public/images/bg.jpg",
+    "nextjs/next-optimize/public/images/daniel-lincoln-ALG0gP4GDbw-unsplash.jpg",
+    "nextjs/next-optimize/node_modules/source-map-js/README.md",
+    "nextjs/next-optimize/node_modules/semver/README.md",
+    "nextjs/next-optimize/node_modules/sharp/README.md",
+    "nextjs/next-optimize/node_modules/eslint-plugin-jsx-a11y/docs/rules/role-has-required-aria-props.md",
+    "nextjs/next-optimize/node_modules/eslint-plugin-jsx-a11y/docs/rules/tabindex-no-positive.md",
+    "nextjs/next-optimize/node_modules/eslint-plugin-jsx-a11y/docs/rules/scope.md",
+    "nextjs/next-optimize/node_modules/json5/README.md",
+    "nextjs/next-optimize/node_modules/json5/LICENSE.md",
+    "nextjs/next-optimize/node_modules/path-is-absolute/readme.md",
+    "nextjs/next-optimize/node_modules/strip-ansi/readme.md",
+    "nextjs/next-optimize/node_modules/strip-bom/readme.md",
+    "nextjs/next-optimize/node_modules/string.prototype.trim/README.md",
+    "nextjs/next-optimize/node_modules/string.prototype.trim/CHANGELOG.md",
+    "nextjs/next-optimize/node_modules/string.prototype.matchall/README.md",
+    "nextjs/next-optimize/node_modules/string.prototype.matchall/CHANGELOG.md",
+    "nextjs/next-optimize/node_modules/string.prototype.includes/README.md",
+    "nextjs/next-optimize/node_modules/set-function-name/README.md",
+    "nextjs/next-optimize/node_modules/set-function-name/CHANGELOG.md",
+    "nextjs/next-optimize/node_modules/queue-microtask/README.md",
+    "nextjs/next-optimize/node_modules/punycode/README.md",
+    "nextjs/next-optimize/node_modules/p-limit/readme.md",
+    "nextjs/next-optimize/node_modules/parent-module/readme.md",
+    "nextjs/next-optimize/node_modules/object.entries/README.md",
+    "nextjs/next-optimize/node_modules/object.entries/CHANGELOG.md",
     "nextjs/next-optimize/public/window.svg",
-    "nextjs/next-optimize/public/vercel.svg",
     "nextjs/next-optimize/public/next.svg"
   ]
 }
