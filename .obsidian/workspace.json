@@ -11,30 +11,13 @@
             "id": "b35f2d7cd194916b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "로그인 API 문서.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "로그인 API 문서"
-            }
-          },
-          {
-            "id": "0c57153143905089",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.7.7"
-              },
-              "icon": "lucide-file",
-              "title": "Release Notes 1.7.7"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -171,7 +154,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0c57153143905089",
+  "active": "b35f2d7cd194916b",
   "lastOpenFiles": [
     "nextjs/todolist/src/app/todos/edit/[id]/page.tsx",
     "nextjs/todolist/src/app/todos/[id]/page.tsx",
