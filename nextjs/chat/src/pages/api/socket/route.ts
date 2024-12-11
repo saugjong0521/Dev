@@ -22,7 +22,6 @@ const ioHandler = (req: NextApiRequest, res: NextApiRes) => {
             addTrailingSlash: false
             // url끝에 slash 추가하지 않음
         })
-
         res.socket.server.io = io // 서버에 인스턴스 추가
     }
 }
