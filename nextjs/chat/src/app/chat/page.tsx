@@ -54,6 +54,20 @@ const ChatPage = () => {
                     </div>
                 ))}
             </div>
+
+            <div className="flex items-center p-6">
+                <form className="w-full flex items-center">
+                    <input type="text" value={currentMessage}
+                        onChange={(e)=>setCurrentMessage(e.target.value)}
+                        className="flex h-10 w-full border bg-transparent px-3"
+                    />
+                    <button type="submit" 
+                        onClick={(e) => sendMessage(e)} 
+                        className="inline-flex items-center">
+                            전송
+                    </button>
+                </form>
+            </div>
         </div>
     )
 
