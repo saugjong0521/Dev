@@ -156,6 +156,8 @@
   },
   "active": "b35f2d7cd194916b",
   "lastOpenFiles": [
+    "nextjs/chat/src/pages/api/chat/index.ts",
+    "nextjs/chat/src/pages/api/chat",
     "nextjs/chat/node_modules/axios/lib/platform/node/classes/URLSearchParams.js",
     "nextjs/chat/node_modules/axios/lib/platform/node/classes/FormData.js",
     "nextjs/chat/node_modules/axios/lib/platform/browser/classes/URLSearchParams.js",
@@ -165,8 +167,6 @@
     "nextjs/chat/node_modules/axios/lib/platform/node/classes",
     "nextjs/chat/node_modules/axios/lib/platform/browser/index.js",
     "nextjs/chat/node_modules/axios/lib/platform/common/utils.js",
-    "nextjs/chat/node_modules/axios/lib/platform/browser/classes",
-    "nextjs/chat/node_modules/axios/lib/env/classes/FormData.js",
     "nextjs/chat/node_modules/axios/lib/helpers/README.md",
     "nextjs/chat/node_modules/axios/lib/env/README.md",
     "nextjs/chat/node_modules/axios/lib/core/README.md",

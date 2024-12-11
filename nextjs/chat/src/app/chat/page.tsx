@@ -30,4 +30,10 @@ const ChatPage = () => {
         }
     },[socket, message])
 
+    // 메시지 전송 이벤트
+    const sendMessage = async(e:React.MouseEvent<HTMLButtonElement>)=>{
+        e.preventDefault();
+        // await.axios
+    }
+
 }
