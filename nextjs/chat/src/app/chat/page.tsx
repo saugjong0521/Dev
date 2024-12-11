@@ -29,7 +29,7 @@ const ChatPage = () => {
         })
 
         return () => {
-            socket.off('message')
+            socket.on('message')
         }
     },[socket, message])
 
