@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
+import { io } from "socket.io-client";
 
 
 type SocketContextType = {
@@ -28,4 +29,10 @@ export const SocketProvider = () => ({children} : {children:React.ReactNode}) =>
             setIsConnected(false)
         },[socket])
     })
+
+    useEffect(()=>{
+        // 소켓을 초기화
+        const socketInstance = new (io as any)("http://localhost:3000/")
+    })
+
 }
