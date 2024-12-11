@@ -41,4 +41,10 @@ const ChatPage = () => {
         setCurrentMessage('')
     }
 
+
+
+    return(
+        <div className="border bg-card w-[300px] mx-auto"></div>
+    )
+
 }
