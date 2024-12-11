@@ -49,7 +49,9 @@ const ChatPage = () => {
             
             <div className="p-4 boreder">
                 {message.map((message, idx)=>(
-                    <div key={idx} className="flex w-max flex-col gap-2 p-2"></div>
+                    <div key={idx} className="flex w-max flex-col gap-2 p-2">
+                        {message.content}
+                    </div>
                 ))}
             </div>
         </div>
