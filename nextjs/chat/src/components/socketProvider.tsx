@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
+import { Socket } from "socket.io";
 import { io } from "socket.io-client";
 
 
@@ -32,7 +33,25 @@ export const SocketProvider = () => ({children} : {children:React.ReactNode}) =>
 
     useEffect(()=>{
         // 소켓을 초기화
-        const socketInstance = new (io as any)("http://localhost:3000/")
-    })
+        const socketInstance = new (io as any)("http://localhost:3000/", {
+            path: "/api/socket/route",
+            addTrailingSlash: false
+        })
+        socketInstance.on('연결', async()=>{
+            setIsConnected(true)
+        })
 
+        setSocket(socketInstance)   // 새로운 인스턴스가 저장
+
+        return () => {
+            socketInstance.disconnect();
+            // 언마운트시 연결 해제
+        }
+    },[])
+
+    return (
+        <SocketContext.Provider value={{socket, isConnected}}>
+            
+        </SocketContext.Provider>
+    )
 }
