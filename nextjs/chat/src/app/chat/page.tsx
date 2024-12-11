@@ -44,7 +44,15 @@ const ChatPage = () => {
 
 
     return(
-        <div className="border bg-card w-[300px] mx-auto"></div>
+        <div className="border bg-card w-[300px] mx-auto">
+            <p>{isConnected ? "연결완료" : "연결중"}</p>
+            
+            <div className="p-4 boreder">
+                {message.map((message, idx)=>(
+                    <div key={idx} className="flex w-max flex-col gap-2 p-2"></div>
+                ))}
+            </div>
+        </div>
     )
 
 }
