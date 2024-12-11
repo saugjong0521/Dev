@@ -1,4 +1,5 @@
 import { useSocket } from "@/components/socketProvider";
+import axios from "axios";
 import { useEffect, useState } from "react";
 
 
@@ -33,7 +34,11 @@ const ChatPage = () => {
     // 메시지 전송 이벤트
     const sendMessage = async(e:React.MouseEvent<HTMLButtonElement>)=>{
         e.preventDefault();
-        // await.axios
+        await axios.post('/api/chat',{
+            userId : userId,
+            content : currentMessage,
+        })
+        setCurrentMessage('')
     }
 
 }
