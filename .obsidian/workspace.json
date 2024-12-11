@@ -156,6 +156,7 @@
   },
   "active": "b35f2d7cd194916b",
   "lastOpenFiles": [
+    "socket",
     "nextjs/todolist/src/app/todos/edit/[id]/page.tsx",
     "nextjs/todolist/src/app/todos/[id]/page.tsx",
     "nextjs/todolist/src/app/todos/edit/[id]",
@@ -166,7 +167,6 @@
     "nextjs/todolist/src/types/todo.tsx",
     "nextjs/todolist/src/app/layout.tsx",
     "nextjs/todolist/src/states/firebase.tsx",
-    "nextjs/todolist/src/components/TodoList.tsx",
     "nextjs/todolist/public/window.svg",
     "nextjs/todolist/public/vercel.svg",
     "nextjs/todolist/public/next.svg",
