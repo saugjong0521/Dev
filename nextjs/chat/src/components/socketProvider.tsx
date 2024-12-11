@@ -20,7 +20,7 @@ export const useSocket = () => {
     return useContext(SocketContext)
 }
 
-export const SocketProvider = () => ({children} : {children:React.ReactNode}) => {
+export const SocketProvider = ({children} : {children:React.ReactNode}) => {
     const [socket, setSocket] = useState<any | null>(null); // 현재 소켓 상태
     const [isConnected, setIsConnected] = useState(false);  // 현재 연결 상태
 
