@@ -1,3 +1,5 @@
+"use client"
+
 import { useSocket } from "@/components/socketProvider";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -72,3 +74,5 @@ const ChatPage = () => {
     )
 
 }
+
+export default ChatPage
