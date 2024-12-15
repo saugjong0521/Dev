@@ -28,18 +28,19 @@ export const SocketProvider = ({children} : {children:React.ReactNode}) => {
         if(!socket){
             return // 소켓이 없으면 초기화하지 않음
         }
-        socket.on('연결을 해제했습니다.', async()=>{
+        socket.on('disconnect', async()=>{
             setIsConnected(false)
-        },[socket])
-    })
+        })
+    },[socket])
+
 
     useEffect(()=>{
         // 소켓을 초기화
-        const socketInstance = new (io as any)("http://localhost:3000/", {
-            path: "/api/socket/route",
-            addTrailingSlash: false
+        const socketInstance = new (ClientIO as any)("http://localhost:3000",{
+            path : "/api/socket/route",
+            addTrailingSlash : false,
         })
-        socketInstance.on('연결', async()=>{
+        socketInstance.on('connect', async()=>{
             setIsConnected(true)
         })
 
@@ -51,9 +52,10 @@ export const SocketProvider = ({children} : {children:React.ReactNode}) => {
         }
     },[])
 
-    return (
+   return (
         <SocketContext.Provider value={{socket, isConnected}}>
             {children}
         </SocketContext.Provider>
     )
+
 }
